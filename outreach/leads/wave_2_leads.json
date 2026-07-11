@@ -1,0 +1,144 @@
+[
+  {
+    "handle": "@bentossell",
+    "name": "Ben Tossell",
+    "vertical": "indie_saas",
+    "why": "Makerpad, public indie SaaS"
+  },
+  {
+    "handle": "@damengoldberg",
+    "name": "Damengoldberg",
+    "vertical": "indie_saas",
+    "why": "Active indie builder"
+  },
+  {
+    "handle": "@kevin_osei",
+    "name": "Kevin Osei",
+    "vertical": "indie_saas",
+    "why": "Public SaaS builder"
+  },
+  {
+    "handle": "@ericoverfield",
+    "name": "Eric Overfield",
+    "vertical": "indie_saas",
+    "why": "Public SaaS builder"
+  },
+  {
+    "handle": "@jpospisil",
+    "name": "Josh Pispisil",
+    "vertical": "indie_saas",
+    "why": "Active SaaS operator"
+  },
+  {
+    "handle": "@digitalgarage",
+    "name": "DigitalGarage",
+    "vertical": "agency",
+    "why": "Public agency"
+  },
+  {
+    "handle": "@SingleGrain",
+    "name": "Single Grain",
+    "vertical": "agency",
+    "why": "Public growth agency"
+  },
+  {
+    "handle": "@HuffPost",
+    "name": "HuffPost Partners",
+    "vertical": "agency",
+    "why": "Large media company"
+  },
+  {
+    "handle": "@reliableauto",
+    "name": "Reliable Auto",
+    "vertical": "ecommerce",
+    "why": "Ecom ops"
+  },
+  {
+    "handle": "@GrantCardone",
+    "name": "Grant Cardone",
+    "vertical": "coaching",
+    "why": "Big coaching operation, ops-heavy"
+  },
+  {
+    "handle": "@tonyrobbins",
+    "name": "Tony Robbins",
+    "vertical": "coaching",
+    "why": "Biggest coaching brand, definitely ops-heavy"
+  },
+  {
+    "handle": "@BrendonBurchard",
+    "name": "Brendon Burchard",
+    "vertical": "coaching",
+    "why": "Public coach, big team"
+  },
+  {
+    "handle": "@Clio",
+    "name": "Clio",
+    "vertical": "legal_tech",
+    "tier": 1,
+    "why": "Legal SaaS, serves ops-heavy law firms"
+  },
+  {
+    "handle": "@LawPay",
+    "name": "LawPay",
+    "vertical": "legal_tech",
+    "tier": 1,
+    "why": "Legal payments, integrated with PMs"
+  },
+  {
+    "handle": "@Freshbooks",
+    "name": "Freshbooks",
+    "vertical": "accounting",
+    "tier": 1,
+    "why": "Accounting SaaS for SMBs"
+  },
+  {
+    "handle": "@Yardi",
+    "name": "Yardi",
+    "vertical": "property_tech",
+    "tier": 1,
+    "why": "Property mgmt leader, AI features are weak"
+  },
+  {
+    "handle": "@buildium",
+    "name": "Buildium",
+    "vertical": "property_tech",
+    "tier": 1,
+    "why": "PM SaaS, tenant comms gap"
+  },
+  {
+    "handle": "@ManageCasa",
+    "name": "Casa",
+    "vertical": "property_tech",
+    "tier": 1,
+    "why": "Smaller PM SaaS"
+  },
+  {
+    "handle": "@Greenhouse",
+    "name": "Greenhouse",
+    "vertical": "recruiting",
+    "tier": 1,
+    "why": "ATS, serves recruiting ops"
+  },
+  {
+    "handle": "@Lever",
+    "name": "Lever",
+    "vertical": "recruiting",
+    "tier": 1,
+    "why": "ATS+CRM, AI features weak"
+  },
+  {
+    "handle": "@Shopify",
+    "name": "Shopify",
+    "vertical": "ecommerce",
+    "tier": 1,
+    "why": "Massive ecom platform"
+  },
+  {
+    "handle": "@Klaviyo",
+    "name": "Klaviyo",
+    "vertical": "ecommerce",
+    "tier": 1,
+    "why": "Ecom email/SMS, ops-heavy customers"
+  }
+]
