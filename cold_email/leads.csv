@@ -77,3 +77,5 @@ index,name,handle,email,vertical,tier,template,tier_reason
 76,Greenhouse,@greenhouse,support@greenhouse.io,recruiting,1,76_greenhouse.md,Structured-hiring ATS with Greenhouse AI; evidence: https://support.greenhouse.io/hc/en-us exposes public support@; CEO Daniel Chait
 77,Gainsight,@gainsight,info@gainsight.com,customer_success,1,77_gainsight.md,Customer success platform with CS AI / Staircase AI; evidence: https://www.gainsight.com/contact/ exposes info@; CEO Nick Mehta
 78,Gorgias,@gorgias,support@gorgias.com,ecommerce,1,78_gorgias.md,Ecommerce helpdesk with Gorgias AI Automate; evidence: https://www.gorgias.com/contact exposes support@; CEO Romain Lapeyre
+79,Notion,@NotionHQ,team@makenotion.com,productivity,1,79_notion.md,AI productivity suite (Notion AI/Q&A); evidence: https://www.notion.so/contact exposes team@; CEO Ivan Zhao
+80,Linear,@linear,support@linear.app,saas,1,80_linear.md,Issue tracking with Linear AI / Linear Agents; evidence: https://linear.app/support exposes support@; CEO Tuomas Artman
