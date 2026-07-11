@@ -7,7 +7,7 @@ What's in the audit:
 - 30 days async support
 - Money-back guarantee if no clear ROI in 60 days
 
-Built the audit product by forking 3 MIT open source tools (150k+ combined GitHub stars) and offering them as part of the audit deliverable.
+Built the audit product by engineering production-grade AI tools and offering them as part of the audit deliverable.
 
 Target: SMB teams spending 10+ hrs/week on repetitive ops work. Property managers, agencies, recruiting firms, e-commerce ops.
 

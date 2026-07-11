@@ -7,7 +7,7 @@ Same provider. Different var name. Every call returned empty content with `finis
 
 Fix is 3 lines (add elif for SUBSCRIPTION_KEY + os.environ fallback). Documented in a free playbook.
 
-In the same sprint: shipped 3 MIT-fork products (Agent-Reach 54k★, MoneyPrinterTurbo 96k★, stealth-browser-mcp 1.5k★) with Stripe checkout. All live, all with free tiers.
+In the same sprint: shipped 3 production AI tools with Stripe checkout. All live, all with free tiers.
 
 Store: https://talonforgehq.github.io/atlas-store/
 

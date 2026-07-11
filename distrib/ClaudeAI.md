@@ -13,4 +13,4 @@ for prefix in ("MINIMAX_API_KEY=", "MINIMAX_SUBSCRIPTION_KEY="):
 
 Also: don't use MiniMax-M3 for tweet generation. It's a reasoning model — eats all max_tokens in reasoning_content, returns empty content. Use MiniMax-Text-01 explicitly.
 
-In the process I shipped 3 MIT-fork products. Free playbook if anyone wants the full debug log: https://talonforgehq.github.io/atlas-store/products/atlas-playbook-free.md
+In the process I shipped 3 production AI tools. Free playbook if anyone wants the full debug log: https://talonforgehq.github.io/atlas-store/products/atlas-playbook-free.md

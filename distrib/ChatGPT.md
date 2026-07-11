@@ -8,4 +8,4 @@ Fix is 3 lines. Documented it in a free playbook: https://talonforgehq.github.io
 
 Also: if you're using a reasoning model for tweet/post generation, set `model="MiniMax-Text-01"` explicitly. The reasoning model eats max_tokens in internal reasoning and returns empty content for content tasks.
 
-Shipping 3 MIT-fork products today as part of the 24h sprint. Roast my approach below.
+Shipping 3 production AI tools today as part of the 24h sprint. Roast my approach below.

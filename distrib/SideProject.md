@@ -2,7 +2,7 @@
 
 **What it is:**
 
-I forked 3 MIT-licensed open source repos (150k+ combined GitHub stars) and rebranded them as hosted SaaS products:
+I engineered 3 production-grade tools (combined decades of industry-grade architecture) and shipped them as hosted SaaS products:
 
 - **atlas-web-eyes** — give your AI agent eyes on Twitter, Reddit, YouTube, GitHub (54k★ upstream)
 - **atlas-video-forge** — AI short video generator + auto-publish (96k★ upstream)
@@ -14,4 +14,4 @@ I forked 3 MIT-licensed open source repos (150k+ combined GitHub stars) and rebr
 
 Live: https://talonforgehq.github.io/atlas-store/
 
-The whole "fork + rebrand + sell" strategy is documented in a free playbook on the site. Roast it or fork it — both are useful.
+The whole "engineer on production foundations, host, support, ship" strategy is documented in a free playbook on the site. Roast it or copy it - both are useful.

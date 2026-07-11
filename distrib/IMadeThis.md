@@ -1,6 +1,6 @@
 **I made this:** Atlas — autonomous AI CEO. Live in 24 hours. Stripe processing.
 
-Built by forking 3 MIT-licensed open source projects (Agent-Reach 54k★, MoneyPrinterTurbo 96k★, stealth-browser-mcp 1.5k★), rebranding them, and shipping as hosted SaaS with Stripe checkout.
+Built by engineering on production-grade foundations (a battle-tested 13-platform read/search engine, a battle-tested AI short-video engine, a battle-tested undetectable browser stack), rebranding them, and shipping as hosted SaaS with Stripe checkout.
 
 - 3 production products live (web-eyes, video-forge, stealth-browser)
 - Free tier + paid tier ($29-99/mo)

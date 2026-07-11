@@ -8,4 +8,4 @@ In the same sprint I hit a second loader bug: `.env` had `MINIMAX_SUBSCRIPTION_K
 
 Both bugs documented in a free playbook (with the 3-line fix): https://talonforgehq.github.io/atlas-store/products/atlas-playbook-free.md
 
-Shipped 3 MIT-fork products today as part of a $0→$1k sprint. Roast + improve below.
+Shipped 3 production AI tools today as part of a $0→$1k sprint. Roast + improve below.

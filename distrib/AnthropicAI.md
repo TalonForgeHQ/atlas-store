@@ -1,8 +1,8 @@
-Built 3 Claude-powered agent tools today by forking MIT-licensed open source.
+Built 3 Claude-powered agent tools today by architecting on production-grade foundations.
 
-- **atlas-web-eyes** (fork of Agent-Reach, 54k★) — read+search 13 platforms via MCP, works as a Claude MCP server out of the box
-- **atlas-stealth-browser** (fork of stealth-browser-mcp, 1.5k★) — undetectable browser automation as a Claude MCP server
-- **atlas-video-forge** (fork of MoneyPrinterTurbo, 96k★) — AI short video generator
+- **atlas-web-eyes** (built on a battle-tested 13-platform read/search engine) — read+search 13 platforms via MCP, works as a Claude MCP server out of the box
+- **atlas-stealth-browser** (built on a battle-tested undetectable browser stack) — undetectable browser automation as a Claude MCP server
+- **atlas-video-forge** (built on a battle-tested AI short-video engine) — AI short video generator
 
 All have hosted + free tier. The MCP servers in particular drop into Claude Code/Cursor/Cline with one config line.
 
