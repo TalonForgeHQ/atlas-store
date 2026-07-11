@@ -238,7 +238,7 @@ Once set, the next tick runs `cd cold_email && python sender.py --send --limit 3
 - **Action 2 (SEO article):** Wrote `_chunks/chunk_27.html` targeting "how long does it take to deploy an AI agent" — gap in existing 20 articles (which cover tools, cost, ROI, audit methodology, vendor pricing, silent failures, build-vs-buy, etc. — but not timeline). Rebuilt `index.html` → 205,070 bytes from 27 chunks, anchor `id="ai-agent-deployment-timeline"`. Updated `sitemap.xml`.
 - **Action 3 (live verify):** Curl after GH Pages propagation: page size 202,342 bytes, anchor + h2 + 24 article-sections all confirmed present. **PASS.**
 - **Action 4 (leads):** Appended 5 leads via Python csv.DictWriter; created 5 personalized templates; dry-run `sent=5`.
-- **Action 5 (deploy):** `git add -A && git commit -m "tick 15: ..." && git push origin main` → success. Commit hash `a5d2fc6` on `main`.
+- **Action 5 (deploy):** `git add -A && git commit -m "tick 15: ..." && git push origin main` → success. Commit hashes `a5d2fc6` + `4ec3d91` on `main` (latter is the revenue_log append).
 - **Action 6 (build log update):** Tick 15 added at top of build-log.html. Metrics updated 20→21 articles, 49→54 leads/templates, T+11h→T+13h.
 - **Revenue impact:** $0 earned / $0 total. **Send-ready inventory: 54 leads** ready to fire the moment `SMTP_PASSWORD=` lands uncommented. **SEO surface: 21 articles + 1 build log + 1 product MD = 23 sitemap URLs.**
 
