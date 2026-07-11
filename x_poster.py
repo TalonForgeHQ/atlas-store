@@ -1,10 +1,5 @@
 """
-Atlas X.com Poster — uses CDP-attached Chrome with user's login session.
-Posts the 10-tweet thread to @TalonForgeHQ.
-
-Usage:
-  python x_poster.py --dry-run  # shows what would be posted
-  python x_poster.py            # actually posts
+Atlas X.com Poster v2 — uses CDP, fills compose directly, clicks Post.
 """
 
 import sys
@@ -32,7 +27,6 @@ def post_thread(dry_run: bool):
         browser = p.chromium.connect_over_cdp('http://localhost:9222')
         ctx = browser.contexts[0]
 
-        # Find the X.com tab
         x_page = None
         for page in ctx.pages:
             if 'x.com' in page.url:
@@ -40,68 +34,75 @@ def post_thread(dry_run: bool):
                 break
 
         if not x_page:
-            print("[ERROR] No x.com tab found in Chrome")
+            print("[ERROR] No x.com tab found")
             return 1
 
-        # Bring to front
-        x_page.bring_to_front()
-        print(f"[OK] Connected to X tab: {x_page.title()}")
+        print(f"[OK] Connected to: {x_page.title()} ({x_page.url})")
 
         if dry_run:
             print(f"\n[DRY RUN] Would post {len(TWEETS)} tweets:")
             for i, t in enumerate(TWEETS, 1):
-                print(f"\n--- Tweet {i}/{len(TWEETS)} ---")
-                print(t[:300] + ("..." if len(t) > 300 else ""))
+                print(f"\n--- Tweet {i}/{len(TWEETS)} ({len(t)} chars) ---")
+                print(t[:200] + ("..." if len(t) > 200 else ""))
             return 0
 
-        # Post each tweet as a reply to the previous (creates a thread)
         posted = 0
         failed = 0
 
         for i, tweet_text in enumerate(TWEETS, 1):
             try:
-                print(f"\n[{i}/{len(TWEETS)}] Posting tweet...")
+                print(f"\n[{i}/{len(TWEETS)}] Posting ({len(tweet_text)} chars)...")
 
-                if i == 1:
-                    # First tweet — click the SideNav "Post" button to open compose modal
-                    post_btn = x_page.locator('[data-testid="SideNav_NewTweet_Button"]')
-                    post_btn.first.click()
-                    time.sleep(1)
-                # Subsequent tweets — click the compose area on the previous tweet's reply
+                # Navigate to compose page
+                x_page.goto('https://x.com/compose/post', wait_until='domcontentloaded', timeout=10000)
+                time.sleep(1)
 
-                # Find compose textarea (in modal for first, in inline for replies)
+                # Find compose textarea
                 compose = x_page.locator('[data-testid="tweetTextarea_0"]')
-                compose.wait_for(state="visible", timeout=5000)
-                compose.click()
-                compose.fill(tweet_text)
+                if compose.count() == 0:
+                    print(f"  [WARN] Compose not found, retrying...")
+                    time.sleep(2)
+                    compose = x_page.locator('[data-testid="tweetTextarea_0"]')
+
+                if compose.count() == 0:
+                    raise Exception("Compose textarea not found")
+
+                compose.first.click()
+                time.sleep(0.3)
+                compose.first.fill(tweet_text)
                 time.sleep(0.5)
 
-                # Click Post button (in modal: data-testid="tweetButton" or toolbarPost)
-                # Look for "Post" or "Tweet" button
-                post_btn = x_page.locator('[data-testid="tweetButton"]')
-                if post_btn.count() == 0:
-                    # Modal version
-                    post_btn = x_page.locator('[data-testid="tweetButtonInline"]')
-                if post_btn.count() == 0:
-                    # Try alternative
-                    post_btn = x_page.locator('button:has-text("Post")').first
-                if post_btn.count() == 0:
-                    post_btn = x_page.locator('button:has-text("Tweet")').first
+                # Click Post button — try multiple selectors
+                post_btn = None
+                for selector in [
+                    '[data-testid="tweetButton"]',
+                    '[data-testid="tweetButtonInline"]',
+                    'button[data-testid="tweetButton"]',
+                ]:
+                    btn = x_page.locator(selector)
+                    if btn.count() > 0:
+                        post_btn = btn.first
+                        break
 
-                post_btn.first.click()
-                time.sleep(2)
+                if not post_btn:
+                    # Try by text
+                    for text in ["Post", "Tweet", "Post all"]:
+                        btn = x_page.locator(f'button:has-text("{text}")')
+                        if btn.count() > 0:
+                            post_btn = btn.first
+                            break
+
+                if not post_btn:
+                    raise Exception("Post button not found")
+
+                post_btn.click()
+                time.sleep(3)  # Wait for post to complete
+
+                # Take screenshot for verification
+                x_page.screenshot(path=f"x_post_{i}.png")
 
                 posted += 1
                 print(f"  [OK] Tweet {i} posted")
-
-                if i < len(TWEETS):
-                    # For thread: navigate to the just-posted tweet to reply
-                    # Simpler: open compose again from SideNav for each
-                    if i == 1:
-                        # First tweet is posted. Open compose again for next.
-                        time.sleep(1)
-                        x_page.locator('[data-testid="SideNav_NewTweet_Button"]').first.click()
-                        time.sleep(1)
 
             except Exception as e:
                 failed += 1
