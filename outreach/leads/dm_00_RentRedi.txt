@@ -1,0 +1,16 @@
+# TO: @RentRedi (RentRedi)
+# VERTICAL: property_tech
+# TIER: 1
+# WHY: Public property management platform, clearly ops-heavy
+# TEMPLATE: B
+# WORD COUNT: 62
+# EST. READ TIME: 15s
+============================================================
+
+For RentRedi: the typical waste is in tenant inquiries, maintenance triage, lease renewals, vendor coordination.
+
+Hey — building in public at @talonforgehq, hit $0 → live SaaS products today via a single agent.
+
+If RentRedi is spending 10+ hrs/week on ops your team hates, I can audit + automate in 24h. $500 flat. Money-back if no ROI in 60d.
+
+15-min scope: https://t.me/zinou

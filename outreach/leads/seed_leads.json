@@ -1,0 +1,135 @@
+[
+  {
+    "handle": "@RentRedi",
+    "name": "RentRedi",
+    "vertical": "property_tech",
+    "tier": 1,
+    "why": "Public property management platform, clearly ops-heavy"
+  },
+  {
+    "handle": "@doorloop",
+    "name": "DoorLoop",
+    "vertical": "property_tech",
+    "tier": 1,
+    "why": "Property mgmt SaaS, tenant comms is their wedge"
+  },
+  {
+    "handle": "@AppFolio",
+    "name": "AppFolio",
+    "vertical": "property_tech",
+    "tier": 1,
+    "why": "PM SaaS leader, AI features are weak (per public reviews)"
+  },
+  {
+    "handle": "@TurboTenant",
+    "name": "TurboTenant",
+    "vertical": "property_tech",
+    "tier": 2,
+    "why": "Smaller PM SaaS, target for AI integration"
+  },
+  {
+    "handle": "@levelsio",
+    "name": "levelsio",
+    "vertical": "indie_saas",
+    "tier": 1,
+    "why": "Public indie hacker, ships constantly, buys tools"
+  },
+  {
+    "handle": "@marc_louvion",
+    "name": "Marc Louvion",
+    "vertical": "indie_saas",
+    "tier": 1,
+    "why": "Indie SaaS builder, public Twitter"
+  },
+  {
+    "handle": "@tdinh_me",
+    "name": "Tony Dinh",
+    "vertical": "indie_saas",
+    "tier": 1,
+    "why": "Indie hacker, public, ships fast"
+  },
+  {
+    "handle": "@csaborzi",
+    "name": "csaborzi",
+    "vertical": "indie_saas",
+    "tier": 2,
+    "why": "Twitter-active indie"
+  },
+  {
+    "handle": "@neilpatel",
+    "name": "Neil Patel",
+    "vertical": "agency",
+    "tier": 1,
+    "why": "Public agency owner, big audience, ops-heavy"
+  },
+  {
+    "handle": "@Backlinko",
+    "name": "Backlinko",
+    "vertical": "agency",
+    "tier": 1,
+    "why": "SEO agency, clear content ops needs"
+  },
+  {
+    "handle": "@LHHGlobal",
+    "name": "LHH",
+    "vertical": "recruiting",
+    "tier": 2,
+    "why": "Big recruiting firm, public AI-struggling"
+  },
+  {
+    "handle": "@Indeed",
+    "name": "Indeed",
+    "vertical": "recruiting",
+    "tier": 2,
+    "why": "Job board, employer-side ops pain"
+  },
+  {
+    "handle": "@usesignhouse",
+    "name": "SignHouse",
+    "vertical": "b2b_saas",
+    "tier": 1,
+    "why": "Small B2B SaaS, public"
+  },
+  {
+    "handle": "@craftmetrics",
+    "name": "Craftmetrics",
+    "vertical": "b2b_saas",
+    "tier": 1,
+    "why": "B2B SaaS, indie-friendly"
+  },
+  {
+    "handle": "@plausible",
+    "name": "Plausible Analytics",
+    "vertical": "b2b_saas",
+    "tier": 1,
+    "why": "Public analytics SaaS, indie-friendly, AI-curious"
+  },
+  {
+    "handle": "@SahilBloom",
+    "name": "Sahil Bloom",
+    "vertical": "coaching",
+    "tier": 2,
+    "why": "Public creator/coach, newsletter-heavy"
+  },
+  {
+    "handle": "@AlexHormozi",
+    "name": "Alex Hormozi",
+    "vertical": "coaching",
+    "tier": 1,
+    "why": "Public business coach, big ops team"
+  },
+  {
+    "handle": "@gurusquad",
+    "name": "Guru Squad",
+    "vertical": "ecommerce",
+    "tier": 2,
+    "why": "Public ecom agency"
+  },
+  {
+    "handle": "@_convertica",
+    "name": "Convertica",
+    "vertical": "ecommerce",
+    "tier": 2,
+    "why": "Ecom CRO agency"
+  }
+]

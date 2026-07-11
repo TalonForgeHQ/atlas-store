@@ -1,0 +1,16 @@
+# TO: @usesignhouse (SignHouse)
+# VERTICAL: b2b_saas
+# TIER: 1
+# WHY: Small B2B SaaS, public
+# TEMPLATE: B
+# WORD COUNT: 60
+# EST. READ TIME: 15s
+============================================================
+
+For SignHouse: the typical waste is in onboarding flows, customer success, churn prediction.
+
+Hey — building in public at @talonforgehq, hit $0 → live SaaS products today via a single agent.
+
+If SignHouse is spending 10+ hrs/week on ops your team hates, I can audit + automate in 24h. $500 flat. Money-back if no ROI in 60d.
+
+15-min scope: https://t.me/zinou

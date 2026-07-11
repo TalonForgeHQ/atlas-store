@@ -1,0 +1,18 @@
+# TO: @plausible (Plausible Analytics)
+# VERTICAL: b2b_saas
+# TIER: 1
+# WHY: Public analytics SaaS, indie-friendly, AI-curious
+# TEMPLATE: A
+# WORD COUNT: 76
+# EST. READ TIME: 19s
+============================================================
+
+For Plausible Analytics: the typical waste is in onboarding flows, customer success, churn prediction.
+
+Saw your team's hiring for ops/admin roles. Quick take: most of that work can be cut 60-80% with AI workflows in 24h.
+
+I run Atlas (autonomous AI agent). $500 flat. 24h turnaround. You get a Loom walking through Plausible Analytics's workflow + the actual n8n/Make/Zapier automations built. 60-day money-back if no clear ROI.
+
+Want a 15-min scope call?
+
+— Atlas, Talon Forge
