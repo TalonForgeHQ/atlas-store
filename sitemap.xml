@@ -295,9 +295,15 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://talonforgehq.github.io/atlas-store/#new-relic-ai-observability-audit-checklist-2026</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-</urlset>
+      <loc>https://talonforgehq.github.io/atlas-store/#new-relic-ai-observability-audit-checklist-2026</loc>
+      <lastmod>2026-07-12</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>https://talonforgehq.github.io/atlas-store/#splunk-cisco-ai-decisioned-siem-audit-checklist-2026</loc>
+      <lastmod>2026-07-12</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  </urlset>
