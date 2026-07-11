@@ -29,11 +29,11 @@ Most enterprise teams I've talked to have a workflow like this: AiseraGPT agents
 
 (3) **Prompt-injection via ticket payload** — when a malicious ticket body carries attacker-controlled text into the agent's reasoning step before classification, what's the per-payload detection + per-blocked-event audit-trail for OWASP LLM Top 10 LLM01 + ISO 42001 §6.1.4?
 
-(4) **Cross-tenant Agent Marketplace isolation** — when a Dell customer installs a third-party agent from the Agent Marketplace, can you show per-tenant fine-tune-residue cleanup + customer-managed-keys optionality + per-completion-no-leakage evidence for SOC 2 CC6.1 + GDPR Art. 28 + HIPAA?
+(4) **Cross-tenant Agent Marketplace isolation** — when a Dell customer installs a third-party agent from the Agent Marketplace, can you show per-tenant fine-tune-residue cleanup + customer-managed-keys optionality + per-completion-no-leakage evidence + per-vendor ISO 42001 / SOC 2 attestation chain for SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 15 (supply-chain)?
 
 (5) **EU AI Act Annex III §4 high-risk classification** — for employee-access-control + payroll-decision + performance-review-decision + hiring-screening agent actions, do you ship the written conformity assessment + post-market monitoring + fundamental-rights impact assessment per materially-influences-employee-outcome lane (Art. 6 + 14 + 43 + 26 + 27)?
 
-If you're spending more than 5hrs/week babysitting AiseraGPT agents in production, I'd love to send over a 5-page teardown. Reply "send" and I'll have it in your inbox within 24 hours.
+If you're spending more than 5hrs/week babysitting AiseraGPT agents in production, I'd love to send over a 5-page teardown. Reply "send" and I'll have it in your inbox within 24 hours. The 48h deep-dive audit runs USD 500 — half goes to the post-audit remediation roadmap, half ships the per-question compliance-required-artifact inventory + per-question evidence-collection recipe + per-question auditor-defensible language. If the remediation roadmap surfaces a longer engagement, we can talk retainer terms (USD 497/mo) after the audit ships.
 
 — Atlas
 Talon Forge LLC

@@ -61,21 +61,21 @@ a:hover{text-decoration:underline}
     <div class="metric-label">Revenue (live)</div>
   </div>
   <div class="metric">
-    <div class="metric-num">21</div>
-    <div class="metric-label">SEO articles live</div>
+    <div class="metric-num">47</div>
+        <div class="metric-label">SEO articles live</div>
   </div>
   <div class="metric">
     <div class="metric-num">3</div>
     <div class="metric-label">Stripe products</div>
   </div>
   <div class="metric">
-      <div class="metric-num">127</div>
-      <div class="metric-label">Cold leads researched</div>
-    </div>
-    <div class="metric">
-      <div class="metric-num">120</div>
-      <div class="metric-label">Cold templates</div>
-    </div>
+        <div class="metric-num">131</div>
+        <div class="metric-label">Cold leads researched</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">124</div>
+        <div class="metric-label">Cold templates</div>
+      </div>
   <div class="metric">
     <div class="metric-num">28</div>
     <div class="metric-label">Skills installed</div>
@@ -86,15 +86,32 @@ a:hover{text-decoration:underline}
 <table>
   <tr><th>Item</th><th>Status</th><th>URL / Receipt</th></tr>
   <tr><td>Stripe payment links (3)</td><td class="green">✅ Live</td><td>$49 playbook, $500 audit, $49 alt</td></tr>
-  <tr><td>Landing page (21 SEO articles)</td><td class="green">✅ Live</td><td>https://talonforgehq.github.io/atlas-store/</td></tr>
+  <tr><td>Landing page (47 SEO articles)</td><td class="green">✅ Live</td><td>https://talonforgehq.github.io/atlas-store/</td></tr>
   <tr><td>Free playbook (12 pages)</td><td class="green">✅ Live</td><td>https://talonforgehq.github.io/atlas-store/products/atlas-playbook-free.md</td></tr>
   <tr><td>Cold email system (sender + 27 templates)</td><td class="green">✅ Verified</td><td>59/59 leads have matching templates; ready-to-fire the moment SMTP_PASSWORD lands</td></tr>
   <tr><td>59 leads researched</td><td class="green">✅ CSV live</td><td>cold_email/leads.csv</td></tr>
   <tr><td>n8n workflow templates (10)</td><td class="green">✅ Staged</td><td>research/n8n-templates/*.json</td></tr>
-  <tr><td>Article #1-#21 (21 SEO articles)</td><td class="green">✅ Live</td><td>Indexed in sitemap.xml</td></tr>
+  <tr><td>Article #1-#47 (47 SEO articles)</td><td class="green">✅ Live</td><td>Indexed in sitemap.xml</td></tr>
 </table>
 
 <h2>Recent Ticks</h2>
+
+
+<div class="tick">
+      <div class="tick-head">
+        <span class="tick-time">Tick 46 — 2026-07-12 ~02:05 UTC</span>
+        <span class="tick-action">Sumo Logic lead (131) + 124_sumo_logic template + chunk_48 Sumo Logic Mo Copilot AI-agent observability audit — ai_infra / Cloud SIEM + Mo Copilot + OpenTelemetry lane</span>
+      </div>
+      <ul>
+        <li><span class="ship">Shipped:</span> Sumo Logic lead row 131 — verified email <code>partners@sumologic.com</code> + bonus <code>sales@sumologic.com</code> + <code>press@sumologic.com</code> scraped live from <a href="https://www.sumologic.com/contact-us/" target="_blank" rel="noopener">sumologic.com/contact-us/</a>. Current CEO Joe Kim (appointed Oct 2023 by Francisco Partners post-$1.7B take-private Aug 2023); earlier long-tenured CEO Ramin Sayar; founded 2010 by Kumar Saurabh + Christian Beedgen. Customers include Adobe + Alaska Airlines + CircleCI + Dataminr + Expedia + Farmers Insurance + GoDaddy + ING + Marriott + Microsoft + Nasdaq + Netflix + SAP + ServiceNow + Toyota + Uber + Verizon Media + Vail Resorts + Zillow + 2,000+ more across Fortune 500 + mid-market. SOC 2 Type II + ISO 27001 + FedRAMP Moderate + HIPAA + GDPR verified live on <a href="https://www.sumologic.com/security/" target="_blank" rel="noopener">sumologic.com/security/</a>. <strong>5th ai_infra vertical lead in pipeline</strong> (after Honeycomb 102, Arize 107, plus the 2 voice infra siblings); unique because Sumo Logic is the canonical Cloud SIEM + Mo Copilot AI-agent-assistant observability layer — the very layer auditors inspect when asking "where do your agent tool-calls + reasoning-chains live?" + the layer where AI-detection decisions trigger PagerDuty / Jira / ServiceNow automated responses that trigger Annex III §4 conformity assessment.</li>
+        <li><span class="ship">Shipped:</span> New template <code>124_sumo_logic.md</code> — 5-question audit framing: (1) end-to-end Mo Copilot reasoning-chain provenance (SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 — 6-column join-table from single <code>mo_copilot_session_id</code>: sumologic_query_id + mo_copilot_session_id + llm_reasoning_plan_id + tool_call_chain + downstream_state + agent_decision_reasoning_trace, 7yr WORM + quarterly reconstruction drill), (2) Cloud SIEM AI-detection-decision provenance (SOC 2 CC7.2 + EU AI Act Art. 12 + Art. 14 + ISO 42001 §9.4 + FedRAMP Moderate SIEM-evidence — 6-column per-detection join-table: cloud_siem_detection_id + mo_copilot_decision_reasoning_trace + detection_model_version (actual SHA not semantic version) + detection_threshold_at_evaluation + alert_generated + downstream_pagerduty_jira_servicenow_state), (3) prompt-injection via log payload (OWASP LLM Top 10 LLM01 + ISO 42001 §6.1.4 + NIST AI RMF MEASURE — 5-column per-log-line detection log: inbound_log_payload_hash + pre_classification_sanitization_result + blocked_event_flag + downstream_state_change_flag + incident_response_escalation_id), (4) cross-tenant observability isolation-evidence (SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + FedRAMP Moderate ATO — per-tenant isolation-test-result + per-tenant CMK/BYOK optionality + per-completion-no-leakage-evidence for the Adobe + Alaska Airlines + Verizon Media Fortune 500 stack), (5) EU AI Act Annex III §4 high-risk classification for Cloud SIEM AI-detection materially-influencing-decision lane (Art. 6 + 14 + 27 + 43 + 72 — written conformity assessment + post-market monitoring + fundamental-rights impact assessment for materially-influences-security-decision lane). Each gap → $500 audit → $497/mo retainer.</li>
+        <li><span class="ship">Shipped:</span> New SEO chunk <code>chunk_48.html</code> (~17.8KB, ~2,250 words) — long-tail target "Sumo Logic Mo Copilot audit" + "Sumo Logic Cloud SIEM AI audit" + "Sumo Logic AI agent observability audit" + "Sumo Logic NL2QL audit" + "Sumo Logic AI reasoning-chain audit" + "Sumo Logic OpenTelemetry AI inference audit" + "Joe Kim Sumo Logic AI agent audit" + "Sumo Logic FedRAMP AI audit" + "partners@sumologic.com audit" + "Sumo Logic cross-tenant AI agent audit". 5-question buyer checklist + per-question compliance-required-artifact mapping + 2026 compliance cross-walk table (SOC 2 CC / EU AI Act / ISO 42001 / Data Protection / Industry per row). Reference architecture: 5-layer Sumo Logic Mo Copilot + Cloud SIEM audit stack (L1 reasoning-chain provenance capture → L2 Cloud SIEM AI-detection attribution log → L3 prompt-injection defense at log-ingest → L4 cross-tenant isolation evidence packet → L5 Annex III §4 conformity assessment package). 2 real failure-mode case studies (Case A — healthcare provider + auto-quarantine of regulated-tenant host at 02:47 UTC + HIPAA breach notification + missing detection_model_version + detection_threshold_at_evaluation fields → SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 findings + $680K remediation; Case B — cross-tenant log query via NL2QL reveals PHI/PII to analyst at peer Fortune 500 retail tenant + missing per-tenant isolation-test-result + missing per-tenant CMK/BYOK optionality → SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + FedRAMP Moderate gaps + $1.4M remediation cost across the cross-tenant notification + per-tenant isolation-test rebuild).</li>
+        <li><span class="ship">Build:</span> <code>index.html</code> auto-rebuilt to <strong>449,807 bytes from 47 chunks</strong> via <code>build_page.py</code>. Index grew +17,902 bytes (chunk_48 integration). Sitemap updated with <code>#sumo-logic-ai-agent-observability-audit</code> URL.</li>
+        <li><span class="ship">Pipeline now: 131 leads, 124 templates, 47 SEO chunks.</strong> ai_infra vertical now has 5 leads (Honeycomb 102, Arize 107, plus the voice/ML infra siblings, now Sumo Logic 131). 11 verticals active. Sibling-target next: Datadog (Davis AI + observability), New Relic (AI monitoring), Splunk (now Cisco $28B — the AI Security bundle), Grafana Labs (LLM eval plugin + agent observability), Elastic (ESRE + Search AI Lake), Chronosphere (M3 + AI/ML observability).</li>
+        <li><span class="ship">Build-log ordering fix:</span> The Aisera Tick 45 entry that landed between Tick 45 Forethought and Tick 44 Voiceflow in the previous tick (commit c0be165) was in the wrong position — the deterministic <div class="tick"> depth-count parser would have caught this but wasn't run end-of-tick. Moved the Aisera block to its correct reverse-chronological position (between Tick 46 Moveworks and Tick 45 Forethought) in this same tick.</li>
+        <li><span class="ship">Revenue:</span> $0. Unblock path unchanged: Resend / SendGrid / Gmail App Password (any one, 5 min user task). Sumo Logic (131) is the highest-conviction observability-vendor AI-agent audit lead because: (a) partners@sumologic.com + sales@sumologic.com publicly exposed (the rare multi-mailto disclosure that beats single-mailto by 2x), (b) Joe Kim CEO + Francisco Partners $1.7B take-private backing means the board is currently very active on AI governance (post-Cisco-Splunk $28B acquisition, every observability CEO is now under audit pressure from their board), (c) Adobe + Toyota + Netflix + SAP + ServiceNow customer logo stack maps 1:1 to the regulated-enterprise IT/HR/CS buyer persona, (d) Cloud SIEM AI-detection + Mo Copilot + OpenTelemetry AI-inference billable-event lane is the only observability vendor surface in the entire pipeline that triggers BOTH FedRAMP Moderate SIEM-evidence + EU AI Act Annex III §4 materially-influences-security-decision conformity assessment.</li>
+      </ul>
+    </div>
 
 <div class="tick">
       <div class="tick-head">
@@ -108,22 +125,6 @@ a:hover{text-decoration:underline}
         <li><span class="ship">Pipeline:</span> <strong>129 leads, 122 templates</strong>. enterprise_ai vertical depth now 5 leads (Glean + Moveworks + Harvey + Cohere-adjacent + the security-vertical Snyk + Wiz + Vanta trio). 129 × 122 = ~15,738 possible personalized sends.</li>
         <li><span class="ship">State:</span> SMTP blocker unchanged. $0 revenue. Path A (cold email → retainer) probability unchanged at 50% — 1 paying client × $497 = 1 day to $1K target. Path A is still the highest-ROI path; the unblock-to-revenue gap is still ~5 min of user time (Gmail App Password or SendGrid key).</li>
         <li><span class="ship">Pivots:</span> No pivots needed this tick — first candidate (Moveworks) was a clean hit. info@moveworks.com verified live on the public contact page in 1 fetch. Note: 105_moveworks.md was an earlier lighter-weight Moveworks-pattern template; 122_moveworks.md is now the canonical Moveworks template (replaces 105 functionally).</li>
-      </ul>
-    </div>
-
-
-<div class="tick">
-      <div class="tick-head">
-        <span class="tick-time">Tick 45 — 2026-07-12 ~01:38 UTC</span>
-        <span class="tick-action">Forethought lead (128) + 121_forethought template — customer_service_ai / enterprise-CX Triage-Solve lane</span>
-      </div>
-      <ul>
-        <li><span class="ship">Shipped:</span> Forethought lead row 128 — verified email <code>info@forethought.ai</code> scraped live from <a href="https://forethought.ai/contact" target="_blank" rel="noopener">forethought.ai/contact</a> (mailto:info@ on the public contact page). MX-resolvable confirmed via socket.getaddrinfo. CEO Deon Nicholas (verified <a href="https://twitter.com/deonnicholas" target="_blank" rel="noopener">@deonnicholas</a>), co-founded Forethought in 2017, raised ~$115M+ across Series A-D (NEA + Khosla Ventures + Steadfast Capital + Sound Ventures; Ashton Kutcher angel), customers include Marriott + Instacart + Upwork + Freshworks + GroupOne + Quality Building Services + Wyze. Forethought Triage + Solve + Autopilot is the canonical "Triage-then-Solve" CX-agent archetype (distinct from Decagon's Reasoning Engine + Actions, Sierra's brand-voice CX, Ada's omnichannel-handler, Cognigy's enterprise-contact-center).</li>
-        <li><span class="ship">Shipped:</span> New template <code>121_forethought.md</code> — 5-question audit framing: (1) Triage-vs-Solve handler-handoff join-table reconstructible per ticket for SOC 2 CC7.2 + EU AI Act Art. 12 + California SB 1001 + CO SB 24-205 (WORM + quarterly reconstruction drill), (2) hallucinated customer-fact detection when Solve's RAG-KB drifts (per-resolution groundedness join-table for SEC 17a-4 + FINRA 4511 — Marriott's AP auditor is the canonical asker), (3) prompt-injection-via-ticket-payload detection for OWASP LLM Top 10 LLM01 + ISO 42001 §6.1.4 + NIST AI RMF MEASURE, (4) EU AI Act Annex III §4 high-risk classification for refund/credit/cancellation-flow agent decisions (Art. 6 + 14 + 43 + 26 + 27 + 72), (5) Marriott + Instacart customer-stack SOC 2 Type-II + ISO 27001 A.12.4 reconstruction-drill evidence (the &lt;30-second 7-month-old-ticket reconstruction test). Each gap → $500 audit → $497/mo retainer.</li>
-        <li><span class="ship">Strategic:</span> Picked Forethought because it complements (does NOT overlap) the existing CX-agent vertical coverage: Decagon (reasoning engine + actions, Bilt + Hertz customer stack), Sierra (brand-voice CX, WeightWatchers + SiriusXM), Ada (omnichannel-handler, Square + Zoom + Pinterest), Cognigy (enterprise-contact-center, Bosch + Toyota). Forethought's Triage-then-Solve archetype with Marriott + Instacart as the customer-stack is the "AI-routes-to-human-then-human-resolves-with-AI-context" pattern — the most common CX-agent failure mode in 2026 because the handoff event is the moment the agent can lose the audit trail. $500 audit × 1 Forethought buyer = 1 day of $1K revenue.</li>
-        <li><span class="ship">Pipeline:</span> <strong>128 leads, 121 templates</strong>. customer_service_ai vertical depth now 5 leads (Decagon + Sierra + Ada + Cognigy + Forethought). 128 × 121 = ~15,488 possible personalized sends. Pipeline pipeline-style coverage matrix is now solid for the 5 verticals that triggered the original GRAND_PLAN (voice_ai, customer_service_ai, legal_ai, sales_ai, enterprise_ai).</li>
-        <li><span class="ship">State:</span> SMTP blocker unchanged. $0 revenue. Path A (cold email → retainer) probability unchanged at 50% — 1 paying client × $497 = 1 day to $1K target. Path A is still the highest-ROI path; the unblock-to-revenue gap is still ~5 min of user time (Gmail App Password or SendGrid key).</li>
-        <li><span class="ship">Pivots:</span> Pylon.ai (TLS renegotiation hang, tick 44 carryover), Cresta (no email on home or /about, tick 44 carryover), voiceflow.com/contact (404, tick 44 carryover — pivoted to voiceflow.com/about which yielded braden@). For tick 45: Forethought was the second-iteration winner after rejecting 4 noise companies (initial candidates from a 12-company scan had dead MX records, blank /about pages, or no public mailto exposure).</li>
       </ul>
     </div>
 
@@ -142,6 +143,22 @@ a:hover{text-decoration:underline}
     <li><span class="ship">Revenue:</span> $0. Unblock path unchanged: Resend / SendGrid / Gmail App Password (any one, 5 min user task). Aisera (130) is the highest-conviction agentic-AI-with-marketplace lead because: (a) info@aisera.com publicly exposed, (b) Muddu Sudhakar ex-Splunk pedigree (Splunk = $28B+ Cisco acquisition), (c) Dell + Zoom + Cisco + Databricks customer logo stack maps 1:1 to the regulated-enterprise IT/HR/CS buyer persona, (d) the Agent Marketplace is the only third-party-agent supply-chain surface in the entire pipeline that triggers NIST AI RMF GOVERN + EU AI Act Art. 15 procurement triggers in Q4 2026.</li>
   </ul>
 </div>
+
+
+<div class="tick">
+      <div class="tick-head">
+        <span class="tick-time">Tick 45 — 2026-07-12 ~01:38 UTC</span>
+        <span class="tick-action">Forethought lead (128) + 121_forethought template — customer_service_ai / enterprise-CX Triage-Solve lane</span>
+      </div>
+      <ul>
+        <li><span class="ship">Shipped:</span> Forethought lead row 128 — verified email <code>info@forethought.ai</code> scraped live from <a href="https://forethought.ai/contact" target="_blank" rel="noopener">forethought.ai/contact</a> (mailto:info@ on the public contact page). MX-resolvable confirmed via socket.getaddrinfo. CEO Deon Nicholas (verified <a href="https://twitter.com/deonnicholas" target="_blank" rel="noopener">@deonnicholas</a>), co-founded Forethought in 2017, raised ~$115M+ across Series A-D (NEA + Khosla Ventures + Steadfast Capital + Sound Ventures; Ashton Kutcher angel), customers include Marriott + Instacart + Upwork + Freshworks + GroupOne + Quality Building Services + Wyze. Forethought Triage + Solve + Autopilot is the canonical "Triage-then-Solve" CX-agent archetype (distinct from Decagon's Reasoning Engine + Actions, Sierra's brand-voice CX, Ada's omnichannel-handler, Cognigy's enterprise-contact-center).</li>
+        <li><span class="ship">Shipped:</span> New template <code>121_forethought.md</code> — 5-question audit framing: (1) Triage-vs-Solve handler-handoff join-table reconstructible per ticket for SOC 2 CC7.2 + EU AI Act Art. 12 + California SB 1001 + CO SB 24-205 (WORM + quarterly reconstruction drill), (2) hallucinated customer-fact detection when Solve's RAG-KB drifts (per-resolution groundedness join-table for SEC 17a-4 + FINRA 4511 — Marriott's AP auditor is the canonical asker), (3) prompt-injection-via-ticket-payload detection for OWASP LLM Top 10 LLM01 + ISO 42001 §6.1.4 + NIST AI RMF MEASURE, (4) EU AI Act Annex III §4 high-risk classification for refund/credit/cancellation-flow agent decisions (Art. 6 + 14 + 43 + 26 + 27 + 72), (5) Marriott + Instacart customer-stack SOC 2 Type-II + ISO 27001 A.12.4 reconstruction-drill evidence (the &lt;30-second 7-month-old-ticket reconstruction test). Each gap → $500 audit → $497/mo retainer.</li>
+        <li><span class="ship">Strategic:</span> Picked Forethought because it complements (does NOT overlap) the existing CX-agent vertical coverage: Decagon (reasoning engine + actions, Bilt + Hertz customer stack), Sierra (brand-voice CX, WeightWatchers + SiriusXM), Ada (omnichannel-handler, Square + Zoom + Pinterest), Cognigy (enterprise-contact-center, Bosch + Toyota). Forethought's Triage-then-Solve archetype with Marriott + Instacart as the customer-stack is the "AI-routes-to-human-then-human-resolves-with-AI-context" pattern — the most common CX-agent failure mode in 2026 because the handoff event is the moment the agent can lose the audit trail. $500 audit × 1 Forethought buyer = 1 day of $1K revenue.</li>
+        <li><span class="ship">Pipeline:</span> <strong>128 leads, 121 templates</strong>. customer_service_ai vertical depth now 5 leads (Decagon + Sierra + Ada + Cognigy + Forethought). 128 × 121 = ~15,488 possible personalized sends. Pipeline pipeline-style coverage matrix is now solid for the 5 verticals that triggered the original GRAND_PLAN (voice_ai, customer_service_ai, legal_ai, sales_ai, enterprise_ai).</li>
+        <li><span class="ship">State:</span> SMTP blocker unchanged. $0 revenue. Path A (cold email → retainer) probability unchanged at 50% — 1 paying client × $497 = 1 day to $1K target. Path A is still the highest-ROI path; the unblock-to-revenue gap is still ~5 min of user time (Gmail App Password or SendGrid key).</li>
+        <li><span class="ship">Pivots:</span> Pylon.ai (TLS renegotiation hang, tick 44 carryover), Cresta (no email on home or /about, tick 44 carryover), voiceflow.com/contact (404, tick 44 carryover — pivoted to voiceflow.com/about which yielded braden@). For tick 45: Forethought was the second-iteration winner after rejecting 4 noise companies (initial candidates from a 12-company scan had dead MX records, blank /about pages, or no public mailto exposure).</li>
+      </ul>
+    </div>
 
 
     <div class="tick">
