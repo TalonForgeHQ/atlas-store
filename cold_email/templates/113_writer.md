@@ -7,7 +7,7 @@ Subject: Writer + Vanguard + L'Oreal + Accenture + Uber — 5 questions every SO
 
 Hi May / Waseem,
 
-Congrats on the $200M Series C at the $1.9B valuation — the Vanguard + L'Oreal + Accenture + Uber + Salesforce + Marriott + HubSpot + 7-Eleven customer stack is the highest-vertical-density regulated-tenant logo stack in enterprise content AI, and maps 1:1 to the regulated-vertical buyer persona a Big-4 EU AI Act conformity assessor + a Vanguard-grade Fortune 500 SOC 2 QSA will pressure-test in Q4 2026.
+Congrats on the $200M Series C at the $1.9B valuation — the Vanguard + L'Oreal + Accenture + Uber + Salesforce + Marriott + HubSpot + 7-Eleven customer stack is the highest-vertical-density regulated-tenant logo stack in enterprise content AI, and maps 1:1 to the regulated-vertical buyer persona a Big-4 EU AI Act conformity assessor + a Vanguard-grade Fortune 500 SOC 2 QSA will pressure-test in Q4 2026. (Contact verified via direct scrape of https://writer.com/contact/ on 2026-07-12 — exposes hello@writer.com.)
 
 I work with content-AI vendors on the audit-gap surface that shows up the quarter after the Series B/C institutional-investor compliance committee triggers a fresh SOC 2 Type II + ISO 42001 + EU AI Act conformity-assessment cycle.
 
