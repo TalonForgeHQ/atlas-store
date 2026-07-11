@@ -270,4 +270,10 @@
                                         <changefreq>monthly</changefreq>
                                         <priority>0.8</priority>
                                         </url>
-                                      </urlset>
+                                      <url>
+<loc>https://talonforgehq.github.io/atlas-store/#eu-ai-act-gpai-audit-checklist-2026-mistral</loc>
+<lastmod>2026-07-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+</urlset>
