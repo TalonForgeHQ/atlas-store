@@ -72,3 +72,8 @@ index,name,handle,email,vertical,tier,template,tier_reason
 71,Harvey AI,@harvey,team@harvey.ai,legal_ai,1,71_harvey.md,Domain-specific AI for elite law firms; evidence: https://harvey.ai/contact exposes team@harvey.ai; CEO Winston Weinberg
 72,Gong,@gong_io,contact@gong.io,sales_intel,1,72_gong.md,Revenue-intelligence AI for sales teams; evidence: https://www.gong.io/contact exposes contact@gong.io; CEO Amit Bendov
 73,Writer,@Writer,partnerships@writer.com,enterprise_ai,1,73_writer.md,Enterprise AI agent platform for regulated industries (Palona, healthcare, financial services); evidence: https://writer.com/contact exposes partnerships@writer.com; CEO May Habib
+74,Lemonade,@Lemonade_Inc,claims@lemonade.com,insurance,1,74_lemonade.md,AI-native insurance carrier (renters/pet/life); evidence: https://www.lemonade.com/contact exposes claims@; CEO Daniel Schreiber; famous for AI claims-triage Maya/Jim
+75,Zillow,@Zillow,press@zillow.com,real_estate,1,75_zillow.md,Real estate marketplace with Zillow Offers AI history ($569M loss in 2021); evidence: https://www.zillow.com/contact-us/ exposes press@; CEO Jeremy Wacksman
+76,Greenhouse,@greenhouse,support@greenhouse.io,recruiting,1,76_greenhouse.md,Structured-hiring ATS with Greenhouse AI; evidence: https://support.greenhouse.io/hc/en-us exposes public support@; CEO Daniel Chait
+77,Gainsight,@gainsight,info@gainsight.com,customer_success,1,77_gainsight.md,Customer success platform with CS AI / Staircase AI; evidence: https://www.gainsight.com/contact/ exposes info@; CEO Nick Mehta
+78,Gorgias,@gorgias,support@gorgias.com,ecommerce,1,78_gorgias.md,Ecommerce helpdesk with Gorgias AI Automate; evidence: https://www.gorgias.com/contact exposes support@; CEO Romain Lapeyre
