@@ -23,3 +23,8 @@ index,name,handle,email,vertical,tier,template,tier_reason
 22,Linear,@linear,,b2b_saas,1,22_linear.md,"Issue tracking SaaS, fast-growing team"
 23,Vercel,@vercel,,dev_tools,1,23_vercel.md,"Frontend cloud platform, dev-first ops"
 24,Supabase,@supabase,,dev_tools,1,24_supabase.md,"Open-source Firebase alt, AI infra angle"
+25,Cal.com,@calcom,support@cal.com,b2b_saas,1,25_calcom.md,"Open-source scheduling SaaS, ops-heavy booking workflows; evidence: https://cal.com/contact exposed support@cal.com"
+26,Tally,@TallyForms,hello@tally.so,b2b_saas,1,26_tally.md,Form SaaS for ops-heavy teams; evidence: https://tally.so/help/contact-us exposed hello@tally.so and founder Filip contact
+27,Kit,@kit,support@kit.com,creator_saas,1,27_kit.md,Creator/email platform with automation workflows; evidence: https://kit.com/terms exposed support@kit.com
+28,Dub,@dubdotco,support@dub.co,b2b_saas,1,28_dub.md,Link attribution SaaS; evidence: https://dub.co/contact exposed support@dub.co and @steventey
+29,Resend,@resend,support@resend.com,dev_tools,1,29_resend.md,Developer email platform with AI/email workflow fit; evidence: https://resend.com/contact exposed support@resend.com

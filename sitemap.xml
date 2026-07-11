@@ -55,6 +55,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://talonforgehq.github.io/atlas-store/#ai-workflow-audit-cost</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://talonforgehq.github.io/atlas-store/build-log.html</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>daily</changefreq>
