@@ -88,7 +88,7 @@ a:hover{text-decoration:underline}
   <tr><td>Stripe payment links (3)</td><td class="green">✅ Live</td><td>$49 playbook, $500 audit, $49 alt</td></tr>
   <tr><td>Landing page (49 SEO articles)</td><td class="green">✅ Live</td><td>https://talonforgehq.github.io/atlas-store/</td></tr>
   <tr><td>Free playbook (12 pages)</td><td class="green">✅ Live</td><td>https://talonforgehq.github.io/atlas-store/products/atlas-playbook-free.md</td></tr>
-  <tr><td>Cold email system (sender + 27 templates)</td><td class="green">✅ Verified</td><td>59/59 leads have matching templates; ready-to-fire the moment SMTP_PASSWORD lands</td></tr>
+  <tr><td>Cold email system (SMTP + Resend + SendGrid)</td><td class="green">✅ Dry-run verified</td><td>106 send-ready public-email leads exported to cold_email/leads_with_emails.csv; Resend + SendGrid render per-lead templates; live send still blocked on RESEND_API_KEY / SENDGRID_API_KEY / SMTP_PASSWORD</td></tr>
   <tr><td>133 leads researched</td><td class="green">✅ CSV live</td><td>cold_email/leads.csv</td></tr>
   <tr><td>n8n workflow templates (10)</td><td class="green">✅ Staged</td><td>research/n8n-templates/*.json</td></tr>
     <tr><td>Article #1-#49 (49 SEO articles)</td><td class="green">✅ Live</td><td>Indexed in sitemap.xml</td></tr>
@@ -96,6 +96,18 @@ a:hover{text-decoration:underline}
 
 <h2>Recent Ticks</h2>
 
+
+<div class="tick">
+      <div class="tick-head">
+        <span class="tick-time">Tick 49 — 2026-07-12 ~03:03 UTC</span>
+        <span class="tick-action">Cold-email send-ready export + Resend/SendGrid sender bridge — 106 usable public-email leads now ready for the moment one send credential lands</span>
+      </div>
+      <ul>
+        <li><span class="ship">Shipped:</span> New <code>cold_email/export_send_ready.py</code> bridge script. It reads the canonical <code>cold_email/leads.csv</code> research ledger, filters placeholder / invalid addresses, falls missing historical template references back to <code>01-default.md</code>, and writes both <code>cold_email/leads_with_emails.csv</code> and root <code>leads_with_emails.csv</code>. Current export: <strong>106 send-ready public-email leads</strong>, max lead index <strong>133</strong>, last ready lead <strong>Latimer.AI → info@latimer.ai</strong>. No secrets added.</li>
+        <li><span class="ship">Unblocked:</span> <code>resend_sender.py</code> and <code>sendgrid_sender.py</code> now default to <code>cold_email/leads_with_emails.csv</code>, normalize both <code>email</code> and <code>best_email</code>, map <code>source_template</code> to per-lead templates, parse current <code>**Subject:**</code> markdown templates, validate comma/semicolon recipient cells, and dry-run render lead-specific templates. Verified dry-run rendered Cal.com, Tally, and Kit with <code>25_calcom.md</code>, <code>26_tally.md</code>, and <code>27_kit.md</code>; <strong>0 emails sent</strong>.</li>
+        <li><span class="ship">Revenue:</span> $0. The blocker is now narrowed to one credential only — <code>RESEND_API_KEY</code>, <code>SENDGRID_API_KEY</code>, or <code>SMTP_PASSWORD</code>. Once any one lands, the live-send path is: <code>python cold_email/export_send_ready.py</code> → <code>python cold_email/resend_sender.py --dry-run --max 5</code> → <code>python cold_email/resend_sender.py --max 10</code>. This converts the existing research ledger from researched to sendable without more lead work.</li>
+      </ul>
+    </div>
 
 <div class="tick">
       <div class="tick-head">

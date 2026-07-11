@@ -1,27 +1,20 @@
 [
   {
-    "to": "support@recall.ai",
-    "company": "Recall.ai",
+    "to": "support@cal.com",
+    "company": "Cal.com",
+    "template": "cold_email\\templates\\25_calcom.md",
     "status": "dry_run"
   },
   {
-    "to": "info@deepgram.com",
-    "company": "Deepgram",
+    "to": "hello@tally.so",
+    "company": "Tally",
+    "template": "cold_email\\templates\\26_tally.md",
     "status": "dry_run"
   },
   {
-    "to": "press@anyscale.com",
-    "company": "Anyscale",
-    "status": "dry_run"
-  },
-  {
-    "to": "contact@together.ai",
-    "company": "Together AI",
-    "status": "dry_run"
-  },
-  {
-    "to": "contact@replicate.com",
-    "company": "Replicate",
+    "to": "support@kit.com",
+    "company": "Kit",
+    "template": "cold_email\\templates\\27_kit.md",
     "status": "dry_run"
   }
 ]
