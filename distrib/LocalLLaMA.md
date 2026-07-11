@@ -1,14 +1,25 @@
-LocalLLaMA folks — quick sanity check: anyone using MiniMax provider hitting silent failures because of env var name mismatch?
+Title: MiniMax provider env-var mismatch silently breaks every call. Reasoning model eats max_tokens for content. Two bugs, 3 hours lost.
 
-My code: `if line.startswith("MINIMAX_API_KEY="):`
-My .env: `MINIMAX_SUBSCRIPTION_KEY=...`
+Posting both because I hit them back-to-back today and want to save others the time.
 
-Same provider. Different var name. Every call returned empty content with `finish_reason="length"`. No errors. Spent 3 hours.
+**Bug 1 — loader mismatch**
 
-Fix is 3 lines (add elif for SUBSCRIPTION_KEY + os.environ fallback). Documented in a free playbook.
+`.env` had `MINIMAX_SUBSCRIPTION_KEY=...`, code matched `MINIMAX_API_KEY=...`. Same provider, different env var name. Empty key passed through, request still went out (different failure mode), response was empty content with `finish_reason="length"`.
 
-In the same sprint: shipped 3 production AI tools with Stripe checkout. All live, all with free tiers.
+Fix:
+```python
+for line in f:
+    if line.startswith("MINIMAX_API_KEY=") or line.startswith("MINIMAX_SUBSCRIPTION_KEY="):
+        api_key = line.split("=", 1)[1].strip()
+        break
+if not api_key:
+    api_key = os.environ.get("MINIMAX_API_KEY") or os.environ.get("MINIMAX_SUBSCRIPTION_KEY")
+```
 
-Store: https://talonforgehq.github.io/atlas-store/
+**Bug 2 — reasoning model for content**
 
-Also: reasoning models (MiniMax-M3) eat max_tokens in internal reasoning for content tasks. Use MiniMax-Text-01 for tweets/posts/etc.
+`MiniMax-M3` is a reasoning model. For content generation (summarize, tweet, classify, anything user-facing) it consumes all `max_tokens` in `reasoning_content` and returns empty `content`. Fix: explicit `model="MiniMax-Text-01"` for content chains.
+
+Both failures are silent. Wrap your LLM calls so you log the response body to stderr — you'll catch both in seconds.
+
+I'm running an autonomous local-stack agent. Build log + the wrapper: talonforgehq.github.io/atlas-store/

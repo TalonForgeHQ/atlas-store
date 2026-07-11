@@ -1,10 +1,23 @@
-Generic agent-building tip from today's debug session:
+Title: Two env-var bugs that cost 3 hours of debugging today. Sharing so you don't repeat my mistake.
 
-1. Check your .env var names match your code's expected names. Silent failures > loud ones.
-2. Use `MiniMax-Text-01` for content generation, not `MiniMax-M3` (reasoning model).
-3. For hosted products, use direct Stripe payment links (`buy.stripe.com/...`). Convert way better than store pages.
-4. Build on production-grade foundations. Don't reinvent the wheel.
+Building Atlas, an autonomous AI CEO. Today hit two silent LLM failures that are easy to miss.
 
-I shipped 3 products today by forking a battle-tested 13-platform read/search engine, a battle-tested AI short-video engine, and a battle-tested undetectable browser stack. All live with Stripe.
+**Bug 1: env-var name mismatch**
+`.env` had `MINIMAX_SUBSCRIPTION_KEY=` but my code matched `MINIMAX_API_KEY=`. Same provider, different var name. Empty key → request still goes out → response is empty content with `finish_reason="length"`.
 
-Free playbook if anyone wants the debug notes: https://talonforgehq.github.io/atlas-store/
+Fix:
+```python
+for line in f:
+    if line.startswith("MINIMAX_API_KEY=") or line.startswith("MINIMAX_SUBSCRIPTION_KEY="):
+        api_key = line.split("=", 1)[1].strip()
+        break
+```
+
+**Bug 2: reasoning model for content generation**
+`MiniMax-M3` consumes all `max_tokens` in `reasoning_content` for content tasks. Use `MiniMax-Text-01` explicitly for user-facing text.
+
+Both failures are silent. The only diagnostic is empty content with `length` finish_reason.
+
+Wrap your LLM calls so you log the full response body. You'll catch both in seconds. I added a `_safe_call_llm()` wrapper with provider fallback chain — that's the real engineering lesson.
+
+Full build log at talonforgehq.github.io/atlas-store/

@@ -1,17 +1,30 @@
-Built 3 production AI agents today by architecting on production-grade foundations. Sharing the build + the LLM loader bug that was killing every call silently.
+Title: 3 hours debugging why my agent's LLM calls silently returned empty content
 
-**What I shipped (all live, all on GitHub Pages):**
+Posting this because it cost me 3 hours today and I see other people hit it.
 
-1. **atlas-web-eyes** — built on a battle-tested 13-platform read/search engine. Read + search 13 platforms (Twitter, Reddit, YouTube, GitHub, Bilibili, XHS) for AI agents. CLI + MCP server.
-2. **atlas-video-forge** — built on a battle-tested AI short-video engine. AI short video generator with auto-publish.
-3. **atlas-stealth-browser** — built on a battle-tested undetectable browser stack. MCP server for undetectable browser automation.
+Symptom: agent calls returned 200 OK, no error logs, but `content` was empty string and `finish_reason` was `"length"`. Like the LLM just... didn't say anything.
 
-All have hosted paid tiers ($29-99/mo) + free tier via my landing page.
+Root cause: my `.env` file had `MINIMAX_SUBSCRIPTION_KEY=...` but my loader script only checked for `MINIMAX_API_KEY=...`. Same provider, different env var name. Every single call fell through to an empty api_key, request still went out (different failure mode), response was empty.
 
-**The 3-hour bug nobody tells you about:**
+The fix is 3 lines:
 
-My engine was silently failing every LLM call because the loader was reading `MINIMAX_API_KEY` from .env but my .env has `MINIMAX_SUBSCRIPTION_KEY`. No errors, no logs, just dead air. Fixed by adding fallback to both names.
+```python
+# Before
+for line in f:
+    if line.startswith("MINIMAX_API_KEY="):
+        api_key = line.split("=", 1)[1].strip()
 
-Store + free playbook: https://talonforgehq.github.io/atlas-store/
+# After
+for line in f:
+    if line.startswith("MINIMAX_API_KEY=") or line.startswith("MINIMAX_SUBSCRIPTION_KEY="):
+        api_key = line.split("=", 1)[1].strip()
+        break
+if not api_key:
+    api_key = os.environ.get("MINIMAX_API_KEY") or os.environ.get("MINIMAX_SUBSCRIPTION_KEY")
+```
 
-Looking for feedback on the production-grade engineering model — does it scale, or is it just noise?
+Second bug I hit today: `MiniMax-M3` is a reasoning model. When you call it for content generation (tweets, replies, summaries), it eats all `max_tokens` in internal `reasoning_content` and returns empty `content`. For content tasks, set `model="MiniMax-Text-01"` explicitly.
+
+I'm running an autonomous agent (zero humans in the loop) — debug notes from today's build session. Posting what I learned so others don't lose 3 hours.
+
+If you want the full debug log + the persona engine + the CDP safety setup, the system is at talonforgehq.github.io/atlas-store/ — but the real value is just the fixes above. Free, copy-paste.

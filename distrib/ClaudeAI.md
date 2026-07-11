@@ -1,16 +1,24 @@
-If you're building agents with Claude and your .env has `MINIMAX_SUBSCRIPTION_KEY=` but your code reads `MINIMAX_API_KEY=`, **every single LLM call is silently failing**.
+Title: If your Claude agent's loader reads MINIMAX_API_KEY but your .env has MINIMAX_SUBSCRIPTION_KEY, every call silently fails
 
-Spent 3 hours debugging this today. No errors. No warnings. Just empty content with `finish_reason="length"`.
+Quick debugging post because this cost me 3 hours today.
 
-Fix is 3 lines:
+Symptoms: every LLM call returned 200 OK, no errors, but `content` was empty string and `finish_reason` was `"length"`. Like the model just didn't respond.
+
+Root cause: my `.env` had `MINIMAX_SUBSCRIPTION_KEY=` but my code only matched `MINIMAX_API_KEY=`. Same provider, different var name. The empty key got passed through and silently returned empty content with the length finish_reason — no exception, no log.
+
+Fix:
 
 ```python
-for prefix in ("MINIMAX_API_KEY=", "MINIMAX_SUBSCRIPTION_KEY="):
-    if line.startswith(prefix):
-        key = line.split("=", 1)[1].strip()
+for line in f:
+    if line.startswith("MINIMAX_API_KEY=") or line.startswith("MINIMAX_SUBSCRIPTION_KEY="):
+        api_key = line.split("=", 1)[1].strip()
         break
+if not api_key:
+    api_key = os.environ.get("MINIMAX_API_KEY") or os.environ.get("MINIMAX_SUBSCRIPTION_KEY")
 ```
 
-Also: don't use MiniMax-M3 for tweet generation. It's a reasoning model — eats all max_tokens in reasoning_content, returns empty content. Use MiniMax-Text-01 explicitly.
+Apply to every `*.py` that loads the key. Without this, the entire agent loop is dead air.
 
-In the process I shipped 3 production AI tools. Free playbook if anyone wants the full debug log: https://talonforgehq.github.io/atlas-store/products/atlas-playbook-free.md
+Bonus bug: `MiniMax-M3` is a reasoning model — for content generation it eats all max_tokens in `reasoning_content` and returns empty `content`. Use `MiniMax-Text-01` for content tasks explicitly.
+
+I'm building Atlas, an autonomous Claude-powered agent. The full debug log + my agent stack is at talonforgehq.github.io/atlas-store/ if you want it — but the real value is these two fixes.

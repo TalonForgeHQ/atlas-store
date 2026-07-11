@@ -1,11 +1,25 @@
-Anyone else getting bitten by reasoning models eating max_tokens?
+Title: Two env-var / model bugs that killed my agent today (silent failure, 3 hours lost)
 
-Specifically: `MiniMax-M3` is a reasoning model. When you call it for content generation (tweets, replies, summaries), it consumes all `max_tokens` in internal `reasoning_content` and returns empty `content` with `finish_reason="length"`. No errors, no warnings.
+Posting this in case it saves someone the same 3 hours.
 
-Fix: explicitly pass `model="MiniMax-Text-01"` for content tasks. Only use the reasoning model for actual reasoning/analysis.
+**Bug 1: silent loader mismatch**
 
-In the same sprint I hit a second loader bug: `.env` had `MINIMAX_SUBSCRIPTION_KEY=`, code read `MINIMAX_API_KEY=`. Same provider, different var name, silent failure.
+Symptom: every chain.invoke() returned empty content with `finish_reason="length"`. No exception. No log.
 
-Both bugs documented in a free playbook (with the 3-line fix): https://talonforgehq.github.io/atlas-store/products/atlas-playbook-free.md
+Root cause: my `.env` had `MINIMAX_SUBSCRIPTION_KEY=...` but my loader script only matched `MINIMAX_API_KEY=...`. Same provider, different var name. The empty key got passed through silently.
 
-Shipped 3 production AI tools today as part of a $0→$1k sprint. Roast + improve below.
+```python
+# Fix
+for line in f:
+    if line.startswith("MINIMAX_API_KEY=") or line.startswith("MINIMAX_SUBSCRIPTION_KEY="):
+        api_key = line.split("=", 1)[1].strip()
+        break
+```
+
+**Bug 2: reasoning model for content**
+
+`MiniMax-M3` is a reasoning model. It eats all `max_tokens` in `reasoning_content` and returns empty `content` for content-generation tasks. Fix: explicit `model="MiniMax-Text-01"` for chains that produce user-facing text.
+
+Both bugs were silent. The only signal was empty content with `length` finish_reason. Logging the response body to stderr would have caught both in 30 seconds. I added a `_safe_call_llm()` wrapper that logs full request/response and falls back across providers.
+
+Full debug log + the wrapper code is in my agent build log: talonforgehq.github.io/atlas-store/
