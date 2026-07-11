@@ -1,0 +1,41 @@
+<!-- chunk_36.html — SOC 2 evidence for AI agent tool calls (long-tail) -->
+<section class="seo-chunk" id="soc2-ai-agent-tool-calls">
+<h2>SOC 2 Evidence for AI Agent Tool Calls: What Auditors Actually Want to See in 2026</h2>
+
+<p>If your engineering team shipped an LLM-powered agent that calls Zendesk, Salesforce, Stripe, or your internal admin API in the last 12 months, you have a new SOC 2 evidence problem you probably didn't have in 2024. The agent doesn't just <em>read</em> from those systems — it <em>writes</em> tier-1 customer records, refunds, role changes, and ticket-state transitions. The 2025 SSAE-18 update and the AICPA's 2026 Trust Services Criteria refresh both explicitly call out "automated decision-making systems" as in-scope for the Common Criteria CC7.2 (system monitoring) and CC8.1 (change management). What auditors are asking for, on real Type II engagements we've seen quoted, is per-tool-call evidence — not just "the agent ran." This chunk is the buyer-side checklist that closes that gap before the audit window opens.</p>
+
+<h3>The 7-question SOC 2 evidence checklist for AI agent tool calls</h3>
+
+<ol>
+<li><strong>Per-call request payload capture:</strong> For every tool invocation, do you store the full JSON request body (with PII redacted to the field level, not the row level) for at least 365 days? Auditors will sample 25-40 calls across the audit window — if any of them have an unredacted SSN or PAN in the captured payload, your Type II report will carry a finding.</li>
+<li><strong>Per-call response payload capture:</strong> Same as above, but for the response — particularly the error codes (4xx/5xx with body), which CC7.2 requires you to have alerted on. If the agent silently swallowed a 429 from Salesforce for 6 hours, that is an evidentiary finding whether or not the user noticed.</li>
+<li><strong>Identity-binding at the call boundary:</strong> Can you prove, for any tool call, which human session or API key initiated the conversation that triggered it? "The LLM called Stripe" is not evidence. "Session ID abc123 (authenticated as user X via OIDC at 14:32:07Z) triggered the LLM, which called Stripe at 14:32:09Z with payload Y" is evidence. This is the single biggest gap we see in customer-side implementations.</li>
+<li><strong>Reversibility metadata for write actions:</strong> For any non-idempotent write (refund, role change, ticket state change, account deletion), is the pre-state captured alongside the post-state? Auditors will ask "what was the ticket status before the agent changed it, and how would you roll back?" If the answer involves a database backup from 11pm, you have a finding.</li>
+<li><strong>Tool-call join-table:</strong> When the agent makes a chain of 3 tool calls (read customer → read entitlement → write refund), is there a single record linking all three into one conversation-attributable transaction? Without this, you cannot answer "what did this agent session do?" — which is exactly what CC7.2 wants you to answer in under 60 seconds during a walkthrough.</li>
+<li><strong>Escalation handoff evidence:</strong> When the agent escalates to a human (chat transfer, ticket creation, page on-call), is the handoff payload — what the agent knew, what it tried, what it recommended — captured in a form the human reviewer can re-execute against? "Bot transferred to agent" is not evidence. "Bot transferred to agent Jane Doe at 14:32:11Z with full transcript, attempted tool calls, and recommended next action X" is evidence.</li>
+<li><strong>Retention-class separation for LLM traces:</strong> The full conversation transcript (which may include PII the user typed but no system stored) is often retained in your vector store or fine-tuning pipeline on a different retention policy than the tool-call evidence. Auditors will ask whether the conversation-replay used in any model retraining has the same redaction posture as your SOC 2 evidence store. If not, your retraining pipeline is itself an out-of-band evidence channel.</li>
+</ol>
+
+<h3>What "good" looks like in 2026 (real production pattern)</h3>
+
+<p>The reference architecture we see working at Series B+ agent companies in mid-2026: every tool call goes through a <em>sidecar proxy</em> (Envoy/HAProxy with a custom Lua filter, or a dedicated microservice like Helicone's tool-call recorder or Portkey's audit log) that captures (a) the request, (b) the response, (c) the session/correlation ID, (d) the pre-state if the call is a write, and (e) the LLM-trace reference. The proxy writes to an append-only store (S3 with object-lock, or a managed log like Datadog's Audit Trail or AWS CloudTrail Lake) with a 7-year retention class — matching or exceeding your SOC 2 trust services criteria retention requirement. The cost is roughly $40-200/mo for a 100K-call/mo workload, which is rounding-error against the cost of a Type II finding.</p>
+
+<h3>How this maps to the EU AI Act (if you sell into the EU)</h3>
+
+<p>If your agent is used by EU-based data subjects, Article 12 of the EU AI Act requires "automatic record-keeping" of system behavior over the lifecycle, with logs retained for at least 6 months. Article 14 requires effective human oversight — which is structurally the same evidence chain as CC7.2/CC8.1. If you have SOC 2 evidence done right, you are roughly 70% of the way to EU AI Act Article 12/14 conformity. The remaining 30% is the technical documentation in Annex IV, which is a write-up problem, not an instrumentation problem. The buyer-side checklist we ship at Talon Forge maps these 7 SOC 2 questions to the EU AI Act articles directly so your GRC team can use the same evidence pool for both audits.</p>
+
+<h3>The $500 audit (what we deliver in 48 hours)</h3>
+
+<p>If you want a written gap-report against this 7-question checklist — what you have, what's missing, and the cheapest fix for each missing item — Talon Forge runs a 48-hour $500 audit. The deliverable is a 4-6 page PDF your GRC team can hand to your auditor. Order at <a href="/products.html">products</a> or reply to this email with "audit" and we send the intake form.</p>
+
+<h3>Related long-tail reads</h3>
+
+<ul>
+<li><a href="chunk_34.html">Enterprise AI audit checklist (7 buyer questions)</a></li>
+<li><a href="chunk_35.html">Customer-service-AI audit checklist (SOC 2 + EU AI Act)</a></li>
+<li><a href="chunk_33.html">Voice-agent observability for regulated industries</a></li>
+<li><a href="chunk_32.html">AI agent observability for compliance teams</a></li>
+</ul>
+
+<p class="cta"><strong>Need this audit done by Friday?</strong> <a href="/products.html">$500, 48h delivery →</a></p>
+</section>
