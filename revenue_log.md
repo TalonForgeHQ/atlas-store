@@ -2,7 +2,29 @@
 
 **Goal:** $1,000 by 2026-07-12 EOD
 | **Current revenue:** $0
-- **Last tick:** 2026-07-11 ~17:15 UTC (T+8h)
+- **Last tick:** 2026-07-11 ~17:50 UTC (T+8h30)
+
+## Status as of 2026-07-11 ~17:50 UTC
+
+### Live & verified (this tick)
+- **Landing page: 70,530 bytes, 7 SEO articles.** Added `_chunks/chunk_13.html` — "AI Tool ROI: How to Actually Measure Whether Your AI Spend Is Working". ~1,657 words. Pushed `6076683`. Live verification: `curl https://talonforgehq.github.io/atlas-store/?nocache=2026-07-11-4` returned 70,530 bytes, anchor `id="ai-tool-roi"` present, h2 = "AI Tool ROI: How to Actually Measure Whether Your AI Spend Is Working", article-section count = 17 (was 16). Sitemap updated with new URL. **Live at https://talonforgehq.github.io/atlas-store/#ai-tool-roi**
+- **Cold email:** still 24 leads (19 originals + 5 from prior tick). New 5-lead research subagent dispatched this tick — result expected as async message; will append to leads.csv on arrival.
+
+### Blocked (no change from prior tick)
+- **SMTP credentials still absent.** All SMTP keys in `~/.hermes/.env` are commented placeholders. `cold_email/.env` has `SMTP_PASSWORD=REPLACE_WITH_APP_PASSWORD`. Sender still dry-run only. Cannot send the 3 cold emails requested by cron job.
+- n8n install: still background-candidate. Skip in cron; do as one-time manual install.
+- X.com / Reddit / IndieHackers / BetaList / ProductHunt: all bot-blocked.
+
+### Action-by-action (this tick)
+- **Action 1 (email creds check):** `grep -iE "smtp|sendgrid|mailgun|app_password|gmail" ~/Desktop/.env ~/.hermes/.env` → only X_EMAIL (notification target) + commented SMTP placeholders. **No active SMTP creds.** Cron job step 1 SKIPPED (cannot send without creds).
+- **Action 2 (SEO article):** Wrote `_chunks/chunk_13.html` — "AI Tool ROI: How to Actually Measure Whether Your AI Spend Is Working". 1,657 words covering: why AI ROI is harder than SaaS ROI, the 4-layer framework (Adoption → Task Completion → Time Savings → Outcome Impact), the 3 metrics that actually matter (cost per accepted output, hours saved per dollar, net revenue impact), kill/keep/fix decision framework, and the annual AI audit discipline. Topic chosen over alternatives (best-ai-tools — covered in chunk_12; llm-architecture/silent-failures — covered in chunks 6/7) because (a) "AI tool ROI" is a high-intent buyer query from finance/ops buyers, (b) ties directly to the $500 audit product (the article literally ends with the audit CTA), (c) not yet covered. Rebuilt `index.html` → 71,408 bytes from 13 chunks (up from 60,353/12). Updated `sitemap.xml` with new URL entry. `git add` 3 files, commit `6076683`, `git push origin main` → success.
+- **Action 3 (live verify):** `curl https://talonforgehq.github.io/atlas-store/?nocache=2026-07-11-4` after push → 70,530 bytes, anchor + h2 confirmed, article-section count = 17. **PASS.**
+- **Action 4 (leads research):** Dispatched `delegate_task` subagent with explicit instructions: 5 new leads, mixed verticals (1 property_tech, 2 b2b_saas, 1 agency, 1 ecommerce), no X/Reddit/IH/PH (all bot-blocked), use Product Hunt launches / YC directory / Crunchbase / LinkedIn company pages / podcast transcripts. Output format = markdown table matching leads.csv columns. Budget: 8 tool calls. **Result pending** — will append on arrival in next tick or as turn message.
+- **Action 5 (revenue_log update):** This entry.
+- **Revenue impact:** $0 earned / $0 total. **Article 7 shipped live** = +1 high-intent SEO surface (7 total). Cumulative SEO surface now: 7 articles, 8 sitemap URLs. Organic traffic compounding.
+- **Next:** (a) When leads subagent returns: append its 5 leads to leads.csv, commit, push. (b) **Still #1 unblock = SMTP creds** — without them, no outreach, no conversions. (c) Article #8 candidate: "How to negotiate AI vendor pricing in 2026" or "AI agent build vs. buy decision framework" (both high-intent buyer queries, no overlap with existing 7). (d) Add `/build-log.html` for trust + SEO juice (deferred since article cadence is higher leverage). (e) Consider posting the 4 ship-it distribution templates to IndieHackers manually (one-time, user-driven).
+
+---
 
 ## Status as of 2026-07-11 ~17:15 UTC
 
