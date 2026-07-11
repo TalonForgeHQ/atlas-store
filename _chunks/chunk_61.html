@@ -1,0 +1,80 @@
+<!-- chunk_61.html — Arize AI + Phoenix OSS + OpenInference OpenTelemetry GenAI Semantic Conventions SOC 2 + EU AI Act + FedRAMP Audit Checklist 2026 -->
+<section class="seo-chunk" id="arize-phoenix-openinference-opentelemetry-genai-soc2-eu-ai-act-fedramp-audit-2026">
+  <h1>Arize AI Phoenix OSS OpenInference OpenTelemetry GenAI Semantic Conventions SOC 2 + EU AI Act + FedRAMP Audit Checklist 2026</h1>
+  <p><strong>Target keyword:</strong> <em>Arize AI SOC 2 audit</em> · <em>Phoenix OSS EU AI Act compliance</em> · <em>OpenInference OpenTelemetry GenAI audit checklist</em> · <em>Arize AX FedRAMP Moderate</em> · <em>OpenTelemetry GenAI semantic conventions SOC 2</em> · <em>LLM observability OWASP LLM01</em> · <em>Arize Phoenix self-hosted eval ISO 42001</em></p>
+
+  <h2>Why Arize + Phoenix + OpenInference is its own audit lane (not a duplicate of LangChain, CrewAI, Patronus, AutoGen, AgentOps, or Helicone)</h2>
+  <p>Arize AX + Phoenix OSS + OpenInference + OpenTelemetry GenAI semantic conventions is the only canonical <strong>OpenTelemetry-native + OpenInference-OSS-anchored + Phoenix-self-hosted-eval-stack</strong> in the ai_agents_infra cluster. The audit surface is fundamentally different from every other platform:</p>
+  <ul>
+    <li><strong>AgentOps</strong> answers: <em>"what did each LLM call do per session?"</em></li>
+    <li><strong>Helicone</strong> answers: <em>"what hit the LLM gateway and at what cost?"</em></li>
+    <li><strong>LangChain / LangSmith</strong> answers: <em>"what was the reasoning-chain + tool-call + downstream write?"</em></li>
+    <li><strong>CrewAI</strong> answers: <em>"which role-playing agent handed off to which and what shared-memory state changed?"</em></li>
+    <li><strong>Patronus</strong> answers: <em>"which eval-decision unlocked which production-deployment-gate?"</em></li>
+    <li><strong>AutoGen</strong> answers: <em>"what was the GroupChat thread + Magentic-One plan + code-execution-sandbox provenance?"</em></li>
+    <li><strong>Arize</strong> answers: <em>"what was the OpenTelemetry GenAI semantic-conventions-compliant span-model + Phoenix-OSS-eval-decision + 7B+ traces/day production-monitoring provenance?"</em></li>
+  </ul>
+
+  <h2>The 5 audit gaps every Arize + Phoenix + OpenInference customer will probe</h2>
+
+  <h3>Gap 1 — End-to-end OpenTelemetry GenAI semantic-conventions-compliant span-model provenance join-table</h3>
+  <p>Per <strong>SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4</strong>, the auditor will demand a 14-column reconstruction from a single <code>openinference_trace_id</code> + <code>otel_span_id</code> linking:</p>
+  <ol>
+    <li><code>otel_trace_id</code> — OpenTelemetry trace identifier</li>
+    <li><code>otel_span_id</code> — OpenTelemetry span identifier</li>
+    <li><code>otel_parent_span_id</code> — parent span for nested agent-call chains</li>
+    <li><code>openinference_span_kind</code> — LLM / TOOL / RETRIEVER / AGENT / EVALUATOR / HUGGINGFACE_FACE_TASK etc.</li>
+    <li><code>gen_ai.request.model</code> + <code>gen_ai.request.max_tokens</code> + <code>gen_ai.request.temperature</code> — request schema</li>
+    <li><code>gen_ai.usage.input_tokens</code> + <code>gen_ai.usage.output_tokens</code> + <code>gen_ai.usage.cost_usd</code> — usage schema</li>
+    <li><code>llm.prompt_template_hash</code> + <code>llm.completion_hash</code> — content schema</li>
+    <li><code>tool_call_hash</code> + <code>retrieval_hit_hash</code> — tool + retrieval schema</li>
+    <li><code>downstream_state_change_hash</code> — the state-change event that the LLM call triggered</li>
+  </ol>
+  <p>Reconstructible for 7yr WORM + a quarterly reconstruction drill on the <strong>Slack + Uber + Adobe + Pepsi + DoorDash + Wayfair + Coinbase + Pinterest + Klaviyo + Reddit + 1000s-of-regulated-enterprise-AI-agent-teams</strong> customer stack. The auditor will want this bundled <em>per-openinference-trace</em>, not per-LLM-call — and Arize is the only platform that ships the OpenInference + OpenTelemetry GenAI semantic-conventions-compliant span-model surface as a first-class concept tied to the upstream-canonical-OSS-source.</p>
+
+  <h3>Gap 2 — Phoenix OSS + OpenInference + OpenTelemetry GenAI training-corpus license-provenance per EU AI Act Art. 53(d) GPAI training-data transparency</h3>
+  <p>Per <strong>EU AI Act Art. 53(d) GPAI training-data transparency + EU AI Act Art. 53(1)(b) copyright-summary + Apache-2.0-OSS-package-license-inheritance</strong>, Phoenix OSS + OpenInference + OpenTelemetry GenAI semantic-conventions stack ships under Apache-2.0, and every Phoenix-self-hosted customer inherits the upstream-OSS-anchor license chain. The audit packet must include:</p>
+  <ul>
+    <li>Per-source license-detection (Apache-2.0 / MIT / BSD / CC-BY / etc.)</li>
+    <li>Per-source attribution-chain</li>
+    <li>Per-source copyleft-flag</li>
+    <li>License-collision-flag (Apache-2.0 + GPL = incompatible)</li>
+    <li>Training-corpus-evidence for the per-eval-judge-model corpus</li>
+  </ul>
+  <p>This is the highest-leverage license-provenance audit target in the pipeline because every Phoenix-self-hosted customer inherits the Apache-2.0 chain and Arize as the upstream-canonical-OSS-source has the upstream-canonical-source language for the audit packet.</p>
+
+  <h3>Gap 3 — Prompt-injection + retrieval-poisoning + tool-call-poisoning + agent-handoff-poisoning + per-eval-judge-poisoning detection per OWASP LLM Top 10 LLM01 + ISO 42001 §6.1.4 + NIST AI RMF MEASURE</h3>
+  <p>The OpenInference span-model is the natural instrumentation point for prompt-injection + retrieval-poisoning + tool-call-poisoning + agent-handoff-poisoning + per-eval-judge-poisoning detection across the entire downstream AI-agent deployment stack. The audit surface is a 9-column per-payload detection-log:</p>
+  <ol>
+    <li><code>inbound_payload_hash</code></li>
+    <li><code>phoenix_detection_classification</code></li>
+    <li><code>openinference_span_flag</code></li>
+    <li><code>blocked_event_flag</code></li>
+    <li><code>downstream_state_change_flag</code></li>
+    <li><code>incident_response_escalation_id</code></li>
+    <li><code>per_tenant_quarantine_flag</code></li>
+    <li><code>regulator_notification_flag</code></li>
+    <li><code>regulatory_retain_until</code></li>
+  </ol>
+  <p>A Phoenix-flagged span that flowed into a production-monitoring-alert creates a chain-of-custody-evidence problem when the regulator reconstructs the OpenTelemetry trace — and Arize is the only platform where the span-model ties the eval-decision to the downstream-production-alert in one audit trail.</p>
+
+  <h3>Gap 4 — Cross-tenant Arize AX enterprise-observability isolation-evidence per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + FedRAMP Moderate + EU AI Act Art. 10</h3>
+  <p>The 7B+ traces/day volume on the Slack + Uber + Adobe + DoorDash + Wayfair + Coinbase + Pinterest + Klaviyo + Reddit stack makes per-tenant-span-isolation-evidence the <em>primary</em> audit packet. The auditor will specifically probe OpenTelemetry-genai-semantic-conventions-compliant span-model isolation across tenants because the span-model is the natural cross-tenant-data-leakage surface if isolation is not per-tenant-per-span. Required artifacts:</p>
+  <ul>
+    <li>Per-tenant isolation-test-result</li>
+    <li>Per-tenant CMK / BYOK optionality</li>
+    <li>Per-openinference-trace-no-leakage-evidence</li>
+    <li>Per-tenant Phoenix-self-hosted-eval-residue-cleanup-procedure</li>
+    <li>Completion-of-deletion timestamp</li>
+    <li>Per-customer-no-leakage-evidence</li>
+  </ul>
+
+  <h3>Gap 5 — EU AI Act Annex III §4 high-risk classification for Arize customers greenlighting material-influence agents</h3>
+  <p>Per <strong>EU AI Act Art. 6 + 14 + 27 + 43 + 72</strong> (Aug 2026 GPAI enforcement + Annex III §4 conformity-assessment deadline), any Arize customer using OpenInference + Phoenix + Arize AX + per-eval-decision-provenance to greenlight an agent that materially influences a high-risk decision lane (credit + employment + healthcare + education + law-enforcement + access-to-essential-services + biometric-identification + emotion-recognition + critical-infrastructure) inherits the Annex III §4 conformity-assessment requirement. The Arize-supplied OpenTelemetry-GenAI-semantic-conventions-compliant-span-model-evidence package flows down to every Arize-using customer — a finding here propagates to every Slack + Uber + Adobe + DoorDash + Wayfair + Coinbase + Pinterest + Klaviyo + Reddit + 1000s-of-regulated-enterprise-AI-agent-teams deployment.</p>
+
+  <h2>The Arize / Phoenix / OpenInference audit ask</h2>
+  <p>If you operate Arize AX, Phoenix OSS, OpenInference, or any OpenTelemetry GenAI semantic-conventions-compliant observability stack — and your customers include regulated-enterprise teams asking about SOC 2 CC7.2 + EU AI Act Art. 12 + 14 + Art. 53(d) + ISO 42001 §9.4 + OWASP LLM Top 10 LLM01 + FedRAMP Moderate — the audit packet above is what their compliance teams will demand in the next 90 days. Arize is the canonical upstream-canonical-OSS-source for the OpenTelemetry GenAI semantic-conventions surface, and the audit language has to come from the platform vendor — not from each customer's compliance team re-inventing it 1000 times.</p>
+
+  <h2>What Talon Forge delivers (48-hour Arize / Phoenix / OpenInference audit)</h2>
+  <p>Written gap-analysis against SOC 2 CC7.2 + EU AI Act Art. 12 + 14 + Art. 53(d) + ISO 42001 §9.4 + OWASP LLM Top 10 LLM01 + GDPR Art. 25 + FedRAMP Moderate + ISO 27001 + ISO 27701, with the actual 14-column OpenTelemetry-GenAI-semantic-conventions-compliant-span-model join-table schema + the Phoenix-OSS-self-hosted-eval-stack license-provenance schema + the per-payload detection-log schema + the per-tenant isolation-evidence package you can hand to the auditor. $500 flat. 48-hour turnaround. <a href="mailto:atlas@talonforge.io">atlas@talonforge.io</a></p>
+</section>
