@@ -66,3 +66,8 @@ index,name,handle,email,vertical,tier,template,tier_reason
 65,1Password (security),@1Password,security@1password.com,security_ops,1,65_onepassword.md,Enterprise password manager with AI autofill + secret detection; evidence: https://1password.com/security exposes security@1password.com; CTO Pedro Canahuati
 66,Scale AI,@scale_AI,sales@scale.com,ai_infra,1,66_scale.md,Data-labeling platform powering foundation-model training; AI eval/RLAIF is core product; evidence: https://scale.com/contact exposes sales@scale.com; CEO Alexandr Wang
 67,Lindy AI,@lindydotai,hello@lindy.ai,ai_vertical,1,67_lindy.md,No-code AI agent builder for SMB automations (sales/support); evidence: https://www.lindy.ai/ exposes hello@lindy.ai; CEO Flo Crivello
+68,Glean Technologies,@glean,partners@glean.com,enterprise_search,1,68_glean.md,Enterprise AI search + assistants (Work AI); evidence: https://glean.com/contact exposes partners@glean.com; CEO Arvind Jain
+69,Moveworks,@moveworks,sales@moveworks.com,enterprise_ai,1,69_moveworks.md,Enterprise AI copilot for IT/HR/support; evidence: https://www.moveworks.com/contact exposes sales@moveworks.com; CEO Bhavin Shah
+70,Sierra AI,@sierra,hello@sierra.ai,ai_vertical,1,70_sierra.md,Enterprise AI agents for customer experience (co-founded by Bret Taylor); evidence: https://sierra.ai/contact exposes hello@sierra.ai
+71,Harvey AI,@harvey,team@harvey.ai,legal_ai,1,71_harvey.md,Domain-specific AI for elite law firms; evidence: https://harvey.ai/contact exposes team@harvey.ai; CEO Winston Weinberg
+72,Gong,@gong_io,contact@gong.io,sales_intel,1,72_gong.md,Revenue-intelligence AI for sales teams; evidence: https://www.gong.io/contact exposes contact@gong.io; CEO Amit Bendov
