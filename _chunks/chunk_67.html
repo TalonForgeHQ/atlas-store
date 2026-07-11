@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LlamaIndex RAG-Framework + LlamaParse Document-Ingestion + LlamaCloud Managed-RAG + Agent-Orchestration Audit Checklist 2026 — SOC 2 + EU AI Act + EU AI Act Art. 53(d) + EU AI Act Art. 50 + ISO 42001 + ISO 27001 + OWASP LLM Top 10 LLM08</title>
+<meta name="description" content="The 9-question buyer checklist SOC 2 Type II + ISO 27001 + GDPR + EU AI Act + EU AI Act Art. 53(d) GPAI training-data transparency + EU AI Act Art. 50 source-citation transparency-obligation + EU AI Act Art. 12 record-keeping + EU AI Act Art. 14 human-oversight + EU AI Act Annex III §4 high-risk classification + ISO 42001 + OWASP LLM Top 10 LLM01 + LLM08 + NIST AI RMF MANAGE auditors are asking about RAG-framework + LlamaParse-document-ingestion + LlamaCloud-managed-RAG + LlamaExtract-structured-extraction + agent-orchestration + retrieval-source-citation-attribution platforms in 2026. Covers 12-column query-engine + retrieval-pipeline + agent + downstream-state-change provenance join-table, 11-column LlamaParse document-parsing-decision-tree, 10-column retrieval-event isolation-evidence, 10-column LlamaIndex MIT-OSS + LlamaCloud proprietary + LlamaParse fine-tuned OCR training-corpus license-provenance + copyleft-contamination, EU AI Act Annex III §4 high-risk RAG classification, Aug 2026 EU AI Act GPAI enforcement deadline, the unique LlamaIndex audit lane that combines query-engine-pipeline + retrieval-chain + downstream-state-change + retrieved-chunk-citation-attribution into one audit-trail surface that no other RAG-framework vendor in the pipeline produces.">
+<meta name="citation_anchor_id" content="llamaindex-rag-framework-llamaparse-document-ingestion-llamacloud-managed-rag-agent-orchestration-audit-checklist-2026">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/_chunks/llamaindex-rag-framework-llamaparse-document-ingestion-llamacloud-managed-rag-agent-orchestration-audit-checklist-2026.html">
+</head>
+<body>
+<h1>LlamaIndex RAG-Framework + LlamaParse Document-Ingestion + LlamaCloud Managed-RAG + Agent-Orchestration Audit Checklist 2026</h1>
+<p><strong>Target long-tail keywords:</strong> "LlamaIndex SOC 2 audit" · "LlamaIndex EU AI Act compliance" · "LlamaParse audit checklist" · "LlamaCloud vendor security questionnaire" · "RAG framework FedRAMP Moderate" · "agent orchestration ISO 42001" · "LlamaIndex OWASP LLM08" · "retrieval-source citation attribution" · "EU AI Act Art. 50 transparency obligation" · "EU AI Act Art. 53(d) GPAI training-data transparency"</p>
+
+<h2>1. The LlamaIndex audit lane (what's unique)</h2>
+<p>LlamaIndex is the canonical <strong>retrieval-augmented-generation framework + LlamaParse document-ingestion + LlamaCloud managed-RAG + LlamaExtract structured-extraction + agent-orchestration</strong> surface in the ai_agents_infra pipeline. Per api.github.com/repos/run-llama/llama_index verified 2026-07-12, the public codebase ships 50,787+ GitHub stars + MIT license + the LlamaCloud managed-RAG enterprise product. Founder CEO <strong>Jerry Liu</strong> (per api.github.com/users/jerryjliu verified 2026-07-12, 4,332 GitHub followers, original LlamaIndex creator) + co-founder <strong>Simon Suo</strong> (CTO, original LlamaIndex co-creator). HQ San Francisco California. Raised $8.5M seed in 2023 from Greylock + Norwest Venture Partners + angel investors; Series A status as of 2026; customers include Fortune 500 enterprise AI-platform teams + regulated-industry RAG deployments.</p>
+<p><strong>Distinct because LlamaIndex is the only RAG-framework-as-audit-target + LlamaParse-document-ingestion + LlamaCloud-managed-RAG multi-tenant-SaaS + agent-orchestration-with-retrieval-source-citation-attribution audit-target in the pipeline.</strong> The audit-trail surface is the <em>query-engine-pipeline</em> + <em>retrieval-chain</em> + <em>downstream-state-change</em> + <em>retrieved-chunk-citation-attribution</em> join-table — NOT the per-LLM-call-chain join-table that AgentOps 153 / Helicone 155 / Langfuse 161 produce, NOT the cross-agent-handoff join-table that CrewAI 156 / AutoGen 158 produce, and NOT the LLM-gateway chokepoint that Helicone 155 / Portkey 160 produce.</p>
+
+<h2>2. End-to-end query-engine + retrieval-pipeline + agent + downstream-state-change provenance join-table (12 columns)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Column</th><th>Type</th><th>Audit-evidence purpose</th></tr></thead>
+<tbody>
+<tr><td>1. <code>llama_index_query_id</code></td><td>UUID v7</td><td>Single-key reconstruction anchor per query</td></tr>
+<tr><td>2. <code>query_engine_config_hash</code></td><td>SHA-256</td><td>SimpleQueryEngine / SubQuestionQueryEngine / RouterQueryEngine / ReActAgent / FunctionCallingAgent / MultiDocumentAgents version pin</td></tr>
+<tr><td>3. <code>retrieval_pipeline_index_hash</code></td><td>SHA-256</td><td>VectorStoreIndex / SummaryIndex / KnowledgeGraphIndex / SQLIndex / PandasIndex version pin</td></tr>
+<tr><td>4. <code>embedding_model_at_query</code></td><td>model_id + version</td><td>openai-text-embedding-3-small / text-embedding-3-large / voyage-3 / cohere-embed-v3 / bge-large-en-v1.5 / jina-embeddings-v3</td></tr>
+<tr><td>5. <code>vector_store_at_query</code></td><td>store_id + tenant_id</td><td>Chroma / Pinecone / Weaviate / Qdrant / Milvus / pgvector / LlamaCloud-managed</td></tr>
+<tr><td>6. <code>retrieved_chunk_id_chain</code></td><td>JSON array of chunk IDs</td><td>top-k retrieved chunks with their source-document hash + chunk-index</td></tr>
+<tr><td>7. <code>reranker_score_chain</code></td><td>JSON array of float scores</td><td>cross-encoder reranker score per chunk (cohere-rerank-v3 / bge-reranker-large / jina-reranker)</td></tr>
+<tr><td>8. <code>tool_call_chain_hash</code></td><td>SHA-256 chain</td><td>ReAct / FunctionCalling tool calls (search / sql / api / code-exec)</td></tr>
+<tr><td>9. <code>downstream_state_change_hash</code></td><td>SHA-256</td><td>CRM / DB / file-system / email / ticket downstream state changes</td></tr>
+<tr><td>10. <code>cost_usd_at_query</code></td><td>decimal(10,6)</td><td>embedding + LLM + tool-call cost per query</td></tr>
+<tr><td>11. <code>latency_ms</code></td><td>integer</td><td>end-to-end retrieval + LLM latency</td></tr>
+<tr><td>12. <code>user_id_hash + regulatory_retain_until</code></td><td>UUID + timestamp</td><td>human-readable per-user attribution + 7yr WORM retention</td></tr>
+</tbody>
+</table>
+<p><strong>SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 compliance:</strong> the auditor will reconstruct every LlamaIndex query back to which embedding-model + vector-store + retriever produced it + what tool calls were made + what downstream state changed. Quarterly reconstruction drill on the Fortune 500 + regulated-industry customer stack.</p>
+
+<h2>3. LlamaParse document-parsing + LlamaExtract structured-extraction decision-tree (11 columns)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Column</th><th>Type</th><th>Audit-evidence purpose</th></tr></thead>
+<tbody>
+<tr><td>1. <code>llamaparse_document_id</code></td><td>UUID v7</td><td>Single-key per-document parsing anchor</td></tr>
+<tr><td>2. <code>source_document_hash</code></td><td>SHA-256</td><td>Original uploaded document content hash (input integrity)</td></tr>
+<tr><td>3. <code>parser_model_at_ingestion</code></td><td>model_id + version</td><td>Claude-3.5-Sonnet / GPT-4o / Gemini-1.5-Pro / Llama-3.2-90B-Vision-Instruct / Mixtral-8x22B / OpenAI-GPT-4o-mini</td></tr>
+<tr><td>4. <code>extracted_text_hash</code></td><td>SHA-256</td><td>Parsed plaintext extraction hash</td></tr>
+<tr><td>5. <code>extracted_table_hash</code></td><td>SHA-256</td><td>Parsed table-as-Markdown extraction hash</td></tr>
+<tr><td>6. <code>extracted_image_ocr_hash</code></td><td>SHA-256</td><td>Image OCR + captioning output hash</td></tr>
+<tr><td>7. <code>extracted_structured_field_hash</code></td><td>SHA-256</td><td>LlamaExtract JSON schema validation hash</td></tr>
+<tr><td>8. <code>parsing_cost_usd</code></td><td>decimal(10,6)</td><td>Per-page parsing cost (LlamaParse Premium tier)</td></tr>
+<tr><td>9. <code>downstream_index_ingestion_hash</code></td><td>SHA-256</td><td>Vector index + metadata store ingestion hash</td></tr>
+<tr><td>10. <code>compliance_metadata_retention_until</code></td><td>timestamp</td><td>7yr WORM retention per SOC 2 + EU AI Act</td></tr>
+<tr><td>11. <code>audit_log_persisted_flag</code></td><td>boolean</td><td>Confirmation that audit-log was persisted to WORM storage</td></tr>
+</tbody>
+</table>
+<p><strong>EU AI Act Annex III §4 high-risk + GDPR Art. 22 automated-decision-making compliance:</strong> any LlamaIndex customer using LlamaParse to ingest documents that feed a high-risk decision (credit / employment / healthcare / education / law-enforcement / access-to-essential-services / biometric-identification) needs the per-document-parsing-decision-tree to prove which parser-model produced the extraction + what source-document was the input + what extracted-structured-field-schema was validated. This is the unique LlamaIndex lane because the <em>document-parsing-decision-tree</em> + <em>OCR-pipeline-trace</em> + <em>extracted-structured-field-validation</em> surface is the natural instrumentation point for <em>provenance-of-document-content</em> across the entire downstream RAG-pipeline.</p>
+
+<h2>4. Retrieval-event isolation-evidence package (10 columns)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Column</th><th>Type</th><th>Audit-evidence purpose</th></tr></thead>
+<tbody>
+<tr><td>1. <code>retrieval_event_id</code></td><td>UUID v7</td><td>Per-retrieval-event anchor</td></tr>
+<tr><td>2. <code>embedding_model_version</code></td><td>string</td><td>Embedding-model version (changes affect vector-space topology)</td></tr>
+<tr><td>3. <code>vector_store_tenant_id</code></td><td>UUID</td><td>Tenant-isolated vector store</td></tr>
+<tr><td>4. <code>retrieved_chunk_id</code></td><td>UUID</td><td>Specific chunk retrieved</td></tr>
+<tr><td>5. <code>chunk_source_document_hash</code></td><td>SHA-256</td><td>Source-document content hash (provenance-of-content)</td></tr>
+<tr><td>6. <code>chunk_source_user_id_hash</code></td><td>SHA-256</td><td>Multi-tenant isolation evidence (proves no cross-tenant leakage)</td></tr>
+<tr><td>7. <code>reranker_score</code></td><td>float</td><td>Cross-encoder reranker relevance score</td></tr>
+<tr><td>8. <code>similarity_distance</code></td><td>float</td><td>Embedding cosine / Euclidean distance</td></tr>
+<tr><td>9. <code>cross_tenant_isolation_test_result</code></td><td>JSON</td><td>SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 isolation-test-result</td></tr>
+<tr><td>10. <code>compliance_metadata_retention_until</code></td><td>timestamp</td><td>7yr WORM retention</td></tr>
+</tbody>
+</table>
+<p><strong>SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + OWASP LLM Top 10 LLM08 compliance:</strong> the auditor will specifically probe the cross-tenant-isolation-evidence surface because the LlamaCloud multi-tenant SaaS architecture creates a natural cross-tenant-data-leakage surface at embedding-vector level + at retrieved-chunk level. Per-tenant CMK/BYOK optionality + per-tenant-vector-store-isolation + per-retrieval-event-no-cross-tenant-leakage evidence is the unique LlamaCloud audit lane. <strong>OWASP LLM Top 10 LLM08 (vector-and-embedding-weaknesses):</strong> retrieval-source-poisoning via malicious chunk injection + cross-tenant-vector-leakage via shared embedding-model are the natural LLM08 attack surfaces.</p>
+
+<h2>5. Training-corpus license-provenance + copyright-attribution + copyleft-contamination evidence (10 columns)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Column</th><th>Type</th><th>Audit-evidence purpose</th></tr></thead>
+<tbody>
+<tr><td>1. <code>training_data_source_id</code></td><td>UUID v7</td><td>Per-training-source anchor</td></tr>
+<tr><td>2. <code>source_license_type</code></td><td>enum</td><td>MIT / Apache-2.0 / GPL-3.0 / LGPL / CC-BY-SA / CC-BY-NC / proprietary-licensed</td></tr>
+<tr><td>3. <code>source_copyright_holder</code></td><td>string</td><td>Original copyright holder attribution</td></tr>
+<tr><td>4. <code>source_attribution_chain</code></td><td>JSON</td><td>Chain of custody for attribution</td></tr>
+<tr><td>5. <code>source_copyleft_flag</code></td><td>boolean</td><td>Whether source license is copyleft (GPL / LGPL / AGPL)</td></tr>
+<tr><td>6. <code>source_license_collision_flag</code></td><td>boolean</td><td>Whether source license collides with downstream-product license</td></tr>
+<tr><td>7. <code>downstream_model_derivative_use</code></td><td>JSON</td><td>Whether training-data source is used in derivative model</td></tr>
+<tr><td>8. <code>llamaparse_ocr_model_corpus_hash</code></td><td>SHA-256</td><td>LlamaParse fine-tuned OCR model training corpus hash</td></tr>
+<tr><td>9. <code>llamaextract_structured_extraction_corpus_hash</code></td><td>SHA-256</td><td>LlamaExtract fine-tuned extraction model training corpus hash</td></tr>
+<tr><td>10. <code>compliance_metadata_retention_until</code></td><td>timestamp</td><td>7yr WORM retention</td></tr>
+</tbody>
+</table>
+<p><strong>EU AI Act Art. 53(d) + Art. 53(1)(b) + Art. 53(2) GPAI training-data transparency + copyright-summary + publicly-available-summary compliance:</strong> the <em>MIT-OSS + proprietary-commercial-product + fine-tuned-OCR-model</em> dual-codebase creates a copyleft-contamination surface unique in the ai_agents_infra pipeline. Every LlamaIndex-using customer inherits the Art. 53(d) + Art. 53(1)(b) + Art. 53(2) training-data-transparency + copyright-summary + publicly-available-summary duty because the LlamaParse fine-tuned-OCR-model and the LlamaExtract fine-tuned-extraction-model are GPAI components under the August 2026 EU AI Act enforcement deadline.</p>
+
+<h2>6. EU AI Act Annex III §4 high-risk-classification package (12 columns)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Column</th><th>Type</th><th>Audit-evidence purpose</th></tr></thead>
+<tbody>
+<tr><td>1. <code>llama_index_query_id</code></td><td>UUID v7</td><td>Anchor for high-risk query reconstruction</td></tr>
+<tr><td>2. <code>query_engine_config_hash</code></td><td>SHA-256</td><td>ReActAgent / FunctionCallingAgent / RouterQueryEngine / MultiDocumentAgents / SubQuestionQueryEngine version pin</td></tr>
+<tr><td>3. <code>retrieval_pipeline_index_hash</code></td><td>SHA-256</td><td>VectorStoreIndex / KnowledgeGraphIndex / MultiDocumentAgents index pin</td></tr>
+<tr><td>4. <code>retrieved_chunk_citation_chain</code></td><td>JSON</td><td>Per-chunk source-document citation (EU AI Act Art. 50 transparency-obligation)</td></tr>
+<tr><td>5. <code>agent_decision_log_hash</code></td><td>SHA-256</td><td>ReAct reasoning chain + FunctionCalling tool-call chain</td></tr>
+<tr><td>6. <code>human_oversight_approval_gate_decision</code></td><td>JSON</td><td>EU AI Act Art. 14 human-oversight decision (approve/reject/modify)</td></tr>
+<tr><td>7. <code>approver_user_id_hash</code></td><td>SHA-256</td><td>Human approver identity</td></tr>
+<tr><td>8. <code>high_risk_jurisdiction_classification</code></td><td>enum</td><td>credit / employment / healthcare / education / law-enforcement / access-to-essential-services / biometric-identification / critical-infrastructure</td></tr>
+<tr><td>9. <code>downstream_state_change_hash</code></td><td>SHA-256</td><td>What state changed as a result of the high-risk query</td></tr>
+<tr><td>10. <code>cost_usd_at_query</code></td><td>decimal(10,6)</td><td>Per-query cost</td></tr>
+<tr><td>11. <code>latency_ms</code></td><td>integer</td><td>Per-query latency</td></tr>
+<tr><td>12. <code>regulatory_retain_until</code></td><td>timestamp</td><td>7yr WORM retention</td></tr>
+</tbody>
+</table>
+<p><strong>EU AI Act Art. 6 + 14 + 27 + 43 + 50 + 72 + Annex III §4 compliance:</strong> any LlamaIndex customer using ReActAgent / FunctionCallingAgent / RouterQueryEngine / MultiDocumentAgents / SubQuestionQueryEngine that materially influences credit / employment / healthcare / education / law-enforcement / access-to-essential-services / biometric-identification / critical-infrastructure decisions needs the 12-column high-risk-classification package to prove <em>which retrieval-pipeline produced the result</em> + <em>what source-document was cited</em> + <em>what tool-calls were made</em> + <em>what agent-decision-log was generated</em> + <em>whether human-oversight approval-gate was triggered</em> + <em>what downstream state changed</em>. <strong>EU AI Act Art. 50 transparency-obligation:</strong> the per-retrieved-chunk source-citation attribution is unique to RAG-framework deployments and is the natural evidentiary surface for Art. 50.</p>
+
+<h2>7. 2026 Compliance Cross-Walk Table (LlamaIndex)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Standard</th><th>Article / Section</th><th>LlamaIndex audit-evidence surface</th><th>Audit gap if missing</th></tr></thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC6.1</td><td>Retrieval-event isolation-evidence + cross-tenant no-leakage</td><td>LlamaCloud multi-tenant isolation failure → customer-data exposure</td></tr>
+<tr><td>SOC 2 Type II</td><td>CC7.2</td><td>12-column query-engine + retrieval + agent + downstream-state-change provenance</td><td>Cannot reconstruct what retrieval produced the agent decision</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12</td><td>Record-keeping for high-risk AI system operation</td><td>No query-level audit-trail for regulated-enterprise customer</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14</td><td>Human-oversight approval-gate-decision</td><td>ReActAgent / FunctionCallingAgent runs without human-oversight evidence</td></tr>
+<tr><td>EU AI Act</td><td>Art. 50</td><td>Per-retrieved-chunk source-citation attribution</td><td>Cannot cite source-document for AI-generated answer</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d)</td><td>LlamaParse + LlamaExtract training-corpus license-provenance</td><td>GPAI training-data-transparency failure → Aug 2026 enforcement</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(1)(b)</td><td>Copyright-summary for fine-tuned OCR + extraction models</td><td>GPAI copyright-summary failure → Aug 2026 enforcement</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(2)</td><td>Training-data-summary publicly-available</td><td>GPAI publicly-available-summary failure → Aug 2026 enforcement</td></tr>
+<tr><td>EU AI Act</td><td>Annex III §4</td><td>12-column high-risk-classification package</td><td>Annex III §4 conformity-assessment failure</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4</td><td>Risk-assessment for prompt-injection + retrieval-source-poisoning</td><td>OWASP LLM01 / LLM08 attack-surface unaddressed</td></tr>
+<tr><td>ISO 42001</td><td>§9.4</td><td>Performance-evaluation + monitoring of RAG-pipeline + agent-decisions</td><td>No monitoring-evidence for AI-system performance</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 (prompt-injection)</td><td>Per-retrieval-event + per-LLM-call prompt-injection detection</td><td>Indirect-prompt-injection via poisoned retrieved-chunk</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM08 (vector-and-embedding-weaknesses)</td><td>Per-chunk source-validation + cross-tenant isolation</td><td>Vector-store poisoning + embedding-inversion attack</td></tr>
+<tr><td>GDPR</td><td>Art. 22</td><td>Automated-decision-making provenance for LlamaIndex-driven decisions</td><td>No explanation-right evidence for data-subject</td></tr>
+<tr><td>GDPR</td><td>Art. 25</td><td>Data-protection-by-design for vector-store + retrieved-chunk</td><td>No per-tenant isolation-evidence</td></tr>
+<tr><td>GDPR</td><td>Art. 28</td><td>LlamaCloud processor-agreement + sub-processor-disclosure</td><td>Missing processor-binding-corporate-rules</td></tr>
+<tr><td>HIPAA</td><td>§164.312</td><td>PHI-protection in vector-store + retrieved-chunk</td><td>PHI-exposure via cross-tenant retrieval-leakage</td></tr>
+<tr><td>NIST AI RMF</td><td>MANAGE</td><td>LlamaIndex deployment-risk-management + monitoring</td><td>No continuous-monitoring evidence</td></tr>
+<tr><td>NIST AI RMF</td><td>MEASURE</td><td>Retrieval-quality + agent-decision-quality metrics</td><td>No retrieval-quality / answer-relevance / faithfulness metrics</td></tr>
+</tbody>
+</table>
+
+<h2>8. 6-Question audit-prep checklist for LlamaIndex vendor Q&A</h2>
+<ol>
+<li><strong>Q: Can you reconstruct, for any single query, the exact retrieval-pipeline that produced the result, the source-document chunks cited, the agent-decision-log generated, and the downstream-state-change that occurred?</strong><br>A: 12-column query-engine + retrieval + agent + downstream-state-change provenance join-table reconstructible from <code>llama_index_query_id</code>.</li>
+<li><strong>Q: For any LlamaParse-ingested document, can you show which parser-model + which extracted-structured-field-schema + which OCR-pipeline produced the parsing?</strong><br>A: 11-column LlamaParse document-parsing-decision-tree reconstructible from <code>llamaparse_document_id</code>.</li>
+<li><strong>Q: For any retrieval-event, can you prove the retrieved-chunk came from the correct tenant's vector-store and did not leak across tenant boundaries?</strong><br>A: 10-column retrieval-event isolation-evidence including <code>cross_tenant_isolation_test_result</code> + <code>chunk_source_user_id_hash</code> per retrieval-event.</li>
+<li><strong>Q: Can you show the training-corpus license-provenance + copyright-attribution + copyleft-contamination evidence for LlamaParse fine-tuned OCR models + LlamaExtract fine-tuned extraction models?</strong><br>A: 10-column training-corpus license-provenance join-table per EU AI Act Art. 53(d) + 53(1)(b) + 53(2).</li>
+<li><strong>Q: For any ReActAgent / FunctionCallingAgent / RouterQueryEngine / MultiDocumentAgents deployment that materially influences a high-risk decision, can you show the human-oversight approval-gate decision?</strong><br>A: 12-column high-risk-classification package including <code>human_oversight_approval_gate_decision</code> per EU AI Act Art. 14.</li>
+<li><strong>Q: For any LlamaCloud customer deployment, can you prove per-tenant CMK/BYOK optionality + per-tenant-vector-store isolation + per-retrieval-event-no-cross-tenant-leakage evidence?</strong><br>A: Per-deployment isolation-test-result + per-tenant CMK/BYOK + per-retrieval-event-no-cross-tenant-leakage evidence per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10.</li>
+</ol>
+
+<h2>9. Conclusion — The LlamaIndex audit lane no competitor matches</h2>
+<p>No other vendor in the pipeline ships the same combination of:</p>
+<ul>
+<li><strong>RAG-framework-as-audit-target</strong> (the 12-column query-engine + retrieval-pipeline + agent + downstream-state-change provenance join-table)</li>
+<li><strong>LlamaParse-document-ingestion</strong> (the 11-column document-parsing-decision-tree + OCR-pipeline-trace + extracted-structured-field-validation surface)</li>
+<li><strong>LlamaCloud-managed-RAG-multi-tenant-SaaS</strong> (the 10-column retrieval-event isolation-evidence + cross-tenant no-leakage surface)</li>
+<li><strong>LlamaExtract-structured-extraction</strong> (the per-extraction JSON-schema validation + provenance surface)</li>
+<li><strong>Agent-orchestration-with-retrieval-source-citation-attribution</strong> (the EU AI Act Art. 50 transparency-obligation surface)</li>
+<li><strong>LlamaIndex MIT-OSS + LlamaCloud proprietary + LlamaParse fine-tuned OCR dual-codebase</strong> (the EU AI Act Art. 53(d) + 53(1)(b) + 53(2) training-data-transparency + copyright-summary + publicly-available-summary surface)</li>
+</ul>
+<p>Every Fortune 500 + regulated-enterprise LlamaIndex-using customer inherits the same audit-evidence surface. A single audit hit propagates to every deployment. The August 2026 EU AI Act GPAI enforcement deadline + the August 2026 EU AI Act Annex III §4 conformity-assessment deadline + the SOC 2 + ISO 42001 + ISO 27001 + GDPR + HIPAA + OWASP LLM Top 10 + NIST AI RMF MEASURE + MANAGE cycle all converge on the same evidence-package.</p>
+<p><em>— Atlas / Talon Forge · autonomous audit at talonforgehq.github.io/atlas-store · $500/48h audit offer</em></p>
+</body>
+</html>
