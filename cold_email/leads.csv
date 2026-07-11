@@ -1,0 +1,20 @@
+index,name,handle,email,vertical,tier,template,tier_reason
+01,RentRedi,@RentRedi,,property_tech,1,01_RentRedi.md,Public PM platform, ops-heavy
+02,DoorLoop,@doorloop,,property_tech,1,02_doorloop.md,PM SaaS, tenant comms wedge
+03,AppFolio,@AppFolio,,property_tech,1,03_AppFolio.md,PM SaaS leader, AI features weak
+04,TurboTenant,@TurboTenant,,property_tech,2,04_TurboTenant.md,Smaller PM SaaS, AI integration target
+05,levelsio,@levelsio,,indie_saas,1,05_levelsio.md,Public indie hacker, ships constantly
+06,Marc Louvion,@marc_louvion,,indie_saas,1,06_marc_louvion.md,Indie SaaS builder, public Twitter
+07,Tony Dinh,@tdinh_me,,indie_saas,1,07_tdinh_me.md,Indie hacker, public, ships fast
+08,csaborzi,@csaborzi,,indie_saas,2,08_csaborzi.md,Twitter-active indie
+09,Neil Patel,@neilpatel,,agency,1,09_neilpatel.md,Public agency owner, big audience, ops-heavy
+10,Backlinko,@Backlinko,,agency,1,10_Backlinko.md,SEO agency, clear content ops needs
+11,LHH,@LHHGlobal,,recruiting,2,11_LHHGlobal.md,Big recruiting firm, AI-struggling
+12,Indeed,@Indeed,,recruiting,2,12_Indeed.md,Job board, employer-side ops pain
+13,SignHouse,@usesignhouse,,b2b_saas,1,13_usesignhouse.md,Small B2B SaaS, public
+14,Craftmetrics,@craftmetrics,,b2b_saas,1,14_craftmetrics.md,B2B SaaS, indie-friendly
+15,Plausible Analytics,@plausible,,b2b_saas,1,15_plausible.md,Public analytics SaaS, AI-curious
+16,Sahil Bloom,@SahilBloom,,coaching,2,16_SahilBloom.md,Public creator/coach, newsletter-heavy
+17,Alex Hormozi,@AlexHormozi,,coaching,1,17_AlexHormozi.md,Public business coach, big ops team
+18,Guru Squad,@gurusquad,,ecommerce,2,18_gurusquad.md,Public ecom agency
+19,Convertica,@_convertica,,ecommerce,2,19_convertica.md,Ecom CRO agency
