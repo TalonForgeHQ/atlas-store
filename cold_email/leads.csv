@@ -71,3 +71,4 @@ index,name,handle,email,vertical,tier,template,tier_reason
 70,Sierra AI,@sierra,hello@sierra.ai,ai_vertical,1,70_sierra.md,Enterprise AI agents for customer experience (co-founded by Bret Taylor); evidence: https://sierra.ai/contact exposes hello@sierra.ai
 71,Harvey AI,@harvey,team@harvey.ai,legal_ai,1,71_harvey.md,Domain-specific AI for elite law firms; evidence: https://harvey.ai/contact exposes team@harvey.ai; CEO Winston Weinberg
 72,Gong,@gong_io,contact@gong.io,sales_intel,1,72_gong.md,Revenue-intelligence AI for sales teams; evidence: https://www.gong.io/contact exposes contact@gong.io; CEO Amit Bendov
+73,Writer,@Writer,partnerships@writer.com,enterprise_ai,1,73_writer.md,Enterprise AI agent platform for regulated industries (Palona, healthcare, financial services); evidence: https://writer.com/contact exposes partnerships@writer.com; CEO May Habib
