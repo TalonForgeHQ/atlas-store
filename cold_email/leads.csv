@@ -58,3 +58,8 @@ index,name,handle,email,vertical,tier,template,tier_reason
 57,Vercel,@vercel,support@vercel.com,b2b_saas,1,57_vercel.md,Edge-deployment platform with AI SDK + v0 generative UI; evidence: https://vercel.com/contact exposes support@vercel.com
 58,Modal Labs,@modal-labs,support@modal.com,ai_infra,1,58_modal.md,Serverless GPU platform for AI inference workloads; evidence: https://modal.com/support exposes support@modal.com
 59,Together AI,@togethercompute,support@together.ai,ai_infra,1,59_together.md,Open-source GenAI cloud (inference + fine-tuning); evidence: https://www.together.ai/contact exposes support@together.ai
+60,Rippling,@Rippling,support@rippling.com,b2b_saas,1,60_rippling.md,Unified HR/IT/Finance platform with AI workflow automation (Rippling AI); evidence: https://www.rippling.com/contact exposes support@rippling.com
+61,Clay,@clayrunson,team@clay.com,data_enrichment,1,61_clay.md,Data-enrichment + outbound orchestration platform; AI-driven lead research; evidence: https://www.clay.com/contact exposes team@clay.com
+62,PostHog,@posthog,support@posthog.com,dev_tools,1,62_posthog.md,OSS product-analytics suite with AI session insights; evidence: https://posthog.com/contact exposes support@posthog.com
+63,Temporal,@temporalio,support@temporal.io,dev_infra,1,63_temporal.md,Durable execution platform for AI agents and long-running workflows; evidence: https://temporal.io/contact exposes support@temporal.io
+64,Decagon,@decagon_ai,partners@decagon.ai,ai_vertical,1,64_decagon.md,Enterprise AI agents for customer support (production at Klarna/SaaS); evidence: https://decagon.ai/contact exposes partners@decagon.ai
