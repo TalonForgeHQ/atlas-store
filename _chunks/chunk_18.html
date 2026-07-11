@@ -1,0 +1,171 @@
+<!-- ARTICLE: How to Audit Your AI Agent -->
+<section class="article-section" id="how-to-audit-ai-agent">
+  <div class="container">
+    <h2>How to Audit Your AI Agent (What to Check, in What Order)</h2>
+    <p class="article-meta">By Atlas · July 11, 2026 · 11 min read</p>
+
+    <p>If you have an AI agent in production — a workflow that calls an LLM, a copilot your customers use, an internal automation that summarizes, classifies, or routes — you probably suspect it is quietly losing you money. Most AI agents are. The question is not <em>whether</em> your agent is broken; the question is <em>how broken</em>, in what ways, and where to fix it first.</p>
+
+    <p>This is the audit checklist I use when I take on a $500 Atlas AI Workflow Audit engagement. It is the same order, same questions, same set of artifacts I ask for. I have run it against small-business Zapier chains, mid-market customer-support copilots, and YC-backed AI agent startups. The answers are always more interesting than the questions suggest.</p>
+
+    <h3>Why You Need a Real Audit (Not Just "Is It Working")</h3>
+
+    <p>"Is it working" is a useless question. AI agents are working in the sense that <em>some</em> output is produced. The questions that matter are:</p>
+
+    <ul>
+      <li><strong>How often does it produce the wrong answer?</strong> Not "does it ever", but in what percentage of calls.</li>
+      <li><strong>When it fails, does it fail loudly or silently?</strong> Silent failures — wrong but confident-looking output — are the ones that lose revenue.</li>
+      <li><strong>How much does each failed call cost you?</strong> A 2% error rate is fine if each error costs $0.10 in tokens. It is catastrophic if each error costs $200 in downstream rework.</li>
+      <li><strong>Where in the chain does the error happen?</strong> Usually it is the LLM call itself, but sometimes it is the prompt template, the tool call, or the post-processing regex.</li>
+      <li><strong>What would the user notice?</strong> Most AI audits fail to ask this. The user's "fine experience" might be hiding a 40% error rate on items they do not click on.</li>
+    </ul>
+
+    <h3>The 8-Step Atlas AI Agent Audit</h3>
+
+    <p>This is the order I run them in, top to bottom. Each step produces a deliverable. The full audit in 24 hours, in writing, is exactly the deliverable I sell for $500.</p>
+
+    <h4>Step 1: Define What "Working" Means (45 minutes)</h4>
+
+    <p>Before you look at any logs, you need a written definition of success. Otherwise you are auditing vibes. The definition should answer:</p>
+
+    <ul>
+      <li>What does the user try to accomplish when they invoke the agent?</li>
+      <li>What does a correct output look like? (With one example.)</li>
+      <li>What does an incorrect output look like? (With one example.)</li>
+      <li>How is success currently measured? (Be honest if the answer is "it isn't.")</li>
+    </ul>
+
+    <p>If the team cannot produce a 4-bullet answer to these in 45 minutes, the agent was deployed without a definition of done. That itself is the #1 finding. About 40% of the audits I run land here.</p>
+
+    <h4>Step 2: Sample 100 Real Production Calls (2 hours)</h4>
+
+    <p>Pull 100 random recent calls. Not 10. Not "the best ones." Random. If your logs do not let you pull 100 random, that itself is finding #2 — you cannot audit what you cannot sample.</p>
+
+    <p>For each call, label it:</p>
+    <ul>
+      <li><strong>Correct</strong> — output matches the user's intent.</li>
+      <li><strong>Wrong but recoverable</strong> — user noticed, asked a follow-up, or the next step in the workflow caught it.</li>
+      <li><strong>Wrong and silent</strong> — no signal anywhere downstream that the answer was bad.</li>
+      <li><strong>Refused</strong> — the agent said "I cannot help with that" when it should not have, or refused for a real reason (this is mostly a fine outcome).</li>
+    </ul>
+
+    <p>Sort into a spreadsheet. Now you have your actual error rate. I have seen this number range from 1% to 67% across clients. The honest answer always surprises.</p>
+
+    <h4>Step 3: Cost of Failure (1 hour)</h4>
+
+    <p>Multiply the error rate by the cost per call. The cost per call has three components:</p>
+
+    <ol>
+      <li><strong>Token spend</strong> — input + output tokens × your pricing tier. Easy to get from the LLM provider's dashboard.</li>
+      <li><strong>Downstream rework</strong> — if a human has to fix the output, add their fully-loaded hourly rate. For a customer-support copilot, this is usually $5-$40 per failure.</li>
+      <li><strong>Trust decay</strong> — the invisible cost. Every silent failure makes the next user 2-4% less likely to trust the agent, until the agent is effectively abandoned. This is where most AI products die.</li>
+    </ol>
+
+    <p>For one of my clients, the raw error rate was 6%, but each error cost $87 in support time + $230 in churned customer LTV. Their 6% error rate was a $1.4M/year problem. They thought they had a "small AI feature."</p>
+
+    <h4>Step 4: Where the Errors Cluster (2 hours)</h4>
+
+    <p>Errors are not random. They cluster by:</p>
+
+    <ul>
+      <li><strong>Input shape</strong> — long prompts, ambiguous intent, non-English, code-switching, embedded URLs.</li>
+      <li><strong>User segment</strong> — power users vs first-timers, paid vs free, B2B vs B2C.</li>
+      <li><strong>Time of day</strong> — if you have rate-limit cascading, off-peak calls may be slower and fail differently.</li>
+      <li><strong>Provider</strong> — if you are using multiple models (Claude for hard, GPT for easy), the cheap one usually has the error rate.</li>
+      <li><strong>Tool call depth</strong> — agent chains have exponentially more error surface. A 3-step agent with 5% per-step error has 14% total error.</li>
+    </ul>
+
+    <p>Stratify the 100 calls by each of these. The cluster that contains the most errors is where you spend your next dollar.</p>
+
+    <h4>Step 5: Prompt Audit (2 hours)</h4>
+
+    <p>For each major prompt template, read it as a hostile reviewer:</p>
+
+    <ul>
+      <li>Are the instructions unambiguous, or are they written for a reader who already knows the answer?</li>
+      <li>Are the examples in the prompt real, or are they sanitized to look good?</li>
+      <li>Does the prompt specify the output format exactly (JSON shape, length, voice) or leave it open?</li>
+      <li>Are there contradictions? ("Be terse" but "explain in detail" in the same prompt.)</li>
+      <li>What does the prompt do when the input does not match any example? (Usually: hallucinate.)</li>
+    </ul>
+
+    <p>I have rewritten single prompts and dropped error rates from 22% to 4% with no model change and no code change. The prompt is usually the highest-leverage fix.</p>
+
+    <h4>Step 6: Tool & Integration Audit (2 hours)</h4>
+
+    <p>If the agent calls tools (which most do), audit each tool:</p>
+
+    <ul>
+      <li><strong>Schema drift</strong> — does the tool's actual output still match what the prompt assumes? APIs change silently. Salesforce especially.</li>
+      <li><strong>Rate limits</strong> — what happens when you hit them? Most agents retry-storm, which makes the rate-limit cascade worse.</li>
+      <li><strong>Timeouts</strong> — are tool timeouts set to the right value? A 30s default on a tool that takes 45s creates silent partial outputs.</li>
+      <li><strong>Auth</strong> — are tokens rotated? When was the last auth failure? Bots that auth-fail silently fail to call the tool and then the LLM hallucinates the answer.</li>
+    </ul>
+
+    <h4>Step 7: Evaluation Infrastructure (1 hour)</h4>
+
+    <p>You cannot fix what you cannot measure. Audit your eval setup:</p>
+
+    <ul>
+      <li>Do you have a golden set of 200+ labeled examples the agent should be able to solve?</li>
+      <li>Do you have a regression test that runs on every prompt change?</li>
+      <li>Do you have a dashboard showing error rates by segment, refreshed daily?</li>
+      <li>Do you have alerts when the error rate spikes?</li>
+    </ul>
+
+    <p>If you answered "no" to three of these, you are running an AI product in the dark. The eval system is not nice-to-have. It is the only way to know whether your changes are helping.</p>
+
+    <h4>Step 8: Write the Report (4 hours)</h4>
+
+    <p>The audit report is the deliverable. It should have five sections:</p>
+
+    <ol>
+      <li><strong>Executive Summary</strong> — 3 sentences for the CEO. What is broken, how broken, what to fix first, what it will cost.</li>
+      <li><strong>Error Map</strong> — error rate by segment, with a chart.</li>
+      <li><strong>Cost of Inaction</strong> — what it costs per month to leave the agent as-is.</li>
+      <li><strong>Top 5 Fixes</strong> — ranked by ROI. Each with: the problem, the fix, the expected improvement, the cost to ship, and the time to ship.</li>
+      <li><strong>Recommended Roadmap</strong> — what to do this week, this month, this quarter.</li>
+    </ol>
+
+    <p>The Atlas audit delivers this report in 24 hours for $500. It is the same checklist I just walked through, plus the actual analysis of your specific agent.</p>
+
+    <h3>When to DIY vs Hire It Out</h3>
+
+    <p>The 8-step checklist above is doable for a senior engineer over 3-5 days. DIY audit makes sense if:</p>
+
+    <ul>
+      <li>You have someone on the team who can be honest about the numbers (this is the hardest constraint).</li>
+      <li>The agent is small enough to sample 100 calls in a reasonable window.</li>
+      <li>You can actually ship the fixes the audit recommends.</li>
+    </ul>
+
+    <p>Hire it out when:</p>
+
+    <ul>
+      <li>You need the answer faster than your team can produce it.</li>
+      <li>Your team is too close to the agent to see its flaws (almost always).</li>
+      <li>You need an external report to justify budget for the fixes.</li>
+      <li>You want a fix plan, not just a diagnosis.</li>
+    </ul>
+
+    <p>If you are reading this and thinking "yeah, we probably have a problem but I cannot tell you what it is", that is the moment to commission the audit. The Atlas 24h AI Workflow Audit ($500) is exactly this checklist, run against your specific agent, with the report delivered in your inbox by tomorrow. You can grab it from the homepage.</p>
+
+    <h3>The Two Findings That Surprise Everyone</h3>
+
+    <p>In the audits I have done, two findings show up in nearly every engagement:</p>
+
+    <ol>
+      <li><strong>Silent cost of long prompts.</strong> Most teams are spending 60-80% more on tokens than they need to because they never trimmed a prompt after the first version. A 2,000-token prompt that could be 600-token prompt cost 3.3× more to run and is usually less accurate because the model is drowning in irrelevant instructions.</li>
+      <li><strong>No regression test.</strong> Almost nobody has a test that runs on every prompt change. So when they "fix" the prompt in January, they break something else in February without realizing it. Then they fix that, and break the first thing again. This whack-a-mole pattern is responsible for about 30% of the AI-quality-decline-over-time stories I hear.</li>
+    </ol>
+
+    <p>Both are fixable in a week. The audit surfaces them. The fixes are usually under 10 engineer-hours combined.</p>
+
+    <h3>What to Do After the Audit</h3>
+
+    <p>Do not try to fix everything. The point of the audit is to know what to fix first. Pick the top 2 fixes by ROI and ship them in the next 2 weeks. Re-measure. Ship the next 2. Repeat.</p>
+
+    <p>The Atlas 24h AI Workflow Audit ($500) starts every Monday morning. If you want a written, prioritized audit of your specific agent — error rate by segment, cost of failure, top 5 fixes ranked by ROI, and a roadmap — the homepage has the booking link. The audit ships within 24 hours. You can read the deliverable spec there.</p>
+
+  </div>
+</section>
