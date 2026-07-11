@@ -1,0 +1,48 @@
+<!-- chunk_37.html — Arize AI alternative for AI agent audit (long-tail) -->
+<section class="seo-chunk" id="arize-ai-alternative-agent-audit">
+<h2>Arize AI Alternative for AI Agent Audit: What You Need When Observability Is the Evidence</h2>
+
+<p>If you ship LLM-powered agents to regulated buyers — HIPAA-covered health systems, FedRAMP-Moderate agencies, EU AI Act high-risk deployers, public companies under SOX 404 — and you chose <strong>Arize AI</strong> (Phoenix OSS or Arize Enterprise) as your observability layer, you have a specific audit problem that doesn't apply to Datadog, Honeycomb, or Grafana users. When the auditor asks "where are your LLM call traces?" the answer is Arize — but then the auditor's next question is "where are Arize's audit logs?" and the answer needs to be a SOC 2 Type II report + an immutable-export pipeline + a per-tenant data-residency map. This chunk is the buyer-side checklist for that gap, and the working 48-hour audit pattern that closes it before the audit window opens.</p>
+
+<h3>Why "Arize as the audit trail" is a different problem than "Datadog as the audit trail"</h3>
+
+<p>Datadog and Honeycomb are observability for *infrastructure*. They log that a pod restarted, that a queue spiked, that a 500 happened. The audit question for those tools is "can you prove the system was up?" — a 99.9% uptime SLA + a log retention contract answer that question. Arize is observability for *AI behavior*. It logs the prompt, the completion, the tool-call chain, the eval result, the drift alert. The audit question for Arize is "can you prove the AI did what it should have?" — which requires evidence integrity (the trace wasn't edited after the fact), evidence completeness (no calls were silently dropped), evidence lineage (which model version processed which customer traffic), and evidence retention (7+ years for SOC 2 + HIPAA + EU AI Act Annex III). That is a different shape of problem than "show me uptime."</p>
+
+<h3>The 6-question audit checklist when Arize IS the evidence layer</h3>
+
+<ol>
+<li><strong>Immutable export to a WORM bucket.</strong> Arize Phoenix OSS stores spans in Postgres + S3 by default, both mutable. When your customer's regulated buyer asks "can I get tamper-evident evidence of the LLM call graph from March 15?" your answer needs to be "yes, exported to S3 Object Lock in Compliance mode + replicated to Glacier with a 7-year retention class" — not "we have S3 backups." SOC 2 CC7.2 + HIPAA §164.312(b) + EU AI Act Article 12 (logging) all require evidence integrity, not just evidence existence. The sidecar pattern we recommend: Arize's export-to-S3 feature piped through a Lambda that copies to a separate WORM-enabled bucket under your control.</li>
+<li><strong>Prompt-version pinning + lineage to evaluation.</strong> When a model behaves differently on April 1 than March 1, the auditor wants the SHA of the prompt template + the model version + the evaluation-set commit SHA + which customer traffic was processed with which combination. Phoenix's <code>evals</code> API has the lineage, but the export to a SOC 2 evidence format (CSV+JSON to WORM, with the SHA chain) is a customer-side script, not a one-click Arize feature. The working pattern: a nightly Airflow job that pulls Phoenix eval results + GitHub commit SHAs and writes a signed manifest to your evidence bucket.</li>
+<li><strong>Cross-tenant trace isolation evidence.</strong> Arize's multi-tenancy is logical (row-level security), not physical (separate Postgres + separate S3 prefix per tenant). For EU AI Act Annex III high-risk systems + GDPR Schrems II cross-border transfers, some buyers need per-tenant EU-only residency — i.e. Arize EU on Arize EU storage, not Arize US with EU-data-at-rest encryption. The auditor will ask for the network path diagram + the encryption-at-rest certificate + the key-custody chain. If you sell to EU buyers, this is non-negotiable.</li>
+<li><strong>Drift-detection evidence at the audit boundary.</strong> Arize's drift detection is world-class for the customer, but the audit requires "what did you do when drift was detected?" — i.e. the action join-table that links "drift alert fired at T" to "model was rolled back at T+2h" to "which customers were affected between T and T+2h." This is the same tool-call join-table question we surface for customer-service-AI vendors (chunk_34, chunk_36), but it lands harder at Arize because Arize is the source of truth. Without the action join-table, the drift alert is a signal that fires into a void.</li>
+<li><strong>The "Arize on Arize" question — does Arize audit itself with the same rigor?</strong> When a Fortune-500 buyer's CISO asks "what's your evidence that YOUR observability platform doesn't itself have an SOC 2 gap?" the answer needs to be a public SOC 2 Type II report + a public EU AI Act conformity assessment summary + a public penetration-test summary. The current arize.com/security page has the SOC 2 logo but not the underlying report, and that is the gap most CISOs we talk to flag. Arize's compliance posture is "in progress" for several certifications — your buyer needs to know which ones before signing the BAA or the DPA.</li>
+<li><strong>Span-level PII redaction at the trace boundary.</strong> Phoenix captures the full prompt and completion by default — which means if a user types their SSN into the chat, Phoenix has it. SOC 2 CC6.1 + GDPR Art. 5(1)(c) (data minimization) + HIPAA §164.514(a) (de-identification) all require either redaction at capture time or contractual justification for retention. Arize's <code>redact</code> function works, but it is a per-span configuration the customer has to enable — a working evidence pool needs the redaction to be default-on for regulated verticals, with an allow-list for the specific PII fields the LLM needs (account numbers, not SSNs).</li>
+</ol>
+
+<h3>What "good" looks like in 2026 (the working pattern at Series B+ agent companies)</h3>
+
+<p>The reference architecture we see working at agent companies in mid-2026 who chose Arize: every Phoenix span is exported via the Arize export-to-S3 feature to a customer-controlled bucket with Object Lock in Compliance mode + 7-year retention. A nightly Airflow job pulls Phoenix eval results + GitHub commit SHAs + drift alert metadata + the action join-table from your ticketing system (Linear/Jira) and writes a signed manifest to a second WORM bucket. The auditor's evidence request becomes "show me the manifest for week of March 15" — a single CSV with the SHA chain, prompt versions, eval results, drift events, and rollback actions, all tamper-evident. The cost is roughly $200-500/mo in S3 storage + Lambda + Airflow for a 1M-span/mo workload. That is rounding-error against the cost of a Type II finding or a HIPAA breach notification.</p>
+
+<h3>How this maps to the EU AI Act (if you sell into the EU)</h3>
+
+<p>Article 12 (logging) requires "automatic record-keeping" of system behavior over the lifecycle, retained for at least 6 months. Article 14 requires effective human oversight — structurally the same evidence chain as SOC 2 CC7.2/CC8.1. Article 13 requires transparency to deployers — i.e. your buyer needs to be able to explain to their auditor which model version processed which customer's data, which is exactly the prompt-version-pinning question in checklist item #2. If you have SOC 2 evidence done right with Arize as the observability layer, you are roughly 65% of the way to EU AI Act Article 12/13/14 conformity. The remaining 35% is the technical documentation in Annex IV + the per-tenant data-residency configuration in checklist item #3.</p>
+
+<h3>When Arize IS NOT the right choice (honest version)</h3>
+
+<p>Arize is the right observability layer if you are a Series B+ agent-platform company selling to regulated buyers, and you can absorb the $50-150K/yr Arize Enterprise tier + the engineering cost of the export pipeline. Arize is NOT the right choice if you are (a) pre-PMF and need to ship an MVP observability stack for less than $500/mo total — Phoenix OSS + a self-hosted Postgres + a Datadog free tier will get you 80% of the way for $0-200/mo, (b) selling exclusively to non-regulated buyers (consumer chat, marketing copy) where the audit question does not apply, or (c) processing air-gapped data (defense, certain federal) where the Arize cloud option is non-starter and the OSS option requires significant on-prem investment.</p>
+
+<h3>The $500 audit (what we deliver in 48 hours)</h3>
+
+<p>If you want a written gap-report against this 6-question checklist — what you have, what's missing, and the cheapest fix for each missing item — Talon Forge runs a 48-hour $500 audit. The deliverable is a 6-8 page PDF your GRC team can hand to your auditor or your buyer's CISO. Order at <a href="/products.html">products</a> or reply to this email with "audit" and we send the intake form. If you are also evaluating Arize alternatives (Langfuse, Helicone, LangSmith, WhyLabs, Datadog LLM Observability, OpenLLMetry), the audit maps the same 6 questions to whichever vendor you choose — the checklist is observability-layer-agnostic, only the export pipeline changes.</p>
+
+<h3>Related long-tail reads</h3>
+
+<ul>
+<li><a href="chunk_36.html">SOC 2 evidence for AI agent tool calls</a></li>
+<li><a href="chunk_34.html">Enterprise AI audit checklist (7 buyer questions)</a></li>
+<li><a href="chunk_35.html">Customer-service-AI audit checklist (SOC 2 + EU AI Act)</a></li>
+<li><a href="chunk_32.html">AI agent observability for compliance teams</a></li>
+</ul>
+
+<p class="cta"><strong>Shipping Arize-based agents to a regulated buyer?</strong> <a href="/products.html">$500, 48h audit →</a></p>
+</section>

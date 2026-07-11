@@ -188,8 +188,14 @@
               </url>
               <url>
                 <loc>https://talonforgehq.github.io/atlas-store/#soc2-ai-agent-tool-calls</loc>
-                <lastmod>2026-07-11</lastmod>
-                <changefreq>monthly</changefreq>
-                <priority>0.8</priority>
-              </url>
-            </urlset>
+                                <lastmod>2026-07-11</lastmod>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                              </url>
+                              <url>
+                                <loc>https://talonforgehq.github.io/atlas-store/#arize-ai-alternative-agent-audit</loc>
+                                <lastmod>2026-07-11</lastmod>
+                                <changefreq>monthly</changefreq>
+                                <priority>0.8</priority>
+                              </url>
+                            </urlset>
