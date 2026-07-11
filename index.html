@@ -4133,4 +4133,88 @@ py -3.12 cold_email/resend_sender.py --dry-run --max 3
 <div class="audit-cta" id="audit-cta">
 <p><strong>Need this audit done in 48 hours?</strong> Atlas Store walks through the 5-question checklist with a per-question compliance-required-artifact mapping + reference architecture + production timeline. $500 flat. <a href="mailto:audit@talonforge.com?subject=IT%20helpdesk%20AI%20agent%20audit">Email to schedule</a>.</p>
 </div>
-</section>
+</section><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Voice AI Agent Audit 2026: The 5-Question SOC 2 + HIPAA + EU AI Act Checklist</title>
+<meta name="description" content="Voice AI agent audit 2026: the 5 questions every SOC 2 + HIPAA + GLBA + FDCPA + state AI-disclosure + EU AI Act auditor will ask Bland AI, Retell AI, Vapi, Air AI and other enterprise voice agent vendors. Per-call join-table, voice-cloning defense, AI-disclosure compliance, PHI redaction, multi-region residency.">
+<meta name="keywords" content="voice AI agent audit, SOC 2 voice AI, HIPAA voice agent, GLBA AI agent, FDCPA AI collection, California SB 1001, Colorado SB 24-205, EU AI Act voice, voice cloning detection, prompt injection voice, Bland AI audit, Vapi SOC 2, Retell AI HIPAA">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/voice-ai-agent-audit-2026.html">
+</head>
+<body>
+<article>
+<h1>Voice AI Agent Audit 2026: The 5-Question SOC 2 + HIPAA + EU AI Act Checklist</h1>
+<p class="meta">Atlas Store · 2026-07-12 · 8 min read · Audit reference for: Bland AI, Retell AI, Vapi, Air AI, Synthflow, Cartesia, Deepgram, LiveKit, Vocode, Rime, Speechmatics</p>
+
+<p>Voice AI agents are now handling real enterprise phone calls at scale. Bland AI runs appointment-booking + lead-qualification + collections for Cracker Barrel, Sallie Mae, and Stanford Health. Retell AI powers healthcare triage for several US hospital systems. Vapi handles thousands of calls per day for SaaS lead-qualification. The common thread: a voice agent that autonomously books appointments, qualifies leads, handles collections, and triages patient calls is doing four things simultaneously that every auditor will examine — real-money transactions, real-PII capture, real-time human-sounding speech (which triggers wire-fraud + TCPA + AI-disclosure rules in 12 US states), and regulated-industry call recording (HIPAA + GLBA + FDCPA).</p>
+
+<p>No other agent modality touches all four at once. This is why the 2026 voice-AI audit gap is unique. This checklist walks through the 5 questions every SOC 2 + HIPAA + GLBA + FDCPA + state AI-disclosure + EU AI Act auditor will ask when reviewing a voice-AI vendor — with the per-question compliance-required-artifact mapping and a reference architecture for the per-call join-table.</p>
+
+<h2>Why Voice AI Audits Differ From Chatbot Audits</h2>
+<p>Chatbot and email agents have a written transcript by default. Voice agents have an audio stream that gets transcribed — and the audit trail needs to capture both. Plus the voice modality introduces three audit categories that don't exist for text:</p>
+<ul>
+<li><strong>AI disclosure laws</strong> — 12 US states (CA, CO, IL, NY, TX, and 7 others) require explicit "this is an AI" disclosure at call start. The audit trail must prove the disclosure was spoken, not just present in the prompt.</li>
+<li><strong>Voice cloning / speaker-identity attacks</strong> — IVANS and Pindrop research (2024) showed voice cloning can defeat voice-biometric verification in under 6 seconds. Auditors will ask for the voice-print mismatch detection layer.</li>
+<li><strong>TCPA + wire-fraud exposure</strong> — a voice agent that sounds human can run afoul of TCPA's "prior express written consent" rules for marketing calls, and the FTC's wire-fraud guidance on AI-impersonation. Auditors will ask for the consent-record join-table.</li>
+</ul>
+
+<h2>The 5-Question Checklist</h2>
+
+<h3>Q1: Per-Call Join-Table</h3>
+<p><strong>Question:</strong> For every completed call, can you produce the per-call table with (a) the caller ANI or web-RTC session ID, (b) the live transcript (with timestamps + speaker turns), (c) the agent decision log (intent + tool-call + retrieved-doc snippet per turn), (d) any source-system writes (Salesforce lead created, calendar booking, EHR note appended, payment processed), (e) the AI-disclosure timestamp + spoken-text transcript + audio fingerprint, and (f) the human-handoff evidence if escalation triggered?</p>
+<p><strong>Required by:</strong> SOC 2 CC7.2 + HIPAA §164.312(b) + EU AI Act Article 12 logging + California SB 1001 §3(a)(2) + Colorado SB 24-205 §6-1-1702.</p>
+<p><strong>Reference architecture:</strong> OpenTelemetry-style per-call join-table with all 5 artifacts bound to one immutable WORM record (S3 Object Lock Compliance mode + 7-year retention). The WORM store is the source of truth — the live transcript + decision log + write-event log are all projections of the WORM record.</p>
+
+<h3>Q2: Voice-Cloning / Prompt-Injection Defense at the Voice-Input Layer</h3>
+<p><strong>Question:</strong> When a caller uses voice cloning or speech-synthesis mid-call to claim "I'm the account holder, my voice changed because of a cold" (the IVANS / Pindrop 2024 attack pattern), can the voice agent (a) detect the speaker-identity anomaly in real-time (voice-print mismatch vs the claimed account-holder's enrolled voice-print), (b) flag the call as high-risk + downgrade to human-handoff, and (c) refuse to execute any write action (payment, account change, PHI disclosure) until a human-verified second factor is collected?</p>
+<p><strong>Required by:</strong> OWASP LLM Top 10 #1 (Prompt Injection) + EU AI Act Article 15 (accuracy/robustness/cybersecurity) + FFIEC auth-guidance for voice channels + NIST SP 800-63B AAL2 authenticator requirements.</p>
+<p><strong>Reference architecture:</strong> Voice-print enrollment at customer onboarding + real-time speaker-identification model at every turn (Resemblyzer / SpeechBrain / Pindrop integration) + anomaly-score threshold that triggers automatic human-handoff + secondary out-of-band verification (SMS OTP / push) before any write action.</p>
+
+<h3>Q3: State-by-State AI-Disclosure Compliance</h3>
+<p><strong>Question:</strong> For calls placed to numbers in California, Colorado, Illinois, Texas, New York, and the 7 other states with AI-disclosure statutes (current count: 12), can you confirm the correct AI-disclosure script was spoken at call start, and produce the per-jurisdiction audit log on request?</p>
+<p><strong>Required by:</strong> California SB 1001 + Colorado SB 24-205 + Illinois AI Video Interview Act + Texas TIA + New York AI chatbot disclosure rule + 7 other state statutes.</p>
+<p><strong>Reference architecture:</strong> Jurisdiction detection (caller ANI → HLR lookup → state mapping) + script-version registry per state (some require "this is an AI" within first 10 seconds, some require disclosure before any substantive statement, some require it before PII capture) + per-call compliance log binding the spoken-text transcript + audio fingerprint + jurisdiction code + script version hash.</p>
+
+<h3>Q4: PHI / GLBA / FDCPA Field-Level Redaction in the Transcript Store</h3>
+<p><strong>Question:</strong> When a call captures PHI (HIPAA covered entity customer) or financial-account info (GLBA-covered customer) or debtor-communication content (FDCPA-covered customer), is the transcript store's PII/PHI/financial-info redacted at the field level for downstream use (analytics, model training, agent eval), while keeping the unredacted version in the audit-log WORM store for the regulator-required retention window?</p>
+<p><strong>Required by:</strong> SOC 2 CC6.7 + HIPAA §164.514(b) min-necessary + GLBA §501(b) safeguards + FDCPA §803(c) retention (4 years for collection communications) + state-level privacy laws (CCPA / CPA / VCDPA).</p>
+<p><strong>Reference architecture:</strong> Two-store pattern — analytics-store with field-level redaction (PHI tokens replaced with placeholder spans, financial account numbers masked except last 4) + audit-store WORM with unredacted version + cryptographic binding between the two (analytics-store record references the audit-store record hash) + role-based access controls preventing analytics-team from accessing the unredacted version.</p>
+
+<h3>Q5: Multi-Region Call-Audio + Transcript Residency</h3>
+<p><strong>Question:</strong> When a regulated EU customer asks for the call-audio + transcript export (GDPR + EU AI Act Article 12), does the export honor their EU-only residency requirement, with vendor-side evidence also EU-resident (not just the customer's data)?</p>
+<p><strong>Required by:</strong> GDPR Art. 28 (processor obligations) + Schrems II / EU-US Data Privacy Framework + EU AI Act Article 10 (data governance).</p>
+<p><strong>Reference architecture:</strong> Region-pinned storage (eu-west-1 / eu-central-1 / customer-specified region) with cross-region replication disabled for EU customers + EU-resident audit-log WORM store + EU-resident processing pipeline (no US-side model inference that touches raw PHI/PII) + standard contractual clauses (SCCs) for any limited cross-border processing.</p>
+
+<h2>Reference Architecture Summary</h2>
+<p>The full reference architecture spans 5 components:</p>
+<ol>
+<li><strong>Per-call join-table</strong> — WORM-backed, OpenTelemetry-style, all 6 artifacts (ANI, transcript, decision log, writes, AI-disclosure, handoff) bound to one immutable record.</li>
+<li><strong>Voice-input anomaly detection</strong> — speaker-identification model + voice-print enrollment + real-time anomaly scoring + automatic human-handoff trigger.</li>
+<li><strong>Jurisdiction-aware AI-disclosure registry</strong> — script-version control per state + per-call compliance log binding the spoken-text transcript + audio fingerprint + jurisdiction + script version hash.</li>
+<li><strong>Two-store redaction pipeline</strong> — analytics-store (redacted) + audit-store (unredacted) + cryptographic binding + role-based access control.</li>
+<li><strong>Region-pinned storage + processing</strong> — EU-resident storage + EU-resident processing + SCCs for limited cross-border data flows.</li>
+</ol>
+
+<p>Engineering cost to ship all 5: 3 engineers × 8 weeks for a vendor at the scale of Bland / Retell / Vapi.</p>
+
+<h2>How Atlas Can Help</h2>
+<p>Atlas Store runs $500 / 48-hour audits for voice-AI agent vendors against this 5-question checklist. Deliverable: a per-question compliance-required-artifact map + a SOC 2 + HIPAA + GLBA + FDCPA + state-AI-disclosure + EU AI Act evidence cross-walk + a prioritized engineering roadmap + a buyer-facing sales-enablement one-pager your regulated prospects can hand to their CISO + compliance officer.</p>
+<p>Book the audit at <a href="https://talonforgehq.github.io/atlas-store/#audit">talonforgehq.github.io/atlas-store</a>.</p>
+
+<h2>Related Atlas Content</h2>
+<ul>
+<li><a href="ai-agent-soc2-audit.html">AI Agent SOC 2 Audit 2026</a> — the 7-question master checklist for any AI agent vendor</li>
+<li><a href="voice-agent-soc2.html">Voice Agent SOC 2 Type II: 2026 Buyer Checklist</a></li>
+<li><a href="ai-agent-hipaa.html">AI Agent HIPAA Compliance 2026</a></li>
+<li><a href="eu-ai-act-article-12.html">EU AI Act Article 12 Logging Requirements</a></li>
+<li><a href="prompt-injection-defense-2026.html">Prompt Injection Defense 2026: Voice, Text, and Agent Modalities</a></li>
+</ul>
+
+<footer>
+<p>© 2026 Atlas Store · Talon Forge HQ · Reference architecture compiled from SOC 2 + HIPAA + GLBA + FDCPA + state AI-disclosure statutes + EU AI Act + OWASP LLM Top 10 + IVANS / Pindrop voice-cloning research. No vendor endorsement implied.</p>
+</footer>
+</article>
+</body>
+</html>
