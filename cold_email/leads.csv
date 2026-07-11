@@ -79,3 +79,6 @@ index,name,handle,email,vertical,tier,template,tier_reason
 78,Gorgias,@gorgias,support@gorgias.com,ecommerce,1,78_gorgias.md,Ecommerce helpdesk with Gorgias AI Automate; evidence: https://www.gorgias.com/contact exposes support@; CEO Romain Lapeyre
 79,Notion,@NotionHQ,team@makenotion.com,productivity,1,79_notion.md,AI productivity suite (Notion AI/Q&A); evidence: https://www.notion.so/contact exposes team@; CEO Ivan Zhao
 80,Linear,@linear,support@linear.app,saas,1,80_linear.md,Issue tracking with Linear AI / Linear Agents; evidence: https://linear.app/support exposes support@; CEO Tuomas Artman
+81,Cognition (Devin),@caboria,team@cognition.ai,ai_coding,1,81_ai_coding_agents.md,Autonomous AI software engineer (Devin); evidence: https://cognition.ai/contact exposes team@; CEO Scott Wu (verified @scottwu46, TopCoder target); company X handle uncertain, founder handle is reliable
+82,Cursor,@cursor_ai,hi@cursor.com,ai_coding,1,81_ai_coding_agents.md,AI code editor (Cursor IDE) with Agent mode; evidence: https://cursor.com/contact exposes hi@; CEO Michael Truell (verified @mntruell)
+83,Replit Agent,@Replit,agent@replit.com,ai_coding,1,81_ai_coding_agents.md,Browser IDE with autonomous Replit Agent; evidence: https://replit.com/support exposes support@; CEO Amjad Masad (verified @amasad)
