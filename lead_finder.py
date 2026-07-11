@@ -1,24 +1,23 @@
 """
 Atlas Lead Finder — finds REAL business emails WITHOUT Hunter.io / Apollo API keys.
 Uses:
-1. Google site:linkedin.com scraping (public data)
+1. Direct website contact page scraping (public data)
 2. Domain pattern guessing (info@, sales@, founder@)
-3. Public YC bookface / Crunchbase scraping
-4. Direct website contact page scraping
 
-NO API KEYS NEEDED. Pure Python with requests + BeautifulSoup.
+NO API KEYS NEEDED. Pure Python with requests + regex.
 """
 
 import requests
-from bs4 import BeautifulSoup
 import re
 import csv
 import json
 import time
 import random
-from urllib.parse import urlparse, quote_plus
-from pathlib import Path
-from typing import List, Dict, Optional
+import urllib3
+from urllib.parse import urlparse
+from typing import List, Dict
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 HEADERS = [
@@ -61,20 +60,24 @@ def guess_emails_for_domain(domain: str, names: List[str] = None) -> List[str]:
     return list(set(guesses))
 
 
-def scrape_contact_page(domain: str, timeout: int = 10) -> List[str]:
+def scrape_contact_page(domain: str, timeout: int = 5) -> List[str]:
     """Try common contact page URLs and extract emails."""
-    paths = ["/contact", "/contact-us", "/about", "/team", "/about-us", "/get-in-touch", "/"]
+    paths = ["/contact", "/about", "/", "/contact-us", "/team"]
     urls = [f"https://{domain}{p}" for p in paths]
 
     emails = []
     for url in urls:
         try:
-            r = requests.get(url, headers=random_headers(), timeout=timeout, allow_redirects=True)
+            r = requests.get(url, headers=random_headers(), timeout=timeout, allow_redirects=True, verify=False)
             if r.status_code == 200:
                 found = extract_emails(r.text)
-                if found:
-                    emails.extend(found)
+                # Filter out generic placeholders that match example.com patterns
+                real = [e for e in found if "example.com" not in e]
+                if real:
+                    emails.extend(real)
                     break
+        except requests.exceptions.Timeout:
+            continue
         except Exception:
             continue
 
@@ -180,11 +183,19 @@ KNOWN_LEADS = [
 ]
 
 
-def enrich_all_leads(leads: List[Dict], max_per_company: int = 2, delay: float = 0.5) -> List[Dict]:
-    """Find emails for each lead."""
+def enrich_all_leads(leads: List[Dict], max_per_company: int = 2, delay: float = 0.3) -> List[Dict]:
+    """Find emails for each lead. Writes partial CSV as it goes."""
     enriched = []
+    csv_path = "leads_with_emails.csv"
+    fieldnames = ["company", "domain", "website", "founder", "vertical", "best_email", "emails_found", "guessed_emails"]
+
+    # Init CSV
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        writer.writeheader()
+
     for i, lead in enumerate(leads):
-        print(f"  [{i+1}/{len(leads)}] {lead['company']} ({data['domain']})...")
+        data = None
         try:
             data = find_emails_for_company(
                 lead["company"],
@@ -213,11 +224,29 @@ def enrich_all_leads(leads: List[Dict], max_per_company: int = 2, delay: float =
 
             data["best_email"] = best_email
             enriched.append(data)
+            domain_str = data.get('domain', 'unknown')
+            print(f"  [{i+1}/{len(leads)}] {lead['company']} ({domain_str})...")
             if best_email:
                 print(f"    [OK] {best_email}")
             else:
                 print(f"    [NONE]")
+
+            # Write partial CSV
+            with open(csv_path, "a", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+                row = {
+                    "company": data.get("company", ""),
+                    "domain": domain_str,
+                    "website": data.get("website", ""),
+                    "founder": data.get("founder", ""),
+                    "vertical": data.get("vertical", ""),
+                    "best_email": best_email or "",
+                    "emails_found": "; ".join(data.get("emails_found", []) or []),
+                    "guessed_emails": "; ".join(data.get("guessed_emails", []) or []),
+                }
+                writer.writerow(row)
         except Exception as e:
+            print(f"  [{i+1}/{len(leads)}] {lead['company']} (ERROR)")
             print(f"    [ERROR] {e}")
             enriched.append({"company": lead["company"], "website": lead["website"], "error": str(e)})
 
