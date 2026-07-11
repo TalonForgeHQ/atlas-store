@@ -1,0 +1,122 @@
+<!-- chunk_60.html — AutoGen / Microsoft Research Multi-Agent-Conversation SOC 2 + EU AI Act + FedRAMP Audit Checklist 2026 -->
+<section class="seo-chunk" id="autogen-microsoft-multi-agent-soc2-eu-ai-act-fedramp-audit-2026">
+  <h1>AutoGen Microsoft Research Multi-Agent-Conversation SOC 2 + EU AI Act + FedRAMP Audit Checklist 2026</h1>
+  <p><strong>Target keyword:</strong> <em>AutoGen SOC 2 audit</em> · <em>AutoGen EU AI Act compliance</em> · <em>Magentic-One audit checklist</em> · <em>multi-agent-conversation framework FedRAMP Moderate</em> · <em>AG2 Apache-2.0 license audit</em> · <em>code-execution-sandbox OWASP LLM05</em> · <em>Microsoft Research AI agent audit</em></p>
+
+  <h2>Why AutoGen is its own audit lane (not a duplicate of LangChain, CrewAI, or Patronus)</h2>
+  <p>AutoGen is the only canonical Microsoft-Research-originated multi-agent-conversation framework that ships <strong>GroupChat thread provenance</strong>, <strong>Magentic-One Orchestrator plan-as-Python-list-of-subtasks decision logs</strong>, <strong>nested-chat delegation</strong>, <strong>untrusted-LLM-generated-code execution in a sandbox</strong>, and <strong>dual-license (MIT + Apache-2.0) training-corpus transparency</strong> as first-class concepts. The audit surface is fundamentally different from every other framework in the ai_agents_infra cluster:</p>
+  <ul>
+    <li><strong>LangChain</strong> answers: <em>"what did each agent's reasoning-chain + tool-call do via LangSmith?"</em></li>
+    <li><strong>CrewAI</strong> answers: <em>"which role-playing agent handed off to which and what shared-memory state changed?"</em></li>
+    <li><strong>Patronus</strong> answers: <em>"which judge-LLM made the pass/fail decision on which eval scenario?"</em></li>
+    <li><strong>AutoGen answers</strong>: <em>"what was the full GroupChat thread, what was the Magentic-One Orchestrator plan-as-Python-list-of-subtasks at each step, when did the coder agent execute untrusted LLM-generated code in the sandbox and what was the sandbox-isolation-evidence for that execution, when did a human-in-the-loop interject, what was the cross-agent-context-window payload at each transition, and what downstream state changed?"</em></li>
+  </ul>
+  <p>If you are running AutoGen + Magentic-One (browser + file-surfer + coder + executor) + AG2v0.4 in a regulated-enterprise environment (Goldman Sachs + Bloomberg + BCG + Deloitte + KPMG + IBM enterprise customer stack), this is the audit lane your auditor will probe in 2026 — and the <strong>untrusted-code-execution-in-Magentic-One</strong> surface means AutoGen inherits a <strong>OWASP LLM Top 10 LLM05 (improper-output-handling)</strong> + <strong>LLM08 (vector-and-embedding-weaknesses)</strong> audit obligation that no other agent framework carries.</p>
+
+  <h2>The 5 audit gaps every AutoGen / Magentic-One deployment needs to close</h2>
+
+  <h3>Gap 1 — GroupChat + Magentic-One Orchestrator plan-decision + code-execution-sandbox + tool-call provenance join-table</h3>
+  <p><strong>Frameworks:</strong> SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4</p>
+  <p>The auditor wants a single <code>autogen_thread_id</code> + <code>magentic_one_orchestrator_plan_id</code> that reconstructs the entire GroupChat conversation-thread + Magentic-One Orchestrator plan-as-Python-list-of-subtasks end-to-end. The 12-column join-table schema:</p>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead><tr><th>#</th><th>Column</th><th>Source</th><th>Retention</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>autogen_thread_id + magentic_one_orchestrator_plan_id (UUIDv7)</td><td>AutoGen GroupChatManager + Magentic-One Orchestrator</td><td>7yr WORM</td></tr>
+      <tr><td>2</td><td>thread_definition_hash (SHA-256 of GroupChat config)</td><td>AutoGen GroupChat + Magentic-One config export</td><td>7yr WORM</td></tr>
+      <tr><td>3</td><td>group_chat_manager_config_hash (speaker-selection-policy + max-round)</td><td>AutoGen GroupChatManager config export</td><td>7yr WORM</td></tr>
+      <tr><td>4</td><td>nested_chat_delegation_hash (per nested-chat dispatch)</td><td>AutoGen NestedChat config + per-dispatch log</td><td>7yr WORM</td></tr>
+      <tr><td>5</td><td>magentic_orchestrator_plan_hash (plan-as-Python-list-of-subtasks)</td><td>Magentic-One OrchestratorLedger</td><td>7yr WORM</td></tr>
+      <tr><td>6</td><td>magentic_orchestrator_plan_step_hash (per step in the plan)</td><td>Magentic-One OrchestratorLedger per-step</td><td>7yr WORM</td></tr>
+      <tr><td>7</td><td>agent_response_chain_hash (per agent response in thread order)</td><td>AutoGen AgentChat reply log</td><td>7yr WORM</td></tr>
+      <tr><td>8</td><td>code_execution_sandbox_hash (per sandbox invocation by coder/executor)</td><td>AutoGen code-execution sandbox ledger</td><td>7yr WORM</td></tr>
+      <tr><td>9</td><td>tool_call_chain_hash (per tool-call + return-value)</td><td>AutoGen tool-use + function-calling log</td><td>7yr WORM</td></tr>
+      <tr><td>10</td><td>human_in_the_loop_interjection_hash (per HumanInput / UserProxy interjection)</td><td>AutoGen user-proxy reply log</td><td>7yr WORM</td></tr>
+      <tr><td>11</td><td>downstream_state_change_hash (per consequential action)</td><td>AutoGen downstream-effect ledger</td><td>7yr WORM</td></tr>
+      <tr><td>12</td><td>cost_usd_total + latency_ms_total (per thread)</td><td>AutoGen thread-summary metadata</td><td>7yr WORM</td></tr>
+    </tbody>
+  </table>
+  <p>The auditor will specifically probe the <strong>Magentic-One Orchestrator plan-as-Python-list-of-subtasks decision log</strong> because it is the only place where the orchestrator's high-level reasoning is captured as structured data — and the OWASP LLM Top 10 LLM01 (prompt-injection) finding on the orchestrator plan is the single most-leverage audit artifact every regulated-enterprise AutoGen customer needs.</p>
+
+  <h3>Gap 2 — Magentic-One + AG2-Apache-2.0 dual-license training-corpus license-provenance + copyright-attribution + copyleft-contamination evidence</h3>
+  <p><strong>Frameworks:</strong> EU AI Act Art. 53(d) GPAI training-data transparency + EU AI Act Art. 53(1)(b) copyright-summary + ISO 42001 §6.1.4</p>
+  <p>AutoGen is the only framework in the pipeline that ships <strong>two different open-source licenses</strong> — MIT for AutoGen-Core, Apache-2.0 for AG2v0.4 — and any customer who copies code between the two repos inherits a cross-license-contamination risk that does not exist in single-license frameworks. The audit surface is a per-source license-detection + per-source attribution-chain + per-source copyleft-flag + license-collision-flag + training-corpus-evidence join-table for the AutoGen-Core + Magentic-One + AG2 fine-tunes.</p>
+  <p>The auditor will specifically demand the <strong>EU AI Act Art. 53(d) training-data transparency summary</strong> for the Magentic-One team-of-specialists training corpus (the browser + file-surfer + coder + executor agents are fine-tuned on Microsoft-internal data) — and the AG2 Apache-2.0 dual-license creates a downstream copyleft-flag concern that propagates to every customer deployment.</p>
+
+  <h3>Gap 3 — Code-execution-sandbox-isolation-evidence + sandbox-escape-prevention for the Magentic-One coder + executor agents</h3>
+  <p><strong>Frameworks:</strong> OWASP LLM Top 10 LLM05 (improper-output-handling) + LLM08 (vector-and-embedding-weaknesses) + ISO 42001 §6.1.4 + SOC 2 CC6.1 + FedRAMP Moderate SC-7 (boundary-protection) + SC-39 (process-isolation)</p>
+  <p>This is the <strong>unique AutoGen audit lane</strong> — Magentic-One is the only multi-agent framework that runs <strong>untrusted LLM-generated code</strong> as a first-class operation in the orchestration loop. The coder agent writes Python on the fly; the executor agent runs that Python. The audit surface is a per-execution isolation-result join-table:</p>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead><tr><th>#</th><th>Column</th><th>Source</th><th>Retention</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>code_execution_sandbox_id (UUIDv7 per sandbox spin-up)</td><td>AutoGen code-execution sandbox ledger</td><td>7yr WORM</td></tr>
+      <tr><td>2</td><td>code_execution_attempt_hash (SHA-256 of LLM-generated code)</td><td>AutoGen coder agent output capture</td><td>7yr WORM</td></tr>
+      <tr><td>3</td><td>sandbox_escape_test_result (per sandbox-penetration-test)</td><td>Microsoft Security penetration test reports</td><td>7yr WORM</td></tr>
+      <tr><td>4</td><td>network_egress_restriction_result (per egress-block test)</td><td>AutoGen sandbox network-policy audit</td><td>7yr WORM</td></tr>
+      <tr><td>5</td><td>filesystem_write_restriction_result (per fs-write-block test)</td><td>AutoGen sandbox filesystem-policy audit</td><td>7yr WORM</td></tr>
+      <tr><td>6</td><td>resource_quota_enforcement_result (per CPU/memory/disk quota test)</td><td>AutoGen sandbox resource-quota audit</td><td>7yr WORM</td></tr>
+      <tr><td>7</td><td>sandbox_cleanup_on_tenant_deletion_result (per tenant-deletion cleanup)</td><td>AutoGen sandbox cleanup audit</td><td>7yr WORM</td></tr>
+    </tbody>
+  </table>
+  <p>SOC 2 CC6.1 + FedRAMP Moderate SC-7 + SC-39 require that the sandbox isolation be <strong>demonstrably tested</strong> (not just claimed). The auditor will want a <strong>sandbox-escape-penetration-test report</strong> scoped to the Magentic-One coder + executor agents, plus the per-tenant-cleanup evidence that proves no tenant-A code-execution residue leaks into tenant-B's sandbox after a tenant-A deletion event.</p>
+
+  <h3>Gap 4 — Cross-tenant AutoGen Studio + Magentic-One-Cloud isolation-evidence</h3>
+  <p><strong>Frameworks:</strong> SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + FedRAMP Moderate + EU AI Act Art. 10</p>
+  <p>For the multi-tenant SaaS deployment (Goldman Sachs + Bloomberg + BCG + Deloitte + KPMG + IBM enterprise customers), the audit surface is a per-tenant isolation-evidence package:</p>
+  <ul>
+    <li><strong>Per-tenant isolation-test-result</strong> — proof that tenant-A's GroupChat thread + Magentic-One Orchestrator plan + code-execution sandbox cannot leak into tenant-B's execution context.</li>
+    <li><strong>Per-tenant CMK/BYOK optionality</strong> — proof that each tenant can supply their own customer-managed-keys for at-rest encryption of thread + plan + sandbox telemetry.</li>
+    <li><strong>Per-conversation-thread-no-leakage-evidence</strong> — proof that tenant-A's GroupChat thread payload + cross-agent-context-window content cannot be read by tenant-B's agents or sandbox.</li>
+    <li><strong>Per-tenant fine-tune-residue-cleanup-procedure</strong> — proof that when a tenant leaves, any Microsoft-internal fine-tune-residue from that tenant's Magentic-One deployment is cleaned up.</li>
+    <li><strong>Completion-of-deletion timestamp</strong> — per GDPR Art. 17 right-to-erasure + CCPA + FedRAMP Moderate SAR.</li>
+    <li><strong>Per-customer-no-leakage-evidence</strong> — quarterly penetration-test report scoped to the multi-tenant AutoGen Studio + Magentic-One-Cloud boundary.</li>
+  </ul>
+  <p>The auditor will specifically probe <strong>Magentic-One isolation</strong> because the browser + file-surfer + coder + executor agents are the natural cross-tenant-data-leakage surface if isolation is not per-tenant-per-agent-call — and the coder agent's filesystem-write capability makes this <strong>the</strong> audit lane to harden before the next FedRAMP Moderate review.</p>
+
+  <h3>Gap 5 — EU AI Act Annex III §4 high-risk-classification + Magentic-One Orchestrator Art. 14 human-oversight evidence</h3>
+  <p><strong>Frameworks:</strong> EU AI Act Art. 6 + 14 + 27 + 43 + 72 + Annex III §4 + ISO 42001 §9.4 + Aug 2026 GPAI enforcement deadline</p>
+  <p>Any AutoGen customer using GroupChat + Magentic-One to materially influence a high-risk decision lane (credit + employment + healthcare + education + law-enforcement + access-to-essential-services + biometric-identification + emotion-recognition + critical-infrastructure) inherits the EU AI Act Annex III §4 conformity-assessment obligation. The audit surface includes:</p>
+  <ul>
+    <li><strong>Written conformity-assessment per Art. 43</strong> — AutoGen-supplied upstream-language that flows down to every customer deployment.</li>
+    <li><strong>Post-market-monitoring per Art. 72</strong> — telemetry evidence that AutoGen is monitoring Magentic-One Orchestrator decisions in production for drift.</li>
+    <li><strong>Fundamental-rights-impact-assessment per Art. 27</strong> — for any customer in the high-risk lanes above.</li>
+    <li><strong>EU AI Act Art. 14 human-oversight evidence</strong> — Magentic-One Orchestrator has a human-in-the-loop-interjection mechanism (UserProxyAgent + HumanInput) but the auditor will want the join-table evidence that the interjection was actually acted upon (vs. logged-only).</li>
+    <li><strong>EU AI Act Aug 2026 GPAI enforcement</strong> — Microsoft Research inherits the upstream training-data-transparency obligation for AutoGen + Magentic-One + AG2 fine-tunes.</li>
+  </ul>
+
+  <h2>2026 Compliance cross-walk — AutoGen / Magentic-One</h2>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead><tr><th>Framework</th><th>Article / Section</th><th>AutoGen / Magentic-One evidence artifact</th></tr></thead>
+    <tbody>
+      <tr><td>SOC 2</td><td>CC6.1</td><td>12-column GroupChat + Magentic-One Orchestrator plan-decision + sandbox + downstream-state-change provenance join-table per thread + 7-column code-execution-sandbox isolation-evidence package per sandbox spin-up</td></tr>
+      <tr><td>SOC 2</td><td>CC7.2</td><td>Quarterly reconstruction drill on the 12-column join-table for Goldman Sachs + Bloomberg + BCG + Deloitte + KPMG + IBM enterprise customer stack</td></tr>
+      <tr><td>EU AI Act</td><td>Art. 12</td><td>AutoGen GroupChat + Magentic-One Orchestrator log retention 7yr WORM + reconstructible per-thread per-thread_id</td></tr>
+      <tr><td>EU AI Act</td><td>Art. 14</td><td>Magentic-One UserProxyAgent + HumanInput interjection log with per-decision-rationale join-table + per-downstream-state-change flag</td></tr>
+      <tr><td>EU AI Act</td><td>Art. 53(d) + 53(1)(b)</td><td>AutoGen-Core + Magentic-One + AG2 training-corpus license-provenance + copyright-attribution + per-source-copyleft-flag + per-license-collision-flag + per-MIT-vs-Apache-2.0 dual-license summary</td></tr>
+      <tr><td>ISO 42001</td><td>§6.1.4 + §9.4</td><td>12-column thread-provenance join-table + 7-column sandbox isolation-evidence package + per-tenant Magentic-One Orchestrator plan-decision log</td></tr>
+      <tr><td>OWASP LLM Top 10</td><td>LLM01 + LLM05 + LLM08</td><td>Magentic-One Orchestrator prompt-injection detection log + coder-agent-output code-execution-sandbox-isolation log + vector-embedding-weakness test report</td></tr>
+      <tr><td>GDPR</td><td>Art. 25 + 28</td><td>AutoGen GroupChat payload + Magentic-One Orchestrator plan-as-Python-list-of-subtasks + sandbox execution content — all configurable for per-tenant-CM encryption + per-tenant-cleanup-on-deletion</td></tr>
+      <tr><td>HIPAA</td><td>§164.312(a)(1) + §164.312(e)(1)</td><td>AutoGen Studio + Magentic-One-Cloud access-control + transmission-encryption evidence per Microsoft-inherited HIPAA BAA</td></tr>
+      <tr><td>FedRAMP Moderate</td><td>SC-7 + SC-39 + AU-2 + AU-12</td><td>AutoGen Studio + Magentic-One-Cloud boundary-protection + process-isolation + audit-event-generation + audit-generation evidence per Microsoft-inherited FedRAMP Moderate ATO on Azure Government</td></tr>
+    </tbody>
+  </table>
+
+  <h2>6-question audit-prep checklist for AutoGen / Magentic-One Q&A</h2>
+  <ol>
+    <li><strong>Can you reconstruct the full GroupChat thread + Magentic-One Orchestrator plan-as-Python-list-of-subtasks + code-execution-sandbox invocation history from a single thread_id?</strong> (If yes, SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 satisfied.)</li>
+    <li><strong>What is your evidence package for OWASP LLM Top 10 LLM05 (improper-output-handling) on the Magentic-One coder + executor agents running untrusted LLM-generated code in the sandbox?</strong> (Per-execution isolation-result join-table expected.)</li>
+    <li><strong>Can you prove per-tenant isolation between Magentic-One browser + file-surfer + coder + executor agent calls across Goldman Sachs + Bloomberg + BCG + Deloitte + KPMG + IBM tenants?</strong> (Per-tenant isolation-test-result + per-tenant CMK/BYOK + per-conversation-thread-no-leakage-evidence expected.)</li>
+    <li><strong>What is your EU AI Act Art. 53(d) GPAI training-data transparency summary for AutoGen-Core + Magentic-One team-of-specialists + AG2 fine-tunes?</strong> (Per-source license-detection + per-source attribution-chain + per-source copyleft-flag + MIT-vs-Apache-2.0 dual-license summary expected.)</li>
+    <li><strong>What is your human-in-the-loop interjection evidence for Magentic-One Orchestrator high-stakes decisions?</strong> (Per-interjection join-table with approver_user_id + decision_rationale + downstream_state_change_flag expected per EU AI Act Art. 14.)</li>
+    <li><strong>What is your sandbox-escape penetration-test cadence + most-recent report for the Magentic-One coder + executor agents?</strong> (Quarterly cadence + most-recent report within 90 days expected per FedRAMP Moderate SC-7 + SC-39 + SOC 2 CC6.1.)</li>
+  </ol>
+
+  <h2>Why this audit lane exists (and why it matters now)</h2>
+  <p>AutoGen is the only Microsoft-Research-originated + multi-agent-conversation framework in the ai_agents_infra pipeline — and the Magentic-One team-of-specialists (browser + file-surfer + coder + executor) + AG2 Apache-2.0 + code-execution-sandbox surface is the only audit lane where:</p>
+  <ul>
+    <li><strong>Untrusted LLM-generated code execution</strong> is a first-class operation (coder + executor agents run arbitrary Python)</li>
+    <li><strong>Dual open-source license</strong> (MIT for AutoGen + Apache-2.0 for AG2) creates a copyleft-contamination risk that doesn't exist in single-license frameworks</li>
+    <li><strong>Magentic-One Orchestrator plan-as-Python-list-of-subtasks</strong> is the only structured-decision-log surface that captures the orchestrator's high-level reasoning as data</li>
+    <li><strong>Microsoft-inherited compliance posture</strong> (SOC 2 Type II + HIPAA + FedRAMP Moderate + ISO 27001 + ISO 27701 + GDPR + EU AI Act readiness) makes AutoGen the upstream-canonical-source language that flows down to every Microsoft-Research-anchored multi-agent deployment</li>
+  </ul>
+  <p>If you are running AutoGen + Magentic-One in a regulated-enterprise environment, this is the audit lane your auditor will probe in 2026. The 5 gaps above are the gaps the public material does not address — and the 12-column GroupChat + Magentic-One Orchestrator plan-decision join-table is the highest-leverage audit artifact you can hand to your auditor before the next SOC 2 + EU AI Act + FedRAMP Moderate review cycle.</p>
+</section>

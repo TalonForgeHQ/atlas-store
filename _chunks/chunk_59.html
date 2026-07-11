@@ -1,0 +1,110 @@
+<!-- chunk_59.html — Patronus AI SOC 2 + EU AI Act AI-Agent-Eval Audit Checklist 2026 -->
+<section class="seo-chunk" id="patronus-ai-agent-eval-soc2-eu-ai-act-audit-2026">
+  <h1>Patronus AI Agent-Evaluation SOC 2 + EU AI Act Audit Checklist 2026</h1>
+  <p><strong>Target keyword:</strong> <em>Patronus AI SOC 2 audit</em> · <em>AI agent evaluation EU AI Act</em> · <em>AI eval platform compliance</em> · <em>Lynx prompt-injection audit</em> · <em>Digital World Model training-data audit</em> · <em>AI agent eval ISO 42001</em></p>
+
+  <h2>Why Patronus is its own audit lane (not a duplicate of AgentOps or CrewAI)</h2>
+  <p>Patronus is the only canonical AI-agent-evaluation + Digital-World-Model simulation infrastructure vendor that ships <strong>eval-run provenance</strong>, <strong>judge-LLM decision provenance</strong>, <strong>Lynx prompt-injection detection</strong>, and <strong>Digital World Model training-corpus transparency</strong> as first-class concepts. The audit surface is fundamentally different from observability vendors (AgentOps, Helicone), upstream-foundation frameworks (LangChain), and multi-agent-orchestration frameworks (CrewAI):</p>
+  <ul>
+    <li>Observability frameworks answer: <em>"what did each LLM call do?"</em></li>
+    <li>Multi-agent frameworks answer: <em>"which agent handed off to which and what state changed?"</em></li>
+    <li>Patronus answers: <em>"which prompts went into the simulation, which world-data artifacts were sampled, which judge-LLM made the pass/fail decision, what was the per-scenario scoring decision, what was the longitudinal drift between eval runs, and what downstream production-deployment-gate decision did the eval result unlock?"</em></li>
+  </ul>
+  <p>If you are running Lynx + Digital World Model + the Patronus Enterprise Eval Platform to certify production AI-agents in a regulated-enterprise environment (Datadog, Samsung, Fortune-500 financial-services, healthcare-payer per public customer stack), this is the audit lane your auditor will probe in 2026 — and the <strong>30-40% model-lift</strong> + <strong>1M+ world-data artifacts</strong> + <strong>5K+ expert contributors</strong> surface means the eval-result is the binding decision between <em>not deployed</em> and <em>deployed into production</em>.</p>
+
+  <h2>The 5 audit gaps every Patronus deployment needs to close</h2>
+
+  <h3>Gap 1 — Eval-run + simulation-run + judge-decision provenance join-table</h3>
+  <p><strong>Frameworks:</strong> SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4</p>
+  <p>The auditor wants a single <code>eval_run_id</code> + <code>simulation_run_id</code> that reconstructs the entire eval run end-to-end. The 11-column join-table schema:</p>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead><tr><th>#</th><th>Column</th><th>Source</th><th>Retention</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>eval_run_id + simulation_run_id (UUIDv7)</td><td>Patronus Enterprise Eval Platform</td><td>7yr WORM</td></tr>
+      <tr><td>2</td><td>eval_definition_hash (SHA-256 of eval config)</td><td>Patronus Lynx config export</td><td>7yr WORM</td></tr>
+      <tr><td>3</td><td>world_data_artifact_hash (per artifact sampled)</td><td>Patronus Digital World Model corpus registry</td><td>7yr WORM</td></tr>
+      <tr><td>4</td><td>scenario_definition_hash (per scenario)</td><td>Patronus scenario library</td><td>7yr WORM</td></tr>
+      <tr><td>5</td><td>agent_under_test_config_hash (model + prompt + tools)</td><td>Customer agent registry</td><td>7yr WORM</td></tr>
+      <tr><td>6</td><td>judge_llm_config_hash (which judge model + prompt)</td><td>Patronus judge registry</td><td>7yr WORM</td></tr>
+      <tr><td>7</td><td>prompt_injection_payload_hash (per payload)</td><td>Lynx detection log</td><td>7yr WORM</td></tr>
+      <tr><td>8</td><td>per_scenario_score_hash</td><td>Patronus scoring engine</td><td>7yr WORM</td></tr>
+      <tr><td>9</td><td>aggregate_pass_fail_decision_hash</td><td>Patronus decision engine</td><td>7yr WORM</td></tr>
+      <tr><td>10</td><td>longitudinal_drift_delta_hash (v(N) vs v(N-1))</td><td>Patronus drift tracker</td><td>7yr WORM</td></tr>
+      <tr><td>11</td><td>downstream_production_gate_decision_hash + cost_usd_total</td><td>Patronus deployment-gate webhook</td><td>7yr WORM</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Quarterly reconstruction drill:</strong> the auditor will randomly pick a 90-day-old <code>eval_run_id</code>, expect you to fully reconstruct the eval + simulation + judge decision chain from cold storage within 4 business hours, and verify the 11 columns reconcile to the source-of-truth logs. If the judge-LLM model-version differs from what was registered at eval time, that's a SOC 2 CC7.2 finding.</p>
+
+  <h3>Gap 2 — Digital World Model training-corpus license-provenance + copyright-summary</h3>
+  <p><strong>Frameworks:</strong> EU AI Act Art. 53(d) GPAI training-data transparency + EU AI Act Art. 53(1)(b) copyright-summary + ISO 42001 §6.1.4 + OWASP LLM Top 10 LLM03 (training data poisoning)</p>
+  <p>Patronus builds the <strong>Digital World Model</strong> from a corpus of <strong>1M+ world-data artifacts</strong> contributed by <strong>5K+ expert contributors</strong> across software, academia, finance, and more. The audit surface for any regulator probing the eval-result → production-deployment chain is the per-artifact license-detection + per-artifact attribution-chain + per-artifact copyleft-flag + license-collision-flag + training-corpus-evidence:</p>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead><tr><th>Column</th><th>Description</th><th>Format</th></tr></thead>
+    <tbody>
+      <tr><td>artifact_id (UUIDv7)</td><td>Stable identifier for each world-data artifact</td><td>UUIDv7 in Patronus corpus registry</td></tr>
+      <tr><td>artifact_source_license</td><td>SPDX-style license per artifact (MIT, Apache-2.0, GPL-3.0, CC-BY-SA, proprietary, etc.)</td><td>SPDX expression</td></tr>
+      <tr><td>artifact_attribution_chain</td><td>Original source → contributor → Patronus corpus</td><td>JSON provenance chain</td></tr>
+      <tr><td>copyleft_contamination_flag</td><td>Does the artifact carry a copyleft (GPL/AGPL/LGPL) clause that would propagate to derivative models?</td><td>boolean + SPDX expression</td></tr>
+      <tr><td>license_collision_flag</td><td>Per eval-run: were artifacts of incompatible licenses sampled together (creating derivative-license ambiguity)?</td><td>boolean + SPDX expression pair</td></tr>
+      <tr><td>EU AI Act Art. 53(1)(b) copyright_summary</td><td>Per the EU AI Act Art. 53(1)(b) copyright-summary obligation: a written summary of the training-data copyright-reservation status</td><td>Markdown summary + signed PDF</td></tr>
+      <tr><td>sampled_into_eval_run_flag</td><td>Was this artifact actually sampled into the eval_run_id that produced the production-gate decision?</td><td>boolean</td></tr>
+    </tbody>
+  </table>
+  <p><strong>The audit chain:</strong> the regulator probes "for the eval_run_id that greenlit <em>customer-service-agent-v3.2</em> into production, which world-data artifacts were sampled, what were their licenses, and does the resulting eval-decision propagate any copyleft contamination into the customer's proprietary deployment?" If the answer is "we can't reconstruct the per-artifact license chain," that's an EU AI Act Art. 53(d) finding — and it propagates to every customer that used the eval result to greenlight a production agent.</p>
+
+  <h3>Gap 3 — Cross-tenant eval-platform + simulation-backend isolation evidence</h3>
+  <p><strong>Frameworks:</strong> SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + FedRAMP Moderate + EU AI Act Art. 10</p>
+  <p>For the multi-tenant Patronus Enterprise Eval Platform running eval-decisions on the Datadog + Samsung + Fortune-500 enterprise customer stack, the auditor will specifically probe <em>judge-LLM isolation across tenants</em> because the judge LLM is the natural cross-tenant-data-leakage surface if isolation isn't per-tenant-per-judge-call. A judge's response could leak sensitive eval-prompt material (which may contain customer-confidential agent-design-IP) into another tenant's downstream eval context. The evidence package:</p>
+  <ul>
+    <li><strong>Per-tenant isolation-test-result:</strong> pen-test report showing a tenant-A eval_run cannot read tenant-B eval_run judge-decisions (read or write) — including the judge-LLM intermediate reasoning tokens.</li>
+    <li><strong>Per-tenant CMK/BYOK optionality:</strong> can the customer bring their own KMS key for at-rest encryption of eval-run artifacts + judge-decision logs + Digital World Model sampling logs?</li>
+    <li><strong>Per-eval-run-no-leakage-evidence:</strong> per-eval-run isolation test result.</li>
+    <li><strong>Per-tenant world-data-artifact-residue-cleanup-procedure:</strong> when a tenant offboards, is the per-tenant sampled-artifact-residue purged from the customer's downstream artifacts + the shared Digital World Model sampling log + the cache + the log indexes within SLA?</li>
+    <li><strong>Completion-of-deletion timestamp:</strong> signed attestation of completion-of-deletion per tenant.</li>
+    <li><strong>Per-customer-no-leakage-evidence:</strong> per-tenant attestation that no eval-run artifacts leaked across the tenant boundary during the reporting period.</li>
+  </ul>
+
+  <h3>Gap 4 — Lynx prompt-injection-detection + judge-decision-override provenance</h3>
+  <p><strong>Frameworks:</strong> OWASP LLM Top 10 LLM01 (prompt injection) + ISO 42001 §6.1.4 + NIST AI RMF MEASURE</p>
+  <p>Patronus ships <strong>Lynx</strong> as the open-source LLM-eval framework that includes prompt-injection detection at the eval-payload layer. The audit surface is the per-payload detection-log:</p>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead><tr><th>Column</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td>inbound_payload_hash</td><td>SHA-256 of the payload before Lynx detection</td></tr>
+      <tr><td>lynx_detection_classification</td><td>benign / suspicious / malicious / known-IOC-match</td></tr>
+      <tr><td>judge_decision_override_applied</td><td>Did Lynx override the judge-LLM's pass/fail decision? (yes/no + override-reason)</td></tr>
+      <tr><td>blocked_event_flag</td><td>Was the payload blocked from continuing into the judge-LLM?</td></tr>
+      <tr><td>downstream_state_change_flag</td><td>Did the payload (blocked or otherwise) trigger a downstream eval-decision state change?</td></tr>
+      <tr><td>incident_response_escalation_id</td><td>Reference to the IR ticket if the payload was escalated</td></tr>
+      <tr><td>per_tenant_quarantine_flag</td><td>Was the payload quarantined to the originating tenant?</td></tr>
+      <tr><td>regulatory_retain_until</td><td>SOC 2 / EU AI Act retention deadline</td></tr>
+    </tbody>
+  </table>
+  <p><strong>The SOC 2 CC7.2 timing-evidence requirement:</strong> the auditor wants proof that Lynx detection was applied <em>before</em> the judge LLM saw the payload — not logged after. If your detection logs run in parallel with the judge-decision and you can't prove ordering via timestamps, a Lynx-flagged prompt that flowed into a judge-decision creates a chain-of-custody-evidence problem when the regulator reconstructs the eval run.</p>
+
+  <h3>Gap 5 — EU AI Act Annex III §4 high-risk classification for eval-driven deployments</h3>
+  <p><strong>Frameworks:</strong> EU AI Act Art. 6 + 14 + 27 + 43 + 72 + Annex III §4 (Aug 2026 conformity-assessment deadline) + Aug 2026 GPAI enforcement</p>
+  <p>If any Patronus customer uses Lynx or Digital World Model output to greenlight an AI-agent that materially influences a high-risk decision lane (credit, employment, healthcare, education, law-enforcement, access-to-essential-services, biometric-identification, emotion-recognition, critical-infrastructure), the Patronus-supplied eval-decision-provenance package becomes part of the customer's <strong>EU AI Act Annex III §4 conformity-assessment</strong> evidence chain. The auditor will probe:</p>
+  <ul>
+    <li>Did the customer use Patronus eval-output to justify deploying a high-risk agent? (yes → Patronus evidence is in scope)</li>
+    <li>Can Patronus supply per-eval-run provenance for the specific eval that greenlit the high-risk agent?</li>
+    <li>Did the eval correctly identify the downstream high-risk classification, or did the eval methodology under-detect the high-risk surface?</li>
+    <li>Was the eval result itself subject to human-oversight per EU AI Act Art. 14, or was it fully automated?</li>
+  </ul>
+  <p><strong>The propagation risk:</strong> an EU AI Act finding on a Patronus eval-driven deployment propagates to every other customer that used the same eval methodology + the same Digital World Model corpus. A finding in the eval layer becomes a finding in every customer's conformity-assessment.</p>
+
+  <h2>What the auditor will actually ask the Patronus security team</h2>
+  <ol>
+    <li>Show me the 11-column join-table schema for <code>eval_run_id = EV-2026-Q3-00417</code> — can you reconstruct the simulation-run + judge-LLM + downstream-production-gate decision from cold storage within 4 business hours?</li>
+    <li>For each world-data artifact sampled into that eval-run, what is its SPDX license + attribution chain + copyleft-flag + EU AI Act Art. 53(1)(b) copyright-summary?</li>
+    <li>Can you prove per-tenant isolation between tenant-A and tenant-B eval-runs, including judge-LLM intermediate reasoning tokens?</li>
+    <li>Can you bring your own KMS key for at-rest encryption of eval-run artifacts + judge-decision logs + Digital World Model sampling logs?</li>
+    <li>Can you supply a per-Lynx-detection-log that meets OWASP LLM Top 10 LLM01 evidentiary requirements + prove the detection ran before the judge-decision?</li>
+    <li>Do you supply a Digital World Model training-corpus transparency package per EU AI Act Art. 53(d) + Art. 53(1)(b)?</li>
+    <li>For each customer whose high-risk agent you greenlit, do you have a written record of the human-oversight decision per EU AI Act Art. 14?</li>
+  </ol>
+
+  <h2>Get the 48-hour audit</h2>
+  <p><strong>$500 flat, 48-hour delivery.</strong> You get a written gap-analysis against SOC 2 CC7.2 + EU AI Act Art. 12 + 14 + Art. 53(d) + Art. 53(1)(b) + ISO 42001 §9.4 + OWASP LLM Top 10 LLM01 + LLM03 + NIST AI RMF MEASURE, with the actual 11-column eval-run provenance join-table schema + the per-artifact license-detection + per-attribution-chain + per-tenant isolation-evidence package + the Lynx prompt-injection-detection-log schema + the EU AI Act Annex III §4 conformity-assessment-deck-supplier package you can hand to the auditor.</p>
+  <p><strong>Atlas — Talon Forge</strong> · atlas@talonforge.io · <a href="https://talonforge.io">talonforge.io</a></p>
+</section>
