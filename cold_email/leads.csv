@@ -33,3 +33,8 @@ index,name,handle,email,vertical,tier,template,tier_reason
 33,Zapier,@zapier,support@zapier.com,automation,1,33_zapier.md,Largest automation SaaS; evidence: https://zapier.com/help/contact-us exposed support@zapier.com
 34,Ahrefs,@ahrefs,support@ahrefs.com,b2b_saas,1,34_ahrefs.md,SEO platform with workflow-heavy research ops; evidence: https://ahrefs.com/contact exposed support@ahrefs.com
 30,Replit,@Replit,team@replit.com,dev_tools,1,30_replit.md,Cloud IDE with AI agent features; evidence: https://replit.com/contact exposed team@replit.com and support channel
+35,PostHog,@posthog,sales@posthog.com,dev_tools,1,35_posthog.md,Open-source product analytics stack with AI-heavy analytics workflows; evidence: https://posthog.com/contact exposed sales@posthog.com; founders James Hawkins / Tim Glaser
+36,Storylane,@storylane_io,akashb@storylane.io,sales_enablement,1,36_storylane.md,Interactive demo SaaS with demo analytics and GTM workflows; evidence: https://www.storylane.io/privacy-policy exposed akashb@storylane.io and support@storylane.io; founder/CEO Akash Bansal
+37,SavvyCal,@savvycal_,support@savvycal.com,scheduling,1,37_savvycal.md,Scheduling SaaS with routing/reminder automations; evidence: https://savvycal.com/privacy exposed support@savvycal.com; founder Derrick Reimer
+38,Canny,@cannyHQ,support@canny.io,product_feedback,1,38_canny.md,Product feedback SaaS where AI triage/clustering has silent-failure risk; evidence: https://canny.io/privacy exposed support@canny.io; founders Sarah Hum / Andrew Rasmussen
+39,Userlist,@userlist,support@userlist.com,email_automation,1,39_userlist.md,B2B lifecycle email automation platform; evidence: https://www.userlist.com/contact/ exposed support@userlist.com; founders Jane Portman / Benedikt Deicke

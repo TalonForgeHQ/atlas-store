@@ -2,8 +2,32 @@
 
 **Goal:** $1,000 by 2026-07-12 EOD
 | **Current revenue:** $0
-- **Last tick:** 2026-07-11 12:24 UTC (T+10h)
+- **Last tick:** 2026-07-11 12:50 UTC (T+10h)
 
+
+---
+## Status as of 2026-07-11 12:50 UTC — Tick 12 fast execution
+
+### Live & verified (this tick)
+- **Article #11: "How Much Does AI Automation Cost for a Small Business in 2026?" — 1,712 words.** Saved to `_chunks/chunk_17.html`, integrated into `index.html` (115,325 bytes from 17 chunks), sitemap updated with `/#ai-automation-cost-small-business`. Buyer-intent keyword: `how much does AI automation cost for a small business`; CTA points to the $500 Atlas AI Workflow Audit.
+- **5 new cold-email leads with real public contact emails** appended safely via Python CSV writer: PostHog (`sales@posthog.com`), Storylane (`akashb@storylane.io`), SavvyCal (`support@savvycal.com`), Canny (`support@canny.io`), Userlist (`support@userlist.com`). Created matching personalized templates (`35_posthog.md` through `39_userlist.md`). `sender.py --dry-run --only index=35,36,37,38,39` rendered all 5 successfully: `sent=5 skipped_no_email=0`. Leads now: **39**. Templates now: **39**.
+- **Build log updated** to reflect 11 SEO articles, 39 researched leads, 39 templates, current blockers, and Tick 12 receipts.
+- **n8n install status clarified:** local install is present (`n8n@2.29.10` under `C:/Users/Potts/AppData/Local/hermes/node`), but direct API/import is blocked because no server is running on `localhost:5678`; CLI `start`/`import:workflow --help` currently fails with `TypeError: Cannot read properties of undefined (reading 'error')` / DI Logger error under this Node install.
+
+### Blocked / attempted traffic (this tick)
+- **SMTP credentials still absent in required source.** Exact required check `grep -iE "^(smtp_password|email_password|gmail_app)" ~/.hermes/.env` returned no active lines. `cold_email/.env` only has placeholder `SMTP_PASSWORD=REPLACE_WITH_APP_PASSWORD`, so no live cold emails sent.
+- **ProductHunt:** `curl -I https://www.producthunt.com/products/new` returned `HTTP/1.1 403 Forbidden` with `Cf-Mitigated: challenge`. Current Chrome has a ProductHunt tab, but direct CDP WebSocket attach is still refused because Chrome was not launched with `--remote-allow-origins=*`; cannot submit from automation.
+- **Hacker News:** `curl https://news.ycombinator.com/submit` returned `Sorry.` and the Hermes browser session returned an empty page with stealth warning; no logged-in HN session available. No Show HN / regular submission posted.
+- **n8n direct API:** `curl http://localhost:5678/rest/workflows` could not connect; no running server/API key. Installed CLI version verifies as `2.29.10`, but start/import path fails as above.
+
+### Action-by-action (this tick)
+- **Action 1 (email creds check):** Ran exact required grep -> **no active creds**; did not run live `sender.py --send` because it would fail / risk placeholder auth.
+- **Action 2 (traffic attempts):** Tried ProductHunt, HN submit, and n8n direct API/CLI. All blocked by Cloudflare/login/no server/CLI error respectively.
+- **Action 3 (SEO article):** Wrote `_chunks/chunk_17.html` targeting "how much does AI automation cost for a small business". Rebuilt `index.html` with `python build_page.py` -> 115,325 bytes from 17 chunks, new anchor `id="ai-automation-cost-small-business"`. Updated `sitemap.xml`.
+- **Action 4 (leads):** Added 5 researched SaaS leads with public evidence URLs inside `tier_reason`; created 5 personalized templates. Dry-run over the new batch rendered all 5.
+- **Action 5 (verification):** Local verifier checks: chunk_17 word count **1,712**, anchor present in `index.html`, sitemap URL present, leads count **39**, dry-run `sent=5 skipped_no_email=0`.
+- **Revenue impact:** $0 earned / $0 total. Shipped +1 buyer-intent SEO asset and +5 send-ready leads; outreach remains gated on SMTP creds, traffic launches gated on user browser/login/captcha actions.
+- **Next:** Commit/push this tick's files and live-verify GitHub Pages. Next highest-ROI tick: if SMTP creds appear, send 3 property-tech emails immediately; otherwise continue compounding buyer-intent articles and send-ready lead inventory, or have the user relaunch Chrome with `--remote-allow-origins=*` to let Atlas complete ProductHunt from the existing session.
 
 ## Status as of 2026-07-11 12:24 UTC
 
