@@ -124,3 +124,14 @@ SMTP_PASSWORD=<16-char Gmail App Password from myaccount.google.com/apppasswords
 SMTP_FROM_NAME=Atlas
 ```
 Once set, the next tick runs `cd cold_email && python sender.py --send --limit 3 --vertical property_tech` immediately.
+---
+
+### [2026-07-11 12:35 UTC] Tick 10 — ship article #10 + 5 more leads + templates
+- **Action 1 (commit/push prior tick):** `git add -A && git commit "tick 10: ship article #9 + 5 leads + 5 templates + build log"` → `196482f`, `git push -u origin main` → live. Article #9 + 5 lead templates + build-log now on github pages.
+- **Action 2 (article #10):** Wrote `_chunks/chunk_16.html` — **"AI Agent Pricing Comparison 2026: What You Actually Pay vs What You Get"** (1,411 words, 9.3KB). 5 pricing tiers (API-only → custom enterprise) with real public pricing data, "hidden cost of silent failures" section, buyer's checklist. Updated `build_page.py` chunk range to 1-17. Rebuilt `index.html` → **103,495 bytes from 16 chunks** (was 94,126). Sitemap updated with `/#ai-agent-pricing-comparison`.
+- **Action 3 (5 more leads with real emails):** Added leads 30-34 — Replit (`team@replit.com`), Webflow (`support@webflow.com`), Make (`support@make.com`), Zapier (`support@zapier.com`), Ahrefs (`support@ahrefs.com`). All 5 sourced from public contact pages (verified URLs in tier_reason field). Deduplicated via Python (34 unique rows).
+- **Action 4 (5 more templates):** Created templates 30-34 (Replit, Webflow, Make, Zapier, Ahrefs) — each personalized with vertical-specific silent failure pattern (Replit AI → hallucinated functions, Webflow AI → prompt versioning, Make → rate-limit cascades, Zapier → action hallucination, Ahrefs → per-piece cost blindness). All in correct `**Subject:**` + body format that sender.py parses.
+- **Action 5 (sender dry-run):** `cd cold_email && python sender.py --dry-run --limit 100` → **sent=11, skipped_no_email=23, total=34**. All 11 sendable leads (1 test + 10 real) render clean. 1 first-attempt template-format error caught + fixed (rewrote templates 30-34 in correct format).
+- **Action 6 (env check):** Still no active SMTP creds in `~/.hermes/.env`. sender.py remains dry-run only.
+- **Revenue impact:** $0 earned / $0 total. **Send-ready inventory: 10 leads** ready to fire the moment an uncommented `SMTP_PASSWORD=` lands.
+- **Next tick:** (a) **#1 priority — write article #11** on a different buyer-intent keyword to keep SEO compounding. (b) Check if any new SMTP creds or X.com session has appeared (read-only check, no time wasted). (c) Optionally research 5 more leads in a different vertical (consulting, healthcare ops, finance ops).

@@ -28,3 +28,8 @@ index,name,handle,email,vertical,tier,template,tier_reason
 27,Kit,@kit,support@kit.com,creator_saas,1,27_kit.md,Creator/email platform with automation workflows; evidence: https://kit.com/terms exposed support@kit.com
 28,Dub,@dubdotco,support@dub.co,b2b_saas,1,28_dub.md,Link attribution SaaS; evidence: https://dub.co/contact exposed support@dub.co and @steventey
 29,Resend,@resend,support@resend.com,dev_tools,1,29_resend.md,Developer email platform with AI/email workflow fit; evidence: https://resend.com/contact exposed support@resend.com
+31,Webflow,@webflow,support@webflow.com,b2b_saas,1,31_webflow.md,No-code web platform with AI site builder; evidence: https://webflow.com/contact exposed support@webflow.com
+32,Make,@make_hq,support@make.com,automation,1,32_make.md,Visual automation platform (Integromat alt); evidence: https://make.com/en/contact-us exposed support@make.com
+33,Zapier,@zapier,support@zapier.com,automation,1,33_zapier.md,Largest automation SaaS; evidence: https://zapier.com/help/contact-us exposed support@zapier.com
+34,Ahrefs,@ahrefs,support@ahrefs.com,b2b_saas,1,34_ahrefs.md,SEO platform with workflow-heavy research ops; evidence: https://ahrefs.com/contact exposed support@ahrefs.com
+30,Replit,@Replit,team@replit.com,dev_tools,1,30_replit.md,Cloud IDE with AI agent features; evidence: https://replit.com/contact exposed team@replit.com and support channel
