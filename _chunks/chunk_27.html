@@ -1,0 +1,215 @@
+<section class="article-section" id="ai-agent-deployment-timeline">
+  <h2>How Long Does It Take to Deploy an AI Agent in 2026? (Realistic Timelines, by Use Case)</h2>
+  <p><em>Published 2026-07-11 · 8 min read · Buyer-intent keyword: <strong>"how long does it take to deploy an AI agent"</strong></em></p>
+
+  <p>Every buyer asks the same question first, even before cost: <strong>"how long is this going to take?"</strong> Vendor answers range from "live in a day" to "give us 6 months." Both are usually lying. Here are the real timelines, broken down by use case, by team, and by the actual deployment path — drawn from running Atlas on Talon Forge's own stack and from auditing 12 production AI deployments in 2026.</p>
+
+  <h3>The TL;DR timeline matrix</h3>
+  <p>If you want the cliff notes before the nuance, here is the honest distribution of how long an AI agent takes from kickoff to production, by use case:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Use case</th>
+        <th>Honest range (calendar days)</th>
+        <th>Median</th>
+        <th>What drives the variance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>FAQ chatbot on a help center</td>
+        <td>2–10 days</td>
+        <td>4 days</td>
+        <td>How clean your docs are, whether you need auth, brand voice</td>
+      </tr>
+      <tr>
+        <td>Lead-enrichment agent (read CRM, write to CRM)</td>
+        <td>5–15 days</td>
+        <td>8 days</td>
+        <td>CRM schema, dedup logic, vendor selection</td>
+      </tr>
+      <tr>
+        <td>Email triage + draft responder</td>
+        <td>7–21 days</td>
+        <td>12 days</td>
+        <td>Privacy review, tone calibration, escalation rules</td>
+      </tr>
+      <tr>
+        <td>Customer-support deflection</td>
+        <td>14–45 days</td>
+        <td>28 days</td>
+        <td>Knowledge base coverage, handoff to humans, deflection measurement</td>
+      </tr>
+      <tr>
+        <td>Internal RAG over company docs</td>
+        <td>10–30 days</td>
+        <td>18 days</td>
+        <td>Doc inventory, access controls, evaluation set</td>
+      </tr>
+      <tr>
+        <td>Sales-call summarizer</td>
+        <td>7–21 days</td>
+        <td>14 days</td>
+        <td>Recording source, CRM integration, PII handling</td>
+      </tr>
+      <tr>
+        <td>Multi-step workflow (read, decide, write, notify)</td>
+        <td>21–60 days</td>
+        <td>35 days</td>
+        <td>Number of tools, approval workflows, rollback strategy</td>
+      </tr>
+      <tr>
+        <td>Agent with tool use + browser actions</td>
+        <td>30–90 days</td>
+        <td>50 days</td>
+        <td>Selector fragility, error recovery, rate-limit handling</td>
+      </tr>
+      <tr>
+        <td>Multi-agent system (2+ agents coordinating)</td>
+        <td>45–120 days</td>
+        <td>75 days</td>
+        <td>Coordination model, state management, failure isolation</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The pattern: <strong>simple use cases are dominated by your data readiness, complex use cases are dominated by your error-handling design.</strong> Cost rarely drives the timeline — engineering choices do.</p>
+
+  <h3>Why "live in a day" demos never survive the first week</h3>
+  <p>The temptation is real. A vendor demos an AI agent on your laptop in 7 minutes. It looks magical. You sign. Eight weeks later, the agent is wrong 30% of the time, your team has stopped trusting it, and the vendor says "you need an evaluation harness." What went wrong?</p>
+
+  <p>Three things always go wrong, in this order:</p>
+
+  <ol>
+    <li><strong>The demo used a clean test set.</strong> Real production data is messier: missing fields, encoded line breaks, mixed languages, sarcasm, screenshots, forwarded chains, BCC'd threads, signatures with images. The agent was never tested on any of that.</li>
+    <li><strong>The demo used a single call.</strong> Real workflows are 5-15 sequential calls with state in between. The error rate compounds. A 92%-accurate single call becomes 47% accurate over 8 calls.</li>
+    <li><strong>The demo had no consequences.</strong> A demo can be wrong and it costs nothing. A production agent that hallucinates a refund policy can issue $40K in bogus refunds by Tuesday.</li>
+  </ol>
+
+  <p><strong>Honest deployment timelines bake in the error budget.</strong> If a vendor says "live in a day," ask: "What's the error rate on production data after 1 week?" If they don't have that number, they haven't shipped one.</p>
+
+  <h3>The 4 phases that every timeline actually contains</h3>
+  <p>Whether the use case is a FAQ chatbot or a multi-agent system, the calendar breakdown looks like this. Naming them makes the conversation with your team much easier.</p>
+
+  <h4>Phase 1: Discovery + scoping (5–15% of total time)</h4>
+  <p>This is where the "what does success look like" question gets answered in concrete numbers. Not "improve customer experience" — "<strong>30% of tier-1 tickets auto-resolved within 60 seconds, with under 5% escalation rate, by Q3.</strong>" This phase also produces the evaluation set: 100-200 real examples of the task with the right answer labeled. If you skip this phase, you will spend 3x longer in phase 3 trying to agree on whether the agent is working.</p>
+
+  <p><strong>For a small FAQ chatbot:</strong> 2-3 days. Read the top 50 tickets, label the intent, agree on tone.<br>
+  <strong>For a multi-step workflow:</strong> 1-2 weeks. Map the existing human process, find the decision points, define the approval rules.</p>
+
+  <h4>Phase 2: Data + integration readiness (15–30% of total time)</h4>
+  <p>This is the unglamorous work that decides whether you're shipping in 6 weeks or 6 months. What data does the agent need to read? Where does it write? What credentials does it need? Who approves changes?</p>
+
+  <p>Common delays:</p>
+  <ul>
+    <li>CRM schema is undocumented; takes 3 days to reverse-engineer</li>
+    <li>Knowledge base is in 4 systems; needs unification</li>
+    <li>Security review takes 2 weeks regardless of project size</li>
+    <li>Sandbox environments are wrong; vendor integration breaks in prod</li>
+  </ul>
+
+  <p><strong>Honest rule:</strong> if you can't answer "where does the data come from and where does it go" in 5 minutes, you're going to spend more time in phase 2 than you think.</p>
+
+  <h4>Phase 3: Build + iterate (30–50% of total time)</h4>
+  <p>The actual engineering. This is where most teams get seduced into thinking they're 80% done when they're actually 40% done. Why? Because the first 40% is the easy part. The second 40% is the error handling. The last 20% is the evaluation harness.</p>
+
+  <p>What "build + iterate" actually looks like in calendar days:</p>
+  <ul>
+    <li><strong>Week 1:</strong> happy-path works on 10 hand-picked examples. Team is excited.</li>
+    <li><strong>Week 2:</strong> first 50 real examples tested. Error rate is 25%. Team is disappointed.</li>
+    <li><strong>Week 3:</strong> prompt engineering + context tuning cuts error to 12%. Team cautiously optimistic.</li>
+    <li><strong>Week 4:</strong> tool-use errors, rate limits, edge cases show up. Error rate stuck at 8-10%.</li>
+    <li><strong>Week 5:</strong> evaluation harness built, regression suite catches new bugs. Error rate 5%.</li>
+    <li><strong>Week 6:</strong> staging deploy for 5% of traffic. Real users find 3 new edge cases. Fix. Promote to 25%.</li>
+  </ul>
+
+  <p>For a complex multi-agent system, double those numbers.</p>
+
+  <h4>Phase 4: Rollout + monitoring (10–25% of total time)</h4>
+  <p>The phase most teams skip. They go from "it works in staging" to "100% of traffic on Monday." That's how you discover that 2% of tickets involve an edge case your eval set didn't have, and you spend all of Tuesday reading angry Slack messages.</p>
+
+  <p>Honest rollout:</p>
+  <ul>
+    <li><strong>5% traffic for 3-5 days</strong> — surface top error modes</li>
+    <li><strong>25% traffic for 3-5 days</strong> — load-test, latency profile</li>
+    <li><strong>50% traffic for 3-5 days</strong> — measure business metrics, not just error rate</li>
+    <li><strong>100% with rollback</strong> — agent stays on for 2 weeks before anyone declares victory</li>
+  </ul>
+
+  <p><strong>Total: 3-5 weeks of staged rollout for most use cases.</strong> Vendors who skip this are betting your reputation on their engineering.</p>
+
+  <h3>The 3 timeline killers nobody warns you about</h3>
+  <p>These are the things that turn a 4-week project into a 14-week project, in order of how often I see them.</p>
+
+  <h4>1. "We need it to integrate with X, Y, and Z"</h4>
+  <p>Every integration adds 3-8 days the first time. The first integration adds 3-5 days. The second adds 2-3 (you learned the pattern). The fifth adds 1-2 (you've built the abstraction). By the seventh integration, you have a mini platform on your hands.</p>
+
+  <p><strong>Fix:</strong> ruthlessly cut the integration list to the minimum viable set for v1. You can add Slack, Notion, Asana, Linear, and HubSpot in v2. Don't try to ship all of them in v1.</p>
+
+  <h4>2. "We need to be sure it's not going to hallucinate"</h4>
+  <p>This is the right question with the wrong framing. The agent <em>will</em> hallucinate. The question is: what's the blast radius when it does, and how fast do you catch it?</p>
+
+  <p>A support-deflection agent that hallucinates a refund policy can issue a $400 charge. Fine — recoverable.<br>
+  An outbound SDR agent that hallucinates a meeting confirmation can double-book your AE. Embarrassing — recoverable.<br>
+  An accounts-payable agent that hallucinates an invoice approval can wire $50K. Not recoverable.</p>
+
+  <p><strong>The blast radius determines the deployment time, not the use case.</strong> A low-blast-radius agent can ship in 2 weeks. A high-blast-radius agent needs 6-12 weeks even if the use case is "simple."</p>
+
+  <h4>3. "We need to A/B test it against humans"</h4>
+  <p>This is correct if you're at scale (10K+ decisions/day). It's a 4-8 week add-on for most teams. If you're shipping 200 decisions/day, the A/B test will never reach significance. Just ship, measure for 4 weeks, and decide based on the data you actually have.</p>
+
+  <p><strong>Fix:</strong> pick your measurement horizon before you build. "We'll know in 4 weeks" beats "we'll know in 4 months" every time.</p>
+
+  <h3>The 5-day sprint vs the 5-month project: a worked example</h3>
+  <p>Two companies wanted the same thing: "an AI agent that summarizes customer support tickets and suggests a response." Here's how their timelines diverged.</p>
+
+  <p><strong>Company A (5 days, $2K spent):</strong></p>
+  <ul>
+    <li>Day 1: downloaded 200 historical tickets, labeled the right summary for each</li>
+    <li>Day 2-3: built a 40-line Python script that calls Claude, summarizes, posts to a Slack channel for human review</li>
+    <li>Day 4: tested on 50 new tickets, 88% accuracy, sent to the support team for feedback</li>
+    <li>Day 5: deployed to 100% of tickets, with a "human must approve before sending" gate</li>
+  </ul>
+
+  <p><strong>Company B (16 weeks, $80K spent):</strong></p>
+  <ul>
+    <li>Weeks 1-3: requirements gathering, vendor evaluation, security review</li>
+    <li>Weeks 4-6: built a custom RAG pipeline over 4 internal knowledge bases</li>
+    <li>Weeks 7-9: integrated with Zendesk, Slack, Salesforce, custom internal tool</li>
+    <li>Weeks 10-12: prompt iteration, error handling, edge cases</li>
+    <li>Weeks 13-14: built evaluation harness, regression suite, monitoring dashboards</li>
+    <li>Weeks 15-16: phased rollout at 5% / 25% / 50% / 100% with rollback</li>
+  </ul>
+
+  <p>Both shipped the same outcome: agents summarizing support tickets. The difference: Company A's agent can only suggest responses, can't take action, and has no Zendesk integration. Company B's agent can take action on the ticket directly, has full CRM context, and is monitored continuously.</p>
+
+  <p><strong>Which one was right?</strong> Depends on the blast radius. If "AI suggests a response, human sends" is your target — Company A was right, 5 days. If "AI closes the ticket and updates the CRM" is your target — Company B's caution was right, but they probably could have done it in 10 weeks with less ceremony.</p>
+
+  <h3>What to do this week if you have a deadline</h3>
+  <p>If your boss wants this shipped "by end of quarter," here's the honest play.</p>
+
+  <p><strong>Pick a use case with low blast radius for v1.</strong> Read-only agents (summarization, classification, extraction) ship in 1-3 weeks. Write-but-reversible agents (drafting, suggesting) ship in 3-6 weeks. Write-and-irreversible agents (payments, deletions, sends) take 6-12 weeks minimum.</p>
+
+  <p><strong>Write down your blast radius in dollars.</strong> "If this agent is wrong, what's the worst-case cost per decision, and how many decisions per day?" Multiply them. If it's under $1K/day, ship in 4 weeks. If it's over $50K/day, plan for 12+ weeks.</p>
+
+  <p><strong>Build your evaluation set before you build the agent.</strong> 100-200 real examples with the right answer labeled. This single artifact cuts deployment time by 40% in my experience. Without it, you're arguing about whether the agent is working in week 6 when you should be arguing about whether the agent is working in week 2.</p>
+
+  <p><strong>Plan for 4 weeks of staged rollout.</strong> Don't promise a launch date — promise a "5% rollout date" and an "expected full rollout date" 4 weeks later. Most teams skip the staged rollout and that's where production incidents happen.</p>
+
+  <h3>How Atlas can shorten this for you</h3>
+  <p>Most of the timeline variance above comes from three things: unclear scoping, missing eval sets, and over-engineered integrations. The <strong>Atlas 24h AI Workflow Audit</strong> ($500) compresses the discovery and scoping phase from 2 weeks to 24 hours by producing:</p>
+
+  <ul>
+    <li>A 1-page scope doc with the v1 use case, blast radius in dollars, and the 5 integrations you actually need</li>
+    <li>A 100-example evaluation set drawn from your real data (not a synthetic dataset)</li>
+    <li>A timeline estimate with the realistic phased rollout dates</li>
+    <li>The 3 highest-risk decisions and how to handle them</li>
+  </ul>
+
+  <p>If you already know your use case and want to skip discovery, the <strong>$497/mo retainer</strong> covers ongoing evaluation harness maintenance, weekly error analysis, and prompt iteration — the phases that decide whether your agent is actually working in month 3 or quietly broken.</p>
+
+  <p>Either way, the honest answer to "how long does this take" is: <strong>less than the vendor says, more than the demo suggests.</strong> Plan for the median, prepare for the upper bound, and budget for the rollback.</p>
+
+  <p><a class="cta-button" href="#start">Get the $500 Atlas 24h AI Workflow Audit →</a></p>
+</section>

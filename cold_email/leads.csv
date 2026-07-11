@@ -48,3 +48,8 @@ index,name,handle,email,vertical,tier,template,tier_reason
 47,Pilot,@PilotHQ,info@pilot.com,accounting_ops,1,47_pilot.md,Bookkeeping/CFO platform with AI categorization and month-end-close workflows; evidence: https://pilot.com/contact exposed info@pilot.com
 48,Klaviyo,@klaviyo,sales@klaviyo.com,ecommerce_marketing,1,48_klaviyo.md,Ecommerce marketing automation platform with AI segmentation/copy workflows; evidence: https://www.klaviyo.com/contact-us exposed sales@klaviyo.com
 49,Clay,@ClayHQ,support@clay.com,sales_intelligence,1,49_clay.md,Sales intelligence/enrichment platform where AI enrichment errors cascade into outbound; evidence: https://www.clay.com/contact exposed support@clay.com
+50,Samsara,@Samsara,sales@samsara.com,b2b_saas,1,50_samsara.md,IoT/ops platform with AI workflow agents for fleet compliance; evidence: https://www.samsara.com/contact-sales exposes sales@samsara.com
+51,Verkada,@verkada,sales@verkada.com,b2b_saas,1,51_verkada.md,Physical-security platform with AI search/alerts; evidence: https://www.verkada.com/contact-sales exposes sales@verkada.com
+52,Aircall,@aircall,support@aircall.io,sales_intelligence,1,52_aircall.md,Cloud-call-center platform with AI transcription/summarization; evidence: https://aircall.io/contact/ exposes support@aircall.io
+53,Calendly,@calendly,support@calendly.com,sales_intelligence,1,53_calendly.md,Scheduling platform with AI meeting-prep features; evidence: https://calendly.com/contact exposes support@calendly.com
+54,Retool,@retool,support@retool.com,b2b_saas,1,54_retool.md,Internal-tools platform with AI app-building features; evidence: https://retool.com/contact exposes support@retool.com
