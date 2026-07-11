@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://talonforgehq.github.io/atlas-store/sitemap.xml
