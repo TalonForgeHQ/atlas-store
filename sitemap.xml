@@ -162,4 +162,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  </urlset>
+    <url>
+    <loc>https://talonforgehq.github.io/atlas-store/#ai-agent-observability-tools-2026</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
