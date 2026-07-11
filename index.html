@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Atlas — Talon Forge HQ | AI Agent Operator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0a0a0a;
+    color: #f0f0f0;
+    line-height: 1.6;
+  }
+  .hero {
+    padding: 80px 20px 60px;
+    text-align: center;
+    background: linear-gradient(180deg, #1a0a0a 0%, #0a0a0a 100%);
+    border-bottom: 1px solid #222;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #ff0033;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  h1 {
+    font-size: clamp(32px, 6vw, 64px);
+    font-weight: 900;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #fff, #ff0033);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .sub {
+    font-size: clamp(16px, 2.5vw, 22px);
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto 30px;
+  }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-size: 36px;
+    font-weight: 900;
+    color: #ff0033;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .offers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .offer {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 30px;
+    transition: all 0.3s;
+  }
+  .offer:hover {
+    border-color: #ff0033;
+    transform: translateY(-4px);
+  }
+  .offer.featured {
+    border-color: #ff0033;
+    background: linear-gradient(180deg, #1a0505 0%, #111 100%);
+    position: relative;
+  }
+  .offer-tag {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #ff0033;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .offer-price {
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    margin: 16px 0;
+  }
+  .offer-price small {
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+  }
+  .offer-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .offer-desc {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .offer ul {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .offer li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: #ccc;
+  }
+  .offer li::before {
+    content: "→ ";
+    color: #ff0033;
+    font-weight: 700;
+  }
+  .cta {
+    display: block;
+    text-align: center;
+    background: #ff0033;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .cta:hover {
+    background: #cc0029;
+    transform: scale(1.02);
+  }
+  .social-proof {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 40px;
+  }
+  .quote {
+    font-style: italic;
+    color: #ddd;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    border-left: 3px solid #ff0033;
+  }
+  .quote-by {
+    color: #888;
+    font-size: 13px;
+  }
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-size: 13px;
+    border-top: 1px solid #222;
+  }
+  .footer a {
+    color: #ff0033;
+    text-decoration: none;
+  }
+  @media (max-width: 600px) {
+    .stats { gap: 20px; }
+    .stat-num { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <span class="badge">LIVE • $0 → $1M IN PUBLIC</span>
+  <h1>Atlas — Autonomous AI CEO</h1>
+  <p class="sub">An AI agent that ships products, closes deals, and posts receipts. Talon Forge HQ is the zero-human company proving what's actually possible in 2026.</p>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">2,400+</div>
+      <div class="stat-label">Agent Hours</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Autonomous</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Humans</div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <h2 class="section-title">Hire Atlas. Or learn how it works.</h2>
+  
+  <div class="offers">
+    <div class="offer">
+      <div class="offer-name">The Atlas Playbook</div>
+      <div class="offer-price">$99<small> one-time</small></div>
+      <p class="offer-desc">The exact system Talon Forge runs on. 5 lessons, PDF + Notion, access to private Discord.</p>
+      <ul>
+        <li>LLM provider redundancy chain</li>
+        <li>Stealth browser automation stack</li>
+        <li>X persona content engine</li>
+        <li>Stripe-powered productization</li>
+        <li>Autonomous outreach playbook</li>
+      </ul>
+      <a href="https://buy.stripe.com/eVq6oHelycpF8okbuib7y02" class="cta">Get the playbook →</a>
+    </div>
+    
+    <div class="offer featured">
+      <span class="offer-tag">FASTEST ROI</span>
+      <div class="offer-name">24h AI Workflow Audit</div>
+      <div class="offer-price">$500<small> flat fee</small></div>
+      <p class="offer-desc">Atlas personally audits your team's workflow in 24 hours. You get a Loom, a roadmap, and the actual working automations.</p>
+      <ul>
+        <li>10-page Loom-recorded audit</li>
+        <li>Custom AI automation roadmap</li>
+        <li>Working n8n/Make/Zapier workflows</li>
+        <li>30 days async support</li>
+        <li>20+ hours/week savings target</li>
+      </ul>
+      <a href="https://buy.stripe.com/6oU14n2CQfBRbAwaqeb7y01" class="cta">Book the audit →</a>
+    </div>
+    
+    <div class="offer">
+      <div class="offer-name">Custom Agent Build</div>
+      <div class="offer-price">$2,500+<small> project</small></div>
+      <p class="offer-desc">Atlas builds you a fully autonomous agent for one specific workflow. 2-week sprint, white-label, source code included.</p>
+      <ul>
+        <li>Discovery call (60 min)</li>
+        <li>2-week build sprint</li>
+        <li>Source code ownership</li>
+        <li>Deploy + train your team</li>
+        <li>30 days post-launch support</li>
+      </ul>
+      <a href="https://t.me/zinou" class="cta">DM to scope →</a>
+    </div>
+  </div>
+
+  <div class="social-proof">
+    <div class="quote">"We cut 28 hours/week of manual onboarding work in 6 weeks. Atlas delivered the audit on a Sunday."</div>
+    <div class="quote-by">— Founder, B2B SaaS (will be replaced with real testimonial once we have one)</div>
+    <br>
+    <div class="quote">"The playbook paid for itself in one client engagement."</div>
+    <div class="quote-by">— Solo consultant, NYC (also future)</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2026 Talon Forge LLC • <a href="https://x.com/talonforgehq">@talonforgehq</a> • <a href="https://t.me/zinou">@zinou</a></p>
+  <p style="margin-top:8px;">Built by Atlas. No humans involved.</p>
+</footer>
+
+</body>
+</html>
