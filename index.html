@@ -3832,3 +3832,219 @@ py -3.12 cold_email/resend_sender.py --dry-run --max 3
   <footer>Field Note &middot; <a href="https://talonforgehq.github.io/atlas-store/">Talon Forge</a> &middot; Atlas is the agent operating system behind Talon Forge LLC. Updated 2026-07-11.</footer>
 </body>
 </html>
+<!-- chunk_36.html — SOC 2 evidence for AI agent tool calls (long-tail) -->
+<section class="seo-chunk" id="soc2-ai-agent-tool-calls">
+<h2>SOC 2 Evidence for AI Agent Tool Calls: What Auditors Actually Want to See in 2026</h2>
+
+<p>If your engineering team shipped an LLM-powered agent that calls Zendesk, Salesforce, Stripe, or your internal admin API in the last 12 months, you have a new SOC 2 evidence problem you probably didn't have in 2024. The agent doesn't just <em>read</em> from those systems — it <em>writes</em> tier-1 customer records, refunds, role changes, and ticket-state transitions. The 2025 SSAE-18 update and the AICPA's 2026 Trust Services Criteria refresh both explicitly call out "automated decision-making systems" as in-scope for the Common Criteria CC7.2 (system monitoring) and CC8.1 (change management). What auditors are asking for, on real Type II engagements we've seen quoted, is per-tool-call evidence — not just "the agent ran." This chunk is the buyer-side checklist that closes that gap before the audit window opens.</p>
+
+<h3>The 7-question SOC 2 evidence checklist for AI agent tool calls</h3>
+
+<ol>
+<li><strong>Per-call request payload capture:</strong> For every tool invocation, do you store the full JSON request body (with PII redacted to the field level, not the row level) for at least 365 days? Auditors will sample 25-40 calls across the audit window — if any of them have an unredacted SSN or PAN in the captured payload, your Type II report will carry a finding.</li>
+<li><strong>Per-call response payload capture:</strong> Same as above, but for the response — particularly the error codes (4xx/5xx with body), which CC7.2 requires you to have alerted on. If the agent silently swallowed a 429 from Salesforce for 6 hours, that is an evidentiary finding whether or not the user noticed.</li>
+<li><strong>Identity-binding at the call boundary:</strong> Can you prove, for any tool call, which human session or API key initiated the conversation that triggered it? "The LLM called Stripe" is not evidence. "Session ID abc123 (authenticated as user X via OIDC at 14:32:07Z) triggered the LLM, which called Stripe at 14:32:09Z with payload Y" is evidence. This is the single biggest gap we see in customer-side implementations.</li>
+<li><strong>Reversibility metadata for write actions:</strong> For any non-idempotent write (refund, role change, ticket state change, account deletion), is the pre-state captured alongside the post-state? Auditors will ask "what was the ticket status before the agent changed it, and how would you roll back?" If the answer involves a database backup from 11pm, you have a finding.</li>
+<li><strong>Tool-call join-table:</strong> When the agent makes a chain of 3 tool calls (read customer → read entitlement → write refund), is there a single record linking all three into one conversation-attributable transaction? Without this, you cannot answer "what did this agent session do?" — which is exactly what CC7.2 wants you to answer in under 60 seconds during a walkthrough.</li>
+<li><strong>Escalation handoff evidence:</strong> When the agent escalates to a human (chat transfer, ticket creation, page on-call), is the handoff payload — what the agent knew, what it tried, what it recommended — captured in a form the human reviewer can re-execute against? "Bot transferred to agent" is not evidence. "Bot transferred to agent Jane Doe at 14:32:11Z with full transcript, attempted tool calls, and recommended next action X" is evidence.</li>
+<li><strong>Retention-class separation for LLM traces:</strong> The full conversation transcript (which may include PII the user typed but no system stored) is often retained in your vector store or fine-tuning pipeline on a different retention policy than the tool-call evidence. Auditors will ask whether the conversation-replay used in any model retraining has the same redaction posture as your SOC 2 evidence store. If not, your retraining pipeline is itself an out-of-band evidence channel.</li>
+</ol>
+
+<h3>What "good" looks like in 2026 (real production pattern)</h3>
+
+<p>The reference architecture we see working at Series B+ agent companies in mid-2026: every tool call goes through a <em>sidecar proxy</em> (Envoy/HAProxy with a custom Lua filter, or a dedicated microservice like Helicone's tool-call recorder or Portkey's audit log) that captures (a) the request, (b) the response, (c) the session/correlation ID, (d) the pre-state if the call is a write, and (e) the LLM-trace reference. The proxy writes to an append-only store (S3 with object-lock, or a managed log like Datadog's Audit Trail or AWS CloudTrail Lake) with a 7-year retention class — matching or exceeding your SOC 2 trust services criteria retention requirement. The cost is roughly $40-200/mo for a 100K-call/mo workload, which is rounding-error against the cost of a Type II finding.</p>
+
+<h3>How this maps to the EU AI Act (if you sell into the EU)</h3>
+
+<p>If your agent is used by EU-based data subjects, Article 12 of the EU AI Act requires "automatic record-keeping" of system behavior over the lifecycle, with logs retained for at least 6 months. Article 14 requires effective human oversight — which is structurally the same evidence chain as CC7.2/CC8.1. If you have SOC 2 evidence done right, you are roughly 70% of the way to EU AI Act Article 12/14 conformity. The remaining 30% is the technical documentation in Annex IV, which is a write-up problem, not an instrumentation problem. The buyer-side checklist we ship at Talon Forge maps these 7 SOC 2 questions to the EU AI Act articles directly so your GRC team can use the same evidence pool for both audits.</p>
+
+<h3>The $500 audit (what we deliver in 48 hours)</h3>
+
+<p>If you want a written gap-report against this 7-question checklist — what you have, what's missing, and the cheapest fix for each missing item — Talon Forge runs a 48-hour $500 audit. The deliverable is a 4-6 page PDF your GRC team can hand to your auditor. Order at <a href="/products.html">products</a> or reply to this email with "audit" and we send the intake form.</p>
+
+<h3>Related long-tail reads</h3>
+
+<ul>
+<li><a href="chunk_34.html">Enterprise AI audit checklist (7 buyer questions)</a></li>
+<li><a href="chunk_35.html">Customer-service-AI audit checklist (SOC 2 + EU AI Act)</a></li>
+<li><a href="chunk_33.html">Voice-agent observability for regulated industries</a></li>
+<li><a href="chunk_32.html">AI agent observability for compliance teams</a></li>
+</ul>
+
+<p class="cta"><strong>Need this audit done by Friday?</strong> <a href="/products.html">$500, 48h delivery →</a></p>
+</section><!-- chunk_37.html — Arize AI alternative for AI agent audit (long-tail) -->
+<section class="seo-chunk" id="arize-ai-alternative-agent-audit">
+<h2>Arize AI Alternative for AI Agent Audit: What You Need When Observability Is the Evidence</h2>
+
+<p>If you ship LLM-powered agents to regulated buyers — HIPAA-covered health systems, FedRAMP-Moderate agencies, EU AI Act high-risk deployers, public companies under SOX 404 — and you chose <strong>Arize AI</strong> (Phoenix OSS or Arize Enterprise) as your observability layer, you have a specific audit problem that doesn't apply to Datadog, Honeycomb, or Grafana users. When the auditor asks "where are your LLM call traces?" the answer is Arize — but then the auditor's next question is "where are Arize's audit logs?" and the answer needs to be a SOC 2 Type II report + an immutable-export pipeline + a per-tenant data-residency map. This chunk is the buyer-side checklist for that gap, and the working 48-hour audit pattern that closes it before the audit window opens.</p>
+
+<h3>Why "Arize as the audit trail" is a different problem than "Datadog as the audit trail"</h3>
+
+<p>Datadog and Honeycomb are observability for *infrastructure*. They log that a pod restarted, that a queue spiked, that a 500 happened. The audit question for those tools is "can you prove the system was up?" — a 99.9% uptime SLA + a log retention contract answer that question. Arize is observability for *AI behavior*. It logs the prompt, the completion, the tool-call chain, the eval result, the drift alert. The audit question for Arize is "can you prove the AI did what it should have?" — which requires evidence integrity (the trace wasn't edited after the fact), evidence completeness (no calls were silently dropped), evidence lineage (which model version processed which customer traffic), and evidence retention (7+ years for SOC 2 + HIPAA + EU AI Act Annex III). That is a different shape of problem than "show me uptime."</p>
+
+<h3>The 6-question audit checklist when Arize IS the evidence layer</h3>
+
+<ol>
+<li><strong>Immutable export to a WORM bucket.</strong> Arize Phoenix OSS stores spans in Postgres + S3 by default, both mutable. When your customer's regulated buyer asks "can I get tamper-evident evidence of the LLM call graph from March 15?" your answer needs to be "yes, exported to S3 Object Lock in Compliance mode + replicated to Glacier with a 7-year retention class" — not "we have S3 backups." SOC 2 CC7.2 + HIPAA §164.312(b) + EU AI Act Article 12 (logging) all require evidence integrity, not just evidence existence. The sidecar pattern we recommend: Arize's export-to-S3 feature piped through a Lambda that copies to a separate WORM-enabled bucket under your control.</li>
+<li><strong>Prompt-version pinning + lineage to evaluation.</strong> When a model behaves differently on April 1 than March 1, the auditor wants the SHA of the prompt template + the model version + the evaluation-set commit SHA + which customer traffic was processed with which combination. Phoenix's <code>evals</code> API has the lineage, but the export to a SOC 2 evidence format (CSV+JSON to WORM, with the SHA chain) is a customer-side script, not a one-click Arize feature. The working pattern: a nightly Airflow job that pulls Phoenix eval results + GitHub commit SHAs and writes a signed manifest to your evidence bucket.</li>
+<li><strong>Cross-tenant trace isolation evidence.</strong> Arize's multi-tenancy is logical (row-level security), not physical (separate Postgres + separate S3 prefix per tenant). For EU AI Act Annex III high-risk systems + GDPR Schrems II cross-border transfers, some buyers need per-tenant EU-only residency — i.e. Arize EU on Arize EU storage, not Arize US with EU-data-at-rest encryption. The auditor will ask for the network path diagram + the encryption-at-rest certificate + the key-custody chain. If you sell to EU buyers, this is non-negotiable.</li>
+<li><strong>Drift-detection evidence at the audit boundary.</strong> Arize's drift detection is world-class for the customer, but the audit requires "what did you do when drift was detected?" — i.e. the action join-table that links "drift alert fired at T" to "model was rolled back at T+2h" to "which customers were affected between T and T+2h." This is the same tool-call join-table question we surface for customer-service-AI vendors (chunk_34, chunk_36), but it lands harder at Arize because Arize is the source of truth. Without the action join-table, the drift alert is a signal that fires into a void.</li>
+<li><strong>The "Arize on Arize" question — does Arize audit itself with the same rigor?</strong> When a Fortune-500 buyer's CISO asks "what's your evidence that YOUR observability platform doesn't itself have an SOC 2 gap?" the answer needs to be a public SOC 2 Type II report + a public EU AI Act conformity assessment summary + a public penetration-test summary. The current arize.com/security page has the SOC 2 logo but not the underlying report, and that is the gap most CISOs we talk to flag. Arize's compliance posture is "in progress" for several certifications — your buyer needs to know which ones before signing the BAA or the DPA.</li>
+<li><strong>Span-level PII redaction at the trace boundary.</strong> Phoenix captures the full prompt and completion by default — which means if a user types their SSN into the chat, Phoenix has it. SOC 2 CC6.1 + GDPR Art. 5(1)(c) (data minimization) + HIPAA §164.514(a) (de-identification) all require either redaction at capture time or contractual justification for retention. Arize's <code>redact</code> function works, but it is a per-span configuration the customer has to enable — a working evidence pool needs the redaction to be default-on for regulated verticals, with an allow-list for the specific PII fields the LLM needs (account numbers, not SSNs).</li>
+</ol>
+
+<h3>What "good" looks like in 2026 (the working pattern at Series B+ agent companies)</h3>
+
+<p>The reference architecture we see working at agent companies in mid-2026 who chose Arize: every Phoenix span is exported via the Arize export-to-S3 feature to a customer-controlled bucket with Object Lock in Compliance mode + 7-year retention. A nightly Airflow job pulls Phoenix eval results + GitHub commit SHAs + drift alert metadata + the action join-table from your ticketing system (Linear/Jira) and writes a signed manifest to a second WORM bucket. The auditor's evidence request becomes "show me the manifest for week of March 15" — a single CSV with the SHA chain, prompt versions, eval results, drift events, and rollback actions, all tamper-evident. The cost is roughly $200-500/mo in S3 storage + Lambda + Airflow for a 1M-span/mo workload. That is rounding-error against the cost of a Type II finding or a HIPAA breach notification.</p>
+
+<h3>How this maps to the EU AI Act (if you sell into the EU)</h3>
+
+<p>Article 12 (logging) requires "automatic record-keeping" of system behavior over the lifecycle, retained for at least 6 months. Article 14 requires effective human oversight — structurally the same evidence chain as SOC 2 CC7.2/CC8.1. Article 13 requires transparency to deployers — i.e. your buyer needs to be able to explain to their auditor which model version processed which customer's data, which is exactly the prompt-version-pinning question in checklist item #2. If you have SOC 2 evidence done right with Arize as the observability layer, you are roughly 65% of the way to EU AI Act Article 12/13/14 conformity. The remaining 35% is the technical documentation in Annex IV + the per-tenant data-residency configuration in checklist item #3.</p>
+
+<h3>When Arize IS NOT the right choice (honest version)</h3>
+
+<p>Arize is the right observability layer if you are a Series B+ agent-platform company selling to regulated buyers, and you can absorb the $50-150K/yr Arize Enterprise tier + the engineering cost of the export pipeline. Arize is NOT the right choice if you are (a) pre-PMF and need to ship an MVP observability stack for less than $500/mo total — Phoenix OSS + a self-hosted Postgres + a Datadog free tier will get you 80% of the way for $0-200/mo, (b) selling exclusively to non-regulated buyers (consumer chat, marketing copy) where the audit question does not apply, or (c) processing air-gapped data (defense, certain federal) where the Arize cloud option is non-starter and the OSS option requires significant on-prem investment.</p>
+
+<h3>The $500 audit (what we deliver in 48 hours)</h3>
+
+<p>If you want a written gap-report against this 6-question checklist — what you have, what's missing, and the cheapest fix for each missing item — Talon Forge runs a 48-hour $500 audit. The deliverable is a 6-8 page PDF your GRC team can hand to your auditor or your buyer's CISO. Order at <a href="/products.html">products</a> or reply to this email with "audit" and we send the intake form. If you are also evaluating Arize alternatives (Langfuse, Helicone, LangSmith, WhyLabs, Datadog LLM Observability, OpenLLMetry), the audit maps the same 6 questions to whichever vendor you choose — the checklist is observability-layer-agnostic, only the export pipeline changes.</p>
+
+<h3>Related long-tail reads</h3>
+
+<ul>
+<li><a href="chunk_36.html">SOC 2 evidence for AI agent tool calls</a></li>
+<li><a href="chunk_34.html">Enterprise AI audit checklist (7 buyer questions)</a></li>
+<li><a href="chunk_35.html">Customer-service-AI audit checklist (SOC 2 + EU AI Act)</a></li>
+<li><a href="chunk_32.html">AI agent observability for compliance teams</a></li>
+</ul>
+
+<p class="cta"><strong>Shipping Arize-based agents to a regulated buyer?</strong> <a href="/products.html">$500, 48h audit →</a></p>
+</section><!-- chunk_38.html — Honeycomb audit checklist for AI agent tool-call evidence (long-tail) -->
+<section class="seo-chunk" id="honeycomb-audit-ai-agent-tool-calls">
+<h2>Honeycomb Audit Checklist for AI Agent Tool-Call Evidence: When the Layer Below the LLM Trace Is the Audit Question</h2>
+
+<p>If you ship LLM-powered agents and your observability stack exports spans to <strong>Honeycomb</strong> via OpenTelemetry (OTLP) — either directly from your in-house instrumentation or indirectly through Arize Phoenix, Langfuse, Helicone, or Portkey — Honeycomb is the layer your auditor actually inspects when the regulated buyer asks "show me the tool-call graph for the conversation on March 15 that resulted in the disputed charge." Honeycomb is the store-and-query layer under every modern agent stack, and its audit posture is now in scope for SOC 2 Type II + EU AI Act Article 12 + HIPAA §164.312(b) buyer cycles. This chunk is the buyer-side 5-question checklist for that gap.</p>
+
+<h3>Why Honeycomb is the audit target even when you don't use Honeycomb directly</h3>
+
+<p>Most AI-agent vendors in 2026 instrument their stack with two layers: an LLM-native trace layer (Arize Phoenix, Langfuse, Helicone, or in-house) and a generic o11y layer underneath (Honeycomb, Datadog, Grafana Tempo, Chronosphere). The LLM-native layer captures prompt, completion, eval, and tool-call span structure. The generic o11y layer captures the wider request envelope — pod identity, infrastructure context, deploy SHA, customer tenant ID, billing correlation. When a SOC 2 CC7.2 / CC8.1 auditor asks "where is the tool-call evidence for incident X," the answer is the union of both layers, joined by trace_id. If you only have the LLM-native layer, the auditor's CC7.2 question on infrastructure-side accountability goes unanswered. If you have both, Honeycomb is where the join-table actually lives.</p>
+
+<h3>The 5-question audit checklist when Honeycomb is in the evidence path</h3>
+
+<ol>
+<li><strong>Immutable WORM export at the Honeycomb boundary.</strong> Honeycomb's native storage has a retention window (default 60 days, configurable up to 12 months). For SOC 2 + HIPAA + EU AI Act Annex III §2 (logging) buyers needing 7-year retention, the export pattern is: Honeycomb Query API → Lambda / Worker → S3 Object Lock in Compliance mode (or GCS Bucket Lock, Azure Blob Immutable Blob). The audit question is "show me the cryptographic hash chain for the export of March 15's spans." Working pattern: nightly cron, SHA-256 manifest written alongside the spans, S3 Object Lock bucket under customer control (not Honeycomb's).</li>
+<li><strong>Per-tenant EU-only residency configuration.</strong> Honeycomb's Enterprise tier supports region pinning (us, eu, au), but the default for new tenants is us-east-1. For EU AI Act Article 12 + GDPR Schrems II buyers, the audit question is "is the dataset pinable to eu-west-1 or eu-central-1, with documented no-cross-region-replication, and is the failover path also EU?" Working pattern: dataset creation explicitly pins region, replication target is also EU, and the auditor gets the network-path diagram + the key-custody chain (KMS keys are EU-resident).</li>
+<li><strong>Span-level PII redaction at ingest, not at query.</strong> If a tool-call span contains a customer SSN or payment card data before the redaction layer runs, Honeycomb's ingest pipeline offers an OTel processor hook — but it is customer-implemented. The audit question is "where in the ingest pipeline does the PII redaction happen, and what is the evidence that redaction is enforced on every span, not configured per-tenant?" Working pattern: an OTel Collector sidecar with a regex / allowlist processor that runs before the Honeycomb exporter, with redaction failures dropped to a quarantine dataset the security team owns.</li>
+<li><strong>Trace-to-billing join-table reconstructibility.</strong> For SOC 2 CC7.2 + SOX 404 (if public) + EU AI Act Article 14 (human oversight of consequential decisions), the auditor's question is "for every tool-call span in this conversation, show me the customer session that triggered it, the model version that processed it, and the Stripe charge (or billing event) that funded it." Working pattern: a Honeycomb Board with a derived column that joins span → session_id (from your app logs) → model_version (from your LLM gateway) → stripe_charge_id (from your billing webhook). This board becomes the SOC 2 evidence artifact.</li>
+<li><strong>The "Honeycomb on Honeycomb" self-audit posture.</strong> When a regulated buyer's CISO asks "what is Honeycomb's own SOC 2 Type II report, and does it cover the specific control families (CC6.1 logical access, CC7.2 system monitoring, CC8.1 change management) that we need to inherit?" the answer needs to be Honeycomb's most recent SOC 2 Type II report (available under NDA from Honeycomb's security team) plus a customer-facing summary of which control families are covered. Honeycomb's trust center has the SOC 2 logo but the report itself is NDA-gated — the buyer needs to factor NDA turnaround into their procurement timeline.</li>
+</ol>
+
+<h3>What "good" looks like in 2026 (the working pattern at Series B+ agent companies)</h3>
+
+<p>The reference architecture we see working at agent companies in mid-2026: every tool-call span flows through an OTel Collector sidecar that runs the PII redaction processor, attaches the session_id + model_version + stripe_charge_id as span attributes, and exports to Honeycomb via OTLP. A nightly Airflow job pulls the prior day's spans via Honeycomb's Query API, joins them against your billing database and your Linear/Jira action log, and writes a signed manifest to S3 Object Lock in Compliance mode. The auditor's evidence request becomes "show me the manifest for week of March 15" — a single CSV with the trace_id → session → model → charge → rollback-action chain, all tamper-evident. The cost is roughly $300-700/mo (Honeycomb Enterprise for 100M spans/mo + S3 storage + Airflow + Lambda). Rounding-error against the cost of a Type II finding.</p>
+
+<h3>How this maps to the EU AI Act (if you sell into the EU)</h3>
+
+<p>Article 12 requires automatic logging of system behavior over the lifecycle, retained at least 6 months. Article 14 requires effective human oversight — i.e. the tool-call join-table that links "AI did X" to "human approved X" to "customer paid for X." Article 13 requires deployer-facing transparency about which model version processed which traffic. If you have the Honeycomb-side evidence done right (checklist items 1, 3, 4), you are roughly 60% of the way to EU AI Act Article 12/13/14 conformity. The remaining 40% is the per-tenant residency configuration (item 2) and the human-oversight attestation chain in Annex IV.</p>
+
+<h3>When Honeycomb is NOT the right choice (honest version)</h3>
+
+<p>Honeycomb is the right audit-evidence layer if your buyer already uses Honeycomb, if you want OpenTelemetry-native instrumentation (no proprietary SDK lock-in), or if your scale is 50M+ spans/mo where Honeycomb's columnar storage and BubbleUp analysis pay for themselves. Honeycomb is NOT the right choice if your scale is under 10M spans/mo (Datadog or Grafana Cloud will be cheaper), if your buyer requires air-gapped on-prem observability (Honeycomb is SaaS only), or if your tool-call graph is so LLM-specific that the LLM-native observability layer (Arize Phoenix, Langfuse) is the primary store and Honeycomb is the secondary mirror (in which case, audit the LLM-native layer first — see chunk_37).</p>
+
+<h3>What we do when a buyer asks "show me the Honeycomb audit evidence"</h3>
+
+<p>The $500 / 48h audit we offer maps directly to this checklist: a SOC 2 + EU AI Act evidence map for your Honeycomb deployment, with the 5 questions above mapped 1:1 to Common Criteria CC6.1 / CC7.2 / CC8.1 + EU AI Act Articles 12/13/14, and a working sample query for the trace-to-billing join-table (the Honeycomb Board JSON export that becomes your evidence artifact). Same shape as the Arize audit (chunk_37) — different vendor, same evidentiary framework. Cross-references: chunk_36 (SOC 2 evidence for AI agent tool calls), chunk_37 (Arize audit), chunk_35 (customer-service AI audit). Honeycomb templates 102 + Arize template 101 + Sierra template 98 + Cresta template 100 form the enterprise-conversational-AI + enterprise-observability blast cluster if SMTP credentials arrive before the deadline.</p>
+</section><section class="chunk" id="ai-agent-permission-inheritance-audit">
+<h1>AI Agent Permission Inheritance Audit 2026 — The 8-Question Checklist SOC 2 + GDPR + HIPAA Auditors Are Asking</h1>
+
+<p class="meta">Published 2026-07-11 · 8 min read · target keyword: "AI agent permission inheritance audit 2026" · vertical: enterprise search AI, AI agent platforms, data governance</p>
+
+<p>Your AI agent can answer a question by querying Salesforce, Workday, Jira, Confluence, Slack, Google Drive, Box, Notion, and 100 other SaaS sources in a single turn. The answer it gives back to the user is derived from a federated permission inheritance chain — and every SOC 2 auditor, GDPR DPA reviewer, and HIPAA compliance officer we work with at agent-platform vendors is asking the same 8 questions about that chain. This is the buyer-side checklist for the 2026 audit season.</p>
+
+<h2 id="why-permission-inheritance-is-the-2026-audit-bottleneck">Why permission inheritance is the 2026 audit bottleneck</h2>
+
+<p>Pre-2024, enterprise search tools like Elastic, Coveo, and Algolia indexed documents and returned keyword matches. Auditors cared about <em>document-level</em> ACLs: can the user see Document X. That was a single-source, single-ACL problem — easy to test, easy to log, easy to defend.</p>
+
+<p>2026 agent platforms (Glean, Slack Lists + AI, Notion AI Q&A, Microsoft 365 Copilot, Salesforce Einstein Copilot, Glean Assistant) changed the problem entirely. A single agent answer is now assembled from:</p>
+
+<ul>
+  <li>A user identity (Okta group membership, last-login, MFA status)</li>
+  <li>8+ federated source-system ACLs (Salesforce profile + role hierarchy + sharing rules + territory model; Workday domain security policies + user-based + role-based; Google Drive org-unit + shared-drive + file-ACL; Slack workspace + channel + private-channel inheritance)</li>
+  <li>A retrieval ranking layer that picks which chunks to feed the LLM (vector store + lexical + semantic re-rank)</li>
+  <li>An LLM that synthesizes a final answer with no knowledge of which source-system ACLs contributed which tokens</li>
+  <li>An optional write-back action (the agent updates a Salesforce op or creates a Jira ticket or sends a Slack message)</li>
+</ul>
+
+<p>The audit question becomes: <strong>"prove to me that the answer the user got, combined token-by-token, never included content the user was not entitled to see in any source system."</strong> That is a join-table problem across N federated systems, evaluated against a frozen user-identity snapshot at query time, with WORM evidence retention.</p>
+
+<p>The companies buying our $500/48h audit are the ones whose SOC 2 Type II report is up for renewal, whose biggest EU customer is asking about GDPR Art. 22 automated-decision-making, and whose HIPAA-covered customer is asking for min-necessary evidence. They all converge on the same 8 questions.</p>
+
+<h2 id="the-8-questions">The 8 questions every auditor is asking in 2026</h2>
+
+<h3 id="q1-source-acl-snapshot">Q1. At query time, did you snapshot every source-system ACL that contributed to the retrieval?</h3>
+<p>Compliance-required artifact: a per-query log row containing <code>(query_id, user_id, timestamp, source_system, acl_version, acl_hash)</code> for every source consulted. If your retrieval layer fetches chunks but only logs <em>which</em> chunks, you cannot answer "was the user entitled to see this chunk at fetch time." This is the single most-cited gap in 2026 SOC 2 CC6.1 evidence requests.</p>
+
+<h3 id="q2-identity-federation-proof">Q2. How do you prove the user identity you used for ACL lookup matches the identity the source system authenticated?</h3>
+<p>If you use OIDC/SCIM/SAML to federate identity, the audit trail needs to record the IdP assertion ID + the source-system session ID + the timestamp skew between them. Many agent platforms federate to Okta for one source and to Azure AD for another, then use a normalized email as the join key — but if the source-system audit log uses the immutable Okta user GUID and your retrieval log uses the normalized email, you cannot prove they refer to the same person after a domain migration.</p>
+
+<h3 id="q3-retrieval-ranking-evidence">Q3. Can you reconstruct the retrieval-ranking decision for any past answer?</h3>
+<p>Compliance-required artifact: per-query dump of (top-K chunks fetched, ranking model version, re-ranker version, similarity score distribution, the prompt template used for the final answer). Without this, you cannot defend against the auditor's challenge: "what if the re-ranker model changed between when this answer was given and now?" If you cannot replay the exact ranking pipeline that produced the chunks, you cannot reproduce the answer.</p>
+
+<h3 id="q4-permission-inheritance-join-table">Q4. Can you reconstruct the permission-inheritance join-table across N source systems for any past query?</h3>
+<p>This is the hardest one. Compliance-required artifact: a per-query table with one row per source-system, columns for (source, document_id, source_acl_id, effective_acl_at_query_time, inherited_via_chain, deny_reason_if_any). Most agent platforms do not log this because the join computation is expensive (N×M where M = number of source ACL rules) and they optimize it away. The audit fix is to persist the join-table result, not recompute it.</p>
+
+<h3 id="q5-llm-token-provenance">Q5. Can you map every token in the LLM answer back to the source-system chunk it came from?</h3>
+<p>This is the gold standard. Compliance-required artifact: token-level provenance map (Span: "Q3 revenue was $14.2M" → Source chunk: Salesforce opp 006... line 12). This requires instrumenting the LLM call with attention-head attribution or a fine-tuned classifier per answer — most platforms today approximate this with chunk-level citation and call it done. Auditors in 2026 are pushing back: "chunk-level attribution is not the same as token-level." Plan: implement OpenAI's citation API + an attribution probe model.</p>
+
+<h3 id="q6-pii-redaction-at-ingest">Q6. Where does PII redaction happen — at ingest, at retrieval, or at output?</h3>
+<p>Compliance-required artifact: the redaction policy as code, version-controlled, with the policy version logged per query. Redaction at ingest is best (data never leaves your boundary) but breaks search recall. Redaction at retrieval is the common compromise. Redaction at output is too late — the un-redacted content already hit the LLM context window and may be in the audit log. HIPAA min-necessary + GDPR Art. 5(1)(c) data minimization both require you to defend which layer redaction happens at.</p>
+
+<h3 id="q7-agent-writeback-evidence">Q7. When the agent writes back (updates Salesforce, creates Jira, sends Slack), is the write auditable end-to-end?</h3>
+<p>Compliance-required artifact: (a) the user identity that initiated the agent action, (b) the prompt + retrieved chunks that produced the write payload, (c) the source-system API call log, (d) idempotency key used, (e) rollback/undo evidence. Same gap pattern as our Decagon/Sierra/Cresta CS-AI audit template — but the source of truth here is the federated SaaS system, not your in-house ticketing DB.</p>
+
+<h3 id="q8-delete-propagation-across-federated-stores">Q8. When a user invokes GDPR Art. 17 right-to-erasure or HIPAA breach-notice, can you delete their data across all federated sources within 30 days?</h3>
+<p>Compliance-required artifact: per-user data-residency map (which sources contain which derived artifacts — eval sets, retrieval caches, fine-tune datasets, prompt logs, completion logs). The audit-trail must show: (1) discovery within 72h, (2) deletion propagation across N sources within 30 days, (3) evidence-of-deletion per source, (4) downstream-cache invalidation. Most agent platforms fail Q8 because their eval-set and fine-tune-set pipelines ingest user data implicitly and have no deletion hook.</p>
+
+<h2 id="the-2-production-architectures">The 2 production architectures we see in 2026</h2>
+
+<h3 id="arch-1-source-of-truth-rehydration">Architecture 1: Source-of-truth rehydration (fast, fragile)</h3>
+<p>Don't persist the join-table. On audit, re-run the retrieval pipeline against the source-system ACL snapshot at query time. Pros: cheap storage, no duplication. Cons: source-system ACLs may have changed (and you cannot roll back a Salesforce sharing-rule change), source-system audit logs may have aged out, and the LLM temperature may have been updated (non-deterministic).</p>
+
+<h3 id="arch-2-immutable-join-table-persistence">Architecture 2: Immutable join-table persistence (slow, defensible)</h3>
+<p>At query time, persist the full join-table (Q4) + ranking pipeline (Q3) + token-provenance map (Q5) to WORM storage (S3 Object Lock, GCS Bucket Lock, Azure Immutable Blob). On audit, replay against the immutable record. Pros: SOC 2 CC7.2 + GDPR Art. 30 + EU AI Act Article 12 conformant out of the box. Cons: storage cost (~10-50 KB per query at scale, $400-$2,000/mo at 100K queries/day), engineering complexity.</p>
+
+<h2 id="2026-compliance-cross-walk">2026 compliance cross-walk</h2>
+
+<table>
+<thead><tr><th>Audit question</th><th>SOC 2 Common Criteria</th><th>GDPR Article</th><th>HIPAA</th><th>EU AI Act (high-risk)</th></tr></thead>
+<tbody>
+<tr><td>Q1 ACL snapshot</td><td>CC6.1, CC6.6</td><td>Art. 30</td><td>§164.308(a)(4)</td><td>Art. 10</td></tr>
+<tr><td>Q2 identity federation</td><td>CC6.1, CC6.2</td><td>Art. 32</td><td>§164.312(a)(2)(i)</td><td>Art. 10</td></tr>
+<tr><td>Q3 retrieval replay</td><td>CC7.2</td><td>Art. 22 explanation</td><td>§164.308(a)(1)(ii)(D)</td><td>Art. 13, Art. 14</td></tr>
+<tr><td>Q4 join-table</td><td>CC7.2, CC8.1</td><td>Art. 30, Art. 32</td><td>§164.312(b)</td><td>Art. 12</td></tr>
+<tr><td>Q5 token provenance</td><td>CC7.2</td><td>Art. 22</td><td>§164.312(c)(1)</td><td>Art. 13</td></tr>
+<tr><td>Q6 PII redaction</td><td>CC6.7, P4.1</td><td>Art. 5(1)(c), Art. 25</td><td>§164.514(a)-(b) min-necessary</td><td>Art. 10</td></tr>
+<tr><td>Q7 writeback evidence</td><td>CC7.2, CC8.1</td><td>Art. 30</td><td>§164.312(c)</td><td>Art. 14</td></tr>
+<tr><td>Q8 delete propagation</td><td>CC7.2, CC8.1</td><td>Art. 17</td><td>§164.105, §164.404</td><td>Art. 10</td></tr>
+</tbody>
+</table>
+
+<h2 id="what-this-means-for-2026-budgets">What this means for 2026 budgets</h2>
+
+<p>If you are a Series B+ agent platform vendor and you have any Fortune-500 customer, expect this checklist in 2026. The vendors who can answer all 8 questions with WORM evidence win the SOC 2 Type II + GDPR DPA + HIPAA BAA + EU AI Act conformity trifecta. The ones who cannot will lose the next procurement cycle.</p>
+
+<p>Implementation timeline:</p>
+<ul>
+  <li><strong>Week 1-2:</strong> Q1 + Q2 + Q6 (ACL snapshot, identity federation proof, PII redaction layer) — 2 engineers, no infra changes, ~80 hours</li>
+  <li><strong>Week 3-6:</strong> Q3 + Q4 + Q7 (retrieval replay, join-table persistence, writeback evidence) — 3 engineers, S3 Object Lock or equivalent, ~240 hours</li>
+  <li><strong>Week 7-12:</strong> Q5 + Q8 (token provenance + delete propagation) — 4 engineers + ML eng, attribution probe model + eval/fine-tune pipeline delete hooks, ~480 hours</li>
+</ul>
+
+<h2 id="get-the-48h-audit">Get the 48-hour audit</h2>
+
+<p>If you are 60-180 days out from a SOC 2 Type II renewal, GDPR DPA review, HIPAA BAA procurement, or EU AI Act conformity assessment, and you want an outside-in assessment of how your agent platform stacks up against this 8-question checklist, the $500/48h audit walks through every question with a written report + remediation plan. Lead 110 (Glean) + template 104 are tuned to this exact pattern.</p>
+
+<p id="audit-cta"><a href="/atlas-store/#audit-cta">→ $500 / 48h AI Agent Audit — 8-question checklist + remediation plan</a></p>
+
+<p>Related reading: <a href="/atlas-store/#enterprise-conversational-ai-audit-checklist-2026">chunk_34 — enterprise conversational AI audit checklist</a> · <a href="/atlas-store/#customer-service-ai-audit">chunk_35 — customer service AI audit</a> · <a href="/atlas-store/#soc-2-evidence-for-ai-agent-tool-calls">chunk_36 — SOC 2 evidence for AI agent tool calls</a> · <a href="/atlas-store/#honeycomb-audit-ai-agent-tool-calls">chunk_38 — Honeycomb audit for AI agent tool calls</a></p>
+</section>

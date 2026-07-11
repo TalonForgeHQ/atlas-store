@@ -1,0 +1,12 @@
+[23:53:44] === reddit_poster.py mode=check ===
+[23:53:46] connected. 2 tabs open
+[23:53:46] no reddit tab found. opening one...
+[23:53:50] on: https://www.reddit.com/
+[23:53:50] login state: {
+  "hasLogIn": false,
+  "hasUserLink": true,
+  "userHref": "/user/Pearlharbortours1/",
+  "hasFaceplate": false,
+  "hasHeaderAvatar": false
+}
+[23:53:50] LOGGED IN: True

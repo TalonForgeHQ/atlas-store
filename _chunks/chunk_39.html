@@ -1,0 +1,94 @@
+<section class="chunk" id="ai-agent-permission-inheritance-audit">
+<h1>AI Agent Permission Inheritance Audit 2026 — The 8-Question Checklist SOC 2 + GDPR + HIPAA Auditors Are Asking</h1>
+
+<p class="meta">Published 2026-07-11 · 8 min read · target keyword: "AI agent permission inheritance audit 2026" · vertical: enterprise search AI, AI agent platforms, data governance</p>
+
+<p>Your AI agent can answer a question by querying Salesforce, Workday, Jira, Confluence, Slack, Google Drive, Box, Notion, and 100 other SaaS sources in a single turn. The answer it gives back to the user is derived from a federated permission inheritance chain — and every SOC 2 auditor, GDPR DPA reviewer, and HIPAA compliance officer we work with at agent-platform vendors is asking the same 8 questions about that chain. This is the buyer-side checklist for the 2026 audit season.</p>
+
+<h2 id="why-permission-inheritance-is-the-2026-audit-bottleneck">Why permission inheritance is the 2026 audit bottleneck</h2>
+
+<p>Pre-2024, enterprise search tools like Elastic, Coveo, and Algolia indexed documents and returned keyword matches. Auditors cared about <em>document-level</em> ACLs: can the user see Document X. That was a single-source, single-ACL problem — easy to test, easy to log, easy to defend.</p>
+
+<p>2026 agent platforms (Glean, Slack Lists + AI, Notion AI Q&A, Microsoft 365 Copilot, Salesforce Einstein Copilot, Glean Assistant) changed the problem entirely. A single agent answer is now assembled from:</p>
+
+<ul>
+  <li>A user identity (Okta group membership, last-login, MFA status)</li>
+  <li>8+ federated source-system ACLs (Salesforce profile + role hierarchy + sharing rules + territory model; Workday domain security policies + user-based + role-based; Google Drive org-unit + shared-drive + file-ACL; Slack workspace + channel + private-channel inheritance)</li>
+  <li>A retrieval ranking layer that picks which chunks to feed the LLM (vector store + lexical + semantic re-rank)</li>
+  <li>An LLM that synthesizes a final answer with no knowledge of which source-system ACLs contributed which tokens</li>
+  <li>An optional write-back action (the agent updates a Salesforce op or creates a Jira ticket or sends a Slack message)</li>
+</ul>
+
+<p>The audit question becomes: <strong>"prove to me that the answer the user got, combined token-by-token, never included content the user was not entitled to see in any source system."</strong> That is a join-table problem across N federated systems, evaluated against a frozen user-identity snapshot at query time, with WORM evidence retention.</p>
+
+<p>The companies buying our $500/48h audit are the ones whose SOC 2 Type II report is up for renewal, whose biggest EU customer is asking about GDPR Art. 22 automated-decision-making, and whose HIPAA-covered customer is asking for min-necessary evidence. They all converge on the same 8 questions.</p>
+
+<h2 id="the-8-questions">The 8 questions every auditor is asking in 2026</h2>
+
+<h3 id="q1-source-acl-snapshot">Q1. At query time, did you snapshot every source-system ACL that contributed to the retrieval?</h3>
+<p>Compliance-required artifact: a per-query log row containing <code>(query_id, user_id, timestamp, source_system, acl_version, acl_hash)</code> for every source consulted. If your retrieval layer fetches chunks but only logs <em>which</em> chunks, you cannot answer "was the user entitled to see this chunk at fetch time." This is the single most-cited gap in 2026 SOC 2 CC6.1 evidence requests.</p>
+
+<h3 id="q2-identity-federation-proof">Q2. How do you prove the user identity you used for ACL lookup matches the identity the source system authenticated?</h3>
+<p>If you use OIDC/SCIM/SAML to federate identity, the audit trail needs to record the IdP assertion ID + the source-system session ID + the timestamp skew between them. Many agent platforms federate to Okta for one source and to Azure AD for another, then use a normalized email as the join key — but if the source-system audit log uses the immutable Okta user GUID and your retrieval log uses the normalized email, you cannot prove they refer to the same person after a domain migration.</p>
+
+<h3 id="q3-retrieval-ranking-evidence">Q3. Can you reconstruct the retrieval-ranking decision for any past answer?</h3>
+<p>Compliance-required artifact: per-query dump of (top-K chunks fetched, ranking model version, re-ranker version, similarity score distribution, the prompt template used for the final answer). Without this, you cannot defend against the auditor's challenge: "what if the re-ranker model changed between when this answer was given and now?" If you cannot replay the exact ranking pipeline that produced the chunks, you cannot reproduce the answer.</p>
+
+<h3 id="q4-permission-inheritance-join-table">Q4. Can you reconstruct the permission-inheritance join-table across N source systems for any past query?</h3>
+<p>This is the hardest one. Compliance-required artifact: a per-query table with one row per source-system, columns for (source, document_id, source_acl_id, effective_acl_at_query_time, inherited_via_chain, deny_reason_if_any). Most agent platforms do not log this because the join computation is expensive (N×M where M = number of source ACL rules) and they optimize it away. The audit fix is to persist the join-table result, not recompute it.</p>
+
+<h3 id="q5-llm-token-provenance">Q5. Can you map every token in the LLM answer back to the source-system chunk it came from?</h3>
+<p>This is the gold standard. Compliance-required artifact: token-level provenance map (Span: "Q3 revenue was $14.2M" → Source chunk: Salesforce opp 006... line 12). This requires instrumenting the LLM call with attention-head attribution or a fine-tuned classifier per answer — most platforms today approximate this with chunk-level citation and call it done. Auditors in 2026 are pushing back: "chunk-level attribution is not the same as token-level." Plan: implement OpenAI's citation API + an attribution probe model.</p>
+
+<h3 id="q6-pii-redaction-at-ingest">Q6. Where does PII redaction happen — at ingest, at retrieval, or at output?</h3>
+<p>Compliance-required artifact: the redaction policy as code, version-controlled, with the policy version logged per query. Redaction at ingest is best (data never leaves your boundary) but breaks search recall. Redaction at retrieval is the common compromise. Redaction at output is too late — the un-redacted content already hit the LLM context window and may be in the audit log. HIPAA min-necessary + GDPR Art. 5(1)(c) data minimization both require you to defend which layer redaction happens at.</p>
+
+<h3 id="q7-agent-writeback-evidence">Q7. When the agent writes back (updates Salesforce, creates Jira, sends Slack), is the write auditable end-to-end?</h3>
+<p>Compliance-required artifact: (a) the user identity that initiated the agent action, (b) the prompt + retrieved chunks that produced the write payload, (c) the source-system API call log, (d) idempotency key used, (e) rollback/undo evidence. Same gap pattern as our Decagon/Sierra/Cresta CS-AI audit template — but the source of truth here is the federated SaaS system, not your in-house ticketing DB.</p>
+
+<h3 id="q8-delete-propagation-across-federated-stores">Q8. When a user invokes GDPR Art. 17 right-to-erasure or HIPAA breach-notice, can you delete their data across all federated sources within 30 days?</h3>
+<p>Compliance-required artifact: per-user data-residency map (which sources contain which derived artifacts — eval sets, retrieval caches, fine-tune datasets, prompt logs, completion logs). The audit-trail must show: (1) discovery within 72h, (2) deletion propagation across N sources within 30 days, (3) evidence-of-deletion per source, (4) downstream-cache invalidation. Most agent platforms fail Q8 because their eval-set and fine-tune-set pipelines ingest user data implicitly and have no deletion hook.</p>
+
+<h2 id="the-2-production-architectures">The 2 production architectures we see in 2026</h2>
+
+<h3 id="arch-1-source-of-truth-rehydration">Architecture 1: Source-of-truth rehydration (fast, fragile)</h3>
+<p>Don't persist the join-table. On audit, re-run the retrieval pipeline against the source-system ACL snapshot at query time. Pros: cheap storage, no duplication. Cons: source-system ACLs may have changed (and you cannot roll back a Salesforce sharing-rule change), source-system audit logs may have aged out, and the LLM temperature may have been updated (non-deterministic).</p>
+
+<h3 id="arch-2-immutable-join-table-persistence">Architecture 2: Immutable join-table persistence (slow, defensible)</h3>
+<p>At query time, persist the full join-table (Q4) + ranking pipeline (Q3) + token-provenance map (Q5) to WORM storage (S3 Object Lock, GCS Bucket Lock, Azure Immutable Blob). On audit, replay against the immutable record. Pros: SOC 2 CC7.2 + GDPR Art. 30 + EU AI Act Article 12 conformant out of the box. Cons: storage cost (~10-50 KB per query at scale, $400-$2,000/mo at 100K queries/day), engineering complexity.</p>
+
+<h2 id="2026-compliance-cross-walk">2026 compliance cross-walk</h2>
+
+<table>
+<thead><tr><th>Audit question</th><th>SOC 2 Common Criteria</th><th>GDPR Article</th><th>HIPAA</th><th>EU AI Act (high-risk)</th></tr></thead>
+<tbody>
+<tr><td>Q1 ACL snapshot</td><td>CC6.1, CC6.6</td><td>Art. 30</td><td>§164.308(a)(4)</td><td>Art. 10</td></tr>
+<tr><td>Q2 identity federation</td><td>CC6.1, CC6.2</td><td>Art. 32</td><td>§164.312(a)(2)(i)</td><td>Art. 10</td></tr>
+<tr><td>Q3 retrieval replay</td><td>CC7.2</td><td>Art. 22 explanation</td><td>§164.308(a)(1)(ii)(D)</td><td>Art. 13, Art. 14</td></tr>
+<tr><td>Q4 join-table</td><td>CC7.2, CC8.1</td><td>Art. 30, Art. 32</td><td>§164.312(b)</td><td>Art. 12</td></tr>
+<tr><td>Q5 token provenance</td><td>CC7.2</td><td>Art. 22</td><td>§164.312(c)(1)</td><td>Art. 13</td></tr>
+<tr><td>Q6 PII redaction</td><td>CC6.7, P4.1</td><td>Art. 5(1)(c), Art. 25</td><td>§164.514(a)-(b) min-necessary</td><td>Art. 10</td></tr>
+<tr><td>Q7 writeback evidence</td><td>CC7.2, CC8.1</td><td>Art. 30</td><td>§164.312(c)</td><td>Art. 14</td></tr>
+<tr><td>Q8 delete propagation</td><td>CC7.2, CC8.1</td><td>Art. 17</td><td>§164.105, §164.404</td><td>Art. 10</td></tr>
+</tbody>
+</table>
+
+<h2 id="what-this-means-for-2026-budgets">What this means for 2026 budgets</h2>
+
+<p>If you are a Series B+ agent platform vendor and you have any Fortune-500 customer, expect this checklist in 2026. The vendors who can answer all 8 questions with WORM evidence win the SOC 2 Type II + GDPR DPA + HIPAA BAA + EU AI Act conformity trifecta. The ones who cannot will lose the next procurement cycle.</p>
+
+<p>Implementation timeline:</p>
+<ul>
+  <li><strong>Week 1-2:</strong> Q1 + Q2 + Q6 (ACL snapshot, identity federation proof, PII redaction layer) — 2 engineers, no infra changes, ~80 hours</li>
+  <li><strong>Week 3-6:</strong> Q3 + Q4 + Q7 (retrieval replay, join-table persistence, writeback evidence) — 3 engineers, S3 Object Lock or equivalent, ~240 hours</li>
+  <li><strong>Week 7-12:</strong> Q5 + Q8 (token provenance + delete propagation) — 4 engineers + ML eng, attribution probe model + eval/fine-tune pipeline delete hooks, ~480 hours</li>
+</ul>
+
+<h2 id="get-the-48h-audit">Get the 48-hour audit</h2>
+
+<p>If you are 60-180 days out from a SOC 2 Type II renewal, GDPR DPA review, HIPAA BAA procurement, or EU AI Act conformity assessment, and you want an outside-in assessment of how your agent platform stacks up against this 8-question checklist, the $500/48h audit walks through every question with a written report + remediation plan. Lead 110 (Glean) + template 104 are tuned to this exact pattern.</p>
+
+<p id="audit-cta"><a href="/atlas-store/#audit-cta">→ $500 / 48h AI Agent Audit — 8-question checklist + remediation plan</a></p>
+
+<p>Related reading: <a href="/atlas-store/#enterprise-conversational-ai-audit-checklist-2026">chunk_34 — enterprise conversational AI audit checklist</a> · <a href="/atlas-store/#customer-service-ai-audit">chunk_35 — customer service AI audit</a> · <a href="/atlas-store/#soc-2-evidence-for-ai-agent-tool-calls">chunk_36 — SOC 2 evidence for AI agent tool calls</a> · <a href="/atlas-store/#honeycomb-audit-ai-agent-tool-calls">chunk_38 — Honeycomb audit for AI agent tool calls</a></p>
+</section>
