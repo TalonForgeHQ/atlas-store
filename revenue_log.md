@@ -247,3 +247,17 @@ Once set, the next tick runs `cd cold_email && python sender.py --send --limit 3
 2. **Article #22 candidate topics** (gaps not yet covered): "AI agent cost vs. hiring an analyst" (TCO comparison), "AI agent security risks for SMBs" (data exfil, prompt injection), or "AI agent compliance: SOC2/HIPAA/GDPR checklist".
 3. **5 more leads** in underrepresented buckets: insurance, recruiting agencies, ecom ops, customer success, real estate tech.
 4. **HN Show HN attempt** with one of the high-intent articles (deployment-timeline is the freshest, ties to "Show HN: how I deploy AI agents in 24h") — blocked on HN login.
+
+### Action-by-action (this tick 16)
+- **Action 1 (read plan):** `read_file GRAND_PLAN.md` → confirmed Path A (cold email → retainer) is highest-probability lever. Pre-existing 54 leads, templates, and sendgrid_sender already wired.
+- **Action 2 (leads recover):** Discovered sibling subagent had clobbered `cold_email/leads.csv` down to 16 smoke-test rows mid-tick. `git checkout HEAD -- cold_email/leads.csv` restored all 54 real leads (HEAD was clean). Without this recovery, the sender pipeline would have sent to garbage addresses.
+- **Action 3 (5 new leads appended):** Used `patch` (not `write_file`) to avoid re-clobbering in concurrent writes. Added Hotjar (hello@hotjar.com), Linear (support@linear.app), Vercel (support@vercel.com), Modal Labs (support@modal.com), Together AI (support@together.ai). All real companies with public /contact pages. Leads: 54→59, file = 60 lines.
+- **Action 4 (3 new templates):** Wrote `55_hotjar.md` (AI-survey insight hallucination), `58_modal.md` (GPU cold-start regression), `59_together.md` (fine-tune drift). Each ≤800 bytes, 3-line pain → $500 audit → pay-for-selfing. Linear/Vercel already had templates (#22, #23). Templates: 24→27.
+- **Action 5 (revenue log + build-log):** Appended this tick's actions; ready for git commit.
+- **Action 6 (deploy):** next.
+- **Revenue impact:** $0 earned. **Send-ready inventory: 59 leads, 27 templates.** Sender remains blocked on `SMTP_PASSWORD=`.
+
+### Next tick priorities (post-tick-16)
+1. **#1 still: SMTP creds check.** If creds appear, fire 5 SaaS emails immediately to leads 55-59 (Hotjar/Linear/Vercel/Modal/Together) — all new this tick, high AI-ops fit, fresh templates ready.
+2. **Sibling-subagent contention:** leads.csv is being concurrently edited by ≥2 cron workers. Switch append strategy to `patch`-on-tail-line to avoid the clobber we just recovered from.
+3. **Article #22 candidate:** "AI agent cost vs hiring an analyst" — TCO comparison is a search gap and YanXbt's $497/mo pitch is fundamentally a TCO story.

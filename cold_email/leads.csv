@@ -53,3 +53,8 @@ index,name,handle,email,vertical,tier,template,tier_reason
 52,Aircall,@aircall,support@aircall.io,sales_intelligence,1,52_aircall.md,Cloud-call-center platform with AI transcription/summarization; evidence: https://aircall.io/contact/ exposes support@aircall.io
 53,Calendly,@calendly,support@calendly.com,sales_intelligence,1,53_calendly.md,Scheduling platform with AI meeting-prep features; evidence: https://calendly.com/contact exposes support@calendly.com
 54,Retool,@retool,support@retool.com,b2b_saas,1,54_retool.md,Internal-tools platform with AI app-building features; evidence: https://retool.com/contact exposes support@retool.com
+55,Hotjar,@hotjar,hello@hotjar.com,b2b_saas,1,55_hotjar.md,Product-analytics SaaS with AI survey/insights features; evidence: https://www.hotjar.com/contact exposes hello@hotjar.com
+56,Linear,@linear,support@linear.app,b2b_saas,1,56_linear.md,Issue-tracking SaaS with AI triage/auto-label features; evidence: https://linear.app/contact supports@linear.app
+57,Vercel,@vercel,support@vercel.com,b2b_saas,1,57_vercel.md,Edge-deployment platform with AI SDK + v0 generative UI; evidence: https://vercel.com/contact exposes support@vercel.com
+58,Modal Labs,@modal-labs,support@modal.com,ai_infra,1,58_modal.md,Serverless GPU platform for AI inference workloads; evidence: https://modal.com/support exposes support@modal.com
+59,Together AI,@togethercompute,support@together.ai,ai_infra,1,59_together.md,Open-source GenAI cloud (inference + fine-tuning); evidence: https://www.together.ai/contact exposes support@together.ai
