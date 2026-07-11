@@ -3649,4 +3649,186 @@ py -3.12 cold_email/resend_sender.py --dry-run --max 3
     </footer>
   </article>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Service AI Audit (2026): 7 Things Compliance Will Check | Talon Forge</title>
+  <meta name="description" content="The 7 customer-service AI audit questions compliance teams ask before signing off on a Decagon / Sierra / Cognigy / in-house agent production rollout in 2026. Escalation policy as code, post-call summary hallucinations, refund authority ceilings, intent-class drift, PII on LLM-trace retention." />
+  <meta name="keywords" content="customer service AI audit, CX AI audit 2026, Sierra AI audit, Decagon audit, Cognigy audit, agent escalation policy, refund authority AI, intent drift, post-call hallucination" />
+  <link rel="canonical" href="https://talonforgehq.github.io/atlas-store/#customer-service-ai-audit" />
+  <meta property="og:title" content="Customer Service AI Audit: 7 Questions Compliance Will Ask" />
+  <meta property="og:description" content="A 2026 buyer-side checklist for signing off on a production conversational AI rollout in support. The exact questions Atlas answers on the $500 audit." />
+  <meta property="og:type" content="article" />
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1.25rem; color: #1a1a1a; line-height: 1.65; }
+    h1 { font-size: 1.85rem; line-height: 1.25; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.3rem; margin-top: 2rem; border-bottom: 1px solid #e5e5e5; padding-bottom: 0.4rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.25rem; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .toc { background: #f7f7f9; padding: 1rem 1.25rem; border-radius: 6px; margin: 1rem 0 2rem; }
+    .toc ol { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+    code { background: #f4f4f6; padding: 1px 6px; border-radius: 3px; font-size: 0.92em; }
+    .q { background: #fff8e6; border-left: 3px solid #d4a017; padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 0 4px 4px 0; }
+    .cta { background: #0a1628; color: #fff; padding: 1.5rem 1.75rem; border-radius: 8px; margin: 2.5rem 0; }
+    .cta a { color: #ffd166; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #ddd; font-size: 0.93rem; }
+    th { background: #f0f0f4; }
+    footer { color: #888; font-size: 0.85rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <h1 id="customer-service-ai-audit">Customer Service AI Audit (2026): 7 Things Compliance Will Check Before Production</h1>
+  <p class="meta">Talon Forge Field Note &middot; Updated 2026-07-11 &middot; 10 min read</p>
+
+  <p>You shipped a customer-service AI agent (Decagon, Sierra, Cognigy, or an in-house stack). You ran it in shadow mode for 4 weeks. The live numbers look fine. Then Legal asks <em>"can we go to 100% production traffic?"</em> and you realize you don't have the artifacts in place for that conversation.</p>
+
+  <p>This article is the buyer-side checklist. The 7 questions compliance, infosec, and outside counsel will ask &mdash; and the exact artifacts they want to see in writing. If you can answer all 7 with a document (not a Slack thread), you're 80% through audit. The remaining 20% is what the <a href="#audit-cta">$500/24h Atlas audit</a> walks end-to-end.</p>
+
+  <div class="toc">
+    <strong>What's in this checklist</strong>
+    <ol>
+      <li><a href="#q1-escalation-policy-as-code">Escalation policy as code, not as a prompt</a></li>
+      <li><a href="#q2-refund-authority">Refund authority ceiling and idempotency keys</a></li>
+      <li><a href="#q3-intent-class-drift">Intent-class drift detection (not just accuracy)</a></li>
+      <li><a href="#q4-post-call-summaries">Post-call summary hallucination into the CRM</a></li>
+      <li><a href="#q5-pii-llm-trace">PII on LLM-trace retention + deletion propagation</a></li>
+      <li><a href="#q6-tool-call-replay">Tool-call join-table reconstructibility ("can we replay the agent's 14 tool calls?")</a></li>
+      <li><a href="#q7-rollback">A documented under-60-minute rollback runbook</a></li>
+    </ol>
+  </div>
+
+  <h2 id="q1-escalation-policy-as-code">Q1. Escalation policy as code, not as a prompt</h2>
+  <div class="q"><strong>The question:</strong> "Show me the canonical escalation policy that decides when this agent stops talking and a human takes over."</div>
+
+  <p>If the answer is "we have a few lines in the system prompt that say escalate when angry / when asked for a manager / when the refund is over $X", you do not have an escalation policy. You have <em>prompts that influence behavior</em>. Three failure modes will show up in audit:</p>
+  <ul>
+    <li><strong>Prompt-only escalation is invisible at review time.</strong> The auditor asks "show me the policy as of last Tuesday" and the answer is "we can rebuild it from the prompt as of last Tuesday." That's not a policy. That's a memory.</li>
+    <li><strong>It drifts weekly.</strong> Every prompt-engineering PR is an unknown audit-relevant change. Without policy-as-code, you can detect &Delta;prompt but not &Delta;behavior against an explicit policy.</li>
+    <li><strong>A/B variants multiply the audit surface.</strong> If you're running two prompt variants, you now have two policies (or none). Auditors want one explicit, version-controlled policy.</li>
+  </ul>
+
+  <p><strong>The artifact compliance wants:</strong> a structured file (YAML / TS / Python dict) that says <code>IF intent IN (cancel_account, refund_complaint, legal_threat) THEN escalate; IF sentiment &lt; -0.7 OR detected_threats THEN escalate; IF consecutive_agent_failures &gt;= 2 THEN escalate</code>. That file &mdash; not the prompt &mdash; is the policy. The prompt can change around it. The policy cannot.</p>
+
+  <p><strong>What Atlas checks:</strong> are escalation triggers recorded as explicit predicates (in code) vs. soft language in a prompt? Are the predicates testable (deterministic, no LLM in the loop)? Do they have unit tests? If "we tested it on 200 conversations last month" is the strongest evidence, you have a regression waiting to ship.</p>
+
+  <h2 id="q2-refund-authority">Q2. Refund authority ceiling + idempotency keys</h2>
+  <div class="q"><strong>The question:</strong> "What is the maximum dollar refund your agent can issue without human approval, what is the unique-key structure that prevents the same ticket being refunded twice, and what is the kill switch?"</div>
+
+  <p>Three numbers compliance wants in writing:</p>
+  <ul>
+    <li><strong>Refund ceiling per ticket</strong> (e.g. $50 for L1, $250 for L2 with supervisor approval, $0 for new accounts &lt; 14 days)</li>
+    <li><strong>Refund ceiling per customer per rolling 30 days</strong> (e.g. $300 aggregate)</li>
+    <li><strong>Aggregated agent-spend ceiling per business day</strong> (e.g. $5,000/day before the agent's refund tool gets revoked)</li>
+  </ul>
+
+  <p>If the answer to any of these is "the agent can refund any amount within Stripe's limits", the auditor will pause the rollout. The cumulative-risk question (could the agent issue $50K in fraudulent refunds in a 24-hour shift?) has to have a numerical answer.</p>
+
+  <p><strong>The artifact compliance wants:</strong> the refusal policy in the same policy-as-code file as escalation. Refund tool wrapper that enforces the ceiling server-side (not in the prompt). A daily-reset kill switch wired to your billing ops dashboard.</p>
+
+  <p><strong>Idempotency keys:</strong> Stripe's `Idempotency-Key` header is the canonical example. If the agent retries a refund call because the previous one timed out, the second call returns the same object rather than double-refunding. The audit shows the agent's wrapper generates a stable key (e.g. `hash(ticket_id + customer_id + amount)`) and passes it on every retry. Without this, your dup-refund risk is a known &mdash; and acceptable to operations, but never to audit.</p>
+
+  <h2 id="q3-intent-class-drift">Q3. Intent-class drift detection (not just accuracy)</h2>
+  <div class="q"><strong>The question:</strong> "How are you detecting that the agent's intent classification has drifted &mdash; and at what interval do you re-evaluate?"</div>
+
+  <p>Production intent classifiers drift. The distribution of inbound intents shifts as products change, as new billing disputes emerge, as fraud campaigns target a known classifier. The classifier's accuracy last month can be very different from today's.</p>
+
+  <p>"We monitored the agent's accuracy on a labeled eval set" is the wrong answer &mdash; unless that eval set refreshes on a rolling basis and the drift threshold triggers a pull-back. The audit wants:</p>
+  <ul>
+    <li><strong>Eval set construction:</strong> stratified sample across intent classes, refreshed monthly from real production conversations (redacted + annotated).</li>
+    <li><strong>Drift metric:</strong> pre-trained classifier's top-1 accuracy on the current refresh vs. a frozen baseline (e.g. 30 days ago). Threshold: drop of >3% top-1 accuracy triggers a hold.</li>
+    <li><strong>Re-evaluation cadence:</strong> weekly on a 500-conversation stratified sample. Monthly full refresh of the eval set itself.</li>
+  </ul>
+
+  <p><strong>Why "we monitor accuracy" fails audit:</strong> without an explicit pre/post drift comparison and an explicit threshold + hold-back action, you have monitoring, not governance. Audit wants the latter.</p>
+
+  <h2 id="q4-post-call-summaries">Q4. Post-call summary hallucination into the CRM</h2>
+  <div class="q"><strong>The question:</strong> "When the agent writes a summary back to Zendesk / Salesforce after the call, how do you detect that the summary isn't a hallucination that will mislead the next human agent?"</div>
+
+  <p>Post-call summarization is the highest-leverage hallucination surface. If the agent tells the human agent next-shift "the customer agreed to a 30% credit" and the customer agreed to nothing, that's a downstream lie that humans will act on with no second pass.</p>
+
+  <p><strong>The artifacts compliance wants:</strong></p>
+  <ul>
+    <li><strong>Faithfulness score:</strong> a model that classifies each post-call summary sentence as Supported / Not-Supported by the actual transcript (a small open-source T5 / Llama-3.1-8B judge fine-tuned on 500 labeled summaries is the typical baseline).</li>
+    <li><strong>Hallucination ceiling:</strong> if &gt; 4% of summary sentences are Not-Supported on the last 1,000 calls, the summary feed to the CRM is paused; humans read the raw transcript instead.</li>
+    <li><strong>CRM-summary traceability:</strong> the summary in the CRM includes a link / reference back to the transcript IDs that generated each sentence, so a downstream human can audit any sentence in &lt; 60 seconds.</li>
+  </ul>
+
+  <p>Without a faithfulness score in production, the audit answer is "we trust the summary" &mdash; which is an answer that triggers a deeper audit (and not in your favor).</p>
+
+  <h2 id="q5-pii-llm-trace">Q5. PII on LLM-trace retention + deletion-request propagation</h2>
+  <div class="q"><strong>The question:</strong> "When the customer exercises their CCPA / GDPR right-to-deletion against their support ticket, do you also delete the LLM trace (prompt + completion) that referenced the ticket?"</div>
+
+  <p>Most CS agents operate in jurisdictions where the conversation transcript <em>is</em> the PII record. The LLM prompt includes the customer's name, address, order ID, last 4 of card. The completion includes the agent's tool-call payload (also PII). Both sides of the trace are PII.</p>
+
+  <p><strong>CCPA / GDPR delete propagation in 7 components:</strong></p>
+  <ol>
+    <li>The transcript (already covered &mdash; ops teams know this).</li>
+    <li>The LLM prompt log (LangSmith / Helicone / OpenAI log dashboard &mdash; <strong>often forgotten</strong>).</li>
+    <li>The LLM completion log.</li>
+    <li>The tool-call payloads (post-call summary, refund-receipt, escalation-ticket payload).</li>
+    <li>The vector store / embeddings index (the doc-chunks retrieved during RAG).</li>
+    <li>The eval set containing the conversation (if any).</li>
+    <li>The fine-tuning dataset (if any).</li>
+  </ol>
+
+  <p><strong>The artifact compliance wants:</strong> a documented PII-class map for each of those 7 stores, with the deletion mechanism per store (real-time delta propagation, periodic batch delete, or "we don't store this in this store"), and the test that proves a deletion request against a known customer ID removes the data from all 7 within 30 days.</p>
+
+  <p><strong>What Atlas checks:</strong> the trace-store inventory. Many teams discover they have 4 of the 7 covered and the other 3 &mdash; especially vector stores, eval sets, and LLM-log dashboards &mdash; silently persist.</p>
+
+  <h2 id="q6-tool-call-replay">Q6. Tool-call join-table reconstructibility</h2>
+  <div class="q"><strong>The question:</strong> "For a given customer-support ticket, can you reconstruct the full sequence of tool calls the agent made (and the order, the inputs, the outputs)? Within what SLA?"</div>
+
+  <p>Compliance will sometimes ask: "Ticket #44781 from March. Customer says the agent issued a refund without authorization. Show me the tool calls." The artifact is the full sequence &mdash; lookup_customer &rarr; fetch_orders &rarr; check_refund_eligibility &rarr; issue_refund($120) &rarr; send_email &mdash; with timestamps, payload sizes, response codes.</p>
+
+  <p><strong>Two failure modes:</strong></p>
+  <ul>
+    <li><strong>Tools live in different stores</strong>: customer-lookup in your CRM DB, refund in Stripe, escalation in Zendesk. The "join key" is the ticket ID, but the four tables aren't joined in any single dashboard. The forensic join is a 4-engineer investigation.</li>
+    <li><strong>Tool-call payloads are not stored</strong>: the agent calls `issue_refund(customer_id=... , amount=...)` and you log "refund issued" but not the full call arguments. When audit asks "show me what was actually sent", you have the receipt but not the agent's reasoning.</li>
+  </ul>
+
+  <p><strong>The artifact compliance wants:</strong> a single queryable log (OpenTelemetry-style) keyed on the conversation_id that joins all tool calls with their full payloads, timestamps, and response codes. Typical stack: LangSmith / Langfuse / Helicone + your existing observability backend (Datadog / Sentry / Sumo).</p>
+
+  <h2 id="q7-rollback">Q7. A documented under-60-minute rollback runbook</h2>
+  <div class="q"><strong>The question:</strong> "When the agent goes wrong in production, what is the SLA for returning to 100% human-routed traffic? Who has the on-call? What is the trigger?"</div>
+
+  <p>Compliance treats this as a business-continuity question. The answer must be:</p>
+  <ul>
+    <li>A trigger condition (e.g. CSAT drops &gt; 8 points, escalation rate &gt; 25%, faithfulness score &lt; 0.92).</li>
+    <li>A switch (typically a feature flag in your routing layer, e.g. <code>agent_enabled = false</code>).</li>
+    <li>An owner on-call (PagerDuty rotation, SLA &lt; 30 min acknowledge, &lt; 60 min to flip).</li>
+    <li>A documented runbook (this exact sequence, dry-run quarterly).</li>
+  </ul>
+
+  <p>"We can turn it off in the admin UI" is not a runbook &mdash; it's a feature. The runbook is the document that says: who, in what order, what to test after, what to communicate to legal/customers, and what the recovery timeline looks like.</p>
+
+  <h2>The 7-question summary table</h2>
+  <table>
+    <thead><tr><th>#</th><th>Question</th><th>The artifact compliance wants</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Escalation policy</td><td>Policy-as-code (TS/YAML, version-controlled), unit tests</td></tr>
+      <tr><td>2</td><td>Refund authority</td><td>Per-ticket ceiling + per-customer-per-30d ceiling + daily-aggregate kill switch + idempotency keys</td></tr>
+      <tr><td>3</td><td>Intent drift</td><td>Refreshed eval set + drift metric + hold-back threshold + re-eval cadence</td></tr>
+      <tr><td>4</td><td>Post-call summary faithfulness</td><td>Per-sentence Supported/Not-Supported judge + ceiling + CRM summary traceback links</td></tr>
+      <tr><td>5</td><td>PII deletion propagation</td><td>7-store inventory (transcript, prompt log, completion log, tool payloads, vector store, eval set, fine-tune set) + 30-day delete SLA test</td></tr>
+      <tr><td>6</td><td>Tool-call reconstructibility</td><td>Single conversation_id-keyed log (OTel-style) with full payloads</td></tr>
+      <tr><td>7</td><td>Rollback runbook</td><td>Trigger + switch + on-call + dry-run quarterly + recovery timeline</td></tr>
+    </tbody>
+  </table>
+
+  <h2>How to use this checklist</h2>
+  <p>If you're buying or building a CS agent in 2026, take this list to your next vendor-call or internal review. For each item, ask the vendor (or yourself) for the artifact. If the answer is "we have plans to add that" or "we do this in the prompt", the rollout isn't ready.</p>
+
+  <p>The Atlas audit walks each of these 7 questions against your live deployment. You get the 7 artifacts in a single Markdown document (and the cross-references to the LLM trace, eval harness, and policy-as-code that back each one), the gaps prioritized by audit risk, and the 24-hour SLA to deliver. <strong>$500 flat, no follow-up.</strong></p>
+
+  <div class="cta" id="audit-cta">
+    <h3 style="margin-top:0">Atlas $500/24h audit &mdash; the 7-answer document for your CS agent</h3>
+    <p>You get: the policy-as-code file (escalation), the refund ceiling + idempotency wrapper, the drift detector + eval set refresh recipe, the faithfulness judge + 4% threshold, the 7-store deletion map, the OTel join-table schema, and the rollback runbook. All in one Markdown doc, all referenced to the live trace. 24 hours from kickoff, or your audit is free.</p>
+    <p><a href="https://buy.stripe.com/00wdR9gENfjL9rm6Zhd QM6">$500 audit &mdash; Stripe Checkout &rarr;</a> &nbsp; | &nbsp; <a href="mailto:audit@talonforge.io">audit@talonforge.io</a> &nbsp; | &nbsp; <a href="https://talonforgehq.github.io/atlas-store/#ai-agent-pilot-program">Pilot Program article</a> &nbsp; | &nbsp; <a href="https://talonforgehq.github.io/atlas-store/#enterprise-conversational-ai-audit-checklist-2026">SOC 2 / GDPR / CCPA audit checklist</a></p>
+  </div>
+
+  <footer>Field Note &middot; <a href="https://talonforgehq.github.io/atlas-store/">Talon Forge</a> &middot; Atlas is the agent operating system behind Talon Forge LLC. Updated 2026-07-11.</footer>
+</body>
 </html>
