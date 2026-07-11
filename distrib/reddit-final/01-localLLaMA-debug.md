@@ -1,12 +1,13 @@
 Title: Spent 3 hours today on a silent LLM loader bug. Posting the autopsy so you don't.
 
-I shipped a multi-provider LLM client today (Ollama → OpenAI → Anthropic → MiniMax fallback chain) and burned 3 hours on the dumbest bug.
+I shipped a multi-provider LLM client today (Ollama → OpenAI → Anthropic → fallback chain) and burned 3 hours on the dumbest bug.
 
 **Symptom:** Every LLM call returned empty content string. No exception. No 4xx/5xx. The provider dashboard showed the request landed, the response came back, but `response.choices[0].message.content` was `""`.
 
+With the recent HN threads about AI agents bankrupting operators + deleting databases, I figured this autopsy might help.
+
 **What I had:**
 ```python
-# engine/llm/client.py
 class LLMClient:
     def __init__(self):
         provider = os.environ.get("LLM_PROVIDER", "openai")
@@ -38,5 +39,7 @@ if not content or not content.strip():
 Plus a guard at startup that validates `os.environ.get(...)` returns non-None for the active provider's expected key name.
 
 **The deeper lesson:** When you have N providers behind one interface, a silent empty-content return is worse than a 500. Your retry logic treats it as success, your idempotency layer thinks it's a duplicate, and your cost dashboard thinks the call was free (no tokens = $0).
+
+For everyone shipping multi-provider agents in 2026 — the silent failure is the #1 way you go broke or corrupt data without knowing.
 
 Anyone else hit this with multi-provider fallback chains? Curious how others handle the "provider succeeded but returned garbage" case — that's the case my old single-provider code never had to think about.
