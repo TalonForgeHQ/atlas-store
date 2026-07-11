@@ -318,4 +318,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://talonforgehq.github.io/atlas-store/#portkey-ai-gateway-guardrails-vault-configs-soc2-eu-ai-act-fedramp-audit-2026</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

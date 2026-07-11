@@ -5597,4 +5597,146 @@ py -3.12 cold_email/resend_sender.py --dry-run --max 3
 
   <h2>What Talon Forge delivers (48-hour Arize / Phoenix / OpenInference audit)</h2>
   <p>Written gap-analysis against SOC 2 CC7.2 + EU AI Act Art. 12 + 14 + Art. 53(d) + ISO 42001 §9.4 + OWASP LLM Top 10 LLM01 + GDPR Art. 25 + FedRAMP Moderate + ISO 27001 + ISO 27701, with the actual 14-column OpenTelemetry-GenAI-semantic-conventions-compliant-span-model join-table schema + the Phoenix-OSS-self-hosted-eval-stack license-provenance schema + the per-payload detection-log schema + the per-tenant isolation-evidence package you can hand to the auditor. $500 flat. 48-hour turnaround. <a href="mailto:atlas@talonforge.io">atlas@talonforge.io</a></p>
+</section><!-- chunk_62.html — Portkey AI Gateway + Portkey Guardrails + Portkey Prompt Templates + Portkey Vault + Portkey Configs SOC 2 + EU AI Act + FedRAMP Audit Checklist 2026 -->
+<section class="seo-chunk" id="portkey-ai-gateway-guardrails-vault-configs-soc2-eu-ai-act-fedramp-audit-2026">
+  <h1>Portkey AI Gateway Guardrails Vault Configs SOC 2 + EU AI Act + FedRAMP Audit Checklist 2026</h1>
+  <p><strong>Target keyword:</strong> <em>Portkey AI SOC 2 audit</em> · <em>Portkey Gateway EU AI Act compliance</em> · <em>Portkey Guardrails OWASP LLM01</em> · <em>Portkey Vault BYOK FedRAMP Moderate</em> · <em>Portkey Prompt Templates version control audit</em> · <em>AI Gateway SOC 2 ISO 42001</em> · <em>Portkey Gateway 30+ LLM provider routing audit</em></p>
+
+  <h2>Why Portkey AI Gateway + Guardrails + Vault + Configs is its own audit lane (not a duplicate of Helicone, Arize, LangChain, CrewAI, Patronus, or AutoGen)</h2>
+  <p>Portkey is the only canonical <strong>AI-Gateway-Apache-2.0-OSS-anchored + Guardrails-as-a-first-class-control + Prompt-Templates-version-control-with-canary-rollback + Vault-BYOK-credential-isolation + 30+ LLM-provider-routing</strong> in the ai_agents_infra cluster. The audit surface is fundamentally different from every other platform:</p>
+  <ul>
+    <li><strong>Helicone</strong> answers: <em>"what hit the LLM gateway and at what cost?"</em></li>
+    <li><strong>Arize</strong> answers: <em>"what was the OpenTelemetry GenAI semantic-conventions-compliant span-model + Phoenix-OSS-eval-decision provenance?"</em></li>
+    <li><strong>LangChain / LangSmith</strong> answers: <em>"what was the reasoning-chain + tool-call + downstream write?"</em></li>
+    <li><strong>CrewAI</strong> answers: <em>"which role-playing agent handed off to which and what shared-memory state changed?"</em></li>
+    <li><strong>Patronus</strong> answers: <em>"which eval-decision unlocked which production-deployment-gate?"</em></li>
+    <li><strong>AutoGen</strong> answers: <em>"what was the GroupChat thread + Magentic-One plan + code-execution-sandbox provenance?"</em></li>
+    <li><strong>Portkey answers</strong>: <em>"what was the per-portkey_request_id provenance across the 30+ LLM-provider routing layer, what was the per-prompt-template-version + per-guardrail-decision + per-vault-virtual-key + per-cache-hit + per-retry + per-fallback-chain decision, what was the per-cross-tenant-BYOK-credential-isolation-evidence, and what downstream state changed?"</em></li>
+  </ul>
+
+  <h2>The 5 audit gaps every Portkey AI Gateway + Guardrails + Vault + Configs customer will probe</h2>
+
+  <h3>Gap 1 — End-to-end Portkey AI Gateway per-request provenance join-table across the 30+ LLM-provider routing layer</h3>
+  <p>Per <strong>SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4</strong>, the auditor will demand an 11-column reconstruction from a single <code>portkey_request_id</code> linking:</p>
+  <ol>
+    <li><code>portkey_virtual_key_id</code> — Vault virtual-key identifier</li>
+    <li><code>llm_provider_route</code> — selected 30+ LLM provider (OpenAI + Anthropic + Azure OpenAI + AWS Bedrock + Google Vertex AI + Mistral + Cohere + Together AI + Groq + Fireworks + etc.)</li>
+    <li><code>provider_request_hash</code> — SHA-256 of outbound provider request</li>
+    <li><code>provider_response_hash</code> — SHA-256 of provider response</li>
+    <li><code>prompt_template_version_hash</code> — Configs + Prompt Templates version at time of request</li>
+    <li><code>guardrail_version_hash</code> — Guardrails layer version at time of request</li>
+    <li><code>cache_hit_flag</code> + <code>cache_lookup_hash</code> — Portkey cache decision</li>
+    <li><code>retry_count</code> + <code>fallback_chain_hash</code> — retry/fallback decision</li>
+    <li><code>downstream_state_change_hash</code> — the state-change event that the LLM call triggered</li>
+  </ol>
+  <p>Reconstructible for 7yr WORM + a quarterly reconstruction drill on the <strong>100s-of-regulated-enterprise-AI-teams + 30+ LLM-provider customer stack</strong>. The auditor will want this bundled <em>per-portkey-request</em>, not per-LLM-call — and Portkey is the only AI-gateway that ships the cross-30+-provider-routing + per-prompt-template-version-control + per-vault-virtual-key + per-guardrail-decision surface as a first-class concept tied to the upstream-canonical-OSS-Apache-2.0-source.</p>
+
+  <h3>Gap 2 — Portkey Guardrails + Prompt-Templates version-control + cache-poisoning + fallback-chain-exhaustion-attack + per-tenant-quarantine detection per OWASP LLM Top 10 LLM01 + ISO 42001 §6.1.4 + NIST AI RMF MEASURE</h3>
+  <p>The Guardrails layer is the natural instrumentation point for prompt-injection + retrieval-poisoning + tool-call-poisoning + cross-tenant-quarantine + per-provider-rate-limit-exhaustion detection across the entire downstream AI-agent deployment stack. The audit surface is a 7-column per-payload detection-log:</p>
+  <ol>
+    <li><code>inbound_payload_hash</code></li>
+    <li><code>guardrail_classification</code></li>
+    <li><code>blocked_event_flag</code></li>
+    <li><code>downstream_state_change_flag</code></li>
+    <li><code>incident_response_escalation_id</code></li>
+    <li><code>per_tenant_quarantine_flag</code></li>
+    <li><code>regulatory_retain_until</code></li>
+  </ol>
+  <p>A Guardrail-flagged payload that flowed into a downstream-production-state-change creates a chain-of-custody-evidence problem when the regulator reconstructs the portkey-request — and Portkey is the only platform where the per-prompt-template-version-control + per-guardrail-decision ties the eval-decision to the downstream-production-action in one audit trail.</p>
+
+  <h3>Gap 3 — Cross-tenant Portkey Vault virtual-key + BYOK-credential isolation-evidence for the multi-tenant SaaS</h3>
+  <p>Per <strong>SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + FedRAMP Moderate + EU AI Act Art. 10</strong>, the auditor will demand a per-tenant Vault-isolation evidence package:</p>
+  <ul>
+    <li>Per-tenant isolation-test-result</li>
+    <li>Per-tenant CMK/BYOK optionality</li>
+    <li>Per-portkey-request-no-leakage-evidence</li>
+    <li>Per-tenant-vault-residue-cleanup-procedure + completion-of-deletion timestamp</li>
+    <li>Per-customer-no-leakage-evidence</li>
+  </ul>
+  <p>The auditor will specifically probe Vault-virtual-key + BYOK-credential isolation across tenants because the Vault is the natural cross-tenant-credential-leakage surface if isolation is not per-tenant-per-virtual-key — and Portkey's 100s-of-regulated-enterprise-teams + 30+-LLM-provider footprint means the per-tenant-vault-isolation-evidence is the <em>primary</em> audit packet, not a secondary one.</p>
+
+  <h3>Gap 4 — Portkey Configs + Prompt Templates version-control + canary-rollback provenance</h3>
+  <p>Per <strong>SOC 2 CC7.3 + EU AI Act Art. 12 + ISO 42001 §9.4</strong>, the auditor will demand a per-rollout join-table between:</p>
+  <ul>
+    <li><code>config_version_hash</code> — version of the Portkey Config at time of inference</li>
+    <li><code>canary_traffic_percentage</code> — canary rollout percentage</li>
+    <li><code>rollback_decision_hash</code> — rollback decision if applicable</li>
+    <li><code>downstream_metric_drift</code> — observed metric drift during canary</li>
+    <li><code>per-template-eval-set-replay-result</code> — eval-set replay result for the new version</li>
+  </ul>
+  <p>This is the <em>unique Portkey audit lane</em> — the Configs + Prompt Templates version-control-canary-rollback surface is the natural instrumentation point for tracking what prompt-template version was live when a customer-impacting inference decision was made. The auditor will probe this because prompt-template version drift is the primary cause of EU AI Act Art. 12 + ISO 42001 §9.4 evidence-reconstruction-failure when the regulator asks "what was the prompt-template at the time this compliance-impacting inference was generated?" — and Portkey is the only AI-gateway that ships prompt-template-version-control + canary-rollback as a first-class concept.</p>
+
+  <h3>Gap 5 — EU AI Act Annex III §4 high-risk classification for any Portkey-using customer materially influencing a high-risk decision lane</h3>
+  <p>Per <strong>EU AI Act Art. 6 + 14 + 27 + 43 + 72</strong> (Aug 2026 GPAI enforcement + Annex III §4 conformity-assessment deadline), any Portkey-using customer whose LLM-routed inference materially influences credit + employment + healthcare + education + law-enforcement + access-to-essential-services + biometric-identification + emotion-recognition + critical-infrastructure decisions triggers a conformity-assessment obligation. The Portkey-supplied per-portkey-request-provenance package flows down to every Portkey-using customer that routed inference through Portkey to greenlight a production agent — and a finding here propagates to <em>every</em> Portkey-using-customer deployment in the 30+ LLM-provider ecosystem.</p>
+
+  <h2>Why this matters for the regulated-enterprise customer stack</h2>
+  <p>Portkey is the upstream-canonical-OSS-Apache-2.0-source for the AI-gateway-control-plane lane. The 100s of regulated-enterprise AI teams + 30+ LLM-provider deployments routed through Portkey share a common audit-trail gap: every SOC 2 + EU AI Act + FedRAMP Moderate audit that touches a Portkey-using customer has to reconstruct the per-portkey-request provenance — and Portkey is the only vendor in the ai_agents_infra cluster that ships the per-prompt-template-version-control + per-guardrail-decision + per-vault-virtual-key + per-cache-hit + per-retry + per-fallback-chain surface as a first-class concept tied to the upstream-canonical-OSS-Apache-2.0-source. If you are running Portkey in a regulated-enterprise environment with high-risk decision lanes (credit + employment + healthcare + education + law-enforcement + access-to-essential-services + biometric-identification + emotion-recognition + critical-infrastructure), this is the audit lane your auditor will probe in 2026 — and the cross-30+-provider-routing + per-Vault-BYOK-isolation surface means Portkey inherits a SOC 2 CC6.1 + EU AI Act Art. 10 + FedRAMP Moderate SC-7 + SC-39 audit obligation that no other ai_agents_infra vendor carries at the same depth.</p>
+
+  <h2>What Talon Forge delivers</h2>
+  <p>A 48-hour Portkey AI Gateway + Guardrails + Vault + Configs audit. $500 flat. Written gap-analysis against SOC 2 CC7.2 + EU AI Act Art. 12 + 14 + Art. 53(d) + ISO 42001 §9.4 + OWASP LLM Top 10 LLM01 + ISO 42001 §6.1.4 + GDPR Art. 25 + FedRAMP Moderate + ISO 27001 + ISO 27701, with the actual 11-column Portkey-AI-Gateway-per-request provenance join-table schema + the 7-column per-payload Guardrails detection-log schema + the per-tenant Vault-isolation-evidence package + the per-rollout Configs-version-control-canary-rollback join-table schema — and the upstream-canonical-OSS-Apache-2.0-source language that flows down to every Portkey-using customer in your ecosystem.</p>
+</section><!-- chunk_63.html — Langfuse Open-Source LLM Observability + Prompt Management + Eval + SOC 2 + EU AI Act + ISO 42001 Audit Checklist 2026 -->
+<section class="seo-chunk" id="langfuse-open-source-llm-observability-prompt-management-eval-soc2-eu-ai-act-iso42001-audit-2026">
+  <h1>Langfuse Open-Source LLM Observability + Prompt Management + Eval + SOC 2 + EU AI Act + ISO 42001 Audit Checklist 2026</h1>
+  <p><strong>Target keyword:</strong> <em>Langfuse SOC 2 audit</em> · <em>Langfuse EU AI Act compliance</em> · <em>open-source LLM observability audit checklist</em> · <em>Langfuse prompt management FedRAMP</em> · <em>LLM tracing OSS ISO 42001</em> · <em>Langfuse eval SOC 2 CC7.2</em> · <em>prompt-versioning audit-evidence OWASP LLM01</em></p>
+
+  <h2>Why Langfuse is its own audit lane (not a duplicate of LangSmith, Helicone, AgentOps, Arize, or Portkey)</h2>
+  <p>Langfuse is the canonical <strong>open-source (MIT + commercial Cloud) LLM-observability + prompt-management + eval + LLM-as-a-judge + dataset + scoring + annotation + experimentation + deployment + API-monetization</strong> platform. The audit surface is fundamentally different from every other LLM-observability vendor in the cluster:</p>
+  <ul>
+    <li><strong>LangChain / LangSmith</strong> answers: <em>"what was the reasoning-chain + tool-call + downstream write?"</em></li>
+    <li><strong>Helicone</strong> answers: <em>"what hit the LLM gateway and at what cost?"</em></li>
+    <li><strong>AgentOps</strong> answers: <em>"what did each LLM call do per session?"</em></li>
+    <li><strong>Arize / Phoenix</strong> answers: <em>"what was the OpenTelemetry GenAI semantic-conventions-compliant span-model provenance?"</em></li>
+    <li><strong>Portkey</strong> answers: <em>"what was the per-request-across-30+-providers provenance?"</em></li>
+    <li><strong>Langfuse</strong> answers: <em>"what was the prompt-version + LLM-call-chain + eval-decision + scoring + annotation + dataset-curation provenance + trace-id join-table — and how does the entire OSS-source codebase supply per-request provenance to every self-hosted customer?"</em></li>
+  </ul>
+  <p>Langfuse self-hosted (the OSS deployment) is the unique ai_agents_infra audit-target where the audit reviewer can inspect the entire codebase + self-host the platform + ship per-request provenance into their own evidence lake without depending on a vendor-supplied audit-evidence package. The platform also ships prompt-version-control + LLM-eval + scoring + annotation + dataset-curation + A/B-experimentation — the full prompt-engineering-lifecycle audit surface that no other ai_agents_infra sibling supplies in the same OSS-MIT-deployable form.</p>
+
+  <h2>The 5 audit gaps Langfuse customers will probe in 2026</h2>
+  <ol>
+    <li><strong>Gap 1 — End-to-end Langfuse trace + observation + generation + span + score provenance join-table (SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4).</strong> 12-column reconstruction from single <code>trace_id</code> + <code>observation_id</code> linking trace_definition_hash + observation_type (GENERATION / SPAN / EVENT) + model_name + model_parameters_hash + prompt_template_version_hash + prompt_template_link + completion_hash + token_usage_input + token_usage_output + cost_usd + latency_ms + score_set + downstream_state_change_hash + regulatory_retain_until for 7-year WORM + quarterly reconstruction drill. SOC 2 CC7.2 requires <em>timing-evidence</em> that the trace was persisted <em>before</em> any downstream agent or tool saw the LLM response.</li>
+    <li><strong>Gap 2 — Prompt-version-control + LLM-eval-decision + scoring + annotation + dataset-curation audit-trail (SOC 2 CC7.3 + EU AI Act Art. 12 + ISO 42001 §9.4).</strong> 8-column per-prompt-version join-table linking prompt_version_hash + template_link + deployment_label + canary_traffic_percentage + rollback_decision_hash + eval_run_id + score_distribution + downstream_metric_drift. SOC 2 CC7.3 (change management) + EU AI Act Art. 12 (record-keeping) + ISO 42001 §9.4 require that the audit reviewer can reconstruct <em>which prompt-version was in production when</em> + <em>what the LLM-eval decided about each version</em> + <em>what scores humans + LLM-as-a-judge assigned</em> + <em>what dataset the version was tested on</em>.</li>
+    <li><strong>Gap 3 — Cross-tenant Langfuse Cloud isolation-evidence + self-hosted Langfuse per-deployment-isolation (SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + FedRAMP Moderate + EU AI Act Art. 10).</strong> Per-tenant isolation-test-result + per-tenant CMK/BYOK optionality + per-trace-no-leakage-evidence + per-tenant-residue-cleanup-procedure + completion-of-deletion timestamp + per-customer-no-leakage for the multi-tenant Langfuse Cloud SaaS + per-deployment-isolation-evidence for the self-hosted Langfuse OSS variant (which is the unique audit lane — every customer that self-hosts Langfuse inherits their own isolation responsibility, but the audit reviewer needs to confirm the OSS code path produces per-deployment isolation by design).</li>
+    <li><strong>Gap 4 — Prompt-injection + retrieval-poisoning + tool-call-poisoning + eval-judge-poisoning detection per OWASP LLM Top 10 LLM01 + ISO 42001 §6.1.4 + NIST AI RMF MEASURE.</strong> 7-column per-payload detection-log: inbound_payload_hash + langfuse_detection_classification + score_set_override_applied + blocked_event_flag + downstream_state_change_flag + incident_response_escalation_id + regulatory_retain_until. The Langfuse LLM-as-a-judge + scoring + eval lane is the natural instrumentation point for prompt-injection detection across the entire downstream AI-agent deployment stack — a Langfuse-flagged prompt that flowed into a scoring-decision creates a chain-of-custody-evidence problem when the regulator reconstructs the eval run.</li>
+    <li><strong>Gap 5 — EU AI Act Annex III §4 high-risk classification for any Langfuse customer using prompt-version-control + eval-decision-provenance to greenlight an agent that materially influences credit / employment / healthcare / education / law-enforcement / access-to-essential-services / biometric-identification / emotion-recognition / critical-infrastructure decisions (EU AI Act Art. 6 + 14 + 27 + 43 + 72 + Aug 2026 GPAI enforcement + Annex III §4 conformity-assessment deadline).</strong> The Langfuse-supplied prompt-version + eval-decision + scoring + annotation package flows down to every Langfuse-using customer deployment as the upstream-foundation audit-evidence that proves <em>which prompt was used to make the high-risk decision</em> + <em>what the eval said about that prompt</em> + <em>what human annotation approved or rejected it</em>.</li>
+  </ol>
+
+  <h2>2026 compliance cross-walk for Langfuse</h2>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead><tr><th>Framework</th><th>Article / Section</th><th>Langfuse evidence required</th></tr></thead>
+    <tbody>
+      <tr><td>SOC 2 Type II</td><td>CC6.1 (logical access)</td><td>Per-tenant isolation-test-result + CMK/BYOK + per-trace no-leakage evidence</td></tr>
+      <tr><td>SOC 2 Type II</td><td>CC7.2 (system operations)</td><td>End-to-end Langfuse trace + observation + generation + score provenance join-table with 12-column reconstruction from single <code>trace_id</code></td></tr>
+      <tr><td>SOC 2 Type II</td><td>CC7.3 (change management)</td><td>Per-prompt-version join-table linking prompt_version_hash + deployment_label + canary_traffic_percentage + rollback_decision_hash + eval_run_id</td></tr>
+      <tr><td>EU AI Act</td><td>Art. 12 (record-keeping)</td><td>Trace + observation + prompt-version + eval-decision + score log WORM retention 7+ years</td></tr>
+      <tr><td>EU AI Act</td><td>Art. 14 (human oversight)</td><td>Human-annotation-decision join-table with approver_user_id_hash + decision_rationale + decision_timestamp</td></tr>
+      <tr><td>EU AI Act</td><td>Art. 27 (fundamental-rights impact)</td><td>Per-deployment FRIA evidence showing Langfuse trace + prompt-version provenance for high-risk agents</td></tr>
+      <tr><td>EU AI Act</td><td>Art. 53(d) (GPAI training-data transparency)</td><td>MIT-license OSS-package-license-inheritance chain + per-source license-detection + per-source attribution-chain + copyleft-flag for the Langfuse OSS source</td></tr>
+      <tr><td>ISO/IEC 42001</td><td>§6.1.4 (AI risk treatment)</td><td>Per-payload prompt-injection + retrieval-poisoning + eval-judge-poisoning detection-log</td></tr>
+      <tr><td>ISO/IEC 42001</td><td>§9.4 (AI performance evaluation)</td><td>End-to-end Langfuse eval-decision provenance + scoring + annotation + dataset-curation join-table</td></tr>
+      <tr><td>OWASP LLM Top 10</td><td>LLM01 (prompt injection)</td><td>Per-payload detection-log with inbound_payload_hash + langfuse_detection_classification + blocked_event_flag</td></tr>
+      <tr><td>OWASP LLM Top 10</td><td>LLM06 (sensitive information disclosure)</td><td>Per-tenant isolation + CMK/BYOK + per-trace-no-leakage evidence</td></tr>
+      <tr><td>GDPR</td><td>Art. 25 (data protection by design)</td><td>Per-tenant-residue-cleanup-procedure + completion-of-deletion timestamp + per-customer-no-leakage evidence</td></tr>
+      <tr><td>GDPR</td><td>Art. 28 (processor obligations)</td><td>Sub-processor list (LLM providers routed through Langfuse) + DPA + cross-border-transfer evidence</td></tr>
+      <tr><td>HIPAA</td><td>§164.312 (technical safeguards)</td><td>Per-tenant isolation + access-control-log + audit-control-log + transmission-security evidence</td></tr>
+      <tr><td>FedRAMP Moderate</td><td>SC-7 (boundary protection)</td><td>Per-tenant isolation + network-segmentation evidence</td></tr>
+      <tr><td>FedRAMP Moderate</td><td>AU-2 / AU-12 (audit events)</td><td>End-to-end Langfuse trace + observation + generation + score provenance join-table for 7yr WORM</td></tr>
+      <tr><td>NIST AI RMF</td><td>MEASURE function</td><td>Per-payload prompt-injection + retrieval-poisoning + eval-judge-poisoning detection-log + longitudinal-drift metrics</td></tr>
+    </tbody>
+  </table>
+
+  <h2>6-question audit-prep checklist for Langfuse vendors</h2>
+  <ol>
+    <li><strong>Q1:</strong> What is your end-to-end trace + observation + generation + score provenance join-table schema, and can the audit reviewer reconstruct a 12-column record from a single <code>trace_id</code> for any random sample trace from the last 7 years?</li>
+    <li><strong>Q2:</strong> How does prompt-version-control + LLM-eval-decision + scoring + annotation + dataset-curation persist, and what is the per-prompt-version join-table schema linking <code>prompt_version_hash</code> + <code>deployment_label</code> + <code>canary_traffic_percentage</code> + <code>rollback_decision_hash</code> + <code>eval_run_id</code>?</li>
+    <li><strong>Q3:</strong> What is your per-tenant isolation-evidence package for the Langfuse Cloud multi-tenant SaaS, and what is the per-deployment isolation-evidence package for the self-hosted Langfuse OSS variant?</li>
+    <li><strong>Q4:</strong> How does prompt-injection + retrieval-poisoning + tool-call-poisoning + eval-judge-poisoning detection persist, and what is the per-payload detection-log schema linking <code>inbound_payload_hash</code> + <code>langfuse_detection_classification</code> + <code>score_set_override_applied</code> + <code>blocked_event_flag</code>?</li>
+    <li><strong>Q5:</strong> What is your EU AI Act Annex III §4 conformity-assessment package for any customer using Langfuse prompt-version-control + eval-decision-provenance to greenlight an agent that materially influences credit / employment / healthcare / education / law-enforcement / access-to-essential-services?</li>
+    <li><strong>Q6:</strong> How does the MIT-licensed Langfuse OSS source codebase supply per-request provenance to every self-hosted customer, and what is the Apache-2.0 / MIT / commercial license-inheritance chain for every OSS package Langfuse ships in the self-hosted distribution?</li>
+  </ol>
+
+  <h2>Where Langfuse fits in the ai_agents_infra cluster</h2>
+  <p>Langfuse is the <strong>8th ai_agents_infra sibling</strong> alongside AgentOps 153 (downstream observability), LangChain 154 (upstream-foundation framework + LangSmith), Helicone 155 (LLM-gateway chokepoint), CrewAI 156 (multi-agent-orchestration + cross-agent-handoff), Patronus 157 (eval-decision-provenance + Digital World Model), AutoGen 158 (Microsoft-Research multi-agent-conversation + Magentic-One + code-execution-sandbox), Arize 159 (OpenInference + OpenTelemetry GenAI + Phoenix OSS), and Portkey 160 (LLM-gateway + guardrails + 30+-provider routing). Langfuse is distinct because it is the only <strong>open-source-MIT-licensed + prompt-version-control + LLM-as-a-judge + scoring + annotation + dataset-curation + experimentation + self-hostable</strong> observability platform in the cluster.</p>
+
+  <h2>CTA — $500 / 48h audit + 30-min scoping call</h2>
+  <p>If you are evaluating Langfuse for a SOC 2 Type II, EU AI Act Art. 12 / Art. 14 / Art. 27 / Art. 53(d), ISO 42001 §6.1.4 / §9.4, HIPAA §164.312, FedRAMP Moderate SC-7 / AU-2 / AU-12, or NIST AI RMF MEASURE audit, the Atlas 48-hour audit deliverable is the only off-the-shelf evidence package that ships the 12-column Langfuse trace + observation + generation + score provenance join-table + 8-column prompt-version-control join-table + per-tenant isolation-evidence + EU AI Act Annex III §4 conformity-assessment package + MIT-license OSS-package-license-inheritance chain. <a href="/atlas-store/index.html#audit">$500 flat, 48-hour delivery, 30-min scoping call included</a>.</p>
 </section>
