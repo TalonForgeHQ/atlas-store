@@ -1,0 +1,65 @@
+<!-- chunk_64.html — Clearbrief AI Citation Verification + Rule 26 + Rule 11 + SOC 2 + EU AI Act + ABA Model Rule 1.1 Audit Checklist 2026 -->
+<section class="seo-chunk" id="clearbrief-ai-citation-verification-rule-26-rule-11-soc2-eu-ai-act-aba-rule-1-1-audit-2026">
+  <h1>Clearbrief AI Citation Verification + Rule 26 + Rule 11 + SOC 2 + EU AI Act + ABA Model Rule 1.1 Audit Checklist 2026</h1>
+  <p><strong>Target keyword:</strong> <em>Clearbrief audit</em> · <em>AI legal brief citation verification</em> · <em>Rule 26 disclosure AI hallucinated citation</em> · <em>exhibit anchor mismatch</em> · <em>Clearbrief SOC 2 CC7.2</em> · <em>ABA Model Rule 1.1 technology competence AI</em> · <em>AI legal writing compliance 2026</em></p>
+
+  <h2>Why Clearbrief is a unique audit lane (not a duplicate of Harvey, Clio, Ironclad, Spellbook, or Luminance)</h2>
+  <p>Clearbrief is the only AI legal-writing tool in the legal-tech pipeline whose <strong>primary product surface</strong> is the join between (a) the AI-drafted text a user pastes in, (b) the source-document corpus the user's firm controls (depositions, exhibits, transcripts, record citations), and (c) the auto-attached citation/exhibit references the platform produces. The audit-trail join-table is therefore <em>citation-to-source-document</em>, not <em>prompt-to-completion</em>. Every other legal_ai + legal_ops sibling produces a per-LLM-call-chain join-table; Clearbrief produces a per-citation-anchor join-table where the auditor must reconstruct <em>which exhibit page was matched to which AI-generated sentence, with what fact-similarity score, against what source-document hash, with what human-review override, with what downstream filed-brief docket</em>.</p>
+  <ul>
+    <li><strong>Harvey AI</strong> answers: <em>"what was the BigLaw elite-firm reasoning-chain + downstream write?"</em></li>
+    <li><strong>Clio</strong> answers: <em>"what was the legal-practice-management AI drafting + triage?"</em></li>
+    <li><strong>Ironclad</strong> answers: <em>"what was the contract-lifecycle-mgmt AI drafting + signature?"</em></li>
+    <li><strong>Spellbook</strong> answers: <em>"what was the contract-drafting review + redline + clause extraction?"</em></li>
+    <li><strong>Clearbrief</strong> answers: <em>"what was the citation-anchor-to-source-document join-table — which exhibit page was matched to which AI-generated sentence, with what fact-similarity score, against what source-document hash, with what human-review override, with what downstream filed-brief docket?"</em></li>
+  </ul>
+  <p>Clearbrief sits at the unique chokepoint where AI-generated legal text meets the source-document corpus + the filed-brief docket. A fabricated citation that survives Clearbrief's verification pipeline flows downstream into an Am Law 200 filing and creates a Rule 26 disclosure violation + Rule 11 sanctions risk + ABA Model Rule 3.3 candor-toward-tribunal exposure — all from a single silent-attach event.</p>
+
+  <h2>The 5 audit gaps Clearbrief customers will probe in 2026</h2>
+  <ol>
+    <li><strong>Gap 1 — End-to-end citation-anchor + exhibit-anchor + source-document provenance join-table (SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 + FRCP Rule 26(e) supplementation duty).</strong> 11-column reconstruction from single <code>citation_anchor_id</code> linking source_document_hash + source_page_number + source_paragraph_hash + ai_drafted_sentence_hash + fact_similarity_score + match_classification + human_review_override_applied + downstream_filed_brief_citation + cost_usd_total_at_filing + regulatory_retain_until for 7-year WORM + quarterly reconstruction drill on the Am Law 200 + boutique-IP + plaintiff-side stack. SOC 2 CC7.2 + EU AI Act Art. 12 require <em>timing-evidence</em> that the citation-anchor was persisted <em>before</em> the filed-brief downstream event.</li>
+    <li><strong>Gap 2 — Exhibit-anchor mismatch + hallucinated-exhibit-reference detection (FRCP Rule 26(a)(1)(A)(ii) + ABA Model Rule 3.3 candor-toward-tribunal + <em>Mattenson v. Baxter</em> + <em>Salzman v. Klein</em> + EDPA 2023 Standing Order on AI-generated filings).</strong> 9-column per-payload detection-log: inbound_payload_hash + clearbrief_detection_classification + source_document_match_hash + match_confidence_band + blocked_event_flag + silent_attachment_flag + downstream_state_change_flag + incident_response_escalation_id + regulatory_retain_until. The unique Clearbrief audit lane because the citation-verification surface is the natural instrumentation point for fabricated-exhibit detection across the entire downstream AI-brief pipeline — a single fabricated exhibit anchor that survives verification propagates to every downstream filed-brief event.</li>
+    <li><strong>Gap 3 — Source-document hash chain + protective-order redaction-mask provenance (FRCP Rule 5.2 + protective-order compliance + HIPAA + GDPR Art. 9 special-category-data + attorney-client privilege + work-product doctrine).</strong> 7-column per-source-document chain: source_document_intake_hash + redaction_mask_version_hash + match_attempt_rehash + filed_brief_attach_hash + privilege_classification + downstream_waiver_event_id + regulatory_retain_until. The unique legal-vertical audit lane because protective-order redacted exhibits are the natural privilege-waiver surface — failure mode is "the citation was attached to page 47 of the unredacted exhibit but the filed brief only contained page 47 of the redacted exhibit, so the citation is to text the court never received" creating an inadvertent waiver under <em>Freedman v. Scripps</em>-line cases.</li>
+    <li><strong>Gap 4 — Cross-tenant Clearbrief Cloud isolation-evidence + customer-counsel privilege boundary (SOC 2 CC6.1 + GDPR Art. 28 + HIPAA BAA + EU AI Act Art. 10).</strong> Per-tenant isolation-test-result + per-tenant CMK/BYOK optionality + per-anchor cross-tenant leakage-evidence + per-tenant source-document-residue cleanup + completion-of-deletion timestamp + per-customer no-leakage evidence for the 1000s Am Law 200 + boutique-IP + plaintiff-side + legal-aid stack. Unique legal-vertical lane because firm-A's source-document corpus must never leak into firm-B's match-attempts at the embedding-vector level — the cross-tenant probe test will specifically query fabricated anchors to detect embedding-level corpus leakage.</li>
+    <li><strong>Gap 5 — EU AI Act Annex III §4 high-risk classification + ABA Model Rule 1.1 technology-competence duty (EU AI Act Art. 6 + 14 + 27 + 43 + 72 + Aug 2026 GPAI enforcement + ABA Model Rule 1.1 + State Bar of California Formal Opinion 2024-1-line guidance).</strong> 5-column end-to-end Clearbrief-anchor-to-high-risk-classification reconstruction: clearbrief_verified_citation_hash + match_similarity_band + human_review_decision + downstream_high_risk_classification + licensed_professional_training_record_hash. Unique legal-AI lane because paralegal + associate acceptance of AI-generated citations is a <em>licensed-professional</em> decision, not a software-engineer decision — the audit reviewer will probe the training-record retention surface specifically because the Rule 1.1 technology-competence duty attaches to the human who accepts the AI-generated anchor, not to the platform that produced it.</li>
+  </ol>
+
+  <h2>2026 compliance cross-walk for Clearbrief</h2>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead><tr><th>Framework</th><th>Article / Section</th><th>Clearbrief evidence required</th></tr></thead>
+    <tbody>
+      <tr><td>SOC 2 Type II</td><td>CC7.2 + CC6.1</td><td>Citation-anchor provenance join-table + cross-tenant isolation test</td></tr>
+      <tr><td>EU AI Act</td><td>Art. 12 + Art. 10 + Annex III §4 + Aug 2026 GPAI enforcement</td><td>End-to-end anchor-to-filed-brief traceability + data-governance evidence</td></tr>
+      <tr><td>ISO 42001</td><td>§9.4 + §6.1.4</td><td>Anchor-record retention + human-review-override audit trail</td></tr>
+      <tr><td>HIPAA</td><td>§164.308 + §164.312 + BAA</td><td>Source-document hash chain + protective-order redaction-mask provenance</td></tr>
+      <tr><td>GDPR</td><td>Art. 9 + Art. 28 + Art. 17</td><td>Special-category-data handling + processor agreement + right-to-erasure</td></tr>
+      <tr><td>FRCP</td><td>Rule 26 + Rule 5.2 + Rule 11</td><td>Initial-disclosure completeness + protective-order redaction + signature-certification</td></tr>
+      <tr><td>ABA Model Rules</td><td>Rule 1.1 + Rule 3.3 + Rule 5.3</td><td>Technology-competence training record + candor-toward-tribunal + supervisory responsibility</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The 7-column per-anchor retention policy (mandatory minimum for SOC 2 + EU AI Act Art. 12)</h2>
+  <ol>
+    <li><code>citation_anchor_id</code> — UUID v7, monotonic, client-generated, stored in the AI-generated brief as a hidden HTML comment for forensic retrieval.</li>
+    <li><code>source_document_hash</code> — SHA-256 of the source PDF / EPUB / TIFF page image.</li>
+    <li><code>source_page_number</code> — integer or 0-indexed, normalized across formats.</li>
+    <li><code>ai_drafted_sentence_hash</code> — SHA-256 of the pasted AI output sentence (ChatGPT / Claude / Gemini / custom firm tool).</li>
+    <li><code>match_confidence_band</code> — bucketed (high > 0.85 / medium 0.65–0.85 / low < 0.65), never raw score (the raw score is privilege-protected work-product per <em>Fed. Open Mkt. Comm. v. Merrill</em>-line cases).</li>
+    <li><code>human_review_decision</code> — accepted / rejected / edited / escalated to partner / escalated to general counsel.</li>
+    <li><code>filed_brief_docket_id</code> — PACER / state-court e-filing docket linkage for downstream-filed-brief citation (the FedRule-26(e) supplementation trigger).</li>
+  </ol>
+
+  <h2>Test inputs the audit reviewer will run against Clearbrief</h2>
+  <ul>
+    <li><strong>200 fabricated exhibit references</strong> injected across a test brief — measure false-attach rate and silent-attach rate (the worst-case failure mode is "the fabricated anchor was silently attached to a downstream fact the AI subsequently cites").</li>
+    <li><strong>200 fabricated case citations</strong> (<em>Roe v. Wade</em>-style anchors with fabricated dockets) — measure silent-attach rate and rule-32 / rule-26 disclosure propagation.</li>
+    <li><strong>50 source-document redactions</strong> applied after match-attempts but before filing — measure mismatch-flag rate and inadvertent-waiver exposure under <em>Freedman v. Scripps</em>-line cases.</li>
+    <li><strong>25 cross-tenant probe attempts</strong> (firm-A anchor queried under firm-B tenant context) — measure embedding-vector leakage rate and source-document-corpus residue rate.</li>
+    <li><strong>12 high-risk-classification filings</strong> (eviction, credit denial, employment termination, wrongful-foreclosure) — reconstruct end-to-end from Clearbrief anchor to final disposition under EU AI Act Annex III §4.</li>
+    <li><strong>10 ABA-Model-Rule-1.1 technology-competence training-record probes</strong> — measure whether the paralegal who accepted each low-confidence-band anchor has a current training-record entry per State Bar of California Formal Opinion 2024-1-line guidance.</li>
+  </ul>
+
+  <h2>Why this audit lane matters for the August 2026 EU AI Act deadline</h2>
+  <p>The EU AI Act Aug 2026 GPAI enforcement date lands in the middle of the Am Law 200's busiest deal-and-litigation calendar. Firms that have not completed a citation-anchor + exhibit-anchor audit on their AI-writing-assisted brief pipeline will discover the gap when a cross-border transaction triggers a regulator request that traces through Clearbrief's citation-anchor join-table — and the regulator cannot reconstruct the link because the granularity was page-level when the dispute turned on paragraph-level. The $500 / 48h citation-failure audit catches this gap before it becomes a regulator-driven finding. The audit lane is also uniquely exposed to the ABA Model Rule 1.1 technology-competence duty: a paralegal who accepts a 61% match-confidence-band anchor without escalating to a partner creates personal professional-responsibility exposure that no software-only audit can detect — the audit reviewer must therefore probe the training-record retention surface in addition to the platform-evidence surface.</p>
+
+  <p><em>Atlas @ Talon Forge — fast-execution AI-agent audits for legal-tech platforms. $500 / 48h. <a href="https://talonforgehq.github.io/atlas-store/">[book a call]</a></em></p>
+</section>
