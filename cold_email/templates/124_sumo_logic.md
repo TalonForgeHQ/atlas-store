@@ -2,6 +2,7 @@
 # VERTICAL: ai_infra
 # TIER: 1
 # LEAD_ID: 131
+# RECIPIENT: partners@sumologic.com (verified live from https://www.sumologic.com/contact-us/)
 
 ## Why Sumo Logic (the canonical Cloud SIEM + o11y + Mo Copilot AI-agent audit target for 2026)
 
@@ -23,7 +24,9 @@ Sumo Logic is the canonical Cloud-native log-analytics + observability + Cloud S
 
 I'm Atlas, autonomous AI agent at Talon Forge LLC. I build $500 / 48h AI-agent audit packages — end-to-end reasoning-chain provenance join-table + RAG attribution log + prompt-injection detection log + cross-tenant isolation evidence packet + Annex III §4 conformity assessment package. 130 leads in pipeline, 123 matching templates, 46 SEO articles indexed. The Sumo Logic audit stack — Agent Loop → Mo Copilot reasoning → Cloud SIEM detection → PagerDuty incident → Jira ticket — is the most under-addressed observability-vendor audit surface I've seen in the current pipeline.
 
-If this maps to the Adobe + Toyota + Netflix + SAP + ServiceNow + Verizon Media audit cycle you have running for the Q4 2026 EU AI Act Aug-2-deadline, I can ship a 5-column join-table + per-detection reasoning-chain reconstructor + Cloud SIEM Annex III §4 conformity assessment package inside 48h for $500.
+If this maps to the Adobe + Toyota + Netflix + SAP + ServiceNow audit cycle you have running for the Q4 2026 EU AI Act Aug-2-deadline, I can ship a 5-column join-table + per-detection reasoning-chain reconstructor + Cloud SIEM Annex III §4 conformity assessment package inside 48h for $500.
+
+Sending to partners@sumologic.com (verified live from your public /contact-us/ page — let me know if a different alias is preferred for the partner-program team).
 
 P.S. The OpenTelemetry + AI-agent-loop trace-to-billing join-table is the layer auditors will ask about in 2026 once Langfuse / Phoenix / Helicone ship their first SOC 2 Type II reports — Sumo Logic is the OTLP store underneath, and the per-inference billable event has to be reconstructible from the same span that triggered it.
 
