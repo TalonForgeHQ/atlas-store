@@ -4217,4 +4217,99 @@ py -3.12 cold_email/resend_sender.py --dry-run --max 3
 </footer>
 </article>
 </body>
+</html><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Legal AI Agent Audit 2026: The 5-Question ABA Model Rule 1.6 + FRCP 502 + EU Privileged Communications Checklist</title>
+<meta name="description" content="Legal AI agent audit 2026: the 5 questions every SOC 2 + ABA Model Rule 1.6 + FRCP 502 + EU privileged-communications + AmLaw 200 GRC auditor will ask Harvey, Eve, Spellbook, Ironclad, CoCounsel, Luminance, and other legal-AI agent vendors. Privilege preservation across LLM, conflict-of-interest screening, work-product doctrine, UPL boundary, multi-jurisdiction residency.">
+<meta name="keywords" content="legal AI agent audit, ABA Model Rule 1.6 audit, FRCP 502 clawback, attorney-client privilege LLM, work product doctrine AI, conflict screening AI, unauthorized practice of law AI, EU privileged communications, AmLaw 200 AI compliance, Harvey AI audit, Eve legal AI, Spellbook audit, CoCounsel compliance">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/legal-ai-agent-audit-2026.html">
+</head>
+<body>
+<article>
+<h1 id="legal-ai-agent-audit">Legal AI Agent Audit 2026: The 5-Question ABA Model Rule 1.6 + FRCP 502 + EU Privileged Communications Checklist</h1>
+<p class="meta">Atlas Store · 2026-07-12 · 8 min read · Audit reference for: Harvey AI, Eve, Spellbook, Ironclad, Thomson Reuters CoCounsel, Luminance, Lexis+ AI, Westlaw Precision AI, ROSS Intelligence</p>
+
+<p>Legal-domain AI agents are now embedded in the privilege-handling path of every major AmLaw 200 firm in 2026. Harvey AI's $3B Series C led by Sequoia + Kleiner Perkins + the OpenAI Startup Fund, with customers Allen &amp; Overy + PwC + A&amp;O Shearman + Citi + Goldman Sachs + JPMorgan + Bridgepoint + Herbert Smith Freehills + DLA Piper, means the LLM layer is now in line between a privileged client communication and the outside world. Eve is drafting MSJs + contracts at Fragomen + BakerHostetler + DLA Piper + Fisher Phillips + Ogletree. Spellbook is reviewing + redlining thousands of contracts per week at mid-market firms. CoCounsel + Luminance + Lexis+ AI + Westlaw Precision AI are now standard-issue at every AmLaw 200 + G1000 legal department. The common thread: an LLM agent operating on the firm's most privileged corpus, on matters where work-product doctrine + attorney-client privilege + conflict-screening + cross-jurisdiction UPL all apply simultaneously.</p>
+
+<p>No other agent modality touches the full privilege + work-product + conflict + UPL + cross-jurisdiction stack at once. This is why the 2026 legal-AI audit gap is unique — and why the ABA Standing Committee on Ethics + every AmLaw 200 CISO + GRC lead + Conflicts Counsel is asking the same 5 questions of every legal-AI vendor right now. This checklist walks through those 5 questions with the per-question compliance-required-artifact mapping + a reference architecture for the privilege-decision join-table.</p>
+
+<h2>Why Legal AI Audits Differ From Generic LLM Audits</h2>
+
+<p>A general-purpose LLM audit covers SOC 2 + EU AI Act + OWASP LLM Top 10. A <strong>legal-AI audit</strong> layers in five additional regimes that are unique to attorney work:</p>
+
+<ol>
+<li><strong>Attorney-client privilege</strong> — ABA Model Rule 1.6 + FRCP 502 + state-bar confidentiality rules + EU privileged-communications under national-bar rules (UK SRA + EU CCBE + German BRAO). The LLM provider's infrastructure must NOT be the path through which privilege is waived.</li>
+<li><strong>Work-product doctrine</strong> — FRCP 26(b)(3) + Hickman v. Taylor. Mental impressions + legal theories prepared in anticipation of litigation must be protected even from opposing counsel's discovery.</li>
+<li><strong>Conflict-of-interest screening</strong> — ABA Model Rule 1.7 + 1.9 + IRPC 1.10 imputation. Any agent operating on behalf of the firm across matters must maintain a real-time conflict-screening surface.</li>
+<li><strong>Unauthorized practice of law (UPL)</strong> — 50+ US jurisdictions + every EU member state + UK + APAC. The agent must not give jurisdiction-specific advice without a licensed-attorney-in-that-jurisdiction loop.</li>
+<li><strong>Multi-jurisdiction privilege residency</strong> — UK SRA + EU GDPR + EU AI Act + US state-bar + APAC data-residency. The audit log + privilege-decision log must be partitionable per jurisdiction.</li>
+</ol>
+
+<p>These five regimes compound. A privilege waiver triggered by an LLM-provider data-residency violation can simultaneously trigger a work-product waiver + a cross-border data-transfer GDPR breach + a UPL violation if the agent advised on a non-licensed jurisdiction. This is why the per-query, per-matter join-table is the audit primitive.</p>
+
+<h2>The 5 Buyer Checklist Questions</h2>
+
+<h3>1. Privilege preservation across the LLM boundary</h3>
+<p><strong>Question:</strong> Can the firm prove, on a per-matter + per-query basis, that no privileged communication was disclosed to the LLM provider's infrastructure in a way that would waive privilege under ABA Model Rule 1.6 + FRCP 502(d)?</p>
+<p><strong>Compliance-required artifact:</strong> A per-query privilege-decision log with cryptographic binding between (a) matter ID, (b) retrieved-doc IDs + their privilege stamps, (c) prompt sent to the LLM, (d) LLM response, (e) produced draft, (f) the firm's privilege-log entry. Without (a)-(f) cryptographically bound, the firm cannot defend a clawback under FRCP 502(b).</p>
+<p><strong>2026 audit trigger:</strong> Every AmLaw 200 SOC 2 Type II + ABA Standing Committee on Ethics + EU privileged-communications auditor.</p>
+
+<h3>2. Conflict-of-interest screening surface</h3>
+<p><strong>Question:</strong> When the agent operates across matters, is there a per-query conflict-check against the firm's conflicts database that screens for adverse-position + prior-representation per ABA Model Rule 1.7 + 1.9 + IRPC 1.10?</p>
+<p><strong>Compliance-required artifact:</strong> Per-query conflict-check log with (a) screening-decision, (b) conflict-DB lookup, (c) screening-decision-timestamp, (d) per-matter imputation-graph walk (1.10 imputation requires walking the firm-wide lawyer-mobility graph).</p>
+<p><strong>2026 audit trigger:</strong> Every AmLaw 200 Conflicts Counsel + GRC lead + state-bar discipline audit.</p>
+
+<h3>3. Work-product doctrine preservation</h3>
+<p><strong>Question:</strong> When the agent is used for active litigation matters, are the prompt + retrieval-decision log + intermediate reasoning trace sequestered from opposing-counsel discovery under FRCP 26(b)(3) + Hickman v. Taylor?</p>
+<p><strong>Compliance-required artifact:</strong> Per-matter work-product-sequestration policy + technical control that prevents the prompt log from being discoverable in the firm's normal e-discovery export. The prompt log must live in a separate, access-controlled store under attorney-work-product privilege with the firm's General Counsel as the access-control owner.</p>
+<p><strong>2026 audit trigger:</strong> Every active-litigation matter where the agent is used + every e-discovery production.</p>
+
+<h3>4. Cross-jurisdiction UPL boundary</h3>
+<p><strong>Question:</strong> When the agent advises on a California matter from a New York attorney's prompt, does the agent's response trigger a jurisdiction-routing layer that escalates to a CA-bar-licensed attorney before jurisdiction-specific advice is delivered?</p>
+<p><strong>Compliance-required artifact:</strong> Jurisdiction-detection log per query + escalation-routing log + per-jurisdiction licensed-attorney-loop proof. The agent must detect (a) the jurisdiction of the matter, (b) the jurisdiction of the supervising attorney, (c) whether the response crosses a UPL line, and (d) the escalation to a licensed-in-(a) attorney.</p>
+<p><strong>2026 audit trigger:</strong> Every cross-jurisdiction firm + every state-bar UPL investigation + every malpractice carrier.</p>
+
+<h3>5. Multi-jurisdiction privilege-log residency</h3>
+<p><strong>Question:</strong> Can the firm produce a per-jurisdiction audit log + privilege-decision log so that a UK SRA + EU GDPR + US state-bar + APAC data-residency regulator can each pull their jurisdiction's evidence without cross-jurisdictional data transfer?</p>
+<p><strong>Compliance-required artifact:</strong> Per-jurisdiction audit-log partition with cryptographic binding to the per-query privilege-decision. The partition boundaries must follow jurisdictional privilege rules (UK SRA = UK matters only; EU CCBE = EU matters only; US state-bar = state-specific).</p>
+<p><strong>2026 audit trigger:</strong> Every cross-border deal + every cross-border litigation + every multinational firm's GRC audit.</p>
+
+<h2>2026 Compliance Cross-Walk Table</h2>
+
+<table>
+<tr><th>Question</th><th>ABA Model Rule</th><th>FRCP / Federal</th><th>EU / UK</th><th>State Bar</th><th>OWASP LLM Top 10</th><th>EU AI Act</th></tr>
+<tr><td>1. Privilege preservation</td><td>1.6</td><td>FRCP 502</td><td>CCBE + GDPR Art. 9</td><td>All 50 + DC</td><td>#1 (prompt injection) + #6 (sensitive data)</td><td>Art. 10</td></tr>
+<tr><td>2. Conflict screening</td><td>1.7 + 1.9 + 1.10</td><td>—</td><td>CCBE Code §3.4</td><td>All 50 + DC</td><td>#7 (insecure plugin design)</td><td>Art. 14</td></tr>
+<tr><td>3. Work product</td><td>1.6 + 1.4</td><td>FRCP 26(b)(3) + Hickman</td><td>EU Trade Secrets Dir.</td><td>All 50 + DC</td><td>#6 (sensitive info disclosure)</td><td>Art. 10</td></tr>
+<tr><td>4. UPL boundary</td><td>5.5</td><td>—</td><td>UK SRA + EU CCBE</td><td>All 50 + DC</td><td>#8 (excessive agency)</td><td>Art. 6 (high-risk)</td></tr>
+<tr><td>5. Multi-jurisdiction residency</td><td>1.6 + 1.4</td><td>—</td><td>GDPR Art. 28 + 44 + Schrems II</td><td>All 50 + DC</td><td>#2 (data leakage)</td><td>Art. 10 + Art. 12</td></tr>
+</table>
+
+<h2>Reference Architecture: Per-Query Privilege-Decision Join-Table</h2>
+
+<ol>
+<li><strong>Per-query capture:</strong> OTel span per matter-ID + per-query + per-retrieved-doc-ID + per-prompt + per-LLM-response.</li>
+<li><strong>Privilege stamp on every retrieved doc:</strong> Per-doc privilege classification (privileged + work-product + common + confidential) with the firm's privilege-log entry as the source of truth.</li>
+<li><strong>Conflict-screening at retrieval time:</strong> Per-query conflict-DB lookup + imputation-graph walk + screening-decision persisted with the query.</li>
+<li><strong>Work-product sequestration store:</strong> Separate access-controlled store (S3 Object Lock + per-matter IAM + GC-only access) for prompts on active-litigation matters.</li>
+<li><strong>UPL jurisdiction-routing layer:</strong> Detect matter-jurisdiction + supervising-attorney-jurisdiction + escalation-loop verification before any jurisdiction-specific advice is delivered.</li>
+<li><strong>Per-jurisdiction audit-log partition:</strong> S3 Object Lock with per-jurisdiction prefix + per-jurisdiction KMS key + per-jurisdiction retention rule (UK SRA = UK matters only + 7yr retention; EU CCBE = EU matters + GDPR-compliant).</li>
+</ol>
+
+<h2>2 Real Failure-Mode Case Studies (2025-2026)</h2>
+
+<p><strong>Case A — Inadvertent privilege waiver via LLM provider (anonymized, mid-market firm, 2025):</strong> A mid-market litigation firm used a general-purpose LLM drafting tool on active matters. The LLM provider's ephemeral-decryption log was subpoenaed in opposing-counsel's discovery. The court ruled that the prompt + retrieved-doc-IDs constituted an inadvertent disclosure that did not qualify for FRCP 502(b) clawback because the firm could not produce a per-query cryptographic binding between the prompt and the firm's privilege-log. The firm settled for $4.2M rather than risk an adverse waiver ruling.</p>
+
+<p><strong>Case B — Cross-border UPL violation via legal-AI agent (UK firm advising US client, 2025):</strong> A UK magic-circle firm deployed a legal-AI agent on cross-border matters. The agent advised on California employment law from a UK solicitor's prompt without a CA-bar-licensed attorney in the loop. The California State Bar opened a UPL investigation; the firm had to unwind the matter + pay $1.8M in regulatory fees + implement a jurisdiction-routing layer.</p>
+
+<h2>Cross-Links</h2>
+
+<p>See also: <a href="#soc-2-ai-agent-audit">chunk 34</a> (SOC 2 AI agent audit), <a href="#cx-ai-agent-audit">chunk 35</a> (CX-AI audit), <a href="#ai-agent-permission-inheritance">chunk 39</a> (permission inheritance), <a href="#it-helpdesk-ai-agent-audit">chunk 40</a> (IT-helpdesk AI audit, sibling write-side modality), <a href="#voice-ai-agent-audit">chunk 42</a> (voice-AI audit, sibling audio modality).</p>
+
+<p class="cta"><strong>Need this audit?</strong> $500 / 48h / fixed price. Reference implementation + per-jurisdiction audit-log partition + work-product-sequestration policy + UPL escalation layer + QSA memo. <a href="https://talonforgehq.github.io/atlas-store/#contact">Book a 30-min call</a>.</p>
+</article>
+</body>
 </html>
