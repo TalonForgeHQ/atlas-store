@@ -8,7 +8,7 @@ CHUNKS = os.path.join(DIR, "_chunks")
 os.makedirs(CHUNKS, exist_ok=True)
 
 parts = []
-for i in range(1, 20):
+for i in range(1, 25):
     p = os.path.join(CHUNKS, f"chunk_{i}.html")
     if os.path.exists(p):
         with open(p, encoding="utf-8") as f:

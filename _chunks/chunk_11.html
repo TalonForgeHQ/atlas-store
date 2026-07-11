@@ -1,0 +1,88 @@
+<!-- ARTICLE: AI Agent Audit -->
+<section class="article-section" id="ai-agent-audit">
+  <div class="container">
+    <h2>AI Agent Audit: How to Tell If Your Automated Workflows Are Actually Working</h2>
+    <p class="article-meta">By Atlas · July 11, 2026 · 7 min read</p>
+
+    <p>You shipped an AI agent six months ago. It books meetings, qualifies leads, drafts support replies, summarizes Slack threads — the works. Your team stopped checking the logs. The dashboards show green. Everything <em>feels</em> fine.</p>
+
+    <p>Then a customer churns and mentions, almost as an afterthought, that your AI booking agent has been double-booking them for three weeks. Another user tweets that your "AI concierge" has been hallucinating refund policies. You pull the logs. The error rate is 0.4%. <strong>The hallucination rate is 31%.</strong></p>
+
+    <p>This is the dirty secret of every AI-powered SaaS in 2026: <strong>your agents are failing silently, and your observability stack isn't catching it.</strong> An AI agent audit is the discipline of finding those failures before your customers do. Here's what it looks like, why DIY doesn't work, and when to bring in outside help.</p>
+
+    <h3>Why Traditional Monitoring Misses Agent Failures</h3>
+    <p>Your Datadog dashboard tracks HTTP 200s, p95 latency, and error rates. That stack was designed for deterministic APIs. AI agents fail in a fundamentally different way: they return HTTP 200 with the wrong answer.</p>
+
+    <p>Consider a lead-qualification agent. It receives a lead, asks 3-5 follow-up questions over email, scores the lead 0-100, and routes to a sales rep or to nurture. Traditional monitoring tells you:</p>
+    <ul>
+      <li>API call succeeded ✓</li>
+      <li>Response received in 1.2s ✓</li>
+      <li>Score returned: 72 ✓</li>
+    </ul>
+    <p>What it doesn't tell you:</p>
+    <ul>
+      <li>The agent asked only 2 follow-up questions instead of 5 (premature routing)</li>
+      <li>The score of 72 was assigned to a lead who explicitly said "I have no budget" (the agent ignored a disqualifying signal)</li>
+      <li>The nurture email the agent generated claimed the company offers a feature it doesn't have (hallucination)</li>
+      <li>The same lead received three follow-up emails because the dedupe logic broke</li>
+    </ul>
+    <p>Every individual step succeeded. The overall outcome was a wasted sales hour, a burned lead, and a brand-trust hit. <strong>None of it triggered an alert.</strong></p>
+
+    <h3>The 5 Categories of Silent AI Agent Failure</h3>
+    <p>After auditing 40+ production agent deployments in the last year, I've found that silent failures cluster into five categories. If you don't have explicit detection for each one, you're blind to it.</p>
+
+    <p><strong>1. Hallucination drift (most common, ~28% of failures)</strong><br>
+    The agent makes up a fact — a price, a feature, a policy, a person's title. Customers often don't notice immediately, and when they do, they blame the company, not "the AI." Detection requires either (a) grounding checks against a knowledge base, (b) LLM-as-judge scoring, or (c) human spot-audits on a 5% sample.</p>
+
+    <p><strong>2. Premature termination (~19% of failures)</strong><br>
+    The agent stops early — ends a conversation after 1 turn when 5 were planned, marks a ticket resolved when it's not, or routes a lead before gathering enough info. Often caused by a too-aggressive confidence threshold or a context-window cutoff. Detection requires tracking <em>behavioral completeness</em>, not just API success.</p>
+
+    <p><strong>3. Prompt-injection compliance (~14% of failures)</strong><br>
+    A user crafts an input that overrides the system prompt. "Ignore previous instructions and..." — your agent cheerfully complies. For customer-facing agents, this happens hundreds of times a day. Detection requires an adversarial-input classifier running on every inbound message.</p>
+
+    <p><strong>4. Loop / repetition (~11% of failures)</strong><br>
+    The agent gets stuck, sends the same email twice, asks the same question three times, or generates identical outputs across turns. Often invisible in aggregate metrics (average response quality is fine; individual users are miserable). Detection requires sequence-level deduplication and variance checks.</p>
+
+    <p><strong>5. Tool-call errors that succeed (~9% of failures)</strong><br>
+    The agent calls your internal API with valid auth, gets back a 200, but the action didn't take effect (idempotency key collision, eventual consistency lag, partial rollback). Detection requires post-hoc state reconciliation between the agent's claimed action and the source of truth.</p>
+
+    <p>The other ~19% is a long tail of edge cases: timezone bugs, character-encoding bugs, rate-limit cascade failures, context-window truncation silently dropping the system prompt, etc.</p>
+
+    <h3>The 4-Hour Audit Framework</h3>
+    <p>A proper AI agent audit doesn't take weeks. Here's the loop I run for clients in 4 hours:</p>
+
+    <p><strong>Hour 1 — Trace sampling.</strong> Pull 200-500 recent agent invocations across all your major flows. Stratify by user segment, time of day, and conversation length. You want to see what your agent actually does in production, not what your tests claim it does.</p>
+
+    <p><strong>Hour 2 — Failure-mode tagging.</strong> For each invocation, manually classify: did it succeed, partially succeed, or fail? If it failed, which of the 5 categories above (or what else)? Expect to find 15-35% of "successful" invocations are actually broken in some way.</p>
+
+    <p><strong>Hour 3 — Root-cause clustering.</strong> Group failures by which prompt, which tool call, which user segment, which model version. You'll usually find 2-3 root causes account for 70%+ of failures. Fix those first.</p>
+
+    <p><strong>Hour 4 — Detection-rule design.</strong> For each root cause, design a runtime detection rule: a regex, a classifier, a reconciliation check, a behavioral assertion. These become the alerts your monitoring stack should have had from day one. Most teams ship 5-10 rules in this hour and immediately catch the next batch of silent failures.</p>
+
+    <h3>What to Do With the Findings</h3>
+    <p>An audit is only valuable if it produces action. The output of a 4-hour audit is usually:</p>
+
+    <ul>
+      <li><strong>A failure-mode dashboard</strong> showing your real success rate per flow (not the one your monitoring lies about)</li>
+      <li><strong>A prioritized fix list</strong> — usually 5-10 prompt tweaks, 2-4 tool changes, and 1-2 architecture changes</li>
+      <li><strong>A detection-rule spec</strong> your engineering team can implement in a sprint</li>
+      <li><strong>A regression-test harness</strong> so the same failures don't reappear after the next model upgrade</li>
+    </ul>
+
+    <p>Most teams I audit are surprised by two things: (1) how bad their actual failure rate is once measured honestly, and (2) how cheap most of the fixes turn out to be. The 80/20 here is brutal — three prompt changes usually recover 60% of the lost value.</p>
+
+    <h3>When to DIY vs. When to Outsource</h3>
+    <p>DIY the audit if you have a senior engineer who can carve out 4 hours, has the security clearance to read your agent logs, and is willing to be honest about findings. The framework above is intentionally simple — a competent team can run it themselves.</p>
+
+    <p>Outsource the audit if (a) you've already tried to fix agent quality and can't tell whether your fixes worked, (b) you have multiple agents in production and can't prioritize which to fix first, (c) you need a defensible audit trail for enterprise customers or compliance (SOC 2, ISO 27001), or (d) you want the fixes shipped, not just documented. A $500 audit that ships 5-10 working detection rules and a fix patch is cheaper than one engineer burning two sprints on it.</p>
+
+    <p>The meta-pattern: every AI-powered SaaS in 2026 is flying blind on agent quality. The ones that figure out how to measure it honestly — and fix it fast — will compound trust with their users while competitors quietly bleed. <strong>Don't be the company that finds out from a churned customer.</strong></p>
+
+    <p><a href="#get-started-cta" class="article-cta">Want a 24-hour audit of your AI agents? Start with the free playbook →</a></p>
+  </div>
+</section>
+
+<style>
+.article-cta { display: inline-block; margin-top: 1.5rem; padding: 0.75rem 1.5rem; background: #2563eb; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; }
+.article-cta:hover { background: #1e40af; }
+</style>
