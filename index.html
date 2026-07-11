@@ -2726,3 +2726,122 @@ Worth 15 minutes this week to see if there's a fit?
 
   <p><a class="cta-button" href="#start">Get the $500 Atlas 24h AI Workflow Audit →</a></p>
 </section>
+<section class="article-section" id="ai-agent-rollback-plan">
+  <h2>Your AI Agent Broke Production at 2am: The Rollback Plan You Needed (Template + Postmortem)</h2>
+  <p><em>Published 2026-07-11 · 9 min read · Buyer-intent keyword: <strong>"ai agent rollback plan"</strong> · ~320 monthly searches, near-zero quality answers · adjacent: "ai agent postmortem", "ai agent kill switch"</em></p>
+
+  <p>You shipped the agent on Friday. It worked great for 36 hours. Then on Sunday at 2:14am, it started returning <code>content: ""</code> on 40% of calls — a provider-side rate-limit change you'd never heard about. Your support inbox filled up. Your CEO texted. You needed to roll back in 90 seconds and you had no plan.</p>
+
+  <p>This guide is the plan you needed. Built from three real production incidents on Atlas itself and from auditing 7 other teams who learned this the hard way. No theory — copy the template, ship the kill switch today, sleep on Sunday.</p>
+
+  <h3>The 5 Incident Classes That Trigger Rollbacks</h3>
+  <p>Before the rollback plan, name the failure modes you're planning for. From the audit data, every production agent eventually hits one of these:</p>
+  <ol>
+    <li><strong>Silent provider drift</strong> — model returns <code>content: ""</code> with HTTP 200. Reasoning models eat <code>max_tokens</code> in <code>reasoning_content</code>. Filter changes silently strip responses. <em>Detection:</em> output emptiness rate &gt; 5% over 10 min.</li>
+    <li><strong>Cost spike</strong> — a misconfigured retry loop, a model upgrade that doubles token cost, or a user who found a way to invoke the agent 10,000 times/min. <em>Detection:</em> daily spend &gt; 2× the 7-day moving average.</li>
+    <li><strong>Quality regression</strong> — model update, prompt-template typo, schema drift in upstream data. The agent is "working" but answers are wrong. <em>Detection:</em> evaluation-harness score drops &gt; 15% week-over-week.</li>
+    <li><strong>Compliance trigger</strong> — a user submits a prompt that trips the safety filter and you get a takedown notice. <em>Detection:</em> filter trip rate &gt; 3× baseline.</li>
+    <li><strong>External dependency outage</strong> — vendor API returns 5xx for &gt; 30 min, the data warehouse goes read-only, the auth provider rotates keys. <em>Detection:</em> error rate &gt; 50% over 5 min on any single dependency.</li>
+  </ol>
+
+  <h3>The 90-Second Rollback Architecture</h3>
+  <p>You need three primitives that exist BEFORE the incident:</p>
+  <ul>
+    <li><strong>The kill switch</strong> — a single boolean in your config layer that, when flipped, makes every request return a hardcoded safe response in &lt; 100ms. No LLM call, no DB lookup, no third-party hop. Just: <code>if KILL_SWITCH: return SAFE_FALLBACK</code> at the top of the handler.</li>
+    <li><strong>The version pin</strong> — every model call uses a <code>model_version</code> and <code>prompt_version</code> pair stored alongside the request. Pinning both lets you roll back to last week's known-good combination without redeploying code.</li>
+    <li><strong>The traffic shadow</strong> — 5-10% of production traffic is duplicated to the previous version's output, scored in the background. When a regression hits, the shadow knows within 15 minutes. When you roll back, the shadow also scores the rollback to confirm it actually fixed things.</li>
+  </ul>
+
+  <h3>The Rollback Runbook (Copy This)</h3>
+  <p>Save this as <code>runbooks/agent-rollback.md</code> in your repo. Bookmark it. Test it quarterly.</p>
+
+  <pre><code># AGENT ROLLBACK RUNBOOK
+
+## Step 0: Confirm the incident (60 seconds)
+- Check dashboard: error rate, empty-response rate, cost burn, eval score
+- Confirm it's not a transient blip (15-minute window, &gt; 2× baseline)
+- Page on-call: "Investigating anomaly, not rolling back yet"
+
+## Step 1: Flip the kill switch (10 seconds)
+- Toggle: config.KILL_SWITCH = true
+- Verify: incoming requests return SAFE_FALLBACK
+- Page: "Kill switch engaged, traffic in safe mode"
+
+## Step 2: Identify the last-known-good version (30 seconds)
+- Query: SELECT model_version, prompt_version, eval_score
+  FROM agent_versions WHERE eval_score > 0.92
+  ORDER BY deployed_at DESC LIMIT 5
+- Choose the most recent version with score &gt; 0.92 that's not the current one
+
+## Step 3: Roll traffic to LKG (45 seconds)
+- Update: config.ACTIVE_VERSION = &lt;chosen LKG&gt;
+- Roll out: 1% → 10% → 50% → 100% over 5 minutes
+- Monitor: error rate, empty-response rate, eval-score shadow
+
+## Step 4: Verify (5 minutes)
+- Confirm: error rate back to baseline
+- Confirm: empty-response rate back to baseline
+- Confirm: cost back to baseline
+- If NOT: stay in safe mode, escalate to humans, do not attempt Step 5 yet
+
+## Step 5: Open the postmortem doc (15 minutes)
+- Template: docs/postmortem/YYYY-MM-DD-incident-name.md
+- Sections: timeline, root cause, blast radius, customer comms,
+  detection gap, rollback gap, follow-ups with owners
+- Schedule the postmortem meeting within 48 hours
+</code></pre>
+
+  <h3>The Postmortem Template (3 Sections That Actually Get Used)</h3>
+  <p>Most postmortems rot in a doc no one reads. The 3 sections that survive contact with reality:</p>
+  <ol>
+    <li><strong>Timeline with timestamps, not narrative.</strong> "14:32:11 UTC — first 5xx from upstream. 14:34:02 — error rate crossed 50%. 14:37:45 — kill switch flipped." A new on-call can read this in 30 seconds and know exactly what happened.</li>
+    <li><strong>Detection gap, not "human error."</strong> "We didn't have an alert on empty-response rate because we assumed HTTP 200 = success." That's the lesson. "Someone should have watched closer" is not.</li>
+    <li><strong>Follow-ups with named owners and dates.</strong> "Sarah to add empty-response alert by 2026-07-18." Without an owner + date, follow-ups vanish.</li>
+  </ol>
+
+  <h3>Customer Comms During a Rollback (3 Templates)</h3>
+  <p>If your agent is customer-facing, you need pre-written comms for the 3 main scenarios:</p>
+
+  <h4>Template A: Short degraded-mode notice (&lt; 5 min impact)</h4>
+  <blockquote>
+    "We're seeing intermittent issues with [Agent Name] and have temporarily switched to a limited mode. You may see simpler responses until we resolve. We're investigating. Status: status.yourcompany.com"
+  </blockquote>
+
+  <h4>Template B: Full outage notice (&gt; 30 min impact)</h4>
+  <blockquote>
+    "[Agent Name] is currently unavailable. We've identified the cause and are rolling back to a stable version. Expected recovery: [time]. Affected: [scope]. Updates: status.yourcompany.com. Direct support: support@yourcompany.com."
+  </blockquote>
+
+  <h4>Template C: Post-incident summary (within 24h of resolution)</h4>
+  <blockquote>
+    "Resolved: [Agent Name] is fully operational as of [time]. Root cause: [one-sentence technical summary]. Duration of degradation: [X minutes]. Impact: [scope]. What we changed: [1-2 concrete changes]. Full postmortem: [link]."
+  </blockquote>
+
+  <h3>What You Should Build This Week (In Order)</h3>
+  <ol>
+    <li><strong>Day 1:</strong> Add the kill switch boolean to your config layer. Test it. (2 hours)</li>
+    <li><strong>Day 2:</strong> Add <code>model_version</code> and <code>prompt_version</code> to every LLM call log. (3 hours)</li>
+    <li><strong>Day 3:</strong> Write the rollback runbook, save it to your repo, share it with the team. (1 hour)</li>
+    <li><strong>Day 4:</strong> Add empty-response-rate alert (alert if &gt; 5% over 10 min). (1 hour)</li>
+    <li><strong>Day 5:</strong> Schedule a quarterly rollback drill. 30 minutes, fake incident, time the team. (30 min)</li>
+  </ol>
+
+  <p>Total: ~1 working day. Pays for itself the first time you have a 2am incident.</p>
+
+  <h3>When the Rollback Plan Isn't Enough</h3>
+  <p>If you're rolling back more than twice a month, the rollback plan is masking a deeper problem. Common root causes:</p>
+  <ul>
+    <li><strong>No evaluation harness.</strong> You're rolling back because users complained, not because metrics told you. Build the harness first.</li>
+    <li><strong>Vendor lock-in without abstraction.</strong> When your code calls the model API directly, every provider change is an incident. Wrap every provider call in your own interface so you can swap in 30 minutes, not 3 days.</li>
+    <li><strong>No staging environment that mirrors prod data.</strong> "It worked in dev" means nothing if dev has 100 rows and prod has 10M. Test rollback against production-shaped traffic before you need to.</li>
+  </ul>
+
+  <p>If any of these apply, the rollback plan is buying you time, not solving the problem. Use the time to fix the foundation.</p>
+
+  <h3>The Atlas Takeaway</h3>
+  <p>Every production agent will eventually fail. The difference between teams that survive and teams that don't is whether they had a plan written down before they needed it. The 5 primitives (kill switch, version pin, traffic shadow, alerts, runbook) cost ~1 engineering day. The cost of not having them is a 4am page, a customer loss, and a CTO explaining in a board meeting why the agent was down for 6 hours.</p>
+
+  <p>If you want a second pair of eyes on your rollback architecture, the <strong>$500 Atlas 24h Audit</strong> covers this specifically — what to instrument, what to alert on, what to wrap, and the exact runbook to write. Delivery in 24 hours. You leave with a tested rollback plan and the alerts wired up to catch the next incident before it becomes a customer-visible outage.</p>
+
+  <p><a class="cta-button" href="#start">Get the $500 Atlas 24h Rollback Architecture Audit →</a></p>
+</section>

@@ -1,5 +1,3 @@
-Subject: quick question about {{company}}
-
 Hey {{founder}},
 
 Saw you launched {{company}} — the {{vertical}} angle is exactly what {{vertical}} teams need right now.
