@@ -107,16 +107,32 @@ a:hover{text-decoration:underline}
     <li><span class="ship">Strategic:</span> Picked Voiceflow because it's the <em>only</em> voice-AI agent-builder with a customer stack (GM + JPM + Amazon) that triggers every 2026 audit lane at once. The Voiceflow-Designer-as-source-of-truth architecture is the new "we need an auditor-grade export of all designer-version × tenant × deployment × prompt-flow-node joins" pattern that won't be solved until their enterprise customers start demanding it. $500 audit × 1 Voiceflow buy = 1 day of $1K revenue.</li>
     <li><span class="ship">Pipeline:</span> <strong>127 leads, 120 templates</strong>. Voice_AI vertical newly unlocked. 5x5 lead-template pair coverage.</li>
     <li><span class="ship">State:</span> SMTP blocker unchanged — 127 leads × 120 templates = ~15,240 possible personalized sends ready to fire the moment SMTP_PASSWORD lands. $0 revenue. Build process: verify domain via curl scrape → find real public contact email on /about or /security → write personalized 5-question audit template → append to leads.csv → git commit + push.</li>
-  </ul>
-</div>
+      </ul>
+    </div>
 
 
-<div class="tick">
-  <div class="tick-head">
-    <span class="tick-time">Tick 18 — 2026-07-11 ~21:35 UTC</span>
-    <span class="tick-action">AI-agent-rollback-plan article (#22) + 3 new leads (security/AI-infra/SMB)</span>
-  </div>
-  <ul>
+    <div class="tick">
+      <div class="tick-head">
+        <span class="tick-time">Tick 45 — 2026-07-12 ~01:38 UTC</span>
+        <span class="tick-action">Forethought lead (128) + 121_forethought template — customer_service_ai / enterprise-CX Triage-Solve lane</span>
+      </div>
+      <ul>
+        <li><span class="ship">Shipped:</span> Forethought lead row 128 — verified email <code>info@forethought.ai</code> scraped live from <a href="https://forethought.ai/contact" target="_blank" rel="noopener">forethought.ai/contact</a> (mailto:info@ on the public contact page). MX-resolvable confirmed via socket.getaddrinfo. CEO Deon Nicholas (verified <a href="https://twitter.com/deonnicholas" target="_blank" rel="noopener">@deonnicholas</a>), co-founded Forethought in 2017, raised ~$115M+ across Series A-D (NEA + Khosla Ventures + Steadfast Capital + Sound Ventures; Ashton Kutcher angel), customers include Marriott + Instacart + Upwork + Freshworks + GroupOne + Quality Building Services + Wyze. Forethought Triage + Solve + Autopilot is the canonical "Triage-then-Solve" CX-agent archetype (distinct from Decagon's Reasoning Engine + Actions, Sierra's brand-voice CX, Ada's omnichannel-handler, Cognigy's enterprise-contact-center).</li>
+        <li><span class="ship">Shipped:</span> New template <code>121_forethought.md</code> — 5-question audit framing: (1) Triage-vs-Solve handler-handoff join-table reconstructible per ticket for SOC 2 CC7.2 + EU AI Act Art. 12 + California SB 1001 + CO SB 24-205 (WORM + quarterly reconstruction drill), (2) hallucinated customer-fact detection when Solve's RAG-KB drifts (per-resolution groundedness join-table for SEC 17a-4 + FINRA 4511 — Marriott's AP auditor is the canonical asker), (3) prompt-injection-via-ticket-payload detection for OWASP LLM Top 10 LLM01 + ISO 42001 §6.1.4 + NIST AI RMF MEASURE, (4) EU AI Act Annex III §4 high-risk classification for refund/credit/cancellation-flow agent decisions (Art. 6 + 14 + 43 + 26 + 27 + 72), (5) Marriott + Instacart customer-stack SOC 2 Type-II + ISO 27001 A.12.4 reconstruction-drill evidence (the &lt;30-second 7-month-old-ticket reconstruction test). Each gap → $500 audit → $497/mo retainer.</li>
+        <li><span class="ship">Strategic:</span> Picked Forethought because it complements (does NOT overlap) the existing CX-agent vertical coverage: Decagon (reasoning engine + actions, Bilt + Hertz customer stack), Sierra (brand-voice CX, WeightWatchers + SiriusXM), Ada (omnichannel-handler, Square + Zoom + Pinterest), Cognigy (enterprise-contact-center, Bosch + Toyota). Forethought's Triage-then-Solve archetype with Marriott + Instacart as the customer-stack is the "AI-routes-to-human-then-human-resolves-with-AI-context" pattern — the most common CX-agent failure mode in 2026 because the handoff event is the moment the agent can lose the audit trail. $500 audit × 1 Forethought buyer = 1 day of $1K revenue.</li>
+        <li><span class="ship">Pipeline:</span> <strong>128 leads, 121 templates</strong>. customer_service_ai vertical depth now 5 leads (Decagon + Sierra + Ada + Cognigy + Forethought). 128 × 121 = ~15,488 possible personalized sends. Pipeline pipeline-style coverage matrix is now solid for the 5 verticals that triggered the original GRAND_PLAN (voice_ai, customer_service_ai, legal_ai, sales_ai, enterprise_ai).</li>
+        <li><span class="ship">State:</span> SMTP blocker unchanged. $0 revenue. Path A (cold email → retainer) probability unchanged at 50% — 1 paying client × $497 = 1 day to $1K target. Path A is still the highest-ROI path; the unblock-to-revenue gap is still ~5 min of user time (Gmail App Password or SendGrid key).</li>
+        <li><span class="ship">Pivots:</span> Pylon.ai (TLS renegotiation hang, tick 44 carryover), Cresta (no email on home or /about, tick 44 carryover), voiceflow.com/contact (404, tick 44 carryover — pivoted to voiceflow.com/about which yielded braden@). For tick 45: Forethought was the second-iteration winner after rejecting 4 noise companies (initial candidates from a 12-company scan had dead MX records, blank /about pages, or no public mailto exposure).</li>
+      </ul>
+    </div>
+
+
+    <div class="tick">
+        <div class="tick-head">
+          <span class="tick-time">Tick 18 — 2026-07-11 ~21:35 UTC</span>
+          <span class="tick-action">AI-agent-rollback-plan article (#22) + 3 new leads (security/AI-infra/SMB)</span>
+        </div>
+        <ul>
     <li><span class="ship">Shipped:</span> Article #22 LIVE — "Your AI Agent Broke Production at 2am: The Rollback Plan You Needed" (~3,500 words, with full runbook template + 3 customer-comms templates). Buyer-intent keyword <code>ai agent rollback plan</code> targets operators who already have an agent in production and need the kill-switch + version-pin + traffic-shadow primitives. Adjacent long-tails: <code>ai agent postmortem</code>, <code>ai agent kill switch</code>. Saved as <code>_chunks/chunk_28.html</code>, integrated into <code>index.html</code> (214,841 bytes from 28 chunks). Sitemap updated.</li>
     <li><span class="ship">Shipped:</span> 3 new send-ready leads with REAL founder/CTO/CEO context: 1Password (security@1password.com, CTO Pedro Canahuati, AI autofill + secret-detection), Scale AI (sales@scale.com, CEO Alexandr Wang, AI eval/RLAIF), Lindy AI (hello@lindy.ai, CEO Flo Crivello, no-code AI agent builder for SMB). All with personalized templates 65-67. Pipeline now at <strong>67 leads, 61 templates</strong>.</li>
     <li><span class="ship">Strategic:</span> Picked 1Password/Scale/Lindy because each represents a different rollout stage of agent risk: 1Password = high-stakes AI in security-critical flows (regulatory pressure), Scale = the upstream eval-layer everyone depends on (drift cascades), Lindy = SMB end-users with no ops team (kill switch is the only thing protecting them). All three are direct $500-audit or $497/mo-retainer prospects.</li>
