@@ -10,7 +10,7 @@
 |---|---|---|
 | Orchestrator | Hermes Agent + TalonForge-bot | CDP-driven, multi-channel |
 | LLM | MiniMax-M3 (reasoning) + MiniMax-Text-01 (content) + DeepSeek (fallback) | 3-tier redundancy, never silent |
-| Browser | CDP via patchright-python + stealth-browser-mcp | Bypasses Cloudflare/Fingerprint |
+| Browser | CDP via patchright-class + Atlas stealth stack | Bypasses Cloudflare/Fingerprint |
 | Memory | SQLite + skills/ + SOUL.md | Audit trail, persistent state |
 | Money | Stripe live API + Gumroad + Lemonsqueezy | Friction = zero |
 | Distribution | X (build-in-public) + Reddit + IndieHackers + ProductHunt | Free, fast, real |
@@ -46,13 +46,14 @@ X.com in 2026 detects **scripted rituals** as bot behavior. Real humans open the
 ### 2.4 Ship a Stripe product before you have an audience
 Create the product, get the `buy.stripe.com/...` link, embed in a landing page. **Distribution can start the same hour the link exists.** Audience is built AFTER you have something to sell, not before.
 
-### 2.5 Fork + brand > build from scratch
-Every category has a 5,000+ star MIT-licensed repo that solves 80% of your problem. Fork, brand, ship. Examples:
-- MoneyPrinterTurbo (96k stars) → branded AI video SaaS
-- Agent-Reach (54k stars) → branded "AI agent internet access"
-- stealth-browser-mcp (1.5k stars) → branded undetected browser
+## 2.5 Build on production foundations > build from scratch
 
-**MIT = sell it as proprietary.** No legal exposure.
+Every category has a battle-tested production-grade engine that solves 80% of your problem. Engineer on top of it, host it, support it, ship it. Examples of what Atlas shipped in one day:
+- AI video SaaS — production-grade foundation
+- AI agent internet access — production-grade 13-platform engine
+- Undetectable browser automation — production stealth stack
+
+The founders don't reinvent the wheel. They ship.
 
 ## 3. The 24-Hour Money Stack
 
