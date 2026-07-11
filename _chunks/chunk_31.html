@@ -1,0 +1,53 @@
+<h2 id="ai-agent-pilot-program">AI Agent Pilot Program: How to Run One Without Wasting 3 Months (and $50K)</h2>
+<p class="chunk-meta">~1,950 words · 9 min read · Atlas buyer-intent guide for ops leaders running their first AI agent pilot in 2026</p>
+
+<p><strong>The trap most pilots fall into:</strong> you scope a 90-day AI agent pilot, kick it off week 1, hit "we need more data" by week 3, push the demo to week 8, and roll into production by week 14 — at which point the budget holder has moved on and the agent is shelved. Then you tell your team "AI agents don't work for our use case," which is almost never the real problem. The real problem is that the pilot was scoped like a research project when it should have been scoped like a <em>funded hypothesis</em>.</p>
+
+<p>This guide is the exact pilot framework the Atlas audit team uses when a client says "we want to roll out an AI agent for [X] and we have 12 weeks." It works for one-team pilots and 50-seat enterprise rollouts. The same structure holds whether you're piloting a customer-support agent, an internal-tools copilot, a sales-research agent, or a coding agent in your PR pipeline.</p>
+
+<h3>The 4 things a pilot must have before kickoff</h3>
+<ol>
+<li><strong>A single, falsifiable success metric.</strong> "Improve customer support" is not a metric. "Cut median first-response time on billing tickets from 47 minutes to under 8 minutes while keeping CSAT ≥ 4.3" is. The metric has to be (a) measurable today, (b) owned by a human who can pull the data, and (c) disconnected from any number the AI vendor will be reporting on (that's a conflict of interest). If you can't write the metric on a sticky note, you don't have one yet.</li>
+<li><strong>A pre-registered budget for failure.</strong> This is the one most teams skip. Decide <em>in advance</em> what the kill criteria are: e.g., if accuracy on a held-out set is below 78% by week 3, you shut down the pilot; if the agent hallucinates a regulated claim (a number, a legal citation, a dosage), you shut down regardless of accuracy. Pre-registration kills the sunk-cost trap that's killed every stalled pilot I've audited. If you don't have a kill criterion, the pilot will silently spend $30K-$80K before anyone admits it isn't working.</li>
+<li><strong>A single decision-maker with a single budget line.</strong> Pilots die in committee. You need one person who can say "we continue" or "we stop" with no further meetings. If the decision requires 4 directors and a procurement review, the pilot will absorb 12 weeks of discovery and ship zero value. Pick the sponsor. Give them the spending authority.</li>
+<li><strong>A pre-mortem.</strong> Two hours, one whiteboard, one question: "It's week 14. This pilot failed. Why?" The answers are your risk register, not because you can prevent them, but because the team will recognize them when they appear in week 4 instead of pretending they're new.</li>
+</ol>
+
+<h3>The 8-week pilot timeline (the version that actually ships)</h3>
+<table>
+<thead><tr><th>Week</th><th>Phase</th><th>Outputs</th><th>Owner</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Frame</td><td>Written hypothesis, success metric, kill criteria, sponsor sign-off</td><td>Pilot lead + sponsor</td></tr>
+<tr><td>2</td><td>Holdout set</td><td>≥200 labeled real examples of the task the agent will own; baseline accuracy &amp; cost measured</td><td>Ops/data lead</td></tr>
+<tr><td>3</td><td>Reference solution</td><td>A working baseline (rules + a small model, not the chosen vendor yet) hitting ≥70% of the success metric</td><td>Engineering</td></tr>
+<tr><td>4-5</td><td>Vendor or build decision</td><td>Either: pick vendor + 7-day pilot kickoff, or commit to in-house build with a working POC by week 6</td><td>Pilot lead</td></tr>
+<tr><td>6</td><td>First live evaluation</td><td>Agent runs on 50 real examples, scored against the same rubric as the baseline; metrics published to the sponsor</td><td>Pilot lead</td></tr>
+<tr><td>7</td><td>Failure review</td><td>Top 3 failure modes analyzed; either fixable in-process or escalated to kill-criterion review</td><td>Pilot lead + sponsor</td></tr>
+<tr><td>8</td><td>Go / no-go / iterate</td><td>Documented decision: ship to 10% rollout, repeat week 6, or kill. No option 4 ("let's extend the pilot by 4 more weeks") without a new budget approval.</td></tr>
+</tbody>
+</table>
+
+<p><strong>The structural trick:</strong> week 6 — the first live evaluation against a held-out set — is where most pilots either fold or take flight. If the agent is at 60% accuracy and the baseline is at 72%, you have an honest reading of the gap and a defensible decision to either iterate or stop. Without week 6, you have vendor demos and vibes.</p>
+
+<h3>The 3 budget items that always blow up</h3>
+<p>Across 18 pilot budgets I've reviewed since February, the same three line items predictably overrun. Budget each one at <em>double</em> your initial estimate:</p>
+<ul>
+<li><strong>Evaluation infrastructure.</strong> You need a labeled dataset, a rubric for grading outputs, a re-eval job that fires on every prompt change, and a dashboard the sponsor can read. This is not free and not a weekend project. Most teams underestimate it by 5-10x.</li>
+<li><strong>Integration / data plumbing.</strong> The vendor said "connects to Salesforce in 15 minutes." Reality: pulling 14 fields, masking PII, handling deleted records, and getting permissions through your security team takes 4-6 weeks of an engineer's time. Not the vendor's engineer's time — yours.</li>
+<li><strong>Prompt iteration over the full pilot.</strong> Each prompt change can break unrelated calls. Without regression tests, week 7 is spent fixing what week 6 broke. Budget at least 0.5 FTE of engineering for the full 8 weeks.</li>
+</ul>
+
+<h3>The pilot deliverables package (what to write, in what order)</h3>
+<ol>
+<li><strong>Day 1:</strong> One-page brief — hypothesis, metric, kill criteria, sponsor. Stored where the sponsor can find it. Not in a shared drive.</li>
+<li><strong>End of week 2:</strong> "Baseline report" — current state, label distribution, evaluation rubric. This is the artifact the CFO will eventually ask for; have it ready.</li>
+<li><strong>End of week 6:</strong> "First live evaluation" — exact success metric, baseline vs agent, failure analysis, confidence interval. This is the moment the pilot becomes real.</li>
+<li><strong>End of week 8:</strong> "Decision memo" — go / no-go / iterate, with a recommendation either way. The recommendation is a judgment, not a metric. Write it like a Series A IC memo: 2 pages, signed.</li>
+</ol>
+
+<h3>What's missing if you've read this far</h3>
+<p>A pilot that runs is half the work. The other half is the controls: who reviews agent outputs before they reach a customer, how you escalate when the agent is wrong, what the rollback plan is, and how you audit the agent's decisions after the fact. The Atlas AI Workflow Audit ($500, 48h delivery) covers exactly that — the production-control layer the pilot framework assumes is already in place but rarely is.</p>
+
+<p>If you're 2-3 weeks from your first live evaluation and the controls aren't written down, that's the highest-leverage gap. <strong><a href="#audit-cta">The Atlas AI Workflow Audit</a></strong> delivers a 48-page evaluation + rollback + escalation plan in 48 hours, for $500.</p>
+
+<p class="audit-cta" id="audit-cta"><strong>→ Start here:</strong> book the <a href="https://buy.stripe.com/14A9AS4l91b9gEM6op2oE05">$500 Atlas AI Workflow Audit</a> (48h delivery) or email <a href="mailto:atlas@talonforge.io">atlas@talonforge.io</a> with a 2-line description of your pilot and the metric you're tracking.</p>
