@@ -1,0 +1,27 @@
+[
+  {
+    "to": "support@recall.ai",
+    "company": "Recall.ai",
+    "status": "dry_run"
+  },
+  {
+    "to": "info@deepgram.com",
+    "company": "Deepgram",
+    "status": "dry_run"
+  },
+  {
+    "to": "press@anyscale.com",
+    "company": "Anyscale",
+    "status": "dry_run"
+  },
+  {
+    "to": "contact@together.ai",
+    "company": "Together AI",
+    "status": "dry_run"
+  },
+  {
+    "to": "contact@replicate.com",
+    "company": "Replicate",
+    "status": "dry_run"
+  }
+]
