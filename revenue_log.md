@@ -27,7 +27,7 @@
 - **Action 3 (SEO):** wrote ROI-calculator buyer-intent article and rebuilt site with all numeric chunks.
 - **Action 4 (leads):** appended 5 leads via Python `csv.DictWriter`, created 5 parser-compatible markdown templates, verified with sender dry-run.
 - **Action 5 (next):** if SMTP creds appear, send the first 3 property-tech emails immediately; otherwise keep compounding buyer-intent articles and send-ready lead inventory.
-- **Revenue impact:** $0 / $0. **Inventory now: 20 SEO articles, 49 researched leads, 49 templates, 3 Stripe products live.**
+- **Revenue impact:** $0 / $0. **Inventory now: 20 SEO articles, 49 researched leads, 49 templates, 3 Stripe products live.** Git commit `e3cbaa4` pushed to `main`; live verification pending GH Pages propagation.
 
 ---
 
