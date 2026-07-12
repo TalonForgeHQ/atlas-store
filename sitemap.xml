@@ -450,9 +450,15 @@
       <priority>0.7</priority>
     </url>
     <url>
-      <loc>https://talonforgehq.github.io/atlas-store/#datadog-davis-ai-bits-ai-llm-observability-audit</loc>
-      <lastmod>2026-07-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
+        <loc>https://talonforgehq.github.io/atlas-store/#datadog-davis-ai-bits-ai-llm-observability-audit</loc>
+        <lastmod>2026-07-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+      </url>
+      <url>
+        <loc>https://talonforgehq.github.io/atlas-store/#chroma-ai-native-vector-db-audit-target-prep-2026</loc>
+        <lastmod>2026-07-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+      </url>
     </urlset>
