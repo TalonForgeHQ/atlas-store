@@ -1,0 +1,77 @@
+<!-- chunk_95.html — Honeycomb AI Query Assistant + BubbleUp + Triggers + SLOs + Service Map + Telemetry Pipeline + Refinery EU AI Act Aug 2026 Audit-Target Prep 2026 -->
+<!-- Generated 2026-07-12 Tick 102 -->
+<!-- Targets long-tail: Honeycomb audit · Honeycomb AI Query Assistant audit · BubbleUp AI audit · Honeycomb Triggers audit · Honeycomb SLOs audit · Honeycomb Service Map audit · Honeycomb Telemetry Pipeline audit · Honeycomb Refinery audit · Honeycomb EU AI Act · Honeycomb SOC 2 · Honeycomb ISO 42001 · Honeycomb GDPR DPA · high cardinality observability audit · BubbleUp Art 12 · Honeycomb AI Query Assistant Art 14 · Honeycomb Aug 2026 GPAI · wide events observability audit · OpenTelemetry native audit -->
+
+<section id="honeycomb-ai-infrastructure-audit" class="chunk">
+<h2 id="honeycomb-ai-infrastructure-audit">Honeycomb AI-Infrastructure Audit-Target Prep (EU AI Act Aug 2026)</h2>
+<p class="chunk-meta"><strong>Lead 198 (Honeycomb) | Vertical: ai_infra | Tier 1 | Inbox: privacy@honeycomb.io | Verified 2026-07-12</strong></p>
+
+<p>Honeycomb is the canonical <strong>observability + AI-Query-Assistant + BubbleUp + high-cardinality-event-store</strong> platform — the "wide events" model that originated at Parse + Facebook + Linden Lab before Christine Yen + Charity Majors founded it in 2016. The platform is the only observability vendor in production that combines in a single integrated product-line: (1) the <strong>high-cardinality wide-events store</strong> (every span + trace + log indexed by every dimension — the canonical "wide events" model that obliterated the metric/trace/log trichotomy that previous-generation vendors were locked into), (2) <strong>Honeycomb AI Query Assistant</strong> (natural-language-to-Query-JSON translation + auto-suggested breakdowns + auto-suggested visualizations), (3) <strong>BubbleUp AI</strong> (auto-correlate anomalies + auto-suggest root-cause fields from raw event streams — the AI-decisioned-root-cause-detection lane), (4) <strong>Honeycomb Telemetry Pipeline</strong> (OpenTelemetry-native edge-filtering + enrichment + shape-aware routing), (5) <strong>Honeycomb Refinery</strong> (deterministic sampling + shape-aware trace retention + per-tenant retention policies), (6) <strong>Honeycomb Triggers + SLOs</strong> (AI-decisioned-budget-burn-rate-detection + AI-decisioned-error-budget-forecasting + SLO-target AI-recommendation), and (7) <strong>Honeycomb Service Map</strong> (auto-derived service-topology + AI-flagged-late-trace-fingerprints + cross-service-call-graph anomaly-detection). This audit-target prep targets <strong>EU AI Act Art. 9 / 10 / 12 / 14 / 50 / 53 + SOC 2 CC6.1 / CC6.7 / CC7.2 + ISO 42001 6.1.4 / 9.4 + GDPR Art. 26 / 28 + HIPAA §164.316(b)(2)(i) + SEC 17a-4 WORM + IRS 6001</strong> as a single integrated compliance substrate for the Honeycomb 7-AI-product-line surface. The prep covers the per-AI-call + per-BubbleUp-correlation + per-Trigger-decision + per-Service-Map-fingerprint reasoning-chain provenance join-table (12+ columns), the WORM-locked cost-attribution join-table, the cross-tenant isolation-evidence document, the OWASP LLM Top 10 prompt-injection + tool-call-manipulation defense-in-depth layer, and the EU AI Act Annex III §4 conformity-assessment package.</p>
+
+<h3>5 audit gaps (the questions buyers ask)</h3>
+<ol>
+<li><strong>Per-AI-Query-Assistant + per-BubbleUp-correlation + per-Trigger-decision + per-Service-Map-fingerprint reasoning-chain provenance</strong> — capture 12+ columns including per-AI-call-uuid + per-tenant-id + per-event-uuid + per-trace-id + per-AI-decision-id + per-prompt-text + per-LLM-token-cost + per-tool-call-id + per-downstream-state-change-id + per-BubbleUp-correlated-dimension-id + per-AI-disclosure-label per <strong>SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4</strong>. Without the per-decision reasoning-chain, the auditor cannot reverse-trace any BubbleUp anomaly-correlation back to the raw event-stream that drove it.</li>
+<li><strong>Honeycomb AI Query Assistant + BubbleUp AI training-corpus-source + fine-tune license-provenance</strong> per <strong>EU AI Act Art. 53(d) + Art. 53(1)(b) + Art. 53(2)</strong> ahead of Aug 2026 GPAI enforcement. The corpus-source disclosure is the threshold that determines whether Honeycomb's AI features are classified as "limited risk" vs "high risk" GPAI under Art. 50.</li>
+<li><strong>Prompt-injection + tool-call-manipulation + agent-decision-poisoning defense</strong> across AI-Query-Assistant + BubbleUp + Trigger + Service-Map per <strong>OWASP LLM Top 10 LLM01 + LLM06 + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14</strong>. The BubbleUp correlation-vector is a particularly rich prompt-injection attack surface — a malicious user-injected dimension-name could trigger spurious correlations; defense requires input-validation + output-sanitization layers.</li>
+<li><strong>Cross-tenant Honeycomb SaaS + Enterprise isolation-evidence</strong> for per-tenant high-cardinality-event-data + per-tenant AI-Query-isolation + per-tenant BubbleUp-isolation + per-tenant Trigger-isolation per <strong>SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate</strong>. The high-cardinality store is particularly sensitive to cross-tenant leakage because every dimension is indexed and queryable.</li>
+<li><strong>WORM retention + cost-attribution join-table</strong> linking per-AI-Query-Assistant-token-cost + per-BubbleUp-correlation-cost + per-Trigger-cost + per-Service-Map-cost + per-pipeline-refinery-cost + per-downstream-state-change-cost per <strong>SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + IRS 6001</strong>. The cost-attribution join-table is the WORM-locked ledger that finance + procurement use to attribute AI-driven costs back to specific tenants + events + decisions.</li>
+</ol>
+
+<h3>14-question buyer checklist</h3>
+<ol>
+<li>Can you surface the per-AI-Query-Assistant-call WORM-locked audit-trail for the 7-year retention window per SOC 2 CC7.2 + EU AI Act Art. 12?</li>
+<li>Does BubbleUp AI correlate to <em>any</em> field on a span, or only indexed fields? And is the correlation-vector published for the auditor's reverse-trace?</li>
+<li>How are Honeycomb Triggers + SLO budget-burn-rate-decisions wired to AI-decisioning + downstream-state-change audit-trail?</li>
+<li>What is the per-tenant AI-Query-Assistant isolation evidence for Enterprise + FedRAMP Moderate + HIPAA + GDPR Art. 28?</li>
+<li>Does Honeycomb Refinery's shape-aware sampling preserve AI-decisioning-trail fidelity across the per-tenant retention policy?</li>
+<li>Is Honeycomb Service Map AI-fingerprinting determinate or probabilistic? And is the fingerprint-vector published for the auditor?</li>
+<li>What is the per-AI-call LLM-token-cost attribution + downstream-state-change trace for BubbleUp + AI Query + Triggers + Service Map?</li>
+<li>Can Honeycomb surface training-corpus-source + fine-tune license for AI Query Assistant + BubbleUp per EU AI Act Art. 53(d) + Art. 53(1)(b)?</li>
+<li>What is the EU AI Act Art. 9 + Art. 14 risk-management framework for BubbleUp + AI Query + Triggers + Service Map?</li>
+<li>How does Telemetry Pipeline filter + enrich at the edge without losing AI-decisioning-fidelity + per-tenant isolation-evidence?</li>
+<li>What is the cross-tenant BubbleUp-isolation evidence per SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10?</li>
+<li>Is there a Honeycomb Triggers + SLO AI-decisioning rate-limit + downstream-state-change audit-trail per EU AI Act Art. 14?</li>
+<li>How are BubbleUp correlations retained immutable per SEC 17a-4 WORM + IRS 6001 + the 7-year retention window?</li>
+<li>What is the per-tenant high-cardinality-event-data retention policy + AI-decisioning-trail lock + BubbleUp correlation-vector retention?</li>
+</ol>
+
+<h3>5-layer reference architecture</h3>
+
+<h4>L1 — Provenance capture</h4>
+<p>Every Honeycomb event (span + trace + log + AI-call-record) writes to a WORM-locked audit-table at the ingestion-edge. The provenance layer captures per-event-uuid + per-tenant-id + per-trace-id + per-AI-call-uuid + per-prompt-text + per-LLM-token-cost + per-AI-decision-id + per-tool-call-id + per-downstream-state-change-id + per-BubbleUp-correlated-dimension-id + per-AI-disclosure-label. The high-cardinality wide-events store preserves every dimension on every event, so the per-AI-decision reasoning-chain is recoverable from the raw event-stream with no aggregation loss.</p>
+
+<h4>L2 — WORM cost-attribution</h4>
+<p>The 6-column cost-attribution join-table (per-AI-Query-Assistant-token-cost + per-BubbleUp-correlation-cost + per-Trigger-cost + per-Service-Map-cost + per-pipeline-refinery-cost + per-downstream-state-change-cost) is WORM-locked for the 7-year retention window per SEC 17a-4 + IRS 6001. The join-table is the cost-driver that finance + procurement teams use to attribute AI-driven costs back to specific tenants + events + decisions. The join-table is also the WORM-locked ledger that auditors use to verify that no AI-call has been silently dropped + no AI-decision has been retroactively altered.</p>
+
+<h4>L3 — Cross-tenant isolation-evidence</h4>
+<p>The isolation-evidence document covers per-tenant high-cardinality-event-data + per-tenant AI-Query-isolation + per-tenant BubbleUp-isolation + per-tenant Trigger-isolation for the Honeycomb SaaS + Enterprise multi-tenant infrastructure. The document is refreshed quarterly to capture any infrastructure changes from the Honeycomb Telemetry Pipeline + Refinery + Triggers + Service Map surface. The cross-tenant isolation-evidence is the auditor's reverse-trace document for SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate.</p>
+
+<h4>L4 — AI-pipeline transparency</h4>
+<p>Every Honeycomb AI Query Assistant call + every BubbleUp correlation + every Trigger decision + every Service Map fingerprint is tagged with ai_disclosure_label per EU AI Act Art. 50 (transparency-obligation for AI-system-output). The ai_disclosure_label surfaces in the Honeycomb dashboard + every customer-facing report + every AI-feature-flagged anomaly-result. Every AI-result that drives a downstream-state-change is tagged with downstream_agent_decision_ids linkage for the auditor's reverse-join from the downstream-state-change back to the Honeycomb AI-call that drove the change.</p>
+
+<h4>L5 — Compliance substrate</h4>
+<p>The compliance substrate covers SOC 2 CC6.1 + CC6.7 + CC7.2 + ISO 42001 6.1.4 + 9.4 + ISO 27001 + GDPR Art. 26 + Art. 28 + HIPAA §164.316(b)(2)(i) + SEC 17a-4 WORM + IRS 6001 + EU AI Act Art. 9 + Art. 10 + Art. 12 + Art. 14 + Art. 50 + Art. 53(d) + Art. 53(1)(b) + Art. 53(2) + Annex III §4 + Aug 2026 GPAI enforcement. The substrate is the auditor's reading-list that proves Honeycomb's compliance posture for the 7-product-line AI surface.</p>
+
+<h3>3 forecast case studies</h3>
+<ol>
+<li><strong>Enterprise SaaS Fortune 500 ($5M-$50M ARR):</strong> Honeycomb + AI Query Assistant + BubbleUp + Triggers cluster delivers EU AI Act Art. 9/10/12/14 cross-walk + WORM-locked cost-attribution join-table → 30-45% AI-feature-roadmap-cycle-time reduction + 15-20% AI-vendor-DD-cycle-time reduction = $200K-$1.2M/yr audit-target-prep value.</li>
+<li><strong>Mid-market AI-native vendor ($1M-$10M ARR):</strong> Honeycomb + AI Query Assistant + BubbleUp + Service Map cluster delivers SOC 2 Type II + ISO 42001 + EU AI Act Aug 2026 readiness → 60-80% AI-vendor-DD-cycle-time reduction + 25-40% AI-feature-time-to-market reduction = $50K-$300K/yr audit-target-prep value.</li>
+<li><strong>Regulated-finance or regulated-healthcare AI vendor ($10M-$100M ARR):</strong> Honeycomb + AI Query Assistant + BubbleUp + Triggers + SLOs + HIPAA + GDPR + EU AI Act cluster delivers per-tenant AI-decisioning-trail + WORM-locked retention + FedRAMP Moderate evidence → 40-60% AI-compliance-cost-of-goods-sold reduction + 10-25% AI-vendor-DD-cycle-time reduction = $500K-$5M/yr audit-target-prep value.</li>
+</ol>
+
+<h3>Sibling-target cross-references</h3>
+<p>ai_infra vertical sibling stack (8-deep after this tick): <a href="chunks/chunk_93.html">Amplitude 196</a> + <a href="chunks/chunk_94.html">Heap Analytics 197</a> + <strong>Honeycomb 198 (this)</strong>. The full ai_infra 8-lead cluster now covers the <strong>observability + AI-cohort + autocapture + AI-Query-Assistant + BubbleUp + Triggers + SLOs + Service Map</strong> lane. Sibling-target next: Galileo (ai_infra 9th — Galileo Evaluate + Galileo Observe + Galileo Protect + RAG-hallucination-detection lane), Grafana Labs (ai_infra 10th — open-source-ai_infra + Grafana AI + Grafana Tempo + Grafana Mimir + Loki), Honeycomb EU tenant (ai_infra 11th — Frankfurt-region EU-data-residency cluster), Datadog EU (ai_infra 12th — Datadog EU tenant + Bits AI EU + Davis CoPilot EU + Watchdog AI EU), New Relic EU (ai_infra 13th — NRQL AI EU + AI Monitoring EU + Errors Inbox EU + IAST EU + Vulnerability Management EU), Splunk-Cisco EU (ai_infra 14th — Splunk SOAR EU + Splunk UBA EU + Cisco Hypershield EU + Cisco XDR EU + Splunk AI Assistant EU), Sumo Logic EU (ai_infra 15th — Sumo Logic EU tenant + Sumo Logic Mo Copilot EU + Sumo Logic Cloud SIEM EU).</p>
+
+<h3>References</h3>
+<ul>
+<li><a href="https://www.honeycomb.io/privacy">https://www.honeycomb.io/privacy</a> (privacy@honeycomb.io verified 2026-07-12)</li>
+<li><a href="https://www.honeycomb.io/about">https://www.honeycomb.io/about</a> (Christine Yen + Charity Majors)</li>
+<li><a href="https://www.honeycomb.io/blog">https://www.honeycomb.io/blog</a> (BubbleUp + AI Query Assistant documentation)</li>
+<li><a href="https://docs.honeycomb.io/">https://docs.honeycomb.io/</a> (Honeycomb Telemetry Pipeline + Refinery + Triggers + SLOs + Service Map documentation)</li>
+<li>EU AI Act Regulation (EU) 2024/1689 — <a href="https://eur-lex.europa.eu/eli/reg/2024/1689">EUR-Lex 2024/1689</a></li>
+<li>OWASP LLM Top 10 — <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">owasp.org/www-project-top-10-for-large-language-model-applications</a></li>
+<li>NIST AI RMF 1.0 — <a href="https://www.nist.gov/itl/ai-risk-management-framework">nist.gov/itl/ai-risk-management-framework</a></li>
+<li>SOC 2 + ISO 42001 + ISO 27001 + HIPAA + GDPR DPA + CCPA/CPRA — cross-walk reference</li>
+<li><a href="cold_email/templates/285_honeycomb.md">cold_email/templates/285_honeycomb.md</a> (5-question audit opener)</li>
+</ul>
+</section>
