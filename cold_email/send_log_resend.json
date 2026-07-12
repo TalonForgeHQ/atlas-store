@@ -16,5 +16,17 @@
     "company": "Kit",
     "template": "cold_email\\templates\\27_kit.md",
     "status": "dry_run"
+  },
+  {
+    "to": "support@dub.co",
+    "company": "Dub",
+    "template": "cold_email\\templates\\28_dub.md",
+    "status": "dry_run"
+  },
+  {
+    "to": "support@resend.com",
+    "company": "Resend",
+    "template": "cold_email\\templates\\29_resend.md",
+    "status": "dry_run"
   }
 ]

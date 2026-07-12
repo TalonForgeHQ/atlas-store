@@ -4,8 +4,8 @@ Pure-Python cold email system with three send paths: SMTP (`sender.py`), Resend 
 
 ## Status (2026-07-12)
 
-✅ **133 researched leads by max lead index** in `cold_email/leads.csv`.
-✅ **106 send-ready leads with usable public emails** exported to `cold_email/leads_with_emails.csv` and root `leads_with_emails.csv`.
+✅ **180 researched leads by max lead index** in `cold_email/leads.csv`.
+✅ **148 send-ready leads with usable public emails** exported to `cold_email/leads_with_emails.csv` and root `leads_with_emails.csv`.
 ✅ **Provider senders verified in dry-run mode** against the exported CSV (Resend + SendGrid both render lead-specific templates correctly).
 ⏳ **Needs one sending credential** to actually send: `RESEND_API_KEY`, `SENDGRID_API_KEY`, or SMTP credentials.
 
@@ -154,7 +154,7 @@ Cold email to researched AI-agent / SaaS / compliance leads with public contact 
 - Reply rate: 2-6%
 - Conversion to $500 audit: 1-3%
 
-106 send-ready emails × 1-3% conversion = 1-3 possible audits = $500-$1,500 from this batch once a sending credential is added.
+148 send-ready emails × 1-3% conversion = 1-4 possible audits = $500-$2,000 from this batch once a sending credential is added.
 
 The real value: this builds a template library you can reuse for the next 100 leads. After 2-3 batches you'll have a system that reliably generates 1-3 audits/month from cold outreach alone.
 
@@ -172,7 +172,7 @@ For now: keep volume low (50/day max), include a clear "this is a one-time cold 
 
 ## Files Updated 2026-07-12
 
-- `export_send_ready.py` — exports 106 usable public-email leads to `leads_with_emails.csv`.
+- `export_send_ready.py` — exports 148 usable public-email leads to `leads_with_emails.csv`.
 - `resend_sender.py` — default CSV now `cold_email/leads_with_emails.csv`; renders lead-specific markdown templates.
 - `sendgrid_sender.py` — default CSV now `cold_email/leads_with_emails.csv`; renders lead-specific markdown templates.
 - `README.md` — updated setup and usage for Resend / SendGrid / SMTP.
