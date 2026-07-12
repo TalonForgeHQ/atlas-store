@@ -1,0 +1,46 @@
+<section class="chunk" id="chunk-109">
+  <h2>Anyscale: The Ray-Anyscale Vendor-DD Playbook (Talon Forge Atlas)</h2>
+
+  <p class="chunk-meta">Updated 2026-07-12 &middot; long-tail target: <em>vendor DD Anyscale privacy DPA SOC 2 EU AI Act</em> &middot; ai_infra sub-vertical (11th sibling) &middot; source leads index 212</p>
+
+  <p>Anyscale is the canonical Ray-on-Anyscale distributed-compute vendor behind Anyscale Endpoints (LLM inference per-second billing), Anyscale Jobs (managed Ray batch), Anyscale Workspaces (interactive dev environments) and the Anyscale Enterprise control plane. They are also the corporate steward of the open-source Ray project (Apache 2.0, 35K+ GitHub stars, co-authored by Ion Stoica, Robert Nishihara and Philipp Moritz at UC Berkeley's RISELab). For a privacy officer or security architect under EU AI Act, ISO 42001 or NIS2 timelines, Anyscale is structurally interesting because the privacy surface inherits Ray's distributed cluster model: per-customer isolated cluster, per-job ephemeral execution, per-token billing metadata, and per-call PII handling that maps to GDPR Art. 22 (automated decision-making), Art. 14 (information about processing) and Annex III (high-risk biometric / critical infrastructure) classifications.</p>
+
+  <h3>What "Ray-Anyscale" actually is</h3>
+  <p>The Ray project started in UC Berkeley's RISELab around 2017 as a unified interface for distributed Python (data preprocessing, hyperparameter sweeps, RL training, batch inference, model serving). Anyscale, the company, was founded in 2019 by Ion Stoica (UC Berkeley Professor + Databricks co-founder + Apache Spark PMC), Robert Nishihara (Anyscale CEO + Ray creator) and Philipp Moritz (Ray co-creator + Anyscale Co-Founder) to commercialize Ray's managed runtime. Anyscale Endpoints exposes open-source LLMs (Llama-3, Mixtral, DeepSeek, Qwen, GLM, Gemma, Phi, Stable-Diffusion) as an OpenAI-compatible inference API with per-second GPU billing, function-calling, fine-tuning, and RLHF pipelines. Anyscale Jobs gives you a serverless-Ray-batch-engine for ad-hoc jobs (image preprocessing at scale, embedding generation, batch inference). Anyscale Workspaces gives you a managed JupyterLab-tier dev environment running inside the customer's Anyscale cluster.</p>
+
+  <p>For an enterprise customer evaluating vendor-DD on Anyscale, the architecture question is "how does my code, my weights and my data stay isolated from other tenants?" Anyscale's documented answers are: (1) per-customer Anyscale Enterprise cluster with dedicated VPC + encryption-at-rest (AES-256) + encryption-in-transit (TLS 1.2+, mTLS for cluster-internal RPC); (2) per-job ephemeral execution with no cross-tenant inference traffic; (3) per-call PII handling flagged for downstream-Salesforce / HubSpot / Databricks / Snowflake / BigQuery state-changes; (4) SOC 2 Type II (per anyscale.com/security), GDPR DPA, EU AI Act readiness, ISO 27001 in progress.</p>
+
+  <h3>Anyscale vendor-DD playbook (Talon Forge Atlas, 8-step)</h3>
+
+  <ol>
+    <li><strong>Locate the privacy-policy surface.</strong> Canonical anchor: <a href="https://www.anyscale.com/privacy-policy">anyscale.com/privacy-policy</a>. The page exposes <code>mailto:privacy@anyscale.com</code> as the canonical GDPR DPA + SOC 2 + EU AI Act + vendor-DD strategic-inbound channel. Verified live via direct HTTP fetch on 2026-07-12.</li>
+    <li><strong>Initiate vendor-DD outreach via the privacy channel — not sales.</strong> Anyscale's privacy@ distribution is monitored by both the legal team (privacy@ for GDPR DPA, EU AI Act, ISO 42001) and the security team (security@ for SOC 2 attestation, ISO 27001 status, pen-test summary). The vendor-DD approach via privacy@ produces faster, more substantive responses than cold-outreach to AEs.</li>
+    <li><strong>Ask for the EU AI Act readiness packet.</strong> The packet includes: Article 27 EU representative identity, Article 14 information-notice template, Annex III risk classification, ISO 42001 audit-status; expected turnaround 5-10 business days.</li>
+    <li><strong>Validate SOC 2 Type II scope</strong> — confirm the audit window covers the 12 months preceding your contract start, and that the audit scope includes all of Anyscale Endpoints + Anyscale Jobs + Anyscale Workspaces (not just the management plane).</li>
+    <li><strong>Validate ISO 27001 status</strong> — confirm whether the certificate is in progress (Anyscale is mid-cert) or already awarded; if mid-cert, capture the target cert date.</li>
+    <li><strong>Validate GDPR DPA + Annex III + Art. 22 + Art. 14</strong> — request the signed DPA, the Article 27 EU representative identity (Anyscale's EU rep is appointed), the per-call PII-handling notice, and the per-job-ephemeral-execution guarantee.</li>
+    <li><strong>Validate data-residency posture</strong> — confirm US vs EU vs multi-region cluster availability, per-customer VPC isolation, per-job ephemeral-storage teardown, per-customer-weights-at-rest encryption posture.</li>
+    <li><strong>Validate billing + metering transparency</strong> — Anyscale's per-second GPU-billing is one of the few inference-platform vendors with transparent metering; confirm you can export per-job billing feeds into your downstream-Snowflake / BigQuery / Databricks cost-allocation pipeline.</li>
+  </ol>
+
+  <h3>5-criteria scoring rubric for any Anyscale-tier deal</h3>
+
+  <table>
+    <thead>
+      <tr><th>Criterion</th><th>What "good" looks like</th><th>Avoid if</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Vendor DD response</td><td>Privacy / security reply &lt; 7 business days with DPA + SOC 2 + ISO 27001 status</td><td>Generic AE ping-pong, no legal/security ownership</td></tr>
+      <tr><td>EU AI Act readiness</td><td>Annex III risk-classified + Art. 27 rep named + Art. 14 notice template</td><td>Vendor punts on EU AI Act</td></tr>
+      <tr><td>SOC 2 / ISO 27001</td><td>Type II report (12mo window), or ISO 27001 certified (not mid-cert)</td><td>Type I only, or pre-cert without target date</td></tr>
+      <tr><td>GDPR DPA + PII</td><td>Signed DPA, PII handling notice, Article 27 EU representative</td><td>DPA under NDA only, or no Article 27</td></tr>
+      <tr><td>Billing transparency</td><td>Per-second GPU billing + per-job metering exportable to data warehouse</td><td>Vendor-side only metering, no per-job export</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Who else is in the ai_infra cohort (Atlas observations)</h3>
+  <p>Anyscale joins the Atlas ai_infra cohort: Honeycomb 102 + Arize 107 + Galileo 108 + Datadog 193 + SambaNova 190 + Groq 191 + Together AI 207 + Poolside AI 208 + Replicate 105 + Fireworks AI 209. Anyscale's distinctive contribution to this list is the distributed-Ray / RLHF-on-Ray / fine-tuning-on-Ray / per-customer-isolated-cluster lineage: while SambaNova 190 + Groq 191 + Fireworks AI 209 compete on inference latency, and Poolside AI 208 + Replicate 105 compete on developer-experience ergonomics, Anyscale uniquely owns the <em>customer's own Ray cluster</em> as the privacy surface. That makes Anyscale the natural choice for an enterprise whose vendor-DD questionnaire prioritizes Ray-cluster state-change + per-job-ephemeral-execution evidence over per-request inference latency.</p>
+
+  <h3>CTA — book a 30-min Atlas audit</h3>
+  <p>If you're evaluating Anyscale (or any ai_infra sibling) for a vendor-DD cycle and want a second pair of eyes on the DPA, the SOC 2 Type II scope, the EU AI Act Annex III risk-classification or the per-job-ephemeral-execution evidence — book a 30-min Atlas audit. <a href="https://buy.stripe.com/14A00jgO99JE3dva4Y3cn00" class="cta" data-plan="audit">$500 &middot; Atlas vendor-DD audit &rarr;</a></p>
+</section>
