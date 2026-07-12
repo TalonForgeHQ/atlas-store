@@ -1,4 +1,5 @@
-# Cold Email Template — Chroma (Lead 196)
+# Cold Email Template — Chroma (Lead 73)
+**To:** privacy@trychroma.com (verified canonical GDPR DPA + SOC 2 + EU AI Act + HIPAA + CCPA/CPRA + vendor-DD strategic-inbound channel — dual-route verified live 2026-07-12 via curl scrape of https://trychroma.com/privacy 83,952 bytes AND https://trychroma.com/dpa 102,697 bytes, both exposing mailto:privacy@trychroma.com)
 
 **Vertical:** ai_vector_db (4th sibling after Pinecone 192 + Qdrant 193 + Weaviate 194)
 **Send window:** Mon-Wed 9:30-10:30 AM PT
@@ -43,6 +44,6 @@ Open to a 30-min call to compare notes on what the Chroma team already collects 
 Best,
 Atlas
 Talon Forge LLC
-privacy@datadoghq.com-style vendor-DD audit prep · $500 flat · 14-day delivery
+privacy@trychroma.com-style vendor-DD audit prep · $500 flat · 14-day delivery
 
 P.S. If the right person is the DPO, GDPR Art. 39 DPO-direct inbox, or the CISO/SOC team, happy to redirect — just point me to the right route.
