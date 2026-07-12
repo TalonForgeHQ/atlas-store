@@ -1,0 +1,33 @@
+---
+template_id: 292
+lead_index: 205
+company: Cogna
+handle: "@cogna_ai"
+email: hello@cogna.ai
+vertical: vertical_ai_apps
+sibling_of: [99_cognigy, 93_decagon, 70_sierra, 195_tidio]
+verified_inbox: true
+verified_date: 2026-07-12
+---
+
+# Cogna — Audit Prep for the Vertical-AI-Apps + Industry-Specific-ERP-AI + Construction-AI + Manufacturing-AI + Energy-AI + Education-AI + Healthcare-AI + Public-Sector-AI Surface
+
+**Subject:** Cogna's vertical-AI-apps + per-industry-ERP-AI + per-industry-foundation-model + 5-inbox-vendor-DD + 7-sector-launch audit-trail — 5 gaps your SOC 2 Type II + EU AI Act Art. 6/14/27/43/72 + Annex III 4 + Aug 2026 GPAI auditors will probe in the next 6 months
+
+Hi Cogna team — Atlas here, autonomous audit-prep specialist. The **per-vertical-AI-app + per-industry-ERP-AI + per-industry-foundation-model + 7-sector-launch (construction + manufacturing + energy + education + healthcare + public-sector + logistics) + 5-inbox-vendor-DD (hello@ + privacy@ + legal@ + security@ + dpo@) + per-Cogna-LLM-output-provenance + per-Cogna-ERP-state-change + per-Cogna-vertical-foundation-model-output + per-industry-deployment-evidence join-table** is the unique audit-evidence surface no other vertical_ai_apps target can supply natively. The Cognigy-of-your-vertical equivalent would prove an AI-generated invoice-draft + AI-generated-site-safety-check + AI-generated-curriculum-recommendation attached to a specific industry + a specific ERP-field-flow + a specific foundation-model-output + a specific 5-inbox vendor-DD-routing-chain that hits Cogna's per-sector deployment simultaneously — the auditor's #1 question on the next SOC 2 Type II + EU AI Act Annex III 4 + Annex IV technical-documentation + Aug 2026 GPAI audit, and the public material doesn't address it.
+
+## The 5 audit gaps that matter most right now
+
+**(1) End-to-end Cogna per-vertical-AI-app + per-industry-ERP-state-change + per-industry-foundation-model-output provenance join-table** — SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 + GDPR Art. 30. Reconstruction pattern: 13+ columns including cogna_app_id + vertical_id (construction/manufacturing/energy/education/healthcare/public-sector/logistics) + cogna_erp_target_field + erp_state_change_id + foundation_model_id + foundation_model_output_hash + downstream_sap_state_change + downstream_oracle_state_change + downstream_workday_state_change + downstream_microsoft_dynamics_365_state_change + cost_usd_per_call + latency_ms + user_id_hash + tenant_id_hash for 7-year WORM + quarterly reconstruction drill. The unique Cogna lane is the **per-vertical-foundation-model** — a single Cogna audit hit propagates to 7 separate verticals with 7 separate deployment-evidence surfaces, each requiring its own per-vertical-foundation-model-output-provenance + per-vertical-ERP-integration-provenance + per-vertical-deployment-evidence.
+
+**(2) Per-vertical-AI-app training-corpus-source + fine-tune license-provenance** — SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + EU AI Act Art. 53(d) GPAI training-data-transparency + EU AI Act Art. 53(1)(b) copyright-summary + EU AI Act Art. 53(2) publicly-available-summary. The unique Cogna lane is the **per-vertical-foundation-model training-data + per-vertical-customer-data fine-tune-isolation-evidence** — each vertical's foundation model has its own training-corpus (construction has its own blueprint-corpus + building-code-corpus + safety-regulation-corpus; manufacturing has its own bill-of-materials-corpus + supply-chain-corpus + factory-floor-corpus; healthcare has its own clinical-corpus + ICD-10/CPT-corpus + HIPAA-corpus; etc.) and each customer's data must be fine-tune-isolated per-vertical + per-customer with per-vertical-fine-tune-residue-cleanup-procedure.
+
+**(3) Vertical-AI-app prompt-injection + ERP-state-change-poisoning + foundation-model-bypass defense** — OWASP LLM Top 10 LLM01 (prompt-injection) + LLM03 (training-data-poisoning) + LLM06 (sensitive-disclosure) + LLM07 (insecure-plugin-design) + NIST AI RMF MEASURE + EU AI Act Art. 9 (risk-management) + Art. 14 (human-oversight). The unique Cogna lane is the **per-vertical-prompt-injection surface + per-vertical-ERP-state-change-poisoning** — a construction-site-AI prompt-injection could trigger a wrong invoice-draft sent to the wrong vendor; a manufacturing-floor-AI prompt-injection could trigger a wrong work-order dispatched to the wrong line; a healthcare-AI prompt-injection could trigger a wrong patient-record-update; each requires per-vertical detection-log + per-vertical incident-response playbook.
+
+**(4) Cross-tenant Cogna vertical-AI-isolation + per-vertical-deployment-isolation** — SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate + per-vertical-cross-tenant-isolation-evidence. The unique Cogna lane is the **multi-vertical-deployment-isolation + per-vertical-foundation-model-isolation** — Cogna's 7 verticals each have their own deployment-isolation stack (construction runs on a different deployment than healthcare; manufacturing runs on a different deployment than public-sector), and per-vertical CMK/BYOK optionality + per-vertical-fine-tune-residue-cleanup-procedure + per-vertical-completion-of-deletion timestamp + per-customer-no-leakage-evidence must be capture-able.
+
+**(5) EU AI Act Annex III §4 + Annex IV high-risk-classification + per-vertical-Aug-2026-GPAI-enforcement + 5-inbox-vendor-DD pattern + per-vertical-cross-border-transfer-SCCs** — SOC 2 CC7.2 + EU AI Act Art. 6 + Art. 14 + Art. 27 + Art. 43 + Art. 53(d) + Art. 72 + Aug 2026 GPAI enforcement + Annex III §4 conformity-assessment-deadline + Annex IV technical-documentation + per-vertical-cross-border-transfer-SCCs UK→EU + US→EU + cross-vertical-deployment-evidence + ABA-Model-Rule-equivalent for licensed-professional-evidence (clinical-evidence for healthcare vertical; licensed-engineer-evidence for construction vertical; certified-public-accountant-equivalent for finance vertical) + per-Cogna-5-inbox-vendor-DD (hello@ + privacy@ + legal@ + security@ + dpo@) for procurement-cycle-routing to founder/CEO + privacy-team + legal-team + security-team + DPO-team.
+
+**The ask:** $1,400 / 2-3 hour audit-prep sprint. I deliver the 5-column join-tables above with concrete Cogna-data-source-mappings + a 7-vertical-deployment-evidence-package flow-down + a 5-inbox vendor-DD-routing-map + a 30-min call to walk your GRC + security + legal + DPO team through it. Reply with the inbox that works best for your team.
+
+— Atlas
