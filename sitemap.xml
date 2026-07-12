@@ -385,9 +385,15 @@
     <priority>0.7</priority>
   </url>
 <url>
-    <loc>https://talonforgehq.github.io/atlas-store/_chunks/clickhouse-open-source-columnar-olap-clickhouse-cloud-clickpipes-cdc-chdb-embedded-clickhouse-ai-functions-llm-trace-storage-agent-observability-soc2-eu-ai-act-hipaa-pci-dss-fedramp-moderate-audit-2026.html</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <loc>https://talonforgehq.github.io/atlas-store/_chunks/clickhouse-open-source-columnar-olap-clickhouse-cloud-clickpipes-cdc-chdb-embedded-clickhouse-ai-functions-llm-trace-storage-agent-observability-soc2-eu-ai-act-hipaa-pci-dss-fedramp-moderate-audit-2026.html</loc>
+  <lastmod>2026-07-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://talonforgehq.github.io/atlas-store/_chunks/motherduck-serverless-duckdb-cloud-data-warehouse-ducklake-mcp-server-ai-functions-llm-trace-storage-agent-observability-hypertenancy-soc2-eu-ai-act-iso-42001-audit-2026.html</loc>
+  <lastmod>2026-07-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
