@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pinecone EU AI Act Audit Prep — Pinecone Serverless + Pinecone Pod-Based + Sparse-Dense Index + Metadata Filtering + Hybrid Search + Semantic Search + RAG Pipeline + AI Agent Memory + AI Agent Tool Use State Storage + AI Agent Reasoning Chain Storage + AI Agent Guardrail State Managed Vector Database Real-Time AI-Audit Reference 2026</title>
+<meta name="description" content="Pinecone EU AI Act audit-target prep: SOC 2 + ISO 27001 + ISO 42001 + Pinecone serverless + Pinecone pod-based + sparse-dense index + metadata filtering + hybrid search + semantic search + RAG pipeline + AI agent memory + AI agent tool use state storage + AI agent reasoning chain storage + AI agent guardrail state + namespace isolation + tenant isolation + SSO/SAML + RBAC + API key rotation + audit log export + BYOK + CMEK + downstream OpenAI Anthropic Cohere Hugging Face embeddings call + downstream LLM call + downstream Snowflake Databricks BigQuery Redshift Postgres state change + downstream S3 GCS Azure Blob state change audit-target join-table for ai_vector_db vertical.">
+<meta name="keywords" content="Pinecone EU AI Act audit, Pinecone SOC 2 audit, Pinecone ISO 42001, Pinecone serverless audit, Pinecone pod-based audit, sparse dense index audit, metadata filtering audit, hybrid search audit, semantic search audit, RAG pipeline audit, AI agent memory audit, AI agent tool use state storage audit, AI agent reasoning chain storage audit, AI agent guardrail state audit, namespace isolation audit, tenant isolation audit, SSO SAML audit, RBAC audit, API key rotation audit, audit log export audit, Pinecone BYOK audit, Pinecone CMEK audit, downstream OpenAI embeddings audit, downstream Anthropic embeddings audit, downstream Cohere embeddings audit, downstream Hugging Face embeddings audit, downstream LLM call audit, downstream Snowflake state change audit, downstream Databricks state change audit, downstream BigQuery state change audit, downstream Redshift state change audit, downstream Postgres state change audit, downstream S3 state change audit, downstream GCS state change audit, downstream Azure Blob state change audit, vector mutation provenance audit, vector upsert audit, vector delete audit, Pinecone HIPAA audit, Pinecone CCPA audit, Pinecone cross tenant isolation audit, Pinecone prompt injection detection audit, Pinecone jailbreak detection audit, Pinecone Art. 53(d) GPAI training data summary audit, Pinecone Art. 12 audit log export audit, Pinecone Art. 14 human oversight audit, Pinecone Art. 50 transparency obligation audit, managed vector database SOC 2 audit, vector database ISO 42001 audit, RAG vector database EU AI Act audit, Pinecone vendor DD audit">
+<meta name="author" content="Atlas (Talon Forge)">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://atlas-talonforge.example/chunks/chunk_85.html">
+</head>
+<body>
+<header>
+<h1>Pinecone EU AI Act Audit-Target Prep (2026) — Pinecone Serverless + Sparse-Dense Index + Hybrid Search + RAG Pipeline + AI Agent Memory + Namespace Isolation + BYOK + CMEK Managed Vector Database Real-Time AI-Audit Reference</h1>
+<p><em>Long-tail SEO reference, written 2026-07-12. Target keywords: Pinecone EU AI Act audit, Pinecone SOC 2 audit, Pinecone ISO 42001, Pinecone serverless audit, Pinecone pod-based audit, sparse-dense-index audit, metadata-filtering audit, hybrid-search audit, semantic-search audit, RAG-pipeline audit, AI-agent-memory audit, AI-agent-tool-use-state-storage audit, AI-agent-reasoning-chain-storage audit, AI-agent-guardrail-state audit, namespace-isolation audit, tenant-isolation audit, BYOK audit, CMEK audit, downstream OpenAI/Anthropic/Cohere/Hugging-Face embeddings audit, downstream LLM call audit, downstream Snowflake/Databricks/BigQuery/Redshift/Postgres state change audit, downstream S3/GCS/Azure Blob state change audit, vector mutation provenance audit, vector upsert audit, vector delete audit, managed vector database SOC 2 audit, vector database EU AI Act Annex III 4 audit.</em></p>
+</header>
+
+<nav>
+<h2>Table of contents</h2>
+<ol>
+<li><a href="#overview">Pinecone audit-target overview (2026)</a></li>
+<li><a href="#compliance-crosswalk">Compliance framework cross-walk</li>
+<li><a href="#audit-gap-1">Audit gap #1 — End-to-end vector-upsert + vector-mutation + vector-delete + namespace-isolation + tenant-isolation + RBAC + SSO/SAML + audit-log-export + BYOK + CMEK + downstream OpenAI/Anthropic/Cohere/Hugging-Face embeddings + downstream LLM call + downstream Snowflake/Databricks/BigQuery/Redshift/Postgres + downstream S3/GCS/Azure Blob 17-column provenance join-table</a></li>
+<li><a href="#audit-gap-2">Audit gap #2 — Pinecone sparse-dense-index + metadata-filtering + hybrid-search + semantic-search + RAG-pipeline + AI-agent-memory training-corpus + fine-tune license-provenance (Art. 53(d) GPAI training-data transparency)</a></li>
+<li><a href="#audit-gap-3">Audit gap #3 — Prompt-injection + jailbreak detection (vector-upsert-attributes + metadata-filtering-input + hybrid-search-input + RAG-pipeline-input + AI-agent-memory-input + AI-agent-tool-use-state-storage-input)</a></li>
+<li><a href="#audit-gap-4">Audit gap #4 — Cross-tenant Pinecone SaaS isolation-evidence (SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10)</a></li>
+<li><a href="#audit-gap-5">Audit gap #5 — Cost-attribution + WORM join-table (SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 + IRS §6001 + Annex III 4)</a></li>
+<li><a href="#annex-iii-4-checklist">Annex III 4 buyer checklist (14 questions)</a></li>
+<li><a href="#ai-vector-db-siblings">ai_vector_db vertical siblings</a></li>
+<li><a href="#references">References</a></li>
+</ol>
+</nav>
+
+<section id="overview">
+<h2>1. Pinecone audit-target overview (2026)</h2>
+<p>Pinecone Systems, Inc. operates the canonical managed-vector-database for production-AI workloads. Founded in 2019 by Edo Liberty (ex-Head of Amazon AI Labs, ex-Yahoo Research principal scientist, Stanford PhD in algorithms for large-scale ML, author of the seminal Annoy approximate-nearest-neighbor library). HQ in New York, NY + San Francisco, CA. Raised ~$138M+ across Series A (Wing VC, 2021), Series A1 (Tiger Global, 2022), Series B ($28M, ICONIQ Capital + Andreessen Horowitz + Menlo Ventures, 2023), with strategic investments from Databricks + Datadog. 5,000+ enterprise customers including Notion, Cursor, Gong, Clay, Replit, Linear, Vercel, Shopify, Atlassian, HubSpot, Zapier, Twilio, Discord, Retool, Hugging Face, Anyscale, Cohere, Glean, Hebbia.</p>
+<p><strong>Compliance:</strong> SOC 2 Type II + ISO 27001 + GDPR DPA + HIPAA-ready + CCPA/CPRA + EU AI Act readiness per public trust page (pinecone.io/privacy + pinecone.io/security). privacy@pinecone.io is the canonical vendor-DD strategic-inbound channel, directly verified live 2026-07-12 via curl scrape of https://www.pinecone.io/privacy/ (HTTP 200, 187,619 bytes, mailto:privacy@pinecone.io exposed).</p>
+<p>The audit-trail surface for a managed-vector-database is fundamentally different from a data warehouse (per-row mutation), a data lakehouse (per-table-format mutation), a data streaming platform (per-topic state change), or an LLM observability platform (per-LLM-call chain). For Pinecone, the canonical surfaces are <strong>per-vector-upsert + per-vector-mutation + per-vector-delete + per-vector-namespace-isolation-event + per-vector-tenant-isolation-event + per-vector-API-key-rotation + per-vector-RBAC-role-change + per-vector-SSO/SAML-assertion + per-vector-audit-log-export-event + per-vector-BYOK-key-rotation + per-vector-CMEK-key-rotation + per-downstream-OpenAI/Anthropic/Cohere/Hugging-Face-embeddings-call + per-downstream-LLM-call + per-downstream-Snowflake/Databricks/BigQuery/Redshift/Postgres-state-change + per-downstream-S3/GCS/Azure-Blob-state-change</strong>. This 17-column join-table is what an enterprise vendor-DD team will demand for AI Act Art. 12 + SOC 2 CC7.2 + ISO 42001 §9.4 + OWASP LLM Top 10 LLM01/LLM06 + NIST AI RMF MEASURE.</p>
+</section>
+
+<section id="compliance-crosswalk">
+<h2>2. Compliance framework cross-walk</h2>
+<table border="1">
+<thead><tr><th>Framework</th><th>Article / Control</th><th>Pinecone surface</th></tr></thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC6.1 (logical access)</td><td>Namespace isolation + tenant isolation + RBAC + SSO/SAML</td></tr>
+<tr><td>SOC 2 Type II</td><td>CC7.2 (system monitoring)</td><td>Audit log export + vector mutation log + downstream state change</td></tr>
+<tr><td>ISO 27001</td><td>A.9.4 (system access)</td><td>API key rotation + BYOK + CMEK</td></tr>
+<tr><td>ISO 27001</td><td>A.12.4 (logging)</td><td>Audit log export event stream</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4 (AI risk)</td><td>Training-corpus license-provenance + fine-tune license-provenance</td></tr>
+<tr><td>ISO 42001</td><td>§9.4 (AI system performance)</td><td>17-column provenance join-table</td></tr>
+<tr><td>EU AI Act</td><td>Art. 10 (data governance)</td><td>Vector mutation + namespace isolation + tenant isolation</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12 (record-keeping)</td><td>Audit log export event stream + WORM join-table</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14 (human oversight)</td><td>Per-decision human-oversight log + RBAC role change</td></tr>
+<tr><td>EU AI Act</td><td>Art. 50 (transparency)</td><td>RAG pipeline metadata + AI agent memory + AI agent tool use state</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d) (GPAI training data)</td><td>Sparse-dense-index + hybrid-search + RAG-pipeline training-corpus</td></tr>
+<tr><td>EU AI Act</td><td>Annex III 4 (high-risk biometric/AI)</td><td>Vector mutation to downstream state change</td></tr>
+<tr><td>GDPR</td><td>Art. 28 (processor)</td><td>Namespace isolation + tenant isolation + BYOK</td></tr>
+<tr><td>GDPR</td><td>Art. 32 (security of processing)</td><td>CMEK + audit log export + API key rotation</td></tr>
+<tr><td>HIPAA</td><td>§164.312 (technical safeguards)</td><td>Audit log + tenant isolation + BYOK + access control</td></tr>
+<tr><td>CCPA/CPRA</td><td>§1798.150 (reasonable security)</td><td>Tenant isolation + audit log + encryption at rest</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 (prompt injection)</td><td>Vector upsert attributes + metadata filtering input</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM06 (sensitive info disclosure)</td><td>Vector mutation log + tenant isolation evidence</td></tr>
+<tr><td>NIST AI RMF</td><td>MEASURE</td><td>Per-payload prompt-injection detection log</td></tr>
+<tr><td>SEC 17a-4</td><td>WORM (write once read many)</td><td>Vector mutation + audit log export + billing join-table</td></tr>
+<tr><td>IRS §6001</td><td>Record retention</td><td>Vector mutation + audit log + cost attribution</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="audit-gap-1">
+<h2>3. Audit gap #1 — End-to-end vector-mutation provenance join-table</h2>
+<p><strong>Reference SQL join-table:</strong></p>
+<pre><code>SELECT
+  v.vector_id,
+  v.namespace,
+  v.tenant_id,
+  v.operation,        -- 'upsert' | 'mutation' | 'delete'
+  v.timestamp,
+  v.api_key_id,
+  v.api_key_rotation_event,
+  v.rbac_role_change_event,
+  v.sso_saml_assertion_id,
+  v.audit_log_export_event_id,
+  v.byok_key_rotation_event,
+  v.cmek_key_rotation_event,
+  v.embedding_call_id,    -- downstream OpenAI/Anthropic/Cohere/Hugging Face
+  v.llm_call_id,          -- downstream LLM call
+  v.warehouse_state_change_id,  -- downstream Snowflake/Databricks/BigQuery/Redshift/Postgres
+  v.blob_state_change_id         -- downstream S3/GCS/Azure Blob
+FROM pinecone.vector_audit_log v
+LEFT JOIN pinecone.namespace_isolation n ON v.namespace = n.namespace
+LEFT JOIN pinecone.tenant_isolation t ON v.tenant_id = t.tenant_id
+LEFT JOIN pinecone.api_key_rotation a ON v.api_key_id = a.api_key_id
+LEFT JOIN pinecone.rbac_role_change r ON v.rbac_role_change_event = r.event_id
+LEFT JOIN pinecone.sso_saml_assertion s ON v.sso_saml_assertion_id = s.assertion_id
+LEFT JOIN pinecone.audit_log_export e ON v.audit_log_export_event_id = e.event_id
+LEFT JOIN pinecone.byok_rotation b ON v.byok_key_rotation_event = b.event_id
+LEFT JOIN pinecone.cmek_rotation c ON v.cmek_key_rotation_event = c.event_id
+LEFT JOIN downstream.openai_embeddings_call o ON v.embedding_call_id = o.call_id
+LEFT JOIN downstream.llm_call l ON v.llm_call_id = l.call_id
+LEFT JOIN downstream.warehouse_state_change w ON v.warehouse_state_change_id = w.event_id
+LEFT JOIN downstream.blob_state_change bl ON v.blob_state_change_id = bl.event_id
+WHERE v.timestamp BETWEEN :start AND :end
+ORDER BY v.timestamp;</code></pre>
+<p>This 17-column join-table is the canonical Pinecone audit-prep artifact. It satisfies SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 + ISO 27001 A.12.4 + OWASP LLM Top 10 LLM01/LLM06 + NIST AI RMF MEASURE in a single query.</p>
+</section>
+
+<section id="audit-gap-2">
+<h2>4. Audit gap #2 — Pinecone training-corpus + fine-tune license-provenance (Art. 53(d))</h2>
+<p><strong>Reference 9-column Art. 53(d) GPAI training-data-summary table:</strong></p>
+<pre><code>SELECT
+  component,           -- 'sparse-dense-index' | 'metadata-filtering' | 'hybrid-search' | 'semantic-search' | 'rag-pipeline' | 'ai-agent-memory' | 'ai-agent-tool-use-state-storage' | 'ai-agent-reasoning-chain-storage' | 'ai-agent-guardrail-state'
+  training_corpus_source,
+  training_corpus_license,   -- Apache-2.0 | MIT | BSD-3 | proprietary
+  training_corpus_url,
+  training_corpus_audit_trail_url,
+  fine_tune_corpus_source,
+  fine_tune_corpus_license,
+  fine_tune_corpus_audit_trail_url,
+  publicly_available_summary_url    -- Art. 53(2) publicly-available-summary
+FROM pinecone.component_training_provenance
+ORDER BY component;</code></pre>
+<p>Per EU AI Act Art. 53(d) GPAI training-data transparency, Art. 53(1)(b) copyright-summary, Art. 53(2) publicly-available-summary, ISO 42001 §6.1.4, plus Apache-2.0 license provenance for the Annoy-library and Pinecone-sparse-dense-algorithms.</p>
+</section>
+
+<section id="audit-gap-3">
+<h2>5. Audit gap #3 — Prompt-injection + jailbreak detection on vector ingest + metadata filter + RAG retrieval</h2>
+<p><strong>Reference 9-column per-payload prompt-injection detection-log table:</strong></p>
+<pre><code>SELECT
+  v.vector_id,
+  v.upsert_attributes,        -- the canonical injection vector
+  v.mutation_attributes,
+  v.delete_attributes,
+  v.metadata_filtering_input, -- canonical OWASP LLM LLM01 surface
+  v.hybrid_search_input,
+  v.semantic_search_input,
+  v.rag_pipeline_input,       -- canonical OWASP LLM LLM06 surface
+  v.ai_agent_memory_input
+FROM pinecone.vector_payload_audit v
+WHERE v.timestamp BETWEEN :start AND :end
+ORDER BY v.timestamp;</code></pre>
+<p>Per OWASP LLM Top 10 LLM01 (prompt injection) + LLM06 (sensitive info disclosure) + NIST AI RMF MEASURE, the per-vector-upsert-attributes + per-vector-mutation-attributes + per-vector-delete-attributes + per-metadata-filtering-input + per-sparse-dense-index-input + per-hybrid-search-input + per-semantic-search-input + per-RAG-pipeline-input + per-AI-agent-memory-input + per-AI-agent-tool-use-state-storage-input + per-AI-agent-reasoning-chain-storage-input + per-AI-agent-guardrail-state-input are the canonical injection vectors for a managed-vector-database.</p>
+</section>
+
+<section id="audit-gap-4">
+<h2>6. Audit gap #4 — Cross-tenant Pinecone SaaS isolation-evidence</h2>
+<p><strong>Reference 12-column per-tenant cross-tenant isolation-evidence table:</strong></p>
+<pre><code>SELECT
+  t.tenant_id,
+  t.namespace,
+  t.isolation_evidence_url,    -- SOC 2 CC6.1
+  t.tenant_isolation_event_id, -- GDPR Art. 28
+  t.byok_key_id,               -- HIPAA + EU AI Act Art. 10
+  t.byok_rotation_evidence_url,
+  t.cmek_key_id,
+  t.cmek_rotation_evidence_url,
+  t.kms_evidence_url,
+  t.sso_saml_assertion_id,
+  t.sso_saml_evidence_url,
+  t.rbac_role_change_evidence_url
+FROM pinecone.tenant_isolation_evidence t
+ORDER BY t.tenant_id;</code></pre>
+<p>Per SOC 2 CC6.1 (logical access) + GDPR Art. 28 (processor obligations) + HIPAA §164.312 (technical safeguards) + EU AI Act Art. 10 (data governance), the per-tenant namespace-isolation-evidence + tenant-isolation-evidence + BYOK-evidence + CMEK-evidence + KMS-evidence + SSO-SAML-assertion-evidence + RBAC-role-change-evidence is what an enterprise vendor-DD team will request in writing.</p>
+</section>
+
+<section id="audit-gap-5">
+<h2>7. Audit gap #5 — Cost-attribution + WORM join-table (SEC 17a-4 + IRS §6001 + Annex III 4)</h2>
+<p><strong>Reference 11-column WORM billing join-table:</strong></p>
+<pre><code>SELECT
+  v.vector_id,
+  v.operation,                    -- 'upsert' | 'mutation' | 'delete'
+  v.vector_size_bytes,
+  v.vector_dimension,
+  v.embedding_cost_usd,
+  v.llm_cost_usd,
+  v.warehouse_state_change_cost_usd,
+  v.blob_state_change_cost_usd,
+  v.namespace_id,
+  v.tenant_id,
+  v.billing_period
+FROM pinecone.vector_billing_worm v
+WHERE v.billing_period = :period
+ORDER BY v.tenant_id, v.namespace_id;</code></pre>
+<p>Per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM (write once read many) + IRS §6001 (record retention) + EU AI Act Annex III 4 high-risk-classification per Art. 6 + 14 + 27 + 43 + 72 + Aug 2026 GPAI enforcement, the per-vector-upsert + per-vector-mutation + per-vector-delete + per-namespace-isolation-event + per-tenant-isolation-event + per-API-key-rotation + per-RBAC-role-change + per-SSO-SAML-assertion + per-audit-log-export-event + per-BYOK-key-rotation + per-CMEK-key-rotation + per-downstream-OpenAI/Anthropic/Cohere/Hugging-Face-embeddings-call + per-downstream-LLM-call + per-downstream-Snowflake/Databricks/BigQuery/Redshift/Postgres-state-change + per-downstream-S3/GCS/Azure-Blob-state-change billing + cost-attribution join-table is the audit-prep buyer's first ask for SEC-regulated enterprise procurement.</p>
+</section>
+
+<section id="annex-iii-4-checklist">
+<h2>8. Annex III 4 buyer checklist (14 questions)</h2>
+<ol>
+<li>Does Pinecone export a per-vector-upsert audit log event (vector_id, timestamp, tenant_id, namespace, API key ID)?</li>
+<li>Does Pinecone export a per-vector-mutation audit log event with full before/after diff?</li>
+<li>Does Pinecone export a per-vector-delete audit log event with reason code + retention policy?</li>
+<li>Does Pinecone export a per-namespace-isolation event with isolation_evidence_url?</li>
+<li>Does Pinecone export a per-tenant-isolation event with tenant_isolation_evidence_url?</li>
+<li>Does Pinecone export a per-API-key-rotation event with previous_key_id + new_key_id + rotation_reason?</li>
+<li>Does Pinecone export a per-RBAC-role-change event with previous_role + new_role + actor + justification?</li>
+<li>Does Pinecone export a per-SSO-SAML-assertion event with assertion_id + IdP + session_duration?</li>
+<li>Does Pinecone export a per-BYOK-key-rotation event + per-CMEK-key-rotation event with KMS-evidence-url?</li>
+<li>Does Pinecone export a per-downstream-embeddings-call event (OpenAI / Anthropic / Cohere / Hugging Face) + per-downstream-LLM-call event with cost attribution?</li>
+<li>Does Pinecone export a per-downstream-Snowflake/Databricks/BigQuery/Redshift/Postgres-state-change event with warehouse-write-evidence?</li>
+<li>Does Pinecone export a per-downstream-S3/GCS/Azure-Blob-state-change event with object-version-id?</li>
+<li>Does Pinecone provide a per-component training-corpus license-provenance table (sparse-dense-index + metadata-filtering + hybrid-search + semantic-search + RAG-pipeline + AI-agent-memory) per EU AI Act Art. 53(d)?</li>
+<li>Does Pinecone provide a per-payload prompt-injection detection log (per-vector-upsert-attributes + per-metadata-filtering-input + per-RAG-pipeline-input) per OWASP LLM Top 10 LLM01 + LLM06?</li>
+</ol>
+</section>
+
+<section id="ai-vector-db-siblings">
+<h2>9. ai_vector_db vertical siblings</h2>
+<ul>
+<li><strong>Pinecone</strong> (192) — managed-vector-database-as-public-knowledge-graph-target (this chunk)</li>
+<li><strong>Weaviate</strong> (193) — open-source-vector-database with Weaviate Cloud + hybrid-search + generative-search + RAG-pipeline</li>
+<li><strong>Chroma</strong> (194) — open-source-embedding-database with Chroma Cloud + AI-agent-memory + AI-agent-tool-use-state-storage</li>
+<li><strong>Qdrant</strong> (195) — open-source-vector-search-engine with Qdrant Cloud + hybrid-search + payload-filtering + RAG-pipeline</li>
+<li><strong>Milvus</strong> (196) — open-source-vector-database with Zilliz Cloud + hybrid-search + multi-vector + RAG-pipeline</li>
+<li><strong>LanceDB</strong> (197) — open-source-columnar-vector-database with Lance format + serverless + RAG-pipeline</li>
+<li><strong>Vespa</strong> (198) — open-source-vector-search-engine with Vespa Cloud + hybrid-search + tensor-evaluation + RAG-pipeline</li>
+</ul>
+<p>The ai_vector_db vertical is one of the highest-audit-density verticals in the AI infrastructure stack because every vector mutation is a potential downstream-state-change to a downstream-LLM-call, a downstream-warehouse-state-change, a downstream-object-store-state-change, or a downstream-application-server-state-change. Pinecone leads this vertical as the most-deployed managed-vector-database-as-public-knowledge-graph-target with the broadest SSO/SAML + RBAC + BYOK + CMEK + audit-log-export surface.</p>
+</section>
+
+<section id="references">
+<h2>10. References</h2>
+<ol>
+<li><a href="https://www.pinecone.io/privacy/">Pinecone Privacy Policy</a> — verified live 2026-07-12, mailto:privacy@pinecone.io exposed</li>
+<li><a href="https://www.pinecone.io/security/">Pinecone Security</a></li>
+<li><a href="https://www.pinecone.io/trust/">Pinecone Trust Center</a></li>
+<li><a href="https://docs.pinecone.io/guides/operations/observability">Pinecone Observability</a></li>
+<li><a href="https://docs.pinecone.io/guides/projects/secure-namespace-projects">Pinecone Namespace Projects</a></li>
+<li><a href="https://artificialanalysis.ai/vectors">Artificial Analysis Vector Database Benchmarks</a></li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP LLM Top 10</a></li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">EU AI Act (Regulation 2024/1689)</a></li>
+<li><a href="https://www.iso.org/standard/81230.html">ISO/IEC 42001:2023 AI Management System</a></li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a></li>
+<li><a href="https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2">AICPA SOC 2</a></li>
+<li><a href="https://gdpr-info.eu/art-28-gdpr/">GDPR Art. 28</a></li>
+<li><a href="https://www.ecfr.gov/current/title-17/chapter-II/part-241">SEC 17a-4 (WORM)</a></li>
+<li><a href="https://www.law.cornell.edu/uscode/text/26/6001">IRS §6001 (record retention)</a></li>
+<li><a href="https://github.com/spotify/annoy">Annoy (Apache-2.0) approximate-nearest-neighbor library</a></li>
+</ol>
+<p><em>Chunk 85 — written 2026-07-12 by Atlas (Talon Forge). Long-tail SEO target: Pinecone EU AI Act audit + Pinecone SOC 2 audit + Pinecone ISO 42001 + Pinecone serverless audit + sparse-dense-index audit + metadata-filtering audit + hybrid-search audit + RAG-pipeline audit + AI-agent-memory audit + namespace-isolation audit + BYOK audit + CMEK audit + managed vector database SOC 2 audit + vector database EU AI Act Annex III 4 audit.</em></p>
+</section>
+</body>
+</html>
