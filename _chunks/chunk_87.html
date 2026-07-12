@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weaviate EU AI Act Audit Prep — Hybrid Search + BM25 + Dense + Sparse + Generative Search + Named Vectors + Multi-Tenant RBAC + Weaviate Cloud Open-Source Vector Database Real-Time AI-Audit Reference 2026</title>
+<meta name="description" content="Weaviate EU AI Act audit prep for open-source vector database teams: hybrid search (BM25 + dense + sparse), generative-search modules, named vectors, ref2vec, multi-tenant RBAC, Weaviate Cloud (WCD), Weaviate Enterprise, Weaviate Embedded, modular vectorizer integrations and downstream RAG/LLM state-change provenance.">
+<meta name="keywords" content="Weaviate EU AI Act audit, Weaviate SOC 2 audit, Weaviate ISO 42001, Weaviate hybrid search audit, Weaviate BM25 audit, Weaviate dense vectors audit, Weaviate sparse vectors audit, Weaviate generative search audit, Weaviate named vectors audit, Weaviate ref2vec audit, Weaviate multi-tenant RBAC audit, Weaviate Cloud audit, Weaviate Enterprise audit, Weaviate Embedded audit, vector database audit, open source vector database compliance, BSD-3-Clause vector database audit, RAG retrieval audit, AI agent memory audit, Weaviate vendor DD audit, Weaviate RAG modules audit, Weaviate vectorizer audit">
+<meta name="author" content="Atlas (Talon Forge)">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://atlas-talonforge.example/chunks/chunk_87.html">
+</head>
+<body>
+<header>
+<h1>Weaviate EU AI Act Audit Prep — Hybrid Search + BM25 + Dense + Sparse + Generative Search + Named Vectors + Multi-Tenant RBAC + Weaviate Cloud Open-Source Vector Database Real-Time AI-Audit Reference 2026</h1>
+<p><em>Long-tail SEO reference for regulated AI teams evaluating Weaviate as the vector-search + generative-search + RAG + multi-tenant layer behind enterprise AI deployments.</em></p>
+</header>
+<nav>
+<h2>Table of contents</h2>
+<ol>
+<li><a href="#overview">Weaviate audit-target overview</a></li>
+<li><a href="#crosswalk">Compliance framework cross-walk</a></li>
+<li><a href="#gap-1">Gap #1 — vector write to downstream LLM provenance</a></li>
+<li><a href="#gap-2">Gap #2 — multi-tenant RBAC + collection isolation</a></li>
+<li><a href="#gap-3">Gap #3 — OSS/proprietary/module provenance split</a></li>
+<li><a href="#gap-4">Gap #4 — prompt-injection + retrieval-poisoning detection</a></li>
+<li><a href="#gap-5">Gap #5 — WORM retention and cost attribution</a></li>
+<li><a href="#checklist">Buyer checklist</a></li>
+<li><a href="#siblings">ai_vector_db siblings</a></li>
+</ol>
+</nav>
+<section id="overview">
+<h2>1. Weaviate audit-target overview (2026)</h2>
+<p>Weaviate is the canonical open-source BSD-3-Clause vector database sibling in the ai_vector_db pipeline with native hybrid search, generative-search modules and modular vectorizer integrations. The public GitHub repo weaviate/weaviate is BSD-3-Clause licensed; the company is headquartered in Amsterdam, Netherlands; founders Bob van Luijt (CEO) and Etienne Dilocker (CTO) appear across the public Weaviate pages and conference talks.</p>
+<p>The GDPR/DPA vendor-DD inbox <strong>legal@weaviate.io</strong> was directly verified 2026-07-12 from https://weaviate.io/privacy (HTTP 200, 84,259 bytes). The privacy page exposes mailto:legal@weaviate.io as the canonical GDPR/DPA vendor-DD inbound channel, consistent with the ai_vector_db-inbox pattern used at Pinecone 192 (privacy@pinecone.io) and Qdrant 193 (info@qdrant.com).</p>
+<p>Weaviate's audit surface is broader than a hosted-only vector database because a regulated buyer may run Weaviate OSS self-hosted, Weaviate Cloud (WCD), Weaviate Enterprise, Weaviate Embedded, or embed the vector database inside an existing application. The evidence trail must therefore cover both vendor-operated and customer-operated infrastructure.</p>
+<p>The audit surface also includes Weaviate's distinctive product lines: hybrid search (BM25 + dense + sparse combined scoring), named vectors (per-property vectorization), ref2vec (centroid-based vector embeddings), generative-search modules (ChatGPT/Claude/Cohere/OctoAI), RAG modules (QA, summarization, translation, image captioning), multi-tenant collections with per-tenant RBAC, backup, replication and quantization (PQ + BQ + SQ).</p>
+</section>
+<section id="crosswalk">
+<h2>2. Compliance framework cross-walk</h2>
+<table border="1">
+<thead><tr><th>Framework</th><th>Control</th><th>Weaviate evidence surface</th></tr></thead>
+<tbody>
+<tr><td>SOC 2</td><td>CC6.1</td><td>Multi-tenant collection ACLs, named-vector isolation, RBAC role changes, vectorizer module isolation</td></tr>
+<tr><td>SOC 2</td><td>CC7.2</td><td>Vector mutation logs, hybrid-search query logs, generative-search prompts, backup export, replication events</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4</td><td>OSS/proprietary/module risk and training-data provenance</td></tr>
+<tr><td>ISO 42001</td><td>§9.4</td><td>Per-hybrid-search-score-component (BM25 + dense + sparse) performance and explainability evidence</td></tr>
+<tr><td>EU AI Act</td><td>Art. 10</td><td>Vector dataset governance, named-vector isolation, generative-search prompt governance</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12</td><td>Record keeping for vector writes, hybrid-search scoring, generative-search prompts, downstream LLM calls</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14</td><td>Human review of RAG retrieval decisions, generative-search outputs and agent-memory updates</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d)</td><td>OSS/proprietary/module provenance and training-data summary</td></tr>
+<tr><td>GDPR</td><td>Art. 28</td><td>Processor obligations for Weaviate Cloud (WCD) and Weaviate Enterprise</td></tr>
+<tr><td>HIPAA</td><td>§164.312</td><td>Multi-tenant collection isolation, RBAC role changes, audit log export</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 / LLM06</td><td>Prompt injection, retrieval poisoning, hybrid-search-score manipulation, generative-search-prompt poisoning</td></tr>
+</tbody>
+</table>
+</section>
+<section id="gap-1">
+<h2>3. Gap #1 — vector write to downstream LLM provenance</h2>
+<pre><code>SELECT
+  v.vector_id,
+  v.collection_id,
+  v.tenant_id,
+  v.named_vector_property,
+  v.operation,
+  v.hnsw_graph_mutation_id,
+  v.quantization_job_id,
+  q.hybrid_search_query_id,
+  q.bm25_score, q.dense_score, q.sparse_score,
+  g.generative_search_prompt_id,
+  r.rag_module_call_id,
+  z.vectorizer_call_id,
+  e.embedding_call_id,
+  l.llm_call_id,
+  d.downstream_state_change_id
+FROM weaviate.vector_audit_log v
+LEFT JOIN weaviate.query_audit_log q ON v.vector_id = q.vector_id
+LEFT JOIN weaviate.generative_search_log g ON q.query_id = g.query_id
+LEFT JOIN weaviate.rag_module_log r ON q.query_id = r.query_id
+LEFT JOIN weaviate.vectorizer_log z ON q.query_id = z.query_id
+LEFT JOIN downstream.embedding_call e ON z.call_id = e.call_id
+LEFT JOIN downstream.llm_call l ON r.call_id = l.call_id
+LEFT JOIN downstream.state_change d ON l.call_id = d.llm_call_id
+WHERE v.timestamp BETWEEN :start AND :end;
+</code></pre>
+<p>This is the table a buyer asks for when Weaviate-backed RAG output changes a customer record, support ticket, credit decision, clinical summary or regulated workflow. The join-table must surface the hybrid-search score components (BM25 + dense + sparse), the generative-search prompt, the RAG-module call, the vectorizer call and the downstream LLM call.</p>
+</section>
+<section id="gap-2">
+<h2>4. Gap #2 — multi-tenant RBAC + collection isolation</h2>
+<p>Weaviate Cloud + Enterprise support per-tenant collections with RBAC, named-vector isolation and per-tenant vectorizer module configuration. For multi-tenant SaaS deployments, buyers need per-tenant isolation evidence: collection ACLs, named-vector isolation, RBAC role changes, backup export, replication topology, vectorizer module isolation and customer-operated Kubernetes/on-prem isolation evidence.</p>
+</section>
+<section id="gap-3">
+<h2>5. Gap #3 — OSS/proprietary/module provenance split</h2>
+<p>Weaviate OSS is BSD-3-Clause; Weaviate Cloud (WCD), Weaviate Enterprise and Weaviate Embedded carry vendor control-plane surfaces; modular vectorizer integrations (OpenAI/Anthropic/Cohere/OctoAI/open-source) and generative-search modules carry their own license surface. The audit artifact needs to separate source-available evidence, proprietary evidence, modular third-party evidence and customer-operated evidence.</p>
+</section>
+<section id="gap-4">
+<h2>6. Gap #4 — prompt-injection + retrieval-poisoning detection</h2>
+<p>For hybrid search + generative-search deployments, buyers need per-payload detection logs that record any prompt-injection attempt, retrieval-source-poisoning attempt, hybrid-search-score-manipulation attempt or generative-search-prompt-poisoning attempt across BM25 text signals, dense-vector embeddings, sparse-vector terms, named-vector property inputs and generative-search outputs. This evidence is required for OWASP LLM Top 10 LLM01 + LLM06 + EU AI Act Art. 9 + Art. 14.</p>
+</section>
+<section id="gap-5">
+<h2>7. Gap #5 — WORM retention and cost attribution</h2>
+<p>Vector writes, deletes, rebuilds, quantization jobs, hybrid-search scoring, generative-search calls, RAG-module calls, vectorizer calls, backup exports, replication events and downstream LLM calls need a WORM-retained cost and evidence table for SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 + IRS §6001.</p>
+</section>
+<section id="checklist">
+<h2>8. Buyer checklist for Weaviate audit-prep</h2>
+<ol>
+<li>Can Weaviate export vector mutation logs to customer WORM storage?</li>
+<li>Can hybrid-search score components (BM25 + dense + sparse) be reconstructed per query?</li>
+<li>Can named-vector property decisions be linked to specific tenants?</li>
+<li>Can generative-search prompts be retained with their retrieval source?</li>
+<li>Can RAG-module calls be joined to retrieval IDs?</li>
+<li>Can vectorizer calls be joined to retrieval IDs?</li>
+<li>Can multi-tenant collection isolation evidence be exported?</li>
+<li>Can RBAC role changes be retained for the audit retention period?</li>
+<li>Can backup, replication and snapshot events be tied to collection IDs?</li>
+<li>Can BSD-3-Clause OSS components be separated from proprietary Cloud controls?</li>
+<li>Can downstream embedding and LLM calls be joined to retrieval IDs?</li>
+<li>Can prompt-injection and retrieval-poisoning attempts be logged per payload?</li>
+<li>Can cost attribution be joined to vector write/search/inference events?</li>
+<li>Can human review override decisions be retained for Annex III workflows?</li>
+</ol>
+</section>
+<section id="siblings">
+<h2>9. ai_vector_db sibling map</h2>
+<p>Pinecone is the managed serverless/pod vector database sibling. Qdrant is the open-source Apache-2.0 + hybrid-cloud sibling. Weaviate is the open-source BSD-3-Clause + hybrid-search + generative-search + multi-tenant-RBAC sibling. Future siblings: Chroma, Zilliz/Milvus, LanceDB, Vespa, Marqo and Redis vector search.</p>
+</section>
+<footer>
+<p>Generated by Atlas for Talon Forge. Verified inbox: legal@weaviate.io. Page: chunk_87.html.</p>
+</footer>
+</body>
+</html>
