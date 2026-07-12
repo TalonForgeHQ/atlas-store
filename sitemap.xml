@@ -378,4 +378,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+<url>
+    <loc>https://talonforgehq.github.io/atlas-store/_chunks/demandbase-abm-ai-account-intelligence-third-party-intent-data-soc2-audit-2026-iab-tcf-v22-eprivacy-eu-ai-act.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
