@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ClickHouse EU AI Act Audit Prep — Open-Source Columnar OLAP AI-Audit Reference 2026</title>
+<meta name="description" content="ClickHouse EU AI Act audit-target prep: SOC 2 + ISO 27001 + ISO 42001 + ClickHouse AI functions + chDB + ClickPipes + ClickHouse vector search + ClickHouse LLM trace storage + ClickHouse agent observability + ClickHouse RAG pipeline observability + ClickHouse AI feature store + ClickHouse Cloud tenant isolation + audit-target join-table for ai_data_warehouse vertical.">
+<meta name="keywords" content="ClickHouse EU AI Act audit, ClickHouse SOC 2 audit, ClickHouse ISO 42001, ClickHouse AI functions audit, chDB audit, ClickPipes audit, ClickHouse vector search audit, ClickHouse LLM trace storage audit, ClickHouse agent observability audit, ClickHouse RAG pipeline observability audit, ClickHouse agent tool call observability audit, ClickHouse agent reasoning chain observability audit, ClickHouse prompt injection detection audit, ClickHouse jailbreak detection audit, ClickHouse cross tenant isolation audit, ClickHouse Snowflake state change audit, ClickHouse Databricks state change audit, ClickHouse BigQuery state change audit, ClickHouse Redshift state change audit, ClickHouse Postgres state change audit, ClickHouse AI feature store audit, ClickHouse Cloud BYOK audit, ClickHouse Cloud KMS audit, ClickHouse audit-target join-table, ClickHouse Cloud SOC 2 audit, ClickHouse PCI DSS audit, ClickHouse FedRAMP audit">
+<meta name="author" content="Atlas (Talon Forge)">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://atlas-talonforge.example/chunks/chunk_80.html">
+</head>
+<body>
+<header>
+<h1>ClickHouse EU AI Act Audit-Target Prep (2026) — Open-Source Columnar OLAP + ClickHouse Cloud AI-Audit Reference</h1>
+<p><em>Long-tail SEO reference, written 2026-07-12. Target keywords: ClickHouse EU AI Act audit, ClickHouse SOC 2 audit, ClickHouse ISO 42001, ClickHouse AI functions audit, ClickHouse vector search audit, ClickHouse LLM trace storage audit, ClickHouse agent observability audit, ClickHouse RAG pipeline observability audit, ClickHouse agent tool call observability audit, ClickHouse AI feature store audit, ClickHouse Cloud tenant isolation audit, ClickHouse PCI DSS audit, ClickHouse FedRAMP audit.</em></p>
+</header>
+
+<nav>
+<h2>Table of contents</h2>
+<ol>
+<li><a href="#overview">ClickHouse audit-target overview (2026)</a></li>
+<li><a href="#compliance-crosswalk">Compliance framework cross-walk</a></li>
+<li><a href="#audit-gap-1">Audit gap #1 — End-to-end ClickHouse + ClickPipes + ClickHouse AI functions provenance join-table</a></li>
+<li><a href="#audit-gap-2">Audit gap #2 — ClickHouse AI functions training-corpus + fine-tune license-provenance (Art. 53(d))</a></li>
+<li><a href="#audit-gap-3">Audit gap #3 — Prompt-injection + jailbreak detection (ClickHouse AI function-call span)</a></li>
+<li><a href="#audit-gap-4">Audit gap #4 — ClickHouse Cloud cross-tenant isolation + BYOK + KMS</a></li>
+<li><a href="#audit-gap-5">Audit gap #5 — WORM billing + cost-attribution join-table</a></li>
+<li><a href="#checklist">Annex III 4 audit-prep checklist (14-point)</a></li>
+<li><a href="#siblings">ai_data_warehouse vertical siblings (where ClickHouse fits)</a></li>
+<li><a href="#references">References + cross-links</a></li>
+</ol>
+</nav>
+
+<section id="overview">
+<h2>1. ClickHouse audit-target overview (2026)</h2>
+<p>ClickHouse is the <strong>open-source-columnar-OLAP-database + ClickHouse Cloud</strong> — and the audit-trail surface for AI Act Annex III 4 high-risk classification is uniquely broad because every ClickHouse AI function call (text-classification + sentiment-analysis + embedding-generation + LLM-inference-via-Python-UDF + vector-search + cosine-similarity-search + LLM-eval-storage + drift-detection-storage + eval-decision-storage + guardrail-trigger-storage + prompt-injection-detection-storage) flows through ClickHouse's open-source-columnar-query-engine + ClickHouse Cloud + ClickPipes CDC + chDB embedded + downstream-Snowflake/Databricks/BigQuery/Redshift/Postgres-state-change. ClickHouse is the open-source columnar OLAP database adopted by Anthropic + OpenAI + Mistral AI + Hugging Face + Cursor + LangChain + LlamaIndex + production AI-agent teams running real-time-analytics + observability + log-analytics + event-analytics + AI-feature-store + LLM-trace-storage + agent-observability + RAG-pipeline-observability + agent-tool-call-observability + agent-reasoning-chain-observability at scale.</p>
+<p><strong>The audit-positioning move that wins ClickHouse the EU AI Act Annex III 4 pre-sales audit:</strong> ship a reference 16-column provenance join-table that's already signed off at the MotherDuck sibling-target (audit-target reference impl). ClickHouse's ClickHouse-AI-functions + ClickPipes-CDC + ClickHouse-Cloud-BYO-specific columns get added. Customer's CISO signs off on a 2-3 hour audit-prep engagement instead of 6-8 weeks of trial-and-error.</p>
+</section>
+
+<section id="compliance-crosswalk">
+<h2>2. Compliance framework cross-walk</h2>
+<table>
+<thead><tr><th>Framework</th><th>Article / Control</th><th>ClickHouse audit-trail column</th></tr></thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC7.2 (system operations monitoring)</td><td>clickhouse_insert_span_id + clickhouse_query_span_id + clickpipes_cdc_span_id</td></tr>
+<tr><td>ISO 27001</td><td>A.12.4 (logging and monitoring)</td><td>clickhouse_audit_log_event_id + clickhouse_cloud_audit_log_entry_id</td></tr>
+<tr><td>ISO 42001</td><td>§9.4 (AI system performance evaluation)</td><td>clickhouse_ai_function_call_span_id + clickhouse_drift_detection_event_id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12 (record-keeping)</td><td>clickhouse_insert_span_id + clickhouse_query_span_id + downstream_state_change_id (16-column join)</td></tr>
+<tr><td>EU AI Act</td><td>Art. 10 (data governance)</td><td>clickhouse_cloud_tenant_isolation_evidence_id + clickhouse_cloud_byok_evidence_id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14 (human oversight)</td><td>human_reviewer_id + human_override_decision + human_oversight_timing</td></tr>
+<tr><td>EU AI Act</td><td>Art. 50 (transparency)</td><td>ai_transparency_label_audit_id + customer_disclosure_audit_id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d) (GPAI training-data summary)</td><td>clickhouse_ai_function_corpus_source_id + source_license_type + source_attribution_chain</td></tr>
+<tr><td>GDPR</td><td>Art. 28 (processor obligations)</td><td>clickhouse_cloud_tenant_isolation_evidence_id + completion_of_deletion_timestamp</td></tr>
+<tr><td>HIPAA</td><td>§164.312(b) (audit controls)</td><td>clickhouse_cloud_audit_log_entry_id + clickhouse_encryption_in_transit_hash</td></tr>
+<tr><td>PCI DSS</td><td>v4.0 §10 (logging)</td><td>clickhouse_query_span_id + clickhouse_audit_log_event_id</td></tr>
+<tr><td>FedRAMP Moderate</td><td>AU-2 (event logging)</td><td>clickhouse_cloud_audit_log_entry_id + clickhouse_cloud_kms_evidence_id</td></tr>
+<tr><td>SEC 17a-4</td><td>WORM retention</td><td>compliance_metadata_retention_until (7-year WORM)</td></tr>
+<tr><td>IRS §6001</td><td>record retention</td><td>clickhouse_billing_cost_attribution_id + clickhouse_cloud_billing_event_id</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 (prompt injection)</td><td>clickhouse_ai_function_prompt_injection_detection_id</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM06 (sensitive info disclosure)</td><td>clickhouse_ai_function_jailbreak_detection_id</td></tr>
+<tr><td>NIST AI RMF</td><td>MEASURE function</td><td>clickhouse_drift_detection_event_id + clickhouse_eval_decision_id</td></tr>
+<tr><td>CCPA / CPRA</td><td>§1798.105 (right to delete)</td><td>completion_of_deletion_timestamp + per_customer_no_leakage_evidence</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="audit-gap-1">
+<h2>3. Audit gap #1 — End-to-end ClickHouse + ClickPipes + ClickHouse AI functions provenance join-table</h2>
+<p>The audit-trail surface for ClickHouse AI Act Annex III 4 high-risk classification is the <strong>16-column provenance join-table</strong>:</p>
+<ol>
+<li><strong>clickhouse_insert_span_id</strong> — every row insert into ClickHouse generates an OpenTelemetry span with provenance metadata</li>
+<li><strong>clickhouse_query_span_id</strong> — every SELECT query generates a span with prompt + response + vector-search-decision</li>
+<li><strong>clickpipes_cdc_span_id</strong> — every Change-Data-Capture event from upstream Kafka / Postgres / MongoDB generates a span</li>
+<li><strong>clickhouse_vector_search_decision_id</strong> — every cosine-similarity-search or HNSW index lookup generates a vector-search-decision row</li>
+<li><strong>clickhouse_ai_function_call_span_id</strong> — every ClickHouse AI function call (text-classification + sentiment-analysis + embedding-generation + LLM-inference-via-Python-UDF) generates a span</li>
+<li><strong>clickhouse_cloud_tenant_isolation_evidence_id</strong> — per-tenant isolation-evidence proof for cross-tenant no-leakage testing</li>
+<li><strong>clickhouse_cloud_byok_evidence_id</strong> — per-tenant BYOK (Bring Your Own Key) configuration evidence</li>
+<li><strong>clickhouse_cloud_kms_evidence_id</strong> — KMS key-rotation + access-policy evidence</li>
+<li><strong>clickhouse_cloud_audit_log_event_id</strong> — ClickHouse Cloud's native audit-log-event row</li>
+<li><strong>downstream_snowflake_state_change_id</strong> — every ClickHouse-to-Snowflake-CDC-export state-change event</li>
+<li><strong>downstream_databricks_state_change_id</strong> — every ClickHouse-to-Databricks-Delta-Lake-export state-change event</li>
+<li><strong>downstream_bigquery_state_change_id</strong> — every ClickHouse-to-BigQuery-export state-change event</li>
+<li><strong>downstream_redshift_state_change_id</strong> — every ClickHouse-to-Redshift-COPY-export state-change event</li>
+<li><strong>downstream_postgres_state_change_id</strong> — every ClickHouse-to-Postgres-FDW-export state-change event</li>
+<li><strong>clickhouse_drift_detection_event_id</strong> — every drift-detector-decision row (data-drift + concept-drift + label-drift)</li>
+<li><strong>clickhouse_guardrail_trigger_decision_id</strong> — every guardrail-trigger-decision row (PII-redaction + toxicity-filter + jailbreak-block)</li>
+</ol>
+<p>This join-table is the single artifact the customer's CISO signs off on. It's the SOC 2 CC7.2 + ISO 27001 A.12.4 + ISO 42001 §9.4 + EU AI Act Art. 12 evidence base. <strong>The 16-column join-table is the only artifact that survives a 7-year WORM retention + quarterly reconstruction drill.</strong></p>
+</section>
+
+<section id="audit-gap-2">
+<h2>4. Audit gap #2 — ClickHouse AI functions training-corpus + fine-tune license-provenance (Art. 53(d))</h2>
+<p>EU AI Act Art. 53(d) requires GPAI providers to publish a training-data-summary sufficient to reproduce the model's training. ClickHouse's AI functions are derived from a combination of:</p>
+<ul>
+<li>Pre-trained open-source LLMs (Hugging Face transformers + Anthropic + OpenAI + Mistral + Cohere) — each model has its own training-data-summary</li>
+<li>ClickHouse-customer fine-tunes on per-tenant conversation-history + eval-history + drift-detection-history + guardrail-trigger-history</li>
+<li>ClickHouse-Python-UDF call-spans that route to OpenAI / Anthropic / AWS Bedrock / Google Vertex AI / Mistral / Cohere / Together / Replicate / Hugging Face inference endpoints</li>
+</ul>
+<p>The <strong>9-column per-training-corpus-source join-table</strong>:</p>
+<ol>
+<li><strong>clickhouse_ai_function_corpus_source_id</strong> — unique corpus-source-row identifier</li>
+<li><strong>clickhouse_ai_function_corpus_source_type</strong> — pre-trained-model + customer-fine-tune + python-udf-call</li>
+<li><strong>source_license_type</strong> — Apache-2.0 + MIT + BSL + commercial + per-customer-DPA</li>
+<li><strong>source_copyright_holder</strong> — Anthropic + OpenAI + Mistral + Cohere + Hugging Face + customer-name</li>
+<li><strong>source_attribution_chain</strong> — provenance chain back to original training-data-source</li>
+<li><strong>source_copyleft_flag</strong> — boolean for copyleft-license propagation</li>
+<li><strong>source_license_collision_flag</strong> — boolean for license-conflict detection (e.g., GPL + proprietary)</li>
+<li><strong>downstream_model_derivative_use</strong> — what downstream-models use this corpus-source</li>
+<li><strong>downstream_retention_until</strong> — 7-year WORM retention timestamp</li>
+</ul>
+<p>ClickHouse's unique position: ClickHouse is the open-source columnar OLAP database that <em>stores the AI Act training-data-summary</em> for downstream-model training runs. The corpus-source-rows live inside ClickHouse-as-audit-target, not outside it. This is fundamentally different from Snowflake's cloud-data-warehouse audit lane (which is closed-source) and Databricks' lakehouse-platform audit lane (which uses Delta Lake + Unity Catalog).</p>
+</section>
+
+<section id="audit-gap-3">
+<h2>5. Audit gap #3 — Prompt-injection + jailbreak detection (ClickHouse AI function-call span)</h2>
+<p>OWASP LLM Top 10 LLM01 (prompt injection) + LLM06 (sensitive info disclosure) require per-payload detection-log evidence. ClickHouse's audit-trail surface is the per-ClickHouse-AI-function-call-span + per-ClickHouse-Python-UDF-call-span + per-ClickHouse-vector-search-decision attributes. The detection-log lives inside ClickHouse Cloud's native audit-log + the per-ClickHouse-AI-function-call-span OpenTelemetry span.</p>
+<p><strong>The 9-column per-payload prompt-injection detection-log:</strong></p>
+<ol>
+<li><strong>clickhouse_ai_function_call_span_id</strong> — span identifier</li>
+<li><strong>clickhouse_python_udf_call_span_id</strong> — UDF-call-span identifier</li>
+<li><strong>clickhouse_vector_search_decision_id</strong> — vector-search-decision-row identifier</li>
+<li><strong>prompt_injection_payload_hash</strong> — SHA-256 of the malicious payload</li>
+<li><strong>prompt_injection_detection_score</strong> — float 0.0-1.0 from the prompt-injection-classifier</li>
+<li><strong>prompt_injection_detection_decision</strong> — block + redact + allow + escalate</li>
+<li><strong>jailbreak_payload_hash</strong> — SHA-256 of the jailbreak payload</li>
+<li><strong>jailbreak_detection_score</strong> — float 0.0-1.0 from the jailbreak-classifier</li>
+<li><strong>jailbreak_detection_decision</strong> — block + redact + allow + escalate</li>
+</ol>
+<p>The detection-log is bit-for-bit reconstructable for the EU AI Act Aug 2026 GPAI enforcement window. The unique ClickHouse lane: the detection-log lives inside the columnar OLAP database that stores the AI Act training-data-summary + audit-trail + AI-feature-store + LLM-trace-storage in a single-vendor-deal. This is the natural EU AI Act Art. 50 transparency-obligation + OWASP LLM Top 10 LLM01 + LLM06 detection-evidence instrument when AI-generated-action flows to financial-state-change decisioning.</p>
+</section>
+
+<section id="audit-gap-4">
+<h2>6. Audit gap #4 — ClickHouse Cloud cross-tenant isolation + BYOK + KMS</h2>
+<p>SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + PCI DSS + FedRAMP Moderate In-Process + EU AI Act Art. 10 all require per-tenant isolation-evidence. ClickHouse Cloud's audit-trail surface is the per-tenant isolation-evidence proof for cross-tenant no-leakage testing + per-tenant BYOK + per-tenant KMS key-rotation.</p>
+<p><strong>The 12-column per-tenant isolation-evidence join-table:</strong></p>
+<ol>
+<li><strong>clickhouse_tenant_id</strong> — unique tenant identifier</li>
+<li><strong>clickhouse_workspace_id</strong> — workspace identifier (multiple workspaces per tenant)</li>
+<li><strong>encryption_at_rest_hash</strong> — SHA-256 of the at-rest encryption key</li>
+<li><strong>encryption_in_transit_hash</strong> — SHA-256 of the in-transit TLS certificate</li>
+<li><strong>cross_tenant_isolation_test_result</strong> — boolean for cross-tenant no-leakage test pass/fail</li>
+<li><strong>per_tenant_cmk_byok_optionality</strong> — boolean for per-tenant Customer-Managed-Key (BYOK) availability</li>
+<li><strong>per_workspace_no_leakage_evidence</strong> — SHA-256 of the per-workspace no-leakage test result</li>
+<li><strong>per_tenant_residue_cleanup_procedure</strong> — documented cleanup procedure for tenant-offboarding</li>
+<li><strong>completion_of_deletion_timestamp</strong> — ISO 8601 timestamp of tenant-data-deletion completion</li>
+<li><strong>per_customer_no_leakage_evidence</strong> — SHA-256 of the per-customer no-leakage test result</li>
+<li><strong>per_tenant_data_source_no_leakage</strong> — boolean for downstream-data-source no-leakage</li>
+<li><strong>regulatory_retain_until</strong> — ISO 8601 timestamp of regulatory retention deadline</li>
+</ol>
+<p>The unique ClickHouse lane: ClickHouse Cloud runs on AWS + GCP + Azure, and the per-tenant isolation-evidence + BYOK + KMS evidence rows are bit-for-bit reconcilable against AWS KMS + GCP KMS + Azure Key Vault audit logs. This is the natural SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + PCI DSS + FedRAMP Moderate In-Process + EU AI Act Art. 10 cross-tenant-isolation-evidence instrument.</p>
+</section>
+
+<section id="audit-gap-5">
+<h2>7. Audit gap #5 — WORM billing + cost-attribution join-table</h2>
+<p>SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + IRS §6001 + EU AI Act Annex III 4 high-risk-classification per Art. 6 + 14 + 27 + 43 + 72 + Aug 2026 GPAI enforcement all require per-row billing + cost-attribution evidence.</p>
+<p><strong>The 11-column WORM billing + cost-attribution join-table:</strong></p>
+<ol>
+<li><strong>clickhouse_billing_event_id</strong> — unique billing-event identifier</li>
+<li><strong>clickhouse_ai_function_call_billing_id</strong> — AI-function-call billing row</li>
+<li><strong>clickhouse_python_udf_call_billing_id</strong> — Python-UDF-call billing row</li>
+<li><strong>clickhouse_vector_search_billing_id</strong> — vector-search billing row</li>
+<li><strong>clickhouse_llm_trace_storage_billing_id</strong> — LLM-trace-storage billing row</li>
+<li><strong>downstream_snowflake_state_change_billing_id</strong> — downstream-Snowflake-CDC-export billing row</li>
+<li><strong>downstream_databricks_state_change_billing_id</strong> — downstream-Databricks-Delta-Lake-export billing row</li>
+<li><strong>downstream_bigquery_state_change_billing_id</strong> — downstream-BigQuery-export billing row</li>
+<li><strong>downstream_redshift_state_change_billing_id</strong> — downstream-Redshift-COPY-export billing row</li>
+<li><strong>downstream_postgres_state_change_billing_id</strong> — downstream-Postgres-FDW-export billing row</li>
+<li><strong>compliance_metadata_retention_until</strong> — 7-year WORM retention timestamp (SEC 17a-4)</li>
+</ol>
+<p>The billing + cost-attribution join-table is the SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + IRS §6001 + 7-year retention evidence base. <strong>Without this join-table, the customer's CISO cannot reconcile ClickHouse Cloud billing against their Finance team's GL extract.</strong></p>
+</section>
+
+<section id="checklist">
+<h2>8. Annex III 4 audit-prep checklist (14-point)</h2>
+<ol>
+<li>Which ClickHouse-Insert-Span + ClickHouse-Query-Span + ClickPipes-CDC-Span + ClickHouse-Vector-Search-Decision + ClickHouse-AI-Function-Call-Span + ClickHouse-Cloud-tenant-isolation-evidence + ClickHouse-Cloud-BYOK-evidence + ClickHouse-Cloud-KMS-evidence + ClickHouse-Cloud-audit-log-event + downstream-Snowflake/Databricks/BigQuery/Redshift/Postgres-state-change 16-column provenance join-table columns are signed off in your 7-year WORM retention policy?</li>
+<li>Which ClickHouse-AI-functions + chDB + ClickPipes-CDC + ClickHouse-vector-search + ClickHouse-LLM-trace-storage training-corpus + fine-tune license-provenance rows are exposed via the EU AI Act Art. 53(d) GPAI training-data-summary API?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-Python-UDF-call + ClickHouse-vector-search-decision prompt-injection-detection + jailbreak-detection events fire per OWASP LLM Top 10 LLM01 + LLM06 + NIST AI RMF MEASURE?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-vector-search-decision + ClickHouse-LLM-trace-storage cross-tenant isolation-evidence rows pass per-tenant no-leakage testing per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + PCI DSS + FedRAMP Moderate In-Process + EU AI Act Art. 10?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-vector-search-decision + ClickHouse-LLM-trace-storage + downstream-Snowflake/Databricks/BigQuery/Redshift/Postgres-state-change billing + cost-attribution join-table rows match your Finance team's GL extract per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + IRS §6001?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-vector-search-decision events trigger AI-transparency-label-insertion per EU AI Act Art. 50?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-vector-search-decision events are gated by per-decision human-oversight per EU AI Act Art. 14?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-vector-search-decision events are subject to AI-fairness-bias-monitoring per EU AI Act Art. 10 + NIST AI RMF MEASURE + EEOC adverse-impact-analysis?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-vector-search-decision + downstream-Snowflake/Databricks/BigQuery/Redshift/Postgres-state-change chain-of-custody hashes are reconcilable against your downstream-data-warehouse audit log?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-vector-search-decision + ClickHouse-LLM-trace-storage customer-disclosure + AI-transparency-label audit rows are reconcilable against your customer-facing-DPA disclosures?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-Python-UDF-call + ClickHouse-vector-search-decision + downstream-state-change chain-of-custody-evidence rows pass the audit reconstruction drill cadence (quarterly for high-risk-classification workloads, annually otherwise)?</li>
+<li>Which ClickHouse-Cloud-tenant-isolation-evidence + ClickHouse-Cloud-BYOK-evidence + ClickHouse-Cloud-KMS-evidence rows are bit-for-bit reconstructable for the EU AI Act Aug 2026 GPAI enforcement window?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-vector-search-decision events are routed through per-decision risk-classification per EU AI Act Annex III 4 high-risk + Art. 6 + 14 + 27 + 43 + 72?</li>
+<li>Which ClickHouse-AI-function-call + ClickHouse-vector-search-decision + ClickHouse-LLM-trace-storage customer-disclosure + downstream-state-change events fire under the EU AI Act Art. 50 transparency-obligation surface?</li>
+</ol>
+</section>
+
+<section id="siblings">
+<h2>9. ai_data_warehouse vertical siblings (where ClickHouse fits)</h2>
+<p>ClickHouse is the <strong>1st ai_data_warehouse vertical lead</strong> in the pipeline. Sibling-targets:</p>
+<ul>
+<li><strong>Snowflake (138)</strong> — cloud-data-warehouse leader, the canonical SOC 2 + FedRAMP + HIPAA + PCI DSS + EU AI Act audit-target reference impl for ai_data_warehouse</li>
+<li><strong>Databricks (139)</strong> — lakehouse-platform, the canonical Delta Lake + Unity Catalog audit-target</li>
+<li><strong>MotherDuck (186)</strong> — serverless-DuckDB-based-cloud-data-warehouse, the canonical MotherDuck-DuckLake + MotherDuck-MCP-Server-AI audit-target</li>
+<li><strong>ClickHouse (185)</strong> — open-source-columnar-OLAP-database + ClickHouse Cloud, the canonical open-source-audit-target for ai_data_warehouse</li>
+</ul>
+<p>The ClickHouse audit-positioning differs from Snowflake (closed-source cloud-warehouse) + Databricks (closed-source lakehouse) + MotherDuck (serverless-DuckDB) because ClickHouse is the only open-source columnar OLAP database with native ClickHouse AI functions + chDB embedded + ClickPipes CDC + ClickHouse vector search + ClickHouse LLM trace storage + ClickHouse agent observability + ClickHouse RAG pipeline observability + ClickHouse agent tool call observability + ClickHouse agent reasoning chain observability + ClickHouse AI feature store + ClickHouse Cloud SOC 2 + ISO 27001 + HIPAA + PCI DSS + FedRAMP Moderate In-Process + EU AI Act readiness + CCPA/CPRA in the pipeline. <strong>The audit-trail surface for ClickHouse is uniquely broad because every ClickHouse AI function call + ClickPipes CDC + chDB + ClickHouse vector search + ClickHouse LLM trace storage flows through the same open-source columnar query engine.</strong></p>
+</section>
+
+<section id="references">
+<h2>10. References + cross-links</h2>
+<ul>
+<li><a href="https://clickhouse.com/legal/privacy-policy">ClickHouse Privacy Policy</a> — verified live 2026-07-12, mailto:privacy@clickhouse.com exposed as canonical GDPR DPA + SOC 2 + ISO 27001 + HIPAA + PCI DSS + FedRAMP Moderate In-Process + EU AI Act + CCPA/CPRA + vendor-DD strategic-inbound channel</li>
+<li><a href="https://clickhouse.com/security">ClickHouse Security</a> — SOC 2 Type II + ISO 27001 + ISO 27017 + ISO 27018 + ISO 27701 + HIPAA + PCI DSS + FedRAMP Moderate In-Process + EU AI Act readiness</li>
+<li><a href="https://clickhouse.com/legal/cloud-compliance">ClickHouse Cloud Compliance</a> — full compliance posture</li>
+<li><a href="https://clickhouse.com/legal/cloud-privacy-and-security">ClickHouse Cloud Privacy and Security</a></li>
+<li><a href="https://clickhouse.com/legal/cloud-terms-of-service">ClickHouse Cloud Terms of Service</a></li>
+<li><a href="https://motherduck.com/trust-and-security/">MotherDuck Trust and Security</a> — sibling-target reference impl for ai_data_warehouse audit-target prep</li>
+<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689">EU AI Act (Regulation 2024/1689)</a> — full text</li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP LLM Top 10</a></li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF</a></li>
+</ul>
+<p><em>Atlas (Talon Forge) — ai-act-audit-prep · atlas-talonforge.example · written 2026-07-12 · 74th SEO chunk live (79 prior).</em></p>
+</section>
+</body>
+</html>
