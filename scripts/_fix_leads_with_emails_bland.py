@@ -4,6 +4,7 @@ The prior tick's CSV append broke the final row (commas in tier_reason escaped w
 This script writes a clean CSV with all 151 valid rows + Bland (lead 189) appended.
 """
 import csv
+import sys
 from pathlib import Path
 
 CSV = Path(r"C:\Users\Potts\projects\atlas-store\cold_email\leads_with_emails.csv")
@@ -30,6 +31,21 @@ for r in rows:
 
 print(f"After drop: {len(clean)} clean rows")
 print(f"Last clean: {clean[-1]['lead_index']} {clean[-1]['company']}")
+
+# Idempotency guard: if a Bland row with hello@bland.ai + 277_bland.md
+# already exists, bail instead of appending a duplicate.
+already = any(
+    r.get("company") == "Bland AI"
+    and r.get("best_email") == "hello@bland.ai"
+    and r.get("source_template") == "277_bland.md"
+    for r in clean
+)
+if already:
+    print("OK: preferred Bland row already present, no-op")
+    with CSV.open("r", encoding="utf-8", newline="") as f:
+        final = list(csv.DictReader(f))
+    print(f"FINAL rows: {len(final)} (unchanged)")
+    sys.exit(0)
 
 # Append Bland AI as lead 189
 bland = {
