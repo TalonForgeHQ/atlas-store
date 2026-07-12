@@ -1,0 +1,94 @@
+<!-- chunk_94.html — Heap Illuminate + Replay AI + Funnel AI + Cohort AI EU AI Act Audit Prep 2026 -->
+<!-- Generated 2026-07-12 Tick 101 -->
+<!-- Targets long-tail: Heap Illuminate audit · Heap Replay AI audit · Heap Funnel AI audit · Heap Cohort AI audit · Heap autocapture audit · Heap EU AI Act · Heap SOC 2 · Heap ISO 42001 · autocapture analytics audit · Heap Illuminate Art 12 · Heap Illuminate Art 14 · Replay AI audit · Heap Aug 2026 GPAI -->
+<section class="audit-chunk" id="chunk-94">
+
+<h1>Heap Illuminate + Replay AI + Funnel AI + Cohort AI EU AI Act Audit Prep 2026 — Autocapture Analytics Audit-Trail Checklist</h1>
+
+<p class="lead">Heap Analytics (heap.io) — acquired by Contentsquare in 2024 — is the canonical <strong>autocapture product-analytics platform</strong> + <strong>Heap Illuminate AI</strong> + <strong>Session Replay + Replay AI</strong> + <strong>Funnel AI</strong> + <strong>Cohort AI</strong> + <strong>Data Sync</strong> + <strong>Connect (Reverse-ETL)</strong> audit-target. Unlike instrumented analytics (Mixpanel + Amplitude + PostHog + Heap's older event-tag system), Heap's autocapture layer logs every click + form-submit + page-view without developer-implemented event-tags — which means the <strong>AI-driven audit-trail surface</strong> starts at the raw clickstream layer rather than at the curated event layer. For SOC 2 CC7.2 + EU AI Act Art. 12 (log-keeping) + Art. 14 (human-oversight) + Art. 50 (transparency) + Art. 53(d) (GPAI training-data-summary) + Annex III §4 (high-risk-classification) + ISO 42001 9.4 (AI-system-impact-assessment) + GDPR Art. 28 (processor-obligations), the autocapture → AI-recommendation → replay-analysis pipeline is the audit-trail surface the 2026 SOC 2 + EU AI Act audit cycle will probe.</p>
+
+<h2>Why Heap is the highest-ROI product-analytics audit-target in 2026</h2>
+<p>Heap is the ONLY product-analytics platform that combines in one platform: (1) <strong>autocapture analytics</strong> — every click + form-submit + page-view captured automatically without developer-implemented event-tags (the unique differentiator from Amplitude + Mixpanel + PostHog which all require manual event-implementation), (2) <strong>Heap Illuminate AI</strong> — auto-cluster behavioral events + auto-flag anomalies + auto-suggest-funnels from raw clickstreams, (3) <strong>Session Replay + Replay AI</strong> — AI-summarized session replays + AI-flagged rage-clicks + AI-categorized friction, (4) <strong>Funnels + Funnel AI</strong> — auto-recommend funnel-steps + auto-flag funnel-drop-off segments, (5) <strong>Cohorts + Cohort AI</strong> — natural-language-cohort-builder + AI-derived user-segments, (6) <strong>Data Sync</strong> — warehouse-native sync to Snowflake + BigQuery + Redshift + Databricks, (7) <strong>Connect (Reverse-ETL)</strong> — downstream-sync to Segment + mParticle + Salesforce + HubSpot + Marketo. The autocapture layer is the highest-leverage audit-trail surface because the AI-call provenance starts at raw clickstream events — meaning the SOC 2 CC7.2 + EU AI Act Art. 12 auditor can demand replay-back of any AI-recommendation to the originating clickstream events without intermediate event-tag translation. Heap's customer base (7,000+ including Airbnb + Atlassian + Twilio + Salesforce + Microsoft + HubSpot + Adobe + Costco + Wayfair + Crunchbase + Optimizely + Wish + RBC + US Bank + Capital One + Upwork + Eventbrite + Segment + Drift + Glassdoor) all run SOC 2 + EU AI Act audit cycles that probe the autocapture + AI-call audit-trail surface.</p>
+
+<h2>The 5 audit gaps Heap's auditor will probe in 2026</h2>
+
+<h3>Audit Gap 1 — Per-AI-call + per-cohort-resolution + per-recommendation + per-replay-analysis reasoning-chain provenance join-table</h3>
+<p>Per SOC 2 CC7.2 + EU AI Act Art. 12 (log-keeping) + ISO 42001 9.4, every Heap Illuminate AI call + every Cohort AI resolution + every Funnel AI recommendation + every Replay AI friction-flag must produce a per-AI-call-uuid + per-tenant-id + per-event-uuid + per-cohort-id + per-AI-decision-id + per-prompt-text + per-LLM-token-cost + per-tool-call-id + per-downstream-state-change-id + per-replay-friction-flag-id + per-AI-disclosure-label join-table row. The 11-column join-table the auditor needs to walk end-to-end is:</p>
+<table class="audit-table"><thead><tr><th>Column</th><th>Source</th><th>Audit obligation</th></tr></thead><tbody>
+<tr><td><code>ai_call_uuid</code></td><td>Heap Illuminate + Replay AI + Funnel AI + Cohort AI request-log</td><td>SOC 2 CC7.2 + Art. 12</td></tr>
+<tr><td><code>tenant_id</code></td><td>Heap multi-tenant isolation layer</td><td>GDPR Art. 28 + CC6.1</td></tr>
+<tr><td><code>event_uuid</code></td><td>autocapture clickstream (every click + form-submit + page-view)</td><td>SOC 2 CC7.2 + Art. 12</td></tr>
+<tr><td><code>cohort_id</code></td><td>Cohort AI resolution result</td><td>SOC 2 CC7.2 + Art. 12</td></tr>
+<tr><td><code>ai_decision_id</code></td><td>AI call → decision linkage</td><td>SOC 2 CC7.2 + Art. 12 + Art. 14</td></tr>
+<tr><td><code>prompt_text</code></td><td>LLM prompt to Heap Illuminate + Cohort AI</td><td>Art. 12 + Art. 50</td></tr>
+<tr><td><code>llm_token_cost</code></td><td>Cost-attribution per AI call</td><td>SOC 2 CC7.2 + IRS 6001</td></tr>
+<tr><td><code>tool_call_id</code></td><td>Reverse-ETL + downstream Sync tool-call surface</td><td>Art. 14 + Art. 12</td></tr>
+<tr><td><code>downstream_state_change_id</code></td><td>Salesforce + HubSpot + Marketo + Segment + mParticle state-change log</td><td>Art. 14 + Art. 12 + CC7.2</td></tr>
+<tr><td><code>replay_friction_flag_id</code></td><td>Replay AI friction-categorization output</td><td>Art. 14 + Art. 12</td></tr>
+<tr><td><code>ai_disclosure_label</code></td><td>EU AI Act Art. 50 transparency-obligation</td><td>Art. 50 + FTC 2024 AI-guidance</td></tr>
+</tbody></table>
+
+<h3>Audit Gap 2 — Training-corpus-source + fine-tune license-provenance per EU AI Act Art. 53(d) + Art. 53(1)(b) + Art. 53(2)</h3>
+<p>Per EU AI Act Art. 53(d), GPAI (general-purpose AI) vendors must publish a <strong>publicly-available-summary</strong> of training-data sources. For Heap Illuminate + Replay AI + Funnel AI + Cohort AI, the auditor needs: (a) the corpus-source license for the underlying LLM (Heap Illuminate likely uses OpenAI GPT-4 + Anthropic Claude + open-source Llama + Mistral as LLM-backends per vendor-DD disclosures), (b) any downstream-fine-tunes Heap has performed on top of the underlying LLM, (c) the prompt-engineering-prompt-template library that drives Heap Illuminate + Cohort AI. Without the Art. 53(d) publicly-available-summary, Heap cannot serve GPAI-class customers in the EU after Aug 2026.</p>
+
+<h3>Audit Gap 3 — Prompt-injection + tool-call-manipulation + agent-decision-poisoning defense</h3>
+<p>Per OWASP LLM Top 10 LLM01 (prompt-injection) + LLM06 (sensitive-information-disclosure) + NIST AI RMF MEASURE function + EU AI Act Art. 9 (risk-management-system) + Art. 14 (human-oversight-required), Heap must defend against adversarial-prompt-injection across the autocapture → AI-recommendation → replay-analysis pipeline. The specific attack surface is: when a user-input from a tracked form-field flows into Heap Illuminate's natural-language-cohort-builder, does Heap treat the user-input as untrusted and validate against prompt-injection-patterns before the LLM call? The autocapture layer captures form-field-values, which means an attacker who controls a form-field can inject adversarial prompts into Heap Illuminate's LLM-call. Heap must have a documented defense-in-depth layer (input-validation + output-sanitization + LLM-call rate-limit + prompt-injection-pattern-blocklist).</p>
+
+<h3>Audit Gap 4 — Cross-tenant Heap SaaS + Heap Enterprise isolation-evidence</h3>
+<p>Per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate, Heap must ship an auditor-readable cross-tenant isolation-evidence document covering: (a) per-tenant autocapture-data isolation (every clickstream event tagged with tenant-id at the ingestion-edge), (b) per-tenant cohort-isolation (Cohort AI resolution results scoped to single tenant), (c) per-tenant AI-recommendation-isolation (Heap Illuminate + Funnel AI + Replay AI recommendations scoped to single tenant), (d) per-tenant replay-isolation (Session Replay data scoped to single tenant with redacted-pii-by-default for cross-tenant sharing). Post-Contentsquare-acquisition, the multi-tenant infrastructure now spans Heap's + Contentsquare's combined platform — the isolation-evidence document must be refreshed for the post-acquisition multi-tenant infrastructure.</p>
+
+<h3>Audit Gap 5 — WORM retention + cost-attribution join-table</h3>
+<p>Per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM (write-once-read-many) + IRS 6001 (general-records-retention), Heap must ship a WORM-locked per-AI-call-LLM-token-cost + per-cohort-resolution-cost + per-recommendation-cost + per-replay-AI-cost + per-Heap-Illuminate-cost + per-Funnel-AI-cost + per-Cohort-AI-cost + per-downstream-state-change-cost cost-attribution join-table. The 8-column cost-attribution join-table enables the auditor to attribute AI-driven costs back to specific tenants + events + decisions over a 7-year retention window. The join-table also surfaces per-AI-call-LLM-token-cost which is the cost-driver that finance + procurement teams will probe for cost-allocation across the 7,000+ Heap customers.</p>
+
+<h2>14-question buyer checklist</h2>
+<ol class="checklist">
+<li>Does Heap ship the 11-column per-AI-call + per-cohort + per-recommendation + per-replay reasoning-chain provenance join-table with audit-trail replay-back in <2 hours?</li>
+<li>Is the Heap Illuminate + Replay AI + Funnel AI + Cohort AI training-corpus-source + fine-tune license-provenance publicly available per Art. 53(d) + Art. 53(1)(b)?</li>
+<li>Does Heap publish an AI-model-card per EU AI Act Art. 53 transparency-obligation?</li>
+<li>What is Heap's defense-in-depth layer for prompt-injection (OWASP LLM01) + sensitive-information-disclosure (LLM06) across autocapture → AI-recommendation → replay-analysis?</li>
+<li>Does Heap validate user-input from form-fields as untrusted before passing to Heap Illuminate + Cohort AI natural-language-builder?</li>
+<li>What is the cross-tenant isolation-evidence for post-Contentsquare-acquisition multi-tenant infrastructure?</li>
+<li>Does Heap ship a per-tenant autocapture-data + cohort-isolation + AI-recommendation-isolation + replay-isolation auditor-readable document?</li>
+<li>What is Heap's HIPAA + FedRAMP Moderate + ISO 27001 + SOC 2 Type II coverage for autocapture + AI-recommendation + replay-analysis?</li>
+<li>Does Heap ship a WORM-locked cost-attribution join-table linking per-AI-call-LLM-token-cost + per-cohort-cost + per-recommendation-cost + per-replay-AI-cost per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4?</li>
+<li>What is the per-tenant reverse-ETL audit-trail for Connect → Salesforce + HubSpot + Marketo + Segment + mParticle downstream-state-change per Art. 14?</li>
+<li>Does Heap publish a per-tenant AI-disclosure-label per EU AI Act Art. 50 for AI-generated recommendations + AI-flagged-friction + AI-categorized-cohorts?</li>
+<li>What is Heap's Annex III §4 conformity-assessment package for Heap Illuminate + Replay AI + Funnel AI + Cohort AI materially-influence-product-decisions lane?</li>
+<li>Does Heap ship a per-tenant 7-year retention window per IRS 6001 + SEC 17a-4 for AI-call-LLM-token-cost + AI-call-prompt-text + AI-call-decision-output?</li>
+<li>What is the auditor-readable evidence that Heap Illuminate + Replay AI + Funnel AI + Cohort AI cross-correlate with autocapture raw clickstream events end-to-end?</li>
+</ol>
+
+<h2>5-layer reference architecture</h2>
+
+<h3>L1 — Provenance capture</h3>
+<p>Every autocapture clickstream event + every Heap Illuminate AI call + every Cohort AI resolution + every Funnel AI recommendation + every Replay AI friction-flag writes to a WORM-locked audit-table. The autocapture layer captures raw clickstream events at the ingestion-edge with per-event-uuid + per-tenant-id + per-session-id + per-page-url + per-form-field-values (PII-redacted-by-default). The AI-call layer writes per-ai-call-uuid + per-prompt-text + per-LLM-token-cost + per-ai-decision-id. The reverse-ETL layer writes per-tool-call-id + per-downstream-state-change-id.</p>
+
+<h3>L2 — WORM cost-attribution</h3>
+<p>The 8-column cost-attribution join-table (per-AI-call-LLM-token-cost + per-cohort-resolution-cost + per-recommendation-cost + per-replay-AI-cost + per-Heap-Illuminate-cost + per-Funnel-AI-cost + per-Cohort-AI-cost + per-downstream-state-change-cost) is WORM-locked for the 7-year retention window per SEC 17a-4 + IRS 6001. The join-table is the cost-driver that finance + procurement teams use to attribute AI-driven costs back to specific tenants + events + decisions.</p>
+
+<h3>L3 — Cross-tenant isolation-evidence</h3>
+<p>The isolation-evidence document covers per-tenant autocapture-data + per-tenant cohort-isolation + per-tenant AI-recommendation-isolation + per-tenant replay-isolation for the post-Contentsquare-acquisition multi-tenant infrastructure. The document is refreshed quarterly to capture any infrastructure changes from the Contentsquare-acquisition integration.</p>
+
+<h3>L4 — AI-pipeline transparency</h3>
+<p>Every Heap Illuminate AI call + every Cohort AI resolution + every Funnel AI recommendation + every Replay AI friction-flag is tagged with ai_disclosure_label per EU AI Act Art. 50 (transparency-obligation for AI-system-output). The ai_disclosure_label surfaces in the Heap dashboard + every customer-facing report + every AI-feature-flagged friction-result. Every AI-result that drives a downstream-state-change is tagged with downstream_agent_decision_ids linkage for the auditor's reverse-join from Salesforce + HubSpot + Marketo + Segment + mParticle state-change back to the Heap AI-call that drove the change.</p>
+
+<h3>L5 — Annex III §4 conformity-assessment package</h3>
+<p>The conformity-assessment package bundles: (a) the 11-column reasoning-chain provenance join-table schema + sample data + replay-back instructions, (b) the 14-question buyer checklist with Heap's response, (c) the 5 audit-gap analyses with Heap's remediation roadmap, (d) the WORM tamper-evidence hash chain showing every AI-call + every cost-attribution row hash-chained to the prior row, (e) the post-Contentsquare-acquisition multi-tenant isolation-evidence document, (f) the AI-model-card per Art. 53 transparency-obligation, (g) the prompt-injection defense-in-depth documentation per OWASP LLM01 + LLM06 + NIST AI RMF MEASURE.</p>
+
+<h2>Long-tail keyword cluster (24 terms)</h2>
+<p>Heap Illuminate audit · Heap Replay AI audit · Heap Funnel AI audit · Heap Cohort AI audit · Heap autocapture audit · Heap EU AI Act · Heap SOC 2 · Heap ISO 42001 · Heap Illuminate Art 12 · Heap Illuminate Art 14 · Heap Illuminate Art 50 · Heap Illuminate Art 53(d) · Heap Annex III 4 · Heap Aug 2026 GPAI · autocapture analytics audit · Heap Contentsquare audit · Heap Illuminate reasoning-chain provenance · Heap Illuminate cohort-resolution audit · Heap Illuminate replay-analysis audit · Heap Illuminate funnel-recommendation audit · Heap Illuminate prompt-injection · Heap Illuminate cross-tenant isolation · Heap Illuminate WORM retention · Heap Illuminate cost-attribution.</p>
+
+<h2>Citation block</h2>
+<ul class="citations">
+<li><a href="https://heapanalytics.com/privacy">Heap Privacy Policy</a> — verified 2026-07-12 (402,455 bytes, mailto:legal@heap.io + mailto:privacy@contentsquare.com exposed)</li>
+<li><a href="https://www.contentsquare.com/privacy/">Contentsquare Privacy Policy</a> — verified 2026-07-12 (parent company inbox exposed)</li>
+<li><a href="https://artificialintelligenceact.eu/the-act/">EU AI Act full text</a> — Art. 9 + Art. 10 + Art. 12 + Art. 14 + Art. 50 + Art. 53(d) + Art. 53(1)(b) + Art. 53(2) + Annex III §4</li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP LLM Top 10</a> — LLM01 prompt-injection + LLM06 sensitive-information-disclosure</li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF</a> — MEASURE function for AI-system-impact-assessment</li>
+<li><a href="https://www.iso.org/standard/81230.html">ISO 42001:2023</a> — AI-management-system + 6.1.4 + 9.4</li>
+<li><a href="https://www.ecfr.gov/current/title-17/chapter-II/part-240">SEC 17a-4 WORM</a> — write-once-read-many retention</li>
+</ul>
+
+<p class="footer-link"><a href="../index.html">← Back to Atlas Audit-Prep Index</a> · <a href="chunk_93.html">← Previous: Apache Gravitino + Apache Nessie + Iceberg REST + Unity Catalog Cross-Catalog RBAC</a> · <a href="chunk_95.html">Next →</a></p>
+
+</section>
