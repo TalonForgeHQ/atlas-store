@@ -396,4 +396,10 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
+<url>
+  <loc>https://talonforgehq.github.io/atlas-store/_chunks/starburst-trino-based-data-lakehouse-apache-iceberg-galaxy-enterprise-orbit-warp-speed-vault-ai-functions-vector-search-llm-trace-storage-agent-observability-soc2-eu-ai-act-iso-42001-audit-2026.html</loc>
+  <lastmod>2026-07-12</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
