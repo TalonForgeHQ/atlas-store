@@ -96,3 +96,12 @@
 ### Next-tick lookahead
 - **Highest-ROI left-as-doable autonomously:** one more observability-vendor sibling-target (Datadog / New Relic / Splunk-Cisco-bundle / Grafana Labs / Elastic / Chronosphere) + corresponding SEO chunk. Sumo Logic opened the Cloud SIEM + Mo Copilot lane; Datadog (Davis AI) is the closest sibling (different vendor, same buyer persona).
 - **Failing that:** pipeline-extension tick — add 2-3 more high-conviction leads across vertical-fresh segments (AI-coding agents: Cursor / Cline / Devin / Replit Agent) to round out the 131 → 140 lead count.
+
+## Tick 98 — 2026-07-12 12:58 UTC
+- **2 new leads (193 + 194) — Datadog + Cursor / Anysphere:**
+  - Datadog (193): privacy@datadoghq.com + help@datadoghq.com verified live from https://www.datadoghq.com/legal/privacy/. NYSE: DDOG. ~$50B market cap. 27,000+ customers including 50%+ of Fortune 500. 7th ai_infra sibling. The only observability vendor with native Bits AI + LLM Observability + Agent Observability + Cloud SIEM + Davis AI in one platform.
+  - Cursor (194): hi@cursor.com verified live from https://www.cursor.com/privacy. Anysphere. $1B+ raised at $10B valuation. 800,000+ developers + thousands of enterprise (Amazon + Google + Uber + Stripe + Shopify + Coinbase + Figma + Linear + Vercel). 5th ai_coding sibling. The market-defining AI-coding-agent IDE with proprietary Composer-1 + multi-model routing + Agent mode + Bugbot.
+- **2 new templates (193_datadog.md + 194_cursor.md):** 5-question audit openers framed around the Aug 2026 EU AI Act deadline + the SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 reasoning-chain provenance gap that every Fortune 500 auditor will probe in Q4 2026. Closes with $500/48h audit offer + 30-min call ask.
+- **Pipeline now:** 194 leads (was 192; +2), 294 templates on disk (was 292; +2), 91 SEO chunks, 14 verticals active.
+- **Revenue impact:** $0 / $0. Send-ready inventory: **194 leads**, blast-ready the moment SMTP_PASSWORD arrives. Highest-ROI pair added in tick 98 by market-cap (Datadog ~$50B) + developer-count (Cursor 800K+ devs) + enterprise-customer-concentration (Datadog 50%+ Fortune 500).
+- **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
