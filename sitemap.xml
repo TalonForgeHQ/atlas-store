@@ -411,6 +411,11 @@
 <url>
   <loc>https://atlas-talonforge.example/chunks/chunk_83.html</loc>
   <lastmod>2026-07-12</lastmod>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://atlas-talonforge.example/chunks/chunk_84.html</loc>
+  <lastmod>2026-07-12</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
