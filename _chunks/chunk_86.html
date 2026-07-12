@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Qdrant EU AI Act Audit Prep — HNSW + Hybrid Search + Sparse Vectors + BM25 + Quantization + Payload Filters Open-Source Vector Database Real-Time AI-Audit Reference 2026</title>
+<meta name="description" content="Qdrant EU AI Act audit prep for open-source vector database teams: HNSW graph mutation, sparse vectors, BM25, hybrid search, quantization, payload filters, Qdrant Cloud, Qdrant Hybrid Cloud, Qdrant Enterprise, Cloud Inference, Edge beta and downstream RAG/LLM state-change provenance.">
+<meta name="keywords" content="Qdrant EU AI Act audit, Qdrant SOC 2 audit, Qdrant ISO 42001, Qdrant HNSW audit, Qdrant hybrid search audit, Qdrant sparse vectors audit, Qdrant BM25 audit, Qdrant quantization audit, Qdrant payload filters audit, Qdrant Cloud audit, Qdrant Hybrid Cloud audit, Qdrant Enterprise audit, Qdrant Cloud Inference audit, Qdrant Edge audit, vector database audit, open source vector database compliance, Apache 2.0 vector database audit, RAG retrieval audit, AI agent memory audit, Qdrant vendor DD audit">
+<meta name="author" content="Atlas (Talon Forge)">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://atlas-talonforge.example/chunks/chunk_86.html">
+</head>
+<body>
+<header>
+<h1>Qdrant EU AI Act Audit Prep — HNSW + Hybrid Search + Sparse Vectors + BM25 + Quantization + Payload Filters Open-Source Vector Database Real-Time AI-Audit Reference 2026</h1>
+<p><em>Long-tail SEO reference for regulated AI teams evaluating Qdrant as the vector-search layer behind RAG, AI-agent memory, semantic search, recommendation systems, anomaly detection and advanced search workloads.</em></p>
+</header>
+<nav>
+<h2>Table of contents</h2>
+<ol>
+<li><a href="#overview">Qdrant audit-target overview</a></li>
+<li><a href="#crosswalk">Compliance framework cross-walk</a></li>
+<li><a href="#gap-1">Gap #1 — vector write to downstream LLM provenance</a></li>
+<li><a href="#gap-2">Gap #2 — hybrid-search score explainability</a></li>
+<li><a href="#gap-3">Gap #3 — OSS/proprietary provenance split</a></li>
+<li><a href="#gap-4">Gap #4 — tenant isolation and payload-filter evidence</a></li>
+<li><a href="#gap-5">Gap #5 — WORM retention and cost attribution</a></li>
+<li><a href="#checklist">Buyer checklist</a></li>
+<li><a href="#siblings">ai_vector_db siblings</a></li>
+</ol>
+</nav>
+<section id="overview">
+<h2>1. Qdrant audit-target overview (2026)</h2>
+<p>Qdrant is the canonical open-source Apache-2.0 vector database sibling in the ai_vector_db pipeline. The public GitHub API verified qdrant/qdrant at 33,164+ stars with Apache-2.0 license and the description "High-performance, massive-scale Vector Database and Vector Search Engine for the next generation of AI."</p>
+<p>The GDPR controller inbox <strong>info@qdrant.com</strong> was directly verified 2026-07-12 from https://qdrant.tech/legal/privacy-policy/ (HTTP 200, 93,899 bytes). The privacy page identifies Qdrant Solutions GmbH, Chausseestraße 86, 10115 Berlin, Germany, and legal representation by André Zayarni. Public Qdrant pages reference Andrey Vasnetsov, André Zayarni, Berlin, HNSW, quantization, hybrid search, sparse vectors, BM25, GDPR and SOC 2.</p>
+<p>Qdrant's audit surface is broader than a hosted-only vector database because a regulated buyer may run Qdrant OSS self-hosted, Qdrant Cloud, Qdrant Hybrid Cloud, Qdrant Enterprise, Qdrant Cloud Inference or Qdrant Edge. The evidence trail must therefore cover both vendor-operated and customer-operated infrastructure.</p>
+</section>
+<section id="crosswalk">
+<h2>2. Compliance framework cross-walk</h2>
+<table border="1">
+<thead><tr><th>Framework</th><th>Control</th><th>Qdrant evidence surface</th></tr></thead>
+<tbody>
+<tr><td>SOC 2</td><td>CC6.1</td><td>Collection ACLs, API keys, payload filters, VPC peering, tenant isolation</td></tr>
+<tr><td>SOC 2</td><td>CC7.2</td><td>Vector mutation logs, query logs, snapshot export, incident traces</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4</td><td>OSS/proprietary component risk and training-data provenance</td></tr>
+<tr><td>ISO 42001</td><td>§9.4</td><td>Per-retrieval performance and score-explainability evidence</td></tr>
+<tr><td>EU AI Act</td><td>Art. 10</td><td>Vector dataset governance, payload filtering, collection isolation</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12</td><td>Record keeping for vector writes, searches and downstream decisions</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14</td><td>Human review of RAG retrieval decisions and agent-memory updates</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d)</td><td>OSS/proprietary provenance and training-data summary</td></tr>
+<tr><td>GDPR</td><td>Art. 28</td><td>Processor obligations for Qdrant Cloud and Hybrid Cloud</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 / LLM06</td><td>Prompt injection, retrieval poisoning and sensitive-info leakage</td></tr>
+</tbody>
+</table>
+</section>
+<section id="gap-1">
+<h2>3. Gap #1 — vector write to downstream LLM provenance</h2>
+<pre><code>SELECT
+  v.vector_id,
+  v.collection_id,
+  v.operation,
+  v.hnsw_graph_mutation_id,
+  v.quantization_job_id,
+  v.payload_filter_decision_id,
+  q.hybrid_search_query_id,
+  q.dense_score, q.sparse_score, q.bm25_score,
+  e.embedding_call_id,
+  l.llm_call_id,
+  d.downstream_state_change_id
+FROM qdrant.vector_audit_log v
+LEFT JOIN qdrant.query_audit_log q ON v.vector_id = q.vector_id
+LEFT JOIN downstream.embedding_call e ON q.embedding_call_id = e.call_id
+LEFT JOIN downstream.llm_call l ON q.llm_call_id = l.call_id
+LEFT JOIN downstream.state_change d ON l.call_id = d.llm_call_id
+WHERE v.timestamp BETWEEN :start AND :end;
+</code></pre>
+<p>This is the table a buyer asks for when Qdrant-backed RAG output changes a customer record, support ticket, credit decision, clinical summary or regulated workflow.</p>
+</section>
+<section id="gap-2">
+<h2>4. Gap #2 — hybrid-search score explainability</h2>
+<p>Hybrid search blends dense-vector similarity, sparse-vector terms, BM25/payload text signals and filters. Audit evidence needs score components and ranking deltas so a reviewer can reconstruct why a specific chunk was retrieved.</p>
+</section>
+<section id="gap-3">
+<h2>5. Gap #3 — OSS/proprietary provenance split</h2>
+<p>Qdrant OSS is Apache-2.0; Qdrant Cloud, Hybrid Cloud, Enterprise, Cloud Inference and Edge carry vendor control-plane surfaces. The audit artifact needs to separate source-available evidence, proprietary evidence and customer-operated evidence.</p>
+</section>
+<section id="gap-4">
+<h2>6. Gap #4 — tenant isolation and payload-filter evidence</h2>
+<p>For Cloud and Hybrid Cloud, buyers need per-tenant evidence: collection ACLs, API key scope, payload-filter enforcement, snapshot access, backup export, replication topology and VPC/private-link boundaries.</p>
+</section>
+<section id="gap-5">
+<h2>7. Gap #5 — WORM retention and cost attribution</h2>
+<p>Vector writes, deletes, rebuilds, quantization jobs, Cloud Inference calls, snapshot exports and downstream LLM calls need a WORM-retained cost and evidence table for SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 + IRS §6001.</p>
+</section>
+<section id="checklist">
+<h2>8. Buyer checklist for Qdrant audit-prep</h2>
+<ol>
+<li>Can Qdrant export vector mutation logs to customer WORM storage?</li>
+<li>Can hybrid-search score components be reconstructed per query?</li>
+<li>Can HNSW graph mutation and quantization jobs be linked to vector IDs?</li>
+<li>Can payload-filter allow/deny decisions be replayed?</li>
+<li>Can tenant isolation evidence be exported for Qdrant Cloud and Hybrid Cloud?</li>
+<li>Can snapshots, backups and replication events be tied to collection IDs?</li>
+<li>Can OSS Apache-2.0 components be separated from proprietary Cloud controls?</li>
+<li>Can downstream embedding and LLM calls be joined to retrieval IDs?</li>
+<li>Can prompt-injection and retrieval-poisoning attempts be logged per payload?</li>
+<li>Can cost attribution be joined to vector write/search/inference events?</li>
+<li>Can human review override decisions be retained for Annex III workflows?</li>
+<li>Can GDPR processor records map to collection and tenant boundaries?</li>
+<li>Can customer-operated Kubernetes/on-prem deployments preserve the same evidence schema?</li>
+<li>Can the evidence export pass a quarterly reconstruction drill?</li>
+</ol>
+</section>
+<section id="siblings">
+<h2>9. ai_vector_db sibling map</h2>
+<p>Pinecone is the managed serverless/pod vector database sibling. Qdrant is the open-source Apache-2.0 + hybrid-cloud sibling. Future siblings: Weaviate, Chroma, Zilliz/Milvus, LanceDB, Vespa and Redis vector search.</p>
+</section>
+<footer>
+<p>Generated by Atlas for Talon Forge. Verified inbox: info@qdrant.com. Page: chunk_86.html.</p>
+</footer>
+</body>
+</html>
