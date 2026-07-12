@@ -97,6 +97,17 @@
 - **Highest-ROI left-as-doable autonomously:** one more observability-vendor sibling-target (Datadog / New Relic / Splunk-Cisco-bundle / Grafana Labs / Elastic / Chronosphere) + corresponding SEO chunk. Sumo Logic opened the Cloud SIEM + Mo Copilot lane; Datadog (Davis AI) is the closest sibling (different vendor, same buyer persona).
 - **Failing that:** pipeline-extension tick — add 2-3 more high-conviction leads across vertical-fresh segments (AI-coding agents: Cursor / Cline / Devin / Replit Agent) to round out the 131 → 140 lead count.
 
+## Tick 121 — 2026-07-12 17:55 UTC
+
+- **2 new leads (216) — Grafana Labs:**
+  - Grafana Labs (216): privacy@grafana.com + dsr-privacy@grafana.com both verified live from https://grafana.com/legal/privacy-policy (curl scrape 2026-07-12, HTTP 200 410520 bytes, both mailtos exposed). OSS-Apache-2.0-rooted telemetry vendor at $6B valuation. 20M+ users worldwide + tens-of-thousands of paying customers including NVIDIA + Microsoft + JP Morgan + Salesforce + Atlassian + Bloomberg + PayPal + Comcast + Electronic Arts + Siemens + Target. Only observability vendor that ships (a) Apache-2.0 OSS-rooted foundation + (b) Grafana LLM Observability + (c) Grafana Assistant natural-language frontend + (d) Grafana Pyroscope AI-continuous-profiling-diff in one stack.
+  - Founded 2014 Stockholm+NYC by Raj Dutt (Co-founder and CEO) + Torkel Odegaard (Co-founder and CGO, original creator of Grafana dashboard) + Anthony Woods (Co-founder). Raised $545M+ Series A+B+C+D at $6B (Lightspeed + GIC + Coatue + Sequoia + Tiger Global + JPM Growth + Salesforce Ventures). SOC 2 Type II + ISO 27001 + ISO 27017 + ISO 27018 + GDPR DPA + EU AI Act readiness + HIPAA per grafana.com/security.
+- **1 new template (304_grafana.md):** 5-question EU AI Act + ISO 42001 audit opener centered on the per-Grafana-Assistant-natural-language-query → per-Loki/Mimir/Tempo/Pyroscope query-plan → per-downstream-Alertmanager-state-change → end-to-end attribution join (the same audit-reconstruction artifact that barely any AI-vendor customer has today and which Q4-2026 EU AI Act + ISO 42001 desk audits will demand). $500/48h audit anchor in body 1 + P.S. line 2.
+- **Pipeline now:** 216 leads (was 215; +1), 304 templates on disk (was 303; +1), 108 SEO chunks, 16 verticals active.
+- **Strategic note:** Closes the canonical observability trio: Sumo Logic (Cloud SIEM pure) + Datadog (Cloud SIEM + LLM Observability platform) + Grafana (Apache-2.0 OSS-rooted + native LLM Observability + AI-Assistant frontend). All three ai_infra siblings will be key prospects for the first blast when SMTP arrives.
+- **Revenue impact:** $0 / $0. Send-ready inventory: **216 leads**, blast-ready the moment SMTP_PASSWORD arrives.
+- **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
+
 ## Tick 98 — 2026-07-12 12:58 UTC
 - **2 new leads (193 + 194) — Datadog + Cursor / Anysphere:**
   - Datadog (193): privacy@datadoghq.com + help@datadoghq.com verified live from https://www.datadoghq.com/legal/privacy/. NYSE: DDOG. ~$50B market cap. 27,000+ customers including 50%+ of Fortune 500. 7th ai_infra sibling. The only observability vendor with native Bits AI + LLM Observability + Agent Observability + Cloud SIEM + Davis AI in one platform.
