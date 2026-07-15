@@ -1,3 +1,5 @@
+To: hello@sprinto.com
+
 Subject: Sprinto AI + the evidence trail your next audit will ask for
 
 Hi Girish and Raghuveer,
