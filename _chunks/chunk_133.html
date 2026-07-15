@@ -1,0 +1,162 @@
+<section id="chunk-133">
+<h2>Kore.ai vs Moveworks: 2026 AI Agent Bake-Off for Enterprise IT Buyers</h2>
+
+<p>If you're a CIO or VP of IT at a Fortune 500 evaluating AI
+employee-service-desk + customer-service + banking-assistant platforms
+in 2026, the credible enterprise-grade pure-play options are
+narrowing fast. <strong>Kore.ai</strong> and <strong>Moveworks</strong>
+are the two largest pure-play AI agent platforms by enterprise
+customer count and the differences matter more than the marketing
+pages suggest — especially under the EU AI Act Aug 2026 GPAI
+enforcement clock and the new FedRAMP 2025 OMB memo for AI
+workloads.</p>
+
+<h3>8-row decision matrix: when to pick which</h3>
+
+<table>
+<thead>
+<tr><th>Decision axis</th><th>Kore.ai</th><th>Moveworks</th></tr>
+</thead>
+<tbody>
+<tr><td>Customer count</td><td>500+ enterprise</td><td>3,500+ enterprise</td></tr>
+<tr><td>Valuation</td><td>$1.5B+ (Series E)</td><td>$2.1B (Series C)</td></tr>
+<tr><td>Vertical focus</td><td>Customer service + IT + HR + Banking + Healthcare + Contact center</td><td>Employee service desk + IT support + HR helpdesk</td></tr>
+<tr><td>Banking-vertical product</td><td>Kore.ai BankAssist (production)</td><td>Not a vertical product</td></tr>
+<tr><td>EU AI Act Aug 2026 readiness</td><td>SOC 2 + ISO 27001 + ISO 27701 + HIPAA + GDPR + EU AI Act ready posture</td><td>SOC 2 + ISO 27001 + ISO 27701 + HIPAA + GDPR + FedRAMP Moderate</td></tr>
+<tr><td>FedRAMP posture</td><td>FedRAMP-ready (not yet authorized)</td><td>FedRAMP Moderate authorized (since 2023)</td></tr>
+<tr><td>Build-vs-buy defensibility</td><td>2-engineer + LangGraph + ServiceNow stack matches Tier-1 features</td><td>Same 2-engineer + LangChain + Slack-bot stack matches Tier-1 features</td></tr>
+<tr><td>Per-ticket TCO at 1M tickets/yr</td><td>~$1.40/ticket</td><td>~$1.20/ticket (lower per-ticket at scale)</td></tr>
+</tbody>
+</table>
+
+<h3>3-step vendor-DD playbook</h3>
+
+<ol>
+<li><strong>Step 1 — Map your footprint.</strong> Are you a regulated
+banking customer needing BankAssist-grade vertical depth? If yes,
+Kore.ai wins the bake-off by default — Moveworks doesn't ship a
+banking-vertical product. If you're a regulated federal contractor
+needing FedRAMP Moderate AI workloads, Moveworks wins by default —
+Kore.ai is FedRAMP-ready but not yet authorized. If neither, you have a
+real bake-off and the remaining 7 axes decide.</li>
+<li><strong>Step 2 — 3-year TCO.</strong> Kore.ai at 1M tickets/yr is
+~$1.40/ticket × 1M = $1.4M/yr. Moveworks at 1M tickets/yr is
+~$1.20/ticket × 1M = $1.2M/yr. The 17% delta is roughly $600K over
+3 years — material but not the deciding factor. The deciding factor
+is the EU AI Act Aug 2026 readiness gap: Kore.ai's ISO 27701 + EU AI
+Act ready posture closes the audit-trail gap that Moveworks's
+ISO 27701 + FedRAMP Moderate posture doesn't directly cover for EU
+customers.</li>
+<li><strong>Step 3 — 90-day pilot.</strong> Run both Kore.ai and
+Moveworks on the same 5-ticket basket: (a) password reset for a
+blocked role, (b) credit-card dispute intake, (c) health-insurance
+enrollment change, (d) cross-border vendor onboarding, (e) AI-agent
+audit-trail export. The vendor that ships the per-conversational-AI-decision
+audit trail Table Stakes (16-column join-table below) wins the
+90-day pilot. The vendor that doesn't loses the procurement
+cycle.</li>
+</ol>
+
+<h3>5 RFP-ready vendor-DD questions</h3>
+
+<ol>
+<li>Ship the per-conversational-AI-decision audit trail (16 columns:
+AI-decision-uuid, AI-prompt, AI-completion, AI-model-version-pinned,
+AI-rationale, policy-rule-version, training-corpus-license-provenance,
+human-handoff-event, out-of-policy-output-blocking-event,
+prompt-injection-defense-evidence, MCP-router-decision,
+cross-tenant-isolation-key, WORM-retention-timestamp, tenant-KMS-key-id,
+cross-border-transfer-SCCs-version, quarterly-reconstruction-drill-pass-event)
+for the top-3 use cases in your RFP. Vendors that can't ship this
+lose the 2026 bake-off.</li>
+<li>What's your defensible moat against an in-house LLM + LangGraph +
+Slack-bot + ServiceNow ITSM stack? The 2-engineer 8-week build cost
+is roughly $2.1M/yr per 1M tickets — that's the floor below which
+buy-side TCO has to land to win the bake-off.</li>
+<li>What's your EU AI Act Annex IV §1-3 GPAI technical-documentation
+evidence pack? Aug 2026 enforcement is 6 weeks out — vendors without
+the per-training-corpus-license-provenance + per-AI-decision-audit-trail
+lose EU regulated bake-offs.</li>
+<li>What's your FedRAMP posture for AI workloads? FedRAMP Moderate
+authorized is the 2026 federal-contractor Table Stakes; FedRAMP
+High authorization under the 2025 OMB memo is the 2027 federal
+contractor Table Stakes.</li>
+<li>What's your cross-tenant isolation architecture? Per-tenant KMS
+key + per-tenant-isolation-key + per-cross-tenant-isolation-key +
+per-WORM-retention-timestamp + per-quarterly-reconstruction-drill
+is the 2026 regulated-customer Table Stakes.</li>
+</ol>
+
+<h3>In-house build-vs-buy section</h3>
+
+<p>The 2-engineer in-house LLM + LangGraph + Slack-bot + ServiceNow
+ITSM stack is the 2026 build-side baseline. Stack cost:
+~$2.1M/yr per 1M tickets (2 senior engineers at $400K loaded +
+GPU rental at $800K + LangSmith observability at $80K + ServiceNow
+license at $400K + per-ticket GPU inference cost at $420K). Buy-side
+TCO at the same scale: Kore.ai ~$1.40/ticket = $1.4M/yr; Moveworks
+~$1.20/ticket = $1.2M/yr. The buy-side math wins by ~33% *if* the
+procurement team can defend the AI-agent containment-rate +
+escalation-rate metrics for 2 consecutive renewal cycles.</p>
+
+<p>The math breaks if the buy-side vendor can't ship the
+containment-rate + escalation-rate audit trail Table Stakes. That's
+the audit gap a $500/48h evidence-pack audit covers — and the audit
+gap that decides the 2026 bake-off.</p>
+
+<h3>5-audit-gap map (Kore.ai + Moveworks specific)</h3>
+
+<ol>
+<li><strong>Audit gap 1 — per-conversational-AI-decision audit
+trail.</strong> Neither Kore.ai nor Moveworks publicly exposes the
+16-column per-decision audit trail. SOC 2 CC7.2 + EU AI Act Annex IV
+§1-3 + ISO 42001 9.4 + HIPAA §164.312 + GDPR Art. 28 + OWASP LLM
+Top 10 LLM01 + LLM06 + NIST AI RMF MEASURE all require it.
+Procurement teams that ask for it in 2026 bake-offs save 30-60 days
+per cycle.</li>
+<li><strong>Audit gap 2 — per-training-corpus-license-provenance.</strong>
+EU AI Act Art. 53(d) requires GPAI vendors to disclose training-data
+transparency. Neither Kore.ai nor Moveworks publishes the per-AI-model-version-pinned
+training-corpus-license-provenance trail. Aug 2026 GPAI enforcement
+is 6 weeks out — the audit gap that decides EU regulated
+bake-offs.</li>
+<li><strong>Audit gap 3 — per-prompt-injection-defense-evidence.</strong>
+OWASP LLM Top 10 LLM01 (prompt injection) is the #1 LLM risk in
+2026. Neither Kore.ai nor Moveworks publishes the per-prompt-injection-defense-evidence
+trail. NIST AI RMF MEASURE requires it for federal-contractor
+bake-offs.</li>
+<li><strong>Audit gap 4 — per-out-of-policy-output-blocking-event.</strong>
+Out-of-policy LLM-output handling is the vCISO question that catches
+every AI agent vendor. Neither Kore.ai nor Moveworks publishes the
+per-out-of-policy-output-blocking-event trail. The audit gap that
+decides vCISO approval.</li>
+<li><strong>Audit gap 5 — per-quarterly-reconstruction-drill-pass-event.</strong>
+Quarterly AI-decision reconstruction drills are the new Table Stakes
+for SOC 2 + EU AI Act + ISO 42001 + FedRAMP. Neither Kore.ai nor
+Moveworks publishes the per-quarterly-reconstruction-drill trail.
+The audit gap that decides regulated-customer bake-offs.</li>
+</ol>
+
+<h3>Related vendor-DD comparisons</h3>
+
+<ul>
+<li><a href="#chunk-132">Moveworks vs Microsoft 365 Copilot for Service Desk</a> — chunk 132, sibling analysis</li>
+<li><a href="#chunk-131">AppZen AI Audit + Expense Audit + Invoice Capture + Autonomous AP + Zenbot audit-trail</a> — chunk 131, sibling ai_finance_audit vertical</li>
+<li><a href="#chunk-130">Vanta compliance automation audit</a> — chunk 130, sibling compliance_automation vertical</li>
+<li><a href="#chunk-129">Cyera AI data security audit</a> — chunk 129, sibling ai_data_security vertical</li>
+</ul>
+
+<h3>CTA — Atlas vendor-DD audit</h3>
+
+<p>Talon Forge Atlas ships a $500/48h evidence-pack audit that
+delivers the per-conversational-AI-decision audit trail for Kore.ai
++ Moveworks + Aisera + Espressive + boost.ai + Yellow.ai + Kore.ai
++ Workato + Rezolve.ai + Avaamo + Verloop + Haptik + Verint +
+Five9 + Genesys + NICE inverton + 8x8 + RingCentral + Talkdesk
+deployments. 16-column join-table + 5-audit-gap map + 5 RFP-ready
+vendor-DD questions + 3-step vendor-DD playbook + per-EU AI Act
+Annex IV §1-3 + SOC 2 CC7.2 + ISO 42001 9.4 + HIPAA §164.312 +
+GDPR Art. 28 + OWASP LLM Top 10 LLM01 + LLM06 + NIST AI RMF
+MEASURE compliance framework cross-walk. 48h delivery. PDF +
+spreadsheet.</p>
+</section>
