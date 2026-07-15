@@ -1,0 +1,42 @@
+<section class="chunk" id="chunk-119">
+<h2>Groq inference audit trail: prove which token stream produced an AI answer</h2>
+<p class="chunk-meta">Long-tail keyword: <em>Groq inference audit trail SOC 2</em> · ai_infra inference runtime vendor DD · verified against Groq documentation and privacy pages on 2026-07-15</p>
+
+<h3>Why an inference runtime needs its own evidence chain</h3>
+<p>A production AI application on Groq does not move directly from a user question to an answer. A request enters GroqCloud, hits the deterministic LPU scheduler, runs a model of a specific revision, streams tokens, and those tokens feed a retrieval-augmented answer or an agent tool call. If a security reviewer later asks why the system disclosed a paragraph, denied a claim, or executed a tool, the final model response is not enough. The buyer needs to reconstruct the inference event that produced the tokens in the first place.</p>
+
+<h3>The joinability gap behind most LLM-hosting incident reviews</h3>
+<p>GroqCloud, the customer's application, the prompt-template layer, the safety filter, and the downstream agent can each produce useful telemetry. The audit problem is that those records often use different request identifiers and retention windows. A GroqCloud token log may show a model and revision while the application trace shows only rendered context. The downstream agent log may record a tool call without preserving the token stream that justified it. A defensible trail needs one tenant-scoped correlation ID across every layer.</p>
+
+<h3>The eight rows that should join to one inference decision</h3>
+<ol>
+<li><strong>Request row.</strong> Tenant, account or org, user or service principal, timestamp, application release, request ID, and the original prompt or canonical hash.</li>
+<li><strong>Model row.</strong> Model identifier, revision or hash, quantization, runtime version, system-prompt template version, and safety-policy version applied at inference.</li>
+<li><strong>Scheduler row.</strong> GroqCloud project, regional endpoint, LPU node or pod, deterministic-scheduler route, batch size, and stream-or-batch flag.</li>
+<li><strong>Token row.</strong> Token index, token text or ID, logprob, top-k alternatives, timestamp, stop-reason, and any tool-call or function-call block emitted by the model.</li>
+<li><strong>Filter row.</strong> Safety-filter provider and version, content category, action taken, refusal reason, and any redacted span reference.</li>
+<li><strong>Generation row.</strong> Final completion hash, finish reason, latency budget, and rate-limit attribution against the tenant quota.</li>
+<li><strong>Context row.</strong> Retrieved document IDs, retrieval scores, reranker output, and prompt-context hash assembled before inference.</li>
+<li><strong>Action row.</strong> Human-approval state, downstream tool name, parameters hash, object or transaction ID, result, rollback event, and incident reference.</li>
+</ol>
+
+<h3>Controls this evidence supports</h3>
+<p>The request, model, and scheduler rows support SOC 2 CC7.2 monitoring and CC6.1 logical-access evidence. The token and filter rows help prove that safety controls actually fired rather than merely describing them in policy. The context and generation rows support EU AI Act Article 12 record-keeping and Article 14 human oversight when inference affects a regulated workflow. Together, the eight rows also give an ISO 42001 review a repeatable trace from request to automated outcome on Groq's deterministic LPU runtime.</p>
+
+<h3>Five Groq-specific questions for vendor due diligence</h3>
+<ol>
+<li>Can a customer export per-request model/revision, scheduler route, LPU node, full token stream with logprobs, and stop-reason without relying on application-side reconstruction?</li>
+<li>How is regional residency tied to authorization evidence, and what prevents an application bug from routing a tenant's traffic to a different region's endpoint?</li>
+<li>Can a historical completion be replayed against the exact model revision and scheduler configuration that existed when the request ran?</li>
+<li>What evidence links a safety-filter refusal or redaction back to the original request and the downstream action that consumed the filtered output?</li>
+<li>How are rate-limit, cost-attribution, and quota records joined to the same request ID so a customer can reconcile billing against actual token usage during a security review?</li>
+</ol>
+
+<h3>Common audit findings in LPU inference deployments</h3>
+<p>The recurring findings are practical: model revisions are treated as an application convention instead of an enforced authorization boundary; token-level logprobs are dropped before they reach the audit log; scheduler routes are not retained per request; regional-residency evidence is captured only at the load-balancer layer; safety-filter refusals are not joined to the original request; replay against historical revisions is impossible because model artefacts are overwritten; rate-limit and cost-attribution records use a different request identifier than the inference log; and the final tool call has no durable link back to the token stream that justified it. Each gap turns a one-hour review into manual forensics across several vendors.</p>
+
+<h3>A focused 24-hour audit</h3>
+<p>A Groq inference audit samples representative requests and tests whether the eight rows above can be reconstructed end to end. The deliverable is a one-page evidence-gap matrix mapped to SOC 2, EU AI Act, and ISO 42001 controls, plus a 30-minute technical readout and a prioritized remediation backlog. The scope covers request provenance, model-revision evidence, deterministic-scheduler routing, token-stream retention, safety-filter joinability, rate-limit attribution, regional residency, and downstream answer or agent-action reconstruction.</p>
+
+<p class="chunk-cta"><a href="/#contact">Book a $500 Groq inference audit</a> · <a href="/chunks/chunk_118.html">Pinecone retrieval audit</a> · <a href="/chunks/chunk_117.html">Cursor coding-agent audit</a></p>
+</section>
