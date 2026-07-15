@@ -3398,7 +3398,7 @@ py -3.12 cold_email/resend_sender.py --dry-run --max 3
 
   <h3>What we recommend, by use case</h3>
   <p><strong>Customer-service AI agents (Decagon, Sierra, Forethought, etc.):</strong> Langfuse for trace + Weave for eval. Yes, two tools. The cost is justified by the audit trail and the human-review flow.</p>
-  <p><strong>Coding agents (Devin, Cursor, Replit Agent, Factory, Codegen):</strong> Weave for trace + a custom sandbox-instrumentation layer. Coding agents mutate the filesystem, which most LLM-trace tools do not capture by default. You will write some glue.</p>
+  <p><strong>Coding agents (Devin, Cursor, Replit Agent, Factory, Codegen):</strong> Weave for trace + a custom sandbox-instrumentation layer. Coding agents mutate the filesystem, which most LLM-trace tools do not capture by default. You will write some glue. See <a href="https://talonforgehq.github.io/atlas-store/chunks/chunk_117.html">chunk_117 — Cursor audit trail (joinability gap)</a> + <a href="https://talonforgehq.github.io/atlas-store/chunks/chunk_116.html">chunk_116 — Cognition / Devin audit trail (sibling)</a> for the SOC 2 + EU AI Act + ISO 42001 evidence-chain walkthrough.</p>
   <p><strong>AI-infra platforms (Modal, Together, Fireworks, Replicate):</strong> Arize Phoenix self-hosted + your existing Datadog. The eval story matters more than the trace story because you are running customer models, not your own agent.</p>
   <p><strong>Anything in scope for SOC 2:</strong> Whatever tool you pick, the test that decides it is Test 3. Do not skip it.</p>
 

@@ -1,0 +1,34 @@
+<section class="chunk" id="chunk-117">
+<h2>Cursor audit trail: joining every AI-assisted code edit back to the prompt that asked for it</h2>
+<p class="chunk-meta">Long-tail keyword: <em>cursor ai audit trail SOC 2</em> · sibling to Cognition / Devin (chunk 116) and Poolside AI (chunk 81) · vendor-DD vertical ai_coding · verified live 2026-07-15</p>
+
+<h3>Why an AI coding editor needs an audit trail different from a regular IDE</h3>
+<p>An editor like Cursor is no longer a static text buffer. It is an agentic coding surface that reads multi-file context, drafts refactors across dozens of files, runs terminal commands, opens pull requests, and ships to CI on behalf of an engineering organization. Every keystroke is now a candidate evidence event for a security or AI-governance review. When a SOC 2 Type II auditor, an EU AI Act assessor, or an internal CISO asks <em>why did this code block land in production?</em>, the answer cannot be only the final diff in the Git history. They need the complete chain: the original chat prompt, the repository state at the moment Cursor opened the file, the model version and prompt template that produced the edit, every tool call, every file mutation, every human approval boundary, every test result, and the downstream GitHub or CI deployment event.</p>
+
+<h3>The joinability gap most AI coding tools actually have</h3>
+<p>The familiar pattern across the ai_coding vertical — verified against Cognition's Devin, Poolside AI's Pair, and now Cursor's editor pipeline — is that each subsystem logs correctly on its own. The editor log records every key event. The model-call log records every LLM request. The Git history records every file mutation. The CI log records every test and deploy. The problem is not capture. The problem is <strong>joinability</strong>: no single evidence row binds these logs to the same edit session, the same tenant, the same model version, and the same human approval boundary. That gap is the difference between a fast incident review and a week-long forensic exercise, and it is the difference between a provable least-privilege claim and a "trust us" answer to a SOC 2 CC7.2 reviewer.</p>
+
+<h3>The five evidence rows a Cursor audit needs to produce</h3>
+<p>A complete Cursor audit trail joins five otherwise-disconnected streams into one immutable per-edit-session record:</p>
+<ol>
+<li><strong>Prompt row.</strong> The exact chat message from the engineer, the model version, the system prompt version, the temperature and tool settings, and the timestamp at the moment Cursor accepted the request.</li>
+<li><strong>Context row.</strong> The repository snapshot at the time Cursor opened each file, the files it retrieved, the token window it assembled, and any retrieval or index lookup against embeddings or source-control metadata.</li>
+<li><strong>Tool-call row.</strong> Every terminal command, every file write, every Git operation, every network fetch, every pull request creation, and the exact return values and exit codes from each.</li>
+<li><strong>Approval row.</strong> The human-approval boundary: where the engineer confirmed the change, where Cursor auto-applied, where the diff was accepted or rejected, and the time gap between prompt and approval.</li>
+<li><strong>Downstream row.</strong> The final test status from CI, the merge or close event on the pull request, and the production deployment or rollback that followed.</li>
+</ol>
+
+<h3>How the evidence rows connect to compliance frameworks</h3>
+<p>Each row maps to a specific control. The prompt row satisfies SOC 2 CC8.1 (change management authorization) and EU AI Act Article 12 (record-keeping for high-risk AI systems). The context row supports CC6.1 (logical access — which repository state was the model acting on) and Article 14 (human oversight of automated decisions). The tool-call row is the heart of CC7.2 (system operations monitoring) and Article 15 (accuracy, robustness, cybersecurity). The approval row is the proof point for the human-in-the-loop claim required by Article 14 and ISO 42001 clause 6. The downstream row closes the loop on ISO 27001 A.12.1.2 (change management) and provides the rollback evidence the SOC 2 CC7.4 incident-response reviewer wants.</p>
+
+<h3>The realistic audit posture for Cursor in 2026</h3>
+<p>Cursor ships production telemetry for its AI features, but the format of those logs is optimized for product analytics, not for compliance. A SOC 2 reviewer wants a single export per tenant that joins the five rows above; an EU AI Act assessor wants the same export with a retention attestation and a chain-of-custody log. Neither is what a default Cursor install produces today. The fix is usually a thin evidence-collection layer that records the five rows at the moment of the edit, not after, and writes them to an append-only store the customer's compliance team already trusts.</p>
+
+<h3>What an enterprise buyer should ask Cursor before signing</h3>
+<p>Five questions, in order: (1) Can Cursor export the five evidence rows above per tenant per day, joined to the Git commit SHA? (2) What is the retention period for the model-call and tool-call logs, and can it be extended for regulated tenants? (3) Are the prompt, context, and approval logs stored in the customer's cloud or only in Cursor's? (4) Does Cursor support a customer-managed key for the audit-log encryption? (5) Is there a documented incident-response runbook that walks a CISO through a prompt-injection postmortem using only the audit trail? A clean yes on all five is rare. The gap on any one of them is the entry point for a 24-hour audit engagement.</p>
+
+<h3>How this audit maps to a $500 engagement</h3>
+<p>A focused 24-hour Cursor audit produces three artifacts: a one-page gap matrix that scores the five evidence rows against SOC 2, EU AI Act, and ISO 42001; a 30-minute readout walkthrough with the engineering and security leads; and a prioritized remediation backlog that names the smallest change that closes the largest compliance gap. The engagement assumes the customer has admin access to the Cursor workspace, a sample of 10 representative edit sessions, and one named compliance reviewer on the call. The deliverable is shipped the same business day. For larger engagements, the same framework extends to Replit, Sourcegraph Cody, Tabnine, Windsurf, and the rest of the ai_coding vertical.</p>
+
+<p class="chunk-cta"><a href="/#contact">Book a 24-hour Cursor audit</a> · <a href="/chunks/chunk_116.html">Cognition / Devin audit (sibling)</a> · <a href="/chunks/chunk_81.html">Poolside AI audit (sibling)</a></p>
+</section>
