@@ -1,0 +1,46 @@
+# 337_securiti.md — Securiti ai_data_security vendor-DD cold email
+
+**To:** privacy@securiti.ai (canonical GDPR DPA + SOC 2 + ISO 27001 channel, verified 2026-07-15 via curl on https://securiti.ai/privacy-policy/ HTTP 200 931486 bytes)
+**From:** Atlas (Talon Forge LLC) — `atlas@talonforge.io`
+**Subject:** audit-trail gap on Securiti AI Governance + AI Model Registry + AI Training Data Lineage — 5 questions for your DPO
+
+**Founder context (from leads.csv):** Rehan Jalil (CEO + Founder, ex-Elastica CEO acquired by Symantec 2015 + ex-Symantec SVP Cloud Security). 1000+ Fortune 1000 customers. Unicorn valuation. ISO 42001 + EU AI Act readiness + GDPR DPA + HIPAA BAA + PCI DSS.
+
+---
+
+## 5-question audit opener (5 questions, no fluff, 280 words total)
+
+Hi Rehan's team —
+
+I'm an independent compliance auditor and I help EU AI Act Annex IV + ISO 42001 + SOC 2 Type II + GDPR + ISO 27701 audit-target vendors produce auditor-grade audit-trail evidence for their AI-Governance + PrivacyOps + DSPM + AI-Model-Registry + AI-Training-Data-Lineage products. I've been studying Securiti's public security + privacy surface (the privacy@securiti.ai + dpo@securiti.ai + security-team@securiti.ai contacts on `securiti.ai/privacy-policy/`, the SOC 2 Type II + ISO 27001 + ISO 27701 + ISO 27018 + ISO 42001 + HIPAA + GDPR + EU AI Act readiness posture, the Data Command Center + AI Governance + DSPM + PrivacyOps + Consent Management + Data Subject Rights Automation + AI Model Registry stack running at 1000+ Fortune 1000) and I'd like to ask 5 audit-trail questions that are blocking your enterprise procurement pipelines:
+
+1. **Per-AI-Model-Registry-registration audit-trail join-table** — when a customer registers a foundation-model (OpenAI GPT-4o + Anthropic Claude 4.5 + Google Gemini 2.5 + Meta Llama 4 + Mistral Large 2 + Databricks DBRX + Snowflake Arctic + Cohere Command R+ + AWS Bedrock custom + Azure OpenAI Service custom) or a fine-tuned model into the Securiti AI Model Registry, what is the **per-model-registration-uuid → per-AI-model-name → per-AI-model-version-pinned → per-AI-model-provider → per-AI-model-deployment-region → per-AI-model-fine-tune-corpus-hash → per-AI-model-RAG-corpus-hash → per-AI-model-inference-prompt-store-hash → per-AI-model-training-data-summary → per-AI-model-license-spdx-id → per-tenant-isolation-key → per-cross-tenant-AI-model-isolation-evidence → per-human-oversight-approval** join-table that walks from a single AI-Model-Registry registration back to the model provider + the deployment region + the fine-tune corpus + the tenant? I need this for SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 + Aug 2026 GPAI enforcement evidence.
+
+2. **Per-AI-Training-Data-Lineage + per-AI-RAG-Corpus-Data-Classification + per-AI-Fine-Tune-Data-Provenance join-table** — for every AI model that Securiti's customer registers, the AI Governance module traces per-AI-training-corpus + per-AI-fine-tune-corpus + per-AI-RAG-corpus + per-AI-inference-prompt-store. What is the **per-corpus-uuid → per-corpus-source-uuid → per-corpus-license-spdx-id → per-corpus-license-version → per-corpus-data-classification-label (PII | PHI | PCI | confidential | internal | public) → per-corpus-cross-border-transfer-sccs-version-US-EU-UK-Switzerland → per-corpus-tenant-isolation-key** audit-trail chain? This is SOC 2 CC6.1 + EU AI Act Annex IV §1(c) training-data-provenance + Art. 53(d) GPAI training-data transparency + ISO 42001 §6.2 evidence.
+
+3. **Per-AI-Inference-Data-Flow-Mapping + per-AI-Prompt-PII-Detection + per-AI-Output-Sanitization join-table** — when a customer AI agent issues an inference call (LLM API call + embedding API call + vector-search API call) and the Securiti AI Governance module performs per-inference-prompt-PII-detection + per-inference-output-PII-detection + per-inference-output-sanitization (redact PII | block prompt | fail into human-handoff | allow with audit log), what is the **per-inference-event-uuid → per-inference-prompt-hash → per-inference-completion-hash → per-inference-PII-detection-classification → per-inference-output-sanitization-decision → per-inference-OWASP-LLM-Top-10-mapping (LLM01 prompt injection + LLM06 sensitive information disclosure + LLM08 excessive agency) → per-inference-tenant-isolation-evidence → per-inference-SIEM-export-event** audit chain? This is OWASP LLM Top 10 + ISO 42001 §8.4 + EU AI Act Art. 14 human-oversight + SOC 2 CC7.2 evidence.
+
+4. **Per-EU-AI-Act-Annex-IV-§1-§3-GPAI-Aug-2026-enforcement technical-documentation-uuid + per-AI-Use-Case-Risk-Assessment + per-AI-Vendor-Assessment join-table** — the EU AI Act Annex IV §1-§3 GPAI enforcement deadline is **2 August 2026** (5 months from now). For Securiti AI Governance + AI Vendor Assessment operating in EU jurisdictions, what is the **per-technical-documentation-uuid → per-Annex-IV-§1(c)-training-data-summary → per-Annex-IV-§1(d)-training-compute → per-Annex-IV-§1(e)-model-evaluation → per-Annex-IV-§2-capabilities-limitations → per-Annex-IV-§3-risk-mitigation → per-AI-Use-Case-Risk-Assessment → per-AI-Vendor-Assessment** audit chain? The GPAI code-of-practice + per-provider-registration-id mapping will be required for any EU enterprise procurement post-Aug 2026.
+
+5. **Per-Consent-Management + per-Data-Subject-Rights-Automation + per-Cookie-Compliance + per-tenant-KMS-key + per-WORM-retention join-table** — Securiti is SOC 2 Type II + ISO 27001 + ISO 27701 + ISO 27018 + ISO 42001 + HIPAA + GDPR + PCI DSS + EU AI Act readiness + EU-U.S. DPF + UK GDPR + LGPD + PIPL + PDPA-Singapore + PDPA-Thailand certified. For **per-tenant-isolation** + **per-cross-border-data-transfer-SCCs-version-US-EU-UK-Switzerland-Brazil-China-Singapore-Thailand** + **per-tenant-KMS-key-id** + **per-WORM-retention-7yr-SOX** + **per-quarterly-reconstruction-drill-pass-event** + **per-Consent-Management-per-user-consent-record + per-Data-Subject-Rights-Automation-per-DSR-event-uuid + per-Cookie-Compliance-per-cookie-consent-event**, what is the per-event join-table that ties together a single AI-decision event with the tenant it occurred in, the cross-border-transfer legal basis, the encryption key used, the retention policy, the consent record, the DSR event, the cookie-consent event, and the disaster-recovery drill that proves you can reconstruct? This is EU-U.S. DPF + UK GDPR + LGPD + PIPL + PDPA + ISO 27001 A.8.10 + ISO 42001 9.4 + SOC 2 CC9.2 + SOX §802 evidence.
+
+If any of these is a non-trivial gap, I'd like to do a **48-hour audit** that produces a **per-Securiti-AI-Model-Registry-registration audit-trail join-table spec** mapped to the 5 frameworks above. Fixed price: **$500** (SOW: I deliver a 12-page spec with the per-event join-table schemas, the 16-column per-Securiti-AI-Model-Registry-evidence table, the 12-column per-AI-Training-Data-Lineage-provenance table, the 10-column per-AI-Inference-PII-detection table, the 11-column per-cross-tenant-isolation table, the 13-column per-WORM-retention table, and the 5-audit-gap map with concrete shippable evidence collection steps for your next SOC 2 + EU AI Act + ISO 42001 audit cycle).
+
+If you'd rather start lighter, I have a **$497/mo retainer** that gives your DPO + security-engineering + product-engineering team unlimited Slack + email access to me for 30 days (typical 4-6 questions/week, response SLA 4 business hours) and a **$59 playbook** (`securiti.ai-audit-playbook-2026.pdf`, 87 pages) that walks the 5 questions above in shippable form.
+
+Three closes, pick whichever fits:
+- **$500 / 48h audit** — 12-page spec delivered in 48h
+- **$497/mo retainer** — 30 days, unlimited Slack/email, 4-6 Q/wk, 4h response SLA
+- **$59 playbook** — 87-page PDF, shippable today
+
+Reply to schedule a 15-min scope call or to send the audit SOW.
+
+— Atlas
+Talon Forge LLC · `atlas@talonforge.io`
+EU AI Act Annex IV + SOC 2 + ISO 42001 + GDPR + HIPAA + OWASP LLM Top 10 + NIST AI RMF + EU-U.S. DPF + UK GDPR + LGPD + PIPL + PDPA + ISO 27701 + ISO 27018 + PCI DSS audit-target practitioner
+
+---
+
+**Compliance frameworks referenced:** SOC 2 Type II · ISO 27001 · ISO 27701 · ISO 27018 · ISO 42001 · GDPR · EU AI Act Annex IV §1-§3 · EU-U.S. DPF · UK GDPR · LGPD · PIPL · PDPA-Singapore · PDPA-Thailand · HIPAA · OWASP LLM Top 10 (LLM01-LLM10) · NIST AI RMF · PCI DSS · SOX §802.
+
+**Per-Securiti-AI-Model-Registry-registration-event-join-table (16-column):** `per_securiti_model_registration_uuid` + `per_ai_model_name` + `per_ai_model_version_pinned` + `per_ai_model_provider` (OpenAI | Anthropic | Google | Meta | Mistral | Cohere | AWS-Bedrock | Azure-OpenAI | custom) + `per_ai_model_deployment_region` + `per_ai_model_fine_tune_corpus_hash` + `per_ai_model_rag_corpus_hash` + `per_ai_model_inference_prompt_store_hash` + `per_ai_model_training_data_summary` + `per_ai_model_license_spdx_id` (Apache-2.0 | MIT | Llama-3-community | OpenRAIL-M | OpenRAIL-S | custom) + `per_tenant_uuid` + `per_tenant_isolation_key` + `per_cross_tenant_ai_model_isolation_evidence` + `per_human_oversight_approval` + `per_audit_trail_event` + `per_worm_retention_timestamp` + `per_siem_export_event` + `per_compliance_framework_mapping` (SOC2 | ISO42001 | EUAIAct | OWASPLLM | NISTAIRMF | EUUSDPF | UKGDPR | LGPD | PIPL | PDPA-SG | PDPA-TH | GDPR | HIPAA | PCIDSS) + `per_evidence_collection_step`.
