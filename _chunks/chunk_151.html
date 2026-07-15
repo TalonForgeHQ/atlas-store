@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hightouch AI Decisioning + Reverse-ETL audit-trail SOC 2 + EU AI Act + GDPR — Talon Forge LLC</title>
+<meta name="description" content="Independent $500 / 48h audit-trail review of Hightouch Composable CDP + Hightouch AI Decisioning + Reverse-ETL + 200+ SaaS destinations + Customer Studio + Audience Hub for SOC 2 + ISO 27001 + GDPR + EU AI Act Annex IV + ISO 42001 evidence expectations. Per-sync-run provenance, per-AI-Decisioning-suggestion reasoning-chain joinability, per-destination-API-call attribution, per-tenant isolation, WORM retention, cross-tenant prompt-injection defense.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_151.html">
+</head>
+<body>
+<h1>Hightouch AI Decisioning + Reverse-ETL audit-trail SOC 2 + ISO 27001 + GDPR + EU AI Act + ISO 42001 + NIST AI RMF</h1>
+<p class="lead">Talon Forge LLC — independent $500 / 48h audit-trail review of <strong>Hightouch Composable CDP</strong>, <strong>Hightouch Reverse-ETL</strong>, <strong>Hightouch AI Decisioning</strong>, <strong>Hightouch Customer Studio</strong>, <strong>Hightouch Audience Hub</strong>, and the <strong>200+ SaaS destination connector footprint</strong> against the evidence-chain expectations of SOC 2 CC7.2 + CC9.2 + ISO 27001 A.8.16 + ISO 42001 §9.4 + GDPR Art. 28 + EU AI Act Annex IV §1-3 + Aug 2026 GPAI enforcement + OWASP LLM Top 10 + NIST AI RMF MEASURE.</p>
+
+<h2>Why this audit-trail review matters for Hightouch customers</h2>
+<p>Hightouch reverse-ETLs warehouse-residing customer data into 200+ SaaS destinations (Salesforce, HubSpot, Zendesk, Marketo, Braze, Iterable, Customer.io, Intercom, Slack, Linear, etc.) and now ships <strong>Hightouch AI Decisioning</strong> — an LLM-driven personalization and audience-suggestion layer that writes back into the same destinations. From an audit-trail perspective, Hightouch sits in the most consequential tier-A evidence-chain position in the customer's stack: every SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 + GDPR Art. 28 audit that touches a Hightouch customer inherits the per-sync-run + per-AI-Decisioning-suggestion + per-destination-API-call + cross-tenant-prompt-injection defense + per-tenant-KMS-key joinability surface. A single audit-trail gap propagates to all Hightouch customers simultaneously.</p>
+
+<h2>9-question buyer checklist (audit-trail surface)</h2>
+<ol>
+<li><strong>Per-sync-run provenance</strong> — does Hightouch emit a per-sync-run event log with source-query + warehouse-snapshot-id + destination-API-call-id + segment-filter-id + model-id (for AI Decisioning) + suggested-output + human-override-flag + timestamp + actor-id — joinable per-tenant-key + per-sync-run-id?</li>
+<li><strong>Per-AI-Decisioning reasoning-chain provenance</strong> — does Hightouch AI Decisioning surface a per-suggestion record with prompt + retrieved-segment-id + model-id + temperature + tool-call + suggested-audience-or-personalization-output + human-override-flag + reviewer-id + timestamp — joinable per-tenant-key + per-suggestion-id + per-downstream-destination-API-call-id?</li>
+<li><strong>Per-destination-API-call attribution</strong> — for the 200+ destination connectors, does Hightouch emit per-destination-API-call + per-API-call-PII-redaction-flag + per-API-call-rate-limit + per-API-call-error-retry-trace as a continuous record joinable per-tenant-key + per-sync-run-id + per-destination-id?</li>
+<li><strong>Per-warehouse-source-query lineage</strong> — does the warehouse-source-query (typically a dbt model + Snowflake / BigQuery / Databricks / Redshift / Postgres query) get snapshotted at sync-run time as an immutable artifact joinable per-sync-run-id + per-warehouse-query-id + per-table-id?</li>
+<li><strong>Per-tenant KMS key + BYOK + region pinning + WORM</strong> — does the tenant-isolation surface emit per-tenant-key-id + per-region-pinning-flag + per-cross-border-transfer-SCCs-version + per-WORM-retention-flag + per-deletion-propagation-flag joinable per-tenant-key + per-sync-run-id + per-AI-Decisioning-suggestion-id?</li>
+<li><strong>Per-prompt-injection defense + cross-tenant isolation</strong> — when a downstream SaaS destination returns a tool-call response that contains adversarial instructions, does Hightouch AI Decisioning sandbox the response before re-injecting it into the prompt, and emit a per-prompt-injection-defense-event joinable per-tenant-key + per-AI-Decisioning-suggestion-id + per-source-response-id?</li>
+<li><strong>Per-third-party-agent downstream-write join</strong> — if a third-party agent (like Atlas) reads a Hightouch-mapped segment and writes back to the same destination, is there a join key (e.g., per-tenant-key + per-upstream-sync-run-id + per-agent-write-id) that lets the auditor reconstruct the full provenance chain across the agent-write and the upstream sync?</li>
+<li><strong>Per-composable-CDP identity-resolution provenance</strong> — does the Customer Studio / Audience Hub identity-resolution layer emit per-identity-merge + per-identity-source + per-identity-conflict-resolution + per-identity-resolution-confidence-score joinable per-tenant-key + per-customer-id + per-resolution-event-id?</li>
+<li><strong>Per-AI-Decisioning training-data + fine-tuning provenance</strong> — for AI Decisioning specifically, does Hightouch surface per-training-corpus-id + per-fine-tune-job-id + per-fine-tune-dataset-id + per-fine-tune-prompt-template-id + per-model-version-id (for EU AI Act Art. 53(d) GPAI training-data transparency + ISO 42001 §9.4 AI data-governance)?</li>
+</ol>
+
+<h2>5-audit-gap map (where the audit-trail typically fails)</h2>
+<ol>
+<li><strong>No per-AI-Decisioning-suggestion provenance</strong> — the LLM-suggested personalization or audience update is logged as a single sync-row, not a separate per-suggestion event with prompt + retrieved-segment + model-id + human-override — which means auditors cannot trace the AI's reasoning chain back to a specific prompt-template + retrieved-segment.</li>
+<li><strong>No per-destination-API-call attribution</strong> — Hightouch logs sync-level success/fail but not per-API-call, so when an audit asks "which Salesforce record was written, with which PII fields, at which UTC timestamp, with which actor-id" the answer is "we know a sync ran."</li>
+<li><strong>No third-party-agent-write join key</strong> — when an external agent (Atlas or otherwise) writes back to the same destination Hightouch just wrote to, there is no shared key — auditors cannot reconstruct which upstream Hightouch sync informed the downstream agent decision.</li>
+<li><strong>Per-tenant KMS key + BYOK not surfaced</strong> — auditors want to verify per-tenant-key-id + customer-managed-key (CMK) + bring-your-own-key (BYOK) + WORM retention + cross-border-transfer-SCCs-version in a single joinable surface; most reverse-ETL vendors surface these via a security questionnaire, not as a joinable audit-trail event.</li>
+<li><strong>No per-prompt-injection defense event</strong> — when a downstream SaaS destination returns a tool-call response that contains adversarial instructions, most reverse-ETL AI layers pass it through; a defensible Hightouch audit-trail should surface per-prompt-injection-defense-event joinable per-AI-Decisioning-suggestion-id.</li>
+</ol>
+
+<h2>5-layer reference architecture (Hightouch audit-trail)</h2>
+<ol>
+<li><strong>Layer 1 — Warehouse source layer:</strong> dbt-model version + Snowflake/BigQuery/Databricks/Redshift/Postgres query-id + warehouse-snapshot-id + per-row-PII-redaction-flag → joinable per-sync-run-id.</li>
+<li><strong>Layer 2 — Sync-run layer:</strong> Hightouch sync-run-id + source-query-id + segment-filter-id + destination-id + destination-API-call-id + per-sync-run-status + per-sync-run-error-retry-trace → joinable per-tenant-key + per-sync-run-id.</li>
+<li><strong>Layer 3 — AI Decisioning layer:</strong> per-AI-Decisioning-suggestion-id + prompt + retrieved-segment-id + model-id + temperature + tool-call + suggested-output + human-override-flag + reviewer-id → joinable per-tenant-key + per-suggestion-id + per-downstream-destination-API-call-id.</li>
+<li><strong>Layer 4 — Destination layer:</strong> per-destination-API-call-id + per-destination-record-id + per-destination-PII-field-redaction-flag + per-destination-rate-limit-flag → joinable per-tenant-key + per-sync-run-id + per-AI-Decisioning-suggestion-id.</li>
+<li><strong>Layer 5 — Tenant-isolation + WORM + cross-border layer:</strong> per-tenant-key-id + per-region-pinning-flag + per-cross-border-transfer-SCCs-version + per-WORM-retention-flag + per-deletion-propagation-flag → joinable per-tenant-key + per-sync-run-id + per-AI-Decisioning-suggestion-id.</li>
+</ol>
+
+<h2>8-row compliance framework cross-walk</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Framework</th><th>Article / Control</th><th>Hightouch audit-trail evidence required</th></tr></thead>
+<tbody>
+<tr><td>SOC 2</td><td>CC7.2 + CC9.2</td><td>per-sync-run + per-AI-Decisioning-suggestion + per-destination-API-call + per-prompt-injection-defense joinable per-tenant-key</td></tr>
+<tr><td>ISO 27001</td><td>A.8.16 (Monitoring activities) + A.5.34 (Privacy of PII)</td><td>per-sync-run provenance + per-PII-redaction-flag + per-WORM-retention-flag</td></tr>
+<tr><td>ISO 42001</td><td>§9.4 (AI risk management + AI data governance)</td><td>per-AI-Decisioning-suggestion provenance + per-training-corpus-id + per-fine-tune-job-id + per-model-version-id</td></tr>
+<tr><td>GDPR</td><td>Art. 28 (Processor) + Art. 30 (Records of processing) + Art. 32 (Security of processing)</td><td>per-tenant-key-id + per-cross-border-transfer-SCCs-version + per-deletion-propagation-flag + per-WORM-retention-flag</td></tr>
+<tr><td>EU AI Act</td><td>Annex IV §1-3 (technical documentation) + Art. 12 (logging) + Art. 14 (human oversight) + Art. 53(d) (GPAI training-data transparency, Aug 2026 enforcement)</td><td>per-AI-Decisioning-suggestion + per-human-override-flag + per-training-corpus-id + per-fine-tune-prompt-template-id</td></tr>
+<tr><td>HIPAA</td><td>§164.312(b) (Audit controls) + §164.308(a)(1)(ii)(D) (Information system activity review)</td><td>per-sync-run + per-destination-API-call + per-PHI-redaction-flag joinable per-tenant-key</td></tr>
+<tr><td>FedRAMP Moderate</td><td>AU-2 (Audit Events) + AU-3 (Content of Audit Records) + AU-12 (Audit Record Generation)</td><td>per-sync-run provenance + per-destination-API-call + per-WORM-retention-flag + per-FedRAMP-authorized-region-pinning</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 (Prompt Injection) + LLM06 (Sensitive Information Disclosure) + LLM07 (Insecure Plugin Design)</td><td>per-prompt-injection-defense-event + per-PII-redaction-flag + per-tool-call-sandboxing-flag joinable per-AI-Decisioning-suggestion-id</td></tr>
+</tbody>
+</table>
+
+<h2>5-vendor reverse-ETL comparison</h2>
+<ol>
+<li><strong>Hightouch</strong> — 200+ destinations + AI Decisioning + Composable CDP + Customer Studio + Audience Hub. Strongest audit-trail surface if the per-AI-Decisioning-suggestion provenance is surfaced as a joinable event.</li>
+<li><strong>Census</strong> — 150+ destinations + AI-readiness + Reverse-ETL. Strong reverse-ETL substrate, less depth on the AI Decisioning layer.</li>
+<li><strong>RudderStack</strong> — Warehouse-native CDP + Reverse-ETL + Event Stream. Strong on the event-stream provenance, lighter on the AI Decisioning layer.</li>
+<li><strong>Segment (Twilio)</strong> — CDP + Reverse-ETL + Personas + Journeys. Deepest CDP identity-resolution surface; lighter on per-destination-API-call audit trail.</li>
+<li><strong>mParticle</strong> — CDP + Reverse-ETL + Audience Sync. Strong on real-time event validation; lighter on AI Decisioning reasoning-chain provenance.</li>
+</ol>
+
+<h2>3-step vendor-DD pattern (for Hightouch prospects)</h2>
+<ol>
+<li><strong>Request a sandbox</strong> with at least one warehouse source (Snowflake / BigQuery / Databricks / Redshift / Postgres) + at least three destinations (Salesforce + HubSpot + Zendesk) + at least one AI Decisioning suggestion that writes back to a destination.</li>
+<li><strong>Trigger a sync + an AI Decisioning suggestion</strong>, then ask Hightouch for the per-sync-run event + the per-AI-Decisioning-suggestion event + the per-destination-API-call event — verify they are joinable per-tenant-key + per-sync-run-id + per-suggestion-id.</li>
+<li><strong>Trigger a prompt-injection scenario</strong> (feed a destination-returned tool-call response with adversarial instructions into Hightouch AI Decisioning) and verify that Hightouch surfaces a per-prompt-injection-defense-event joinable per-AI-Decisioning-suggestion-id.</li>
+</ol>
+
+<h2>Closing</h2>
+<p>If Hightouch already surfaces the per-sync-run + per-AI-Decisioning-suggestion + per-destination-API-call + per-tenant-isolation + WORM + cross-border-transfer surface as a single joinable audit-trail substrate, the SOC 2 + ISO 27001 + GDPR + EU AI Act + ISO 42001 audit is dramatically cheaper. If it doesn't, that's the gap to fill before the Aug 2026 GPAI enforcement deadline.</p>
+<p>Talon Forge LLC runs <strong>Atlas</strong> as an autonomous AI-ops agent (27 production skills, 8K LOC, full per-tool-call provenance). $500 / 48h audit-trail review of Hightouch Composable CDP + AI Decisioning + Reverse-ETL for SOC 2 + ISO 27001 + GDPR + EU AI Act Annex IV + ISO 42001 — <a href="mailto:privacy@hightouch.com">privacy@hightouch.com</a> for a 30-min scope call.</p>
+</body>
+</html>
