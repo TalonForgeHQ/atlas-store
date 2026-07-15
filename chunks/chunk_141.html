@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Compliance Automation Vendor-Risk + AI Evidence Audit Guide (2026) — Atlas</title>
+<meta name="description" content="Compliance automation vendor-risk and AI evidence audit guide for SOC 2, ISO 27001, HIPAA, GDPR, EU AI Act Annex IV, and ISO 42001. Buyer checklist, minimum evidence schema, and vendor-DD playbook.">
+<meta name="keywords" content="compliance automation vendor risk management, compliance automation audit trail, AI framework mapping evidence, AI questionnaire provenance, SOC 2 evidence collection failure events, ISO 42001 audit trail, EU AI Act Annex IV compliance automation, Trust Center audit, customer managed key compliance, vendor DD checklist 2026">
+</head>
+<body>
+<!-- Atlas autonomous audit surface — Tick 162 (2026-07-16) -->
+<section id="chunk-141" class="chunk section-compliance-automation-audit" data-chunk-id="141" data-vertical="compliance_automation">
+<header>
+<h1>Compliance Automation Vendor-Risk + AI Evidence Audit Guide (2026)</h1>
+<p><strong>Atlas autonomous audit surface.</strong> A practical buyer and auditor checklist for evaluating compliance-automation platforms across SOC 2 Type II, ISO 27001, ISO 27701, HIPAA, PCI DSS, GDPR, NIST CSF, EU AI Act Annex IV, and ISO 42001. The focus is not the size of a framework checklist; it is whether every AI suggestion, evidence-collection step, vendor-risk answer, and Trust Center event can be reconstructed from a durable audit trail.</p>
+</header>
+<section id="why-audit-trail-grain">
+<h2>1. Why audit-trail grain matters more than a framework-count headline</h2>
+<p>Compliance automation is often sold through framework counts, integration counts, and the promise of continuous monitoring. Those are useful buying signals, but they do not answer the question an auditor asks after a control fails: what happened, in which tenant, against which source record, under which policy version, and who approved the remediation?</p>
+<p>A defensible implementation stores evidence at the event grain. A framework rollup can say that a control is green; an event-grain record can show the source-system request, transformation step, evidence hash, control mapping, failure reason, remediation action, reviewer decision, retention policy, and tenant-isolation context. The difference is the difference between a dashboard and a reconstructable audit package.</p>
+<p>For AI-assisted compliance features, add model version, prompt-template version, retrieved evidence identifiers, confidence score, human override, and the final applied change. Never treat an AI summary as a substitute for the underlying evidence chain.</p>
+</section>
+<section id="five-audit-gaps">
+<h2>2. Five audit gaps to test in a compliance-automation vendor evaluation</h2>
+<ol>
+<li><strong>AI framework-mapping provenance:</strong> Can the platform link each mapping suggestion to the source control, policy, prompt, model version, completion, confidence score, reviewer override, and final framework decision?</li>
+<li><strong>Evidence-collection failure events:</strong> Does every failed API call, partial sync, stale credential, and transformation error remain queryable, or is only the next successful sync retained?</li>
+<li><strong>Vendor-risk questionnaire reasoning:</strong> Can an auditor trace an AI-generated questionnaire answer to the exact vendor document chunk, policy clause, prompt-template version, confidence score, and human approval?</li>
+<li><strong>Trust Center event continuity:</strong> Are page views, document downloads, NDA gates, access decisions, and document revisions joined to the same customer and tenant evidence model?</li>
+<li><strong>Tenant isolation and key inheritance:</strong> Do AI suggestions, evidence payloads, vendor-risk records, and Trust Center events inherit the intended tenant boundary, region, KMS key, CMK/BYOK setting, and retention policy?</li>
+</ol>
+</section>
+<section id="buyer-checklist">
+<h2>3. Nine-question buyer checklist</h2>
+<ol>
+<li>Can the vendor export one AI framework-mapping decision at per-suggestion grain rather than only as a session summary?</li>
+<li>Can the vendor show a failed evidence-collection step with its source request, failure reason, retry, and remediation action?</li>
+<li>Is every policy and control mapping versioned so an auditor can reproduce the state that existed at the audit date?</li>
+<li>Does a vendor-risk AI answer retain the retrieved source-document identifiers and human reviewer override?</li>
+<li>Are prompt-template, model, embedding, and retrieval versions retained for AI-generated compliance output?</li>
+<li>Can the platform demonstrate customer-tenant isolation for evidence, embeddings, logs, exports, and support access?</li>
+<li>Do Trust Center document downloads and NDA-gated events have a durable event identifier and retention policy?</li>
+<li>Can the customer export a cross-framework mapping without losing the source-control and evidence references?</li>
+<li>Can the vendor prove deletion, legal hold, WORM retention, and reconstruction behavior for the same audit record?</li>
+</ol>
+</section>
+<section id="evidence-schema">
+<h2>4. Minimum evidence schema for an AI-assisted compliance workflow</h2>
+<table>
+<thead><tr><th>Evidence surface</th><th>Minimum join keys</th><th>Audit question</th></tr></thead>
+<tbody>
+<tr><td>Framework mapping</td><td>suggestion_id, source_control_id, framework_id, policy_version, model_version, reviewer_id</td><td>Why did this mapping exist and who approved it?</td></tr>
+<tr><td>Evidence collection</td><td>collection_step_id, source_system, resource_id, request_id, status, failure_reason, remediation_id</td><td>What happened when the source sync failed?</td></tr>
+<tr><td>Vendor risk</td><td>assessment_id, vendor_id, question_id, document_chunk_id, prompt_version, confidence, override</td><td>Can the answer be traced to source evidence?</td></tr>
+<tr><td>Trust Center</td><td>visitor_id, tenant_id, page_id, document_id, nda_status, event_time, document_version</td><td>Which document and access decision did the customer receive?</td></tr>
+<tr><td>Isolation and keys</td><td>tenant_id_hash, region, deployment_id, key_id, isolation_check_id, export_id</td><td>Did the evidence stay inside the promised boundary?</td></tr>
+</tbody>
+</table>
+</section>
+<section id="vendor-dd-playbook">
+<h2>5. Eight-step vendor-DD playbook</h2>
+<ol>
+<li>Pick one recently changed control and request its complete evidence history.</li>
+<li>Pick one failed integration sync and request every failure and retry event.</li>
+<li>Ask for one AI mapping suggestion with its source records and reviewer decision.</li>
+<li>Ask for one AI questionnaire answer with document-chunk and prompt provenance.</li>
+<li>Request the tenant-isolation, encryption, region, and key-inheritance evidence for those records.</li>
+<li>Request the Trust Center event trail for a document view, download, and NDA gate.</li>
+<li>Attempt a cross-framework export and verify that source references survive the export.</li>
+<li>Run a reconstruction drill: rebuild the audit packet from exported records without vendor-side intervention.</li>
+</ol>
+<p>Score each answer as <strong>demonstrated</strong>, <strong>documented but not demonstrated</strong>, or <strong>not available</strong>. Treat “the dashboard shows compliant” as a starting point, not as evidence of event-level reconstruction.</p>
+</section>
+<section id="atlas-deliverable">
+<h2>6. Atlas audit deliverable</h2>
+<p>Atlas can turn the checklist into a 48-hour vendor-DD packet: an evidence-schema gap map, control-to-framework cross-walk, AI-provenance questions, tenant-isolation review, Trust Center event review, and a remediation backlog prioritized by audit impact. The deliverable is designed for CISOs, VPs of GRC, DPOs, security teams, and procurement leaders comparing compliance-automation platforms.</p>
+<p><strong>Next step:</strong> use the nine questions above in the vendor demo, capture the answers at event-grain, and request a reconstruction drill before signing a multi-year compliance-automation contract.</p>
+</section>
+</section>
+</body>
+</html>
