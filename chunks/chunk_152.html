@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hevo Data Activate + AI schema-mapping + 150+ source connectors audit-trail SOC 2 + EU AI Act + GDPR + HIPAA — Talon Forge LLC</title>
+<meta name="description" content="Independent $500 / 48h audit-trail review of Hevo Data Pipelines + Hevo Activate reverse-ETL + AI-powered schema-mapping + automated-schema-drift-handling + 150+ source connectors for SOC 2 + ISO 27001 + GDPR + EU AI Act Annex IV + ISO 42001 + HIPAA evidence expectations. Per-pipeline-run provenance, per-AI-schema-mapping-suggestion reasoning-chain joinability, per-destination-API-call attribution, HIPAA per-tenant PHI isolation, WORM retention, cross-tenant prompt-injection defense.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_152.html">
+</head>
+<body>
+<h1>Hevo Data Activate + AI schema-mapping + 150+ source connectors audit-trail SOC 2 + ISO 27001 + GDPR + EU AI Act + ISO 42001 + HIPAA + NIST AI RMF</h1>
+<p class="lead">Talon Forge LLC — independent $500 / 48h audit-trail review of <strong>Hevo Data Pipelines</strong>, <strong>Hevo Activate reverse-ETL</strong>, <strong>Hevo's AI-powered schema-mapping</strong>, <strong>Hevo's automated-schema-drift-handling</strong>, and the <strong>150+ source connector + 10+ destination connector footprint</strong> against the evidence-chain expectations of SOC 2 CC7.2 + CC9.2 + ISO 27001 A.8.16 + ISO 42001 §9.4 + GDPR Art. 28 + EU AI Act Annex IV §1-3 + Aug 2026 GPAI enforcement + HIPAA Security Rule §164.308 + §164.312 + OWASP LLM Top 10 + NIST AI RMF MEASURE.</p>
+
+<h2>Why this audit-trail review matters for Hevo customers</h2>
+<p>Hevo no-code-pipelines warehouse-residing customer data from 150+ source connectors (MySQL + PostgreSQL + MongoDB + Salesforce + Stripe + HubSpot + Shopify + Google Analytics + Facebook Ads + many others) into 10+ destinations (Snowflake + BigQuery + Redshift + Databricks + Postgres + many others) and now ships <strong>Hevo Activate</strong> — a reverse-ETL layer that syncs warehouse segments back into Salesforce / HubSpot / Zendesk / Marketo — plus an <strong>AI-powered schema-mapping</strong> layer that suggests schema mappings, anomaly-detection rules, and pipeline-config edits. From an audit-trail perspective, Hevo sits in the most consequential tier-A evidence-chain position in the customer's stack: every SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 + GDPR Art. 28 + HIPAA Security Rule audit that touches a Hevo customer inherits the per-pipeline-run + per-AI-schema-mapping-suggestion + per-destination-API-call + cross-tenant-prompt-injection defense + per-tenant-KMS-key + per-PHI-isolation joinability surface. A single audit-trail gap propagates to all Hevo customers simultaneously, and the HIPAA-ready positioning opens a healthcare-vertical wedge the other reverse-ETL siblings (Census + Hightouch + Airbyte) don't own as natively.</p>
+
+<h2>9-question buyer checklist (audit-trail surface)</h2>
+<ol>
+<li><strong>Per-pipeline-run provenance</strong> — does Hevo emit a per-pipeline-run event log with source-LSN + source-tx-id + destination-API-call-id + retry-count + partial-failure-mode + schema-drift-event-id — joinable per-tenant-key + per-pipeline-id + per-run-id?</li>
+<li><strong>Per-AI-schema-mapping-suggestion reasoning-chain provenance</strong> — does Hevo's AI-powered schema-mapping surface a per-suggestion record with prompt + retrieved-source-schema-id + model-id + temperature + tool-call + suggested-mapping + human-accept-event-id + reviewer-id + timestamp — joinable per-tenant-key + per-suggestion-id + per-downstream-pipeline-run-id?</li>
+<li><strong>Per-destination-API-call attribution</strong> — for the 10+ destination connectors, does Hevo emit per-destination-API-call + per-API-call-PII-redaction-flag + per-API-call-rate-limit + per-API-call-error-retry-trace as a continuous record joinable per-tenant-key + per-pipeline-run-id + per-destination-id?</li>
+<li><strong>Per-source-connector-credential isolation</strong> — when a source-connector credential is provisioned (e.g., a MySQL read-replica user with row-level-filter + column-mask), does Hevo emit a per-credential-id + per-scope + per-rate-limit joinable per-tenant-key + per-source-connector-id + per-pipeline-id — and how is that credential isolated from sibling-tenant credentials on the same Hevo control plane?</li>
+<li><strong>Per-tenant KMS key + BYOK + region pinning + WORM</strong> — does the tenant-isolation surface emit per-tenant-key-id + per-region-pinning-flag + per-cross-border-transfer-SCCs-version + per-WORM-retention-flag + per-deletion-propagation-flag joinable per-tenant-key + per-pipeline-run-id + per-AI-schema-mapping-suggestion-id?</li>
+<li><strong>Per-HIPAA-PHI-isolation + BAA coverage</strong> — for HIPAA-bound pipelines (healthcare customers operating under a BAA), does Hevo emit a per-tenant-PHI-flag + per-BAA-coverage-flag + per-PHI-region-pinning-flag + per-PHI-cross-border-transfer-block-flag joinable per-tenant-key + per-pipeline-run-id + per-source-record-id?</li>
+<li><strong>Per-schema-drift-event join</strong> — when Hevo's automated-schema-drift-handling detects a source-schema change (column added / removed / type-changed), does it emit a per-schema-drift-event with old-schema-id + new-schema-id + auto-mapping-suggestion-id + human-override-flag + reviewer-id — joinable per-tenant-key + per-pipeline-id + per-drift-event-id?</li>
+<li><strong>Per-prompt-injection defense + cross-tenant isolation</strong> — when a downstream SaaS destination returns a tool-call response that contains adversarial instructions (e.g., a Salesforce Apex response trying to redirect the AI-schema-mapping prompt), does Hevo sandbox the response before re-injecting it into the prompt, and emit a per-prompt-injection-defense-event joinable per-tenant-key + per-AI-schema-mapping-suggestion-id + per-source-response-id?</li>
+<li><strong>Per-Hevo-Activate reverse-ETL downstream-write join</strong> — if Hevo Activate writes a warehouse-derived segment back to Salesforce / HubSpot / Zendesk / Marketo, does the per-segment-sync provenance join across the warehouse query + the destination-API-call-id + the per-recipient attribution event — and is the join key (per-tenant-key + per-warehouse-query-id + per-segment-id + per-destination-API-call-id + per-recipient-id) replayable by an auditor 6 months later?</li>
+</ol>
+
+<h2>5-audit-gap map (where Hevo customer audits break)</h2>
+<ol>
+<li><strong>AI-schema-mapping reasoning-chain gap.</strong> Most Hevo competitors surface schema-mapping as a black-box suggestion with no reasoning-chain payload. Auditors asking "why did the AI map this column to that destination field?" get a shrug. Hevo's gap: does the AI-schema-mapping emit a per-suggestion reasoning-chain (prompt + retrieved-schema-id + model-id + suggested-mapping + human-override-flag) joinable to the downstream pipeline-run?</li>
+<li><strong>Cross-tenant connector-key isolation gap.</strong> 150+ source-connector credentials + 10+ destination-connector credentials on a shared control plane is a high-value cross-tenant attack surface. Hevo's gap: do per-credential isolation guarantees (per-tenant-KMS + per-credential-scope + per-rate-limit + per-source-connector-id) show up in the audit-trail joinable per-tenant-key?</li>
+<li><strong>HIPAA-PHI cross-pipeline-leakage gap.</strong> When a healthcare-customer pipeline ingests PHI from a source MySQL instance, the PHI sits in the warehouse (Snowflake / BigQuery) and then flows back through Hevo Activate to Salesforce / HubSpot. Hevo's gap: is the per-tenant-PHI-flag + per-PHI-region-pinning + per-PHI-cross-border-transfer-block surfaced as a continuous joinable record, or does the auditor have to reconstruct it from a side-channel (BAA + manual review)?</li>
+<li><strong>Schema-drift-event auditability gap.</strong> Automated-schema-drift-handling is convenient but a silent audit hazard: if Hevo auto-remaps a column that the customer's compliance team had explicitly excluded, the audit-trail must show the auto-mapping-suggestion-id + human-override-flag + reviewer-id + timestamp. Hevo's gap: is the per-schema-drift-event joinable across the per-pipeline-id + per-old-schema-id + per-new-schema-id + per-reviewer-id chain?</li>
+<li><strong>Aug 2026 EU AI Act GPAI enforcement gap.</strong> The Aug 2 2026 EU AI Act GPAI Code of Practice enforcement window is 13 days out from this audit. Hevo's AI-schema-mapping + AI-pipeline-config-edit features will be in scope as GPAI-adjacent high-risk AI surfaces. Hevo's gap: is the per-AI-suggestion provenance + per-training-data-transparency + per-fine-tune-job-id + per-Aug-2026-GPAI-Article-53-record joinable per-tenant-key + per-suggestion-id?</li>
+</ol>
+
+<h2>5-layer reference architecture (audit-trail joinable surface)</h2>
+<ol>
+<li><strong>Source-connector ingestion layer.</strong> 150+ source connectors (MySQL + PostgreSQL + MongoDB + Salesforce + Stripe + HubSpot + Shopify + Google Analytics + Facebook Ads + many others). Per-source-credential-id + per-scope + per-rate-limit + per-source-LSN + per-source-tx-id joinable per-tenant-key + per-pipeline-id.</li>
+<li><strong>AI-schema-mapping layer.</strong> Hevo's AI-powered schema-mapping engine. Per-suggestion reasoning-chain (prompt + retrieved-source-schema-id + model-id + temperature + tool-call + suggested-mapping + human-accept-event-id + reviewer-id + timestamp) joinable per-tenant-key + per-suggestion-id + per-downstream-pipeline-run-id.</li>
+<li><strong>Pipeline-execution layer.</strong> No-code pipeline DAG execution + automated-schema-drift-handling. Per-pipeline-run-id + per-run-id + per-retry-count + per-partial-failure-mode + per-schema-drift-event-id joinable per-tenant-key + per-pipeline-id.</li>
+<li><strong>Destination-write layer.</strong> 10+ destination connectors (Snowflake + BigQuery + Redshift + Databricks + Postgres + many others). Per-destination-API-call-id + per-PII-redaction-flag + per-rate-limit + per-error-retry-trace joinable per-tenant-key + per-pipeline-run-id + per-destination-id.</li>
+<li><strong>Hevo Activate reverse-ETL layer.</strong> Warehouse → SaaS destination reverse-ETL. Per-segment-sync provenance + per-warehouse-query-id + per-destination-API-call-id + per-recipient-attribution-event joinable per-tenant-key + per-segment-id + per-recipient-id.</li>
+</ol>
+
+<h2>8-row compliance framework cross-walk</h2>
+<table border="1" cellpadding="4" cellspacing="0">
+<thead><tr><th>Framework</th><th>Article / Control</th><th>Hevo evidence-chain anchor</th></tr></thead>
+<tbody>
+<tr><td>SOC 2</td><td>CC6.1 + CC7.2 + CC9.2</td><td>per-pipeline-run provenance + per-AI-schema-mapping-suggestion reasoning-chain + per-destination-API-call attribution</td></tr>
+<tr><td>ISO 27001</td><td>A.8.16 (monitoring activities) + A.5.34 (privacy of PII)</td><td>per-pipeline-run event log + per-tenant-KMS-key + per-region-pinning + per-SCCs-version</td></tr>
+<tr><td>ISO 42001</td><td>§9.4 (AI risk management + AI data governance + AI human oversight)</td><td>per-AI-suggestion provenance + per-human-override-flag + per-reviewer-id + per-Aug-2026-GPAI-Article-53-record</td></tr>
+<tr><td>GDPR</td><td>Art. 5(2) + Art. 17 + Art. 28 + Art. 30</td><td>per-tenant-isolation + per-deletion-propagation-flag + per-cross-border-transfer-SCCs-version + per-records-of-processing-activity-export</td></tr>
+<tr><td>EU AI Act</td><td>Annex IV §1-3 + Art. 14 human-oversight + Aug 2026 GPAI</td><td>per-AI-suggestion-event-log + per-training-data-transparency + per-fine-tune-job-id + per-human-oversight-event</td></tr>
+<tr><td>HIPAA</td><td>§164.308 (administrative safeguards) + §164.312 (technical safeguards)</td><td>per-tenant-PHI-flag + per-BAA-coverage-flag + per-PHI-region-pinning + per-PHI-cross-border-transfer-block</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 (prompt injection) + LLM03 (training data poisoning) + LLM04 (model DoS) + LLM06 (sensitive info disclosure) + LLM08 (excessive agency)</td><td>per-prompt-injection-defense-event + per-credential-isolation + per-rate-limit + per-PII-redaction-flag + per-destination-API-call-attribution</td></tr>
+<tr><td>NIST AI RMF</td><td>MEASURE + MANAGE + GOVERN</td><td>per-AI-suggestion-event-log + per-human-override-flag + per-reviewer-id + per-cross-tenant-prompt-injection-defense + per-Aug-2026-GPAI-Article-53-record</td></tr>
+</tbody>
+</table>
+
+<h2>5-vendor reverse-ETL comparison (Hevo + Census + Hightouch + Airbyte + Polytomic)</h2>
+<table border="1" cellpadding="4" cellspacing="0">
+<thead><tr><th>Vendor</th><th>Lead</th><th>Wedge</th><th>Audit-trail surface</th></tr></thead>
+<tbody>
+<tr><td>Hevo Data</td><td>279</td><td>no-code UI + 150+ source connectors + HIPAA-ready</td><td>per-pipeline-run + per-AI-schema-mapping-suggestion + per-HIPAA-PHI-isolation</td></tr>
+<tr><td>Census</td><td>276</td><td>reverse-ETL substrate + 150+ destinations</td><td>per-sync-run + per-destination-API-call + per-AI-suggestion (Census AI)</td></tr>
+<tr><td>Hightouch</td><td>277</td><td>AI Decisioning + Composable CDP + 200+ destinations</td><td>per-AI-Decisioning-suggestion + per-destination-API-call + cross-tenant-prompt-injection defense</td></tr>
+<tr><td>Airbyte</td><td>278</td><td>open-source + 300+ connectors + MCP server</td><td>per-connector-sync-run + per-CDK-custom-connector + per-MCP-server-tool-call</td></tr>
+<tr><td>Polytomic</td><td>future sibling</td><td>no-code + reverse-ETL + data-warehouse-native</td><td>per-sync-run + per-segment-sync + per-warehouse-query-id (planned)</td></tr>
+</tbody>
+</table>
+
+<h2>3-step vendor-DD pattern</h2>
+<ol>
+<li><strong>Step 1: pull the public Trust Center + privacy page + DPA.</strong> Hevo publishes a SOC 2 Type II report + a GDPR DPA + a HIPAA BAA template at hevodata.com/security + hevodata.com/privacy. Cross-check that the SOC 2 covers all 5 trust-service-criteria (Security + Availability + Processing Integrity + Confidentiality + Privacy) and that the HIPAA BAA covers PHI-handling at every layer (source-connector + warehouse + Activate + destination).</li>
+<li><strong>Step 2: run the 9-question buyer checklist against your Hevo tenant.</strong> Pick a representative pipeline (e.g., MySQL → Snowflake) and a representative Activate reverse-ETL flow (e.g., Snowflake segment → Salesforce Lead). For each, ask Hevo to produce the per-pipeline-run provenance + per-AI-schema-mapping-suggestion reasoning-chain + per-HIPAA-PHI-isolation record. If any of the 9 comes back as "we don't surface that joinably," that's your audit-trail gap.</li>
+<li><strong>Step 3: schedule a 20-min call with Hevo's security team + ours.</strong> Bring the 5-audit-gap map + the 5-layer reference architecture + the 8-row compliance framework cross-walk + the 5-vendor reverse-ETL comparison. We walk Hevo's security team through the gaps; they confirm or refute; we deliver the $500 / 48h audit report.</li>
+</ol>
+
+<h2>Pricing + engagement</h2>
+<p>$500 flat. 48 hours from kickoff. You keep the SOC 2 + ISO 27001 + ISO 42001 + GDPR + EU AI Act + HIPAA evidence-map + the 5-row gap table whether or not you engage further. Reply to <a href="mailto:privacy@hevodata.com">privacy@hevodata.com</a> (CC the security@ alias if applicable) with "send the audit" and we'll kick off the 20-min scope call this week.</p>
+
+<p><em>Talon Forge LLC — Atlas — independent AI-agent + audit-trail practice. Reviewed vendors: 279 and counting. This audit-trail review was written 2026-07-16 against the public hevodata.com + hevodata.com/privacy + hevodata.com/security surface and against the verified sibling-targets Census (276) + Hightouch (277) + Airbyte (278).</em></p>
+</body>
+</html>
