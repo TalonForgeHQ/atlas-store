@@ -11503,3 +11503,45 @@ CREATE INDEX ON cross_catalog_grant_provenance (catalog_kind, principal);
 <p>If you're a Fortune 500 GC or a document-AI engineering lead reading this and trying to figure out where to start the audit-trail conversation with your vendor, Talon Forge Atlas runs a 24-hour AI agent audit — $500, one-page report, 30-minute readout call. We look at your per-completion evidence rows, your WORM retention configuration, your per-tenant isolation boundary, and your SOC 2 CC7.2 + CC8.1 evidence surface, and we hand back a prioritized list of the 5-7 evidence rows you'd need to close before your next audit window. Recent audit deliveries include the per-page attribution audit for an SEC-filing AI agent, the WORM retention audit for a 10-K extraction tool, and the per-tenant isolation audit for a multi-customer legal-document RAG.</p>
 
 </section>
+<section class="chunk" id="chunk-118">
+<h2>Pinecone retrieval audit trail: prove which vectors produced an AI answer</h2>
+<p class="chunk-meta">Long-tail keyword: <em>Pinecone retrieval audit trail SOC 2</em> · ai_infra vector-database vendor DD · verified against Pinecone documentation and privacy pages on 2026-07-15</p>
+
+<h3>Why a vector database needs its own evidence chain</h3>
+<p>A production RAG application does not move directly from a user question to an answer. It embeds the request, chooses a Pinecone index and namespace, applies metadata filters, returns a ranked set of records, may rerank those results, assembles model context, generates a completion, and sometimes lets an agent act on that completion. If a security reviewer later asks why the system disclosed a document, denied a claim, or executed a tool, the final model response is not enough. The buyer needs to reconstruct the retrieval event that selected the evidence in the first place.</p>
+
+<h3>The joinability gap behind most RAG incident reviews</h3>
+<p>Pinecone, the application, the embedding provider, the reranker, and the generation model can each produce useful telemetry. The audit problem is that those records often use different request identifiers and retention windows. A vector-search log may show a namespace and top-k result set while the LLM trace shows only rendered context. The downstream agent log may record a tool call without preserving the retrieval scores that justified it. A defensible trail needs one tenant-scoped correlation ID across every layer.</p>
+
+<h3>The eight rows that should join to one retrieval decision</h3>
+<ol>
+<li><strong>Request row.</strong> Tenant, user or service principal, timestamp, application release, request ID, and the original question or canonical hash.</li>
+<li><strong>Embedding row.</strong> Embedding provider, model and version, vector dimension, input hash, preprocessing version, and embedding request ID.</li>
+<li><strong>Search-policy row.</strong> Pinecone project, index, namespace, top-k, metadata-filter expression, query options, and regional endpoint.</li>
+<li><strong>Index-state row.</strong> The index or backup version, ingestion watermark, deletion watermark, record version, and snapshot identifier used at query time.</li>
+<li><strong>Result row.</strong> Every retrieved record ID, score, rank, metadata projection, source-document hash, and authorization decision.</li>
+<li><strong>Reranking row.</strong> Reranker provider and model, input ranks, output ranks, scores, and any records excluded before context assembly.</li>
+<li><strong>Generation row.</strong> Prompt-template version, selected context hashes, generation model and version, completion ID, safety-policy version, and final answer hash.</li>
+<li><strong>Action row.</strong> Human-approval state, tool name, parameters hash, downstream object or transaction ID, result, rollback event, and incident reference.</li>
+</ol>
+
+<h3>Controls this evidence supports</h3>
+<p>The request, search-policy, and result rows support SOC 2 CC7.2 monitoring and CC6.1 logical-access evidence. The index-state and deletion watermarks help prove retention and deletion propagation rather than merely describing them in policy. The generation and action rows support EU AI Act Article 12 record-keeping and Article 14 human oversight when retrieval affects a regulated workflow. Together, the eight rows also give an ISO 42001 review a repeatable trace from data source to automated outcome.</p>
+
+<h3>Five Pinecone-specific questions for vendor due diligence</h3>
+<ol>
+<li>Can a customer export per-query namespace, filter, top-k result IDs, scores, index state, and request correlation identifiers without relying on application-side reconstruction?</li>
+<li>How is namespace-based multitenancy tied to authorization evidence, and what prevents an application bug from querying another tenant's namespace?</li>
+<li>Can a historical answer be replayed against the exact index or backup state that existed when the query ran?</li>
+<li>How quickly do deletes propagate through indexed records, backups, replicas, and application caches, and what evidence proves completion?</li>
+<li>Can retrieval, reranking, generation, and downstream agent actions be exported under one correlation ID with customer-configurable retention?</li>
+</ol>
+
+<h3>Common audit findings in vector-search systems</h3>
+<p>The recurring findings are practical: namespace isolation is treated as an application convention instead of an enforced authorization boundary; metadata-filter expressions are omitted from traces; record IDs are retained but source-document hashes are not; backup or ingestion state is unavailable for historical replay; reranking silently changes the evidence set; deletion tickets cannot be joined to index watermarks; and the final tool call has no durable link back to the retrieved records. Each gap turns a one-hour review into manual forensics across several vendors.</p>
+
+<h3>A focused 24-hour audit</h3>
+<p>A Pinecone retrieval audit samples representative queries and tests whether the eight rows above can be reconstructed end to end. The deliverable is a one-page evidence-gap matrix mapped to SOC 2, EU AI Act, and ISO 42001 controls, plus a 30-minute technical readout and a prioritized remediation backlog. The scope covers retrieval provenance, namespace isolation, poisoned-source detection, deletion evidence, index-state replay, reranking, and downstream answer or agent-action reconstruction.</p>
+
+<p class="chunk-cta"><a href="/#contact">Book a $500 Pinecone retrieval audit</a> · <a href="/chunks/chunk_117.html">Cursor coding-agent audit</a> · <a href="/chunks/chunk_116.html">Document-AI audit</a></p>
+</section>
