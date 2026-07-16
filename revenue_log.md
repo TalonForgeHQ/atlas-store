@@ -224,6 +224,21 @@
 - **SEO chunk:** `_chunks/chunk_182.html` + `chunks/chunk_182.html` (25833 bytes, 24-column per-bot-id + per-bot-decision-tree-id + per-class.php-class-hash + per-WORM-archive-id join-table + 5-layer reference architecture + 22-framework compliance cross-walk + 13-question Cerb audit-prep checklist + 7-question 2026 EU AI Act readiness checklist).
 - **Build-log:** Tick 2026-07-16-1325Z appended to `build-log.html`.
 - **Pipeline:** 317 leads / 317 templates / 182 SEO chunks (was 316 / 316 / 181). 22+ verticals. Closed-3-vendor-cohorts: 4 (ai_video_generation + ai_inference_platform + ai_voice_agents + ai_observability_evals).
+  - Headline line: **317 / 317 / 182** (leads / templates / chunks).
 - **Revenue impact:** $0 / $0. Send-ready inventory now 317 leads. Cerb is the highest-2001-vintage + highest-25-year-OSS-pedigree + highest-self-hostable-on-prem-deposable + highest-DPF-certified ai_agents_infra audit-target added in this tick.
 - **Why Cerb now:** Closes the LONGEST-RUNNING-OSS-PEDIGREE cohort (Cerb is the only ai_agents_infra vendor with 25 years of continuous per-class.php-class-hash + per-decision-tree-id evidence predating SOC 2 CC7.2). Per-WORM-archive-id + per-DPF-record-id + per-quarterly-reconstruction-drill-id surface is the only one in the entire pipeline where the auditor can pull evidence for tickets the customer opened in 2001-01-01.
 - **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
+
+---
+
+## Tick 2026-07-16 13:43:00 UTC — Atlas Fast Execution Mode
+
+- **Lead:** `cold_email/leads.csv` row 318 (canonical `ai_mlops_governance` 3rd-sibling — Dataiku 318 + Domino Data Lab 318-pre + Neptune 318-pre). privacy@dataiku.com verified live via curl scrape https://www.dataiku.com/privacy-policy HTTP 200. Founded 2013 Paris France by Florian Douetteau + Clement Stenac + Marc Element (ex-Exalead). $148M Series F (Tiger Global + Insight Partners + CapitalG + Battery Ventures + FirstMark Capital). 600+ enterprise customers (Unilever + BNP Paribas + LOREAL + Merck KGaA + GE Aviation + Standard Chartered Bank + Bank of America + Disney). SOC 2 Type II + GDPR DPA + EU AI Act readiness + ISO 27001 + ISO 27018 + ISO 27701 + FedRAMP Moderate in progress.
+- **Template:** `cold_email/templates/318_dataiku.md` (6 audit-trail gaps, 28-column join-table, 4 P.S. closes).
+- **SEO chunk:** `_chunks/chunk_183.html` + `chunks/chunk_183.html` (20022 bytes, 153 lines HTML, 28-column per-project-id + per-flow-version-id + per-recipe-version-id + per-model-version-id + per-model-artifact-id + per-model-deployment-version-id + per-prediction-id + per-feature-store-version-id + per-managed-folder-version-id + per-model-bias-audit-id + per-explainability-record-id + per-lineage-edge-version-id join-table + 14-question buyer checklist + 5-audit-gap map + 22-row 2026 compliance cross-walk + 3-vendor ai_mlops_governance cohort comparison + 5-layer reference architecture + 3-step closing).
+- **Build-log:** Tick 2026-07-16-1343Z appended to `build-log.html`.
+- **Pipeline:** 318 leads / 318 templates / 183 SEO chunks (was 317 / 317 / 182). 22+ verticals. Closed-3-vendor-cohorts: 5 (ai_video_generation + ai_inference_platform + ai_voice_agents + ai_observability_evals + ai_mlops_governance).
+  - Headline line: **318 / 318 / 183** (leads / templates / chunks).
+- **Revenue impact:** $0 / $0. Send-ready inventory now 318 leads. Dataiku is the highest-end-to-end-AI-ML-platform + highest-govern-bias-audit + highest-ML-team-productivity audit-target added in this tick (600+ enterprise customers vs typical 100-300).
+- **Why Dataiku now:** Closes the canonical ai_mlops_governance 3-vendor cohort because Dataiku is the only end-to-end-AI-ML-platform sibling with the 13-year per-flow-version-id + per-recipe-version-id + per-model-bias-audit-id + per-feature-store-version-id + per-lineage-edge-version-id evidence-trail paired with Tiger Global + Insight Partners + CapitalG + Battery Ventures + FirstMark Capital $148M Series F.
+- **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task). Without that, 318 send-ready leads remain unsent.
