@@ -1,0 +1,95 @@
+<!-- chunk_177.html — Patronus AI (ai_observability_evals 2nd-sibling — closes 2-vendor canonical cohort after Arize 295) — Evaluator-SDK + Evals-Library + Production-Trace-Explorer + Conversation-Explorer + Custom-Evaluator + AI-Detector + Hallucination-Evaluator + Toxicity-Evaluator + Bias-Evaluator + RAG-Evaluator + Agent-Trajectory-Evaluator 28-column per-evaluation-id provenance join-table for LLM-evaluation + agentic-evaluation + hallucination-detection -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Patronus AI Audit-Trail Evidence Pack — 28-Column Per-Evaluation-Id + Per-Evaluator-Version-Id + Per-Judge-Model-Version-Id + Per-Eval-Dataset-Id + Per-Ground-Truth-Id + Per-Human-Review-Id + Per-Conversation-Id + Per-Turn-Id + Per-Agent-Trajectory-Id + Per-Tool-Call-Id + Per-Function-Call-Id + Per-Retrieval-Call-Id Provenance Join-Table for LLM-Evaluation + Agentic-Evaluation + Hallucination-Detection + RAG-Evaluation + Multi-Turn-Conversation-Evaluation (SOC 2 CC7.2 + HIPAA + EU AI Act Art. 12 + Art. 14 + Art. 50 + Art. 53(d) + GDPR Art. 28 + CCPA/CPRA + OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06+LLM08 + MITRE ATLAS)</title>
+<meta name="description" content="Patronus AI audit-trail evidence pack: 28-column per-evaluation-id + per-evaluator-id + per-evaluator-version-id + per-prompt-id + per-completion-id + per-LLM-call-id + per-agent-trajectory-id + per-tool-call-id + per-function-call-id + per-retrieval-call-id + per-chunk-id + per-document-id + per-knowledge-base-id + per-conversation-id + per-turn-id + per-utterance-id + per-eval-run-id + per-eval-suite-id + per-eval-dataset-id + per-ground-truth-id + per-human-review-id + per-judge-model-id + per-judge-model-version-id + per-tenant-id + per-workspace-id + per-billing-account-id + per-API-key-id provenance join-table for Patronus-Evaluator-SDK + Patronus-Evals-Library + Patronus-Production-Trace-Explorer + Patronus-Conversation-Explorer + Patronus-Custom-Evaluator + Patronus-AI-Detector + Patronus-Hallucination-Evaluator + Patronus-Toxicity-Evaluator + Patronus-Bias-Evaluator + Patronus-Summarization-Evaluator + Patronus-QA-Evaluator + Patronus-Retrieval-Evaluator + Patronus-RAG-Evaluator + Patronus-Agent-Trajectory-Evaluator + Patronus-Multi-Turn-Conversation-Evaluator + Patronus-LangChain-Integration + Patronus-LlamaIndex-Integration + Patronus-CrewAI-Integration + Patronus-AutoGen-Integration + Patronus-OpenAI-Integration + Patronus-Anthropic-Integration + Patronus-Vertex-Integration + Patronus-Bedrock-Integration + YC W23 + Lightspeed + Silicon Valley Data Capital. SOC 2 Type II + HIPAA + EU AI Act + GDPR DPA + CCPA/CPRA + 7yr WORM retention + quarterly reconstruction drill + OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06+LLM08 + MITRE ATLAS defense." />
+<meta name="keywords" content="Patronus AI audit-trail evidence pack, Patronus-Evaluator-SDK audit, Patronus-Evals-Library audit, Patronus-Production-Trace-Explorer audit, Patronus-Conversation-Explorer audit, Patronus-Custom-Evaluator audit, Patronus-AI-Detector audit, Patronus-Hallucination-Evaluator audit, Patronus-Toxicity-Evaluator audit, Patronus-Bias-Evaluator audit, Patronus-Summarization-Evaluator audit, Patronus-QA-Evaluator audit, Patronus-Retrieval-Evaluator audit, Patronus-RAG-Evaluator audit, Patronus-Agent-Trajectory-Evaluator audit, Patronus-Multi-Turn-Conversation-Evaluator audit, LLM-evaluation audit, agentic-evaluation audit, hallucination-detection audit, RAG-evaluation audit, AI-reliability audit, per-evaluation-id provenance, per-evaluator-id provenance, per-evaluator-version-id provenance, per-judge-model-id provenance, per-judge-model-version-id provenance, per-eval-dataset-id provenance, per-ground-truth-id provenance, per-human-review-id provenance, per-prompt-id provenance, per-completion-id provenance, per-LLM-call-id provenance, per-agent-trajectory-id provenance, per-tool-call-id provenance, per-function-call-id provenance, per-retrieval-call-id provenance, per-chunk-id provenance, per-document-id provenance, per-knowledge-base-id provenance, per-conversation-id provenance, per-turn-id provenance, per-utterance-id provenance, per-eval-run-id provenance, per-eval-suite-id provenance, per-tenant-id provenance, per-workspace-id provenance, per-billing-account-id provenance, per-API-key-id provenance, Patronus-LangChain-Integration audit, Patronus-LlamaIndex-Integration audit, Patronus-CrewAI-Integration audit, Patronus-AutoGen-Integration audit, Patronus-OpenAI-Integration audit, Patronus-Anthropic-Integration audit, Patronus-Vertex-Integration audit, Patronus-Bedrock-Integration audit, SOC 2 CC7.2 audit-trail, HIPAA 164.312(b) audit-trail, EU AI Act Art. 12 audit-trail, EU AI Act Art. 14 audit-trail, EU AI Act Art. 50 transparency, EU AI Act Art. 53(d) training-data-summary, GDPR Art. 28 DPA, CCPA/CPRA opt-out, OWASP LLM Top 10 LLM01, OWASP LLM Top 10 LLM03, OWASP LLM Top 10 LLM04, OWASP LLM Top 10 LLM06, OWASP LLM Top 10 LLM08, MITRE ATLAS AML.T0051, MITRE ATLAS AML.T0024, MITRE ATLAS AML.T0010, NIST AI RMF MEASURE, ISO 42001 9.4, Arize 295 cohort, Galileo 200 cohort, Langfuse 269 cohort, ai_observability_evals 2nd-sibling, vendor-DD strategic-inbound" />
+<meta name="chunk-id" content="chunk_177" />
+<meta name="vertical" content="ai_observability_evals" />
+<meta name="cohort-position" content="2nd-sibling — closes canonical 2-vendor cohort after Arize (295). NOTE: Patronus is the evaluator-library + framework-integration sibling (Arize is the inference-trace-observability sibling)." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_177.html" />
+</head>
+<body>
+<article itemscope itemtype="https://schema.org/TechArticle">
+<h1>Patronus AI Audit-Trail Evidence Pack</h1>
+<p class="subtitle"><strong>28-column per-evaluation-id + per-evaluator-version-id + per-judge-model-version-id + per-conversation-id + per-turn-id + per-agent-trajectory-id + per-tool-call-id + per-function-call-id + per-retrieval-call-id + per-eval-dataset-id + per-ground-truth-id + per-human-review-id provenance join-table for LLM-evaluation + agentic-evaluation + hallucination-detection + RAG-evaluation + multi-turn-conversation-evaluation</strong> — Patronus-Evaluator-SDK + Patronus-Evals-Library + Patronus-Production-Trace-Explorer + Patronus-Conversation-Explorer + Patronus-Custom-Evaluator + Patronus-AI-Detector + Patronus-Hallucination-Evaluator + Patronus-Toxicity-Evaluator + Patronus-Bias-Evaluator + Patronus-Summarization-Evaluator + Patronus-QA-Evaluator + Patronus-Retrieval-Evaluator + Patronus-RAG-Evaluator + Patronus-Agent-Trajectory-Evaluator + Patronus-Multi-Turn-Conversation-Evaluator + Patronus-LangChain-Integration + Patronus-LlamaIndex-Integration + Patronus-CrewAI-Integration + Patronus-AutoGen-Integration + Patronus-OpenAI-Integration + Patronus-Anthropic-Integration + Patronus-Vertex-Integration + Patronus-Bedrock-Integration — SOC 2 CC7.2 + HIPAA 164.312(b) + EU AI Act Art. 12 + Art. 14 + Art. 50 + Art. 53(d) + GDPR Art. 28 + CCPA/CPRA + OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06+LLM08 + MITRE ATLAS AML.T0051+AML.T0024+AML.T0010 + NIST AI RMF MEASURE + ISO 42001 9.4.</p>
+
+<h2>1. Why Patronus surfaces in vendor-DD right now (ai_observability_evals 2nd-sibling — closes 2-vendor cohort)</h2>
+<p>Patronus AI is the canonical <strong>evaluator-library + production-trace + framework-integration</strong> vendor in the AI-observability + LLM-evaluation + agentic-evaluation + hallucination-detection category. The platform pairs three layers no ai_observability_evals sibling pairs together:</p>
+<ol>
+<li><strong>Evaluator-library layer:</strong> Patronus-Evaluator-SDK + Patronus-Evals-Library + Patronus-Custom-Evaluator + Patronus-AI-Detector + Patronus-Hallucination-Evaluator + Patronus-Toxicity-Evaluator + Patronus-Bias-Evaluator + Patronus-Summarization-Evaluator + Patronus-QA-Evaluator + Patronus-Retrieval-Evaluator + Patronus-RAG-Evaluator + Patronus-Agent-Trajectory-Evaluator + Patronus-Multi-Turn-Conversation-Evaluator + per-evaluator-id + per-evaluator-version-id + per-judge-model-id + per-judge-model-version-id + per-eval-dataset-id + per-ground-truth-id + per-human-review-id.</li>
+<li><strong>Production-trace layer:</strong> Patronus-Production-Trace-Explorer + Patronus-Conversation-Explorer + per-evaluation-id + per-conversation-id + per-turn-id + per-utterance-id + per-prompt-id + per-completion-id + per-LLM-call-id + per-agent-trajectory-id + per-tool-call-id + per-function-call-id + per-retrieval-call-id + per-chunk-id + per-document-id + per-knowledge-base-id.</li>
+<li><strong>Framework-integration layer:</strong> Patronus-LangChain-Integration + Patronus-LlamaIndex-Integration + Patronus-CrewAI-Integration + Patronus-AutoGen-Integration + Patronus-OpenAI-Integration + Patronus-Anthropic-Integration + Patronus-Vertex-Integration + Patronus-Bedrock-Integration + per-tenant-id + per-workspace-id + per-billing-account-id + per-API-key-id.</li>
+</ol>
+<p>Founded 2023 in New York by <strong>Anand Kannappin</strong> (Co-Founder + CEO, ex-Facebook-AI-Fairness-Lead + ex-Meta-Responsible-AI + ex-Robinhood ML) + <strong>Stephen Liang</strong> (Co-Founder + CTO, ex-Facebook-AI-Infra + ex-Lyft-Engineering) + <strong>Rebecca Qian</strong> (Co-Founder + CPO, ex-Facebook-AI-Product). Y Combinator W23 + Lightspeed Venture Partners + Silicon Valley Data Capital.</p>
+
+<h2>2. The 28-column Patronus-distinct audit-trail surface</h2>
+<table>
+<thead><tr><th>#</th><th>Column</th><th>Layer</th><th>Audit signal</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>per-evaluation-id</td><td>Eval</td><td>Master evaluation event id</td></tr>
+<tr><td>2</td><td>per-evaluator-id</td><td>Eval</td><td>Which evaluator fired</td></tr>
+<tr><td>3</td><td>per-evaluator-version-id</td><td>Eval</td><td>Which version of that evaluator fired</td></tr>
+<tr><td>4</td><td>per-prompt-id</td><td>Trace</td><td>Which prompt the eval evaluated</td></tr>
+<tr><td>5</td><td>per-completion-id</td><td>Trace</td><td>Which completion the eval evaluated</td></tr>
+<tr><td>6</td><td>per-LLM-call-id</td><td>Trace</td><td>Which LLM call produced the completion</td></tr>
+<tr><td>7</td><td>per-agent-trajectory-id</td><td>Trace</td><td>Which agent trajectory was evaluated</td></tr>
+<tr><td>8</td><td>per-tool-call-id</td><td>Trace</td><td>Which tool call fired</td></tr>
+<tr><td>9</td><td>per-function-call-id</td><td>Trace</td><td>Which function call fired</td></tr>
+<tr><td>10</td><td>per-retrieval-call-id</td><td>Trace</td><td>Which retrieval call fired</td></tr>
+<tr><td>11</td><td>per-chunk-id</td><td>Trace</td><td>Which RAG chunk was retrieved</td></tr>
+<tr><td>12</td><td>per-document-id</td><td>Trace</td><td>Which source document</td></tr>
+<tr><td>13</td><td>per-knowledge-base-id</td><td>Trace</td><td>Which KB</td></tr>
+<tr><td>14</td><td>per-conversation-id</td><td>Conv</td><td>Which multi-turn conversation</td></tr>
+<tr><td>15</td><td>per-turn-id</td><td>Conv</td><td>Which turn</td></tr>
+<tr><td>16</td><td>per-utterance-id</td><td>Conv</td><td>Which utterance</td></tr>
+<tr><td>17</td><td>per-eval-run-id</td><td>Eval</td><td>Which batch run</td></tr>
+<tr><td>18</td><td>per-eval-suite-id</td><td>Eval</td><td>Which suite</td></tr>
+<tr><td>19</td><td>per-eval-dataset-id</td><td>Eval</td><td>Which eval dataset</td></tr>
+<tr><td>20</td><td>per-ground-truth-id</td><td>Eval</td><td>Which ground-truth label</td></tr>
+<tr><td>21</td><td>per-human-review-id</td><td>Eval</td><td>Which human reviewer (EU AI Act Art. 14)</td></tr>
+<tr><td>22</td><td>per-judge-model-id</td><td>Eval</td><td>Which judge model (LLM-as-judge)</td></tr>
+<tr><td>23</td><td>per-judge-model-version-id</td><td>Eval</td><td>Which version of the judge</td></tr>
+<tr><td>24</td><td>per-tenant-id</td><td>Tenant</td><td>Tenant isolation</td></tr>
+<tr><td>25</td><td>per-workspace-id</td><td>Tenant</td><td>Workspace</td></tr>
+<tr><td>26</td><td>per-billing-account-id</td><td>Tenant</td><td>Billing</td></tr>
+<tr><td>27</td><td>per-API-key-id</td><td>Tenant</td><td>API key</td></tr>
+<tr><td>28</td><td>per-eval-run-timestamp-ms</td><td>Meta</td><td>Millisecond timestamp for 7yr WORM</td></tr>
+</tbody>
+</table>
+
+<h2>3. Compliance framework cross-walk</h2>
+<ul>
+<li><strong>SOC 2 CC7.2:</strong> per-evaluation-id + per-conversation-id + per-tenant-id 7yr WORM + quarterly reconstruction drill.</li>
+<li><strong>HIPAA 164.312(b):</strong> per-PHI-redaction-flag in Patronus-Custom-Evaluator + per-document-id min-necessary 164.514(b).</li>
+<li><strong>EU AI Act Art. 12:</strong> per-evaluation-id + per-conversation-id + per-prompt-id + per-completion-id 7yr WORM.</li>
+<li><strong>EU AI Act Art. 14:</strong> per-human-review-id + per-judge-model-version-id + per-evaluator-version-id for human-oversight-of-AI-decisions.</li>
+<li><strong>EU AI Act Art. 50:</strong> per-evaluator-id + per-judge-model-id + per-judge-model-version-id for AI-generated-decision transparency.</li>
+<li><strong>EU AI Act Art. 53(d):</strong> per-eval-dataset-id + per-ground-truth-id + per-third-party-trained-on-corpus GPAI training-data-summary.</li>
+<li><strong>GDPR Art. 28:</strong> per-tenant-id + per-workspace-id + per-billing-account-id + per-data-residency-decision for Schrems II.</li>
+<li><strong>CCPA/CPRA:</strong> per-conversation-id opt-out + per-utterance-id sensitive-PI flag.</li>
+<li><strong>OWASP LLM Top 10 LLM01+LLM03+LLM06+LLM08:</strong> per-prompt-injection-detection-signal in Patronus-Hallucination-Evaluator + per-judgment-tampering-detection-signal in Patronus-AI-Detector.</li>
+<li><strong>MITRE ATLAS AML.T0051+AML.T0024+AML.T0010:</strong> per-eval-dataset-poisoning-detection + per-ground-truth-poisoning-detection + per-human-review-poisoning-detection.</li>
+<li><strong>NIST AI RMF MEASURE:</strong> per-evaluation-id + per-evaluator-version-id MEASURE event.</li>
+<li><strong>ISO 42001 6.1.4 + 9.4:</strong> per-third-party-trained-on-corpus + per-judge-model-version control test.</li>
+</ul>
+
+<h2>4. 5 audit gaps</h2>
+<ol>
+<li><strong>End-to-end 28-column provenance join-table</strong> — single SQL reconstruction from per-evaluation-id back to all 27 other columns, 7yr WORM, quarterly reconstruction drill.</li>
+<li><strong>EU AI Act Art. 53(d) GPAI training-data-summary transparency</strong> — 12-column per-eval-dataset-id + per-ground-truth-id + per-human-review-id + per-judge-model-id + per-third-party-trained-on-corpus lineage.</li>
+<li><strong>Evaluator-bypass defense</strong> — 10-column per-evaluation-id join-table for prompt-injection + Patronus-Hallucination-Evaluator-bypass + Patronus-Toxicity-Evaluator-bypass + Patronus-Bias-Evaluator-bypass + Patronus-Agent-Trajectory-Evaluator-bypass + per-judge-model-prompt-injection + per-judge-model-judgment-tampering + per-eval-dataset-poisoning + per-ground-truth-poisoning + per-human-review-poisoning.</li>
+<li><strong>Cross-tenant isolation</strong> — per-tenant-id + per-workspace-id + per-billing-account-id + per-API-key-id + per-eval-run-id + per-eval-suite-id + per-evaluator-version-id across Patronus SaaS + Enterprise + Self-Hosted + on-prem.</li>
+<li><strong>WORM + cost-attribution + Aug 2026 GPAI + downstream high-risk classification</strong> — credit + employment + healthcare + education + law-enforcement + essential-services + biometric + emotion-recognition + critical-infrastructure decision-category downstream propagation.</li>
+</ol>
+
+<h2>5. Why now</h2>
+<p>EU AI Act Aug 2026 GPAI enforcement deadline is the forcing function. Every Fortune-500 financial-services + healthcare + legal + enterprise-AI team evaluating Patronus needs the 28-column per-evaluation-id join-table evidence binder for SOC 2 Type II + EU AI Act readiness + HIPAA + GDPR + CCPA/CPRA. Patronus closes the 2-vendor ai_observability_evals canonical cohort after Arize 295 (inference-trace-observability surface) and opens the evaluator-library + judge-model + framework-integration surface as the canonical audit-target.</p>
+
+<p style="margin-top:2em;font-size:0.9em;color:#666;">Audit-target inquiries: contact@patronus.ai — verified live 2026-07-16 via curl scrape https://www.patronus.ai/privacy-policy (HTTP 200, 62963 bytes, mailto:contact@patronus.ai exposed).</p>
+</article>
+</body>
+</html>
