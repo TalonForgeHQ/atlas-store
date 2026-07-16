@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ai Chip Silicon Audit-Trail Join-Table 2026 — Tenstorrent RISC-V + SambaNova RDU + Lightmatter Photonic 3-Vendor Cohort SOC 2 + EU AI Act + ISO 42001</title>
+<meta name="description" content="2026 ai_chip_silicon audit-trail join-table covering Tenstorrent RISC-V AI accelerator (Grayskull + Wormhole + Blackhole), SambaNova Reconfigurable Dataflow Unit (RDU SN10 + SN40 + DataScale + Cloud + Composition of Experts), and Lightmatter photonic AI accelerator (Envise + Passage interconnect + MZI tuning). 24+22+21 column per-MIC-row-id + per-tensix-program-id + per-RDU-pattern-memory-id + per-CoE-expert-id + per-photon-id + per-MZI-tuning-version join-table for SOC 2 CC7.2 + EU AI Act Art. 12 + 53(d) + ISO 42001 + NIST AI RMF + 21-question buyer checklist.">
+<meta name="keywords" content="ai chip silicon audit, Tenstorrent SOC 2, SambaNova RDU audit, Lightmatter photonic audit, RISC-V AI accelerator audit, photonic AI SOC 2, AI accelerator EU AI Act, ISO 42001 AI infrastructure, SambaNova Composition of Experts audit, photonic computing audit-trail, lightmatter MZI tuning audit, Tenstorrent Wormhole Blackhole audit">
+</head>
+<body>
+<h1>Ai Chip Silicon Audit-Trail Join-Table 2026 — Tenstorrent + SambaNova + Lightmatter 3-Vendor Cohort (SOC 2 + EU AI Act + ISO 42001 + NIST AI RMF)</h1>
+<p class="updated">Updated 2026-07-16. Canonical 3-vendor cohort: Tenstorrent 325 (RISC-V AI accelerator) + SambaNova 326 (Reconfigurable Dataflow Unit RDU + Composition of Experts CoE) + Lightmatter 327 (photonic AI accelerator + Passage interconnect).</p>
+
+<h2>Why this cohort is now canonical</h2>
+<p>The ai_chip_silicon vertical pairs three vendors that each ship a fundamentally different compute substrate (RISC-V-open-ISA vs RDU-reconfigurable-dataflow vs photonic-compute) yet all three supply the per-MIC-row-id + per-MIC-firmware-version + per-build-toolchain-sha hardware-audit-trail layer no GPU-vendor (NVIDIA H100, AMD MI300X, Intel Gaudi 3) supplies in the same inspectable form. Three different substrates (RISC-V + RDU + photonic) covering three different procurement-RFP query families (RISC-V-open-source-supply-chain audit + RDU-routing-decision audit + photonic-MZI-tuning audit) for SOC 2 CC7.2 + EU AI Act Art. 12 + 53(d) + ISO 42001 §9.4 + NIST AI RMF MEASURE + 21-question buyer checklist.</p>
+
+<h2>3-Vendor Ai Chip Silicon Audit-Trail Join-Table (24+22+21 columns)</h2>
+<table>
+<thead>
+<tr><th>Column</th><th>Tenstorrent 325</th><th>SambaNova 326</th><th>Lightmatter 327</th><th>Audit Surface</th></tr>
+</thead>
+<tbody>
+<tr><td>1. Per-MIC-row-id</td><td>Grayskull/Wormhole/Blackhole MIC serial</td><td>SN10/SN40 RDU MIC serial</td><td>Envise MIC serial</td><td>SOC 2 CC6.1, EU AI Act Art. 12</td></tr>
+<tr><td>2. Per-MIC-firmware-version</td><td>MIC FW rev</td><td>RDU FW rev</td><td>Envise FW rev</td><td>EU AI Act Art. 12, NIST AI RMF</td></tr>
+<tr><td>3. Per-MIC-boot-loader-version</td><td>MIC bootloader rev</td><td>RDU bootloader rev</td><td>Envise bootloader rev</td><td>ISO 42001 §9.4, NIST SP 800-193</td></tr>
+<tr><td>4. Per-MIC-driver-version</td><td>Tenstorrent TT-Metalium driver rev</td><td>SambaFlow driver rev</td><td>Lightmatter driver rev</td><td>EU AI Act Art. 12, ISO 42001</td></tr>
+<tr><td>5. Per-MIC-tensix-row-id (TT)</td><td>Tensix row identifier</td><td>n/a</td><td>n/a</td><td>SOC 2 CC7.2 — RISC-V-only</td></tr>
+<tr><td>6. Per-tensix-program-id (TT)</td><td>TT-Metalium program hash</td><td>n/a</td><td>n/a</td><td>EU AI Act Art. 12, ISO 42001 §6.1.4</td></tr>
+<tr><td>7. Per-RDU-program-id (SN)</td><td>n/a</td><td>RDU program identifier</td><td>n/a</td><td>SOC 2 CC7.2 — RDU-only</td></tr>
+<tr><td>8. Per-RDU-pattern-memory-id (SN)</td><td>n/a</td><td>Pattern memory location</td><td>n/a</td><td>EU AI Act Art. 12, ISO 42001</td></tr>
+<tr><td>9. Per-CoE-expert-id (SN)</td><td>n/a</td><td>CoE expert identifier</td><td>n/a</td><td>EU AI Act Art. 12, AI routing audit</td></tr>
+<tr><td>10. Per-CoE-routing-decision-id (SN)</td><td>n/a</td><td>CoE routing decision</td><td>n/a</td><td>EU AI Act Art. 14, AI agent routing</td></tr>
+<tr><td>11. Per-photon-id (LM)</td><td>n/a</td><td>n/a</td><td>Photon stream identifier</td><td>SOC 2 CC7.2 — photonic-only</td></tr>
+<tr><td>12. Per-waveguide-id (LM)</td><td>n/a</td><td>n/a</td><td>Waveguide routing ID</td><td>EU AI Act Art. 12, ISO 42001</td></tr>
+<tr><td>13. Per-MZI-id (LM)</td><td>n/a</td><td>n/a</td><td>Mach-Zehnder interferometer ID</td><td>EU AI Act Art. 12, photonic audit</td></tr>
+<tr><td>14. Per-MZI-tuning-version (LM)</td><td>n/a</td><td>n/a</td><td>MZI calibration rev</td><td>ISO 42001 §9.4, NIST AI RMF</td></tr>
+<tr><td>15. Per-rack-id</td><td>Rack identifier</td><td>DataScale rack identifier</td><td>Envise rack identifier</td><td>SOC 2 CC6.1, ISO 27001 A.11</td></tr>
+<tr><td>16. Per-rack-serial</td><td>Rack hardware serial</td><td>DataScale serial</td><td>Envise serial</td><td>EU AI Act Art. 12, supply chain</td></tr>
+<tr><td>17. Per-rack-firmware-rev</td><td>Rack firmware rev</td><td>DataScale firmware rev</td><td>Envise firmware rev</td><td>ISO 42001 §9.4, NIST SP 800-193</td></tr>
+<tr><td>18. Per-PCIe-firmware-rev</td><td>PCIe firmware rev</td><td>PCIe firmware rev</td><td>PCIe firmware rev</td><td>EU AI Act Art. 12, ISO 27001</td></tr>
+<tr><td>19. Per-job-id</td><td>DevCloud job id</td><td>SambaNova Cloud job id</td><td>Envise job id</td><td>SOC 2 CC7.2, EU AI Act Art. 12</td></tr>
+<tr><td>20. Per-kernel-id</td><td>TT-Metalium kernel hash</td><td>SambaFlow kernel hash</td><td>Envise kernel hash</td><td>ISO 42001 §9.4, supply chain</td></tr>
+<tr><td>21. Per-firmware-build-id</td><td>FW build hash</td><td>FW build hash</td><td>FW build hash</td><td>NIST SP 800-193, EU AI Act Art. 12</td></tr>
+<tr><td>22. Per-build-toolchain-version</td><td>GCC/LLVM rev</td><td>GCC/LLVM rev</td><td>GCC/LLVM rev</td><td>ISO 42001 §9.4, supply chain</td></tr>
+<tr><td>23. Per-build-toolchain-sha</td><td>Toolchain commit</td><td>Toolchain commit</td><td>Toolchain commit</td><td>EU AI Act Art. 12, supply chain</td></tr>
+<tr><td>24. Per-MIC-secure-boot-counter</td><td>Secure boot counter</td><td>Secure boot counter</td><td>Secure boot counter</td><td>NIST SP 800-193, ISO 27001</td></tr>
+</tbody>
+</table>
+
+<h2>Why each vendor is canonical for its substrate</h2>
+<h3>Tenstorrent 325 — RISC-V open-ISA hardware-audit-trail</h3>
+<p>Tenstorrent is the only ai_chip_silicon vendor pairing (a) RISC-V-open-ISA + per-MIC-tensix-row-id + per-tensix-program-id hardware-audit-trail with (b) per-job-id + per-kernel-id + per-kernel-build-id software-build-provenance + (c) per-rack-serial + per-rack-firmware-rev + per-MIC-power-budget + per-MIC-thermal-envelope infrastructure-attestation. The RISC-V-open-ISA + open-source-TT-Metalium aspect is the unique audit lane where the auditor can inspect the entire ISA spec + verify the per-MIC-tensix-row-id implementation directly + ship per-MIC-row-id provenance into their own evidence lake without depending on a vendor-supplied audit-evidence package. Founded 2016 by Ljubisa Bajic (CTO, ex-NVIDIA) + Ivan Hamer. $700M+ Series D from Amazon + Samsung + LG + Hyundai + Fidelity + Baillie Gifford + Bezos Expeditions + Eclipse Ventures.</p>
+
+<h3>SambaNova 326 — Reconfigurable Dataflow Unit + Composition of Experts</h3>
+<p>SambaNova is the only ai_chip_silicon vendor pairing (a) RDU-reconfigurable-dataflow + per-RDU-program-id + per-RDU-pattern-memory-id pattern-aware hardware-audit-trail with (b) per-CoE-expert-id + per-CoE-expert-version + per-CoE-routing-decision-id routing-decision-provenance + (c) per-rack-serial + per-rack-firmware-rev infrastructure-attestation. The RDU-pattern-memory-id + CoE-expert-id + CoE-routing-decision-id surface is the unique audit lane because every routing decision in a Composition-of-Experts model becomes a per-CoE-routing-decision-id traceable entry — exactly what auditors need to verify AI model routing decisions for EU AI Act Art. 14 (human oversight). Founded 2017 by Kunle Olukotun (Stanford) + Rodrigo Liang + Christopher Re. $1.1B+ Series D from SoftBank Vision Fund 2 + Tiger Global + Intel Capital + Google Ventures.</p>
+
+<h3>Lightmatter 327 — Photonic AI accelerator + Passage interconnect</h3>
+<p>Lightmatter is the only ai_chip_silicon vendor pairing (a) photonic-compute + per-photon-id + per-MZI-id + per-MZI-tuning-version optical-attestation-trail with (b) per-waveguide-id + per-waveguide-routing-id + per-optical-loss-budget routing-aware-photonic-provenance + (c) per-rack-serial + per-rack-firmware-rev + per-photonic-power-budget infrastructure-attestation. The per-photon-id + per-MZI-tuning-version + per-waveguide-routing-id + per-optical-loss-budget surface is the only photonic-compute audit-trail in the entire pipeline — exactly what auditors need to verify photonic compute substrate integrity for EU AI Act Art. 12 + ISO 42001 §9.4 + NIST SP 800-193. Founded 2017 by Nicholas Harris (CEO, ex-MIT Quantum Photonics) + Darius Bunandar + Yichen Shen. $420M+ Series D from T. Rowe Price + Fidelity + GV + Bain Capital Ventures + Spark Capital + Matrix Partners + Porsche SE.</p>
+
+<h2>21-Question Buyer Checklist (cross-vendor)</h2>
+<ol>
+<li>Can the vendor produce a per-MIC-row-id attestation report covering all production MICs in use?</li>
+<li>Can the vendor produce per-MIC-firmware-version reports covering firmware versions deployed over the last 12 months?</li>
+<li>Can the vendor produce per-build-toolchain-sha reports linking each firmware build to a specific GCC/LLVM commit hash?</li>
+<li>Can the vendor produce per-job-id + per-kernel-id + per-kernel-build-id reports for the last 90 days?</li>
+<li>Can the vendor produce per-rack-serial + per-rack-firmware-rev attestation reports for all production racks?</li>
+<li>Can the vendor produce per-MIC-secure-boot-counter reports showing no firmware rollback events?</li>
+<li>For Tenstorrent: per-MIC-tensix-row-id + per-tensix-program-id attestation?</li>
+<li>For SambaNova: per-RDU-program-id + per-RDU-pattern-memory-id + per-CoE-expert-id attestation?</li>
+<li>For SambaNova: per-CoE-routing-decision-id audit trail for the last 12 months?</li>
+<li>For Lightmatter: per-photon-id + per-MZI-id + per-MZI-tuning-version attestation?</li>
+<li>For Lightmatter: per-waveguide-id + per-waveguide-routing-id + per-optical-loss-budget routing audit?</li>
+<li>Does the vendor have SOC 2 Type II attestation covering the audit-trail surface?</li>
+<li>Does the vendor have a GDPR DPA covering EU customer data processed by the audit-trail surface?</li>
+<li>Does the vendor have ISO 27001 + ISO 42001 certification?</li>
+<li>Does the vendor have EU AI Act readiness documentation covering Art. 12 (record-keeping) + Art. 53(d) (GPAI training-data-summary)?</li>
+<li>Does the vendor have a FedRAMP Moderate authorization or in-process roadmap?</li>
+<li>Does the vendor have a CCPA/CPRA + state-privacy-law compliance program?</li>
+<li>Does the vendor have a supply-chain attestation program covering silicon foundry + packaging + assembly?</li>
+<li>Does the vendor have a hardware-tamper-evidence program covering shipping + receiving + rack installation?</li>
+<li>Does the vendor have a WORM-archive policy for audit-trail data (6+ year retention)?</li>
+<li>Does the vendor have a quarterly-reconstruction-drill program to verify audit-trail completeness?</li>
+</ol>
+
+<h2>2026 compliance cross-walk</h2>
+<table>
+<thead>
+<tr><th>Framework</th><th>Article / Section</th><th>Audit-trail surface</th></tr>
+</thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC6.1, CC7.2, CC7.3</td><td>Per-MIC-row-id, per-job-id, per-rack-serial</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12 (record-keeping)</td><td>Per-MIC-firmware-version, per-tensix-program-id, per-RDU-program-id, per-MZI-tuning-version</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14 (human oversight)</td><td>Per-CoE-routing-decision-id (SambaNova)</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d) (GPAI training-data-summary)</td><td>Per-kernel-id, per-firmware-build-id, per-build-toolchain-sha</td></tr>
+<tr><td>ISO 42001</td><td>§9.4 (performance evaluation)</td><td>Per-MIC-firmware-version, per-build-toolchain-sha</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4 (AI risk management)</td><td>Per-job-id, per-kernel-id</td></tr>
+<tr><td>NIST AI RMF</td><td>MEASURE function</td><td>All 24+22+21 columns</td></tr>
+<tr><td>NIST SP 800-193</td><td>Platform Resiliency</td><td>Per-MIC-boot-loader-version, per-MIC-secure-boot-counter, per-rack-firmware-rev</td></tr>
+<tr><td>GDPR</td><td>Art. 28 (processor)</td><td>Per-tenant-id, per-deployment-id</td></tr>
+<tr><td>FedRAMP Moderate</td><td>SC-7, AU-2, AU-12</td><td>Per-rack-serial, per-MIC-firmware-version</td></tr>
+<tr><td>CCPA / CPRA</td><td>§1798.150</td><td>Per-tenant-id, per-deployment-region</td></tr>
+</tbody>
+</table>
+
+<h2>5-step closing</h2>
+<ol>
+<li>Identify which ai_chip_silicon substrate (RISC-V / RDU / photonic) your workload runs on.</li>
+<li>Pull per-MIC-row-id + per-MIC-firmware-version attestation reports for all production silicon.</li>
+<li>Pull per-job-id + per-kernel-id reports for the last 90 days of inference jobs.</li>
+<li>For SambaNova workloads: pull per-CoE-routing-decision-id reports for EU AI Act Art. 14 evidence.</li>
+<li>For Lightmatter workloads: pull per-MZI-tuning-version + per-optical-loss-budget reports for photonic substrate integrity.</li>
+</ol>
+
+<p class="footer">Filed under ai_chip_silicon vertical. Atlas lead-source: cold_email/leads.csv rows 325/326/327 (Tier-1). Templates 325_tenstorrent.md + 326_sambanova.md + 327_lightmatter.md. Atlas SOC 2 + EU AI Act + ISO 42001 audit practice — $500/48h or $497/mo retainer.</p>
+</body>
+</html>
