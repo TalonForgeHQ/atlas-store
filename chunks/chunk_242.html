@@ -1,0 +1,87 @@
+<article id="chunk-242" class="seo-chunk" data-tick="2026-07-17-0530Z" data-cohort="ai_eval_observability">
+<section class="hero">
+<h1>Deepchecks SOC 2 Audit &mdash; The Per-Check-ID + Per-Model-ID + Per-Dataset-ID + Per-Segment-ID + Per-Alert-ID + Per-Billing-Event-ID Join-Table For Deepchecks OSS + Deepchecks Enterprise + Deepchecks Hub</h1>
+<p class="lede">Deepchecks Inc. ships the canonical open-source-first ML-validation + data-validation + model-monitoring + AI-evals platform: <strong>Deepchecks OSS</strong> (Apache-2.0 github.com/deepchecks/deepchecks with 3.5K+ stars + per-check + per-suite + per-condition + per-test + per-property + per-segment + per-drift-detection + per-data-quality + per-label-quality + per-model-performance + per-bias + per-feature-importance for tabular + time-series + CV + NLP), <strong>Deepchecks Enterprise</strong>, <strong>Deepchecks Hub</strong> (per-model-id + per-dataset-id + per-check-id + per-segment-id + per-alert-id + per-billing-event-id lineage for production ML-monitoring). Co-founded in 2021 by Shay Zager (Co-Founder &amp; CEO, ex-Iguazio ML-platform), Philip Tannor (Co-Founder &amp; CTO, ex-Iguazio ML-platform), and Yaron Harel (Co-Founder, ex-Iguazio). HQ Tel Aviv Israel. Backed $25M Series A 2023 from Hanaco Ventures + Alpha Wave Ventures + Hetz Ventures. Customers: 1000+ engineering teams (Intel + Comcast + BMC Software + Fortune-500 financial-services + Fortune-500 healthcare). SOC 2 + GDPR + EU AI Act readiness. This audit-target page maps the SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 evidence frame against Deepchecks' surface.</p>
+<p class="meta">Published 2026-07-17 &middot; ai_eval_observability cohort &middot; Lead 405 &middot; Atlas Talon Forge LLC</p>
+</section>
+
+<section id="overview">
+<h2>The 55+ Column ML-Validation Provenance Join-Table Deepchecks Auditors Will Demand</h2>
+<p>Deepchecks' surface generates per-check-id &rarr; per-suite-id &rarr; per-condition-id &rarr; per-test-id &rarr; per-property-id &rarr; per-model-id &rarr; per-model-version-id &rarr; per-dataset-id &rarr; per-segment-id &rarr; per-alert-id &rarr; per-drift-detection-signal-id &rarr; per-bias-score-id &rarr; per-feature-importance-id &rarr; per-tenant-id &rarr; per-project-id &rarr; per-billing-event-id at 1000+ engineering-team customer scale. The open-source Apache-2.0 library generates per-check-id automatically across 9 check-categories (data-quality + label-quality + drift-detection + model-performance + bias + feature-importance + calibration + segmentation + integrity). The audit gap is the join-table that ties per-check-id back to per-billing-event-id for SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 evidence.</p>
+<h3>Why this matters now</h3>
+<p>Three regulatory frames converged in 2025-2026 that make the join-table non-optional: <strong>SOC 2 CC7.2</strong> requires system monitoring + anomaly detection at the per-action level; <strong>EU AI Act Art. 12</strong> requires automatic logging of events over the high-risk AI system lifecycle; <strong>ISO 42001 9.4</strong> requires documented evidence of AI system performance evaluation. For Deepchecks specifically, the OSS-first Apache-2.0 library + Deepchecks Hub + 1000+ customer surface means teams can already export per-check-id to a third-party observability stack &mdash; the audit gap is the Deepchecks-specific join-table that proves per-check-id &rarr; per-billing-event-id lineage.</p>
+</section>
+
+<section id="oss">
+<h2>Deepchecks OSS Apache-2.0 &mdash; The Per-Check Auto-Instrumentation Surface</h2>
+<p>Deepchecks OSS at github.com/deepchecks/deepchecks ships per-check-id across 9 check-categories (data-quality + label-quality + drift-detection + model-performance + bias + feature-importance + calibration + segmentation + integrity) with zero-config per-condition + per-test + per-property + per-segment. Each check-run produces per-check-id &rarr; per-suite-id &rarr; per-condition-id &rarr; per-test-id &rarr; per-property-id lineage that can be exported to Datadog + Honeycomb + New Relic + any observability backend. The audit gap is in the per-check-id &rarr; per-tenant-id &rarr; per-billing-event-id linkage: when the auditor asks "show me every per-check-id associated with per-tenant-X in Q4-2026", can Deepchecks answer that question from one query?</p>
+<h3>The 5 audit questions Deepchecks OSS must answer</h3>
+<ol>
+<li>How does per-check-id persist across per-suite-id + per-condition-id + per-test-id + per-property-id boundaries?</li>
+<li>What's the per-model-version-id &rarr; per-check-id linkage that survives a model rollback?</li>
+<li>How is per-segment-id counted across per-check-id when per-dataset-id is split across multiple per-tenant-id boundaries?</li>
+<li>Where is per-drift-detection-signal-id lineage enforced when per-segment-id drifts are detected?</li>
+<li>What is the per-bias-score-id &rarr; per-feature-importance-id linkage per-segment-id under GDPR Art. 22 + EU AI Act Art. 10?</li>
+</ol>
+</section>
+
+<section id="hub">
+<h2>Deepchecks Hub &mdash; The Production ML-Monitoring Surface</h2>
+<p>Deepchecks Hub ships the canonical production ML-monitoring surface: per-model-id &rarr; per-model-version-id &rarr; per-dataset-id &rarr; per-check-id &rarr; per-segment-id &rarr; per-alert-id &rarr; per-drift-detection-signal-id &rarr; per-billing-event-id lineage at 1000+ engineering-team customer scale. Each Hub-monitoring-run produces per-check-id &rarr; per-alert-id &rarr; per-tenant-id lineage that survives across the Hub environment. The audit gap is in the Deepchecks-Hub-to-Deepchecks-Billing handoff: when customers receive a per-billing-event-id from Hub billing, is the per-check-id &rarr; per-billing-event-id linkage provable from one query?</p>
+<h3>The Deepchecks Hub handoff audit pattern</h3>
+<ul>
+<li><strong>Per-check-id persistence</strong> &mdash; when Deepchecks Hub exports per-check-id to Hub Billing, is the per-check-id re-minted or preserved? If re-minted, the per-tenant-id lineage is broken; if preserved, the join-table is intact.</li>
+<li><strong>Per-model-version-id persistence</strong> &mdash; when a per-model-version-id is rolled back, does per-check-id lineage survive across the rollback boundary?</li>
+<li><strong>Per-segment-id billing</strong> &mdash; when Deepchecks Hub bills per-segment-id, is per-segment-id stable across the billing boundary? If not, Hub billing records per-segment-id-X while Hub history shows per-segment-id-Y for the same drift-detection-event.</li>
+<li><strong>Per-alert-id continuity</strong> &mdash; when Deepchecks Hub fires a per-alert-id and hands off to incident management (PagerDuty / Opsgenie), does per-alert-id lineage survive? If not, audit trails lose the per-check-id &rarr; per-alert-id linkage.</li>
+</ul>
+</section>
+
+<section id="drift">
+<h2>Per-Drift-Detection-Signal-ID + Per-Segment-ID + Per-Alert-ID Surface</h2>
+<p>Deepchecks ships the canonical per-drift-detection-signal-id surface: per-drift-detection-signal-id &rarr; per-segment-id &rarr; per-feature-importance-id &rarr; per-alert-id lineage. Each drift-detection-event generates per-drift-detection-signal-id with a per-drift-score-id that triggers per-alert-id when crossing per-drift-threshold-id. The audit gap is in the per-drift-detection-signal-id &rarr; per-tenant-id lineage: when an auditor asks "show me every per-drift-detection-signal-id that crossed per-drift-threshold-id for per-tenant-X in Q4-2026", can Deepchecks answer that question from one query?</p>
+<h3>The 5 audit questions the drift-detection surface must answer</h3>
+<ol>
+<li>How does per-drift-detection-signal-id attribute to per-tenant-id when per-dataset-id spans multiple per-tenant-id boundaries?</li>
+<li>Where is per-drift-threshold-id defined and per-tenant-id-configurable?</li>
+<li>How does per-segment-id bias detection link to per-drift-detection-signal-id under EU AI Act Art. 10 + GDPR Art. 22?</li>
+<li>What is the per-alert-id SLA from per-drift-detection-signal-id fire to per-alert-id delivery?</li>
+<li>How does per-feature-importance-id attribution work per-segment-id?</li>
+</ol>
+</section>
+
+<section id="audit-gaps">
+<h2>The 4 Audit Gaps Deepchecks Must Close</h2>
+<ol>
+<li><strong>End-to-end per-check-id &rarr; per-billing-event-id provenance join-table</strong> at 55+ columns under SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4.</li>
+<li><strong>Per-check-id training-corpus-source + fine-tune-license-provenance</strong> per EU AI Act Art. 53(d) GPAI training-data transparency + Art. 53(1)(b) + ISO 42001 6.1.4.</li>
+<li><strong>Per-bias-score-id + per-feature-importance-id defense</strong> per OWASP LLM Top 10 + MITRE ATLAS + EU AI Act Art. 15 + NIST AI RMF MEASURE.</li>
+<li><strong>WORM retention + cost-attribution join-table</strong> linking per-check-id-run-cost + per-segment-id-monitor-cost per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + EU AI Act Annex III 4 + Aug 2026 GPAI enforcement.</li>
+</ol>
+</section>
+
+<section id="six-vendor-comparison">
+<h2>6-Vendor AI-Eval-Observability Cohort Comparison</h2>
+<p>Deepchecks is the <strong>6th-sibling</strong> in the canonical 6-vendor ai_eval_observability cohort:</p>
+<ul>
+<li><strong>Braintrust (VERTEX 400)</strong> &mdash; canonical enterprise eval + Brainstore + autoevals OSS Apache 2.0</li>
+<li><strong>Confident AI (2nd-sibling 401)</strong> &mdash; DeepEval 16.9K stars + DeepTeam 2.2K stars</li>
+<li><strong>Patronus AI (3rd-sibling 402)</strong> &mdash; Lynx RAG-eval + Lumos HCL-DSL + Guardrails</li>
+<li><strong>Arize AI (4th-sibling 403)</strong> &mdash; Arize AX + Phoenix OSS 16K stars + OpenInference OTel</li>
+<li><strong>HoneyHive (5th-sibling 404)</strong> &mdash; OSS-first tracing SDK + Observability + Evaluation + MCP Server</li>
+<li><strong>Deepchecks (6th-sibling 405)</strong> &mdash; OSS-first Apache-2.0 ML-validation 3.5K+ stars + Deepchecks Hub production-ML-monitoring + per-check-id lineage</li>
+</ul>
+<p>Deepchecks is distinct in targeting <strong>classical ML + tabular + time-series + CV + NLP monitoring</strong> as its primary surface (LLM-evals a recent addition), whereas Braintrust + Confident AI + Patronus + Arize + HoneyHive target LLM-evals as primary. The 6-vendor cohort now spans both classical ML + LLM-evals at canonical scale.</p>
+</section>
+
+<section id="engagement">
+<h2>Engagement Economics</h2>
+<ul>
+<li><strong>$500 / 48-hour audit</strong> &mdash; written gap-list against SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 for one vendor.</li>
+<li><strong>$1,500 / 1-week engagement</strong> &mdash; 6-vendor overlap map + per-check-id + per-LLM-call-id lineage drill-down + 55-column join-table template.</li>
+<li><strong>$3,000 / 4-week retainer</strong> &mdash; ongoing per-check-id + per-drift-detection-signal-id + per-bias-score-id monitoring across the 6-vendor cohort.</li>
+<li><strong>$497/mo AI-eval-observability retainer</strong> &mdash; long-tail advisory for SOC 2 + GDPR + HIPAA + EU AI Act audit prep at Deepchecks (and 5 sibling vendors).</li>
+</ul>
+</section>
+
+</article>
