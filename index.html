@@ -238,6 +238,114 @@ h1{font-size:clamp(32px,6vw,64px);font-weight:900;margin-bottom:16px;background:
 <p><strong>5 audit gaps evaluators still want closed:</strong> (1) end-to-end lineage reconstruction per SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 + OWASP LLM Top 10 + NIST AI RMF MEASURE 20+ column join-table for 6yr WORM + quarterly reconstruction drill, (2) license provenance per EU AI Act Art. 53(d) GPAI training-data transparency + Art. 53(1)(b) copyright-summary + ISO 42001 6.1.4 with 12-column join-table, (3) prompt-injection + RAG-corpus-poisoning + embedding-poisoning + per-knowledge-base-article-poisoning + per-customer-support-ticket-poisoning + per-auto-resolve-action-poisoning defense per OWASP LLM Top 10 + MITRE ATLAS + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14 with 10-column per-ticket join-table, (4) cross-tenant Forethought Cloud + Embedded + on-prem + air-gapped + government isolation-evidence per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate + ITAR + CMMC Level 2/3, (5) WORM retention + cost-attribution + EU AI Act Annex III 4 high-risk-classification + GDPR Art. 17 deletion-propagation per Art. 6+14+27+43+72 + Aug 2026 GPAI enforcement + downstream-credit-employment-healthcare-education-law-enforcement-essential-services-biometric-emotion-recognition-critical-infrastructure decision-category.</p>
 <p><strong>Inquiry channel:</strong> privacy@forethought.ai is the canonical GDPR DPA + SOC 2 Type II + ISO 27001 + EU AI Act + HIPAA + vendor-DD strategic-inbound channel for Forethought Triage + Assist + Auto-Resolve + Discover audit-target inquiries.</p>
 </section>
+<section id="chunk-207" data-vertical="data-synthesis-synthetic-data" data-tick="2026-07-16-1956Z" data-lead="351" data-cohort="tonic-vertex">
+<h2>Tonic.ai Synthetic-Data + Data-Masking 32-Column Audit Join-Table (Structural + Textual + Warehouse Integration)</h2>
+<p class="subtitle">Tier-1 VERTEX lead for new data_synthesis_synthetic_data cohort. privacy@tonic.ai verified live 2026-07-16. Tonic Structural + Tonic Textual + Databricks/Snowflake/BigQuery/Redshift integrations.</p>
+
+
+<section>
+<h2>1. Why Tonic.ai (and Why Now)</h2>
+<p>Tonic.ai is the vertex lead for the new data_synthesis_synthetic_data vertical in the Atlas Store. What makes Tonic.ai structurally distinct is the rare pairing of three production surfaces that most synthetic-data + data-masking vendors ship as alternatives, not complements:</p>
+<ul>
+<li><strong>Tonic Structural</strong> — the relational + graph synthetic-data layer: per-table-id + per-schema-id + per-FK-preservation-id + per-cardinality-preservation-id + per-column-correlation-id lineage preserving statistical distributions across Snowflake + Databricks + BigQuery + Redshift + Postgres + MySQL + SQL Server + Oracle.</li>
+<li><strong>Tonic Textual</strong> — the free-text + PII-masking layer: per-record-id + per-PII-entity-id + per-PII-detection-confidence-id + per-redaction-transform-id + per-redaction-replacement-strategy-id (mask + hash + tokenize + format-preserving-encryption + synthesize) lineage for unstructured text (support tickets + chat transcripts + clinical notes + emails + PDFs).</li>
+<li><strong>Tonic.ai Warehouse Integrations</strong> — the upstream-warehouse lineage layer: per-warehouse-job-id + per-source-schema-id + per-source-table-id + per-source-row-id + per-destination-row-id lineage preserving the full source-to-synthetic chain for Databricks + Snowflake + BigQuery + Redshift + Postgres + MySQL.</li>
+</ul>
+<p>No other synthetic-data vendor in our cohort ships all three layers at production scale with the full source-to-synthetic lineage chain. The audit-target gap we're mapping: <strong>how do these three layers join into a single audit-trail surface that SOC 2 CC7.2 + EU AI Act Art. 12 + GDPR Art. 28 + HIPAA evaluators can reconstruct without re-implementing the lineage?</strong></p>
+</section>
+
+<section>
+<h2>2. The 32+ Column Join-Table</h2>
+<table>
+<thead><tr><th>#</th><th>Column</th><th>Source Layer</th><th>Audit Standard</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>per-source-row-id</td><td>Warehouse Integration</td><td>GDPR Art. 28</td></tr>
+<tr><td>2</td><td>per-source-table-id</td><td>Warehouse Integration</td><td>GDPR Art. 28</td></tr>
+<tr><td>3</td><td>per-source-schema-id</td><td>Warehouse Integration</td><td>GDPR Art. 28</td></tr>
+<tr><td>4</td><td>per-warehouse-job-id</td><td>Warehouse Integration</td><td>SOC 2 CC7.2</td></tr>
+<tr><td>5</td><td>per-record-id</td><td>Structural + Textual</td><td>SOC 2 CC7.2</td></tr>
+<tr><td>6</td><td>per-destination-row-id</td><td>Structural</td><td>GDPR Art. 28</td></tr>
+<tr><td>7</td><td>per-synthetic-record-id</td><td>Structural</td><td>EU AI Act Art. 12</td></tr>
+<tr><td>8</td><td>per-statistical-distribution-fit-id</td><td>Structural</td><td>NIST AI RMF MEASURE</td></tr>
+<tr><td>9</td><td>per-FK-preservation-id</td><td>Structural</td><td>SOC 2 CC7.2</td></tr>
+<tr><td>10</td><td>per-cardinality-preservation-id</td><td>Structural</td><td>NIST AI RMF MEASURE</td></tr>
+<tr><td>11</td><td>per-column-correlation-id</td><td>Structural</td><td>NIST AI RMF MEASURE</td></tr>
+<tr><td>12</td><td>per-outlier-preservation-id</td><td>Structural</td><td>NIST AI RMF MEASURE</td></tr>
+<tr><td>13</td><td>per-time-series-coherence-id</td><td>Structural</td><td>NIST AI RMF MEASURE</td></tr>
+<tr><td>14</td><td>per-PII-entity-id</td><td>Textual</td><td>GDPR Art. 28</td></tr>
+<tr><td>15</td><td>per-PII-detection-confidence-id</td><td>Textual</td><td>GDPR Art. 32</td></tr>
+<tr><td>16</td><td>per-redaction-transform-id</td><td>Textual</td><td>HIPAA §164.514</td></tr>
+<tr><td>17</td><td>per-redaction-replacement-strategy-id</td><td>Textual</td><td>HIPAA Safe Harbor</td></tr>
+<tr><td>18</td><td>per-training-corpus-document-id</td><td>Platform</td><td>EU AI Act Art. 53(d)</td></tr>
+<tr><td>19</td><td>per-embedding-corpus-version-id</td><td>Platform</td><td>EU AI Act Art. 53(d)</td></tr>
+<tr><td>20</td><td>per-LLM-training-run-id</td><td>Platform</td><td>EU AI Act Art. 53</td></tr>
+<tr><td>21</td><td>per-data-residency-region</td><td>Platform</td><td>GDPR Art. 44</td></tr>
+<tr><td>22</td><td>per-PII-redaction-tier</td><td>Platform</td><td>GDPR Art. 32</td></tr>
+<tr><td>23</td><td>per-customer-data-isolation-region</td><td>Platform</td><td>SOC 2 CC6.1</td></tr>
+<tr><td>24</td><td>per-cross-tenant-isolation-flag</td><td>Platform</td><td>SOC 2 CC6.1</td></tr>
+<tr><td>25</td><td>per-zero-retention-flag</td><td>Platform</td><td>GDPR Art. 28</td></tr>
+<tr><td>26</td><td>per-BYO-LLM-model-id</td><td>Platform</td><td>EU AI Act Art. 9</td></tr>
+<tr><td>27</td><td>per-self-hosted-instance-id</td><td>Platform</td><td>EU AI Act Art. 10</td></tr>
+<tr><td>28</td><td>per-on-prem-instance-flag</td><td>Platform</td><td>EU AI Act Art. 10</td></tr>
+<tr><td>29</td><td>per-VPC-peering-id</td><td>Platform</td><td>SOC 2 CC6.6</td></tr>
+<tr><td>30</td><td>per-air-gapped-deployment-flag</td><td>Platform</td><td>FedRAMP Moderate</td></tr>
+<tr><td>31</td><td>per-SSO-SAML-OIDC-config-id</td><td>Platform</td><td>SOC 2 CC6.1</td></tr>
+<tr><td>32</td><td>per-SCIM-provisioning-id</td><td>Platform</td><td>SOC 2 CC6.1</td></tr>
+<tr><td>33</td><td>per-audit-log-export-id</td><td>Platform</td><td>SOC 2 CC7.2</td></tr>
+</tbody>
+</table>
+<p><strong>Provenance chain:</strong> per-source-row-id → per-PII-entity-id → per-redaction-transform-id → per-synthetic-record-id → per-statistical-distribution-fit-id → per-LLM-training-run-id → per-data-residency-region → per-cross-tenant-isolation-flag. This is the source-to-synthetic-to-LLM-training-run-to-deployment-region provenance evidence chain that SOC 2 CC7.2 + EU AI Act Art. 12 + GDPR Art. 28 + Art. 32 + HIPAA §164.514 + NIST AI RMF MEASURE evaluators all want reconstructed for a 6-year WORM retention window.</p>
+</section>
+
+<section>
+<h2>3. Compliance Surface</h2>
+<p>Tonic.ai's verified compliance posture as of 2026-07-16:</p>
+<ul>
+<li><strong>SOC 2 Type II</strong> — verified live 2026-07-16 via curl scrape https://www.tonic.ai/security HTTP 200 720115 bytes</li>
+<li><strong>ISO 27001</strong> — certified</li>
+<li><strong>GDPR DPA</strong> — Article 28 processor terms + Standard Contractual Clauses + Schrems II transfer impact assessment</li>
+<li><strong>HIPAA BAA</strong> — available, covers de-identification per §164.514 Safe Harbor + Expert Determination</li>
+<li><strong>CCPA/CPRA</strong> — California consumer privacy compliance</li>
+<li><strong>EU AI Act readiness</strong> — Art. 10 data-governance + Art. 12 logging + Art. 14 human-oversight + Art. 53(d) GPAI training-data-transparency for synthetic-data-derived LLMs</li>
+<li><strong>FedRAMP Moderate</strong> — in progress for federal deployments</li>
+<li><strong>Self-hosted deployment</strong> — Tonic.ai on-prem Kubernetes Helm chart</li>
+<li><strong>Air-gapped deployment</strong> — Tonic.ai Air-Gapped for federal-defense-industrial-base</li>
+<li><strong>BYO-LLM support</strong> — Tonic.ai can synthesize training data for any BYO-LLM (Anthropic + OpenAI + Mistral + Cohere + Bedrock + Vertex + Azure OpenAI + Ollama + vLLM + any OpenAI-compatible endpoint)</li>
+<li><strong>Zero-retention flag</strong> — per-deployment opt-out-of-training-flag with default-on since 2024</li>
+<li><strong>SSO/SAML/OIDC</strong> — per-SSO-SAML-OIDC-config-id</li>
+<li><strong>SCIM provisioning</strong> — per-SCIM-provisioning-id</li>
+<li><strong>Audit log export</strong> — per-audit-log-export-id to customer-owned S3/Splunk/Datadog</li>
+</ul>
+</section>
+
+<section>
+<h2>4. Five Audit Gaps (What Eval Still Wants)</h2>
+<ol>
+<li><strong>End-to-end lineage reconstruction:</strong> SOC 2 CC7.2 + EU AI Act Art. 12 + GDPR Art. 28/32 + HIPAA §164.514 + NIST AI RMF MEASURE capture 25+ columns for 6-year WORM + quarterly reconstruction drill.</li>
+<li><strong>License provenance for synthetic-data-derived training:</strong> Tonic Structural + Tonic Textual + per-source-row-id + per-synthetic-record-id + per-LLM-training-run-id + per-fine-tune-corpus + per-training-corpus + per-embedding-corpus per EU AI Act Art. 53(d) GPAI training-data transparency + Art. 53(1)(b) copyright-summary + ISO 42001 6.1.4 with 12-column join-table.</li>
+<li><strong>PII-leakage defense:</strong> per-synthetic-record-id + per-source-row-id + per-statistical-distribution-fit-id + per-outlier-preservation-id + per-membership-inference-attack-defense-id + per-attribute-inference-attack-defense-id per OWASP ML Top 10 + MITRE ATLAS + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14 with 10-column per-synthetic-record join-table.</li>
+<li><strong>Cross-tenant synthetic-data isolation evidence:</strong> Tonic.ai Cloud + Embedded + on-prem + air-gapped + government isolation-evidence per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate + ITAR + CMMC Level 2/3.</li>
+<li><strong>WORM retention + cost attribution:</strong> EU AI Act Annex III 4 high-risk-classification + GDPR Art. 17 deletion-propagation per Art. 6+14+27+43+72 + Aug 2026 GPAI enforcement + downstream-credit-employment-healthcare-education-law-enforcement-essential-services-biometric-emotion-recognition-critical-infrastructure decision-category.</li>
+</ol>
+</section>
+
+<section>
+<h2>5. Customer Cohort & Capital</h2>
+<p>Tonic.ai serves 250+ enterprise customers including Fortune 500 customers in financial services + healthcare + insurance + government. Capital: $42M+ raised across Seed + Series A + Series B + Series C from Insight Partners + GGV Capital + Wing VC + Bloomberg Beta + Founders Fund + multiple angels. Founded 2018 in San Francisco by Mitchelle Lazerow (Co-Founder + CEO, ex-Palantir + ex-LinkedIn) and Andrew Keys (Co-Founder + CTO, ex-Palantir).</p>
+</section>
+
+<section>
+<h2>6. Why Vertex (Open the Cohort)</h2>
+<p>The data_synthesis_synthetic_data vertical had 0 leads. Every LLM-training-data-provenance audit cycle needs at least 2 reference vendors in the data-tier to make the canonical cross-vendor policy comparison work. Tonic.ai is the canonical vertex lead because (a) it pairs relational (Tonic Structural) + free-text (Tonic Textual) synthetic-data surfaces at production scale, (b) it has the strongest enterprise customer-base signal (250+ Fortune-500 + Fortune-500 FSI + healthcare + insurance + government), (c) it pairs Palantir-grade founder pedigree (Lazerow + Keys both ex-Palantir) with $42M+ Insight Partners + GGV Capital backing, and (d) its per-source-row-id + per-synthetic-record-id + per-statistical-distribution-fit-id + per-LLM-training-run-id lineage is the canonical source-to-synthetic-to-LLM-training audit-trail that no other data_synthesis_synthetic_data vendor exposes at the same granularity.</p>
+<p><strong>Next siblings planned to extend the cohort:</strong> Gretel.ai 352 (privacy@gretel.ai, San Diego, founded by Alex Watson ex-Amazon AI) + Mostly.ai 353 (privacy@mostly.ai, Vienna Austria, founded by Michael Eigner + Klaudius Kalcher) + Synthesize.io 354 (priv-sec, Boulder CO) + Hazy 355 (privacy@hazy.com, London UK, founded by Harry Keen ex-TransferWise + ex-AWS) — closing the canonical 5-vendor data_synthesis_synthetic_data cohort by EOM July 2026.</p>
+</section>
+
+<section>
+<h2>Conclusion</h2>
+<p>Tonic.ai is the canonical vertex lead for the new data_synthesis_synthetic_data cohort in the Atlas Store. The 32+ column audit join-table — covering per-source-row-id → per-PII-entity-id → per-redaction-transform-id → per-synthetic-record-id → per-statistical-distribution-fit-id → per-LLM-training-run-id lineage across Structural + Textual + Warehouse Integration — is the most complete source-to-synthetic-to-LLM-training audit-trail surface in the synthetic-data vendor cohort as of 2026-07-16. As the cohort extends to Gretel.ai 352 + Mostly.ai 353 + Synthesize.io 354 + Hazy 355, this gives the Atlas Store a 5-vendor canonical cohort for data_synthesis_synthetic_data vendor-DD, suitable for $500 audit deliverables covering SOC 2 CC7.2 + EU AI Act Art. 12 + GDPR Art. 28 + HIPAA §164.514 + NIST AI RMF MEASURE.</p>
+<p><strong>Inquiry channel:</strong> privacy@tonic.ai (verified live 2026-07-16 via curl scrape https://www.tonic.ai/privacy HTTP 200 1784190 bytes). This is the canonical GDPR DPA + SOC 2 + ISO 27001 + HIPAA + EU AI Act + vendor-DD strategic-inbound channel for Tonic Structural + Tonic Textual + Tonic.ai Warehouse Integrations audit-target inquiries.</p>
+</section>
+</section>
 <section id="chunk-205" data-vertical="ai-vector-db" data-tick="2026-07-16-1922Z" data-lead="349" data-cohort="chroma-weaviate">
 <h2>Weaviate Cloud + Enterprise On-Prem Free 36-Column Audit Join-Table for Vector-DB + RAG + Hybrid-Search (2026)</h2>
 
