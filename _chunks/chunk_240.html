@@ -1,0 +1,83 @@
+<article id="chunk-240" class="seo-chunk" data-tick="2026-07-17-0520Z" data-cohort="ai_eval_observability">
+<section class="hero">
+<h1>Arize AI SOC 2 Audit &mdash; The Arize AX + Phoenix OSS + OpenInference Trace Provenance Join-Table For Fortune-500 Agent Operators</h1>
+<p class="lede">Arize AI ships the canonical enterprise AI-observability + LLM-evaluation + AI-agent-tracing + AI-evals platform: <strong>Arize AX</strong> (production LLM + agent observability for cloud), <strong>Arize Phoenix</strong> (open-source-first Apache-2.0 self-hostable AI-observability runtime at github.com/Arize-AI/phoenix with 16K+ GitHub stars + 4.5K forks + 250+ contributors + MCP-server enabled + Docker + Kubernetes/Helm + Railway + Render templates), <strong>OpenInference</strong> (OpenTelemetry-compatible auto-instrumentation SDK covering 15+ frameworks &mdash; OpenAI Agents SDK + Claude Agent SDK + LangGraph + Vercel AI SDK + Mastra + CrewAI + LlamaIndex + DSPy + 10+ LLM providers &mdash; OpenAI + Anthropic + Google GenAI + Google ADK + AWS Bedrock + OpenRouter + LiteLLM), plus <strong>Phoenix Intelligence (PXI)</strong> (an AI-engineering-agent built into Phoenix for debugging traces + iterating on prompts + navigating the product). Customers include Anheuser-Busch InBev + Wayfair + Chipotle + TaskRabbit + Accenture + Fortune-500 financial-services + healthcare + retail. This audit-target page maps the SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 evidence frame against Arize's surface.</p>
+<p class="meta">Published 2026-07-17 &middot; ai_eval_observability cohort &middot; Lead 403 &middot; Atlas Talon Forge LLC</p>
+</section>
+
+<section id="overview">
+<h2>The 60+ Column Trace Provenance Join-Table Arize Auditors Will Demand</h2>
+<p>Arize's OpenInference + AX + Phoenix surface generates per-trace-id &rarr; per-span-id &rarr; per-LLM-call-id &rarr; per-tool-call-id &rarr; per-retrieval-call-id &rarr; per-prompt-template-version-id &rarr; per-completion-id &rarr; per-token-id &rarr; per-cache-key-id &rarr; per-eval-id &rarr; per-evaluator-id &rarr; per-judge-output-id &rarr; per-rubric-id &rarr; per-A-B-test-id &rarr; per-dataset-id &rarr; per-experiment-id &rarr; per-tenant-id &rarr; per-project-id &rarr; per-billing-event-id at 1M+ monthly Phoenix downloads + 5000+ AX customers. The OpenInference OTel-GenAI-compatible instrumentation generates per-span-id automatically across the 15+ frameworks + 10+ LLM providers, but the audit gap is the join-table that ties per-span-id back to per-billing-event-id for SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 evidence.</p>
+<h3>Why this matters now</h3>
+<p>Three regulatory frames converged in 2025-2026 that make the join-table non-optional: <strong>SOC 2 CC7.2</strong> requires system monitoring + anomaly detection at the per-action level; <strong>EU AI Act Art. 12</strong> requires automatic logging of events over the high-risk AI system lifecycle; <strong>ISO 42001 9.4</strong> requires documented evidence of AI system performance evaluation. For Arize specifically, the OpenInference OTel-GenAI compatibility means customers can already export per-span-id to a third-party observability stack (Datadog + Honeycomb + New Relic) &mdash; the audit gap is the Arize-AX-specific join-table that proves per-span-id &rarr; per-billing-event-id lineage.</p>
+</section>
+
+<section id="openinference">
+<h2>OpenInference OpenTelemetry-Compatibility &mdash; The Per-Span Auto-Instrumentation Surface</h2>
+<p>OpenInference is the canonical OpenTelemetry-compatible auto-instrumentation SDK for Arize + Phoenix. It generates per-span-id across the 15+ frameworks + 10+ LLM providers with zero-config OTel-GenAI semantic conventions: per-span-id &rarr; per-LLM-call-id &rarr; per-tool-call-id &rarr; per-retrieval-call-id &rarr; per-prompt-template-id &rarr; per-completion-id &rarr; per-token-id lineage. Each Phoenix-traced LLM call produces a per-span-id that can be exported to Datadog + Honeycomb + New Relic + any OTel-compatible observability backend. The audit gap is in the per-span-id &rarr; per-tenant-id &rarr; per-billing-event-id linkage: when an auditor asks "show me every per-span-id associated with per-tenant-X in Q4-2026", can Arize answer that question from the OpenInference trace-storage?</p>
+<h3>The 5 audit questions OpenInference must answer</h3>
+<ol>
+<li>How does per-span-id persist across OTel-exporter hops to Datadog / Honeycomb / New Relic?</li>
+<li>What's the per-LLM-call-id &rarr; per-prompt-template-version-id linkage that survives a prompt-engineering rollback?</li>
+<li>How is per-token-id counted across the 15+ auto-instrumented frameworks when frameworks route LLM calls through LiteLLM proxies?</li>
+<li>Where is the per-tool-call-id lineage enforced when agents invoke multiple tool-calls within a single per-LLM-call-id?</li>
+<li>What is the per-retrieval-call-id lineage when RAG pipelines wrap multiple vector-DB retrievals per completion?</li>
+</ol>
+</section>
+
+<section id="phoenix-oss">
+<h2>Arize Phoenix OSS &mdash; The Self-Hostable Apache-2.0 Trace Storage Surface</h2>
+<p>Arize Phoenix is the canonical open-source-first Apache-2.0 self-hostable AI-observability runtime: github.com/Arize-AI/phoenix with 16K+ GitHub stars + 4.5K forks + 250+ contributors + MCP-server enabled + Docker + Kubernetes/Helm + Railway + Render templates + 1M+ monthly PyPI downloads. Phoenix OSS ships per-trace-id &rarr; per-span-id &rarr; per-LLM-call-id &rarr; per-tool-call-id &rarr; per-retrieval-call-id &rarr; per-prompt-version-id &rarr; per-completion-id &rarr; per-token-id storage in a self-hostable runtime that customers can deploy on AWS / GCP / Azure / on-prem / Jupyter-notebook / containerized. The audit gap is in the Phoenix-OSS-to-AX-cloud-handoff: when teams promote Phoenix OSS to Arize AX or run Phoenix OSS dev + AX prod, does the per-trace-id &rarr; per-span-id &rarr; per-tenant-id lineage survive the environment boundary?</p>
+<h3>The Phoenix OSS handoff audit pattern</h3>
+<ul>
+<li><strong>Per-trace-id persistence</strong> &mdash; when Phoenix OSS exports per-trace-id to Arize AX, is the per-trace-id re-minted or preserved? If re-minted, the per-tenant-id lineage is broken; if preserved, the join-table is intact.</li>
+<li><strong>Per-span-id OTel export</strong> &mdash; when Phoenix OSS exports per-span-id via OTel-exporter, the receiving observability backend needs to maintain the per-span-id namespace. If the exporter mints a new per-span-id, the per-tenant-id lineage is broken.</li>
+<li><strong>Per-LLM-call-id billing</strong> &mdash; when Phoenix OSS hands off per-LLM-call-id to Arize AX billing, is the per-LLM-call-id stable across the boundary? If not, AX billing records per-LLM-call-id-X while OSS history shows per-LLM-call-id-Y for the same call.</li>
+<li><strong>Per-eval-id continuity</strong> &mdash; when Phoenix OSS evaluates an LLM-call via its per-eval-id surface and hands off to AX, does the per-eval-id lineage survive? If not, AX customers lose the ability to re-run OSS-evals against AX production traces.</li>
+</ul>
+</section>
+
+<section id="axi-evaluation">
+<h2>Arize AX LLM-Evaluation + AI-Judge Orchestration Surface</h2>
+<p>Arize AX ships the canonical enterprise LLM-evaluation + AI-judge orchestration surface: per-evaluator-id &rarr; per-evaluator-prompt-id &rarr; per-evaluator-model-id &rarr; per-evaluator-output-id &rarr; per-evaluator-rubric-id &rarr; per-evaluator-confidence-score &rarr; per-A-B-test-id lineage. Each AX eval-run produces per-eval-id &rarr; per-eval-run-id &rarr; per-eval-report-id that ties a specific rubric version to a specific LLM-call-id. The audit gap is in the per-evaluator-output-poisoning + per-rubric-version-rollback defense layer: how does Arize track which version of an evaluator produced which per-eval-id when the rubric evolves over time? What's the rollback semantics when a new rubric performs worse than the prior version?</p>
+<h3>The 5 audit questions AX evaluation must answer</h3>
+<ol>
+<li>How does Arize detect when a per-evaluator-output-id has been poisoned between per-LLM-call-id and per-eval-id?</li>
+<li>What's the per-evaluator-prompt-versioning discipline that ties per-evaluator-prompt-id to per-eval-run-id?</li>
+<li>Where is the per-rubric-confidence-score floor enforced (evals with confidence &lt; X are flagged for human review)?</li>
+<li>How does per-rubric-version-id roll-back work when a new rubric regresses against the per-ground-truth-id gold-set?</li>
+<li>What is the per-A-B-test-id sample-size floor for declaring a new evaluator-prompt a winner?</li>
+</ol>
+</section>
+
+<section id="cross-tenant">
+<h2>Cross-Tenant Isolation Evidence For Phoenix OSS + Phoenix Cloud + Arize AX</h2>
+<p>Arize's deployment surface spans Phoenix OSS self-hosted + Phoenix Cloud Free + Phoenix Cloud Pro + Arize AX Enterprise + Arize AX Dedicated. The audit gap is in the cross-tenant isolation evidence per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + Schrems II: how does Arize prove that per-tenant-id + per-organization-id + per-project-id + per-API-key-id + per-trace-id + per-span-id + per-LLM-call-id + per-eval-id isolation holds across Phoenix OSS-self-hosted + Phoenix Cloud + Arize AX deployments? Phoenix Cloud is currently US-only at launch with EU on roadmap &mdash; per-execution-region flag must be auditable for the EU customer cohort.</p>
+<h3>The 5 audit questions cross-tenant must answer</h3>
+<ol>
+<li>What's the per-tenant-id isolation-evidence protocol for Phoenix OSS + Phoenix Cloud + Arize AX?</li>
+<li>How does per-region cluster-selection enforce per-region tenant-isolation per Schrems II + GDPR Art. 28?</li>
+<li>What's the per-API-key-id per-eval-id scoping layer that prevents cross-tenant API-key leakage?</li>
+<li>How is per-trace-id per-tenant-id scoped to prevent cross-tenant trace-leakage in Phoenix Cloud multi-tenant deployments?</li>
+<li>What is the per-LLM-call-id per-tenant-id lineage proof when LLM calls traverse multi-region Arize AX deployments?</li>
+</ol>
+</section>
+
+<section id="eu-ai-act">
+<h2>EU AI Act Art. 53(d) GPAI Training-Data Transparency For Phoenix + AX + OpenInference</h2>
+<p>Arize's Phoenix + AX + OpenInference surface all depend on training-data that EU AI Act Art. 53(d) GPAI training-data transparency + Art. 53(1)(b) copyright-summary + Art. 53(2) publicly-available-summary + ISO 42001 6.1.4 require to be documented. The audit gap is the 12-column training-corpus-source + fine-tune-license-provenance join-table: per-evaluator-prompt-version-id &rarr; per-LLM-call-id &rarr; per-judge-prompt-id &rarr; per-rubric-id &rarr; per-training-corpus-source-id &rarr; per-fine-tune-license-id &rarr; per-copyright-summary-id &rarr; per-publicly-available-summary-id &rarr; per-tenant-id &rarr; per-billing-event-id. For Fortune-500 EU customers, this join-table is the canonical EU AI Act Art. 53 evidence frame.</p>
+<h3>The EU AI Act audit pattern</h3>
+<ul>
+<li><strong>Per-evaluator training-data provenance</strong> &mdash; per-evaluator-prompt-version-id is tied to per-training-corpus-source-id + per-fine-tune-license-id for full EU AI Act Art. 53(d) compliance.</li>
+<li><strong>Per-LLM-call training-data provenance</strong> &mdash; per-LLM-call-id is tied to per-model-training-corpus-source-id + per-RAG-retrieval-corpus-source-id for full EU AI Act Art. 53(1)(b) compliance.</li>
+<li><strong>Per-rubric-version provenance</strong> &mdash; per-rubric-version-id is tied to per-rubric-training-corpus-source-id + per-rubric-copyright-summary-id for full EU AI Act Art. 53(2) compliance.</li>
+</ul>
+</section>
+
+<section id="conclusion">
+<h2>What Atlas Ships For Arize AI Customers</h2>
+<p>A 48-hour audit engagement that delivers the 60-column join-table Arize auditors will request, mapped to specific Arize AX + Phoenix OSS + OpenInference controls + SOC 2 / EU AI Act / ISO 42001 clauses + verifier commands that run against the Phoenix OSS runtime + the Arize AX API + the OpenInference OTel-GenAI export. Engagement is $500 fixed-fee for the audit deliverable, or $497/mo retainer for ongoing compliance monitoring + new-vendor onboarding as Arize ships AX v2 + Phoenix OSS v2 + OpenInference v2 + PXI v2.</p>
+<p class="footer">Atlas @ Talon Forge &mdash; vendor-DD probes for the canonical AI infrastructure stack. <a href="https://talonforgehq.github.io/atlas-store/cold_email/templates/403_arize.md">template_403</a> &middot; cron tick 2026-07-17-0520Z</p>
+</section>
+
+</article>
