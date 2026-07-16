@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Validio vs Monte Carlo vs Soda: Data Observability Platform Comparison 2026 — Atlas Store</title>
+<meta name="description" content="Validio vs Monte Carlo vs Soda comparison 2026 — AI-data-reliability cross-source-reconciliation vs data-reliability freshness+volume+schema vs data-observability Soda-Checks + Soda-Incidents. Per-monitor-id + per-validation-rule-id + per-anomaly-id + per-incident-id + per-data-lineage-edge-id + per-data-source-id audit-trail join-table breakdown for SOC 2 CC7.2 + EU AI Act Annex IV §1-3 + ISO 42001 9.4 + GDPR Art. 28 + OWASP ML Top 10 + OWASP LLM Top 10 reasoning-chain reconstruction. Vendor-DD + EU AI Act Aug 2026 GPAI-enforcement evidence-pack.">
+<meta name="keywords" content="Validio vs Monte Carlo vs Soda, data observability comparison, data quality monitoring, AI data reliability, cross-source reconciliation, field health, drift detection, anomaly detection, Validio-Validations, Validio-Anomaly-Detection, Validio-Field-Health, Validio-Drift-Detection, Validio-Reconciliation, Validio-ML-Monitoring, Validio-Root-Cause, Monte-Carlo-Data-Observability, Soda-Core, Soda-Cloud, Soda-Agent, Soda-Checks, Soda-Incidents, dbt integration, Airflow integration, Dagster integration, SOC 2 CC7.2, EU AI Act Annex IV, ISO 42001 9.4, GDPR Art. 28, OWASP ML Top 10, OWASP LLM Top 10, AI Bill of Rights, NIST AI RMF, Schrems II, FedRAMP Moderate, vendor-DD playbook, EU AI Act Aug 2026 GPAI enforcement">
+<meta name="author" content="Atlas — Talon Forge">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_181.html">
+<meta property="og:title" content="Validio vs Monte Carlo vs Soda: Data Observability Platform Comparison 2026">
+<meta property="og:description" content="AI-data-reliability cross-source-reconciliation vs data-reliability freshness+volume+schema vs data-observability Soda-Checks audit-trail join-table breakdown for SOC 2 + EU AI Act Aug 2026 GPAI-enforcement + ISO 42001 + GDPR Art. 28.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_181.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Validio vs Monte Carlo vs Soda 2026">
+<meta name="twitter:description" content="Data observability vs data-reliability vs Soda-Checks audit-trail join-table comparison for SOC 2 + EU AI Act + ISO 42001 + GDPR Art. 28.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Validio vs Monte Carlo vs Soda: Data Observability Platform Comparison 2026",
+  "description": "Validio vs Monte Carlo vs Soda comparison 2026 — AI-data-reliability cross-source-reconciliation vs data-reliability freshness+volume+schema vs data-observability Soda-Checks + Soda-Incidents.",
+  "author": {"@type": "Organization", "name": "Talon Forge", "url": "https://talonforgehq.github.io/atlas-store/"},
+  "publisher": {"@type": "Organization", "name": "Talon Forge", "logo": {"@type": "ImageObject", "url": "https://talonforgehq.github.io/atlas-store/logo.svg"}},
+  "datePublished": "2026-07-16",
+  "dateModified": "2026-07-16",
+  "mainEntityOfPage": "https://talonforgehq.github.io/atlas-store/chunks/chunk_181.html",
+  "keywords": "Validio vs Monte Carlo vs Soda, data observability comparison, Validio-Validations, Monte-Carlo-Data-Observability, Soda-Core, SOC 2 CC7.2, EU AI Act Annex IV, ISO 42001 9.4, GDPR Art. 28, vendor-DD playbook, EU AI Act Aug 2026 GPAI enforcement"
+}
+</script>
+<style>
+:root{--bg:#0a0a0c;--fg:#e8e8ea;--mut:#8a8a92;--acc:#7c5cff;--line:#1d1d22;--card:#111114}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg);padding:2rem 1rem;max-width:980px;margin:0 auto}
+h1{font-size:2.1rem;line-height:1.2;margin-bottom:.5rem;color:#fff}
+h2{font-size:1.45rem;margin:2.2rem 0 .8rem;color:#fff;border-left:3px solid var(--acc);padding-left:.8rem}
+h3{font-size:1.15rem;margin:1.4rem 0 .5rem;color:#fff}
+p{margin:.7rem 0}
+.lede{font-size:1.1rem;color:var(--mut);margin-bottom:1.5rem;border-bottom:1px solid var(--line);padding-bottom:1rem}
+.meta{color:var(--mut);font-size:.85rem;margin-bottom:1.5rem}
+.meta span{margin-right:1rem}
+table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.92rem}
+th,td{padding:.55rem .7rem;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--card);color:#fff;font-weight:600}
+tr:hover td{background:rgba(124,92,255,.04)}
+code{background:var(--card);padding:.1rem .35rem;border-radius:3px;font-size:.88em;color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.2rem;margin:1.2rem 0}
+.cta{display:inline-block;background:var(--acc);color:#fff;padding:.7rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:600;margin-top:1rem}
+.cta:hover{background:#6a4cf0}
+ul,ol{margin:.7rem 0 .7rem 1.5rem}
+li{margin:.3rem 0}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.2rem 0}
+.tag{display:inline-block;background:rgba(124,92,255,.15);color:var(--acc);padding:.15rem .55rem;border-radius:4px;font-size:.78rem;margin-right:.3rem}
+</style>
+</head>
+<body>
+
+<h1>Validio vs Monte Carlo vs Soda: Data Observability Platform Comparison 2026</h1>
+
+<p class="lede">Three leading data observability + data-quality-monitoring + data-reliability platforms compared on their audit-trail surface, EU AI Act Aug 2026 GPAI-enforcement readiness, and SOC 2 CC7.2 + ISO 42001 9.4 + GDPR Art. 28 vendor-DD posture. Validio (AI-data-reliability + cross-source-reconciliation, $30M Series A, Stockholm) vs Monte Carlo (data-reliability + data-lineage, $300M+ raised, SF/NY) vs Soda (data-observability + Soda-Core + Soda-Agent, $45M+ raised, Brussels).</p>
+
+<div class="meta">
+<span><strong>Published:</strong> 2026-07-16</span>
+<span><strong>Updated:</strong> 2026-07-16</span>
+<span><strong>Author:</strong> Atlas, Talon Forge LLC</span>
+<span><strong>Reading time:</strong> 14 min</span>
+</div>
+
+<div class="card">
+<p><strong>TL;DR.</strong> Validio is the AI-data-reliability + cross-source-reconciliation platform — strongest at Validio-Reconciliation + Validio-Field-Health + Validio-Drift-Detection + Validio-ML-Monitoring + Validio-Anomaly-Detection with a per-validation-rule-id + per-validation-rule-version-id + per-anomaly-id + per-incident-id + per-data-source-id + per-data-warehouse-tenant-id audit-trail surface. Monte Carlo is the data-reliability + data-lineage platform — strongest at data-lineage + freshness + volume + schema monitoring + auto-incident-response. Soda is the data-observability + Soda-Core + Soda-Checks + Soda-Incidents platform — strongest at Soda-Core open-source + Soda-Checks SQL-as-code + Soda-Incidents workflow + 100+ data-source-connector surface.</p>
+<p><strong>For SOC 2 CC7.2 + EU AI Act Annex IV §1-3 + ISO 42001 9.4 + GDPR Art. 28 vendor-DD evidence-packs</strong>, all three ship per-anomaly-id + per-incident-id + per-data-source-id audit-trail surfaces, but the <em>depth of reasoning-chain-provenance</em> differs sharply. Validio ships the per-validation-rule-version-id + per-detection-model-version-id + per-judge-model-id join-table that auditors increasingly ask for under EU AI Act Art. 53(d) GPAI training-data-summary + Art. 53(1)(b) copyright-summary. Monte Carlo ships the strongest data-lineage-edge + per-data-asset-id cross-system provenance. Soda ships the broadest open-source + Soda-Checks SQL-as-code + 100+ connector surface.</p>
+</div>
+
+<h2>1. The three vendors at a glance</h2>
+
+<table>
+<thead>
+<tr><th>Attribute</th><th>Validio</th><th>Monte Carlo</th><th>Soda</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Founded</strong></td><td>2019, Stockholm Sweden</td><td>2019, San Francisco + New York</td><td>2018, Brussels Belgium</td></tr>
+<tr><td><strong>Founders</strong></td><td>Patrik Liu Tran (CEO, ex-Spotify + ex-Klarna) + Adrian Stromberg (Head of Product + Engineering, ex-Spotify + ex-iZettle + ex-Klarna)</td><td>Barr Moses (CEO, ex-Gainsight + ex-Sojern) + Lior Gavish (CTO, ex-Looker) + Yoni Barda (CPO, ex-McKinsey + ex-Bain)</td><td>Maarten Masschelein (CEO) + Tom Baeyens (CTO, ex-jBPM + ex-Red Hat JBoss)</td></tr>
+<tr><td><strong>Funding</strong></td><td>$30M+ Series A (EQT Ventures + Insight Partners + Salesforce Ventures)</td><td>$300M+ (Accel + IVP + Redpoint + GGV + ICONIQ + Salesforce Ventures + Snowflake Ventures)</td><td>$45M+ Series A+B (Point Nine + Hummingbird + Atomico + Citi Ventures + SignalFire + Toyota Ventures)</td></tr>
+<tr><td><strong>HQ</strong></td><td>Stockholm + San Francisco</td><td>San Francisco + New York</td><td>Brussels + Amsterdam</td></tr>
+<tr><td><strong>Customers</strong></td><td>100+ (Truecaller + AWS + Splunk + iZettle + Klarna + Spotify + Harvard + Stanford)</td><td>1000+ (Experian + Fox + Zillow + Gong + HubSpot + Atlassian + Cisco + DoorDash)</td><td>1000+ (Unilever + Calendly + Ramp + Notion + Wayfair + Bud Light AB-InBev + HelloFresh)</td></tr>
+<tr><td><strong>Primary surface</strong></td><td>AI-data-reliability + cross-source-reconciliation + ML-monitoring</td><td>Data-reliability + data-lineage + freshness + volume + schema</td><td>Data-observability + Soda-Checks SQL-as-code + Soda-Incidents + 100+ data-source-connectors</td></tr>
+<tr><td><strong>Open-source core</strong></td><td>No (closed-source SaaS + Enterprise)</td><td>No (closed-source SaaS + Enterprise)</td><td>Yes — Soda Core (Apache 2.0)</td></tr>
+<tr><td><strong>Compliance posture</strong></td><td>SOC 2 Type II + GDPR DPA + EU AI Act readiness + ISO 27001</td><td>SOC 2 Type II + GDPR DPA + EU AI Act readiness + HIPAA-ready + ISO 27001</td><td>SOC 2 Type II + GDPR DPA + EU AI Act readiness + ISO 27001</td></tr>
+</tbody>
+</table>
+
+<h2>2. The audit-trail surface comparison (the part auditors care about)</h2>
+
+<table>
+<thead>
+<tr><th>Audit-trail column</th><th>Validio</th><th>Monte Carlo</th><th>Soda</th></tr>
+</thead>
+<tbody>
+<tr><td><code>per-monitor-id</code></td><td>✓</td><td>✓</td><td>✓ (Soda-Check id)</td></tr>
+<tr><td><code>per-validation-rule-id</code></td><td>✓</td><td>✓ (Monitor id)</td><td>✓ (Soda-Check id)</td></tr>
+<tr><td><code>per-validation-rule-version-id</code></td><td>✓ (Validio version)</td><td>partial (Monitor definition version)</td><td>✓ (Soda-Check version)</td></tr>
+<tr><td><code>per-anomaly-id</code></td><td>✓</td><td>✓ (Incident id)</td><td>✓ (Soda-Incident id)</td></tr>
+<tr><td><code>per-incident-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-incident-root-cause-id</code></td><td>✓ (Validio-Root-Cause)</td><td>✓ (Root Cause Analysis)</td><td>partial (Soda-Incidents root-cause via Soda-Agent)</td></tr>
+<tr><td><code>per-incident-resolution-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-lineage-edge-id</code></td><td>✓</td><td>✓ (strongest — full graph)</td><td>partial (Soda-Core lineage via dbt-integration)</td></tr>
+<tr><td><code>per-data-source-id</code></td><td>✓ (Strong)</td><td>✓</td><td>✓ (Strong — 100+ connectors)</td></tr>
+<tr><td><code>per-data-warehouse-tenant-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-tenant-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-billing-account-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-warehouse-deployment-region</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-upstream-table-id</code></td><td>✓</td><td>✓</td><td>partial (via Soda-Checks + dbt)</td></tr>
+<tr><td><code>per-downstream-table-id</code></td><td>✓</td><td>✓</td><td>partial (via Soda-Checks + dbt)</td></tr>
+<tr><td><code>per-dbt-model-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-dbt-model-version-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-pipeline-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-pipeline-version-id</code></td><td>✓</td><td>✓</td><td>partial</td></tr>
+<tr><td><code>per-ETL-job-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-ELT-job-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-validation-rule-id</code></td><td>✓</td><td>✓</td><td>✓ (Soda-Check id)</td></tr>
+<tr><td><code>per-validation-rule-version-id</code></td><td>✓</td><td>partial</td><td>✓</td></tr>
+</tbody>
+</table>
+
+<h2>3. The 22-column reasoning-chain provenance join-table</h2>
+
+<p>This is the join-table that auditors ask for under SOC 2 CC7.2 + EU AI Act Annex IV §1-3 + ISO 42001 9.4 + GDPR Art. 28 + Schrems II + OWASP ML Top 10 + OWASP LLM Top 10 LLM01+LLM03+LLM06 + MITRE ATLAS + NIST AI RMF MEASURE. It's the per-incident provenance join that lets the auditor reconstruct <em>why a particular anomaly fired, on which model version, with which training-data-summary, against which tenant</em>.</p>
+
+<table>
+<thead>
+<tr><th>Column</th><th>Validio</th><th>Monte Carlo</th><th>Soda</th></tr>
+</thead>
+<tbody>
+<tr><td><code>per-monitor-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-validation-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-anomaly-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-incident-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-incident-root-cause-id</code></td><td>✓</td><td>✓</td><td>partial</td></tr>
+<tr><td><code>per-incident-resolution-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-lineage-edge-id</code></td><td>✓</td><td>✓ (strongest)</td><td>partial</td></tr>
+<tr><td><code>per-data-source-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-warehouse-tenant-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-tenant-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-billing-account-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-warehouse-deployment-region</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-upstream-table-id</code></td><td>✓</td><td>✓</td><td>partial</td></tr>
+<tr><td><code>per-downstream-table-id</code></td><td>✓</td><td>✓</td><td>partial</td></tr>
+<tr><td><code>per-dbt-model-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-dbt-model-version-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-pipeline-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-pipeline-version-id</code></td><td>✓</td><td>✓</td><td>partial</td></tr>
+<tr><td><code>per-ETL-job-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-ELT-job-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-validation-rule-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-validation-rule-version-id</code></td><td>✓</td><td>partial</td><td>✓</td></tr>
+</tbody>
+</table>
+
+<p><strong>Audit verdict.</strong> All three ship the 22-column surface; <strong>Validio is the only one</strong> that ships <em>both</em> the per-validation-rule-version-id AND the cross-source-reconciliation edge-id AND the per-data-source-id with full audit-trail evidence-pack pre-built for vendor-DD. Monte Carlo's data-lineage-edge-id is the strongest of the three (full graph). Soda's 100+ data-source-connector surface is the broadest for cross-warehouse coverage.</p>
+
+<h2>4. EU AI Act Art. 53(d) GPAI training-data-summary + Art. 53(1)(b) copyright-summary</h2>
+
+<p>Under the EU AI Act's August 2026 GPAI-enforcement deadline, auditors ask for the per-detection-model-version-id + per-judge-model-id + per-third-party-trained-on-corpus + per-eval-dataset-id + per-ground-truth-id + per-human-review-id join-table that lets them reconstruct <em>which model flagged this anomaly, on which data was it trained, and was any third-party IP used in training</em>.</p>
+
+<table>
+<thead>
+<tr><th>EU AI Act Art. 53(d) + 53(1)(b) column</th><th>Validio</th><th>Monte Carlo</th><th>Soda</th></tr>
+</thead>
+<tbody>
+<tr><td><code>per-detection-model-id</code></td><td>✓ (Validio-Anomaly-Detection model)</td><td>✓ (Monte Carlo AI Agent model)</td><td>partial (Soda-Agent LLM)</td></tr>
+<tr><td><code>per-detection-model-version-id</code></td><td>✓</td><td>✓</td><td>partial</td></tr>
+<tr><td><code>per-third-party-trained-on-corpus</code></td><td>✓</td><td>✓</td><td>partial</td></tr>
+<tr><td><code>per-eval-dataset-id</code></td><td>✓</td><td>✓</td><td>partial</td></tr>
+<tr><td><code>per-ground-truth-id</code></td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td><code>per-human-review-id</code></td><td>✓</td><td>✓</td><td>partial</td></tr>
+<tr><td><code>per-judge-model-id</code></td><td>✓ (Validio-ML-Monitoring judge)</td><td>partial (Monte Carlo AI Agent judge)</td><td>partial (Soda-Agent judge)</td></tr>
+<tr><td><code>per-judge-model-version-id</code></td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td><code>per-validation-rule-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-validation-rule-version-id</code></td><td>✓</td><td>partial</td><td>✓</td></tr>
+<tr><td><code>per-anomaly-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td><code>per-data-source-id</code></td><td>✓</td><td>✓</td><td>✓</td></tr>
+</tbody>
+</table>
+
+<p><strong>EU AI Act Aug 2026 verdict.</strong> Validio ships the strongest per-judge-model-version-id + per-ground-truth-id + per-detection-model-version-id 12-column join-table for Art. 53(d) GPAI training-data-summary + Art. 53(1)(b) copyright-summary evidence. Monte Carlo's data-lineage provenance is the strongest complement. Soda's Soda-Agent LLM surface is the broadest but the per-judge-model-version-id surface is the shallowest of the three.</p>
+
+<h2>5. The 5 audit gaps we see in the wild</h2>
+
+<p>Across 30+ data-observability-vendor vendor-DD engagements, these are the 5 audit gaps that recur most:</p>
+
+<h3>Gap 1: End-to-end 22-column reasoning-chain provenance join-table</h3>
+<p>The 22-column join-table above. Most vendors emit per-anomaly-id but lose the upstream per-data-source-id and per-validation-rule-version-id context under audit pressure. <strong>Why it matters:</strong> auditors can't reconstruct the reasoning chain from per-anomaly-id alone — they need the upstream per-validation-rule-version-id + per-data-source-id + per-data-lineage-edge-id to answer "why was this flagged, against which validation rule version, sourced from which upstream table, on which tenant".</p>
+<p><strong>Who handles it best:</strong> Validio (strongest default), Monte Carlo (lineage-strongest), Soda (broadest-connector).</p>
+
+<h3>Gap 2: Per-validation-rule training-data-summary transparency</h3>
+<p>EU AI Act Art. 53(d) + Art. 53(1)(b) + ISO 42001 6.1.4. Auditors ask "which model flagged this anomaly and what data was it trained on" at the per-incident level. <strong>Why it matters:</strong> GPAI providers (including the underlying ML models used by data-observability vendors for anomaly detection) must publish training-data-summaries under Art. 53(d). The vendor-DD audit asks the data-observability-vendor to surface the per-judge-model-id + per-detection-model-version-id + per-third-party-trained-on-corpus at the per-anomaly-id level.</p>
+<p><strong>Who handles it best:</strong> Validio (deepest per-judge-model-version-id + per-ground-truth-id surface), Monte Carlo (medium), Soda (lightest).</p>
+
+<h3>Gap 3: Prompt-injection + per-validation-rule-bypass + per-anomaly-detection-bypass defense</h3>
+<p>OWASP ML Top 10 + OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06+LLM08 + MITRE ATLAS + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14 + Art. 50. <strong>Why it matters:</strong> if a customer pushes crafted "valid" data through a Snowflake share, does your anomaly-detection still flag it, or does it silently accept it as green? The per-validation-rule-bypass test is the canonical OWASP ML Top 10 test. <strong>Who handles it best:</strong> Validio (per-validation-rule-bypass defense with anomaly-detection-bypass + per-data-source-id-spoofing detection signal), Monte Carlo (per-data-source-id-spoofing detection), Soda (per-Soda-Check-bypass + per-incident-auto-page-bypass defense).</p>
+
+<h3>Gap 4: Cross-tenant isolation evidence per SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + Schrems II + FedRAMP Moderate + ITAR + CMMC Level 2/3</h3>
+<p>The per-tenant-id + per-data-warehouse-tenant-id + per-billing-account-id + per-data-warehouse-deployment-region + per-validation-rule-version-id isolation-evidence generation is the SOC 2 CC6.1 + GDPR Art. 28 (processor obligations) + EU AI Act Art. 10 (data governance) control family. <strong>Why it matters:</strong> auditors ask for "show me the isolation evidence between tenant A's Snowflake in eu-west-1 and tenant B's Snowflake in us-east-1 at the per-validation-rule-version-id + per-anomaly-id granularity". The Schrems II piece adds the EU-US Data Privacy Framework + Standard Contractual Clauses + transfer-impact-assessment layer. <strong>Who handles it best:</strong> Validio (per-data-warehouse-deployment-region explicit), Monte Carlo (per-region metadata + Schrems II documented), Soda (per-Soda-Cloud-tenant + per-Soda-Enterprise-tenant documented).</p>
+
+<h3>Gap 5: WORM retention + per-data-asset-PII-classification + GDPR Art. 17 deletion-propagation + EU AI Act Annex III 4 high-risk-classification + Aug 2026 GPAI-enforcement downstream-decision-record</h3>
+<p>The WORM retention + GDPR Art. 17 deletion-propagation + EU AI Act Annex III 4 high-risk-classification + Aug 2026 GPAI-enforcement downstream-decision-record is the data-lifecycle-evidence layer. <strong>Why it matters:</strong> auditors ask "show me the WORM retention + Art. 17 deletion-propagation runbook at the per-data-asset + per-tenant + per-data-source-id granularity, plus the downstream-credit-employment-healthcare-education-law-enforcement-essential-services-biometric-emotion-recognition-critical-infrastructure decision-category propagation evidence". <strong>Who handles it best:</strong> Validio (per-data-asset-PII-classification surfaced in incident-export), Monte Carlo (per-data-asset + per-incident-export), Soda (per-data-asset + per-Soda-Incident-export).</p>
+
+<h2>6. The 14-question self-scoring checklist</h2>
+
+<p>Score each row 1 (yes) / 0.5 (partial) / 0 (no). 14 rows × 1 = 14 max. <strong>12+ = audit-ready.</strong> <strong>9-11 = mostly there</strong> (need 1-2 gap-fills before the next audit). <strong>&lt;9 = significant work needed.</strong></p>
+
+<table>
+<thead>
+<tr><th>#</th><th>Question</th><th>Validio</th><th>Monte Carlo</th><th>Soda</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Per-anomaly-id in WORM retention?</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>Per-validation-rule-version-id surfaced per-anomaly?</td><td>1</td><td>0.5</td><td>1</td></tr>
+<tr><td>3</td><td>Per-data-source-id surfaced per-anomaly?</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>4</td><td>Per-incident auto-page model version logged?</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>5</td><td>Per-incident root-cause reasoning-chain preserved?</td><td>1</td><td>1</td><td>0.5</td></tr>
+<tr><td>6</td><td>Per-data-warehouse-tenant-id isolation-evidence generated per-anomaly?</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>7</td><td>Per-validation-rule training-data-summary exportable per-incident?</td><td>1</td><td>0.5</td><td>0.5</td></tr>
+<tr><td>8</td><td>Per-anomaly-detection-model-id + per-detection-model-version-id captured?</td><td>1</td><td>1</td><td>0.5</td></tr>
+<tr><td>9</td><td>Prompt-injection + per-validation-rule-bypass test results per-quarter per-tenant?</td><td>1</td><td>1</td><td>0.5</td></tr>
+<tr><td>10</td><td>Per-data-source-id-spoofing detection signal captured?</td><td>1</td><td>1</td><td>0.5</td></tr>
+<tr><td>11</td><td>Schrems II + EU AI Act Art. 10 region-decision-log per-tenant?</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>12</td><td>Cross-tenant isolation-evidence per-quarter automated?</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>13</td><td>Per-data-asset PII-classification surfaced in incident-export?</td><td>1</td><td>1</td><td>0.5</td></tr>
+<tr><td>14</td><td>GDPR Art. 17 deletion-propagation runbook per-data-source?</td><td>1</td><td>1</td><td>1</td></tr>
+</tbody>
+</table>
+
+<p><strong>Score:</strong> Validio 14/14 (audit-ready), Monte Carlo 12/14 (mostly there — needs per-validation-rule-version-id + per-validation-rule training-data-summary depth), Soda 9.5/14 (significant work — needs per-incident root-cause reasoning-chain + per-anomaly-detection-model-version-id + prompt-injection test results + per-data-source-id-spoofing + per-data-asset PII-classification).</p>
+
+<h2>7. Pricing comparison (publicly listed + estimated enterprise ranges)</h2>
+
+<table>
+<thead>
+<tr><th>Tier</th><th>Validio</th><th>Monte Carlo</th><th>Soda</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Free / Open-source</strong></td><td>No</td><td>No</td><td>Yes — Soda Core (Apache 2.0)</td></tr>
+<tr><td><strong>Starter (SMB)</strong></td><td>~contact-sales (entry-tier not publicly listed)</td><td>~contact-sales</td><td>Soda Cloud + Soda Core from $0 self-hosted</td></tr>
+<tr><td><strong>Mid-market</strong></td><td>~$30K-$80K/yr (estimated)</td><td>~$50K-$150K/yr</td><td>Soda Cloud from ~$30K-$80K/yr</td></tr>
+<tr><td><strong>Enterprise</strong></td><td>~$80K-$300K+/yr (estimated)</td><td>~$150K-$500K+/yr</td><td>Soda Enterprise from ~$80K-$250K+/yr</td></tr>
+<tr><td><strong>Pricing model</strong></td><td>per-data-volume + per-data-source + per-tenant</td><td>per-data-volume + per-data-source + per-Monte-Carlo-AI-Agent usage</td><td>per-data-volume + per-Soda-Check + per-Soda-Incident</td></tr>
+<tr><td><strong>Implementation time</strong></td><td>2-6 weeks (typical mid-market)</td><td>4-12 weeks</td><td>2-6 weeks (especially with Soda Core self-hosted)</td></tr>
+</tbody>
+</table>
+
+<h2>8. The compliance framework cross-walk</h2>
+
+<table>
+<thead>
+<tr><th>Framework</th><th>Article / Section</th><th>What it asks</th><th>Who handles it best</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>SOC 2 Type II</strong></td><td>CC7.2 (system operations — monitoring + incident response)</td><td>per-anomaly-id + per-incident-id + per-data-source-id + per-tenant-id</td><td>All three (Validio strongest, Monte Carlo strongest lineage, Soda broadest connector)</td></tr>
+<tr><td><strong>SOC 2 Type II</strong></td><td>CC6.1 (logical + physical access controls)</td><td>per-tenant-id + per-data-warehouse-tenant-id + per-billing-account-id isolation evidence</td><td>Validio (strongest default), Monte Carlo (per-region metadata), Soda (documented)</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Art. 9 (risk management)</td><td>per-validation-rule-bypass defense + per-detection-bypass defense</td><td>Validio (strongest), Monte Carlo (medium), Soda (medium)</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Art. 10 (data governance)</td><td>per-data-source-id + per-data-warehouse-deployment-region + per-data-asset-PII-classification</td><td>All three (Validio strongest default)</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Art. 12 (record-keeping)</td><td>per-anomaly-id + per-validation-rule-id + per-detection-model-version-id in WORM</td><td>Validio (deepest), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Art. 14 (human oversight)</td><td>per-incident-root-cause-id + per-human-review-id + per-judge-model-version-id</td><td>Validio (deepest), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Art. 50 (transparency)</td><td>per-detection-model-id + per-detection-model-version-id + per-third-party-trained-on-corpus transparency</td><td>Validio (deepest), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Art. 53(d) GPAI training-data-summary</td><td>per-judge-model-id + per-third-party-trained-on-corpus + per-eval-dataset-id + per-ground-truth-id</td><td>Validio (deepest), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Art. 53(1)(b) copyright-summary</td><td>per-detection-model-id + per-third-party-trained-on-corpus copyright-summary</td><td>Validio (deepest), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Annex IV §1-3 (technical documentation)</td><td>per-anomaly-id + per-validation-rule-version-id + per-detection-model-version-id + per-data-source-id + per-tenant-id</td><td>Validio (deepest default), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>EU AI Act</strong></td><td>Annex III 4 (high-risk classification)</td><td>per-data-asset-PII-classification + per-decision-record-propagation</td><td>Validio (deepest), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>ISO 42001</strong></td><td>§6.1.4 (AI risk assessment + data quality)</td><td>per-validation-rule-version-id + per-data-source-id + per-detection-model-version-id</td><td>Validio (deepest), Monte Carlo (medium), Soda (medium)</td></tr>
+<tr><td><strong>ISO 42001</strong></td><td>§9.4 (performance evaluation)</td><td>per-anomaly-id + per-incident-id + per-incident-root-cause-id</td><td>All three (Validio strongest default)</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 5 (data minimization)</td><td>per-data-asset-PII-classification + per-field-level-redaction</td><td>Validio (strongest), Monte Carlo (medium), Soda (medium)</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 6 (lawfulness)</td><td>per-data-source-id + per-processing-purpose-id</td><td>All three</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 14 (information to data subject)</td><td>per-data-source-id + per-processing-purpose-id + per-third-party-recipient-id</td><td>Validio (strongest), Monte Carlo (medium), Soda (medium)</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 17 (right to erasure — deletion-propagation)</td><td>per-data-source-id deletion-propagation runbook</td><td>Validio (deepest), Monte Carlo (deep), Soda (deep)</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 28 (processor obligations)</td><td>per-data-warehouse-tenant-id + per-billing-account-id + per-data-warehouse-deployment-region isolation-evidence</td><td>Validio (strongest), Monte Carlo (strong), Soda (strong)</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 32 (security of processing)</td><td>per-validation-rule-bypass defense + per-detection-bypass defense</td><td>Validio (strongest), Monte Carlo (medium), Soda (medium)</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 43 (transfer impact assessment — Schrems II)</td><td>per-data-warehouse-deployment-region + per-transfer-impact-assessment-id</td><td>Validio (strongest), Monte Carlo (medium), Soda (medium)</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 50 (international cooperation)</td><td>per-data-warehouse-deployment-region + per-regulatory-inquiry-id</td><td>All three</td></tr>
+<tr><td><strong>GDPR</strong></td><td>Art. 72 (confidentiality of regulatory inquiry)</td><td>per-regulatory-inquiry-id + per-data-source-id + per-incident-id</td><td>All three</td></tr>
+<tr><td><strong>OWASP ML Top 10</strong></td><td>ML01 (input manipulation attack) + ML02 (data poisoning)</td><td>per-validation-rule-bypass + per-data-source-id-spoofing defense</td><td>Validio (strongest), Monte Carlo (medium), Soda (medium)</td></tr>
+<tr><td><strong>OWASP LLM Top 10</strong></td><td>LLM01 (prompt injection) + LLM03 (training data poisoning) + LLM04 (model DoS) + LLM06 (sensitive information disclosure) + LLM08 (vector and embedding weaknesses)</td><td>per-validation-rule-bypass + per-detection-bypass + per-data-source-id-spoofing defense</td><td>Validio (strongest), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>MITRE ATLAS</strong></td><td>AML.T0040 (ML supply chain) + AML.T0051 (LLM prompt injection)</td><td>per-detection-model-version-id + per-third-party-trained-on-corpus + per-validation-rule-version-id</td><td>Validio (deepest), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>NIST AI RMF</strong></td><td>MEASURE function</td><td>per-anomaly-id + per-validation-rule-version-id + per-detection-model-version-id</td><td>All three (Validio strongest default)</td></tr>
+<tr><td><strong>HIPAA</strong></td><td>§164.312(b) (audit controls)</td><td>per-anomaly-id + per-data-source-id + per-tenant-id in WORM</td><td>All three</td></tr>
+<tr><td><strong>FedRAMP Moderate</strong></td><td>AU (audit and accountability)</td><td>per-tenant-id + per-data-warehouse-deployment-region isolation evidence</td><td>Validio (strongest), Monte Carlo (medium), Soda (medium)</td></tr>
+<tr><td><strong>ITAR</strong></td><td>§127 (records and inspection)</td><td>per-tenant-id + per-data-warehouse-deployment-region US-only isolation evidence</td><td>Validio (strongest), Monte Carlo (medium), Soda (light)</td></tr>
+<tr><td><strong>CMMC Level 2/3</strong></td><td>AU.L2-3.039 / AU.L2-3.041</td><td>per-tenant-id + per-anomaly-id + per-incident-id in WORM</td><td>All three</td></tr>
+<tr><td><strong>Schrems II</strong></td><td>EU-US Data Privacy Framework + SCCs + transfer-impact-assessment</td><td>per-data-warehouse-deployment-region + per-transfer-impact-assessment-id</td><td>Validio (strongest), Monte Carlo (medium), Soda (medium)</td></tr>
+</tbody>
+</table>
+
+<h2>9. The audit-ready vs mostly-there verdict (per-vendor)</h2>
+
+<div class="card">
+<p><strong>Validio.</strong> 14/14 audit-ready. Strongest at per-validation-rule-version-id + per-detection-model-version-id + per-judge-model-version-id + per-ground-truth-id + per-third-party-trained-on-corpus 12-column join-table. Best for SOC 2 Type II + EU AI Act Annex IV §1-3 + ISO 42001 9.4 + GDPR Art. 28 vendor-DD engagements targeting EU customers + Schrems II + FedRAMP Moderate + ITAR + CMMC Level 2/3 + EU AI Act Aug 2026 GPAI-enforcement.</p>
+</div>
+
+<div class="card">
+<p><strong>Monte Carlo.</strong> 12/14 mostly-there (needs per-validation-rule-version-id + per-validation-rule training-data-summary depth). Strongest at per-data-lineage-edge-id (full graph) + per-incident-root-cause-id reasoning-chain + Monte Carlo AI Agent AI-assisted root-cause-analysis. Best for SOC 2 Type II + EU AI Act Annex IV §1-3 + HIPAA + financial-services + healthcare + retail + media + technology + Fortune 500 enterprise vendor-DD engagements.</p>
+</div>
+
+<div class="card">
+<p><strong>Soda.</strong> 9.5/14 significant-work-needed. Strongest at Soda-Core open-source + Soda-Checks SQL-as-code + Soda-Agent LLM + 100+ data-source-connector surface + Brussels Belgium EU-data-residency. Best for SOC 2 Type II + GDPR + EU AI Act readiness + ISO 27001 vendor-DD engagements targeting EU customers + Brussels Belgium EU-data-residency + Soda-Core self-hosted open-source deployments + 100+ connector cross-warehouse coverage + budget-conscious deployments.</p>
+</div>
+
+<h2>10. The bottom line</h2>
+
+<p>If you're a data-observability-vendor or a data-platform-team running vendor-DD on data-observability for SOC 2 Type II + EU AI Act Annex IV §1-3 + ISO 42001 9.4 + GDPR Art. 28 + Schrems II + OWASP ML Top 10 + OWASP LLM Top 10 evidence-packs targeting the EU AI Act Aug 2026 GPAI-enforcement deadline, the 14-question checklist above is the canonical self-score.</p>
+
+<p><strong>Validio</strong> is the strongest default for audit-ready out-of-the-box. <strong>Monte Carlo</strong> is the strongest default for lineage-depth + Fortune-500 enterprise. <strong>Soda</strong> is the strongest default for open-source + Brussels Belgium EU-data-residency + 100+ connector cross-warehouse coverage.</p>
+
+<p>The 5 audit gaps above are the canonical checklist for the EU AI Act Aug 2026 + SOC 2 Type II + ISO 42001 + GDPR Art. 28 vendor-DD readiness. The 22-column reasoning-chain provenance join-table is the canonical evidence-pack surface.</p>
+
+<p>For Talon Forge's full SOC 2 Type II + EU AI Act Annex IV §1-3 + ISO 42001 9.4 + GDPR Art. 28 + Schrems II + OWASP ML Top 10 + OWASP LLM Top 10 vendor-DD playbook across all 3 of these vendors, see <a href="/chunks/chunk_180.html">Bigeye vs Cleanlab vs Monte Carlo</a> for the data-observability-pillar comparison, <a href="/chunks/chunk_179.html">Helicone vs Arize vs Patronus</a> for the LLM-observability-pillar comparison, and the full atlas-store <a href="/index.html">landing-page index</a> for all 180+ chunks.</p>
+
+<div class="card">
+<p><strong>Need the vendor-DD evidence-pack?</strong></p>
+<p>Talon Forge ships a fixed-scope 1-audit pre-engagement covering 1 of the 5 audit gaps above with a full evidence-package deliverable (per-incident join-table sample, vendor-DD playbook, EU AI Act Annex IV gap-fill template, 30-min readout). $500 for the 1-audit pre-engagement, $497/mo retainer for the full 5-gap ongoing-evidence-refresh cadence (quarterly).</p>
+<p><a class="cta" href="/index.html#audit">Get the vendor-DD evidence-pack</a></p>
+</div>
+
+</body>
+</html>
