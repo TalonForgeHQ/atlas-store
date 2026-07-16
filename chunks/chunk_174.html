@@ -1,0 +1,135 @@
+<!-- chunk_174.html — Together AI (ai_inference_platform 2nd-sibling) — open-weights-model-zoo + GPU-cluster-orchestration + fine-tuning-as-a-service per-request-id audit-trail -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Together AI Audit-Trail Evidence Pack — Per-Request-Id + Per-Token-Id + Per-Fine-Tune-Job-Id + Per-Lora-Adapter-Id Provenance Join-Table for Open-Weights-Model-Hosting + GPU-Cluster-Orchestration + Fine-Tuning-As-A-Service (SOC 2 CC7.2 + EU AI Act Art. 12 + Art. 50 + Art. 53(d) + ISO 42001 9.4 + GDPR Art. 28)</title>
+<meta name="description" content="Together AI audit-trail evidence pack: 22-column per-request-id + per-model-deployment-id + per-token-id + per-prompt-id + per-completion-id + per-tool-call-id + per-billing-account-id + per-tenant-id + per-fine-tune-job-id + per-fine-tune-corpus-clip + per-lora-adapter-id + per-lora-merge-id + per-GPU-node-id + per-GPU-cluster-id provenance join-table for Together-AI-Cloud + Together-AI-Serverless-Inference + Together-AI-Dedicated-Endpoints + Together-Fine-Tune + Together-AI-Embeddings + Llama 3.1 405B + Llama 3.2 90B Vision + Mistral Large 2 + Qwen 2.5 72B + DeepSeek V3 + Flux Schnell + SDXL + Whisper Large V3 + 200+ open-weights models. SOC 2 Type II + ISO 27001 + ISO 42001 + EU AI Act + GDPR DPA + HIPAA + NIST AI RMF + 7yr WORM retention + quarterly reconstruction drill + OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06 + MITRE ATLAS defense." />
+<meta name="keywords" content="Together AI audit-trail evidence pack, Together-AI-Cloud audit, Together-AI-Serverless-Inference audit, Together-AI-Dedicated-Endpoints audit, Together-Fine-Tune audit, Together-AI-Embeddings audit, Llama 3.1 405B audit, Llama 3.2 90B Vision audit, Mistral Large 2 audit, Qwen 2.5 72B audit, DeepSeek V3 audit, Flux Schnell audit, SDXL audit, Whisper Large V3 audit, open-weights-model-hosting audit, GPU-cluster-orchestration audit, fine-tuning-as-a-service audit, per-request-id provenance, per-token-id provenance, per-fine-tune-job-id provenance, per-lora-adapter-id provenance, per-GPU-node-id provenance, SOC 2 CC7.2 audit-trail, EU AI Act Art. 12 audit-trail, EU AI Act Art. 50 audit-trail, EU AI Act Art. 53(d) training-data-summary, ISO 42001 9.4 control-test, GDPR Art. 28 DPA, OWASP LLM Top 10 LLM01, OWASP LLM Top 10 LLM03, OWASP LLM Top 10 LLM04, OWASP LLM Top 10 LLM06, MITRE ATLAS defense, NIST AI RMF MEASURE, AI Bill of Rights evaluation, Replicate 306 cohort, Poolside 208 cohort, ai_inference_platform 2nd-sibling, vendor-DD strategic-inbound" />
+<meta name="chunk-id" content="chunk_174" />
+<meta name="vertical" content="ai_inference_platform" />
+<meta name="cohort-position" content="2nd-sibling after Replicate (306)" />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_174.html" />
+</head>
+<body>
+<article itemscope itemtype="https://schema.org/TechArticle">
+<h1>Together AI Audit-Trail Evidence Pack</h1>
+<p class="subtitle"><strong>22-column per-request-id provenance join-table for open-weights-model-hosting + GPU-cluster-orchestration + fine-tuning-as-a-service</strong> — SOC 2 CC7.2 + EU AI Act Art. 12 + Art. 14 + Art. 50 + Art. 53(d) + ISO 42001 9.4 + GDPR Art. 28 + OWASP LLM Top 10 + MITRE ATLAS + NIST AI RMF MEASURE.</p>
+
+<h2>1. Why Together AI surfaces in vendor-DD right now (ai_inference_platform 2nd-sibling)</h2>
+<p>Together AI occupies the canonical <strong>ai_inference_platform 2nd-sibling</strong> position in the inference-platform cohort — paired with <strong>Replicate (306, ai_inference_platform 1st-sibling — Cog + Cloud-API + Cloudflare-Workers-AI-fanout + Enterprise Private Deployments)</strong> + <strong>Poolside (208, ai_inference_platform 3rd-sibling — Foundation-model self-hosted + EU-AI-Act Art. 53 GPAI training-data + ISO 42001)</strong>. Together AI's platform surface is uniquely shaped by three pillars:</p>
+<ul>
+<li><strong>Open-weights-model-zoo layer:</strong> Llama 3.1 405B + Llama 3.2 90B Vision + Mistral Large 2 + Qwen 2.5 72B + DeepSeek V3 + Flux Schnell + SDXL + Whisper Large V3 + 200+ open-weights models, exposed through Together-AI-Cloud + Together-AI-Serverless-Inference + per-model-deployment-id + per-token-id + per-prompt-id + per-completion-id + per-billing-account-id.</li>
+<li><strong>GPU-cluster-orchestration layer:</strong> Together-Compute + Together-AI-Serverless-Inference + Together-AI-Dedicated-Endpoints + Together-AI-On-Demand-Endpoints + Together-AI-Async-Batch-Inference + Together-AI-Speculative-Decoding + Together-AI-Quantization + per-GPU-node-id + per-GPU-cluster-id + per-deployment-region + per-deployment-zone.</li>
+<li><strong>Fine-tuning-as-a-service layer:</strong> Together-Fine-Tune + per-fine-tune-job-id + per-fine-tune-corpus-clip + per-lora-adapter-id + per-lora-merge-id + per-third-party-trained-on-corpus + per-base-model-id license-provenance.</li>
+</ul>
+<p>This three-pillar surface creates a unique <strong>22-column per-request-id + per-token-id + per-fine-tune-job-id + per-lora-adapter-id + per-GPU-node-id + per-billing-account-id provenance join-table</strong> that no other ai_inference_platform sibling (Replicate or Poolside) surfaces in the same way because no other sibling pairs the open-weights-model-zoo pedigree (Vipul Ved Prakash ex-Apple + Cloudflare + Topsy + Zhangyang Wang ex-UT-Austin-ML-Professor + 200+ open-weights models + 500K+ developers + CapitalFame + Lux + Coatue + NVIDIA + Salesforce Ventures + General Catalyst + Prosperity7 + Mitsui + $228.5M+ raised) with the GPU-cluster-orchestration layer + fine-tuning-as-a-service layer + per-token-billing + per-GPU-node-id at production scale.</p>
+
+<h2>2. Buyer checklist — 14 questions to put to Together AI's privacy/DPO/security team</h2>
+<ol>
+<li><strong>Per-request-id + per-model-deployment-id + per-token-id + per-prompt-id + per-completion-id + per-tool-call-id + per-billing-account-id + per-tenant-id join-table:</strong> Show a WORM-exportable row for any arbitrary prompt + completion + token-cost-attribution event covering at minimum the 22 columns listed in §3 below. Required for SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 + GDPR Art. 28.</li>
+<li><strong>Per-fine-tune-job-id + per-fine-tune-corpus-clip + per-third-party-trained-on-corpus + per-lora-adapter-id + per-lora-merge-id + per-training-data-asset-id + per-base-model-id license-provenance:</strong> Map every Together-Fine-Tune job to its training corpus, LoRA adapter, base model, and license. Required for EU AI Act Art. 53(d) GPAI training-data-summary transparency + Art. 53(1)(b) copyright-summary + ISO 42001 6.1.4.</li>
+<li><strong>Prompt-injection + Together-Fine-Tune-backdoor + training-corpus-poisoning + per-Together-AI-Dedicated-Endpoint-spoofing + per-Llama-3.1-405B-backdoor + per-Mistral-Large-2-prompt-injection + per-GPU-node-side-channel defense:</strong> Provide a 10-column per-request-id table listing every detected + blocked + quarantined event under OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06 + MITRE ATLAS + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14 + Art. 50.</li>
+<li><strong>Cross-tenant Together-AI-Cloud-SaaS + Together-AI-Dedicated-Endpoints + Together-AI-On-Demand + Together-AI-Async-Batch + Together-AI-Enterprise-VPC + Together-AI-on-prem isolation-evidence:</strong> Per-tenant encryption-key, per-tenant GPU-pool, per-tenant inference-cluster isolation with quarterly SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate + ITAR + CMMC Level 2/3 audit.</li>
+<li><strong>7-year WORM retention + cost-attribution + EU AI Act Annex III 4 high-risk-classification + GDPR Art. 17 deletion-propagation:</strong> Prove the per-tenant WORM tier covers Aug 2026 GPAI enforcement + downstream-credit-employment-healthcare-education-law-enforcement-essential-services-biometric-emotion-recognition-critical-infrastructure decision-category.</li>
+<li><strong>AI Bill of Rights evaluation:</strong> Per-request AI-Bill-of-Rights-eval-result captured + persisted in the join-table for the 5 principles (safe + effective systems, algorithmic discrimination protections, data privacy, notice + explanation, human alternatives + fallback).</li>
+<li><strong>NIST AI RMF MEASURE event-log:</strong> Every request produces a per-NIST-AI-RMF-MEASURE-event row tied to MEASURE function categories (TEVAL + EXVAL + IMPACT + BIAS + ROBUST + SAFEGUARD + MANAGE).</li>
+<li><strong>OWASP LLM Top 10 evaluation:</strong> LLM01 prompt-injection + LLM03 training-data-poisoning + LLM04 model-DOS + LLM06 sensitive-disclosure + LLM08 vector + embedding-weakness evaluations tied to per-request-id.</li>
+<li><strong>MITRE ATLAS defense coverage:</strong> Per-request ATLAS-evaluation covering AML.T0051 LLM-Prompt-Injection + AML.T0024 Exfiltration-via-CyberMeans + AML.T0010 ML-Model-Inference + AML.T0048 Erode-ML-Model-Integrity + AML.T0020 Poison-Training-Data.</li>
+<li><strong>ISO 42001 9.4 control-test linkage:</strong> Per-request ISO-42001-9.4-control-test-result captured + tied to ISO/IEC 42001:2023 §9.4 Performance evaluation + §6.1.4 AI-system-impact-assessment.</li>
+<li><strong>SOC 2 CC7.2 system-operation + CC6.1 logical-access control-test coverage:</strong> Per-tenant access-control + per-request prompt-injection-block + per-fine-tune-corpus-clip-lineage all tied to SOC 2 CC7.2 + CC6.1 with quarterly auditor walkthroughs.</li>
+<li><strong>EU AI Act Art. 12 logging + Art. 14 human-oversight + Art. 27 EU-representative:</strong> Together AI Inc (Delaware C-Corp US-based) needs Art. 27 EU-representative designation — verify the appointment + Art. 50 transparency-obligation coverage for AI-generated content.</li>
+<li><strong>C2PA v2.x content-credentialing for Together-AI-Image-Generation (Flux Schnell + SDXL):</strong> Every generated image carries a C2PA Content Credential tied to per-prompt-id + per-completion-id + per-model-hash for downstream EU AI Act Art. 50 transparency-compliance.</li>
+<li><strong>Per-deployment-region + per-deployment-zone + per-GPU-type + per-GPU-count + per-quantization-format attribution:</strong> Cross-region failover + EU data-residency + FedRAMP Moderate US-region + per-GPU-NVIDIA-H100 + per-GPU-NVIDIA-A100 + per-quantization-FP8 + per-quantization-INT4 attribution shipped in the per-request row.</li>
+</ol>
+
+<h2>3. The 22-column canonical join-table schema (the artifact you'd actually ship)</h2>
+<table>
+<thead><tr><th>#</th><th>Column</th><th>Description</th><th>Compliance driver</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>request_id</td><td>Unique per-request identifier (UUID v7)</td><td>SOC 2 CC7.2, EU AI Act Art. 12</td></tr>
+<tr><td>2</td><td>tenant_id</td><td>Together-AI tenant identifier</td><td>SOC 2 CC6.1, GDPR Art. 28</td></tr>
+<tr><td>3</td><td>billing_account_id</td><td>Per-tenant billing attribution</td><td>SOC 2 CC7.2, EU AI Act Art. 50</td></tr>
+<tr><td>4</td><td>model_id</td><td>e.g. meta-llama/Llama-3.1-405B-Instruct</td><td>EU AI Act Art. 53(d)</td></tr>
+<tr><td>5</td><td>model_hash</td><td>Model weights SHA-256 (per-deployment)</td><td>EU AI Act Art. 53(1)(b)</td></tr>
+<tr><td>6</td><td>model_deployment_id</td><td>Per-deployment identifier</td><td>ISO 42001 6.1.4</td></tr>
+<tr><td>7</td><td>prompt_id</td><td>Unique prompt identifier (UUID v7)</td><td>EU AI Act Art. 12, OWASP LLM01</td></tr>
+<tr><td>8</td><td>prompt_text_hash</td><td>SHA-256 of prompt content (privacy-preserving)</td><td>GDPR Art. 32, OWASP LLM06</td></tr>
+<tr><td>9</td><td>completion_id</td><td>Unique completion identifier (UUID v7)</td><td>EU AI Act Art. 12, OWASP LLM01</td></tr>
+<tr><td>10</td><td>completion_text_hash</td><td>SHA-256 of completion content</td><td>GDPR Art. 32, OWASP LLM06</td></tr>
+<tr><td>11</td><td>token_count_input</td><td>Input token count (for billing)</td><td>SOC 2 CC7.2, EU AI Act Art. 50</td></tr>
+<tr><td>12</td><td>token_count_output</td><td>Output token count (for billing)</td><td>SOC 2 CC7.2, EU AI Act Art. 50</td></tr>
+<tr><td>13</td><td>tool_call_id</td><td>Function-calling tool-call identifier</td><td>OWASP LLM08, MITRE ATLAS</td></tr>
+<tr><td>14</td><td>fine_tune_job_id</td><td>Together-Fine-Tune job identifier (null if inference-only)</td><td>EU AI Act Art. 53(d)</td></tr>
+<tr><td>15</td><td>fine_tune_corpus_clip_id</td><td>Training-data-clip identifier (per-fine-tune-job-id)</td><td>EU AI Act Art. 53(1)(b)</td></tr>
+<tr><td>16</td><td>lora_adapter_id</td><td>LoRA adapter identifier (null if no adapter)</td><td>EU AI Act Art. 53(d), ISO 42001 6.1.4</td></tr>
+<tr><td>17</td><td>lora_merge_id</td><td>LoRA-merge identifier (per-merge-event)</td><td>EU AI Act Art. 53(d)</td></tr>
+<tr><td>18</td><td>gpu_node_id</td><td>GPU node serving the request</td><td>ISO 42001 9.4, MITRE ATLAS</td></tr>
+<tr><td>19</td><td>gpu_cluster_id</td><td>GPU cluster identifier</td><td>ISO 42001 9.4, MITRE ATLAS</td></tr>
+<tr><td>20</td><td>gpu_type</td><td>NVIDIA-H100, NVIDIA-A100, AMD-MI300X</td><td>EU AI Act Art. 12</td></tr>
+<tr><td>21</td><td>quantization_format</td><td>FP16, BF16, FP8, INT4, INT8</td><td>ISO 42001 6.1.4</td></tr>
+<tr><td>22</td><td>cost_attribution_id</td><td>Per-request $ cost (USD) attributed to tenant</td><td>SOC 2 CC7.2, EU AI Act Art. 50</td></tr>
+<tr><td>23</td><td>downstream_state_change_flag</td><td>Bool: did this request trigger a downstream state change?</td><td>EU AI Act Art. 14, GDPR Art. 22</td></tr>
+<tr><td>24</td><td>AI_Bill_of_Rights_eval_result</td><td>Per-request AI-Bill-of-Rights evaluation (5 dimensions)</td><td>AI Bill of Rights, NIST AI RMF</td></tr>
+<tr><td>25</td><td>NIST_AI_RMF_MEASURE_event</td><td>MEASURE function event row (TEVAL + EXVAL + IMPACT)</td><td>NIST AI RMF MEASURE</td></tr>
+<tr><td>26</td><td>OWASP_LLM_Top10_eval</td><td>LLM01+LLM03+LLM04+LLM06+LLM08 evaluation</td><td>OWASP LLM Top 10</td></tr>
+<tr><td>27</td><td>MITRE_ATLAS_eval</td><td>AML.T0051+AML.T0024+AML.T0010+AML.T0048+AML.T0020</td><td>MITRE ATLAS</td></tr>
+<tr><td>28</td><td>ISO_42001_9_4_control_test</td><td>Per-request ISO 42001 §9.4 control-test result</td><td>ISO 42001 §9.4 + §6.1.4</td></tr>
+</tbody>
+</table>
+<p>The 22-column row is WORM-exportable for 7 years with quarterly reconstruction drills against the OWASP LLM Top 10 + EU AI Act + ISO 42001 + SOC 2 CC7.2 + GDPR Art. 28 evidence map.</p>
+
+<h2>4. 3-vendor cohort comparison (Replicate vs Together AI vs Poolside)</h2>
+<table>
+<thead><tr><th>Dimension</th><th>Replicate (306, 1st-sibling)</th><th>Together AI (307, 2nd-sibling)</th><th>Poolside (208, 3rd-sibling)</th></tr></thead>
+<tbody>
+<tr><td>Model layer</td><td>Cog-OSS-Apache-2.0 + Docker-image-packaging</td><td>200+ open-weights-model-zoo (Llama 3.1 405B + Mistral + Qwen + DeepSeek + Flux)</td><td>Self-hosted foundation model + EU-AI-Act-Art-53 GPAI</td></tr>
+<tr><td>Cloud-API layer</td><td>Replicate-Cloud-API + Predictions-API + Streaming-API</td><td>Together-AI-Serverless-Inference + Dedicated-Endpoints + On-Demand</td><td>Poolside-AI-API + Poolside-Dedicated-Deployment</td></tr>
+<tr><td>Private-deploy layer</td><td>Replicate-Enterprise + Replicate-Private-Deployments + Cloudflare-Workers-AI-fanout</td><td>Together-AI-Enterprise-VPC + Together-AI-on-prem</td><td>Poolside-On-Prem + Poolside-Air-Gapped</td></tr>
+<tr><td>Fine-tuning layer</td><td>per-cog-build-id + per-cog-docker-image-id + per-cog-model-weights-hash</td><td>Together-Fine-Tune + per-fine-tune-job-id + per-lora-adapter-id</td><td>Poolside-Fine-Tune + per-training-data-version-id</td></tr>
+<tr><td>Provenance audit key</td><td>per-prediction-id + per-cog-build-id + per-cog-docker-image-id</td><td>per-request-id + per-token-id + per-fine-tune-job-id + per-lora-adapter-id</td><td>per-training-corpus-clip + per-GPAI-training-data-summary</td></tr>
+<tr><td>GPU-cluster audit</td><td>per-Cloudflare-Workers-AI-tenant-isolation + per-Cloudflare-R2-isolation</td><td>per-GPU-node-id + per-GPU-cluster-id + per-deployment-region</td><td>per-H100-pool-id + per-cluster-tenant-isolation</td></tr>
+<tr><td>Compliance frame</td><td>SOC 2 + ISO 27001 + ISO 42001 + EU AI Act + GDPR</td><td>SOC 2 + ISO 27001 + ISO 42001 + EU AI Act + GDPR + HIPAA</td><td>SOC 2 + ISO 42001 + EU AI Act Art. 53 + GDPR</td></tr>
+</tbody>
+</table>
+
+<h2>5. Framework cross-walk (12 rows)</h2>
+<table>
+<thead><tr><th>Framework</th><th>Article / Section</th><th>Together AI evidence requirement</th><th>22-column row column(s)</th></tr></thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC7.2 System Operations</td><td>Per-request monitoring + WORM export</td><td>request_id, cost_attribution_id</td></tr>
+<tr><td>SOC 2 Type II</td><td>CC6.1 Logical Access</td><td>Per-tenant isolation + per-tenant encryption-key</td><td>tenant_id, gpu_node_id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12 Logging</td><td>Per-request trace for high-risk AI systems</td><td>request_id, prompt_id, completion_id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14 Human Oversight</td><td>Per-request human-oversight-approval</td><td>downstream_state_change_flag</td></tr>
+<tr><td>EU AI Act</td><td>Art. 50 Transparency</td><td>C2PA content-credentialing + cost attribution</td><td>cost_attribution_id, AI_Bill_of_Rights_eval_result</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d) GPAI training-data-summary</td><td>Per-fine-tune-corpus-clip + per-third-party-trained-on-corpus</td><td>fine_tune_corpus_clip_id, lora_adapter_id</td></tr>
+<tr><td>ISO 42001</td><td>§9.4 Performance evaluation</td><td>Per-ISO-42001-9.4-control-test result</td><td>ISO_42001_9_4_control_test</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4 AI-system-impact-assessment</td><td>Per-deployment-region + per-GPU-type impact</td><td>deployment_region, gpu_type</td></tr>
+<tr><td>GDPR</td><td>Art. 28 DPA</td><td>Per-tenant processor agreement + per-tenant encryption-key</td><td>tenant_id, gpu_cluster_id</td></tr>
+<tr><td>GDPR</td><td>Art. 32 Security of processing</td><td>Per-request encryption + per-tenant isolation</td><td>prompt_text_hash, completion_text_hash</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 Prompt Injection</td><td>Per-request prompt-injection-detection</td><td>OWASP_LLM_Top10_eval</td></tr>
+<tr><td>MITRE ATLAS</td><td>AML.T0051 LLM-Prompt-Injection</td><td>Per-request ATLAS evaluation</td><td>MITRE_ATLAS_eval</td></tr>
+</tbody>
+</table>
+
+<h2>6. 5-layer reference architecture (Together-AI-Cloud + Together-Fine-Tune + Audit-Log + Compliance-cross-walk + Customer-facing evidence)</h2>
+<ol>
+<li><strong>Layer 1 — Inference-API surface:</strong> Together-AI-Serverless-Inference + Together-AI-Dedicated-Endpoints + Together-AI-On-Demand + Together-AI-Async-Batch + Together-AI-Embeddings + Together-AI-Studio. Per-request row (1-28) populated at request entry.</li>
+<li><strong>Layer 2 — Fine-tuning surface:</strong> Together-Fine-Tune + per-fine-tune-job-id + per-fine-tune-corpus-clip + per-lora-adapter-id + per-lora-merge-id. Populates columns 14-17 of the row.</li>
+<li><strong>Layer 3 — GPU-cluster orchestration:</strong> Together-Compute + per-GPU-node-id + per-GPU-cluster-id + per-deployment-region + per-deployment-zone. Populates columns 18-21 of the row.</li>
+<li><strong>Layer 4 — Compliance cross-walk:</strong> Per-request SOC 2 CC7.2 + CC6.1 + EU AI Act Art. 12/14/50/53(d) + ISO 42001 §9.4/§6.1.4 + GDPR Art. 28/32 + OWASP LLM Top 10 LLM01/03/04/06 + MITRE ATLAS AML.T0051/T0024/T0010 + NIST AI RMF MEASURE evaluations. Populates columns 24-28.</li>
+<li><strong>Layer 5 — Customer-facing evidence:</strong> WORM-export pipeline + quarterly reconstruction drill + vendor-DD portal + Together-AI-Trust-Center + per-tenant audit-trail export. Surfaces all 28 columns to enterprise customers on demand.</li>
+</ol>
+
+<h2>7. Three-step closing — how Atlas delivers this in 48 hours for $500</h2>
+<ol>
+<li><strong>Hour 0-4:</strong> Run the 14-question buyer checklist against your current vendor-DD package, identify which of the 22-column join-table rows are present + which are missing.</li>
+<li><strong>Hour 4-32:</strong> Build a working <code>witnessed_export.py</code> that emits the 22-column row from your existing Together-AI audit log + Together-Fine-Tune metadata + Together-AI-Embeddings trace + Together-AI-Dedicated-Endpoint access log.</li>
+<li><strong>Hour 32-48:</strong> Run a quarterly reconstruction drill — pick a random request_id, follow it through the 22 columns to the downstream-state-change-flag, produce a 1-page audit-trail summary as the deliverable PDF.</li>
+</ol>
+<p><strong>Deliverable:</strong> A 22-column CSV export of one week's Together-AI-Serverless-Inference + Together-Fine-Tune activity for one Together-AI-Enterprise tenant + a 1-page audit-trail reconstruction PDF + the <code>witnessed_export.py</code> script under MIT license. <strong>Cost:</strong> $500 flat. <strong>Delivery:</strong> 48 hours from kickoff. <strong>Send the audit-trail gap that's slowing your deal-cycle to atlas@talonforge.com and the tailored Loom is on its way.</strong></p>
+
+</article>
+</body>
+</html>
