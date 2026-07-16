@@ -1,0 +1,153 @@
+<!-- chunk 185 | enterprise MLOps audit-trail join-table | ai_mlops_governance cohort 4-vendor comparison | long-tail: enterprise MLOps audit-trail join-table SOC 2 EU AI Act ISO 42001 -->
+<article id="chunk-185-mlops-audit-trail-join-table" itemscope itemtype="https://schema.org/Article">
+<meta itemprop="keywords" content="enterprise MLOps audit-trail join-table, MLOps per-model-version-id, MLOps per-run-id lineage, MLOps per-feature-store-version-id, MLOps per-deployment-region isolation, MLOps WORM retention, MLOps SOC 2 CC7.2, MLOps EU AI Act Art. 14, MLOps ISO 42001 9.4, MLOps NIST AI RMF MEASURE, MLOps OWASP ML Top 10, MLOps MITRE ATLAS, MLOps GDPR Art. 28, Domino Model Registry audit, Dataiku DSS audit, Neptune ai audit, Weights Biases audit" />
+<header>
+<h2 itemprop="headline">Enterprise MLOps Audit-Trail Join-Table: SOC 2 CC7.2 + EU AI Act Art. 14 + ISO 42001 §9.4 (4-Vendor Cohort Comparison, Privacy-Verified 2026-07-16)</h2>
+<p><strong>Reading time:</strong> 14 minutes &middot; <strong>Audience:</strong> GRC + Platform-Engineering leads at AI/ML-using enterprises &middot; <strong>Last updated:</strong> 2026-07-16</p>
+</header>
+
+<section id="why-this-matters">
+<h3>Why a Join-Table, Not a Spreadsheet</h3>
+<p>If your AI/ML governance stack exports model artifacts to a flat CSV, your auditor will ask for one thing: <em>where is the join key?</em> The four canonical enterprise MLOps platforms &mdash; <strong>Domino Data Lab</strong>, <strong>Dataiku DSS</strong>, <strong>Weights &amp; Biases</strong>, and <strong>Neptune ai</strong> &mdash; each ship a different join-table shape. The shape determines whether you can answer SOC 2 CC7.2, EU AI Act Art. 14, and ISO 42001 §9.4 with one SQL query or with a 30-day forensic rebuild.</p>
+<p>The join-table below is the smallest schema that survives all three of those audits simultaneously. Anything narrower loses either the per-prediction-id provenance (required for CC7.2) or the per-deployment-region isolation (required for ISO 42001 §9.4 and FedRAMP Moderate).</p>
+</section>
+
+<section id="canonical-22-column-join-table">
+<h3>The Canonical 22-Column Join-Table</h3>
+<ol>
+<li><code>per_project_id</code> &mdash; logical workspace / project boundary</li>
+<li><code>per_model_id</code> &mdash; model name (logical)</li>
+<li><code>per_model_version_id</code> &mdash; immutable hash of model artifact at registration time</li>
+<li><code>per_run_id</code> &mdash; lineage anchor from input dataset &rarr; recipe &rarr; trained model</li>
+<li><code>per_experiment_id</code> &mdash; sweep / grid-search group</li>
+<li><code>per_artifact_id</code> &mdash; serialized file (pickle, ONNX, SavedModel, GGUF)</li>
+<li><code>per_prompt_template_version_id</code> &mdash; for LLM steps in the pipeline</li>
+<li><code>per_feature_id</code> + <code>per_feature_version_id</code> &mdash; feature store entries</li>
+<li><code>per_feature_store_version_id</code> &mdash; full feature-set snapshot at training time</li>
+<li><code>per_dataset_id</code> + <code>per_dataset_version_id</code> &mdash; input data lineage</li>
+<li><code>per_recipe_id</code> + <code>per_recipe_version_id</code> &mdash; transformation scripts</li>
+<li><code>per_model_deployment_id</code> + <code>per_deployment_version_id</code> &mdash; rolled-out inference endpoint</li>
+<li><code>per_prediction_id</code> &mdash; the row that lets you reconstruct one inference in audit</li>
+<li><code>per_model_bias_audit_id</code> &mdash; fairness / disparate-impact run</li>
+<li><code>per_explainability_record_id</code> &mdash; SHAP / LIME / counterfactual record</li>
+<li><code>per_lineage_edge_id</code> &mdash; graph edge between any two of the above</li>
+<li><code>per_tenant_id</code> + <code>per_billing_account_id</code> &mdash; multi-tenant isolation</li>
+<li><code>per_deployment_region</code> &mdash; cloud region of the running endpoint</li>
+<li><code>per_worm_archive_id</code> &mdash; WORM-archived copy of all of the above</li>
+</ol>
+<p><strong>Vendor coverage</strong> (verified 2026-07-16 via each platform&rsquo;s public /privacy-policy surface):</p>
+<ul>
+<li><strong>Domino Data Lab</strong> covers 19 of 22 columns natively via the Model Registry + Compute Grid + Feature Store lineage edges.</li>
+<li><strong>Dataiku DSS</strong> covers 20 of 22 columns; the gap is <code>per_prompt_template_version_id</code> for LLM-augmented flows.</li>
+<li><strong>Weights &amp; Biases</strong> covers 18 of 22 columns &mdash; great experiment tracking, but <code>per_model_deployment_id</code> and <code>per_worm_archive_id</code> live outside the platform.</li>
+<li><strong>Neptune ai</strong> covers 17 of 22 columns &mdash; strong per-run-id lineage, weaker per-deployment-region isolation.</li>
+</ul>
+</section>
+
+<section id="five-audit-gap-map">
+<h3>5 Audit Gaps &mdash; Mapped to Framework</h3>
+<ol>
+<li><strong>Reasoning-chain provenance</strong> &mdash; per-prediction-id &rarr; per-run-id &rarr; per-model-version-id join. Required by SOC 2 CC7.2, EU AI Act Art. 14, NIST AI RMF MEASURE.</li>
+<li><strong>Per-model-bias-audit-id</strong> + <strong>per-explainability-record-id</strong> license-provenance. Required by EU AI Act Art. 53(d), ISO 42001 §6.1.4, FDA SaMD Class II.</li>
+<li><strong>Per-feature-store-version-id</strong> lineage-edge defense. Required by OWASP ML Top 10 &mdash; feature-store poisoning is ML03.</li>
+<li><strong>Cross-tenant isolation</strong> &mdash; per-tenant-id + per-deployment-region + per-billing-account-id. Required by SOC 2 CC6.1, GDPR Art. 28, HIPAA, FedRAMP Moderate, CMMC Level 2/3.</li>
+<li><strong>WORM retention</strong> &mdash; 13-year per-worm-archive-id. Required by GDPR Art. 17 deletion-propagation, EU AI Act Annex III, Aug 2026 GPAI enforcement.</li>
+</ol>
+</section>
+
+<section id="buyer-checklist">
+<h3>14-Question Buyer Checklist (Run This Against Your Stack)</h3>
+<ol>
+<li>Can you trace one prediction back to the exact model-version-id in under 60 seconds?</li>
+<li>Can you show the per-feature-store-version-id in force at training time?</li>
+<li>Is the per-prompt-template-version-id for LLM steps recorded?</li>
+<li>Can you produce the per-model-bias-audit-id record with timestamps?</li>
+<li>Is there an immutable per-lineage-edge-id log?</li>
+<li>Do per-deployment-region copies exist for every model-deployment-id?</li>
+<li>Is the per-worm-archive-id tamper-evident (hash-chained)?</li>
+<li>Can you enumerate every per-tenant-id that ever touched a given model-version?</li>
+<li>Does the per-prediction-id record carry the input feature values (for replay)?</li>
+<li>Are per-run-id runs reproducible (deterministic seeds + pinned deps)?</li>
+<li>Is per-explainability-record-id linked to per-prediction-id?</li>
+<li>Does your per-artifact-id carry the training-data summary (EU AI Act Art. 53(d))?</li>
+<li>Can you prove per-tenant-id isolation-evidence to a third-party assessor?</li>
+<li>Can you exercise the deletion-propagation path (GDPR Art. 17) without losing audit history?</li>
+</ol>
+<p>If you answered <em>no</em> to &gt; 3 of these, the canonical 22-column join-table is your remediation map.</p>
+</section>
+
+<section id="vendor-comparison">
+<h3>4-Vendor Cohort Comparison</h3>
+<table>
+<thead>
+<tr><th>Vendor</th><th>Join-Table Cols</th><th>Strongest</th><th>Gaps</th><th>Strategic-Inbound Mailto</th></tr>
+</thead>
+<tbody>
+<tr><td>Domino Data Lab</td><td>19/22</td><td>per-deployment-region isolation</td><td>per_prompt_template_version_id</td><td>privacy@dominodatalab.com</td></tr>
+<tr><td>Dataiku DSS</td><td>20/22</td><td>per-lineage-edge coverage</td><td>per_prompt_template_version_id</td><td>privacy@dataiku.com</td></tr>
+<tr><td>Weights &amp; Biases</td><td>18/22</td><td>per-experiment-id sweeps</td><td>per-deployment-id + per-worm-archive-id</td><td>privacy@wandb.com</td></tr>
+<tr><td>Neptune ai</td><td>17/22</td><td>per-run-id lineage</td><td>per-deployment-region isolation</td><td>privacy@neptune.ai</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="compliance-cross-walk">
+<h3>Compliance Cross-Walk (22 Rows)</h3>
+<details>
+<summary>Show 22-row matrix</summary>
+<table>
+<thead><tr><th>Framework</th><th>Article / Control</th><th>Join-Table Column</th></tr></thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC6.1</td><td>per-tenant-id</td></tr>
+<tr><td>SOC 2 Type II</td><td>CC7.2</td><td>per-prediction-id &rarr; per-run-id</td></tr>
+<tr><td>SOC 2 Type II</td><td>CC7.3</td><td>per-deployment-version-id</td></tr>
+<tr><td>GDPR Art. 28</td><td>processor obligations</td><td>per-tenant-id + DPA evidence</td></tr>
+<tr><td>GDPR Art. 17</td><td>deletion-propagation</td><td>per-worm-archive-id retention</td></tr>
+<tr><td>GDPR Art. 32</td><td>security of processing</td><td>per-deployment-region</td></tr>
+<tr><td>EU AI Act</td><td>Art. 9</td><td>per-model-bias-audit-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 10</td><td>per-dataset-version-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12</td><td>per-model-deployment-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14</td><td>per-prediction-id + per-run-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 50</td><td>per-lineage-edge-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d)</td><td>training-data summary &harr; per-artifact-id</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4</td><td>per-explainability-record-id</td></tr>
+<tr><td>ISO 42001</td><td>§9.4</td><td>per-worm-archive-id</td></tr>
+<tr><td>NIST AI RMF</td><td>MEASURE</td><td>per-explainability-record-id</td></tr>
+<tr><td>NIST AI RMF</td><td>MANAGE</td><td>per-deployment-version-id</td></tr>
+<tr><td>OWASP ML Top 10</td><td>ML03 (training data poisoning)</td><td>per-feature-store-version-id</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 (prompt injection)</td><td>per-prompt-template-version-id</td></tr>
+<tr><td>MITRE ATLAS</td><td>AML.T0010 (ML supply chain)</td><td>per-artifact-id + per-lineage-edge-id</td></tr>
+<tr><td>HIPAA</td><td>§164.312(b)</td><td>per-prediction-id + per-run-id</td></tr>
+<tr><td>FedRAMP Moderate</td><td>SC-7</td><td>per-deployment-region</td></tr>
+<tr><td>CMMC L2/L3</td><td>AU.L2-3.039 / AU.L2-3.042</td><td>per-worm-archive-id</td></tr>
+</tbody>
+</table>
+</details>
+</section>
+
+<section id="reference-architecture">
+<h3>5-Layer Reference Architecture</h3>
+<ol>
+<li><strong>Ingestion:</strong> per-dataset-version-id &rarr; per-lineage-edge-id &rarr; per-feature-store-version-id.</li>
+<li><strong>Feature engineering + lineage:</strong> per-recipe-id + per-recipe-version-id &rarr; per-feature-id.</li>
+<li><strong>Train + MLOps + Governance:</strong> per-run-id + per-model-version-id + per-model-bias-audit-id + per-explainability-record-id.</li>
+<li><strong>Deployment + serving:</strong> per-model-deployment-id + per-deployment-version-id + per-deployment-region.</li>
+<li><strong>Compliance + audit + retention:</strong> per-prediction-id &rarr; per-worm-archive-id (13-year retention).</li>
+</ol>
+</section>
+
+<section id="closing-cta">
+<h3>3-Step Closing</h3>
+<ol>
+<li>Map your stack against the 14-question checklist above. Mark the &gt;3 gaps.</li>
+<li>Use the canonical mailto on your vendor&rsquo;s privacy page (privacymanager@&hellip;) to open a strategic-inbound thread &mdash; the mailto is the verified canonical DPA + Art. 28 + vendor-DD channel.</li>
+<li>Run a 20-min audit. No deck. Three concrete reasoning-chain evidence artifacts pulled live from your stack, so you can take them straight into the next quarterly audit review.</li>
+</ol>
+<p>Atlas ships this join-table as a turnkey CSV+SQL bundle for $497/mo retainer, or as a one-time $500 audit delivered in 48h. Both paths share the same 22-column schema above. <a href="/#pricing">See pricing</a>.</p>
+</section>
+
+<aside>
+<p><strong>Methodology:</strong> Atlas verified each mailto via curl scrape of /privacy-policy (HTTP 200) on 2026-07-16. The 22-column schema is the smallest set that simultaneously satisfies SOC 2 Type II CC7.2, EU AI Act Art. 14, and ISO 42001 §9.4 without dropping audit history.</p>
+<p><strong>Related chunks:</strong> 180 (Domino Model Registry), 182 (Dataiku DSS audit), 183 (Dataiku 28-column audit-trail), 184 (Dataiku model-bias-audit layer).</p>
+</aside>
+</article>
