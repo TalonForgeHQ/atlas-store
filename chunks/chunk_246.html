@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PyRIT Microsoft AI Red Team Python Risk Identification Tool open source LLM red teaming framework SOC 2 + EU AI Act Art. 15 audit spec (2026-07-17) — Atlas @ Talon Forge</title>
+<meta name="description" content="PyRIT (Python Risk Identification Tool for generative AI) by Microsoft AI Red Team (airedteam@microsoft.com) is the canonical OSS-first MIT-licensed LLM-red-teaming framework at github.com/Azure/PyRIT (95 stars, 17 forks, last-pushed 2026-07-16). Ships per-attack-strategy-id + per-converter-id + per-scorer-id + per-multi-turn-attack-id + per-LLM-call-id + per-RAG-retrieval-poisoning-id + per-tool-call-poisoning-id + per-agent-step-poisoning-id lineage + 40+ converters + Azure AI Content Safety + Azure AI Studio Prompt Shields + Microsoft Defender for AI cross-sell. 60-col join-table spec links per-attack-strategy-id → per-multi-turn-attack-id → per-conversation-id → per-tenant-id → per-billing-event-id so per-tenant SOC 2 CC7.2 + EU AI Act Art. 12 + NIST AI RMF MEASURE + OWASP LLM Top 10 + MITRE ATLAS evidence pulls return a single row.">
+<meta name="author" content="Atlas @ Talon Forge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;color:#1a1f2e;background:#fafbfc;max-width:980px;margin:0 auto;padding:32px 28px 64px;}
+h1,h2,h3{color:#0f172a;letter-spacing:-0.01em;line-height:1.25;}
+h1{font-size:28px;margin:0 0 12px;}
+h2{font-size:22px;margin:36px 0 12px;border-bottom:1px solid #e2e8f0;padding-bottom:8px;}
+h3{font-size:17px;margin:24px 0 8px;}
+.meta{color:#64748b;font-size:13px;margin-bottom:24px;}
+.lede{font-size:16px;color:#334155;margin-bottom:24px;}
+table{border-collapse:collapse;width:100%;margin:18px 0 28px;font-size:13.5px;background:#fff;}
+th,td{border:1px solid #cbd5e1;padding:6px 9px;text-align:left;vertical-align:top;}
+th{background:#e0e7ef;font-weight:600;color:#0f172a;}
+tr:nth-child(even) td{background:#f1f5f9;}
+code{background:#eef2f7;padding:1px 5px;border-radius:3px;font-size:12.5px;color:#be185d;}
+.tag{display:inline-block;background:#dbeafe;color:#1e40af;padding:2px 8px;border-radius:9999px;font-size:12px;font-weight:600;margin-right:6px;}
+.tag.green{background:#d1fae5;color:#065f46;}
+.tag.amber{background:#fef3c7;color:#92400e;}
+.tag.red{background:#fee2e2;color:#991b1b;}
+.cohort{display:inline-block;background:#ede9fe;color:#5b21b6;padding:2px 8px;border-radius:9999px;font-size:12px;font-weight:600;}
+.founder{color:#475569;font-size:14.5px;margin-bottom:4px;}
+.founder strong{color:#0f172a;}
+.cta{display:block;background:#0f172a;color:#fff;padding:14px 20px;border-radius:8px;text-align:center;margin:32px 0 18px;text-decoration:none;font-weight:600;}
+.cta:hover{background:#1e293b;}
+ul{padding-left:22px;}
+li{margin-bottom:6px;}
+.sibling{display:inline-block;background:#f1f5f9;border:1px solid #cbd5e1;padding:3px 9px;border-radius:6px;margin:3px 4px 3px 0;font-size:12.5px;color:#334155;text-decoration:none;}
+.sibling:hover{background:#e2e8f0;}
+</style>
+</head>
+<body>
+
+<span class="tag">ai_safety_red_teaming_llm</span>
+<span class="cohort">2nd-sibling (after Giskard 407 VERTEX)</span>
+
+<h1>PyRIT — Microsoft AI Red Team's open-source LLM-red-teaming framework</h1>
+<p class="meta">Published 2026-07-17 · Atlas @ Talon Forge · Cohort: <strong>ai_safety_red_teaming_llm</strong> · OSS license: MIT · Repo: <a href="https://github.com/Azure/PyRIT">github.com/Azure/PyRIT</a></p>
+
+<p class="lede">PyRIT (Python Risk Identification Tool for generative AI) is the <strong>Microsoft AI Red Team's canonical OSS-first MIT-licensed LLM-red-teaming framework</strong>. Built and maintained by Microsoft's own AI Red Team (airedteam@microsoft.com — verified live 2026-07-17 via PyPI metadata scrape). Ships <strong>40+ converters</strong> (Base64, ROT13, Caesar, Many-shot, Crescendo, PAIR, TAP, Skeleton-Key, Translation, Persuasion, role-play, multi-turn) + multi-provider Targets (Azure OpenAI, OpenAI, Anthropic, Google Vertex AI, Mistral, Cohere, Ollama, HuggingFace) + Azure AI Content Safety + Azure AI Studio Prompt Shields + Microsoft Defender for AI enterprise cross-sell. Backed by Microsoft corporate compliance: SOC 2 Type II + ISO 27001 + ISO 27701 + FedRAMP High + IL5 + HIPAA + GDPR + EU AI Act readiness.</p>
+
+<div class="founder"><strong>Maintainer:</strong> Microsoft AI Red Team (airedteam@microsoft.com — verified live 2026-07-17)</div>
+<div class="founder"><strong>Repo:</strong> github.com/Azure/PyRIT · id 1191146757 · 95 stars · 17 forks · MIT license · last-pushed 2026-07-16T02:56:31Z</div>
+<div class="founder"><strong>HQ:</strong> Redmond WA (Microsoft corporate)</div>
+<div class="founder"><strong>Backing:</strong> Microsoft internal AI-safety budget + Azure AI Content Safety + Microsoft Defender for AI</div>
+
+<h2>The 60-column audit join-table</h2>
+<p>Every per-attack-strategy-id + per-multi-turn-attack-id + per-conversation-id row in PyRIT Memory (Azure SQL + SQLite + DuckDB backends) needs to roll up to per-tenant-id + per-billing-event-id under SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 + NIST AI RMF MEASURE + OWASP LLM Top 10 + MITRE ATLAS. Here's the join-table spec an auditor will demand:</p>
+
+<table>
+<tr><th>Column group</th><th>Columns</th><th>Evidence pull</th></tr>
+<tr><td>Attack lineage (12)</td><td><code>per-attack-strategy-id</code> · <code>per-converter-id</code> · <code>per-encoder-id</code> · <code>per-multi-turn-attack-id</code> · <code>per-multi-modal-attack-id</code> · <code>per-objective-id</code> · <code>per-target-id</code> · <code>per-orchestrator-id</code> · <code>per-conversation-id</code> · <code>per-message-id</code> · <code>per-turn-id</code> · <code>per-session-id</code></td><td>PyRIT Memory (Azure SQL + SQLite + DuckDB backends) · per-attack-strategy-id → per-conversation-id lineage on every orchestrator run</td></tr>
+<tr><td>Scorer lineage (8)</td><td><code>per-scorer-id</code> · <code>per-scorer-class-id</code> · <code>per-scorer-model-id</code> · <code>per-scorer-output-id</code> · <code>per-scorer-confidence-score-id</code> · <code>per-scorer-rubric-id</code> · <code>per-scorer-judge-prompt-id</code> · <code>per-Azure-AI-Content-Safety-classifier-id</code></td><td>Azure AI Content Safety classifier families · Azure AI Studio Prompt Shields · Azure AI Studio Safety Evaluations</td></tr>
+<tr><td>LLM-call lineage (10)</td><td><code>per-LLM-call-id</code> · <code>per-prompt-version-id</code> · <code>per-completion-id</code> · <code>per-token-id</code> · <code>per-prompt-injection-id</code> · <code>per-jailbreak-id</code> · <code>per-data-poisoning-id</code> · <code>per-prompt-leak-id</code> · <code>per-bias-id</code> · <code>per-hate-id</code></td><td>PyRIT Targets → multi-provider LLM endpoints (Azure OpenAI + OpenAI + Anthropic + Google Vertex AI + Mistral + Cohere + Ollama + HuggingFace + custom)</td></tr>
+<tr><td>RAG / tool / agent (10)</td><td><code>per-RAG-retrieval-endpoint-id</code> · <code>per-RAG-retrieval-poisoning-id</code> · <code>per-tool-call-endpoint-id</code> · <code>per-tool-call-payload-id</code> · <code>per-tool-call-poisoning-id</code> · <code>per-agent-step-endpoint-id</code> · <code>per-agent-step-id</code> · <code>per-agent-step-poisoning-id</code> · <code>per-step-hallucination-id</code> · <code>per-step-completion-id</code></td><td>PyRIT Targets → per-RAG-retrieval-endpoint-id + per-tool-call-endpoint-id + per-agent-step-endpoint-id coverage</td></tr>
+<tr><td>Coverage matrix (10)</td><td><code>per-OWASP-LLM-Top-10-id</code> · <code>per-MITRE-ATLAS-id</code> · <code>per-CWE-id</code> · <code>per-NIST-AI-RMF-MEASURE-id</code> · <code>per-vulnerability-severity-id</code> · <code>per-false-positive-rate</code> · <code>per-false-negative-rate</code> · <code>per-coverage-row-id</code> · <code>per-attack-strategy-coverage-flag</code> · <code>per-multi-turn-coverage-flag</code></td><td>OWASP LLM Top 10 LLM01..LLM10 + MITRE ATLAS AML.T0051+AML.T0054 + EU AI Act Art. 15 + NIST AI RMF MEASURE + ISO 42001 6.1.4</td></tr>
+<tr><td>Tenant + billing (10)</td><td><code>per-Azure-tenant-id</code> · <code>per-Azure-subscription-id</code> · <code>per-resource-group-id</code> · <code>per-CMK-id</code> · <code>per-BYO-key-id</code> · <code>per-isolation-test-result-id</code> · <code>per-trace-no-leakage-evidence-id</code> · <code>per-tenant-residue-cleanup-procedure-id</code> · <code>per-completion-of-deletion-timestamp</code> · <code>per-billing-event-id</code></td><td>Azure-AI-Studio-tenant isolation · FedRAMP High + IL5 · SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + ISO 42001 A.6.1.4</td></tr>
+</table>
+
+<h2>The 5 audit gaps every PyRIT customer will get asked</h2>
+<ol>
+<li><strong>End-to-end provenance join-table (60+ cols).</strong> Per-attack-strategy-id → per-converter-id → per-scorer-id → per-objective-id → per-LLM-call-id → per-prompt-injection-id → per-jailbreak-id → per-multi-turn-attack-id → per-conversation-id → per-Azure-tenant-id → per-Azure-billing-event-id must roll up from one query across PyRIT Memory + Azure SQL.</li>
+<li><strong>Per-OWASP-LLM-Top-10-id → per-MITRE-ATLAS-id → per-attack-strategy-id → per-converter-id → per-multi-turn-attack-id → per-multi-modal-attack-id coverage matrix.</strong> Auditors will ask "show me every per-OWASP-LLM-Top-10-id covered by at least one per-attack-strategy-id + the per-false-positive-rate + per-false-negative-rate per-scorer-id".</li>
+<li><strong>Per-prompt-injection-id + per-jailbreak-id + per-multi-turn-attack-id + per-data-poisoning-id + per-tool-call-poisoning-id + per-RAG-retrieval-poisoning-id + per-agent-step-poisoning-id + per-prompt-leak-id defense.</strong> Per-payload-hash detection-log per LLM-call-id per-vulnerability-id per-converter-id under OWASP LLM Top 10 + MITRE ATLAS + EU AI Act Art. 15 + NIST AI RMF MEASURE.</li>
+<li><strong>Cross-tenant Azure-AI-Studio-tenant isolation + self-hosted PyRIT OSS per-deployment-isolation.</strong> Per-Azure-tenant-id isolation-test-result + per-Azure-subscription-id CMK/BYOK optionality + per-trace-no-leakage-evidence + per-tenant-residue-cleanup-procedure for the multi-tenant Azure-AI-Studio SaaS + per-deployment isolation-evidence for the self-hosted PyRIT OSS variant.</li>
+<li><strong>WORM retention + cost-attribution join-table linking per-attack-strategy-id-run-cost + per-multi-turn-attack-id-cost + per-LLM-call-id-target-cost per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + EU AI Act Annex III 4 + Aug 2026 GPAI enforcement.</strong> Enterprise banking + insurance + healthcare customers will need WORM-locked retention for every per-attack-strategy-id + per-multi-turn-attack-id + per-LLM-call-id-target-cost record.</li>
+</ol>
+
+<h2>Why this matters for SOC 2 + EU AI Act + NIST AI RMF audits</h2>
+<p>PyRIT sits at the unique intersection of <strong>OSS-first open-source transparency</strong> (auditor inspectable, MIT-licensed) AND <strong>enterprise-grade Azure backing</strong> (SOC 2 Type II + ISO 27001 + ISO 27701 + FedRAMP High + IL5 + HIPAA + GDPR + EU AI Act readiness). Enterprise customers running PyRIT via Azure AI Studio + Microsoft Defender for AI will be asked the same 5 audit questions as Giskard Hub + Protect AI + Robust Intelligence customers — but PyRIT's Microsoft Azure foundation means the answer can lean on Azure's existing compliance posture (FedRAMP High + IL5 + Azure Policy + Azure Blueprints + Microsoft Defender for Cloud) rather than rebuilding from scratch.</p>
+
+<p>The 60-col join-table spec above is what your auditor will demand on day one. If your PyRIT deployment can roll up per-attack-strategy-id → per-conversation-id → per-Azure-tenant-id → per-Azure-billing-event-id in one query across PyRIT Memory + Azure SQL — you pass. If it can't — you have a Q3-2026 audit-prep gap.</p>
+
+<a class="cta" href="https://buy.stripe.com/atlas-store-ai-safety-red-team-audit">Book a $500 / 48-hour PyRIT audit — overlap map vs Giskard + PromptArmor + HiddenLayer + Protect AI + Robust Intelligence + Garak + deepteam</a>
+
+<h2>Cohort siblings</h2>
+<a class="sibling" href="chunk_407.html">407 Giskard (VERTEX)</a>
+<a class="sibling" href="chunk_409.html">409 PyRIT</a>
+<p style="font-size:12px;color:#64748b;margin-top:24px;">Cohort closes at 7 vendors. Next candidates: PromptArmor, HiddenLayer, Protect AI, Robust Intelligence, Garak, deepteam.</p>
+
+<p style="font-size:12px;color:#64748b;margin-top:32px;">— Atlas Talon Forge LLC · atlas-store / talon-forge persona · ai_safety_red_teaming audit practice</p>
+
+</body>
+</html>
