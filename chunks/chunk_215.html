@@ -16,7 +16,58 @@
 
 <section id="catch-side-hustle-freelancer-1099-schedule-c-lineage">
 <h2>1. Catch Side Hustle + Freelancer + 1099 + Schedule C lineage (45+ columns)</h2>
-<p>Catch ships the canonical side-hustle-first + freelancer-first + 1099 + Schedule C bookkeeping surface in the bookkeeping_ai_ops cohort. The 45+ column per-transaction-id + per-categorization-id + per-categorization-confidence-score-id + per-bookkeeper-handoff-id + per-bookkeeper-override-id + per-rollback-id + per-tax-deduction-id + per-tax-deduction-confidence-score-id + per-tax-deduction-rule-id + per-side-hustle-income-id + per-1099-MISC-id + per-1099-NEC-id + per-1099-K-id + per-receipt-id + per-receipt-OCR-token-id + per-receipt-line-item-id + per-categorization-event-id + per-categorization-rule-version-id + per-ML-model-version-id + per-ML-model-training-event-id + per-ML-prediction-id + per-human-feedback-id + per-active-learning-loop-id + per-mileage-event-id + per-mileage-trip-id + per-mileage-IRS-rate-version-id + per-per-diem-event-id + per-catchwork-payroll-event-id + per-contractor-1099-NEC-id + per-self-employment-tax-event-id + per-quarterly-estimated-tax-id + per-quarterly-estimated-tax-deadline-id + per-schedule-c-export-id + per-schedule-c-line-item-id + per-bank-feed-id + per-bank-feed-poisoning-detection-signal-id + per-prompt-injection-detection-signal-id + per-tenant-id + per-tenant-KMS-key-id + per-VPC-peering-id + per-SSO-SAML-OIDC-config-id + per-SCIM-provisioning-id + per-audit-log-export-id + per-data-residency-region + per-cross-border-data-transfer-mechanism + per-customer-tenant-isolation-flag + per-zero-retention-flag + per-BYOK-key-id + per-customer-opt-out-of-training-flag join-table no other bookkeeping_ai_ops vendor has at production scale. Catch's transaction ledger pairs with the AI categorization model + the tax deduction identification event + the bookkeeper handoff event + the side-hustle income tracking event + the 1099-MISC / 1099-NEC / 1099-K income tracking events + the quarterly estimated tax payment event + the self-employment tax calculation event + the Schedule C export event to form a closed-loop side-hustle-income-to-categorization-to-tax-deduction-to-1099-to-Schedule-C-to-quarterly-estimated-tax-to-self-employment-tax reconstruction serving 100K+ side-hustlers + freelancers + 1099 contractors + solopreneurs + Etsy-sellers + Shopify-sellers + eBay-sellers + Uber-drivers + DoorDash-drivers + Lyft-drivers + Upwork-freelancers + Fiverr-freelancers + Toptal-freelancers + independent-contractors + side-hustle-income-recipients using Catch AI Bookkeeping + Catch Categorization + Catch Tax Deductions + Catch Side Hustle Tracking + Catch 1099 Tracking + Catch Receipts + Catch CatchWork + Catch Mileage + Catch Per Diem + Catch Self-Employment Tax + Catch Quarterly Estimated Tax + Catch Schedule C Export at scale.</p>
+<p>Catch ships the canonical side-hustle-first + freelancer-first + 1099 + Schedule C bookkeeping surface in the bookkeeping_ai_ops cohort. The 45+ column join-table no other bookkeeping_ai_ops vendor has at production scale:</p>
+<table>
+<thead><tr><th>#</th><th>Lineage column</th><th>Catch surface</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>per-transaction-id</td><td>Catch transaction ledger</td></tr>
+<tr><td>2</td><td>per-categorization-id</td><td>Catch AI categorization output</td></tr>
+<tr><td>3</td><td>per-categorization-confidence-score-id</td><td>Catch ML model confidence score per prediction</td></tr>
+<tr><td>4</td><td>per-bookkeeper-handoff-id</td><td>Catch-to-bookkeeper handoff event</td></tr>
+<tr><td>5</td><td>per-bookkeeper-override-id</td><td>Catch bookkeeper ML-suggestion override event</td></tr>
+<tr><td>6</td><td>per-rollback-id</td><td>Catch ML-suggestion rollback event</td></tr>
+<tr><td>7</td><td>per-tax-deduction-id</td><td>Catch tax deduction identification event</td></tr>
+<tr><td>8</td><td>per-tax-deduction-confidence-score-id</td><td>Catch ML tax-deduction confidence score</td></tr>
+<tr><td>9</td><td>per-tax-deduction-rule-id</td><td>Catch Schedule C tax-deduction-rule lineage</td></tr>
+<tr><td>10</td><td>per-side-hustle-income-id</td><td>Catch side-hustle income tracking event</td></tr>
+<tr><td>11</td><td>per-1099-MISC-id</td><td>Catch 1099-MISC income tracking event</td></tr>
+<tr><td>12</td><td>per-1099-NEC-id</td><td>Catch 1099-NEC self-employment income event</td></tr>
+<tr><td>13</td><td>per-1099-K-id</td><td>Catch 1099-K payment-processor income event</td></tr>
+<tr><td>14</td><td>per-receipt-id</td><td>Catch receipt OCR event</td></tr>
+<tr><td>15</td><td>per-receipt-OCR-token-id</td><td>Catch receipt OCR token lineage</td></tr>
+<tr><td>16</td><td>per-receipt-line-item-id</td><td>Catch receipt line-item extraction</td></tr>
+<tr><td>17</td><td>per-categorization-event-id</td><td>Catch categorization event log</td></tr>
+<tr><td>18</td><td>per-categorization-rule-version-id</td><td>Catch categorization rule version</td></tr>
+<tr><td>19</td><td>per-ML-model-version-id</td><td>Catch ML model version lineage</td></tr>
+<tr><td>20</td><td>per-ML-model-training-event-id</td><td>Catch ML model training event</td></tr>
+<tr><td>21</td><td>per-ML-prediction-id</td><td>Catch ML model prediction log</td></tr>
+<tr><td>22</td><td>per-human-feedback-id</td><td>Catch user feedback to ML model</td></tr>
+<tr><td>23</td><td>per-active-learning-loop-id</td><td>Catch ML active-learning retraining loop</td></tr>
+<tr><td>24</td><td>per-mileage-event-id</td><td>Catch Mileage tracking event</td></tr>
+<tr><td>25</td><td>per-mileage-trip-id</td><td>Catch individual trip tracking event</td></tr>
+<tr><td>26</td><td>per-mileage-IRS-rate-version-id</td><td>Catch IRS standard mileage rate version</td></tr>
+<tr><td>27</td><td>per-per-diem-event-id</td><td>Catch Per Diem tracking event</td></tr>
+<tr><td>28</td><td>per-catchwork-payroll-event-id</td><td>Catch CatchWork payroll / contractor payment event</td></tr>
+<tr><td>29</td><td>per-contractor-1099-NEC-id</td><td>Catch contractor 1099-NEC generation</td></tr>
+<tr><td>30</td><td>per-self-employment-tax-event-id</td><td>Catch self-employment tax calculation event</td></tr>
+<tr><td>31</td><td>per-quarterly-estimated-tax-id</td><td>Catch quarterly estimated tax payment</td></tr>
+<tr><td>32</td><td>per-quarterly-estimated-tax-deadline-id</td><td>Catch IRS quarterly deadline version</td></tr>
+<tr><td>33</td><td>per-schedule-c-export-id</td><td>Catch Schedule C export event</td></tr>
+<tr><td>34</td><td>per-schedule-c-line-item-id</td><td>Catch Schedule C line-item mapping</td></tr>
+<tr><td>35</td><td>per-bank-feed-id</td><td>Catch bank feed connection</td></tr>
+<tr><td>36</td><td>per-bank-feed-poisoning-detection-signal-id</td><td>Catch bank feed poisoning detection</td></tr>
+<tr><td>37</td><td>per-prompt-injection-detection-signal-id</td><td>Catch prompt-injection detection signal</td></tr>
+<tr><td>38</td><td>per-tenant-id</td><td>Catch multi-tenant isolation identifier</td></tr>
+<tr><td>39</td><td>per-tenant-KMS-key-id</td><td>Catch per-tenant KMS key</td></tr>
+<tr><td>40</td><td>per-customer-tenant-isolation-flag</td><td>Catch per-customer tenant isolation</td></tr>
+<tr><td>41</td><td>per-data-residency-region</td><td>Catch data residency region</td></tr>
+<tr><td>42</td><td>per-VPC-peering-id</td><td>Catch enterprise VPC peering</td></tr>
+<tr><td>43</td><td>per-SSO-SAML-OIDC-config-id</td><td>Catch SSO configuration</td></tr>
+<tr><td>44</td><td>per-SCIM-provisioning-id</td><td>Catch SCIM provisioning event</td></tr>
+<tr><td>45</td><td>per-audit-log-export-id</td><td>Catch audit log export</td></tr>
+</tbody>
+</table>
+<p>Catch's transaction ledger pairs with the AI categorization model + the tax deduction identification event + the bookkeeper handoff event + the side-hustle income tracking event + the 1099-MISC / 1099-NEC / 1099-K income tracking events + the quarterly estimated tax payment event + the self-employment tax calculation event + the Schedule C export event to form a closed-loop side-hustle-income-to-categorization-to-tax-deduction-to-1099-to-Schedule-C-to-quarterly-estimated-tax-to-self-employment-tax reconstruction serving 100K+ side-hustlers + freelancers + 1099 contractors + solopreneurs + Etsy-sellers + Shopify-sellers + eBay-sellers + Uber-drivers + DoorDash-drivers + Lyft-drivers + Upwork-freelancers + Fiverr-freelancers + Toptal-freelancers + independent-contractors + side-hustle-income-recipients using Catch AI Bookkeeping + Catch Categorization + Catch Tax Deductions + Catch Side Hustle Tracking + Catch 1099 Tracking + Catch Receipts + Catch CatchWork + Catch Mileage + Catch Per Diem + Catch Self-Employment Tax + Catch Quarterly Estimated Tax + Catch Schedule C Export at scale.</p>
 </section>
 
 <section id="catch-tax-deduction-rule-versioning-lineage">

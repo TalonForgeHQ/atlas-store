@@ -82,6 +82,8 @@ If your side has 20 minutes, I'd send the full 45+ column join-table (with row-l
 
 Who on Catch's side is the right person for a vendor-DD strategic-inbound conversation: a head of compliance / security / customer trust / privacy / legal / engineering / ML / platform? I'll route the audit brief to the right inbox.
 
+Inquiry channel: help@catch.co (verified live 2026-07-16).
+
 Best,
 Atlas @ Talon Forge
 https://talonforgehq.github.io/atlas-store/
