@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vapi Audit Checklist: SOC 2 + HIPAA + EU AI Act for 1B+ Call Surface (2026) | Atlas Store</title>
+<meta name="description" content="A 60-column per-call provenance join-table for SOC 2 Type II + HIPAA + EU AI Act audit of Vapi voice-agent platform + Vapi Composer + Vapi Monitoring + Vapi Simulations + Vapi fleet mode. 5 audit gaps + multi-region call-audio residency + prompt-injection defense + TCPA + voice-cloning detection + Composer self-improvement loop lineage.">
+<meta name="keywords" content="Vapi audit, Vapi voice agent audit, Vapi SOC 2, Vapi HIPAA, Vapi EU AI Act, Vapi Composer audit, Vapi Monitoring audit, Vapi Simulations audit, Vapi fleet mode audit, Vapi Series B audit, Vapi compliance, Vapi 1B calls audit, support@vapi.ai, infosec@vapi.ai, Jordan Dearsley">
+<meta name="author" content="Atlas — Talon Forge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Vapi Audit Checklist: SOC 2 + HIPAA + EU AI Act for 1B+ Call Surface (2026)">
+<meta property="og:description" content="60-column per-call provenance join-table for Vapi voice-agent platform SOC 2 / HIPAA / EU AI Act audit. 5 audit gaps. 1B+ call lineage. Composer self-improvement loop. From Atlas.">
+<meta property="og:type" content="article">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_225.html">
+<style>
+:root{--bg:#0a0a0a;--fg:#e6e6e6;--accent:#7df9ff;--muted:#9a9a9a;--card:#141414;--line:#2a2a2a;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'SF Mono',Menlo,Consolas,monospace;line-height:1.65;font-size:15px;padding:32px 24px;max-width:1200px;margin:0 auto}
+header{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:32px}
+h1{font-size:28px;color:var(--accent);letter-spacing:-0.5px;margin-bottom:8px;font-weight:600}
+h2{font-size:20px;color:var(--accent);margin:32px 0 12px;font-weight:600}
+h3{font-size:16px;color:var(--fg);margin:20px 0 8px;font-weight:600}
+p{margin-bottom:14px;color:var(--fg)}
+.subtitle{color:var(--muted);font-size:14px;margin-bottom:8px}
+.lede{background:var(--card);border-left:4px solid var(--accent);padding:16px 20px;margin:20px 0;border-radius:4px}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--card);color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;font-size:11px}
+tr:hover{background:rgba(125,249,255,0.04)}
+code{background:var(--card);color:var(--accent);padding:2px 6px;border-radius:3px;font-size:13px}
+.cta{display:inline-block;background:var(--accent);color:#000;padding:12px 20px;border-radius:4px;text-decoration:none;font-weight:600;margin-right:12px;margin-top:8px}
+.cta.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:24px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<p class="subtitle">Atlas Store · Audit Surface #225 · Voice AI Agent Audit Cohort</p>
+<h1>Vapi Audit Checklist — SOC 2 + HIPAA + EU AI Act for the 1B+ Call Surface</h1>
+<p class="subtitle">Vapi (vapi.ai) · Founder &amp; CEO: Jordan Dearsley · Series B May 2026 · 1M+ developers · 1B+ calls handled · Verified inbox: <code>support@vapi.ai</code> · Security: <code>infosec@vapi.ai</code></p>
+</header>
+
+<article>
+<div class="lede">
+<p>Vapi is the canonical developer-platform voice-AI orchestration surface — production phone agents + Composer + Monitoring + Simulations fleet mode. After Bland AI (189) and Retell AI (374), Vapi is the third sibling in the <strong>ai_voice_agents_orchestration</strong> cohort. Its scale (1B+ calls, 1M+ developers, enterprise fleet mode) forces the canonical per-call provenance join-table to handle Composer self-improvement loops, multi-region residency (EU/India/Brazil/UAE/Australia), and 12-state US AI-disclosure routing. Verified 2026-07-17 via <code>vapi.ai/privacy</code> (HTTP 200, 28KB) and <code>security.vapi.ai</code> (HTTP 200, 370KB).</p>
+</div>
+
+<h2>Vapi surface map</h2>
+<table>
+<thead><tr><th>Component</th><th>Function</th><th>Audit lineage hook</th></tr></thead>
+<tbody>
+<tr><td>Vapi voice-agent platform</td><td>Production phone agent runtime</td><td><code>per-call-id</code> + <code>per-agent-id</code></td></tr>
+<tr><td>Vapi Composer</td><td>Prompt + flow authoring + fleet scaffolding</td><td><code>per-prompt-version-id</code> + <code>per-script-version-id</code></td></tr>
+<tr><td>Vapi Monitoring</td><td>Live call observability + transcripts + dashboards</td><td><code>per-call-event-id</code> + <code>per-monitoring-snapshot-id</code></td></tr>
+<tr><td>Vapi Simulations</td><td>Synthetic-call test suite for agent hardening</td><td><code>per-simulation-run-id</code> + <code>per-scenario-id</code></td></tr>
+<tr><td>Fleet mode</td><td>Programmatic agent scaffolding (the Vapi homepage runs 15 voice agents across 5 languages)</td><td><code>per-fleet-id</code> + <code>per-locale-id</code></td></tr>
+<tr><td>Telephony integration</td><td>Inbound + outbound phone numbers, BYOC</td><td><code>per-telephony-call-leg-id</code> + <code>per-phone-number-id</code></td></tr>
+<tr><td>Self-improvement loop</td><td>Composer fine-tuning from production call signal</td><td><code>per-improvement-run-id</code> + <code>per-training-dataset-id</code></td></tr>
+<tr><td>Trust portal (security.vapi.ai)</td><td>SOC 2 + HIPAA + GDPR DPA + EU AI Act evidence</td><td><code>per-trust-doc-version-id</code></td></tr>
+</tbody>
+</table>
+
+<h2>The 60-column per-call provenance join-table (canonical)</h2>
+<table>
+<thead><tr><th>#</th><th>Column</th><th>Compliance frame</th><th>Vapi surface</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><code>per-call-id</code></td><td>SOC 2 CC7.2 (system operations monitoring)</td><td>Vapi call-record master-key</td></tr>
+<tr><td>2</td><td><code>per-account-id</code></td><td>SOC 2 CC6.1 (logical access)</td><td>Vapi account/workspace</td></tr>
+<tr><td>3</td><td><code>per-tenant-id</code></td><td>SOC 2 CC6.1 + GDPR Art. 28</td><td>Vapi tenant-isolation</td></tr>
+<tr><td>4</td><td><code>per-agent-id</code> + <code>per-assistant-id</code></td><td>SOC 2 CC7.2 + EU AI Act Art. 12</td><td>Vapi assistant-config</td></tr>
+<tr><td>5</td><td><code>per-prompt-version-id</code></td><td>SOC 2 CC8.1 + EU AI Act Art. 14</td><td>Vapi Composer prompt-store</td></tr>
+<tr><td>6</td><td><code>per-script-version-id</code> (conversation-design)</td><td>CA SB 1001 §3(a)(2)</td><td>Vapi Composer script</td></tr>
+<tr><td>7</td><td><code>per-model-id</code> (LLM provider + version)</td><td>EU AI Act Art. 53(d)</td><td>Vapi LLM-routing</td></tr>
+<tr><td>8</td><td><code>per-TTS-provider-id</code> + <code>per-TTS-voice-id</code></td><td>EU AI Act Art. 50 (transparency)</td><td>Vapi TTS-routing (ElevenLabs / Rime / OpenAI / Cartesia / etc.)</td></tr>
+<tr><td>9</td><td><code>per-STT-provider-id</code> + <code>per-STT-segment-id</code></td><td>EU AI Act Art. 10</td><td>Vapi STT-routing (Deepgram / AssemblyAI / etc.)</td></tr>
+<tr><td>10</td><td><code>per-VAD-segment-id</code></td><td>EU AI Act Art. 15</td><td>Vapi turn-detection</td></tr>
+<tr><td>11</td><td><code>per-tool-call-id</code> + <code>per-tool-call-result-id</code></td><td>OWASP LLM04 + LLM06</td><td>Vapi function-call surface</td></tr>
+<tr><td>12</td><td><code>per-handoff-event-id</code> (transfer to human)</td><td>EU AI Act Art. 14 (human oversight) + OWASP LLM08</td><td>Vapi transfer-events</td></tr>
+<tr><td>13</td><td><code>per-recording-id</code> + <code>per-recording-storage-region</code></td><td>SOC 2 CC6.7 + HIPAA §164.312(b) + Schrems II</td><td>Vapi recording-store (S3/GCS/Azure)</td></tr>
+<tr><td>14</td><td><code>per-transcript-id</code></td><td>SOC 2 CC6.7 + HIPAA §164.514(b)</td><td>Vapi transcript-store</td></tr>
+<tr><td>15</td><td><code>per-call-summary-id</code> + <code>per-summary-model-version-id</code></td><td>EU AI Act Art. 12</td><td>Vapi post-call-summary</td></tr>
+<tr><td>16</td><td><code>per-CRM-write-id</code> (HubSpot / Salesforce / Zapier downstream)</td><td>SOC 2 CC7.3</td><td>Downstream CRM webhook-logs</td></tr>
+<tr><td>17</td><td><code>per-downstream-billing-id</code></td><td>SOC 2 CC7.4 + GLBA §501(b)</td><td>Downstream billing-stripe/etc</td></tr>
+<tr><td>18</td><td><code>per-VPC-peering-id</code></td><td>SOC 2 CC6.6</td><td>Vapi enterprise VPC-peering</td></tr>
+<tr><td>19</td><td><code>per-SSO-SAML-OIDC-id</code></td><td>SOC 2 CC6.1</td><td>Vapi SSO</td></tr>
+<tr><td>20</td><td><code>per-SCIM-provisioning-id</code></td><td>SOC 2 CC6.2</td><td>Vapi SCIM</td></tr>
+<tr><td>21</td><td><code>per-deployment-region</code> (us-east / us-west / eu-west / apac)</td><td>Schrems II + GDPR Art. 28 + India DPDP + Brazil LGPD</td><td>Vapi region-router</td></tr>
+<tr><td>22</td><td><code>per-telephony-provider-id</code> + <code>per-telephony-call-leg-id</code></td><td>TCPA §227 + 47 CFR §64.1200</td><td>Vapi telephony-leg</td></tr>
+<tr><td>23</td><td><code>per-phone-number-id</code></td><td>TCPA prior-express-consent</td><td>Vapi phone-number-pool</td></tr>
+<tr><td>24</td><td><code>per-TCPA-prior-express-consent-link-id</code></td><td>TCPA §227 + FCC 2023 order</td><td>Vapi consent-log</td></tr>
+<tr><td>25</td><td><code>per-AI-disclosure-script-version-id</code></td><td>CA SB 1001 §3(a)(2) + CO SB 24-205 + IL AIVIA + TX + NY + 7 others</td><td>Vapi disclosure-script registry</td></tr>
+<tr><td>26</td><td><code>per-jurisdiction-detection-id</code> (caller-state lookup)</td><td>State-AI-disclosure (12 states)</td><td>Vapi jurisdiction-router</td></tr>
+<tr><td>27</td><td><code>per-human-handoff-evidence-id</code></td><td>State-AI-disclosure (human-handoff)</td><td>Vapi handoff-log</td></tr>
+<tr><td>28</td><td><code>per-prompt-injection-detection-signal-id</code></td><td>OWASP LLM01 + EU AI Act Art. 15</td><td>Vapi guard-rails</td></tr>
+<tr><td>29</td><td><code>per-voice-cloning-detection-signal-id</code></td><td>FTC Voice Cloning Consumer Protection + FCC TCPA</td><td>Vapi voice-biometric surface</td></tr>
+<tr><td>30</td><td><code>per-wire-fraud-detection-signal-id</code></td><td>FBI + FTC voice-cloning-fraud guidance</td><td>Vapi fraud-signal</td></tr>
+<tr><td>31</td><td><code>per-PHI-flag</code></td><td>HIPAA §164.514(b)</td><td>Vapi PHI-tag</td></tr>
+<tr><td>32</td><td><code>per-recording-encryption-key-id</code> (CMK/BYOK)</td><td>HIPAA §164.312(a)(2)(iv)</td><td>Vapi KMS</td></tr>
+<tr><td>33</td><td><code>per-CRM-write-PHI-redaction-hook-id</code></td><td>HIPAA §164.514(b) min-necessary</td><td>Downstream CRM webhook-redaction</td></tr>
+<tr><td>34</td><td><code>per-GLBA-flag</code></td><td>GLBA §501(b)</td><td>Vapi GLBA-tag</td></tr>
+<tr><td>35</td><td><code>per-PCI-DSS-flag</code></td><td>PCI DSS 3.4</td><td>Vapi PCI-tag (collections + billing)</td></tr>
+<tr><td>36</td><td><code>per-FDCPA-flag</code></td><td>FDCPA §803(c)</td><td>Vapi FDCPA-tag (collections)</td></tr>
+<tr><td>37</td><td><code>per-cross-border-transfer-sccs-version-US-EU</code></td><td>Schrems II + EU-US DPF</td><td>Vapi SCCS</td></tr>
+<tr><td>38</td><td><code>per-tenant-KMS-key-id</code></td><td>SOC 2 CC6.1 + ISO 27001 A.8.22</td><td>Vapi KMS</td></tr>
+<tr><td>39</td><td><code>per-tenant-isolation-flag</code></td><td>SOC 2 CC6.1</td><td>Vapi tenant-isolation</td></tr>
+<tr><td>40</td><td><code>per-monitoring-snapshot-id</code></td><td>SOC 2 CC7.2</td><td>Vapi Monitoring</td></tr>
+<tr><td>41</td><td><code>per-simulation-run-id</code> + <code>per-scenario-id</code></td><td>EU AI Act Art. 9 (risk management)</td><td>Vapi Simulations</td></tr>
+<tr><td>42</td><td><code>per-improvement-run-id</code> + <code>per-training-dataset-id</code></td><td>EU AI Act Art. 10 (data governance) + Art. 53(d)</td><td>Composer self-improvement loop</td></tr>
+<tr><td>43</td><td><code>per-training-data-PHI-redaction-flag</code></td><td>HIPAA §164.514(b) min-necessary</td><td>Composer training-set guard</td></tr>
+<tr><td>44</td><td><code>per-call-event-id</code> + <code>per-call-event-type</code></td><td>SOC 2 CC7.2</td><td>Vapi call-event-stream</td></tr>
+<tr><td>45</td><td><code>per-fleet-id</code> + <code>per-locale-id</code></td><td>EU AI Act Art. 50 (transparency)</td><td>Vapi fleet-mode scaffolding</td></tr>
+<tr><td>46</td><td><code>per-deletion-event-id</code></td><td>GDPR Art. 17 + CCPA §1798.105</td><td>Vapi retention-enforcement</td></tr>
+<tr><td>47</td><td><code>per-WORM-retention-flag</code></td><td>FINRA 4511 + SEC 17a-4</td><td>Vapi audit-log-WORM</td></tr>
+<tr><td>48</td><td><code>per-audit-log-export-id</code> (S3/Splunk/Datadog)</td><td>SOC 2 CC7.2</td><td>Vapi audit-log-export</td></tr>
+<tr><td>49</td><td><code>per-breach-detection-event-id</code></td><td>SOC 2 CC7.4 + GDPR Art. 33</td><td>Vapi breach-detection</td></tr>
+<tr><td>50</td><td><code>per-API-key-id</code></td><td>SOC 2 CC6.1</td><td>Vapi API-key-store</td></tr>
+<tr><td>51</td><td><code>per-llm-call-message-id</code> (input + output)</td><td>OWASP LLM01 + LLM03 + LLM06</td><td>Vapi LLM-message-log</td></tr>
+<tr><td>52</td><td><code>per-TTS-segment-poisoning-detection-id</code></td><td>OWASP LLM01 + EU AI Act Art. 15</td><td>Vapi TTS-guard</td></tr>
+<tr><td>53</td><td><code>per-STT-segment-poisoning-detection-id</code></td><td>OWASP LLM01 + EU AI Act Art. 15</td><td>Vapi STT-guard</td></tr>
+<tr><td>54</td><td><code>per-telephony-input-voice-cloning-detection-id</code></td><td>FTC Voice Cloning Consumer Protection</td><td>Vapi telephony-input guard</td></tr>
+<tr><td>55</td><td><code>per-completion-token-id</code> + <code>per-prompt-token-id</code></td><td>OWASP LLM01 + LLM03 + EU AI Act Art. 53(d)</td><td>Vapi LLM-token-log</td></tr>
+<tr><td>56</td><td><code>per-downstream-tool-call-id</code> (webhook + CRM + scheduler)</td><td>OWASP LLM06 + SOC 2 CC7.3</td><td>Vapi outbound-tool-call</td></tr>
+<tr><td>57</td><td><code>per-account-MFA-challenge-id</code></td><td>OWASP LLM08 (impersonation)</td><td>Vapi account-MFA</td></tr>
+<tr><td>58</td><td><code>per-role-id</code> + <code>per-role-permission-id</code></td><td>SOC 2 CC6.1 + CC6.3</td><td>Vapi RBAC</td></tr>
+<tr><td>59</td><td><code>per-session-id</code></td><td>SOC 2 CC7.2</td><td>Vapi session</td></tr>
+<tr><td>60</td><td><code>per-deployment-id</code> + <code>per-deployment-version-id</code></td><td>SOC 2 CC8.1</td><td>Vapi deployment</td></tr>
+</tbody>
+</table>
+
+<h2>Vapi-specific compliance map</h2>
+<table>
+<thead><tr><th>Compliance frame</th><th>Vapi surface</th><th>Audit gap</th></tr></thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>Vapi trust portal security.vapi.ai + call-event-stream</td><td>per-call-id → per-improvement-run-id join-table</td></tr>
+<tr><td>HIPAA BAA</td><td>Vapi PHI-tag + Composer training-set guard</td><td>per-call-id PHI-flag + CMK/BYOK encryption</td></tr>
+<tr><td>GDPR DPA</td><td>Vapi region-router + EU-US DPF + per-deletion-event-id</td><td>per-call-id region-routing log + SCCS-version</td></tr>
+<tr><td>CCPA/CPRA</td><td>support@vapi.ai + privacy@vapi.ai</td><td>per-tenant-id data-subject-request workflow</td></tr>
+<tr><td>EU AI Act</td><td>Vapi Composer + Simulations + Monitoring</td><td>per-LLM-call-id + per-prompt-version-id poisoning detection</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>Vapi guard-rails (LLM01/03/04/06/08)</td><td>per-llm-call-message-id + per-tool-call-id defense</td></tr>
+<tr><td>MITRE ATLAS</td><td>Vapi telephony-input + STT-segment + TTS-segment</td><td>per-audio-frame-poisoning + per-telephony-input-voice-cloning</td></tr>
+<tr><td>NIST AI RMF</td><td>Vapi governance + Composer + Simulations</td><td>GOVERN + MAP + MEASURE + MANAGE functions</td></tr>
+<tr><td>TCPA + state-AI-disclosure</td><td>Vapi telephony + jurisdiction-router + disclosure-script</td><td>per-call-id TCPA + per-jurisdiction-detection-id + per-AI-disclosure-script-version-id</td></tr>
+<tr><td>FTC voice-cloning detection</td><td>Vapi voice-biometric + telephony-input-guard</td><td>per-voice-cloning-detection-signal-id</td></tr>
+<tr><td>India DPDP Act 2023</td><td>Vapi region-router (apac-south)</td><td>per-call-id data-fiduciary + consent-log</td></tr>
+<tr><td>Brazil LGPD Art. 33</td><td>Vapi region-router (sa-east)</td><td>per-call-id international-transfer-log</td></tr>
+<tr><td>UAE PDPL</td><td>Vapi region-router (me-central)</td><td>per-call-id cross-border-transfer-log</td></tr>
+</tbody>
+</table>
+
+<h2>The 5 audit gaps for Vapi</h2>
+<ol>
+<li><strong>End-to-end per-call provenance join-table</strong> — Vapi's call surface crosses Composer + Monitoring + Simulations + fleet mode + telephony + downstream CRM/billing. The 60-column join-table above is the canonical audit-trail surface for SOC 2 CC7.2 + HIPAA §164.312(b) + EU AI Act Art. 12 procurement review.</li>
+<li><strong>Composer self-improvement loop lineage</strong> — Vapi's Series B post names the self-improvement loop as a core engineering investment ("the agent that picks up the phone tomorrow is reliably better than the one that picked up the phone today"). The <code>per-improvement-run-id</code> + <code>per-training-dataset-id</code> + <code>per-training-data-PHI-redaction-flag</code> triple must be audit-trail-grade for HIPAA §164.514(b) min-necessary + EU AI Act Art. 10 data governance + Art. 53(d) model-card lineage.</li>
+<li><strong>Multi-region residency for the global cohort</strong> — The same Series B post names builders in India, China, Brazil, France, UAE, Pakistan, Australia. <code>per-call-id</code> + <code>per-deployment-region</code> + <code>per-recording-storage-region</code> + <code>per-cross-border-transfer-sccs-version-US-EU</code> must satisfy Schrems II + GDPR Art. 28 + India DPDP Act 2023 + Brazil LGPD Art. 33 + UAE PDPL.</li>
+<li><strong>State-by-state US AI-disclosure (12 states)</strong> — Vapi's enterprise customers span all 12 disclosure-active states. <code>per-jurisdiction-detection-id</code> + <code>per-AI-disclosure-script-version-id</code> + <code>per-human-handoff-evidence-id</code> must satisfy CA SB 1001 §3(a)(2) + Colorado SB 24-205 + Illinois AIVIA + Texas + NY + 7 others.</li>
+<li><strong>Voice-cloning + telephony-input fraud detection at scale</strong> — 1B+ calls/year means the <code>per-voice-cloning-detection-signal-id</code> + <code>per-wire-fraud-detection-signal-id</code> + <code>per-telephony-input-voice-cloning-detection-id</code> surface must be SOC 2 CC7.2 + FTC Voice Cloning Consumer Protection + FBI voice-cloning-fraud guidance-grade at production scale.</li>
+</ol>
+
+<h2>Why Vapi is distinct in the cohort</h2>
+<p>Vapi is the ONLY platform in the <strong>ai_voice_agents_orchestration</strong> cohort that ships the full per-call-id → per-agent-id → per-prompt-version-id → per-script-version-id → per-model-id → per-TTS-provider-id → per-STT-provider-id → per-tool-call-id → per-handoff-event-id → per-recording-id → per-transcript-id → per-call-summary-id → per-monitoring-snapshot-id → per-simulation-run-id → per-improvement-run-id lineage at 1B+ calls/year scale. The Composer self-improvement loop + Monitoring + Simulations + fleet mode is the canonical <em>enterprise procurement-review surface</em> for SOC 2 Type II + HIPAA + EU AI Act + 12-state US AI-disclosure + multi-region residency.</p>
+
+<h2>Related audit surfaces</h2>
+<ul>
+<li><a href="/atlas-store/chunks/chunk_223.html" style="color:var(--accent)">Voice AI Agent Audit Checklist (SOC 2 + HIPAA + EU AI Act) — Retell, Bland, Vapi, Cognigy, Sierra</a></li>
+<li><a href="/atlas-store/chunks/chunk_224.html" style="color:var(--accent)">LiveKit Agents SDK Audit Checklist — WebRTC SFU + voice AI</a></li>
+<li><a href="/atlas-store/chunks/chunk_221.html" style="color:var(--accent)">Fathom Meeting Transcription Audit</a></li>
+<li><a href="/atlas-store/chunks/chunk_222.html" style="color:var(--accent)">Otter.ai Meeting Transcription Audit</a></li>
+<li><a href="/atlas-store/index.html" style="color:var(--accent)">Atlas Store home</a></li>
+</ul>
+
+<div style="margin:32px 0">
+<p><strong>Want this audit run on your Vapi deployment?</strong></p>
+<a href="/atlas-store/index.html#audit" class="cta">$500 / 48-hour fixed-fee audit</a>
+<a href="/atlas-store/index.html#retainer" class="cta secondary">$497/mo recurring evidence loop</a>
+</div>
+
+<footer>
+<p>Atlas Store · Audit Surface #225 · Last verified 2026-07-17 · Lead 377 Vapi · Verified inbox: <code>support@vapi.ai</code> · Security: <code>infosec@vapi.ai</code></p>
+<p>Founder &amp; CEO: Jordan Dearsley (per official Series B blog post vapi.ai/blog/series-b). HQ San Francisco CA. Founded 2020. Series B May 2026. 1M+ developers. 1B+ calls handled.</p>
+</footer>
+
+</article>
+</body>
+</html>
