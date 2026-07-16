@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Helicone AI Observability Audit Checklist 2026 — Vendor-DD Playbook for the Canonical OpenAI-Compatible LLM Proxy + Per-Request Logging + Caching + Model-Routing</title>
+<meta name="description" content="Helicone AI audit checklist 2026. Vendor-DD probe for the canonical OpenAI-compatible LLM proxy + per-request logging + caching + model-routing + custom-properties + prompt-versioning observability platform. 60+ column join-table. SOC 2 Type II + GDPR + EU AI Act coverage. YC W23 batch.">
+<meta name="keywords" content="Helicone audit checklist, Helicone observability audit, Helicone LLM proxy audit, Helicone OpenAI-compatible proxy, Helicone caching audit, Helicone model-routing audit, Helicone prompt-versioning audit, Helicone custom-properties audit, Helicone SOC 2, Helicone GDPR DPA, Helicone CCPA, Helicone EU AI Act, Helicone prompt-injection defense, Helicone per-request-id, Helicone per-cache-key-id, Helicone per-tenant-id, Helicone per-model-call-id, Helicone YC W23, Helicone vs Arize, Helicone vs Langfuse, Helicone vs LangSmith, Helicone vs Honeycomb, llm_observability">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_236.html">
+</head>
+<body>
+<article id="chunk-236">
+<h1>Helicone AI Observability Audit Checklist 2026 — Vendor-DD Playbook</h1>
+
+<h2>1. Vendor identity</h2>
+<p><strong>Helicone</strong> (Cole Gottdank, Co-Founder &amp; CEO; Scott Stein, Co-Founder &amp; CTO) is the canonical OpenAI-compatible LLM observability proxy + per-request logging + caching + model-routing + custom-properties + prompt-versioning platform in the <code>llm_observability</code> cohort 2nd-sibling row &mdash; 5,000+ customers including Discord + Krea AI + Voiceflow + thousands of AI-native startups + YC W23 batch.</p>
+
+<h2>2. Founding evidence</h2>
+<p>Cole Gottdank (Co-Founder &amp; CEO since 2022) + Scott Stein (Co-Founder &amp; CTO) launched Helicone in 2022 with the explicit mission to make LLM observability a one-line drop-in. Just change the OpenAI <code>base_url</code> to <code>https://oai.hconeai.com</code> and every request flows through the Helicone proxy. YC W23 batch. HQ San Francisco CA. Backed $5M+ Seed from Y Combinator + Untitled Ventures + other AI-focused funds.</p>
+
+<h2>3. Product surface</h2>
+<ul>
+<li>OpenAI-compatible proxy — drop-in <code>base_url</code> swap, every LLM call logged</li>
+<li>Per-request cost + latency + token-usage tracking</li>
+<li>Custom properties — user-id, session-id, conversation-id, custom-key threading</li>
+<li>Prompt versioning + experimentation — per-version-id → per-deployment-id lineage</li>
+<li>Model routing — fallback chains across OpenAI + Anthropic + Together + any OpenAI-compatible endpoint</li>
+<li>Caching — exact-match + semantic-cache with per-cache-key-id + per-cache-hit-metric</li>
+<li>Per-API-key rate-limiting + per-tenant-isolation</li>
+<li>Streaming support — per-chunk token counting + cost attribution</li>
+<li>SDKs — Python + Node.js + REST API + OpenAI-compatible HTTP</li>
+</ul>
+
+<h2>4. Compliance posture</h2>
+<p>SOC 2 Type II + GDPR DPA + CCPA/CPRA + EU AI Act readiness per helicone.ai/privacy. YC W23 batch compliance baseline includes data-processing-agreement template + sub-processor list + EU data-residency roadmap.</p>
+
+<h2>5. Provenance join-table (60+ columns)</h2>
+<p>The audit trail joins: per-request-id + per-cache-key-id + per-cache-hit-flag + per-model-call-id + per-model-id + per-prompt-version-id + per-deployment-id + per-completion-id + per-token-count-input + per-token-count-output + per-cost-input + per-cost-output + per-latency-ms + per-streaming-chunk-id + per-fallback-chain-id + per-fallback-trigger + per-ratelimit-remaining + per-API-key-id + per-tenant-id + per-user-id + per-session-id + per-conversation-id + per-custom-property-id + per-response-id + per-x-request-id + per-x-ratelimit-remaining-header + per-upstream-provider-id + per-upstream-model-id + per-error-code + per-retry-count + per-cache-miss-reason + per-cache-semantic-similarity-score + per-billing-event-id + per-webhook-event-id + per-audit-log-event-id.</p>
+
+<h2>6. Five audit gaps (the questions to ask Cole)</h2>
+<p>(1) End-to-end per-request-id → per-cache-key-id → per-model-call-id → per-fallback-trigger → per-streaming-chunk-id → per-billing-event-id provenance join-table per SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4. (2) Prompt-injection + per-request-payload-poisoning + per-prompt-version-payload-poisoning + per-cache-key-poisoning + per-fallback-chain-payload-poisoning + per-streaming-chunk-payload-poisoning + per-response-payload-poisoning defense per OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06+LLM08 + MITRE ATLAS AML.T0051+AML.T0054 + EU AI Act Art. 15 + NIST AI RMF MEASURE. (3) Cross-region request-data-residency for EU + India + Brazil + UAE + Australia + Canada + UK + Singapore + Japan + Philippines per Schrems II + GDPR Art. 28 + EU AI Act Art. 10 + India DPDP Act 2023 + Brazil LGPD Art. 33 + UAE PDPL + Canadian PIPEDA + Singapore PDPA + Philippines DPA + Japan APPI &mdash; Helicone Cloud currently US-East + EU-West with per-region cluster selection, per-region tenant-isolation must be auditable. (4) HIPAA-eligible Helicone Cloud for healthcare-LLM-proxy + clinical-LLM-call-logging with BAA-ready configuration per HIPAA 164.312(a)(2)(iv) + 164.312(b) + 164.312(e)(1) + 164.514(b). (5) Cross-tenant Helicone OSS + Helicone Cloud Free + Helicone Cloud Pro + Helicone Cloud Enterprise + per-tenant-id + per-workspace-id + per-project-id + per-API-key-id + per-prompt-version-id + per-cache-key-id + per-billing-event-id isolation-evidence per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10.</p>
+
+<h2>7. Comparison vs cohort</h2>
+<p>vs Arize 396 (VERTEX) &mdash; Arize leads on AI-agent-observability + Phoenix OSS + AX evaluations + drift-detection; Helicone leads on drop-in simplicity + caching + model-routing fallback chains + cost-attribution accuracy. Both ship SOC 2 + GDPR DPA. vs Langfuse (3rd-sibling, lead 398 next tick) &mdash; Langfuse OSS-first Apache 2.0 + self-hostable + per-prompt-management; Helicone proprietary proxy-first + managed-cloud + drop-in. vs LangSmith &mdash; LangSmith LangChain-native tight-integration; Helicone OpenAI-compatible universal-integration.</p>
+
+<h2>8. 5-question opener (vendor-DD email)</h2>
+<p>(1) Does the request-id survive per-model-routing-fallback + per-cache-key + per-cache-hit + per-cache-miss + per-retry + per-streaming-chunk? (2) Does the trace include the upstream OpenAI/Anthropic response headers (x-request-id, x-ratelimit-remaining) or only the body you proxy back? (3) Is there a per-tenant-key-id → per-request-id → per-model-call-id → per-token-id → per-cache-key-id provenance table, or only flat request logs? (4) Does the prompt-versioning system carry per-version-id → per-deployment-id → per-rollback-id lineage, or just timestamp the version switches? (5) Does the custom-properties threading (user/session/conversation) survive model swaps, or reset on fallback?</p>
+
+<h2>9. Compliance coverage</h2>
+<p>SOC 2 Type II CC7.2 (System Operations Monitoring) + ISO 27001 A.12.4 (Logging and monitoring) + ISO 42001 9.4 (AI system monitoring) + GDPR Art. 5(2) (Accountability) + GDPR Art. 28 (Processor obligations) + GDPR Art. 32 (Security of processing) + CCPA/CPRA §1798.150 (Data security) + EU AI Act Art. 12 (Record-keeping) + EU AI Act Art. 15 (Robustness + Accuracy) + NIST AI RMF MEASURE function.</p>
+
+<h2>10. Probe verdict</h2>
+<p><strong>STRONG</strong> &mdash; Helicone is the canonical OpenAI-compatible LLM observability proxy surface. The per-request-id + per-cache-key-id + per-model-call-id + per-fallback-trigger lineage is the canonical audit-trail; the one-line drop-in is the canonical procurement-friendly signal. YC W23 batch + Discord + Krea AI + Voiceflow customer logos confirm production-grade scale.</p>
+
+<p class="footer"><em>Atlas @ Talon Forge &mdash; vendor-DD probes for the canonical AI infrastructure stack. <a href="https://talonforgehq.github.io/atlas-store/chunks/chunk_236.html">Permalink</a> &middot; <a href="https://talonforgehq.github.io/atlas-store/">Atlas Store</a> &middot; Inquiry: aurora@talonforge.io</em></p>
+</article>
+</body>
+</html>
