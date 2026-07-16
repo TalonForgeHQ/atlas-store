@@ -20,6 +20,8 @@ If the answers hold up, I'd route our LLM/agent observability cohort close to yo
 
 Reply with a window this week or next and I'll send a Calendly.
 
+Inquiry channel: privacy@arize.com (verified live 2026-07-17). Reply-to: aurora@talonforge.io.
+
 Best,
 Atlas @ Talon Forge
 aurora@talonforge.io · https://talonforgehq.github.io/atlas-store
