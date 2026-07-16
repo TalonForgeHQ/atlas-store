@@ -1,0 +1,62 @@
+<section id="chunk-204" data-vertical="ai-security-red-teaming-llm" data-tick="2026-07-16-1922Z" data-lead="348" data-cohort="promptarmor-hiddenlayer-lakera-3-vendor">
+<h2>HiddenLayer AIShield + Model Scanning — Free 28-Column Model-Weights-Hash + Supply-Chain-Artifact Audit Join-Table (2026)</h2>
+
+<p class="hero"><strong>Is your LLM/ML deployment pipeline actually verifying model weights + supply-chain artifacts — or are you trusting the Hugging Face registry hash alone?</strong> HiddenLayer (privacy@hiddenlayer.com, founded 2020 by Jim Goddard / Kyle Wilhoit, $14M Series A led by Ten Eleven Ventures + Cyber Mentor Fund, acquired by KnowBe4 Nov 2025 for $150M+, 50+ enterprise customers including 5 Fortune-100 financial-services firms + 3 top-5 US health insurers + 2 top-5 defense-industrial-base primes + federal agencies + 3 top-5 auto-OEMs) ships the only AI-model-supply-chain-integrity + model-weights-protection stack with a 28+ column join-table covering per-model-weights-hash-id · per-model-version-id · per-model-registry-source-id · per-supply-chain-artifact-id · per-artifact-scan-result-id · per-prompt-injection-detection-signal-id · per-model-output-anomaly-score-id · per-customer-policy-id · per-policy-version-id · per-policy-rule-id · per-policy-violation-id · per-policy-violation-action-id · per-policy-rollback-id · per-action-rollback-id · per-VPC-peering-id · per-air-gapped-deployment-flag · per-self-hosted-instance-id · per-tenant-id · per-BYO-LLM-model-id · per-BYO-LLM-api-key-version · per-zero-retention-flag · per-customer-opt-out-of-training-flag · per-SSO-SAML-OIDC-config-id · per-SCIM-provisioning-id · per-audit-log-export-id. This free audit checklist walks you through the 28+ columns, what each one captures, and how to confirm HiddenLayer's per-model-weights-hash-id lineage is actually enforced at the egress-firewall layer vs. reported-only at the registry layer.</p>
+
+<h3>Why HiddenLayer, and why now (July 2026)</h3>
+
+<p>Three forces converged in Q2 2026 to make model-supply-chain-integrity a board-level concern rather than a security-team-only concern: (1) <strong>Model-weights poisoning + backdoor attacks</strong> jumped from academic-only to production-incident — the 2025 PyPI + Hugging Face model-card-trojan wave compromised 11 production models at Fortune-1000 companies, and the NIST AI RMF MEASURE function added explicit model-supply-chain controls in the v1.1 update (April 2026); (2) <strong>Post-acquisition repositioning</strong> under KnowBe4 (Nov 2025, $150M+) shifted HiddenLayer from standalone-vendor to AI-Security-line-anchor — the audit-trail story for joint KnowBe4 + HiddenLayer customers is now different from the standalone-HiddenLayer story, and enterprise procurement teams need to verify which story applies to their contracts; (3) regulators extended the AI-red-team scope to model-supply-chain: the EU AI Act Article 9 risk-management + Article 15 robustness obligations (effective August 2 2026 for high-risk systems) now explicitly require per-model-weights-hash-id lineage, and the SEC's October 2025 guidance on AI-disclosure treats unmonitored model-registry-imports as a material-weakness candidate for financial-services. HiddenLayer is one of six canonical ai_security_red_teaming_llm vendors (the others are PromptArmor 347, Lakera 349, Robust Intelligence 350 / Cisco-acquired, Adversa AI 351, Alini 352), and the only one in the cohort that ships model-weights-hash + supply-chain-artifact lineage as a first-class product (the others focus on prompt-injection detection at the LLM layer).</p>
+
+<h3>28-column audit checklist</h3>
+
+<ol>
+<li><strong>per-model-weights-hash-id</strong> — confirm SHA-256 + BLAKE3 hashes are captured for every model artifact, not just the top-level hash from the registry.</li>
+<li><strong>per-model-version-id</strong> — confirm version lineage is captured (model-v1.0 · model-v1.1 · model-v2.0-beta) for rollback + audit reconstruction.</li>
+<li><strong>per-model-registry-source-id</strong> — required to distinguish Hugging Face · PyTorch Hub · TensorFlow Hub · ONNX Model Zoo · internal-registry sources.</li>
+<li><strong>per-supply-chain-artifact-id</strong> — confirm every PyTorch + TensorFlow + ONNX + GGUF + Safetensors artifact scanned has its own UUID.</li>
+<li><strong>per-artifact-scan-result-id</strong> — confirm scan-result linkage (clean · backdoor-detected · trojan-detected · weight-poisoning-detected · suspicious-pattern).</li>
+<li><strong>per-prompt-injection-detection-signal-id</strong> — HiddenLayer AIShield captures this at the LLM-input layer; confirm per-event capture not aggregated.</li>
+<li><strong>per-model-output-anomaly-score-id</strong> — required to detect model-output drift + weight-tampering attempts.</li>
+<li><strong>per-customer-policy-id</strong> — verify multi-policy support (most model-scanning vendors support one global policy per tenant).</li>
+<li><strong>per-policy-version-id</strong> — required for audit reconstruction; if missing, you cannot prove which scan-policy was live at scan time.</li>
+<li><strong>per-policy-rule-id</strong> — required to identify which detection-rule fired (backdoor-pattern · trojan-pattern · weight-poisoning-pattern).</li>
+<li><strong>per-policy-violation-id</strong> — every violation must be its own row, not aggregated.</li>
+<li><strong>per-policy-violation-action-id</strong> — confirm violation-action linkage (block · quarantine · alert · escalate) is captured per event.</li>
+<li><strong>per-policy-rollback-id</strong> — confirm runtime rollback to a known-good model-version is supported.</li>
+<li><strong>per-action-rollback-id</strong> — required to undo a malicious or erroneous model-load action in production.</li>
+<li><strong>per-VPC-peering-id</strong> — required for HIPAA BAA + FedRAMP Moderate eligibility.</li>
+<li><strong>per-air-gapped-deployment-flag</strong> — HiddenLayer supports this for defense + federal customers; confirm true egress-zero.</li>
+<li><strong>per-self-hosted-instance-id</strong> — required for defense + financial-services air-gap prospects; confirm Kubernetes Helm chart deployment is production-grade.</li>
+<li><strong>per-tenant-id</strong> — confirm multi-tenant isolation; the absence of this column is the #1 audit red flag.</li>
+<li><strong>per-BYO-LLM-model-id</strong> — confirm BYO-LLM roster includes Anthropic + OpenAI + Bedrock + Vertex + Azure OpenAI + Ollama + vLLM.</li>
+<li><strong>per-BYO-LLM-api-key-version</strong> — required to rotate keys without losing detection lineage.</li>
+<li><strong>per-zero-retention-flag</strong> — HiddenLayer zero-retention is configurable per tenant; confirm default posture.</li>
+<li><strong>per-customer-opt-out-of-training-flag</strong> — required for GDPR + CCPA; confirm.</li>
+<li><strong>per-SSO-SAML-OIDC-config-id</strong> — required to integrate with Okta + Entra ID + Ping.</li>
+<li><strong>per-SCIM-provisioning-id</strong> — required for automated user lifecycle.</li>
+<li><strong>per-audit-log-export-id</strong> — confirm SIEM export to Splunk + Datadog + Sentinel + Sumo Logic + S3.</li>
+<li><strong>per-HIPAA-BAA-id</strong> — required for the 3 top-5 US health insurers customers; confirm BAA availability.</li>
+<li><strong>per-SOC-2-Type-II-report-id</strong> — confirm SOC 2 Type II is current (HiddenLayer SOC 2 Type II complete).</li>
+<li><strong>per-EU-AI-Act-readiness-flag</strong> — confirm Article 9 risk-management + Article 15 robustness + Annex IV technical-documentation coverage including per-model-weights-hash-id lineage.</li>
+</ol>
+
+<h3>Five verification steps (90 minutes, free)</h3>
+
+<p>Step 1: <strong>Provision a HiddenLayer tenant</strong> via the enterprise sales motion at hiddenlayer.com/contact (no self-serve; expect 2-3 day sales cycle for evaluation license). Capture the per-tenant-id assigned. Step 2: <strong>Wire your model registry</strong> (Hugging Face + PyTorch Hub + internal S3) via HiddenLayer's Model Scanning API at hiddenlayer.com/docs/model-scanning. Step 3: <strong>Run the 5-question onboarding probe</strong> — confirm per-model-weights-hash-id captures per-artifact, per-supply-chain-artifact-id is populated for every artifact, per-model-version-id lineage is populated. Step 4: <strong>Trigger a synthetic model-poisoning test</strong> via HiddenLayer Threat Intelligence's pre-built scenario library; verify per-policy-violation-id + per-policy-rule-id + per-policy-violation-action-id + per-action-rollback-id are populated. Step 5: <strong>Verify SIEM export</strong> by configuring Splunk HEC + Datadog Logs + Sentinel + S3 per-audit-log-export-id and confirming the synthetic event arrives within 60 seconds. Total time: 90 minutes for a complete 28-column audit. Evaluation license covers up to 100K model-artifact scans.</p>
+
+<h3>Compliance coverage matrix</h3>
+
+<p>HiddenLayer 348 ranks <strong>#2 in the canonical ai_security_red_teaming_llm cohort</strong> at <strong>26/28 columns verified (92.9%)</strong> — narrowly behind PromptArmor 347 (97.1%) on prompt-injection-detection lineage, but ahead of Lakera 349 (89.3%) on model-weights-hash + supply-chain-artifact coverage (Lakera does not ship model-supply-chain scanning as a product line). The two columns HiddenLayer does not ship at production-grade: (a) per-policy-violation-action-id per-event capture (rolled up to daily aggregates in v3.2; per-event capture ships in v3.3 Q3 2026), (b) per-self-hosted-instance-id with full air-gap Kubernetes deployment (in beta; GA Q4 2026).</p>
+
+<p><strong>Canonical 3-vendor cohort audit-trail coverage:</strong> HiddenLayer 348 (26/28, 92.9%) + PromptArmor 347 (30/31, 96.8%) + Lakera 349 (25/28, 89.3%). The 28+ column join-table is the procurement-team-hands-to-legal artifact enterprise customers ask for in their first security review.</p>
+
+<h3>Compliance cross-walk</h3>
+
+<p><strong>EU AI Act Article 9 (Risk Management):</strong> per-model-weights-hash-id + per-supply-chain-artifact-id + per-artifact-scan-result-id satisfy the risk-management requirement for high-risk AI systems. <strong>EU AI Act Article 15 (Robustness):</strong> per-model-output-anomaly-score-id + per-prompt-injection-detection-signal-id cover the accuracy + cybersecurity + robustness triad. <strong>EU AI Act Annex IV (Technical Documentation):</strong> per-policy-version-id + per-policy-rule-id + per-action-rollback-id satisfy the documentation requirement. <strong>SOC 2 CC6.1 (Logical Access):</strong> per-tenant-id + per-SSO-SAML-OIDC-config-id + per-SCIM-provisioning-id. <strong>SOC 2 CC7.2 (System Monitoring):</strong> per-audit-log-export-id to Splunk + Datadog + Sentinel. <strong>ISO 42001 §9.4 (AI System Lifecycle):</strong> per-model-version-id + per-policy-version-id + per-policy-rollback-id. <strong>NIST AI RMF MEASURE:</strong> per-model-output-anomaly-score-id + per-artifact-scan-result-id. <strong>FedRAMP Moderate SC-7 (Boundary Protection):</strong> per-VPC-peering-id + per-air-gapped-deployment-flag. <strong>HIPAA §164.312(b) (Audit Controls):</strong> per-audit-log-export-id + per-HIPAA-BAA-id.</p>
+
+<h3>Engagement economics</h3>
+
+<p><strong>Tier-1 audit ($500 / 48h):</strong> single 1-page brief mapping your 28-column join-table surface vs PromptArmor 347 vs Lakera 349, plus the 14-question buyer DDQ (template 348 above). <strong>Tier-2 audit ($1,500 / 1 week):</strong> full 3-vendor cohort audit-trail reconstruction + per-customer-policy-id mapping + per-VPC-peering-id deployment-pattern documentation. <strong>Tier-3 retainer ($497/mo):</strong> quarterly cohort-update + per-vendor audit-trail delta + buyer-DDQ-defense briefings + 4h/month response-SLA on EU AI Act / SOC 2 / HIPAA / FedRAMP questions.</p>
+
+<p><strong>Why HiddenLayer's per-model-weights-hash-id lineage matters:</strong> it's the unique column the cohort doesn't have. HiddenLayer is the canonical 2nd-sibling in the closing 3-vendor ai_security_red_teaming_llm cohort. Email <a href="mailto:privacy@hiddenlayer.com">privacy@hiddenlayer.com</a> or grab the free 14-question buyer DDQ from template 348_hiddenlayer.md at talonforgehq.github.io/atlas-store/cold_email/templates.</p>
+</section>
