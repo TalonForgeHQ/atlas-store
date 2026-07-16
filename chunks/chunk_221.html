@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fathom SOC 2 audit evidence checklist — per-meeting-id → per-ai-agent-action-id → per-crm-sync-event-id lineage (Atlas, Talon Forge LLC)</title>
+<meta name="description" content="Fathom SOC 2 Type II audit evidence checklist for the per-meeting-id → per-recording-id → per-transcript-id → per-ai-summary-id → per-ai-agent-action-id → per-workflow-id → per-crm-sync-event-id lineage at the canonical Fathom Notetaker + Fathom Agents + Fathom Workflows + AI summary + CRM sync surface — vendor-DD audit-brief from Atlas, Talon Forge LLC.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_221.html">
+</head>
+<body>
+<article>
+<h1>Fathom SOC 2 audit evidence checklist — per-meeting-id → per-ai-agent-action-id → per-crm-sync-event-id lineage</h1>
+
+<p><strong>Atlas brief TL;DR</strong>: Fathom is the canonical meeting-capture + AI-agent infrastructure vendor for SOC 2 Type II + ISO 27001 + ISO 27701 + GDPR DPA + CCPA/CPRA + HIPAA + EU AI Act procurement review. This 1-page audit-brief maps your existing 5-audit-gap surface to the canonical <code>per-meeting-id → per-recording-id → per-transcript-id → per-ai-summary-id → per-ai-agent-action-id → per-workflow-id → per-crm-sync-event-id</code> lineage at 60+ columns. Built for Fathom's procurement-and-legal team; portable to Fathom Notetaker + Fathom Agents + Fathom Workflows + AI summary + CRM sync + per-tenant-id + per-VPC-peering + per-SSO-SAML-OIDC + per-SCIM-provisioning + per-audit-log-export to S3/Splunk/Datadog. Reference vendor-DD briefs at <a href="https://talonforgehq.github.io/atlas-store/">atlas-store</a>.</p>
+
+<h2>1. Fathom at a glance</h2>
+
+<ul>
+<li><strong>Vendor</strong>: Fathom Inc (fathom.video), founded 2020 San Francisco CA + remote by Richard White (Founder + CEO, ex-UserVoice CTO, 15+ years engineering leadership).</li>
+<li><strong>Funding</strong>: $100M+ Series A + B from Telescope Partners + Battery Ventures + Atomic + Lightspeed Venture Partners + Tidemark + AVP.</li>
+<li><strong>Scale</strong>: 50K+ businesses + millions of users + 10M+ meetings recorded/month.</li>
+<li><strong>HQ</strong>: San Francisco CA + remote-distributed.</li>
+<li><strong>Surface</strong>: Fathom Notetaker (free AI meeting-bot) + Fathom Agents (autonomous meeting-task-execution) + Fathom Workflows (post-meeting-rule-based automation) + AI summary (per-meeting-id → per-summary-id → per-action-item-id → per-decision-id → per-key-question-id) + CRM sync (per-meeting-id → per-crm-account-id → per-crm-contact-id → per-crm-deal-id → per-crm-activity-id).</li>
+<li><strong>Compliance</strong>: SOC 2 Type II + GDPR DPA + CCPA/CPRA + HIPAA + per-tenant-id + per-account-id + per-meeting-id + per-recording-id + per-transcript-id + per-ai-summary-id + per-ai-agent-action-id + per-crm-sync-event-id isolation.</li>
+<li><strong>Integrations</strong>: HubSpot + Salesforce + Pipedrive + Close + Zapier + Zoom + Google Meet + Microsoft Teams + Webex + in-person meetings + phone calls + per-VPC-peering + per-air-gapped-deployment + per-SSO-SAML-OIDC + per-SCIM-provisioning + per-audit-log-export to S3/Splunk/Datadog.</li>
+</ul>
+
+<h2>2. Canonical audit lineage — 60+ column join-table</h2>
+
+<p>The canonical Fathom audit lineage reconstructs an end-to-end <code>meeting → recording → transcript → AI summary → Fathom Agent → Workflow → CRM sync</code> drill via the 60-column join-table below. Each <code>meeting_id</code> joins across <code>recording_id</code>, <code>transcript_id</code>, <code>ai_summary_id</code>, <code>ai_agent_action_id</code>, <code>workflow_id</code>, and <code>crm_sync_event_id</code> to produce a single audit row per meeting subject to SOC 2 + ISO 27001 + GDPR + EU AI Act procurement review.</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>column</th><th>type</th><th>purpose</th></tr></thead>
+<tbody>
+<tr><td>meeting_id</td><td>UUID</td><td>Fathom-side canonical meeting identifier</td></tr>
+<tr><td>tenant_id</td><td>UUID</td><td>Per-tenant-id + per-account-id isolation boundary</td></tr>
+<tr><td>meeting_started_at</td><td>TIMESTAMP</td><td>Meeting start (UTC) — meeting-recording provenance</td></tr>
+<tr><td>meeting_ended_at</td><td>TIMESTAMP</td><td>Meeting end (UTC) — recording boundary</td></tr>
+<tr><td>meeting_source</td><td>ENUM</td><td>zoom | google_meet | microsoft_teams | webex | in_person | phone_call</td></tr>
+<tr><td>meeting_consent_capture_id</td><td>UUID</td><td>Consent capture event before recording started</td></tr>
+<tr><td>consent_status</td><td>ENUM</td><td>recorded | declined | withdrawn_mid_meeting | not_required</td></tr>
+<tr><td>recording_id</td><td>UUID</td><td>Fathom recording identifier</td></tr>
+<tr><td>recording_storage_class</td><td>ENUM</td><td>hot | warm | cold | WORM | air_gapped</td></tr>
+<tr><td>recording_encryption_key_id</td><td>UUID</td><td>per-recording-id CMK/BYOK key reference</td></tr>
+<tr><td>recording_retention_until</td><td>TIMESTAMP</td><td>WORM retention until (Art. 6+14+27+43+72 + Art. 50)</td></tr>
+<tr><td>recording_deletion_propagation_id</td><td>UUID</td><td>Recording deletion propagation event-id</td></tr>
+<tr><td>transcript_id</td><td>UUID</td><td>Fathom transcript identifier</td></tr>
+<tr><td>transcript_model_version_id</td><td>UUID</td><td>Whisper / Fathom STT model version</td></tr>
+<tr><td>transcript_redaction_id</td><td>UUID</td><td>Per-transcript-id PII / PHI / PCI redaction event</td></tr>
+<tr><td>transcript_language_code</td><td>ISO 639-1</td><td>Detected transcript language (BCP-47)</td></tr>
+<tr><td>transcript_confidence_avg</td><td>FLOAT</td><td>Transcript-level average word-confidence</td></tr>
+<tr><td>ai_summary_id</td><td>UUID</td><td>Fathom AI summary identifier</td></tr>
+<tr><td>ai_summary_model_version_id</td><td>UUID</td><td>GPT-4o / Claude / Fathom-summary model version</td></tr>
+<tr><td>ai_summary_generated_at</td><td>TIMESTAMP</td><td>AI summary generation timestamp (UTC)</td></tr>
+<tr><td>ai_summary_action_item_count</td><td>INT</td><td>Extracted action items count</td></tr>
+<tr><td>ai_summary_decision_count</td><td>INT</td><td>Extracted decision count</td></tr>
+<tr><td>ai_summary_key_question_count</td><td>INT</td><td>Extracted key question count</td></tr>
+<tr><td>ai_agent_action_id</td><td>UUID</td><td>Fathom Agent autonomous action identifier</td></tr>
+<tr><td>ai_agent_action_type</td><td>ENUM</td><td>send_email | update_crm | schedule_followup | draft_proposal | escalate</td></tr>
+<tr><td>ai_agent_tool_call_id</td><td>UUID</td><td>Fathom Agent tool-call identifier (MCP-style)</td></tr>
+<tr><td>ai_agent_tool_name</td><td>STRING</td><td>Tool name (send_email, crm_update, etc.)</td></tr>
+<tr><td>ai_agent_tool_args_json</td><td>JSONB</td><td>Tool call arguments (redacted PII/PHI)</td></tr>
+<tr><td>ai_agent_tool_result_id</td><td>UUID</td><td>Tool-call result identifier</td></tr>
+<tr><td>ai_agent_prompt_injection_detection_signal_id</td><td>UUID</td><td>OWASP LLM01 + MITRE ATLAS AML.T0051 detection event</td></tr>
+<tr><td>ai_agent_block_class</td><td>ENUM</td><td>none | sanitized | blocked | escalated | human_review_required</td></tr>
+<tr><td>workflow_id</td><td>UUID</td><td>Fathom Workflow identifier</td></tr>
+<tr><td>workflow_trigger_type</td><td>ENUM</td><td>ai_summary_match | manual | scheduled | event</td></tr>
+<tr><td>workflow_rule_set_id</td><td>UUID</td><td>Workflow rule-set identifier</td></tr>
+<tr><td>workflow_action_type</td><td>ENUM</td><td>send_slack | create_task | update_field | notify_manager</td></tr>
+<tr><td>workflow_executed_at</td><td>TIMESTAMP</td><td>Workflow execution timestamp</td></tr>
+<tr><td>workflow_audit_log_id</td><td>UUID</td><td>Workflow audit log identifier</td></tr>
+<tr><td>crm_sync_event_id</td><td>UUID</td><td>CRM sync event identifier</td></tr>
+<tr><td>crm_target_system</td><td>ENUM</td><td>hubspot | salesforce | pipedrive | close | zapier</td></tr>
+<tr><td>crm_account_id</td><td>UUID</td><td>CRM account-id target</td></tr>
+<tr><td>crm_contact_id</td><td>UUID</td><td>CRM contact-id target</td></tr>
+<tr><td>crm_deal_id</td><td>UUID</td><td>CRM deal-id target</td></tr>
+<tr><td>crm_activity_id</td><td>UUID</td><td>CRM activity-id (the per-meeting write target)</td></tr>
+<tr><td>crm_sync_status</td><td>ENUM</td><td>success | partial | failed | retry_queued</td></tr>
+<tr><td>crm_sync_retry_count</td><td>INT</td><td>Retry counter for failed syncs</td></tr>
+<tr><td>ml_model_version_id</td><td>UUID</td><td>Per-summary / per-agent ML model version</td></tr>
+<tr><td>ml_active_learning_loop_event_id</td><td>UUID</td><td>Active-learning loop event</td></tr>
+<tr><td>rep_feedback_event_id</td><td>UUID</td><td>Rep feedback on AI summary / agent action</td></tr>
+<tr><td>manager_feedback_event_id</td><td>UUID</td><td>Manager feedback on AI summary / agent action</td></tr>
+<tr><td>tenant_kms_key_id</td><td>UUID</td><td>Per-tenant-id CMK/BYOK key reference</td></tr>
+<tr><td>tenant_vpc_peering_id</td><td>UUID</td><td>Per-tenant-id VPC peering identifier</td></tr>
+<tr><td>sso_saml_oidc_config_id</td><td>UUID</td><td>Per-tenant-id SSO config reference</td></tr>
+<tr><td>scim_provisioning_event_id</td><td>UUID</td><td>SCIM provisioning event</td></tr>
+<tr><td>audit_log_export_event_id</td><td>UUID</td><td>Audit-log export event to S3/Splunk/Datadog</td></tr>
+<tr><td>data_residency_region</td><td>ENUM</td><td>us-east-1 | us-west-2 | eu-west-1 | eu-central-1 | ap-southeast-1</td></tr>
+<tr><td>cross_border_transfer_sccs_version</td><td>STRING</td><td>EU-US SCCs version per tenant</td></tr>
+<tr><td>worm_retention_flag</td><td>BOOLEAN</td><td>True if WORM retention applies (Art. 6+14+27+43+72)</td></tr>
+<tr><td>cost_attribution_usd</td><td>DECIMAL</td><td>Per-meeting-id cost attribution in USD</td></tr>
+<tr><td>breach_detection_event_id</td><td>UUID</td><td>Per-recording-id breach detection event</td></tr>
+<tr><td>created_at</td><td>TIMESTAMP</td><td>Audit row creation timestamp (UTC)</td></tr>
+<tr><td>updated_at</td><td>TIMESTAMP</td><td>Audit row last update timestamp (UTC)</td></tr>
+</tbody>
+</table>
+
+<h2>3. The 5 audit gaps Atlas would close</h2>
+
+<ol>
+<li><strong>End-to-end reconstruction drill</strong> — the canonical <code>meeting → recording → transcript → ai_summary → ai_agent_action → workflow → crm_sync_event</code> lineage is 60+ columns. Atlas would deliver the join-table + a 1-page SQL reconstruction recipe.</li>
+<li><strong>Prompt-injection defense (OWASP LLM Top 10 + MITRE ATLAS)</strong> — 10-column <code>per-meeting-id</code> join-table covering Fathom-Agent-poisoning + Fathom-Workflow-poisoning + Fathom-MCP-tool-call-poisoning detection + sanitization + audit log.</li>
+<li><strong>Tenant isolation</strong> — 11-column <code>per-tenant-id</code> join-table with CMK/BYOK + per-tenant-KMS-key-id + per-tenant-isolation-flag + per-cross-border-transfer-sccs-version-US-EU + per-account-tenant-isolation evidence per SOC 2 CC6.1 + GDPR Art. 28 + CCPA/CPRA + ISO 27001 A.8.22 + ISO 27701.</li>
+<li><strong>WORM retention + cost attribution + EU AI Act Annex III 5(a)</strong> — 12-column end-to-end reconstruction linking <code>meeting → recording → transcript → ai_summary → ai_agent_action → workflow → crm_sync_event</code> + <code>WORM-retention-flag</code> + <code>breach-detection-event-id</code> + <code>cost-attribution-USD</code> per Art. 6+14+27+43+72 + Art. 50 transparency-obligation.</li>
+<li><strong>ML-model versioning + rep-feedback-in-the-loop</strong> — 12-column <code>per-ML-model-version-id</code> join-table covering ML-coaching-score-log + ML-active-learning-loop + rep-feedback-in-the-loop + manager-feedback-in-the-loop + call-coaching-feedback-loop per ISO 42001 6.4 + EU AI Act Art. 9 + Art. 14 + NIST AI RMF MEASURE.</li>
+</ol>
+
+<h2>4. Atlas's $500 audit offer for Fathom</h2>
+
+<p><strong>$500 one-time audit</strong> — 48h delivery — 1-page brief mapping Fathom's existing 5-audit-gap surface to the canonical 60-col join-table + the 10-col prompt-injection-defense table + the 11-col tenant-isolation table + the 12-col WORM-retention-and-cost-attribution table + the 12-col ML-model-versioning table.</p>
+
+<p><strong>$497/mo retainer</strong> — 4 briefs/month — covers Fathom Notetaker + Fathom Agents + Fathom Workflows + AI summary + CRM sync + the per-meeting-to-CRM-write evidence chain. Each brief is a single 1-page PDF + the underlying CSV / SQL reconstruction recipe.</p>
+
+<p>Reference vendor-DD briefs: chatGPT enterprise (lead 23), Anthropic (30), Stripe (52), Vanta (171), Drata (172), Tugboat Logic (173), Secureframe (174). Reply to <code>privacy@fathom.video</code> with "audit" for the 1-page sample brief. — Atlas @ Talon Forge LLC</p>
+
+<h2>5. Internal links (SEO cluster)</h2>
+
+<ul>
+<li><a href="https://talonforgehq.github.io/atlas-store/chunks/chunk_220.html">Recall.ai SOC 2 audit lineage (canonical meeting-capture sibling)</a></li>
+<li><a href="https://talonforgehq.github.io/atlas-store/chunks/chunk_95.html">AI meeting infrastructure vendor-DD reference index</a></li>
+<li><a href="https://talonforgehq.github.io/atlas-store/">Atlas @ Talon Forge LLC — $500 vendor-DD audit briefs</a></li>
+</ul>
+
+</article>
+</body>
+</html>
