@@ -1,0 +1,2538 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="defaultLanguage" content="en">
+    <meta name="availableLanguages"
+          content="en, es, fr, ja, pt_BR, uk, el, de, zh_Hans, zh_Hant, ru, he, eo, ko">
+    <title>giskard-hub · PyPI</title>
+    <meta name="description"
+          content="The official Python SDK for the Giskard Hub API">
+    <link rel="stylesheet"
+          href="/static/css/warehouse-ltr.1e4dd5b3.css">
+    <link rel="stylesheet"
+          href="/static/css/fontawesome.379f9724.css">
+    <link rel="stylesheet"
+          href="/static/css/fonts.3b5d1a1c.css">
+    <noscript>
+      <link rel="stylesheet"
+            href="/static/css/noscript.0673c9ea.css">
+    </noscript>
+    <link rel="icon"
+          href="/static/images/favicon.35549fe8.ico"
+          type="image/x-icon">
+    <link rel="alternate"
+          type="application/rss+xml"
+          title="RSS: 40 latest updates"
+          href="/rss/updates.xml">
+    <link rel="alternate"
+          type="application/rss+xml"
+          title="RSS: 40 newest packages"
+          href="/rss/packages.xml">
+<link rel="alternate"
+        type="application/rss+xml"
+        title="RSS: latest releases for giskard-hub"
+        href="/rss/project/giskard-hub/releases.xml">      <link rel="canonical" href="https://pypi.org/project/giskard-hub/">
+    <meta property="og:url"
+          content="https://pypi.org/project/giskard-hub/">
+    <meta property="og:site_name" content="PyPI">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+          content="https://pypi.org/static/images/twitter.abaf4b19.webp">
+    <meta property="og:title"
+          content="giskard-hub">
+    <meta property="og:description" content="The official Python SDK for the Giskard Hub API">
+<meta name="source-commit" content="f576313a510043e07f72dd4db75c4084025566da">    <link rel="search"
+          type="application/opensearchdescription+xml"
+          title="PyPI"
+          href="/opensearch.xml">
+    <script defer src="/static/js/warehouse.e61f2735.js">
+    </script>
+  <script src="/static/js/utils/mathjax-config.e569c56a.js"></script>
+  <script async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
+          integrity="sha256-1CldwzdEg2k1wTmf7s5RWVd7NMXI/7nxxjJM2C4DqII="
+          crossorigin="anonymous"></script>
+      <script src="/static/js/utils/plausible-init.f60de74f.js"></script>
+      <script async
+              src="https://analytics.python.org/js/pa-Z-QYGvOKHwfKWak0xljXn.js"></script>
+    <script async
+            src="https://media.ethicalads.io/media/client/v1.4.0/ethicalads.min.js"
+            integrity="sha256-U3hKDidudIaxBDEzwGJApJgPEf2mWk6cfMWghrAa6i0= sha384-UcmsCqcNRSLW/dV3Lo1oCi2/VaurXbib6p4HyUEOeIa/4OpsrnucrugAefzVZJfI sha512-q4t1L4xEjGV2R4hzqCa41P8jrgFUS8xTb8rdNv4FGvw7FpydVj/kkxBJHOiaoxHa8olCcx1Slk9K+3sNbsM4ug=="
+            crossorigin="anonymous"></script>
+  </head>
+  <body data-controller="viewport-toggle">
+      <!-- Accessibility: this link should always be the first piece of content inside the body-->
+      <a href="#content" class="skip-to-content">Skip to main content</a>
+      <button type="button"
+              class="button button--primary button--switch-to-mobile hidden"
+              data-viewport-toggle-target="switchToMobile"
+              data-action="viewport-toggle#switchToMobile">Switch to mobile version</button>
+      <div id="sticky-notifications" class="stick-to-top js-stick-to-top">
+        <!-- Add browser warning. Will show for ie9 and below -->
+        <!--[if IE]>
+      <div class="notification-bar notification-bar--warning" role="status">
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">You are using an unsupported browser, upgrade to a newer version.</span>
+      </div>
+      <![endif]-->
+        <noscript>
+          <div class="notification-bar notification-bar--warning" role="status">
+            <span class="notification-bar__icon">
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+              <span class="sr-only">Warning</span>
+            </span>
+            <span class="notification-bar__message">Some features may not work without JavaScript. Please try enabling it if you encounter problems.</span>
+          </div>
+        </noscript>
+<div data-html-include="/_includes/unauthed/notification-banners/"></div>    </div>
+<div data-html-include="/_includes/unauthed/flash-messages/"></div><div data-html-include="/_includes/authed/session-notifications/"></div><header class="site-header ">
+  <div class="site-container">
+    <div class="split-layout">
+        <div class="split-layout">
+          <div>
+            <a class="site-header__logo" href="/">
+              <img alt="PyPI"
+                   src="/static/images/logo-small.8998e9d1.svg">
+            </a>
+          </div>
+          <form class="search-form search-form--primary"
+                action="/search/"
+                role="search">
+            <label for="search" class="sr-only">Search PyPI</label>
+            <input id="search"
+                   class="search-form__search"
+                   type="text"
+                   name="q"
+                   placeholder="Type '/' to search projects"
+                   value=""
+                   autocomplete="off"
+                   autocapitalize="off"
+                   spellcheck="false"
+                   data-controller="search-focus"
+                   data-action="keydown@window->search-focus#focusSearchField"
+                   data-search-focus-target="searchField">
+            <button type="submit" class="search-form__button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+<div data-html-include="/_includes/authed/current-user-indicator/">        <div id="user-indicator"
+       class="horizontal-menu horizontal-menu--light horizontal-menu--tall">
+    <nav class="horizontal-menu horizontal-menu--light horizontal-menu--tall hide-on-tablet"
+         aria-label="Main navigation">
+      <ul>
+        <li class="horizontal-menu__item">
+          <a href="/help/" class="horizontal-menu__link">Help</a>
+        </li>
+        <li class="horizontal-menu__item">
+          <a href="https://docs.pypi.org/" class="horizontal-menu__link">Docs</a>
+        </li>
+        <li class="horizontal-menu__item">
+          <a href="/sponsors/"
+             class="horizontal-menu__link">Sponsors</a>
+        </li>
+        <li class="horizontal-menu__item">
+          <a href="/account/login/?next=https%3A%2F%2Fpypi.org%2Fproject%2Fgiskard-hub%2F" class="horizontal-menu__link">Log in</a>
+        </li>
+        <li class="horizontal-menu__item">
+          <a href="/account/register/"
+             class="horizontal-menu__link">Register</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="dropdown dropdown--on-menu hidden show-on-tablet"
+         aria-label="Main navigation">
+      <button type="button"
+              class="horizontal-menu__link dropdown__trigger"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-label="View menu">
+Menu        <span class="dropdown__trigger-caret">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </span>
+      </button>
+      <ul class="dropdown__content"
+          aria-hidden="true"
+          aria-label="Main menu">
+        <li>
+          <a class="dropdown__link" href="/help/">Help</a>
+        </li>
+        <li>
+          <a class="dropdown__link" href="https://docs.pypi.org/">Docs</a>
+        </li>
+        <li>
+          <a class="dropdown__link" href="/sponsors/">Sponsors</a>
+        </li>
+        <li>
+          <a class="dropdown__link" href="/account/login/?next=https%3A%2F%2Fpypi.org%2Fproject%2Fgiskard-hub%2F">Log in</a>
+        </li>
+        <li>
+          <a class="dropdown__link"
+             href="/account/register/">Register</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>  </div>
+</div>
+</header>
+  <div class="mobile-search">
+    <form class="search-form search-form--fullwidth"
+          action="/search/"
+          role="search">
+      <label for="mobile-search" class="sr-only">Search PyPI</label>
+      <input id="mobile-search"
+             class="search-form__search"
+             type="text"
+             name="q"
+             placeholder="Search projects"
+             value=""
+             autocomplete="off"
+             autocapitalize="off"
+             spellcheck="false">
+      
+      <button type="submit" class="search-form__button">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <span class="sr-only">Search</span>
+      </button>
+    </form>
+  </div>
+<main id="content">
+    <div class="hidden"
+         data-controller="github-repo-stats"
+         data-github-repo-stats-github-repo-info-outlet=".github-repo-info"
+         data-github-repo-stats-url-value="https://api.github.com/repos/Giskard-AI/giskard-hub-python"
+         data-github-repo-stats-issue-url-value="https://api.github.com/search/issues?q=repo:Giskard-AI/giskard-hub-python+type:issue+state:open&amp;per_page=1"></div>
+  <div class="banner">
+    <div class="package-header">
+      <div class="package-header__left">
+        <h1 class="package-header__name">giskard-hub 3.1.1</h1>
+          <div data-controller="clipboard"
+               data-clipboard-plausible-event-value="Copy Project Install Command">
+            <p class="package-header__pip-instructions">
+              <span id="pip-command" data-clipboard-target="source">pip install giskard-hub</span>
+              <button type="button"
+                      class="copy-tooltip copy-tooltip-s"
+                      data-action="clipboard#copy"
+                      data-clipboard-target="tooltip"
+                      data-clipboard-tooltip-value="Copy to clipboard">
+                <i class="fa fa-copy" aria-hidden="true"></i>
+                <span class="sr-only">Copy PIP instructions</span>
+              </button>
+            </p>
+          </div>
+      </div>
+      <div class="package-header__right">
+            <a class="status-badge status-badge--good"
+               href="/project/giskard-hub/">
+              <span>Latest release</span>
+            </a>
+        <p class="package-header__date">
+Released: <time datetime="2026-05-04T07:49:23+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 4, 2026
+  </time>        </p>
+      </div>
+    </div>
+  </div>
+  <div class="horizontal-section horizontal-section--grey horizontal-section--thin">
+    <div class="site-container">
+<div data-html-include="/_includes/authed/administer-project-include/giskard-hub"></div>    <div class="split-layout split-layout--middle package-description">
+        <p class="package-description__summary">The official Python SDK for the Giskard Hub API</p>
+<div data-html-include="/_includes/authed/edit-project-button/giskard-hub"></div>  </div>
+</div>
+</div>
+<div data-controller="project-tabs">
+  <div class="tabs-container">
+    <div class="vertical-tabs">
+      <div class="vertical-tabs__tabs">
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__title">Navigation</h3>
+          <nav aria-label="Navigation for giskard-hub">
+            <ul class="vertical-tabs__list" role="tablist">
+              <li role="tab">
+                <a id="description-tab"
+                   href="#description"
+                   data-project-tabs-target="tab"
+                   data-action="project-tabs#onTabClick"
+                   class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--is-active"
+                   aria-selected="true"
+                   aria-label="Project description. Focus will be moved to the description.">
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+Project description                </a>
+              </li>
+              <li role="tab">
+                <a id="history-tab"
+                   href="#history"
+                   data-project-tabs-target="tab"
+                   data-action="project-tabs#onTabClick"
+                   class="vertical-tabs__tab vertical-tabs__tab--with-icon"
+                   aria-label="Release history. Focus will be moved to the history panel.">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+Release history                </a>
+              </li>
+                <li role="tab">
+                  <a id="files-tab"
+                     href="#files"
+                     data-project-tabs-target="tab"
+                     data-action="project-tabs#onTabClick"
+                     class="vertical-tabs__tab vertical-tabs__tab--with-icon"
+                     aria-label="Download files. Focus will be moved to the project files.">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+Download files                  </a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+<div class="sidebar-section verified">
+  <h3 class="sidebar-section__title">
+Verified details    <i class="fa fa-circle-check check"
+       title="Verified by PyPI on 2026-05-04"></i>
+  </h3>
+  <small><i>These details have been <a href="https://docs.pypi.org/project_metadata/#verified-details">verified by PyPI</a></i></small>
+    <h6>Project links</h6>
+    <ul class="vertical-tabs__list">
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/Giskard-AI/giskard-hub-python"
+               rel="nofollow">  <i class="fas fa-home" aria-hidden="true"></i>Homepage</a>
+          </li>
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/Giskard-AI/giskard-hub-python/issues"
+               rel="nofollow">  <i class="fas fa-bug" aria-hidden="true"></i>Issues</a>
+          </li>
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/Giskard-AI/giskard-hub-python"
+               rel="nofollow">  <i class="fab fa-github" aria-hidden="true"></i>Repository</a>
+          </li>
+    </ul>
+    <h6>Owner</h6>
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           href="/org/Giskard/"
+           aria-label="Giskard">
+          <i class="fa fa-sitemap" aria-hidden="true"></i>
+          Giskard AI
+        </a>
+      </li>
+    </ul>
+    <h6>GitHub Statistics</h6>
+    <div class="hidden github-repo-info" data-controller="github-repo-info">
+      <ul class="vertical-tabs__list">
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             rel="noopener"
+             href="https://github.com/Giskard-AI/giskard-hub-python">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <strong>Repository</strong>
+          </a>
+        </li>
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             data-github-repo-info-target="stargazersUrl"
+             rel="noopener">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <strong>Stars:</strong>
+            <span data-github-repo-info-target="stargazersCount"></span>
+          </a>
+        </li>
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             data-github-repo-info-target="forksUrl"
+             rel="noopener">
+            <i class="fa fa-code-branch" aria-hidden="true"></i>
+            <strong>Forks:</strong>
+            <span data-github-repo-info-target="forksCount"></span>
+          </a>
+        </li>
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             data-github-repo-info-target="openIssuesUrl"
+             rel="noopener">
+            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+            <strong>Open issues:</strong>
+            <span data-github-repo-info-target="openIssuesCount"></span>
+          </a>
+        </li>
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             data-github-repo-info-target="openPRsUrl"
+             rel="noopener">
+            <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+            <strong>Open PRs:</strong>
+            <span data-github-repo-info-target="openPRsCount"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>
+<div class="sidebar-section unverified">
+  <h3 class="sidebar-section__title">Unverified details</h3>
+  <small><i>These details have <b>not</b> been verified by PyPI</i></small>
+    <h6>Project links</h6>
+    <ul class="vertical-tabs__list">
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://docs.giskard.ai/hub/sdk"
+               rel="nofollow">  <i class="fas fa-book" aria-hidden="true"></i>Documentation</a>
+          </li>
+    </ul>
+    <div class="sidebar-section unverified">
+      <h6>Meta</h6>
+      <ul>
+          <li>
+            <span>
+              <strong>License Expression:</strong> Apache-2.0
+              <br>
+              <small>
+                <i>
+                  <a target="_blank" href="https://spdx.org/licenses/">SPDX</a>
+                  <a target="_blank"
+                     href="https://spdx.github.io/spdx-spec/v3.0.1/annexes/spdx-license-expressions/">License Expression</a>
+                </i>
+              </small>
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Author:</strong> <a href="mailto:henrique@giskard.ai">Henrique Chaves</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Requires:</strong> Python &lt;3.15, &gt;=3.10
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Provides-Extra:</strong>
+                <code>aiohttp</code>
+,                <code>dev</code>
+            </span>
+          </li>
+      </ul>
+    </div>
+    <div class="sidebar-section unverified">
+      <h6 class="sidebar-section__title">Classifiers</h6>
+      <ul class="sidebar-section__classifiers">
+          <li>
+            <strong>Intended Audience</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+                    Developers
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>License</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+Apache+Software+License">
+                    OSI Approved :: Apache Software License
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Operating System</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+MacOS">
+                    MacOS
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+Microsoft+%3A%3A+Windows">
+                    Microsoft :: Windows
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+OS+Independent">
+                    OS Independent
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+POSIX">
+                    POSIX
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+POSIX+%3A%3A+Linux">
+                    POSIX :: Linux
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Programming Language</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.10">
+                    Python :: 3.10
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.11">
+                    Python :: 3.11
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.12">
+                    Python :: 3.12
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.13">
+                    Python :: 3.13
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.14">
+                    Python :: 3.14
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Topic</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries+%3A%3A+Python+Modules">
+                    Software Development :: Libraries :: Python Modules
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Typing</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Typing+%3A%3A+Typed">
+                    Typed
+                  </a>
+                </li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+</div>        <div class="sidebar-section">
+          <a class="button button--full-width button--warning"
+             href="https://pypi.org/project/giskard-hub/submit-malware-report/"
+             rel="nofollow"
+             role="button">Report project as malware</a>
+        </div>
+      </div>
+      <div class="vertical-tabs__panel">
+        <!-- mobile menu -->
+        <nav aria-label="Navigation for giskard-hub">
+          <ul class="vertical-tabs__list" role="tablist">
+            <li role="tab">
+              <a id="mobile-description-tab"
+                 href="#description"
+                 data-project-tabs-target="mobileTab"
+                 data-action="project-tabs#onTabClick"
+                 class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile vertical-tabs__tab--no-top-border vertical-tabs__tab--is-active"
+                 aria-selected="true"
+                 aria-label="Project description. Focus will be moved to the description.">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+Project description              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-data-tab"
+                 href="#data"
+                 data-project-tabs-target="mobileTab"
+                 data-action="project-tabs#onTabClick"
+                 class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile"
+                 aria-label="Project details. Focus will be moved to the project details.">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+Project details              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-history-tab"
+                 href="#history"
+                 data-project-tabs-target="mobileTab"
+                 data-action="project-tabs#onTabClick"
+                 class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile"
+                 aria-label="Release history. Focus will be moved to the history panel.">
+                <i class="fa fa-history" aria-hidden="true"></i>
+Release history              </a>
+            </li>
+              <li role="tab">
+                <a id="mobile-files-tab"
+                   href="#files"
+                   data-project-tabs-target="mobileTab"
+                   data-action="project-tabs#onTabClick"
+                   class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile"
+                   aria-label="Download files. Focus will be moved to the project files.">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+Download files                </a>
+              </li>
+          </ul>
+        </nav>
+        <div id="description"
+             data-project-tabs-target="content"
+             class="vertical-tabs__content"
+             role="tabpanel"
+             aria-labelledby="description-tab mobile-description-tab"
+             tabindex="-1">
+<h2 class="page-title">Project description</h2>
+  <div class="project-description"><h1>Giskard Hub Python SDK</h1>
+
+<p><a href="https://pypi.org/project/giskard-hub/" rel=nofollow><img src="https://pypi-camo.freetls.fastly.net/2ec7157e8f70671083a3ed594a77eed0ebd886b9/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f6769736b6172642d6875622e7376673f6c6162656c3d7079706925323028737461626c6529" alt="PyPI version"></a></p>
+<p>The official Python SDK for Giskard Hub. Use it to define agents, manage projects and datasets,
+run evaluations and vulnerability scans, schedule recurring runs, and automate your LLM quality
+workflow from Python.</p>
+<p>The package includes type definitions for all request params and response fields, and offers both
+synchronous and asynchronous clients powered by <a href="https://github.com/encode/httpx" rel=nofollow>httpx</a>.</p>
+<p>It was initially generated with <a href="https://www.stainless.com/" rel=nofollow>Stainless</a>.</p>
+<h2>Documentation</h2>
+<ul>
+<li><a href="https://docs.giskard.ai/hub/sdk" rel=nofollow>Documentation website</a></li>
+<li><a href="https://docs.giskard.ai/hub/sdk/quickstart" rel=nofollow>Quickstart</a></li>
+<li><a href="https://docs.giskard.ai/hub/sdk/guides/projects" rel=nofollow>How-to guides</a></li>
+<li><a href="https://docs.giskard.ai/hub/sdk/reference" rel=nofollow>API reference</a></li>
+<li><a href="https://docs.giskard.ai/hub/sdk/migration" rel=nofollow>Migration guide (for SDK v2 users)</a></li>
+</ul>
+<h2>Installation</h2>
+<pre lang=sh>pip<span class=w> </span>install<span class=w> </span>giskard-hub
+</pre>
+<p>To install the latest unreleased changes directly from GitHub:</p>
+<pre lang=sh>pip<span class=w> </span>install<span class=w> </span>git+ssh://git@github.com/Giskard-AI/giskard-hub-python.git
+</pre>
+<h2>Configuration</h2>
+<p>Set the Hub base URL and API key before creating a client:</p>
+<pre lang=sh><span class=nb>export</span><span class=w> </span><span class=nv>GISKARD_HUB_BASE_URL</span><span class=o>=</span><span class=s2>"https://your-hub-instance"</span>
+<span class=nb>export</span><span class=w> </span><span class=nv>GISKARD_HUB_API_KEY</span><span class=o>=</span><span class=s2>"your-api-key"</span>
+</pre>
+<p><code>HubClient()</code> and <code>AsyncHubClient()</code> automatically read these environment variables.</p>
+<p>If you reach the Hub through a non-tenant hostname (for example, internal Docker
+networking such as <code>http://backend:8000</code>), also set the tenant host so the SDK
+can address the right tenant:</p>
+<pre lang=sh><span class=nb>export</span><span class=w> </span><span class=nv>GISKARD_HUB_TENANT_HOST</span><span class=o>=</span><span class=s2>"your-hub-instance"</span>
+</pre>
+<p>This adds an <code>X-Forwarded-Host</code> header to every request. You only need it when
+the host in <code>GISKARD_HUB_BASE_URL</code> is not the tenant host.</p>
+<h2>Quickstart</h2>
+<pre lang=python3><span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span>
+
+<span class=n>hub</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>()</span>
+
+<span class=n>project</span> <span class=o>=</span> <span class=n>hub</span><span class=o>.</span><span class=n>projects</span><span class=o>.</span><span class=n>list</span><span class=p>()[</span><span class=mi>0</span><span class=p>]</span>
+
+<span class=n>scan</span> <span class=o>=</span> <span class=n>hub</span><span class=o>.</span><span class=n>scans</span><span class=o>.</span><span class=n>create</span><span class=p>(</span>
+    <span class=n>project_id</span><span class=o>=</span><span class=n>project</span><span class=o>.</span><span class=n>id</span><span class=p>,</span>
+    <span class=n>agent_id</span><span class=o>=</span><span class=s2>"&lt;agent-id&gt;"</span><span class=p>,</span>
+    <span class=n>dataset_id</span><span class=o>=</span><span class=s2>"&lt;dataset-id&gt;"</span><span class=p>,</span>
+<span class=p>)</span>
+
+<span class=nb>print</span><span class=p>(</span><span class=n>scan</span><span class=p>)</span>
+</pre>
+<p>If you prefer, you can also pass <code>api_key</code>, <code>base_url</code>, and <code>tenant_host</code> directly to the client constructor.
+For local development, we recommend using <a href="https://pypi.org/project/python-dotenv/" rel=nofollow>python-dotenv</a>
+to load <code>GISKARD_HUB_BASE_URL</code> and <code>GISKARD_HUB_API_KEY</code> from a local <code>.env</code> file
+so that secrets are not stored in source control.</p>
+<h2>Helpers</h2>
+<p>The SDK exposes convenience helpers on <code>hub.helpers</code> for common workflows such as running
+evaluations over a dataset, waiting for asynchronous jobs to finish, and printing evaluation or
+scan metrics.</p>
+<p>For example, to run an evaluation with a local Python callable:</p>
+<pre lang=python3><span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub.type</span><span class=w> </span><span class=kn>import</span> <span class=n>ChatMessage</span>
+
+<span class=n>hub</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>()</span>
+
+<span class=k>def</span><span class=w> </span><span class=nf>my_agent</span><span class=p>(</span><span class=n>messages</span><span class=p>:</span> <span class=nb>list</span><span class=p>[</span><span class=n>ChatMessage</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=nb>str</span><span class=p>:</span>
+    <span class=c1># Your agent logic here</span>
+    <span class=k>return</span> <span class=s2>"Hello from my agent"</span>
+
+<span class=n>evaluation</span> <span class=o>=</span> <span class=n>hub</span><span class=o>.</span><span class=n>helpers</span><span class=o>.</span><span class=n>evaluate</span><span class=p>(</span>
+    <span class=n>agent</span><span class=o>=</span><span class=n>my_agent</span><span class=p>,</span>
+    <span class=n>dataset</span><span class=o>=</span><span class=s2>"dataset-id"</span><span class=p>,</span>
+    <span class=n>name</span><span class=o>=</span><span class=s2>"My local evaluation"</span><span class=p>,</span>
+<span class=p>)</span>
+
+<span class=n>completed</span> <span class=o>=</span> <span class=n>hub</span><span class=o>.</span><span class=n>helpers</span><span class=o>.</span><span class=n>wait_for_completion</span><span class=p>(</span><span class=n>evaluation</span><span class=p>)</span>
+<span class=n>hub</span><span class=o>.</span><span class=n>helpers</span><span class=o>.</span><span class=n>print_metrics</span><span class=p>(</span><span class=n>completed</span><span class=p>)</span>
+</pre>
+<h2>Async usage</h2>
+<p>Simply import <code>AsyncHubClient</code> instead of <code>HubClient</code> and use <code>await</code> with each API call:</p>
+<pre lang=python3><span class=kn>import</span><span class=w> </span><span class=nn>asyncio</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>AsyncHubClient</span>
+
+<span class=n>client</span> <span class=o>=</span> <span class=n>AsyncHubClient</span><span class=p>()</span>
+
+
+<span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>main</span><span class=p>()</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+    <span class=n>projects</span> <span class=o>=</span> <span class=k>await</span> <span class=n>client</span><span class=o>.</span><span class=n>projects</span><span class=o>.</span><span class=n>list</span><span class=p>()</span>
+    <span class=nb>print</span><span class=p>(</span><span class=n>projects</span><span class=p>)</span>
+
+
+<span class=n>asyncio</span><span class=o>.</span><span class=n>run</span><span class=p>(</span><span class=n>main</span><span class=p>())</span>
+</pre>
+<p>Functionality between the synchronous and asynchronous clients is otherwise identical.</p>
+<h3>With aiohttp</h3>
+<p>By default, the async client uses <code>httpx</code> for HTTP requests. However, for improved concurrency performance you may also use <code>aiohttp</code> as the HTTP backend.</p>
+<p>You can enable this by installing <code>aiohttp</code>:</p>
+<pre lang=sh><span class=c1># install from pypi</span>
+pip<span class=w> </span>install<span class=w> </span><span class=s1>'giskard-hub[aiohttp]'</span>
+</pre>
+<p>Then you can enable it by instantiating the client with <code>http_client=DefaultAioHttpClient()</code>:</p>
+<pre lang=python3><span class=kn>import</span><span class=w> </span><span class=nn>asyncio</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>DefaultAioHttpClient</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>AsyncHubClient</span>
+
+
+<span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>main</span><span class=p>()</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+    <span class=k>async</span> <span class=k>with</span> <span class=n>AsyncHubClient</span><span class=p>(</span>
+        <span class=n>http_client</span><span class=o>=</span><span class=n>DefaultAioHttpClient</span><span class=p>(),</span>
+    <span class=p>)</span> <span class=k>as</span> <span class=n>client</span><span class=p>:</span>
+        <span class=n>projects</span> <span class=o>=</span> <span class=k>await</span> <span class=n>client</span><span class=o>.</span><span class=n>projects</span><span class=o>.</span><span class=n>list</span><span class=p>()</span>
+        <span class=nb>print</span><span class=p>(</span><span class=n>projects</span><span class=o>.</span><span class=n>data</span><span class=p>)</span>
+
+
+<span class=n>asyncio</span><span class=o>.</span><span class=n>run</span><span class=p>(</span><span class=n>main</span><span class=p>())</span>
+</pre>
+<h2>Using types</h2>
+<p>Nested request parameters are <a href="https://docs.python.org/3/library/typing.html#typing.TypedDict" rel=nofollow>TypedDicts</a>. Responses are <a href="https://docs.pydantic.dev" rel=nofollow>Pydantic models</a> which also provide helper methods for things like:</p>
+<ul>
+<li>Serializing back into JSON, <code>model.to_json()</code></li>
+<li>Converting to a dictionary, <code>model.to_dict()</code></li>
+</ul>
+<p>Typed requests and responses provide autocomplete and documentation within your editor. If you would like to see type errors in VS Code to help catch bugs earlier, set <code>python.analysis.typeCheckingMode</code> to <code>basic</code>.</p>
+<h2>Nested params</h2>
+<p>Nested parameters are dictionaries, typed using <code>TypedDict</code>, for example:</p>
+<pre lang=python3><span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span>
+
+<span class=n>client</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>()</span>
+
+<span class=n>updated_dataset</span> <span class=o>=</span> <span class=n>client</span><span class=o>.</span><span class=n>datasets</span><span class=o>.</span><span class=n>update</span><span class=p>(</span>
+    <span class=n>dataset_id</span><span class=o>=</span><span class=s2>"182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e"</span><span class=p>,</span>
+    <span class=n>status</span><span class=o>=</span><span class=p>{</span><span class=s2>"total"</span><span class=p>:</span> <span class=mi>0</span><span class=p>},</span>
+<span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>updated_dataset</span><span class=o>.</span><span class=n>status</span><span class=p>)</span>
+</pre>
+<h2>File uploads</h2>
+<p>Request parameters that correspond to file uploads can be passed as <code>bytes</code>, or a <a href="https://docs.python.org/3/library/os.html#os.PathLike" rel=nofollow><code>PathLike</code></a> instance or a tuple of <code>(filename, contents, media type)</code>.</p>
+<pre lang=python3><span class=kn>from</span><span class=w> </span><span class=nn>pathlib</span><span class=w> </span><span class=kn>import</span> <span class=n>Path</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span>
+
+<span class=n>client</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>()</span>
+
+<span class=n>client</span><span class=o>.</span><span class=n>knowledge_bases</span><span class=o>.</span><span class=n>create</span><span class=p>(</span>
+    <span class=n>name</span><span class=o>=</span><span class=s2>"My Knowledge Base"</span><span class=p>,</span>
+    <span class=n>project_id</span><span class=o>=</span><span class=s2>"182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e"</span><span class=p>,</span>
+    <span class=n>file</span><span class=o>=</span><span class=n>Path</span><span class=p>(</span><span class=s2>"/path/to/file.jsonl"</span><span class=p>),</span>
+<span class=p>)</span>
+</pre>
+<p>The async client uses the exact same interface. If you pass a <a href="https://docs.python.org/3/library/os.html#os.PathLike" rel=nofollow><code>PathLike</code></a> instance, the file contents will be read asynchronously automatically.</p>
+<h2>Handling errors</h2>
+<p>When the library is unable to connect to the API (for example, due to network connection problems or a timeout), a subclass of <code>giskard_hub.APIConnectionError</code> is raised.</p>
+<p>When the API returns a non-success status code (that is, 4xx or 5xx
+response), a subclass of <code>giskard_hub.APIStatusError</code> is raised, containing <code>status_code</code> and <code>response</code> properties.</p>
+<p>All errors inherit from <code>giskard_hub.APIError</code>.</p>
+<pre lang=python3><span class=kn>import</span><span class=w> </span><span class=nn>giskard_hub</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span>
+
+<span class=n>client</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>()</span>
+
+<span class=k>try</span><span class=p>:</span>
+    <span class=n>client</span><span class=o>.</span><span class=n>projects</span><span class=o>.</span><span class=n>list</span><span class=p>()</span>
+<span class=k>except</span> <span class=n>giskard_hub</span><span class=o>.</span><span class=n>APIConnectionError</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=s2>"The server could not be reached"</span><span class=p>)</span>
+    <span class=nb>print</span><span class=p>(</span><span class=n>e</span><span class=o>.</span><span class=n>__cause__</span><span class=p>)</span>  <span class=c1># an underlying Exception, likely raised within httpx.</span>
+<span class=k>except</span> <span class=n>giskard_hub</span><span class=o>.</span><span class=n>RateLimitError</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=s2>"A 429 status code was received; we should back off a bit."</span><span class=p>)</span>
+<span class=k>except</span> <span class=n>giskard_hub</span><span class=o>.</span><span class=n>APIStatusError</span> <span class=k>as</span> <span class=n>e</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=s2>"Another non-200-range status code was received"</span><span class=p>)</span>
+    <span class=nb>print</span><span class=p>(</span><span class=n>e</span><span class=o>.</span><span class=n>status_code</span><span class=p>)</span>
+    <span class=nb>print</span><span class=p>(</span><span class=n>e</span><span class=o>.</span><span class=n>response</span><span class=p>)</span>
+</pre>
+<p>Error codes are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Error Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td><code>BadRequestError</code></td>
+</tr>
+<tr>
+<td>401</td>
+<td><code>AuthenticationError</code></td>
+</tr>
+<tr>
+<td>403</td>
+<td><code>PermissionDeniedError</code></td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>NotFoundError</code></td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>UnprocessableEntityError</code></td>
+</tr>
+<tr>
+<td>429</td>
+<td><code>RateLimitError</code></td>
+</tr>
+<tr>
+<td>&gt;=500</td>
+<td><code>InternalServerError</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td><code>APIConnectionError</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Retries</h3>
+<p>Certain errors are automatically retried 2 times by default, with a short exponential backoff.
+Connection errors (for example, due to a network connectivity problem), 408 Request Timeout, 409 Conflict,
+429 Rate Limit, and &gt;=500 Internal errors are all retried by default.</p>
+<p>You can use the <code>max_retries</code> option to configure or disable retry settings:</p>
+<pre lang=python3><span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span>
+
+<span class=c1># Configure the default for all requests:</span>
+<span class=n>client</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>(</span>
+    <span class=c1># default is 2</span>
+    <span class=n>max_retries</span><span class=o>=</span><span class=mi>0</span><span class=p>,</span>
+<span class=p>)</span>
+
+<span class=c1># Or, configure per-request:</span>
+<span class=n>client</span><span class=o>.</span><span class=n>with_options</span><span class=p>(</span><span class=n>max_retries</span><span class=o>=</span><span class=mi>5</span><span class=p>)</span><span class=o>.</span><span class=n>projects</span><span class=o>.</span><span class=n>list</span><span class=p>()</span>
+</pre>
+<h3>Timeouts</h3>
+<p>By default requests time out after 1 minute. You can configure this with a <code>timeout</code> option,
+which accepts a float or an <a href="https://www.python-httpx.org/advanced/timeouts/#fine-tuning-the-configuration" rel=nofollow><code>httpx.Timeout</code></a> object:</p>
+<pre lang=python3><span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span>
+
+<span class=c1># Configure the default for all requests:</span>
+<span class=n>client</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>(</span>
+    <span class=c1># 20 seconds (default is 1 minute)</span>
+    <span class=n>timeout</span><span class=o>=</span><span class=mf>20.0</span><span class=p>,</span>
+<span class=p>)</span>
+
+<span class=c1># More granular control:</span>
+<span class=n>client</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>(</span>
+    <span class=n>timeout</span><span class=o>=</span><span class=n>httpx</span><span class=o>.</span><span class=n>Timeout</span><span class=p>(</span><span class=mf>60.0</span><span class=p>,</span> <span class=n>read</span><span class=o>=</span><span class=mf>5.0</span><span class=p>,</span> <span class=n>write</span><span class=o>=</span><span class=mf>10.0</span><span class=p>,</span> <span class=n>connect</span><span class=o>=</span><span class=mf>2.0</span><span class=p>),</span>
+<span class=p>)</span>
+
+<span class=c1># Override per-request:</span>
+<span class=n>client</span><span class=o>.</span><span class=n>with_options</span><span class=p>(</span><span class=n>timeout</span><span class=o>=</span><span class=mf>5.0</span><span class=p>)</span><span class=o>.</span><span class=n>projects</span><span class=o>.</span><span class=n>list</span><span class=p>()</span>
+</pre>
+<p>On timeout, an <code>APITimeoutError</code> is thrown.</p>
+<p>Note that requests that time out are <a href="https://github.com/Giskard-AI/giskard-hub-python/tree/main/#retries" rel=nofollow>retried twice by default</a>.</p>
+<h2>Advanced</h2>
+<h3>Logging</h3>
+<p>We use the standard library <a href="https://docs.python.org/3/library/logging.html" rel=nofollow><code>logging</code></a> module.</p>
+<p>You can enable logging by setting the environment variable <code>GISKARD_HUB_LOG</code> to <code>info</code>.</p>
+<pre lang=shell>$<span class=w> </span><span class=nb>export</span><span class=w> </span><span class=nv>GISKARD_HUB_LOG</span><span class=o>=</span>info
+</pre>
+<p>Or to <code>debug</code> for more verbose logging.</p>
+<h3>How to tell whether <code>None</code> means <code>null</code> or missing</h3>
+<p>In an API response, a field may be explicitly <code>null</code>, or missing entirely; in either case, its value is <code>None</code> in this library. You can differentiate the two cases with <code>.model_fields_set</code>:</p>
+<pre lang=py><span class=k>if</span> <span class=n>response</span><span class=o>.</span><span class=n>my_field</span> <span class=ow>is</span> <span class=kc>None</span><span class=p>:</span>
+  <span class=k>if</span> <span class=s1>'my_field'</span> <span class=ow>not</span> <span class=ow>in</span> <span class=n>response</span><span class=o>.</span><span class=n>model_fields_set</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=s1>'Got json like </span><span class=si>{}</span><span class=s1>, without a "my_field" key present at all.'</span><span class=p>)</span>
+  <span class=k>else</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=s1>'Got json like {"my_field": null}.'</span><span class=p>)</span>
+</pre>
+<h3>Accessing raw response data (e.g. headers)</h3>
+<p>The "raw" Response object can be accessed by prefixing <code>.with_raw_response.</code> to any HTTP method call, e.g.,</p>
+<pre lang=py><span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span>
+
+<span class=n>client</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>()</span>
+<span class=n>response</span> <span class=o>=</span> <span class=n>client</span><span class=o>.</span><span class=n>projects</span><span class=o>.</span><span class=n>with_raw_response</span><span class=o>.</span><span class=n>list</span><span class=p>()</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>response</span><span class=o>.</span><span class=n>headers</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s1>'X-My-Header'</span><span class=p>))</span>
+
+<span class=n>projects</span> <span class=o>=</span> <span class=n>response</span><span class=o>.</span><span class=n>parse</span><span class=p>()</span>  <span class=c1># get the object that `projects.list()` would have returned</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>projects</span><span class=p>)</span>
+</pre>
+<p>These methods return an <a href="https://github.com/stainless-sdks/giskard-hub-python/tree/main/src/giskard_hub/_response.py" rel=nofollow><code>APIResponse</code></a> object.</p>
+<p>The async client returns an <a href="https://github.com/stainless-sdks/giskard-hub-python/tree/main/src/giskard_hub/_response.py" rel=nofollow><code>AsyncAPIResponse</code></a> with the same structure, the only difference being <code>await</code>able methods for reading the response content.</p>
+<h4><code>.with_streaming_response</code></h4>
+<p>The above interface eagerly reads the full response body when you make the request, which may not always be what you want.</p>
+<p>To stream the response body, use <code>.with_streaming_response</code> instead, which requires a context manager and only reads the response body once you call <code>.read()</code>, <code>.text()</code>, <code>.json()</code>, <code>.iter_bytes()</code>, <code>.iter_text()</code>, <code>.iter_lines()</code> or <code>.parse()</code>. In the async client, these are async methods.</p>
+<pre lang=python3><span class=k>with</span> <span class=n>client</span><span class=o>.</span><span class=n>projects</span><span class=o>.</span><span class=n>with_streaming_response</span><span class=o>.</span><span class=n>list</span><span class=p>()</span> <span class=k>as</span> <span class=n>response</span><span class=p>:</span>
+    <span class=nb>print</span><span class=p>(</span><span class=n>response</span><span class=o>.</span><span class=n>headers</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s2>"X-My-Header"</span><span class=p>))</span>
+
+    <span class=k>for</span> <span class=n>line</span> <span class=ow>in</span> <span class=n>response</span><span class=o>.</span><span class=n>iter_lines</span><span class=p>():</span>
+        <span class=nb>print</span><span class=p>(</span><span class=n>line</span><span class=p>)</span>
+</pre>
+<p>The context manager is required so that the response will reliably be closed.</p>
+<h3>Making custom/undocumented requests</h3>
+<p>This library is typed for convenient access to the documented API.</p>
+<p>If you need to access undocumented endpoints, params, or response properties, the library can still be used.</p>
+<h4>Undocumented endpoints</h4>
+<p>To make requests to undocumented endpoints, you can make requests using <code>client.get</code>, <code>client.post</code>, and other
+http verbs. Options on the client will be respected (such as retries) when making this request.</p>
+<pre lang=py><span class=kn>import</span><span class=w> </span><span class=nn>httpx</span>
+
+<span class=n>response</span> <span class=o>=</span> <span class=n>client</span><span class=o>.</span><span class=n>post</span><span class=p>(</span>
+    <span class=s2>"/foo"</span><span class=p>,</span>
+    <span class=n>cast_to</span><span class=o>=</span><span class=n>httpx</span><span class=o>.</span><span class=n>Response</span><span class=p>,</span>
+    <span class=n>body</span><span class=o>=</span><span class=p>{</span><span class=s2>"my_param"</span><span class=p>:</span> <span class=kc>True</span><span class=p>},</span>
+<span class=p>)</span>
+
+<span class=nb>print</span><span class=p>(</span><span class=n>response</span><span class=o>.</span><span class=n>headers</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s2>"x-foo"</span><span class=p>))</span>
+</pre>
+<h4>Undocumented request params</h4>
+<p>If you want to explicitly send an extra param, you can do so with the <code>extra_query</code>, <code>extra_body</code>, and <code>extra_headers</code> request
+options.</p>
+<h4>Undocumented response properties</h4>
+<p>To access undocumented response properties, you can access the extra fields like <code>response.unknown_prop</code>. You
+can also get all the extra fields on the Pydantic model as a dict with
+<a href="https://docs.pydantic.dev/latest/api/base_model/#pydantic.BaseModel.model_extra" rel=nofollow><code>response.model_extra</code></a>.</p>
+<h3>Configuring the HTTP client</h3>
+<p>You can directly override the <a href="https://www.python-httpx.org/api/#client" rel=nofollow>httpx client</a> to customize it for your use case, including:</p>
+<ul>
+<li>Support for <a href="https://www.python-httpx.org/advanced/proxies/" rel=nofollow>proxies</a></li>
+<li>Custom <a href="https://www.python-httpx.org/advanced/transports/" rel=nofollow>transports</a></li>
+<li>Additional <a href="https://www.python-httpx.org/advanced/clients/" rel=nofollow>advanced</a> functionality</li>
+</ul>
+<pre lang=python3><span class=kn>import</span><span class=w> </span><span class=nn>httpx</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span><span class=p>,</span> <span class=n>DefaultHttpxClient</span>
+
+<span class=n>client</span> <span class=o>=</span> <span class=n>HubClient</span><span class=p>(</span>
+    <span class=c1># Or use the `GISKARD_HUB_BASE_URL` env var</span>
+    <span class=n>base_url</span><span class=o>=</span><span class=s2>"http://my.test.server.example.com:8083"</span><span class=p>,</span>
+    <span class=n>http_client</span><span class=o>=</span><span class=n>DefaultHttpxClient</span><span class=p>(</span>
+        <span class=n>proxy</span><span class=o>=</span><span class=s2>"http://my.test.proxy.example.com"</span><span class=p>,</span>
+        <span class=n>transport</span><span class=o>=</span><span class=n>httpx</span><span class=o>.</span><span class=n>HTTPTransport</span><span class=p>(</span><span class=n>local_address</span><span class=o>=</span><span class=s2>"0.0.0.0"</span><span class=p>),</span>
+    <span class=p>),</span>
+<span class=p>)</span>
+</pre>
+<p>You can also customize the client on a per-request basis by using <code>with_options()</code>:</p>
+<pre lang=python3><span class=n>client</span><span class=o>.</span><span class=n>with_options</span><span class=p>(</span><span class=n>http_client</span><span class=o>=</span><span class=n>DefaultHttpxClient</span><span class=p>(</span><span class=o>...</span><span class=p>))</span>
+</pre>
+<h3>Managing HTTP resources</h3>
+<p>By default the library closes underlying HTTP connections whenever the client is <a href="https://docs.python.org/3/reference/datamodel.html#object.__del__" rel=nofollow>garbage collected</a>. You can manually close the client using the <code>.close()</code> method if desired, or with a context manager that closes when exiting.</p>
+<pre lang=py><span class=kn>from</span><span class=w> </span><span class=nn>giskard_hub</span><span class=w> </span><span class=kn>import</span> <span class=n>HubClient</span>
+
+<span class=k>with</span> <span class=n>HubClient</span><span class=p>()</span> <span class=k>as</span> <span class=n>client</span><span class=p>:</span>
+  <span class=c1># make requests here</span>
+  <span class=o>...</span>
+
+<span class=c1># HTTP client is now closed</span>
+</pre>
+<h2>Versioning</h2>
+<p>This package generally follows <a href="https://semver.org/spec/v2.0.0.html" rel=nofollow>SemVer</a> conventions, though certain backwards-incompatible changes may be released as minor versions:</p>
+<ol>
+<li>Changes that only affect static types, without breaking runtime behavior.</li>
+<li>Changes to library internals which are technically public but not intended or documented for external use. <em>(Please open a GitHub issue to let us know if you are relying on such internals.)</em></li>
+<li>Changes that we do not expect to impact the vast majority of users in practice.</li>
+</ol>
+<p>We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.</p>
+<p>We are keen for your feedback; please open an <a href="https://www.github.com/Giskard-AI/giskard-hub-python/issues" rel=nofollow>issue</a> with questions, bugs, or suggestions.</p>
+<h3>Determining the installed version</h3>
+<p>If you've upgraded to the latest version but aren't seeing any new features you were expecting then your python environment is likely still using an older version.</p>
+<p>You can determine the version that is being used at runtime with:</p>
+<pre lang=py><span class=kn>import</span><span class=w> </span><span class=nn>giskard_hub</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>giskard_hub</span><span class=o>.</span><span class=n>__version__</span><span class=p>)</span>
+</pre>
+<h2>Requirements</h2>
+<p>Python 3.10 or higher.</p>
+<h2>Contributing</h2>
+<p>See <a href="https://github.com/Giskard-AI/giskard-hub-python/tree/main/./CONTRIBUTING.md" rel=nofollow>the contributing documentation</a>.</p>
+</div>
+</div>
+<div id="data"
+     data-project-tabs-target="content"
+     class="vertical-tabs__content"
+     role="tabpanel"
+     aria-labelledby="mobile-data-tab"
+     tabindex="-1">
+  <h2 class="page-title">Project details</h2>
+<div class="sidebar-section verified">
+  <h3 class="sidebar-section__title">
+Verified details    <i class="fa fa-circle-check check"
+       title="Verified by PyPI on 2026-05-04"></i>
+  </h3>
+  <small><i>These details have been <a href="https://docs.pypi.org/project_metadata/#verified-details">verified by PyPI</a></i></small>
+    <h6>Project links</h6>
+    <ul class="vertical-tabs__list">
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/Giskard-AI/giskard-hub-python"
+               rel="nofollow">  <i class="fas fa-home" aria-hidden="true"></i>Homepage</a>
+          </li>
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/Giskard-AI/giskard-hub-python/issues"
+               rel="nofollow">  <i class="fas fa-bug" aria-hidden="true"></i>Issues</a>
+          </li>
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/Giskard-AI/giskard-hub-python"
+               rel="nofollow">  <i class="fab fa-github" aria-hidden="true"></i>Repository</a>
+          </li>
+    </ul>
+    <h6>Owner</h6>
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           href="/org/Giskard/"
+           aria-label="Giskard">
+          <i class="fa fa-sitemap" aria-hidden="true"></i>
+          Giskard AI
+        </a>
+      </li>
+    </ul>
+    <h6>GitHub Statistics</h6>
+    <div class="hidden github-repo-info" data-controller="github-repo-info">
+      <ul class="vertical-tabs__list">
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             rel="noopener"
+             href="https://github.com/Giskard-AI/giskard-hub-python">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <strong>Repository</strong>
+          </a>
+        </li>
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             data-github-repo-info-target="stargazersUrl"
+             rel="noopener">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <strong>Stars:</strong>
+            <span data-github-repo-info-target="stargazersCount"></span>
+          </a>
+        </li>
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             data-github-repo-info-target="forksUrl"
+             rel="noopener">
+            <i class="fa fa-code-branch" aria-hidden="true"></i>
+            <strong>Forks:</strong>
+            <span data-github-repo-info-target="forksCount"></span>
+          </a>
+        </li>
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             data-github-repo-info-target="openIssuesUrl"
+             rel="noopener">
+            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+            <strong>Open issues:</strong>
+            <span data-github-repo-info-target="openIssuesCount"></span>
+          </a>
+        </li>
+        <li>
+          <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+             data-github-repo-info-target="openPRsUrl"
+             rel="noopener">
+            <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+            <strong>Open PRs:</strong>
+            <span data-github-repo-info-target="openPRsCount"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>
+<div class="sidebar-section unverified">
+  <h3 class="sidebar-section__title">Unverified details</h3>
+  <small><i>These details have <b>not</b> been verified by PyPI</i></small>
+    <h6>Project links</h6>
+    <ul class="vertical-tabs__list">
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://docs.giskard.ai/hub/sdk"
+               rel="nofollow">  <i class="fas fa-book" aria-hidden="true"></i>Documentation</a>
+          </li>
+    </ul>
+    <div class="sidebar-section unverified">
+      <h6>Meta</h6>
+      <ul>
+          <li>
+            <span>
+              <strong>License Expression:</strong> Apache-2.0
+              <br>
+              <small>
+                <i>
+                  <a target="_blank" href="https://spdx.org/licenses/">SPDX</a>
+                  <a target="_blank"
+                     href="https://spdx.github.io/spdx-spec/v3.0.1/annexes/spdx-license-expressions/">License Expression</a>
+                </i>
+              </small>
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Author:</strong> <a href="mailto:henrique@giskard.ai">Henrique Chaves</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Requires:</strong> Python &lt;3.15, &gt;=3.10
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Provides-Extra:</strong>
+                <code>aiohttp</code>
+,                <code>dev</code>
+            </span>
+          </li>
+      </ul>
+    </div>
+    <div class="sidebar-section unverified">
+      <h6 class="sidebar-section__title">Classifiers</h6>
+      <ul class="sidebar-section__classifiers">
+          <li>
+            <strong>Intended Audience</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+                    Developers
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>License</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+Apache+Software+License">
+                    OSI Approved :: Apache Software License
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Operating System</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+MacOS">
+                    MacOS
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+Microsoft+%3A%3A+Windows">
+                    Microsoft :: Windows
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+OS+Independent">
+                    OS Independent
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+POSIX">
+                    POSIX
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+POSIX+%3A%3A+Linux">
+                    POSIX :: Linux
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Programming Language</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.10">
+                    Python :: 3.10
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.11">
+                    Python :: 3.11
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.12">
+                    Python :: 3.12
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.13">
+                    Python :: 3.13
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.14">
+                    Python :: 3.14
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Topic</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries+%3A%3A+Python+Modules">
+                    Software Development :: Libraries :: Python Modules
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Typing</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Typing+%3A%3A+Typed">
+                    Typed
+                  </a>
+                </li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+</div>  <br>
+</div>
+<div id="history"
+     data-project-tabs-target="content"
+     class="vertical-tabs__content"
+     role="tabpanel"
+     aria-labelledby="history-tab mobile-history-tab"
+     tabindex="-1">
+  <h2 class="page-title split-layout">
+    <span>Release history</span>
+    <span class="reset-text margin-top">
+      <a href="/help/#project-release-notifications">Release notifications</a> |
+      <a href="/rss/project/giskard-hub/releases.xml">RSS feed <i class="fa fa-rss" aria-hidden="true"></i></a>
+    </span>
+  </h2>
+  <div class="release-timeline">
+      <div class="release release--latest">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.2.0b1/">
+          <p class="release__version">
+            3.2.0b1
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-07-09T09:37:57+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 9, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release release--current">
+        <div class="release__meta">
+            <span class="badge">This version</span>
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/blue-cube.572a5bfb.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.1.1/">
+          <p class="release__version">
+            3.1.1
+          </p>
+          <p class="release__version-date"><time datetime="2026-05-04T07:49:23+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 4, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.1.0/">
+          <p class="release__version">
+            3.1.0
+          </p>
+          <p class="release__version-date"><time datetime="2026-04-09T10:36:46+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 9, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.1/">
+          <p class="release__version">
+            3.0.1
+          </p>
+          <p class="release__version-date"><time datetime="2026-04-01T15:36:22+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 1, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0/">
+          <p class="release__version">
+            3.0.0
+          </p>
+          <p class="release__version-date"><time datetime="2026-04-01T10:51:18+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 1, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0b9/">
+          <p class="release__version">
+            3.0.0b9
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-03-31T14:40:52+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 31, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0b8/">
+          <p class="release__version">
+            3.0.0b8
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-03-30T10:34:18+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 30, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0b7/">
+          <p class="release__version">
+            3.0.0b7
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-03-19T08:57:17+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 19, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0b6/">
+          <p class="release__version">
+            3.0.0b6
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-03-16T15:00:29+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 16, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0b5/">
+          <p class="release__version">
+            3.0.0b5
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-03-15T10:15:16+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 15, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0b4/">
+          <p class="release__version">
+            3.0.0b4
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-03-12T19:27:30+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 12, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0b3/">
+          <p class="release__version">
+            3.0.0b3
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-03-07T20:49:30+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 7, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0b2/">
+          <p class="release__version">
+            3.0.0b2
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-02-16T17:54:04+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Feb 16, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/3.0.0b1/">
+          <p class="release__version">
+            3.0.0b1
+              <span class="badge badge--warning">pre-release</span>
+          </p>
+          <p class="release__version-date"><time datetime="2026-02-05T16:53:01+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Feb 5, 2026
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/2.1.0/">
+          <p class="release__version">
+            2.1.0
+          </p>
+          <p class="release__version-date"><time datetime="2025-10-30T08:11:06+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 30, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/2.0.2/">
+          <p class="release__version">
+            2.0.2
+          </p>
+          <p class="release__version-date"><time datetime="2025-10-06T08:27:19+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 6, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/2.0.1/">
+          <p class="release__version">
+            2.0.1
+          </p>
+          <p class="release__version-date"><time datetime="2025-10-01T15:38:43+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 1, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/2.0.0/">
+          <p class="release__version">
+            2.0.0
+          </p>
+          <p class="release__version-date"><time datetime="2025-09-23T12:08:34+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 23, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.2.7/">
+          <p class="release__version">
+            1.2.7
+          </p>
+          <p class="release__version-date"><time datetime="2025-09-11T15:32:26+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 11, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.2.6/">
+          <p class="release__version">
+            1.2.6
+          </p>
+          <p class="release__version-date"><time datetime="2025-09-03T10:28:51+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 3, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.2.5/">
+          <p class="release__version">
+            1.2.5
+          </p>
+          <p class="release__version-date"><time datetime="2025-07-11T14:09:58+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 11, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.2.4/">
+          <p class="release__version">
+            1.2.4
+          </p>
+          <p class="release__version-date"><time datetime="2025-06-18T09:20:45+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jun 18, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.2.3/">
+          <p class="release__version">
+            1.2.3
+          </p>
+          <p class="release__version-date"><time datetime="2025-05-27T13:02:24+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 27, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.2.2/">
+          <p class="release__version">
+            1.2.2
+          </p>
+          <p class="release__version-date"><time datetime="2025-04-23T13:48:19+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 23, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.2.1/">
+          <p class="release__version">
+            1.2.1
+          </p>
+          <p class="release__version-date"><time datetime="2025-04-09T12:39:04+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 9, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.2.0/">
+          <p class="release__version">
+            1.2.0
+          </p>
+          <p class="release__version-date"><time datetime="2025-03-04T14:53:32+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 4, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.1.1/">
+          <p class="release__version">
+            1.1.1
+          </p>
+          <p class="release__version-date"><time datetime="2025-02-18T15:46:39+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Feb 18, 2025
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.1.0/">
+          <p class="release__version">
+            1.1.0
+          </p>
+          <p class="release__version-date"><time datetime="2024-09-13T14:14:43+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 13, 2024
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/1.0.0/">
+          <p class="release__version">
+            1.0.0
+          </p>
+          <p class="release__version-date"><time datetime="2024-06-05T17:01:24+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jun 5, 2024
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/0.1.3/">
+          <p class="release__version">
+            0.1.3
+          </p>
+          <p class="release__version-date"><time datetime="2024-05-28T16:28:14+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 28, 2024
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/0.1.2/">
+          <p class="release__version">
+            0.1.2
+          </p>
+          <p class="release__version-date"><time datetime="2024-05-27T16:18:09+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 27, 2024
+  </time></p>
+        </a>
+      </div>
+      <div class="release">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/0.1.1/">
+          <p class="release__version">
+            0.1.1
+          </p>
+          <p class="release__version-date"><time datetime="2024-05-27T16:01:15+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 27, 2024
+  </time></p>
+        </a>
+      </div>
+      <div class="release release--oldest">
+        <div class="release__meta">
+        </div>
+        <div class="release__graphic">
+            <div class="release__line"></div>
+            <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+        </div>
+        <a class="card release__card"
+           href="/project/giskard-hub/0.1.0/">
+          <p class="release__version">
+            0.1.0
+          </p>
+          <p class="release__version-date"><time datetime="2024-05-27T00:10:24+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 27, 2024
+  </time></p>
+        </a>
+      </div>
+  </div>
+</div>
+  <div id="files"
+       data-project-tabs-target="content"
+       class="vertical-tabs__content"
+       role="tabpanel"
+       aria-labelledby="files-tab mobile-files-tab"
+       tabindex="-1"
+       data-controller="filter-list">
+    <h2 class="page-title">Download files</h2>
+    <p>
+Download the file for your platform. If you're not sure which to choose, learn more about <a href="https://packaging.python.org/tutorials/installing-packages/" title="External link" target="_blank" rel="noopener">installing packages</a>.    </p>
+    <h3>
+Source Distribution  </h3>
+        <div class="file"
+>
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/ba/03/da566fab25c7a0ace7802fa1bf0209c89a236d08e6fbe5c02062f4bd7a17/giskard_hub-3.1.1.tar.gz">giskard_hub-3.1.1.tar.gz</a>
+        (291.1 kB
+        <a href="#giskard_hub-3.1.1.tar.gz"
+           data-project-tabs-target="tab mobileTab"
+           data-action="project-tabs#onTabClick">view details</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2026-05-04T07:49:24+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 4, 2026
+  </time>
+<code>Source</code>        </p>
+      </div>
+    </div>
+
+    <h3>
+Built Distribution  </h3>
+  <p class="hidden initial-toggle-visibility">
+Filter files by name, interpreter, ABI, and platform.  </p>
+  <p>
+If you're not sure about the file name format, learn more about <a href="https://packaging.python.org/en/latest/specifications/binary-distribution-format/" title="External link" target="_blank" rel="noopener">wheel file names</a>.  </p>
+  <noscript>
+    <p class="initial-toggle-visibility">
+The dropdown lists show the available interpreters, ABIs, and platforms.    </p>
+    <p class="initial-toggle-visibility">
+Enable javascript to be able to filter the list of wheel files.    </p>
+  </noscript>
+  <p class="hidden initial-toggle-visibility" data-controller="clipboard">
+Copy a direct link to the current filters    <a class="hidden"
+       href="https://pypi.org/project/giskard-hub/#files"
+       data-clipboard-target="source"
+       data-filter-list-target="url"></a>
+    <button type="button"
+            class="button button--small copy-tooltip copy-tooltip-w"
+            data-action="clipboard#copy"
+            data-clipboard-target="tooltip"
+            data-clipboard-tooltip-value="Copy to clipboard">
+Copy    </button>
+  </p>
+  <p class="hidden initial-toggle-visibility">
+    <span data-filter-list-target="summary"></span>
+  </p>
+  <div>
+    <div class="form-group hidden initial-toggle-visibility">
+      <label class="form-group__label sr-only" for="bdist-filenames-filter">File name</label>
+      <input class="form-group__field"
+             type="text"
+             id="bdist-filenames-filter"
+             name="bdist-filenames-filter"
+             placeholder="File name"
+             autocapitalize="none"
+             autocomplete=""
+             spellcheck="false"
+             data-action="filter-list#filter"
+             data-filter-list-target="filter"
+             data-filtered-source="filename">
+    </div>
+    <div class="col-grid">
+      <div class="form-group col-third">  <label class="form-group__label sr-only" for="bdist-tags-interpreters">Interpreter</label>
+  <select class="form-group__field"
+          id="bdist-tags-interpreters"
+          name="bdist-tags-interpreters"
+          data-action="filter-list#filter"
+          data-filter-list-target="filter"
+          data-filtered-source="interpreters">
+    <option selected value="">Interpreter</option>
+      <option               value="py3">py3</option>
+  </select>
+</div>
+      <div class="form-group col-third">  <label class="form-group__label sr-only" for="bdist-tags-abis">ABI</label>
+  <select class="form-group__field"
+          id="bdist-tags-abis"
+          name="bdist-tags-abis"
+          data-action="filter-list#filter"
+          data-filter-list-target="filter"
+          data-filtered-source="abis">
+    <option selected value="">ABI</option>
+      <option               value="none">none</option>
+  </select>
+</div>
+      <div class="form-group col-third">  <label class="form-group__label sr-only" for="bdist-tags-platforms">Platform</label>
+  <select class="form-group__field"
+          id="bdist-tags-platforms"
+          name="bdist-tags-platforms"
+          data-action="filter-list#filter"
+          data-filter-list-target="filter"
+          data-filtered-source="platforms">
+    <option selected value="">Platform</option>
+      <option               value="any">any</option>
+  </select>
+</div>
+    </div>
+  </div>
+      <div class="file"
+ data-filter-list-target="item" data-filtered-target-filename='["giskard_hub-3.1.1-py3-none-any.whl"]'  data-filtered-target-interpreters='["py3"]'  data-filtered-target-abis='["none"]'  data-filtered-target-platforms='["any"]' >
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/d5/46/9d1d4d1e6b6379ea36075912f116839d9650adbdd7528d2fb743286acac8/giskard_hub-3.1.1-py3-none-any.whl">giskard_hub-3.1.1-py3-none-any.whl</a>
+        (150.5 kB
+        <a href="#giskard_hub-3.1.1-py3-none-any.whl"
+           data-project-tabs-target="tab mobileTab"
+           data-action="project-tabs#onTabClick">view details</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2026-05-04T07:49:23+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 4, 2026
+  </time>
+<code>Python 3</code>        </p>
+      </div>
+    </div>
+
+</div>
+<div id="giskard_hub-3.1.1.tar.gz"
+     data-project-tabs-target="content"
+     class="vertical-tabs__content"
+     role="tabpanel"
+     aria-labelledby="file-tab mobile-file-tab"
+     tabindex="-1">
+  <h2 class="page-title">File details</h2>
+  <p>
+    Details for the file <code>giskard_hub-3.1.1.tar.gz</code>.
+  </p>
+  <h3>File metadata</h3>
+  <div>
+    <ul>
+      <li>
+        Download URL: <a href="https://files.pythonhosted.org/packages/ba/03/da566fab25c7a0ace7802fa1bf0209c89a236d08e6fbe5c02062f4bd7a17/giskard_hub-3.1.1.tar.gz">giskard_hub-3.1.1.tar.gz</a>
+      </li>
+      <li>Upload date: <time datetime="2026-05-04T07:49:24+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 4, 2026
+  </time></li>
+      <li>
+Size: 291.1 kB      </li>
+      <li>Tags: Source</li>
+      <li>
+Uploaded using Trusted Publishing? Yes    </li>
+      <li>Uploaded via: uv/0.11.8 {&#34;installer&#34;:{&#34;name&#34;:&#34;uv&#34;,&#34;version&#34;:&#34;0.11.8&#34;,&#34;subcommand&#34;:[&#34;publish&#34;]},&#34;python&#34;:null,&#34;implementation&#34;:{&#34;name&#34;:null,&#34;version&#34;:null},&#34;distro&#34;:{&#34;name&#34;:&#34;Ubuntu&#34;,&#34;version&#34;:&#34;24.04&#34;,&#34;id&#34;:&#34;noble&#34;,&#34;libc&#34;:null},&#34;system&#34;:{&#34;name&#34;:null,&#34;release&#34;:null},&#34;cpu&#34;:null,&#34;openssl_version&#34;:null,&#34;setuptools_version&#34;:null,&#34;rustc_version&#34;:null,&#34;ci&#34;:true}</li>
+  </ul>
+</div>
+<h3>File hashes</h3>
+<div>
+  <table class="table table--hashes">
+    <caption class="sr-only">Hashes for giskard_hub-3.1.1.tar.gz</caption>
+    <thead>
+      <tr>
+        <th scope="col">Algorithm</th>
+        <th scope="col">Hash digest</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-controller="clipboard">
+        <th scope="row">SHA256</th>
+        <td>
+          <code data-clipboard-target="source">db3c9050c1c4d68501d4370de34348e5ea5dd38ccefa306c67920aa97b00ae08</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+      <tr data-controller="clipboard">
+        <th scope="row">MD5</th>
+        <td>
+          <code data-clipboard-target="source">4a08c9ae85277c71ef07de47e9ed6a40</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+      <tr data-controller="clipboard">
+        <th scope="row">BLAKE2b-256</th>
+        <td>
+          <code data-clipboard-target="source">ba03da566fab25c7a0ace7802fa1bf0209c89a236d08e6fbe5c02062f4bd7a17</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+<a href="https://pip.pypa.io/en/stable/topics/secure-installs/#hash-checking-mode" title="External link" target="_blank" rel="noopener">See more details on using hashes here.</a></p>
+</div>
+</div><div id="giskard_hub-3.1.1-py3-none-any.whl"
+     data-project-tabs-target="content"
+     class="vertical-tabs__content"
+     role="tabpanel"
+     aria-labelledby="file-tab mobile-file-tab"
+     tabindex="-1">
+  <h2 class="page-title">File details</h2>
+  <p>
+    Details for the file <code>giskard_hub-3.1.1-py3-none-any.whl</code>.
+  </p>
+  <h3>File metadata</h3>
+  <div>
+    <ul>
+      <li>
+        Download URL: <a href="https://files.pythonhosted.org/packages/d5/46/9d1d4d1e6b6379ea36075912f116839d9650adbdd7528d2fb743286acac8/giskard_hub-3.1.1-py3-none-any.whl">giskard_hub-3.1.1-py3-none-any.whl</a>
+      </li>
+      <li>Upload date: <time datetime="2026-05-04T07:49:23+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 4, 2026
+  </time></li>
+      <li>
+Size: 150.5 kB      </li>
+      <li>Tags: Python 3</li>
+      <li>
+Uploaded using Trusted Publishing? Yes    </li>
+      <li>Uploaded via: uv/0.11.8 {&#34;installer&#34;:{&#34;name&#34;:&#34;uv&#34;,&#34;version&#34;:&#34;0.11.8&#34;,&#34;subcommand&#34;:[&#34;publish&#34;]},&#34;python&#34;:null,&#34;implementation&#34;:{&#34;name&#34;:null,&#34;version&#34;:null},&#34;distro&#34;:{&#34;name&#34;:&#34;Ubuntu&#34;,&#34;version&#34;:&#34;24.04&#34;,&#34;id&#34;:&#34;noble&#34;,&#34;libc&#34;:null},&#34;system&#34;:{&#34;name&#34;:null,&#34;release&#34;:null},&#34;cpu&#34;:null,&#34;openssl_version&#34;:null,&#34;setuptools_version&#34;:null,&#34;rustc_version&#34;:null,&#34;ci&#34;:true}</li>
+  </ul>
+</div>
+<h3>File hashes</h3>
+<div>
+  <table class="table table--hashes">
+    <caption class="sr-only">Hashes for giskard_hub-3.1.1-py3-none-any.whl</caption>
+    <thead>
+      <tr>
+        <th scope="col">Algorithm</th>
+        <th scope="col">Hash digest</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-controller="clipboard">
+        <th scope="row">SHA256</th>
+        <td>
+          <code data-clipboard-target="source">17df72834f025127162f24af8ad0a381f1729e7ff02d6bc9ee5a02aa45755fed</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+      <tr data-controller="clipboard">
+        <th scope="row">MD5</th>
+        <td>
+          <code data-clipboard-target="source">690cb384f6dc6d361a3abd3b5f2ae62e</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+      <tr data-controller="clipboard">
+        <th scope="row">BLAKE2b-256</th>
+        <td>
+          <code data-clipboard-target="source">d5469d1d4d1e6b6379ea36075912f116839d9650adbdd7528d2fb743286acac8</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+<a href="https://pip.pypa.io/en/stable/topics/secure-installs/#hash-checking-mode" title="External link" target="_blank" rel="noopener">See more details on using hashes here.</a></p>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer__logo">
+    <img src="/static/images/white-cube.2351a86c.svg"
+         alt=""
+         class="-js-white-cube">
+  </div>
+  <div class="footer__menus">
+    <div class="footer__menu">
+      <h2>Help</h2>
+      <nav aria-label="Help navigation">
+        <ul>
+          <li>
+            <a href="https://packaging.python.org/tutorials/installing-packages/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Installing packages</a>
+          </li>
+          <li>
+            <a href="https://packaging.python.org/tutorials/packaging-projects/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Uploading packages</a>
+          </li>
+          <li>
+            <a href="https://packaging.python.org/"
+               title="External link"
+               target="_blank"
+               rel="noopener">User guide</a>
+          </li>
+          <li>
+            <a href="https://www.python.org/dev/peps/pep-0541/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Project name retention</a>
+          </li>
+          <li>
+            <a href="/help/">FAQs</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__menu">
+      <h2>About PyPI</h2>
+      <nav aria-label="About PyPI navigation">
+        <ul>
+          <li>
+            <a href="https://blog.pypi.org"
+               title="External link"
+               target="_blank"
+               rel="noopener">PyPI Blog</a>
+          </li>
+          <li>
+            <a href="https://dtdg.co/pypi"
+               title="External link"
+               target="_blank"
+               rel="noopener">Infrastructure dashboard</a>
+          </li>
+          <li>
+            <a href="/stats/">Statistics</a>
+          </li>
+          <li>
+            <a href="/trademarks/">Logos & trademarks</a>
+          </li>
+          <li>
+            <a href="/sponsors/">Our sponsors</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__menu">
+      <h2>Contributing to PyPI</h2>
+      <nav aria-label="How to contribute navigation">
+        <ul>
+          <li>
+            <a href="/help/#feedback">Bugs and feedback</a>
+          </li>
+          <li>
+            <a href="https://github.com/pypi/warehouse"
+               title="External link"
+               target="_blank"
+               rel="noopener">Contribute on GitHub</a>
+          </li>
+          <li>
+            <a href="https://hosted.weblate.org/projects/pypa/warehouse/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Translate PyPI</a>
+          </li>
+          <li>
+            <a href="/sponsors/">Sponsor PyPI</a>
+          </li>
+          <li>
+            <a href="https://github.com/pypi/warehouse/graphs/contributors"
+               title="External link"
+               target="_blank"
+               rel="noopener">Development credits</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__menu">
+      <h2>Using PyPI</h2>
+      <nav aria-label="Using PyPI navigation">
+        <ul>
+          <li>
+            <a href="https://policies.python.org/pypi.org/Terms-of-Service/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Terms of Service</a>
+          </li>
+          <li>
+            <a href="/security/">Report security issue</a>
+          </li>
+          <li>
+            <a href="https://policies.python.org/python.org/code-of-conduct/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Code of conduct</a>
+          </li>
+          <li>
+            <a href="https://policies.python.org/pypi.org/Privacy-Notice/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Privacy Notice</a>
+          </li>
+          <li>
+            <a href="https://policies.python.org/pypi.org/Acceptable-Use-Policy/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Acceptable Use Policy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr class="footer__divider">
+  <div class="footer__text">
+      <p>
+Status:<a href="https://status.python.org/"
+   title="External link"
+   target="_blank"
+   rel="noopener">
+        <span data-statuspage-domain="https://2p66nmmycsj3.statuspage.io">all systems operational</span></a>
+    </p>
+  <p>
+Developed and maintained by the Python community, for the Python community.    <br>
+    <a href="https://donate.pypi.org">Donate today!</a>
+  </p>
+  <p>
+    "PyPI", "Python Package Index", and the blocks logos are registered <a href="/trademarks/">trademarks</a> of the <a href="https://www.python.org/psf-landing" target="_blank" rel="noopener">Python Software Foundation</a>.
+    <br>
+  </p>
+  <p>
+    © 2026 <a href="https://www.python.org/psf-landing/"
+    title="External link"
+    target="_blank"
+    rel="noopener">Python Software Foundation</a>
+    <br>
+    <a href="/sitemap/">Site map</a>
+  </p>
+    <p>
+Deployed from <a href="https://github.com/pypi/warehouse/commit/f576313a510043e07f72dd4db75c4084025566da" title="External link" target="_blank" rel="noopener"><code>f576313</code></a>    </p>
+</div>
+<div class="centered hide-on-desktop">
+  <button type="button"
+          class="button button--switch-to-desktop hidden"
+          data-viewport-toggle-target="switchToDesktop"
+          data-action="viewport-toggle#switchToDesktop">Switch to desktop version</button>
+</div>
+</footer>
+<div class="language-switcher">
+  <form action="/locale/">
+    <ul>
+        <li>
+          <button class="language-switcher__selected"                  name="locale_id"
+                  value="en"
+                  type="submit">English</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="es"
+                  type="submit">español</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="fr"
+                  type="submit">français</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="ja"
+                  type="submit">日本語</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="pt_BR"
+                  type="submit">português (Brasil)</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="uk"
+                  type="submit">українська</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="el"
+                  type="submit">Ελληνικά</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="de"
+                  type="submit">Deutsch</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="zh_Hans"
+                  type="submit">中文 (简体)</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="zh_Hant"
+                  type="submit">中文 (繁體)</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="ru"
+                  type="submit">русский</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="he"
+                  type="submit">עברית</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="eo"
+                  type="submit">Esperanto</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="ko"
+                  type="submit">한국어</button>
+        </li>
+    </ul>
+  </form>
+</div>
+<div class="sponsors">
+  <p class="sponsors__title">Supported by</p>
+  <div class="sponsors__divider"></div>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://aws.amazon.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">AWS</span>
+          <span class="sponsors__service">
+              Cloud computing and Security Sponsor
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://www.datadoghq.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Datadog</span>
+          <span class="sponsors__service">
+              Monitoring
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://depot.dev">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Depot</span>
+          <span class="sponsors__service">
+              Continuous Integration
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://www.fastly.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Fastly</span>
+          <span class="sponsors__service">
+              CDN
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://careers.google.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Google</span>
+          <span class="sponsors__service">
+              Download Analytics
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://www.pingdom.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Pingdom</span>
+          <span class="sponsors__service">
+              Monitoring
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://sentry.io/for/python/?utm_source=pypi&amp;utm_medium=paid-community&amp;utm_campaign=python-na-evergreen&amp;utm_content=static-ad-pypi-sponsor-learnmore">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Sentry</span>
+          <span class="sponsors__service">
+              Error logging
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://statuspage.io">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">StatusPage</span>
+          <span class="sponsors__service">
+              Status page
+          </span>
+        </a>
+</div></body>
+</html>
