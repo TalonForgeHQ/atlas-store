@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pinecone vector_database audit checklist: 5 SOC 2 CC7.2 + EU AI Act Art. 12 provenance gaps, OWASP LLM Top 10 prompt-injection defense, per-region residency matrix, HIPAA-eligible Enterprise config, per-namespace isolation evidence.">
+<title>Pinecone Vector Database Audit Checklist (2026): 5 SOC 2 + EU AI Act Gaps</title>
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_233.html">
+</head>
+<body>
+<article>
+<header>
+<h1>Pinecone Vector Database Audit Checklist (2026): 5 SOC 2 + EU AI Act Gaps</h1>
+<p><strong>Vendor:</strong> Pinecone (pinecone.io) &middot; <strong>Vertical:</strong> vector_database &middot; <strong>Tier:</strong> 1 VERTEX &middot; <strong>Founder:</strong> Edo Liberty (PhD, former AWS Senior Principal Scientist) &middot; <strong>HQ:</strong> New York NY</p>
+</header>
+
+<section>
+<h2>1. Introduction: Why Pinecone Is the Vector Database Vertex</h2>
+<p>Pinecone is the canonical managed-vector-database platform + serverless-vector-index + pod-based-vector-index + hybrid-search + sparse-dense-retrieval + metadata-filtering platform serving 5,000+ companies including Notion + Cursor + Gong + Perplexity + Shopify + Brex + HubSpot + TaskRabbit + Discord internal teams + 50K+ developers via the Pinecone SDK. Edo Liberty founded Pinecone in 2019 after leading the SageMaker Algorithms team at AWS AI/ML. The platform raised $138M+ from Menlo Ventures + Andreessen Horowitz + ICONIQ Growth + Wing Venture Capital + Founders Fund.</p>
+<p>Pinecone is the ONLY Tier-1 vendor in the vector_database cohort that ships BOTH the canonical managed-serverless-vector-index surface AND the canonical hybrid-search surface (dense + sparse + BM25 + learned sparse + metadata filtering + reranking) AND the canonical vector-embeddings-platform surface AND the canonical RAG-native surface (Pinecone Assistant + Pinecone Connectors for Notion + Slack + Google Drive + HubSpot) AND the canonical enterprise-grade-isolation surface (per-project + per-environment + per-region + per-pod-type + per-API-key + per-collection + customer-managed-keys option on Enterprise Tier).</p>
+</section>
+
+<section>
+<h2>2. Pinecone 5-Gap Audit Checklist (2026)</h2>
+
+<h3>Gap 1: End-to-End Per-Record → Per-Vector → Per-Namespace → Per-Pod → Per-Region → Per-Query → Per-Assistant-Thread Provenance Join-Table</h3>
+<p>The audit-relevant IDs span the full vector lifecycle:</p>
+<ul>
+<li>per-record-id (the document chunk identifier)</li>
+<li>per-vector-id (the dense + sparse vector identifier)</li>
+<li>per-namespace-id (the logical partition)</li>
+<li>per-index-id (the serverless or pod-based index identifier)</li>
+<li>per-pod-id (the dedicated compute pod identifier)</li>
+<li>per-region-id (US-Virginia + US-Oregon + EU-Ireland + EU-Frankfurt + Asia-Topico)</li>
+<li>per-query-id (each retrieval query)</li>
+<li>per-embedding-id (the embedding model invocation)</li>
+<li>per-rerank-id (the reranking step)</li>
+<li>per-metadata-filter-id (the metadata filter predicates)</li>
+<li>per-hybrid-search-id (the hybrid retrieval pipeline)</li>
+<li>per-Pinecone-Assistant-thread-id (the Assistant conversation thread)</li>
+<li>per-Assistant-retrieval-id (each retrieval from Pinecone Assistant)</li>
+<li>per-Assistant-file-grounding-id (the file grounding reference)</li>
+<li>per-billing-event-id (the billing event for query + storage)</li>
+</ul>
+<p>A 60+ column join-table per SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 unifies these IDs into a single auditable record. Pinecone's documentation covers each surface separately; the gap is the cross-surface join.</p>
+
+<h3>Gap 2: Prompt-Injection + Metadata-Poisoning + Assistant-Retrieval-Poisoning Defense (OWASP LLM Top 10 LLM01+LLM03+LLM06+LLM08 + MITRE ATLAS + EU AI Act Art. 15)</h3>
+<p>RAG pipelines pull untrusted content into Pinecone Assistant. The metadata-filter + rerank surface is the natural control point. The threat model must cover:</p>
+<ul>
+<li>per-record-metadata-poisoning (adversarial metadata in the source record)</li>
+<li>per-vector-poisoning (adversarial vector embeddings)</li>
+<li>per-query-payload-poisoning (adversarial query content)</li>
+<li>per-hybrid-search-input-poisoning (adversarial dense + sparse + BM25 inputs)</li>
+<li>per-Assistant-retrieval-poisoning (adversarial content retrieved into the Assistant prompt)</li>
+<li>per-Assistant-prompt-poisoning (adversarial system + user prompts)</li>
+<li>per-Notion + Slack + Google Drive + HubSpot Connector file-poisoning (adversarial content from third-party Connectors)</li>
+</ul>
+<p>A 12-column per-Assistant-retrieval-id join-table tracks each retrieval's metadata + rerank score + filter predicates + source-record-id to detect anomalous patterns. EU AI Act Art. 15 requires documented risk mitigation for AI systems that process untrusted input.</p>
+
+<h3>Gap 3: Cross-Region Vector-Data-Residency Evidence (Schrems II + GDPR Art. 28 + EU AI Act Art. 10 + India DPDP Act 2023 + Brazil LGPD Art. 33 + UAE PDPL + Singapore PDPA + Japan APPI)</h3>
+<p>Pinecone Serverless supports US (Virginia + Oregon) + EU (Ireland + Frankfurt) + Asia (Tokyo) on AWS, with GCP + Azure added in 2025. The per-region selection audit evidence is split across pinecone.io/security + the AWS-only deployment note. The gap is the consolidated per-region residency matrix showing:</p>
+<ul>
+<li>per-region-id availability + uptime SLA</li>
+<li>per-region-id data-residency guarantee (data-at-rest stays in region)</li>
+<li>per-region-id sub-processor list (AWS sub-processors in region)</li>
+<li>per-region-id cross-region replication policy (default off on Serverless)</li>
+<li>per-region-id customer-managed-keys availability (Enterprise Tier)</li>
+</ul>
+<p>EU + India + Brazil + UAE + Australia + Canada + UK + Singapore + Japan + Philippines customer cohort customers need this matrix to satisfy Schrems II + GDPR Art. 28 + EU AI Act Art. 10 + India DPDP Act 2023 + Brazil LGPD Art. 33 + UAE PDPL + Singapore PDPA + Japan APPI.</p>
+
+<h3>Gap 4: HIPAA-Eligible Pinecone Enterprise for Healthcare-Vector-RAG + Clinical-Retrieval-Pipelines (HIPAA 164.312(a)(2)(iv) + 164.312(b) + 164.312(e)(1) + 164.514(b))</h3>
+<p>Pinecone is HIPAA-eligible on the Enterprise Tier. The per-record-id PHI-flag + per-namespace PHI-segregation pattern is the control point:</p>
+<ul>
+<li>per-record-id PHI-flag metadata field on every record</li>
+<li>per-namespace-id segregation for PHI-only + non-PHI-only namespaces</li>
+<li>per-query-id audit log of PHI access</li>
+<li>per-region-id restriction (PHI only in HIPAA-eligible regions)</li>
+<li>BAA-ready configuration per HIPAA 164.314(a)</li>
+</ul>
+<p>Healthcare-vector-RAG + clinical-retrieval-pipelines need BAA + per-record PHI-flag + per-namespace PHI-segregation + per-region restriction to satisfy HIPAA 164.312(a)(2)(iv) + 164.312(b) + 164.312(e)(1) + 164.514(b).</p>
+
+<h3>Gap 5: Cross-Tenant Pinecone Serverless + Pod-Based + Enterprise Isolation Evidence (SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate)</h3>
+<p>Cross-tenant isolation evidence must cover:</p>
+<ul>
+<li>per-project-id isolation (each customer project has its own resource pool)</li>
+<li>per-environment-id isolation (dev + staging + prod separation)</li>
+<li>per-API-key-id isolation (per-key access controls)</li>
+<li>per-collection-id isolation (logical collection boundary)</li>
+<li>per-namespace-id isolation (logical partition boundary)</li>
+<li>per-index-id isolation (per-index resource isolation)</li>
+<li>per-record-id isolation (per-record access control via metadata filter)</li>
+<li>per-query-id isolation (per-query audit log)</li>
+<li>per-Assistant-thread-id isolation (per-thread access control)</li>
+<li>customer-managed-keys option on Enterprise Tier for at-rest encryption with customer-controlled keys</li>
+</ul>
+<p>SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate readiness requires documented isolation evidence per boundary type. Pinecone's documentation covers each isolation boundary separately; the gap is the consolidated isolation-evidence document.</p>
+</section>
+
+<section>
+<h2>3. Conclusion</h2>
+<p>Pinecone is the canonical managed-vector-database vertex for the 2026 AI-vendor audit cohort. The 5 audit gaps (provenance join-table + prompt-injection defense + cross-region residency + HIPAA-eligible Enterprise + cross-tenant isolation) are addressable with documented controls per SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 + OWASP LLM Top 10 + MITRE ATLAS + Schrems II + GDPR Art. 28 + HIPAA 164.312 + FedRAMP Moderate. Pinecone's SOC 2 Type II + HIPAA-eligible Enterprise + per-region selection + customer-managed-keys option on Enterprise Tier provide the foundation. The remaining work is consolidating the per-surface evidence into unified join-tables + per-control-point threat models + per-region residency matrices.</p>
+</section>
+
+<footer>
+<p><strong>Source:</strong> Atlas audit-target cohort rubric, published at <a href="https://talonforgehq.github.io/atlas-store">talonforgehq.github.io/atlas-store</a>. Last updated 2026-07-17.</p>
+<p><strong>Contact:</strong> privacy@pinecone.io (verified live 2026-07-17 via curl scrape of https://www.pinecone.io/privacy/)</p>
+</footer>
+</article>
+</body>
+</html>
