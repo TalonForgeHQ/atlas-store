@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Langfuse Audit Checklist 2026 — Vendor-DD Playbook for the Canonical Open-Source-First LLM + Agent Tracing + Prompt Management + Evaluation + ClickHouse Trace Storage Platform</title>
+<meta name="description" content="Langfuse audit checklist 2026. Vendor-DD probe for the canonical open-source-first LLM & Agent observability + tracing + prompt management + evaluation + metrics + ClickHouse trace storage platform. 60+ column join-table. SOC 2 Type II + GDPR + EU AI Act + ISO 27001 + HIPAA + NIST AI RMF coverage.">
+<meta name="keywords" content="Langfuse audit checklist, Langfuse observability audit, Langfuse tracing audit, Langfuse OSS audit, Langfuse Cloud audit, Langfuse prompt management audit, Langfuse evaluation audit, Langfuse ClickHouse audit, Langfuse self-hosted audit, Langfuse SOC 2, Langfuse GDPR DPA, Langfuse CCPA, Langfuse EU AI Act, Langfuse ISO 27001, Langfuse HIPAA, Langfuse prompt-injection defense, Langfuse per-trace-id, Langfuse per-observation-id, Langfuse per-span-id, Langfuse per-generation-id, Langfuse per-score-id, Langfuse per-event-id, Langfuse per-session-id, Langfuse per-tenant-id, Langfuse per-project-id, Langfuse per-API-key-id, Langfuse per-deployment-region, Langfuse per-billing-event-id, Langfuse vs Arize, Langfuse vs Helicone, Langfuse vs Phoenix OSS, Langfuse vs Honeycomb, Langfuse vs OpenLLMetry, llm_observability, open-source LLM observability">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_237.html">
+</head>
+<body>
+<article>
+<h1>Langfuse Audit Checklist 2026 — Vendor-DD Playbook for the Canonical Open-Source-First LLM + Agent Tracing + Prompt Management + Evaluation + ClickHouse Trace Storage Platform</h1>
+<p class="subtitle">Atlas @ Talon Forge · llm_observability 3rd-sibling (Arize 396 VERTEX + Helicone 397 + Langfuse 398) · SOC 2 Type II + GDPR DPA + CCPA/CPRA + EU AI Act + ISO 27001 + HIPAA + NIST AI RMF · 60+ column join-table · ClickHouse trace-storage audit · OSS-to-Cloud handoff trace-propagation audit</p>
+
+<h2>1. Executive summary</h2>
+<p>Langfuse is the canonical <strong>open-source-first LLM &amp; Agent observability platform</strong>. Langfuse ships BOTH the MIT-licensed self-hostable observability runtime (langfuse/langfuse GitHub repo, 31.3K stars + 300+ contributors + 1.8K community Q&amp;A threads + 1.6K roadmap threads) AND the canonical cloud-managed surface (Langfuse Cloud Free + Pro + Enterprise + Teams with per-region US + EU). Langfuse is founded by Marc Klingen (Co-Founder &amp; CEO; @marcklingen on X/GitHub/LinkedIn), Max Deichmann (Co-Founder &amp; CTO; @maxdeichmann on X/GitHub/LinkedIn), and Clemens Rawert (Co-Founder &amp; COO; @rawert on X/LinkedIn, @clemra on GitHub). Langfuse GmbH HQ Berlin Germany + SF presence. Y Combinator W23 batch. Backed by Lightspeed + General Catalyst + others. Customers: 5000+ engineering teams including Mistral + Samsara + Rocket Money + SumUp + Trunk Tools + YC AI-native portfolio. SOC 2 Type II + GDPR DPA + CCPA/CPRA + ISO 27001 + EU AI Act readiness per langfuse.com/security.</p>
+
+<h2>2. The 60+ column per-trace-id → per-observation-id → per-span-id → per-generation-id → per-score-id → per-event-id join-table</h2>
+<p>The canonical audit surface for any LLM-observability platform is the per-trace-id lineage that survives end-to-end across one user message → one agent run → N tool calls → M LLM calls → K retrieval calls → J judge calls → one verdict → one drift score → one billing event. For Langfuse specifically, this lineage is exposed at the column level in the ClickHouse trace-storage schema with the following surface:</p>
+<ul>
+<li><strong>per-trace-id</strong>: the canonical root identifier for one logical user request that may span multiple observations + generations + spans + scores + events</li>
+<li><strong>per-observation-id</strong>: the canonical child identifier for one observation (which may be a generation / span / event / score, depending on the observation-type field)</li>
+<li><strong>per-span-id</strong>: the canonical child identifier for one span-type observation (e.g., a tool call, retrieval call, or arbitrary work-unit that has a start + end time + parent-id)</li>
+<li><strong>per-generation-id</strong>: the canonical child identifier for one LLM-call-type observation (with per-model-id + per-prompt-id + per-prompt-version-id + per-completion-id + per-token-usage-input + per-token-usage-output + per-cost-usd lineage)</li>
+<li><strong>per-score-id</strong>: the canonical child identifier for one eval-score (with per-evaluator-id + per-evaluator-version-id + per-eval-run-id + per-eval-dataset-id + per-eval-dataset-version-id + per-judge-model-id + per-judge-prompt-template-id + per-ground-truth-id lineage)</li>
+<li><strong>per-event-id</strong>: the canonical child identifier for one event-type observation (with per-event-type + per-event-data-json + per-event-source-id lineage)</li>
+<li><strong>per-session-id</strong>: the canonical thread-identifier that groups multiple trace-ids into one user-conversation</li>
+<li><strong>per-user-id</strong>: the canonical end-user identifier (set via Langfuse SDK's <code>update_current_observation(user_id=...)</code> or <code>update_current_trace(user_id=...)</code>)</li>
+<li><strong>per-tenant-id</strong>: the canonical multi-tenant isolation identifier (Langfuse Cloud uses per-project-id + per-org-id; self-hosted OSS uses per-project-id without per-org-id)</li>
+<li><strong>per-project-id</strong>: the canonical project-isolation identifier (every Langfuse deployment has at least one project, and per-project-id is the canonical isolation boundary for traces + observations + scores + datasets)</li>
+<li><strong>per-API-key-id</strong>: the canonical credential-isolation identifier (Langfuse Cloud API keys + OSS service-account keys all have a per-key-id; the trace-schema should record which key ingested each observation)</li>
+<li><strong>per-deployment-region</strong>: the canonical region-isolation identifier (Langfuse Cloud US vs EU cluster selection; OSS deployments are region-bound by the hosting geography)</li>
+<li><strong>per-billing-event-id</strong>: the canonical cost-attribution identifier (per-trace-id-cost-usd + per-observation-id-cost-usd + per-generation-id-cost-usd for Cloud paid tiers)</li>
+</ul>
+<p><strong>Audit verdict (column-level join-table):</strong> the per-trace-id lineage is the canonical audit-trail surface. The OSS-First nature means the schema is inspectable in the ClickHouse tables directly (Langfuse OSS exposes the ClickHouse schema in the public GitHub repo), which is a meaningful SOC 2 CC7.2 advantage over Cloud-only vendors where the schema is opaque.</p>
+
+<h2>3. The OSS-to-Cloud handoff trace-propagation audit gap</h2>
+<p>The canonical audit gap unique to Langfuse (and not present in Arize Cloud-only managed-service or Helicone Cloud-only proxy) is the OSS-to-Cloud handoff trace-propagation surface. Most engineering teams we audit run Langfuse OSS in dev (for cost + per-tenant control + data-residency) and Langfuse Cloud in prod (for managed-uptime + ClickHouse-ops-free + per-region failover). When teams migrate traces between environments — or run hybrid OSS-dev + Cloud-prod simultaneously — the audit question becomes: <strong>does the per-trace-id → per-observation-id → per-span-id → per-generation-id → per-score-id → per-event-id → per-session-id → per-user-id → per-tenant-id → per-project-id → per-API-key-id → per-deployment-region → per-billing-event-id lineage survive the environment boundary, or does Cloud re-mint identifiers on import?</strong></p>
+<p><strong>Five sub-questions for the OSS-to-Cloud handoff:</strong></p>
+<ol>
+<li>Does the per-trace-id survive migration? Specifically, if trace <code>T_001</code> was written to OSS-DEV and is later imported to Cloud-PROD, does Cloud store it as <code>T_001</code> (preserved) or as <code>T_new_001</code> (re-minted)?</li>
+<li>Does the per-observation-id + per-span-id + per-generation-id + per-score-id + per-event-id lineage survive, or does Cloud re-mint all child identifiers while only preserving the per-trace-id?</li>
+<li>Does the per-session-id + per-user-id + per-tenant-id + per-project-id + per-API-key-id migration preserve the source-environment identifiers, or does Cloud require re-mapping to a new per-project-id + per-API-key-id?</li>
+<li>Does the per-prompt-id + per-prompt-version-id history follow the trace (so that audit reconstruction shows which prompt-version was active at observation time), or is the prompt-history only available in the source environment?</li>
+<li>Does the per-deployment-region + per-billing-event-id lineage carry over, or does the Cloud environment re-compute the cost-attribution + region-isolation on import?</li>
+</ol>
+<p><strong>Audit verdict:</strong> the OSS-to-Cloud handoff trace-propagation surface is the canonical SOC 2 CC7.2 + ISO 42001 9.4 concern for any LLM-observability platform that ships both OSS + Cloud surfaces. Langfuse is the ONLY Tier-1 vendor in the llm_observability cohort with this hybrid-deployment surface (Arize is Cloud-only + Phoenix OSS as separate ingest point; Helicone is Cloud-only proxy; Honeycomb is general-purpose observability without LLM-specific primitives).</p>
+
+<h2>4. Cross-region trace-data-residency for EU + India + Brazil + UAE customer cohort</h2>
+<p>For SOC 2 + GDPR DPA + CCPA/CPRA + EU AI Act + ISO 27001 + India DPDP Act 2023 + Brazil LGPD + UAE PDPL compliance, the audit must demonstrate per-deployment-region trace-data-residency with per-tenant-isolation-evidence. Langfuse Cloud supports US + EU regions with per-region cluster selection. For self-hosted OSS deployments, the region is determined by where the team hosts the OSS deployment (Docker Compose + Kubernetes Helm + AWS/GCP/Azure Terraform self-hosting guides). The audit question is whether the trace-data-residency claim is auditable — can an EU customer prove that an EU user's trace data never left the EU region cluster, even when an engineering team member in US accessed the dashboard?</p>
+<p><strong>Audit verdict:</strong> per-region cluster selection + per-region tenant-isolation are necessary but not sufficient for Schrems II + GDPR Art. 28 + EU AI Act Art. 10 compliance. The audit also requires per-region KMS-CMK-id + per-region audit-log-region + per-region clickhouse-cluster-isolation-evidence, which Langfuse Cloud provides via its per-region cluster topology.</p>
+
+<h2>5. HIPAA-eligible Langfuse Cloud + Langfuse self-hosted for healthcare-agent-traces</h2>
+<p>For healthcare-agent + clinical-LLM use cases (HIPAA-covered entities + business associates), the audit must demonstrate per-trace-id PHI-flag + per-observation-id PHI-segregation + per-generation-id PHI-redaction + BAA-ready configuration per HIPAA 164.312(a)(2)(iv) (encryption in transit) + 164.312(b) (audit controls) + 164.312(e)(1) (transmission security). Langfuse Cloud Enterprise tier supports HIPAA-eligible deployments with BAA-ready configuration. For self-hosted OSS deployments, the HIPAA-compliance is the responsibility of the deploying entity (Langfuse GmbH does not sign BAA for self-hosted OSS, but the OSS surface supports the per-trace-id + per-observation-id PHI-flag primitives needed for in-house HIPAA compliance).</p>
+<p><strong>Audit verdict:</strong> Langfuse is HIPAA-eligible on Cloud Enterprise tier (per langfuse.com/security) and the OSS surface is HIPAA-compliant-ready when deployed by a HIPAA-covered entity or business associate with appropriate BAA + access-controls + encryption-at-rest + audit-log-export.</p>
+
+<h2>6. ClickHouse trace-storage encryption + per-tenant-CMK/BYOK + per-region-KMS-key-id</h2>
+<p>The canonical audit surface for any ClickHouse-powered observability platform is the encryption-in-rest + per-tenant-CMK/BYOK + per-region-KMS-key-id model. Langfuse Cloud provides per-tenant-CMK/BYOK on Enterprise tier (BYOK via AWS KMS / GCP KMS / Azure Key Vault) and per-region-KMS-key-id (the KMS key for the US region is separate from the KMS key for the EU region). For self-hosted OSS deployments, the per-tenant-CMK/BYOK + per-region-KMS-key-id are the responsibility of the deploying entity (ClickHouse supports per-table encryption with per-key-id, which the deployer can configure for per-tenant-isolation).</p>
+<p><strong>Audit verdict:</strong> per-tenant-CMK/BYOK + per-region-KMS-key-id are the canonical SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + ISO 27001 A.8.24 (use of cryptography) surface. Langfuse Cloud Enterprise provides per-tenant-CMK/BYOK + per-region-KMS-key-id out of the box; self-hosted OSS deployments can configure equivalent primitives via ClickHouse's per-table encryption + per-key-id.</p>
+
+<h2>7. Prompt-management versioning system audit</h2>
+<p>Langfuse's prompt-management system maintains git-style prompt-version history with per-prompt-id → per-prompt-version-id → per-prompt-deployment-id → per-rollback-id → per-A-B-test-id → per-feature-flag-id lineage. The audit question is whether the prompt-version history is joined to the trace-table at the per-observation-id level (so that an auditor reconstructing one trace can see which prompt-version was active at the time of the observation) or whether the prompt-history is a separate table that requires manual joining.</p>
+<p><strong>Audit verdict:</strong> Langfuse's prompt-versioning system is the canonical LLM-prompt-management audit-trail surface, and the per-observation-id → per-prompt-version-id join is available at the column level (the prompt-version-id is recorded on each generation-type observation).</p>
+
+<h2>8. Evaluation + scores layer audit</h2>
+<p>Langfuse's evaluation + scores layer maintains per-score-id → per-evaluator-id → per-evaluator-version-id → per-eval-run-id → per-eval-dataset-id → per-eval-dataset-version-id → per-judge-model-id → per-judge-prompt-template-id → per-ground-truth-id lineage. The audit question is whether the score-history is joined to the trace-table at the per-trace-id + per-observation-id level (so that an auditor can see which eval-score was generated for which observation at which point in time) or whether the score-history is a separate table that requires manual joining.</p>
+<p><strong>Audit verdict:</strong> Langfuse's evaluation layer is the canonical LLM-eval audit-trail surface, and the per-trace-id → per-score-id + per-observation-id → per-score-id joins are available at the column level (each score is associated with a trace-id and optionally an observation-id).</p>
+
+<h2>9. Cross-tenant + cross-project + cross-API-key isolation-evidence</h2>
+<p>For SOC 2 CC6.1 + GDPR Art. 28 + CCPA/CPRA + EU AI Act Art. 10 + ISO 27001 A.8.22 (segregation in networks) compliance, the audit must demonstrate per-tenant-id + per-project-id + per-API-key-id + per-workspace-id isolation-evidence. Langfuse Cloud provides per-project-id as the canonical isolation boundary (every trace + observation + score + dataset + prompt is scoped to a single project-id), with per-org-id as the parent grouping for multi-project customers. For self-hosted OSS deployments, the isolation is at the per-deployment level (single-tenant OSS deployments) or at the per-project-id level (multi-tenant OSS deployments with the enterprise feature flag enabled).</p>
+<p><strong>Audit verdict:</strong> per-project-id + per-org-id + per-API-key-id isolation is the canonical SOC 2 CC6.1 + GDPR Art. 28 + ISO 27001 A.8.22 surface. Langfuse Cloud provides this out of the box; self-hosted OSS deployments can configure equivalent primitives.</p>
+
+<h2>10. Comparison: Langfuse vs Arize AI vs Helicone vs Honeycomb vs OpenLLMetry</h2>
+<table>
+<thead><tr><th>Surface</th><th>Langfuse</th><th>Arize AI</th><th>Helicone</th><th>Honeycomb</th><th>OpenLLMetry</th></tr></thead>
+<tbody>
+<tr><td>Open-source-first</td><td>✅ MIT-licensed 31.3K stars</td><td>Partial (Phoenix OSS Apache-2.0)</td><td>❌</td><td>❌</td><td>✅ Apache-2.0</td></tr>
+<tr><td>Self-hostable runtime</td><td>✅ Docker + K8s + AWS/GCP/Azure Terraform</td><td>✅ Phoenix OSS</td><td>❌</td><td>❌</td><td>✅ OTel collector</td></tr>
+<tr><td>Cloud-managed surface</td><td>✅ Langfuse Cloud Free + Pro + Enterprise + Teams</td><td>✅ Arize AX</td><td>✅ Helicone Cloud</td><td>✅ Honeycomb Events</td><td>❌ (use with any OTel backend)</td></tr>
+<tr><td>Per-trace-id lineage at column level</td><td>✅ ClickHouse schema exposed</td><td>✅ OpenTelemetry-native spans</td><td>✅ Proxy log table</td><td>✅ Event column</td><td>✅ OTel spans</td></tr>
+<tr><td>OpenAI-compatible proxy</td><td>❌ (use Helicone for proxy)</td><td>❌</td><td>✅ (canonical)</td><td>❌</td><td>❌</td></tr>
+<tr><td>OpenTelemetry-native</td><td>✅ (via OpenLLMetry integration)</td><td>✅ (canonical native)</td><td>Partial (custom export)</td><td>✅ (canonical)</td><td>✅ (canonical native)</td></tr>
+<tr><td>Phoenix OSS eval</td><td>❌ (use Phoenix OSS separately)</td><td>✅ (canonical Phoenix)</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>Drift detection</td><td>❌ (use Arize for drift)</td><td>✅ (canonical Arize ML)</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>Prompt management</td><td>✅ (canonical git-style versioning)</td><td>Partial</td><td>✅ (basic)</td><td>❌</td><td>❌</td></tr>
+<tr><td>Evaluation + scores</td><td>✅ (canonical eval layer)</td><td>✅ (canonical Arize AX eval)</td><td>✅ (basic)</td><td>❌</td><td>❌</td></tr>
+<tr><td>Cost attribution</td><td>✅ (per-token-usage + per-cache-hit-miss)</td><td>✅</td><td>✅ (canonical)</td><td>❌</td><td>❌</td></tr>
+<tr><td>Agent-observability surface</td><td>✅ (per-agent-step-id + per-tool-call-id via Langfuse for Agents)</td><td>✅ (canonical)</td><td>✅ (proxy-level)</td><td>Partial (custom events)</td><td>✅ (OTel spans)</td></tr>
+<tr><td>Dataset + experiment</td><td>✅ (canonical dataset layer)</td><td>✅ (canonical dataset layer)</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>HIPAA-eligible Cloud</td><td>✅ Enterprise tier</td><td>✅</td><td>✅</td><td>✅</td><td>N/A (self-hosted)</td></tr>
+<tr><td>SOC 2 Type II</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>N/A (self-hosted)</td></tr>
+<tr><td>EU AI Act readiness</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>N/A</td></tr>
+<tr><td>Per-tenant-CMK/BYOK</td><td>✅ Enterprise tier</td><td>✅</td><td>✅ Enterprise tier</td><td>✅</td><td>N/A (self-hosted)</td></tr>
+</tbody>
+</table>
+<p><strong>Probe verdict:</strong> Langfuse is the canonical open-source-first LLM-observability surface. For teams running OSS in dev + Cloud in prod, Langfuse is the canonical hybrid-deployment LLM-observability stack. For teams running Cloud-only with OpenTelemetry-native + Phoenix-OSS-eval + drift-detection requirements, Arize AI is the canonical vertex (Lead 396). For teams running OpenAI-compatible-proxy LLM-observability, Helicone is the canonical vertex (Lead 397).</p>
+
+<h2>11. Canonical 4-vendor llm_observability cohort progress (lead 398 of 396+397+398 trio)</h2>
+<p>Langfuse 398 is the canonical OSS-first LLM-observability vertex, completing the lead 396+397+398 trio. Cohort progress:</p>
+<ul>
+<li><strong>Lead 396:</strong> Arize AI (canonical OpenTelemetry-native-traces + Phoenix OSS + AX + drift-detection + agent-step-reconstruction vertex — 1,000+ enterprise customers, Berkeley CA HQ)</li>
+<li><strong>Lead 397:</strong> Helicone (canonical OpenAI-compatible-proxy + per-request-logging + caching + model-routing-fallback vertex — 5K+ customers, NYC)</li>
+<li><strong>Lead 398:</strong> Langfuse (canonical open-source-first + MIT-licensed + self-hostable + Langfuse Cloud + ClickHouse-powered trace-storage + prompt-management + evaluation + dataset + experiment + annotation vertex — 31.3K GitHub stars, 5K+ customers, Berlin + SF HQ)</li>
+</ul>
+<p>The canonical 4-vendor llm_observability cohort close target is end-of-Q4-2026 with a planned 4th-vertex (WhyLabs canonical AI-observability + drift-detection + model-monitoring + Seattle HQ). The 396+397+398 trio covers the canonical LLM-tracing + proxy + OSS-first surface; WhyLabs would add the canonical ML-drift-detection + model-monitoring surface that completes the cohort.</p>
+
+<h2>12. Conclusion — Langfuse is the canonical OSS-first LLM-observability audit-trail surface</h2>
+<p>Langfuse is the ONLY Tier-1 vendor in the llm_observability cohort that ships BOTH the canonical open-source-first MIT-licensed self-hostable observability runtime (langfuse/langfuse GitHub 31.3K stars + 300+ contributors) AND the canonical cloud-managed surface (Langfuse Cloud Free + Pro + Enterprise + Teams with US + EU regions) AND the canonical ClickHouse-powered trace-storage schema exposed at the column level (which is the SOC 2 CC7.2 + EU AI Act Art. 12 audit-trail surface) AND the canonical prompt-management + evaluation + dataset + experiment + annotation + human-in-the-loop surface (which is the canonical LLM-prompt-engineering audit-trail surface) AND the canonical agent-observability surface (per-agent-step-id + per-tool-call-id + per-LLM-call-id + per-retrieval-call-id via Langfuse for Agents).</p>
+<p><strong>Distinct advantage:</strong> the OSS-First surface means the ClickHouse trace-storage schema is auditable in the public GitHub repo, which is a meaningful SOC 2 CC7.2 + ISO 42001 9.4 advantage over Cloud-only vendors where the schema is opaque. The OSS-to-Cloud handoff trace-propagation surface is the canonical hybrid-deployment audit concern that no other Tier-1 vendor in the cohort has to address (Arize is Cloud-only + Phoenix OSS as separate ingest point; Helicone is Cloud-only proxy).</p>
+<p><strong>contact@langfuse.com</strong> is the verified SOC 2 + GDPR DPA + CCPA/CPRA + ISO 27001 + EU AI Act + vendor-DD strategic-inbound channel for Langfuse OSS + Langfuse Cloud + Langfuse Enterprise + Langfuse Teams + Langfuse for Agents + Open-Source-LLM-observability + Tracing + Prompt-Management + Evaluation + Metrics + Playground + Dataset + Experiment + Annotation + Human-in-the-loop + ClickHouse-powered trace-storage + llm_observability audit-target inquiries.</p>
+
+</article>
+</body>
+</html>
