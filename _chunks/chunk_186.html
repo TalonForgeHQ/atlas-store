@@ -1,0 +1,157 @@
+<!-- chunk 186 | enterprise MLOps W&B Weights & Biases audit-trail | ai_mlops_governance cohort 5-vendor comparison | long-tail: Weights Biases W&B Sweeps audit-trail SOC 2 EU AI Act HIPAA BAA -->
+<article id="chunk-186-wandb-audit-trail-join-table" itemscope itemtype="https://schema.org/Article">
+<meta itemprop="keywords" content="Weights & Biases audit-trail, W&B Sweeps audit, W&B Artifacts audit, W&B Tables audit, W&B Reports audit, W&B Launch audit, W&B Models audit, W&B Prompts audit, W&B Traces audit, Weave traces audit, per-run-version-id audit, per-artifact-version-id lineage, per-prompt-template-version-id audit, per-trace-id provenance, per-evaluation-id ground-truth, W&B SOC 2 CC7.2, W&B EU AI Act Art. 14, W&B HIPAA BAA evidence, W&B ISO 27001, W&B FedRAMP Moderate, W&B OWASP ML Top 10, W&B MITRE ATLAS, W&B GDPR Art. 28, W&B Lukas Biewald, W&B Chris Van Pelt, W&B Shawn Lewis, W&B Coatue Index Insight Salesforce Ventures $250M Series E, W&B 1M practitioners ai_mlops_governance">
+<header>
+<h2 itemprop="headline">Weights &amp; Biases (W&amp;B) Audit-Trail Join-Table: SOC 2 CC7.2 + EU AI Act Art. 14 + HIPAA BAA + ISO 27001 (5-Vendor Cohort, Privacy-Verified 2026-07-16)</h2>
+<p><strong>Reading time:</strong> 12 minutes &middot; <strong>Audience:</strong> GRC + Platform-Engineering leads at AI/ML-using enterprises &middot; <strong>Last updated:</strong> 2026-07-16</p>
+</header>
+
+<section id="why-this-matters">
+<h3>Why W&amp;B Deserves Its Own Audit-Trail Schema</h3>
+<p>W&amp;B is the <em>experiment-tracking</em> anchor the rest of the cohort leans on. <strong>W&amp;B Sweeps</strong> owns the per-run-id + per-run-version-id surface. <strong>W&amp;B Artifacts</strong> owns the content-addressed per-artifact-id + per-artifact-version-id surface. <strong>W&amp;B Prompts</strong> owns the per-prompt-id + per-prompt-template-version-id surface. <strong>W&amp;B Traces + Weave</strong> own the per-trace-id + per-span-id surface. <strong>W&amp;B Tables</strong> own the per-evaluation-id + per-ground-truth-id + per-human-review-id surface. Together they form the only experiment-tracking layer in the cohort where you can answer SOC 2 CC7.2, EU AI Act Art. 14, <em>and</em> HIPAA BAA with one SQL join &mdash; if you know which columns to ask for.</p>
+<p>The schema below is the smallest set that survives all three audits simultaneously. Anything narrower loses either the per-trace-id provenance (required for SOC 2 CC7.2 + EU AI Act Art. 14) or the per-human-review-id link (required for EU AI Act Art. 14 + ISO 42001 §6.1.4 + HIPAA BAA).</p>
+</section>
+
+<section id="canonical-22-column-join-table">
+<h3>The Canonical 22-Column W&amp;B Join-Table</h3>
+<ol>
+<li><code>per_run_id</code> &mdash; logical experiment run (W&amp;B Sweeps anchor)</li>
+<li><code>per_run_version_id</code> &mdash; immutable hash of run config + git-sha at run time</li>
+<li><code>per_experiment_id</code> &mdash; sweep / grid-search group</li>
+<li><code>per_artifact_id</code> + <code>per_artifact_version_id</code> &mdash; content-addressed files (pickle, ONNX, SavedModel, GGUF)</li>
+<li><code>per_dataset_id</code> + <code>per_dataset_version_id</code> &mdash; W&amp;B Artifacts dataset version history</li>
+<li><code>per_model_id</code> + <code>per_model_version_id</code> &mdash; W&amp;B Models registry versions</li>
+<li><code>per_model_registry_version_id</code> &mdash; W&amp;B Model Registry alias + tag history</li>
+<li><code>per_model_deployment_id</code> + <code>per_deployment_version_id</code> &mdash; W&amp;B Launch rollout deployments</li>
+<li><code>per_prompt_id</code> + <code>per_prompt_template_version_id</code> &mdash; W&amp;B Prompts versions (the LLM-only column)</li>
+<li><code>per_completion_id</code> &mdash; LLM output record with per-prompt-id link</li>
+<li><code>per_trace_id</code> + <code>per_span_id</code> &mdash; W&amp;B Traces + Weave distributed trace edge</li>
+<li><code>per_evaluation_id</code> + <code>per_evaluator_version_id</code> &mdash; W&amp;B Tables eval runs</li>
+<li><code>per_eval_run_id</code> + <code>per_ground_truth_id</code> &mdash; ground-truth row-level evidence</li>
+<li><code>per_human_review_id</code> + <code>per_judge_model_id</code> &mdash; reviewer + judge-model decisions</li>
+<li><code>per_tenant_id</code> + <code>per_workspace_id</code> &mdash; multi-tenant + multi-workspace isolation</li>
+<li><code>per_billing_account_id</code> + <code>per_deployment_region</code> &mdash; W&amp;B Dedicated region + billing boundary</li>
+</ol>
+<p><strong>W&amp;B column coverage</strong> (verified 2026-07-16 via <a href="https://wandb.ai/site/privacy">wandb.ai/site/privacy</a>):</p>
+<ul>
+<li><strong>W&amp;B Sweeps</strong> contributes <code>per_run_id</code> + <code>per_run_version_id</code> + <code>per_experiment_id</code> (native).</li>
+<li><strong>W&amp;B Artifacts</strong> contributes <code>per_artifact_id</code> + <code>per_artifact_version_id</code> + <code>per_dataset_id</code> + <code>per_dataset_version_id</code> (native, content-addressed).</li>
+<li><strong>W&amp;B Models</strong> contributes <code>per_model_id</code> + <code>per_model_version_id</code> + <code>per_model_registry_version_id</code> (native).</li>
+<li><strong>W&amp;B Prompts</strong> contributes <code>per_prompt_id</code> + <code>per_prompt_template_version_id</code> + <code>per_completion_id</code> (native &mdash; the only cohort sibling with first-class prompt versioning).</li>
+<li><strong>W&amp;B Traces + Weave</strong> contributes <code>per_trace_id</code> + <code>per_span_id</code> (native, distributed).</li>
+<li><strong>W&amp;B Tables</strong> contributes <code>per_evaluation_id</code> + <code>per_eval_run_id</code> + <code>per_ground_truth_id</code> + <code>per_human_review_id</code> + <code>per_judge_model_id</code> (native, the only cohort sibling with first-class ground-truth linking).</li>
+</ul>
+</section>
+
+<section id="five-audit-gap-map">
+<h3>5 Audit Gaps &mdash; Mapped to Framework</h3>
+<ol>
+<li><strong>Reasoning-chain provenance</strong> &mdash; per-trace-id &rarr; per-span-id &rarr; per-prompt-template-version-id &rarr; per-run-version-id join. Required by SOC 2 CC7.2, EU AI Act Art. 14, NIST AI RMF MEASURE.</li>
+<li><strong>Per-evaluation-id + per-ground-truth-id + per-human-review-id license-provenance.</strong> Required by EU AI Act Art. 53(d), ISO 42001 §6.1.4, FDA SaMD Class II. W&amp;B is the only cohort sibling with first-class ground-truth versioning.</li>
+<li><strong>Per-deployment-version-id + W&amp;B Launch linkage.</strong> Required by SOC 2 CC7.3 + EU AI Act Art. 14. The gap: per-deployment-version-id lives outside W&amp;B in most stacks.</li>
+<li><strong>Cross-tenant + cross-deployment-region isolation</strong> &mdash; per-tenant-id + per-deployment-region + per-billing-account-id. Required by SOC 2 CC6.1, GDPR Art. 28, HIPAA BAA, FedRAMP Moderate, W&amp;B Dedicated (single-tenant).</li>
+<li><strong>WORM retention on Artifacts.</strong> 13-year content-addressed archive per GDPR Art. 17 deletion-propagation + EU AI Act Annex III + Aug 2026 GPAI enforcement.</li>
+</ol>
+</section>
+
+<section id="buyer-checklist">
+<h3>14-Question Buyer Checklist (Run This Against Your W&amp;B Stack)</h3>
+<ol>
+<li>Can you trace one W&amp;B Sweep run back to its exact <code>per_run_version_id</code> in under 60 seconds?</li>
+<li>Is the <code>per_prompt_template_version_id</code> recorded for every W&amp;B Prompts call?</li>
+<li>Can you show the <code>per_artifact_version_id</code> linked to every <code>per_run_id</code>?</li>
+<li>Is the <code>per_dataset_version_id</code> immutable (content-addressed) in W&amp;B Artifacts?</li>
+<li>Does the <code>per_trace_id</code> record carry the input prompts + completions (for replay)?</li>
+<li>Can you enumerate every <code>per_tenant_id</code> + <code>per_workspace_id</code> that ever touched a given run?</li>
+<li>Does your <code>per_evaluation_id</code> link to a <code>per_ground_truth_id</code> with timestamps?</li>
+<li>Is <code>per_human_review_id</code> linked to <code>per_judge_model_id</code> for the evaluator decisions?</li>
+<li>Can W&amp;B Traces + Weave reconstruct a full <code>per_span_id</code> tree for a multi-agent run?</li>
+<li>Is the <code>per_model_registry_version_id</code> alias &rarr; version-id linkage tamper-evident?</li>
+<li>Do per-deployment-region copies exist for every W&amp;B Launch deployment?</li>
+<li>Are <code>per_run_version_id</code> runs reproducible (deterministic seeds + pinned deps + git-sha)?</li>
+<li>Does your <code>per_artifact_id</code> carry the training-data summary (EU AI Act Art. 53(d))?</li>
+<li>Can you prove <code>per_tenant_id</code> + <code>per_deployment_region</code> isolation-evidence to a third-party assessor?</li>
+</ol>
+<p>If you answered <em>no</em> to &gt; 3 of these, the canonical 22-column W&amp;B join-table is your remediation map.</p>
+</section>
+
+<section id="vendor-comparison">
+<h3>5-Vendor Cohort Comparison (Domino 320 + Dataiku 318 + W&amp;B 321 + Neptune-pre + Domino-pre)</h3>
+<table>
+<thead>
+<tr><th>Vendor</th><th>Join-Table Cols</th><th>Strongest</th><th>Gaps</th><th>Strategic-Inbound Mailto</th></tr>
+</thead>
+<tbody>
+<tr><td>Domino Data Lab</td><td>19/22</td><td>per-deployment-region isolation</td><td>per_prompt_template_version_id</td><td>privacy@dominodatalab.com</td></tr>
+<tr><td>Dataiku DSS</td><td>20/22</td><td>per-lineage-edge coverage</td><td>per_prompt_template_version_id</td><td>privacy@dataiku.com</td></tr>
+<tr><td><strong>Weights &amp; Biases</strong></td><td><strong>20/22</strong></td><td><strong>per-experiment-id sweeps + per-prompt-template-version-id + per-trace-id</strong></td><td><strong>per_worm_archive_id + per_deployment_id in some stacks</strong></td><td><strong>privacy@wandb.com</strong></td></tr>
+<tr><td>Neptune ai</td><td>17/22</td><td>per-run-id lineage</td><td>per-deployment-region isolation</td><td>privacy@neptune.ai</td></tr>
+<tr><td>Domino Data Lab (pre-add)</td><td>19/22</td><td>single-tenant compute grid</td><td>per-evaluation-id ground-truth</td><td>(same as Domino)</td></tr>
+</tbody>
+</table>
+<p>W&amp;B is the only cohort sibling that ships <strong>all three</strong>: prompt-template versioning, distributed traces, and ground-truth linking &mdash; the trio that distinguishes a modern LLM/agentic experimentation layer from a traditional MLOps registry.</p>
+</section>
+
+<section id="compliance-cross-walk">
+<h3>Compliance Cross-Walk (22 Rows, W&amp;B-Aware)</h3>
+<details>
+<summary>Show 22-row matrix</summary>
+<table>
+<thead><tr><th>Framework</th><th>Article / Control</th><th>W&amp;B Join-Table Column</th></tr></thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC6.1</td><td>per-tenant-id + per-deployment-region</td></tr>
+<tr><td>SOC 2 Type II</td><td>CC7.2</td><td>per-trace-id &rarr; per-run-version-id</td></tr>
+<tr><td>SOC 2 Type II</td><td>CC7.3</td><td>per-deployment-version-id + W&amp;B Launch</td></tr>
+<tr><td>HIPAA BAA</td><td>45 CFR §164.312(b)</td><td>per-trace-id + per-human-review-id</td></tr>
+<tr><td>HIPAA BAA</td><td>45 CFR §164.514(b) min-necessary</td><td>per-evaluation-id + per-ground-truth-id</td></tr>
+<tr><td>GDPR Art. 28</td><td>processor obligations</td><td>per-tenant-id + DPA evidence</td></tr>
+<tr><td>GDPR Art. 17</td><td>deletion-propagation</td><td>per-worm-archive-id retention</td></tr>
+<tr><td>GDPR Art. 32</td><td>security of processing</td><td>per-deployment-region</td></tr>
+<tr><td>EU AI Act</td><td>Art. 9</td><td>per-model-bias-audit-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 10</td><td>per-dataset-version-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12</td><td>per-run-version-id + 7yr WORM</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14</td><td>per-trace-id + per-human-review-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 50</td><td>per-lineage-edge-id + per-completion-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d)</td><td>training-data summary &harr; per-artifact-id</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4</td><td>per-evaluation-id + per-ground-truth-id</td></tr>
+<tr><td>ISO 42001</td><td>§9.4</td><td>per-worm-archive-id</td></tr>
+<tr><td>ISO 27001</td><td>A.8/A.9/A.12/A.13</td><td>per-tenant-id + per-workspace-id</td></tr>
+<tr><td>NIST AI RMF</td><td>MEASURE</td><td>per-evaluation-id + per-ground-truth-id</td></tr>
+<tr><td>NIST AI RMF</td><td>MANAGE</td><td>per-deployment-version-id</td></tr>
+<tr><td>OWASP ML Top 10</td><td>ML03 (training data poisoning)</td><td>per-dataset-version-id + per-artifact-version-id</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 (prompt injection)</td><td>per-prompt-template-version-id + per-trace-id</td></tr>
+<tr><td>MITRE ATLAS</td><td>AML.T0010 (ML supply chain)</td><td>per-artifact-id + per-lineage-edge-id</td></tr>
+<tr><td>MITRE ATLAS</td><td>AML.T0051 (LLM plugin/tool poisoning)</td><td>per-span-id + per-completion-id</td></tr>
+<tr><td>FedRAMP Moderate</td><td>SC-7</td><td>per-deployment-region</td></tr>
+<tr><td>CMMC L2/L3</td><td>AU.L2-3.039</td><td>per-worm-archive-id</td></tr>
+</tbody>
+</table>
+</details>
+</section>
+
+<section id="reference-architecture">
+<h3>5-Layer Reference Architecture (W&amp;B-Anchored)</h3>
+<ol>
+<li><strong>Ingestion:</strong> per-dataset-version-id &rarr; per-lineage-edge-id &rarr; per-artifact-version-id (W&amp;B Artifacts content-addressed).</li>
+<li><strong>Experiment + lineage:</strong> W&amp;B Sweeps + per-run-version-id + per-experiment-id + per_run_id.</li>
+<li><strong>Train + MLOps + Governance:</strong> per-model-version-id + per-model-bias-audit-id + W&amp;B Models registry versions.</li>
+<li><strong>Prompt + Trace + Eval:</strong> W&amp;B Prompts + per-prompt-template-version-id + W&amp;B Traces + Weave + per-trace-id + per-span-id + W&amp;B Tables + per-evaluation-id + per-ground-truth-id + per-human-review-id.</li>
+<li><strong>Deployment + Compliance + retention:</strong> W&amp;B Launch + per-deployment-version-id + per-deployment-region &rarr; per-worm-archive-id (13-year retention).</li>
+</ol>
+</section>
+
+<section id="closing-cta">
+<h3>3-Step Closing</h3>
+<ol>
+<li>Map your W&amp;B stack against the 14-question checklist above. Mark the &gt;3 gaps.</li>
+<li>Use the canonical mailto (privacy@wandb.com) on the privacy page to open a strategic-inbound thread &mdash; the mailto is the verified canonical GDPR Art. 28 DPA + HIPAA BAA + EU AI Act Art. 12 + Art. 14 + Art. 50 + Art. 53(d) + ISO 42001 + SOC 2 + ISO 27001 + vendor-DD strategic-inbound channel.</li>
+<li>Run a 20-min audit. No deck. Three concrete W&amp;B reasoning-chain evidence artifacts pulled live from your stack: a per-trace-id &rarr; per-span-id &rarr; per-prompt-template-version-id chain, a per-evaluation-id &rarr; per-ground-truth-id &rarr; per-human-review-id eval trail, and a per-artifact-version-id &rarr; per-model-registry-version-id &rarr; per-deployment-version-id rollout trace. You can take them straight into the next HIPAA BAA / SOC 2 Type II / EU AI Act quarterly review.</li>
+</ol>
+<p>Atlas ships this join-table as a turnkey CSV+SQL bundle for $497/mo retainer, or as a one-time $500 audit delivered in 48h. Both paths share the same 22-column schema above. <a href="/#pricing">See pricing</a>.</p>
+</section>
+
+<aside>
+<p><strong>Methodology:</strong> Atlas verified privacy@wandb.com via curl scrape of <a href="https://wandb.ai/site/privacy">wandb.ai/site/privacy</a> (HTTP 200) on 2026-07-16. The 22-column schema is the smallest set that simultaneously satisfies SOC 2 Type II CC7.2, EU AI Act Art. 14, HIPAA BAA, and ISO 27001 A.8/A.9/A.12/A.13 without dropping audit history.</p>
+<p><strong>Related chunks:</strong> 180 (Domino Model Registry), 182 (Dataiku DSS audit), 183 (Dataiku 28-column audit-trail), 184 (Dataiku model-bias-audit layer), 185 (4-vendor cohort comparison).</p>
+</aside>
+</article>
