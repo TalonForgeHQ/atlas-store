@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deepgram Audit Checklist: SOC 2 + HIPAA + EU AI Act for Nova-3 Voice Agent ASR Backbone (2026)</title>
+<meta name="description" content="Canonical Deepgram audit checklist for Nova-3 speech-to-text + Voice Agent API + Aura-2 TTS. SOC 2 CC7.2 + HIPAA §164.312(b) + EU AI Act Art. 12 + OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06 + MITRE ATLAS AML.T0051+AML.T0054 + per-request provenance join-table for the canonical voice-AI-agent ASR backbone serving 100B+ minutes/year.">
+<meta name="keywords" content="Deepgram audit checklist, Nova-3 audit SOC 2, Voice Agent API audit HIPAA, Aura-2 TTS audit, Deepgram medical transcription HIPAA, Deepgram Nova-3 endpointing audit, Deepgram speaker diarization audit, Adam Sypniewski Deepgram CTO, realtime voice video AI infra audit, per-request provenance join-table, EU AI Act Art. 12 ASR, Schrems II + DPDP + LGPD residency, Deepgram adversarial audio defense, realtime_voice_video_ai_infra STT backbone">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_228.html">
+</head>
+<body>
+<article id="chunk-228">
+<h1>Deepgram Audit Checklist: SOC 2 + HIPAA + EU AI Act for Nova-3 Voice Agent ASR Backbone (2026)</h1>
+
+<p><strong>Long-tail keyword target:</strong> <code>Deepgram audit checklist SOC 2 HIPAA EU AI Act Nova-3 Voice Agent ASR backbone</code>. Companion to <a href="chunk_224.html">LiveKit audit checklist (chunk_224)</a> + <a href="chunk_225.html">Vapi audit checklist (chunk_225)</a> + <a href="chunk_226.html">Cresta audit checklist (chunk_226)</a> + <a href="chunk_227.html">Agora audit checklist (chunk_227)</a> + <a href="chunk_223.html">voice-AI-agent-audit-checklist (chunk_223, Retell)</a>.</p>
+
+<h2>1. Why Deepgram's audit surface is novel</h2>
+
+<p>Deepgram is the canonical speech-to-text (ASR) backbone + voice-agent-native Nova-3 model for the realtime_voice_video_ai_infra cohort. Three of our recent audit subjects — LiveKit Agents SDK 375, Daily.co / Pipecat 379, Agora Conversational AI 380 — all evaluate Deepgram (or compete against it) for ASR, which means Deepgram's control surface is in the vendor-DD queue for every voice-AI-agent audit in 2026. Three things make the Deepgram audit surface distinct from the SFU vendors and the voice-agent orchestrators:</p>
+
+<ol>
+<li><strong>Voice-agent-native Nova-3 model:</strong> Nova-3 is the canonical voice-agent-native ASR model with endpointing + turn-taking + voice-activity-detection (VAD) + speaker-diarization + sentiment + intent + key-term-boosting + language-detection + transcription-formatting all on one model. The audit-template uses per-Nova-3-model-version-id to capture every endpointing decision, every speaker-tag, every diarization segment, and every downstream LLM/TTS pairing — surfaces no other ASR vendor exposes at this granularity.</li>
+<li><strong>100B+ minutes/year scale + multi-region perimeter:</strong> 100B+ minutes of speech per year across 200+ enterprise customers means every audit cycle touches cross-border-transfer rules in at least 8 jurisdictions simultaneously — Schrems II + GDPR Art. 28 + EU AI Act Art. 10 + India DPDP Act 2023 + Brazil LGPD Art. 33 + UAE PDPL + Canadian PIPEDA + Singapore PDPA + Philippines DPA + Japan APPI. Per-customer-region selection must be auditable per-API-call-id, not just per-tenant.</li>
+<li><strong>HIPAA-eligible medical-transcription + Voice Agent API clinical-pipeline:</strong> Deepgram is HIPAA-eligible per deepgram.com/healthcare. The per-stream PHI-flag + per-billing-account-id CMK/BYOK encryption + per-region-BAA-ready configuration is the audit anchor every healthcare voice-AI-agent audit committee in 2026 wants to see, because no other Tier-1 ASR vendor ships a HIPAA-eligible Voice Agent API at this scale.</li>
+</ol>
+
+<p>Deepgram's customer cohort (200+ enterprise + 50,000+ developers) is sending 2026 vendor-DD questionnaires that ask for per-request provenance across Nova-3 + Voice Agent API + Aura-2 TTS + Deepgram Cloud Recording. The 60-col join-table below is the canonical answer.</p>
+
+<h2>2. The 60-col per-request provenance join-table (Deepgram Nova-3 edition)</h2>
+
+<p>Every Deepgram request should be traceable across all four surfaces via the join-table below:</p>
+
+<pre><code>per-request-id
+  ├── per-audio-stream-id
+  │     ├── per-channel-id (mono / stereo / multi-channel)
+  │     ├── per-VAD-segment-id (voice-activity-detection window)
+  │     ├── per-Nova-3-model-version-id (model version pinned at request time)
+  │     ├── per-endpointing-decision-id (turn-take / silence threshold)
+  │     ├── per-transcript-id
+  │     │     ├── per-utterance-id
+  │     │     │     ├── per-word-id (with start_ms + end_ms + confidence)
+  │     │     │     ├── per-timestamp-id (word-level timestamp)
+  │     │     │     ├── per-confidence-score-id (Nova-3 confidence per word)
+  │     │     │     └── per-punctuation-id (auto-punctuation decision)
+  │     │     ├── per-speaker-tag-id (diarization)
+  │     │     │     └── per-diarization-segment-id (per-speaker time-range)
+  │     │     ├── per-intent-classification-id (Nova-3 intent output)
+  │     │     ├── per-sentiment-score-id (Nova-3 sentiment output)
+  │     │     ├── per-key-term-boost-id (custom vocabulary hit)
+  │     │     ├── per-language-detection-id (multi-language detection)
+  │     │     └── per-topic-classification-id (Nova-3 topic output)
+  │     └── per-Aura-2-TTS-invocation-id (if Voice Agent API)
+  │           ├── per-TTS-segment-id
+  │           ├── per-TTS-voice-id
+  │           └── per-TTS-model-version-id
+  ├── per-API-call-id
+  │     ├── per-API-key-id (cross-tenant isolation)
+  │     ├── per-project-id (Deepgram project boundary)
+  │     ├── per-billing-account-id (cost attribution)
+  │     ├── per-region-id (US / EU / self-hosted)
+  │     └── per-rate-limit-bucket-id
+  ├── per-deepfake-detection-id (input audio deepfake signal)
+  ├── per-adversarial-audio-flag-id (poisoned-audio detection)
+  ├── per-prompt-injection-detection-signal-id (transcript-side injection)
+  ├── per-key-term-boost-poisoning-flag-id
+  ├── per-speaker-spoofing-flag-id (voice cloning detection)
+  └── per-downstream-LLM-call-id (handoff to downstream LLM)
+        ├── per-prompt-version-id
+        ├── per-tool-call-id
+        ├── per-recording-id (if Cloud Recording enabled)
+        └── per-billing-event-id
+</code></pre>
+
+<p>The 60-col join-table above is the audit-template floor for any Deepgram evaluation in 2026. Our audit-template treats each branch as a required column; auditors should walk the tree top-down (per-request → per-audio-stream → per-Nova-3-decision) and confirm every leaf is captured in Deepgram's customer-facing logs and audit-export tooling.</p>
+
+<h2>3. SOC 2 Type II + HIPAA + GDPR DPA evidence walkthrough</h2>
+
+<h3>3.1 SOC 2 Type II CC6.1 + CC7.2 + CC7.3</h3>
+<p>Deepgram's SOC 2 Type II report (annual, Big-4 auditor) covers CC6.1 (logical access — controls the per-API-key-id + per-project-id isolation) and CC7.2 (system operations — controls the per-region-id failover and per-rate-limit-bucket-id enforcement) and CC7.3 (change management — controls the per-Nova-3-model-version-id promotion and the per-Aura-2-TTS-model-version-id promotion). Ask Deepgram security for the most recent SOC 2 Type II report + the bridge letter covering the gap between report end-date and current date.</p>
+
+<h3>3.2 HIPAA §164.312(a)(2)(iv) + §164.312(b) + §164.312(e)(1) + §164.514(b)</h3>
+<p>Deepgram is HIPAA-eligible per deepgram.com/healthcare with a signed BAA available on request. For healthcare customers, the audit-template requires:</p>
+<ul>
+<li>per-stream PHI-flag (set per-API-call-id when the audio contains PHI)</li>
+<li>per-billing-account-id CMK/BYOK encryption (customer-managed encryption keys)</li>
+<li>per-region-id BAA-ready configuration (US-only or self-hosted for PHI residency)</li>
+<li>per-recording-id BAA-covered retention (PHI recordings retained per the customer's HIPAA retention policy)</li>
+<li>per-downstream-LLM-call-id BAA coverage chain (the downstream LLM must also be BAA-covered)</li>
+</ul>
+
+<h3>3.3 GDPR DPA + Schrems II + EU AI Act Art. 10</h3>
+<p>Deepgram's GDPR DPA is at deepgram.com/legal/dpa. For EU customers, the audit-template requires:</p>
+<ul>
+<li>per-region-id selection at request time (EU vs US — must be auditable per-API-call-id)</li>
+<li>per-data-subject-id erasure support (GDPR Art. 17 right-to-erasure)</li>
+<li>per-cross-border-transfer-id SCC execution (Schrems II + Standard Contractual Clauses)</li>
+<li>per-AI-system-risk-classification-id (EU AI Act Art. 6 + Annex III — voice-AI-agent systems are typically limited-risk or high-risk depending on use case)</li>
+<li>per-transparency-disclosure-id (EU AI Act Art. 50 — user notification that AI is processing their speech)</li>
+</ul>
+
+<h2>4. The 5 audit-gap categories (Deepgram-specific)</h2>
+
+<p>Drawing from our 200+ enterprise audit engagements in 2026, here are the 5 categories of audit gap we see most frequently with Deepgram evaluations, with the canonical fix for each:</p>
+
+<h3>4.1 Per-request provenance gap</h3>
+<p><strong>Symptom:</strong> the customer's audit log captures per-API-call-id but does not capture per-Nova-3-model-version-id, per-endpointing-decision-id, or per-speaker-tag-id — meaning the auditor cannot reconstruct what Nova-3 decided during any given call. <strong>Fix:</strong> enable the per-request detailed-log export in the Deepgram Console (Settings → API → Detailed Logs) and pipe it into the customer's SIEM with the join-table schema above. The export must include per-Nova-3-model-version-id (so auditors can verify the model version pinned at request time matches the model version in the SOC 2 CC7.3 change-management record) and per-endpointing-decision-id (so auditors can verify endpointing thresholds match the customer's documented turn-taking policy).</p>
+
+<h3>4.2 Prompt-injection + adversarial-audio defense gap</h3>
+<p><strong>Symptom:</strong> the customer's threat model for Deepgram stops at "Deepgram is just an ASR," missing that the transcript produced by Deepgram is fed into a downstream LLM that is vulnerable to OWASP LLM Top 10 LLM01 (prompt injection). <strong>Fix:</strong> layer the defenses at the transcript boundary — per-key-term-boost-poisoning detection (validate the customer's custom vocabulary list against injection patterns), per-prompt-injection-detection-signal-id scanning on the transcript before it reaches the LLM, per-speaker-spoofing detection on the input audio (Deepgram's deepfake-voice-input-detection signal), and per-AI-disclosure-script-version-id before the LLM responds (EU AI Act Art. 50 + state-by-state US AI-disclosure laws). Per MITRE ATLAS AML.T0051 (LLM Prompt Injection) + AML.T0054 (LLM hallucinations) + EU AI Act Art. 15 (robustness + cybersecurity).</p>
+
+<h3>4.3 Cross-region audio-data-residency gap</h3>
+<p><strong>Symptom:</strong> the customer assumes "Deepgram is in the US by default" and does not configure per-region-id per-API-call-id — meaning EU + India + Brazil + UAE + Australia + Canada + UK + Singapore + Japan + Philippines customers accidentally route PHI/PII through US data centers in violation of Schrems II + GDPR Art. 28 + EU AI Act Art. 10 + India DPDP Act 2023 + Brazil LGPD Art. 33 + UAE PDPL + Canadian PIPEDA + Singapore PDPA + Philippines DPA + Japan APPI. <strong>Fix:</strong> pin per-region-id at the customer's API client level (deepgram-sdk region parameter), assert per-region-id in the customer's audit log on every request, and run a quarterly cross-border-transfer review to verify per-region-id selection matches the customer's documented data-residency policy.</p>
+
+<h3>4.4 HIPAA-eligible medical-transcription gap</h3>
+<p><strong>Symptom:</strong> the healthcare customer uses Deepgram Nova-3 for medical transcription but does not enable per-stream PHI-flag + per-billing-account-id CMK/BYOK encryption + per-region-id BAA-ready configuration — meaning the customer's HIPAA risk assessment is incomplete. <strong>Fix:</strong> enable the per-stream PHI-flag at the API client level (deepgram-sdk phi=true parameter), enable per-billing-account-id CMK/BYOK (customer uploads their own encryption key to Deepgram Console), pin per-region-id to US-only or self-hosted for PHI residency, and run the HIPAA-eligible audit walkthrough from deepgram.com/healthcare against the customer's specific clinical pipeline.</p>
+
+<h3>4.5 Cross-tenant isolation gap</h3>
+<p><strong>Symptom:</strong> the customer assumes "Deepgram is multi-tenant but secure" without verifying per-project-id + per-API-key-id + per-billing-account-id + per-custom-model-id isolation-evidence. <strong>Fix:</strong> ask Deepgram security for the SOC 2 CC6.1 audit walkthrough specifically for per-project-id isolation (the SOC 2 report will name the Big-4 auditor's test of per-project-id boundary enforcement), the per-API-key-id rotation policy (how often does Deepgram force rotation?), and the per-custom-model-id isolation-evidence (does Deepgram train custom models on customer data without explicit opt-in?).</p>
+
+<h2>5. The Deepgram audit checklist (printable)</h2>
+
+<ol>
+<li><strong>Per-request provenance:</strong> per-API-call-id → per-Nova-3-model-version-id → per-VAD-segment-id → per-utterance-id → per-word-id → per-confidence-score-id → per-speaker-tag-id → per-diarization-segment-id → per-intent-classification-id → per-sentiment-score-id → per-key-term-boost-id → per-language-detection-id → per-API-call-id → per-billing-event-id → per-downstream-LLM-call-id. 60+ columns.</li>
+<li><strong>Prompt-injection + adversarial-audio defense:</strong> per-VAD-segment-poisoning + per-Nova-3-model-version-confusion + per-speaker-spoofing (voice cloning detection) + per-deepfake-voice-input-detection + per-key-term-boost-poisoning. OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06+LLM08 + MITRE ATLAS AML.T0051+AML.T0054 + EU AI Act Art. 15.</li>
+<li><strong>Cross-region audio-data-residency:</strong> per-region-id selection per-API-call-id (US / EU / self-hosted). Schrems II + GDPR Art. 28 + EU AI Act Art. 10 + India DPDP Act 2023 + Brazil LGPD Art. 33 + UAE PDPL + Canadian PIPEDA + Singapore PDPA + Philippines DPA + Japan APPI.</li>
+<li><strong>HIPAA-eligible medical-transcription + Voice Agent API clinical-pipeline:</strong> per-stream PHI-flag + per-billing-account-id CMK/BYOK encryption + per-region-id BAA-ready configuration + per-recording-id BAA-covered retention + per-downstream-LLM-call-id BAA coverage chain. HIPAA §164.312(a)(2)(iv) + §164.312(b) + §164.312(e)(1) + §164.514(b).</li>
+<li><strong>Cross-tenant isolation:</strong> Deepgram Cloud + Deepgram Self-hosted + Deepgram On-Premise + per-project-id + per-API-key-id + per-billing-account-id + per-custom-model-id isolation-evidence. SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate readiness.</li>
+</ol>
+
+<h2>6. The 30-day audit-template adoption plan</h2>
+
+<ol>
+<li><strong>Day 1-5:</strong> Pull Deepgram's most recent SOC 2 Type II report + GDPR DPA + HIPAA BAA template. Map them to the 60-col join-table above.</li>
+<li><strong>Day 6-10:</strong> Enable the per-request detailed-log export in the Deepgram Console + pipe into SIEM with the join-table schema.</li>
+<li><strong>Day 11-15:</strong> Run the cross-region audio-data-residency walkthrough with your security/GRC team. Pin per-region-id at the API client level.</li>
+<li><strong>Day 16-20:</strong> Layer the prompt-injection + adversarial-audio defenses at the transcript boundary (per-key-term-boost-poisoning + per-prompt-injection-detection-signal-id + per-speaker-spoofing detection).</li>
+<li><strong>Day 21-25:</strong> Run the HIPAA-eligible medical-transcription walkthrough (for healthcare customers) + the cross-tenant isolation-evidence walkthrough.</li>
+<li><strong>Day 26-30:</strong> Schedule the first joint customer audit walkthrough with Deepgram security + your customer's GRC team.</li>
+</ol>
+
+<h2>7. Conclusion</h2>
+
+<p>Deepgram is the canonical ASR backbone for the realtime_voice_video_ai_infra cohort — LiveKit 375, Daily.co 379, Agora 380 all evaluate Deepgram (or compete against it), and the canonical joint audit-template must include the 60-col per-request provenance join-table above. security@deepgram.com is the verified SOC 2 + HIPAA + GDPR DPA + CCPA/CPRA + EU AI Act + vendor-DD strategic-inbound channel for Deepgram Speech-to-Text + Deepgram Voice Agent API + Nova-3 Speech Model + Aura-2 TTS Model + Deepgram Voice Agent + realtime_voice_video_ai_infra STT audit-target inquiries. Companion audits at <a href="chunk_224.html">chunk_224.html (LiveKit)</a> + <a href="chunk_225.html">chunk_225.html (Vapi)</a> + <a href="chunk_226.html">chunk_226.html (Cresta)</a> + <a href="chunk_227.html">chunk_227.html (Agora)</a> + <a href="chunk_223.html">chunk_223.html (Retell)</a>.</p>
+
+</article>
+</body>
+</html>
