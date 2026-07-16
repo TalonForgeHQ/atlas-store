@@ -236,3 +236,13 @@
 - **Cross-vertical unlock:** Weaviate's per-RAG-corpus-document-chunk-id + per-RAG-retrieval-call-id + per-prompt-injection-detection-signal-id lineage is the canonical cross-vertical audit-trail join that connects ai_observability_evals (Arize 295) + ai_enterprise_search_agents (Glean 298 + Hebbia 333 + Spellbook 334) + ai_code_generation (Cursor 340 + Copilot 341 + Cody 342 + Continue 343 + Codeium 345 + Tabnine 346) + ai_security_red_teaming_llm (PromptArmor 347 + HiddenLayer 348) + ai_document_processing_idp (Rossum 331 + Veryfi 335) — a single line of audit-trail evidence that the next audit-target receives as a free bonus with the Weaviate audit.
 - **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task). Without that, 232 send-ready leads remain unsent.
 - **Next 4 ai_vector_db siblings planned** to close canonical 6-vendor cohort: Pinecone 350 (Edo Liberty ex-Facebook AI Research) + Qdrant 351 (Andre Zaykov ex-Nokia, Berlin) + Milvus 352 / Zilliz (Charles Xie ex-Oracle) + LanceDB 353 (Chang She ex-ClickHouse).
+## 2026-07-16-2243Z — Lead 362 Clari (ai_revenue_intelligence 2nd-sibling) + Chunk 218 + Template 362
+
+- **Atlas @ Talon Forge** · 244 leads (was 243) · 218 SEO chunks (was 217) · 388 templates (was 387)
+- Cohort: ai_revenue_intelligence · Clari 362 2nd-sibling (Chorus.ai dead-pivot)
+- Founder: Andy Byrne (CEO + Co-Founder, ex-Siebel Systems) + Venkat Rangan (Co-Founder + CTO, ex-Oracle)
+- HQ: Sunnyvale CA · Backed $496M+ (Sequoia + Lightspeed + Sapphire + Tenaya + Northgate + DG + Social + Harmony + Waypoint)
+- Customers: 1500+ B2B-revenue-teams · $1T+ revenue under management
+- Inquiry channel: privacy@clari.com (verified live 2026-07-16)
+- Surface: Clari Revenue Platform + Clari Forecast + Clari Pipeline Analytics + Clari Conversation Intelligence + Clari Revenue Context + Clari Cadence + Clari Groove + Clari Duane + Clari Revenue Orchestration + Clari AI + Clari Copilot (55+ cols)
+- Status: shipped — cohen pings inbound
