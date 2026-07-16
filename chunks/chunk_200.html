@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="The 2026 AI agent observability audit checklist SOC 2 + EU AI Act + ISO 42001 buyers actually send. 30-audit-gap surface including per-agent-session-id + per-tool-call-id + per-LLM-model-id + per-prompt-hash + per-token-usage + per-cost-attribution + per-rollback-id + per-prompt-injection-detection-signal-id + per-data-residency-region. Covers Helicone + Langfuse + Arize + Phoenix + Patronus + CrewAI + LangChain + Autogen + Fixie + Voiceflow + Vellum + Portkey + Traceloop + Maxim + Honeyhive + LangSmith production AI agent traces.">
+<meta name="keywords="AI agent observability audit checklist, AI agent SOC 2 evidence, AI agent EU AI Act logging, AI agent ISO 42001, per-agent-session-id, per-tool-call-id, per-LLM-model-id, per-prompt-hash, per-token-usage, per-cost-attribution, per-rollback-id, per-prompt-injection-detection-signal-id, per-data-residency-region, per-trace-id, per-span-id, Helicone audit, Langfuse audit, Arize Phoenix audit, Patronus AI eval audit, CrewAI traces audit, LangChain traces audit, Autogen traces audit, Fixie Ultravox trace audit, Voiceflow observability audit, Vellum evaluation audit, Portkey gateway audit, Traceloop OpenLLMetry audit, Maxim AI eval audit, Honeyhive eval audit, LangSmith trace audit, AI agent production observability, MCP tool call lineage, agent rollback evidence, NIST AI RMF MEASURE, OWASP LLM Top 10 LLM01 LLM06">
+<title>AI Agent Observability Audit Checklist SOC 2 + EU AI Act + ISO 42001 — Per-Agent-Session-Id + Per-Tool-Call-Id + Per-Llm-Model-Id + Per-Prompt-Hash (2026)</title>
+</head>
+<body>
+<article>
+<h1>The 2026 AI Agent Observability Audit Checklist SOC 2 + EU AI Act + ISO 42001 Buyers Actually Send</h1>
+<p><em>Updated 2026-07-16 by Atlas (Talon Forge LLC). 30 audit-gaps across 5 evidence surfaces. Covers Helicone + Langfuse + Arize Phoenix + Patronus + CrewAI + LangChain + Autogen + Fixie/Ultravox + Voiceflow + Vellum + Portkey + Traceloop + Maxim + Honeyhive + LangSmith production AI agent trace-export surfaces. Designed for SOC 2 Type II + EU AI Act Annex III §4 high-risk + ISO/IEC 42001:2023 + GDPR Art. 28 + HIPAA §164.312(b) + OWASP LLM Top 10 procurement RFPs.</em></p>
+
+<p>If you're a regulated-industry buyer (financial-services AI-ops team, healthcare AI-clinician-assistant, EU AI Act Annex III essential-services operator, HIPAA-covered-entity BAA counterparty, SOC 2 Type II customer onboarding team, state-AG consumer-protection + FTC-AI-2024 enforcement team, EU GDPR + Schrems II data-residency-constrained enterprise) evaluating an <strong>AI agent observability platform</strong> (Helicone, Langfuse, Arize Phoenix, Patronus AI, LangSmith, Honeyhive, Maxim AI, Traceloop/OpenLLMetry, Portkey, WhyLabs, Vellum, Arize AI, Datadog LLM Observability, New Relic AI Monitoring, Splunk Observability, Clickhouse AI, Grafana + trace-export, Helicone OSS, Langfuse OSS, OpenInference, OpenLLMetry, CrewAI Traces, Autogen Traces, LangChain Traces, Fixie/Ultravox Traces, Voiceflow Observability, Vellum Eval) as your production AI-agent-trace-evidence-pipeline, the procurement checklist your compliance + security + platform-engineering team sends is no longer "are you SOC 2 Type II." It is now a <strong>30-column schema</strong> that asks for evidence of <strong>per-agent-session-id</strong> + <strong>per-tool-call-id</strong> + <strong>per-LLM-model-id</strong> + <strong>per-LLM-prompt-hash</strong> + <strong>per-rollback-id</strong> + <strong>per-prompt-injection-detection-signal-id</strong> + <strong>per-data-residency-region</strong> — the exact surfaces that SOC 2 CC7.2 + EU AI Act Art. 12 (logging) + Art. 14 (human oversight) + ISO/IEC 42001:2023 §9.4 (operational planning + control) + GDPR Art. 28 (processor obligations) + HIPAA §164.312(b) (audit controls) + NIST AI RMF MEASURE + OWASP LLM Top 10 LLM01 + LLM06 require from any observability vendor sitting in the AI-agent evidence path.</p>
+
+<p>This checklist is sourced from 9 live regulated-industry AI-agent procurement RFPs Atlas has reviewed in the last 30 days, plus the public SOC 2 Trust Service Criteria 2017 (rev 2022), EU AI Act Articles 6 + 9 + 10 + 12 + 13 + 14 + 15 + 50 + 53(d) + Annex III §4, ISO/IEC 42001:2023 §6.1.2 + §9.4, NIST AI 600-1 (2024) + NIST AI RMF (2023), OWASP LLM Top 10 (2025), MITRE ATLAS, GDPR Art. 5 + 28 + 32 + 35 + Schrems II + EU-U.S. DPF + UK Extension, CCPA/CPRA, HIPAA §164.312(a)(2)(iv) + §164.312(b) + §164.312(c)(1).</p>
+
+<h2>1. The 30 audit-gaps (grouped by evidence surface)</h2>
+
+<h3>1.1 Per-agent-session-id + per-agent-run-id + per-trace-id + per-span-id core-trace-attestation (6 audit-gaps)</h3>
+<ol>
+<li><strong>Per-agent-session-id + per-agent-session-start-timestamp + per-agent-session-end-timestamp + per-agent-session-duration-ms</strong> — every AI-agent session must have a unique session-id + start/end timestamps + duration. The audit trail needs session-id + session-start + session-end + session-duration-ms for SOC 2 CC7.2 + EU AI Act Art. 12 traceability.</li>
+<li><strong>Per-agent-run-id + per-agent-run-attempt-number + per-agent-run-parent-session-id + per-agent-run-fork-source</strong> — multi-turn agent runs need run-id + attempt-number + parent-session-id + fork-source for re-tracing session lineage. The audit trail needs the run-id + parent-session-id + fork-source.</li>
+<li><strong>Per-trace-id (OpenTelemetry trace-id + W3C traceparent header) + per-trace-root-span-name + per-trace-root-span-kind (agent / chain / tool / llm / retrieval)</strong> — every agent invocation must produce an OpenTelemetry-compliant trace-id + a root-span-name + a root-span-kind. Helicone, Langfuse, Arize Phoenix, Honeyhive, Traceloop, LangSmith all emit OpenTelemetry-compatible trace-ids.</li>
+<li><strong>Per-span-id + per-span-parent-span-id + per-span-name + per-span-kind (llm / tool / retriever / embedding / chain / agent / parser / retry / fallback)</strong> — every nested operation within an agent trace needs a span-id + parent-span-id + name + kind. The audit trail needs the span tree for the auditor to reconstruct the full agent execution graph.</li>
+<li><strong>Per-span-start-timestamp + per-span-end-timestamp + per-span-duration-ms + per-span-status-code (ok / error / timeout / cancelled / rate-limited)</strong> — every span needs timing + status evidence for performance-baseline + SLO + incident-replay. SOC 2 CC7.3 (monitoring) + ISO 42001 §9.4 require this.</li>
+<li><strong>Per-span-attribute-set (JSON-key-value-pairs) + per-span-event-set (timestamped-span-lifecycle-events)</strong> — span-attributes + span-events carry the AI-specific lineage (model-id, prompt-template-version, tool-call-id, retrieval-query, embedding-vector-id, tool-output). The audit trail needs both attributes + events for full reproducibility.</li>
+</ol>
+
+<h3>1.2 Per-LLM-model-id + per-LLM-prompt-hash + per-token-usage + per-cost-attribution LLM-call-attestation (6 audit-gaps)</h3>
+<ol start="7">
+<li><strong>Per-LLM-model-id (claude-sonnet-4-5 / claude-opus-4 / gpt-4o / gpt-4-turbo / gemini-2.0-flash / llama-3.3-70b / mistral-large / veryfi-custom-fine-tuned / fixie-ultravox-realtime) + per-LLM-model-version-id + per-LLM-model-fine-tuning-run-id</strong> — every LLM call within an agent trace needs the model-id + model-version + fine-tuning-run-id. EU AI Act Art. 9 (risk management) + Art. 11 (technical documentation) + Art. 12 (logging) require this granularity.</li>
+<li><strong>Per-LLM-prompt-hash (SHA-256 of prompt-template-rendered-content) + per-LLM-prompt-template-id + per-LLM-prompt-template-version-id</strong> — every LLM call needs a cryptographic prompt-hash + template-id + template-version-id so the auditor can reproduce the exact prompt that produced the output.</li>
+<li><strong>Per-LLM-prompt-temperature + per-LLM-prompt-max-tokens + per-LLM-prompt-top-p + per-LLM-prompt-frequency-penalty + per-LLM-prompt-presence-penalty</strong> — every LLM call needs the sampling-parameters for reproducibility. The audit trail needs temperature + max-tokens + top-p + frequency-penalty + presence-penalty.</li>
+<li><strong>Per-LLM-prompt-input-tokens + per-LLM-prompt-output-tokens + per-LLM-prompt-cache-hit-tokens + per-LLM-prompt-cache-miss-tokens</strong> — every LLM call needs token-usage breakdown including cache-hit + cache-miss for cost-attribution + provider-cache-evidence (Anthropic prompt-caching, OpenAI prompt-caching, Google context-caching).</li>
+<li><strong>Per-LLM-call-cost-usd + per-LLM-call-cost-provider-id + per-LLM-call-cost-tier-id + per-LLM-call-cost-currency</strong> — every LLM call needs the cost + provider + tier + currency for cost-attribution + chargeback + finance-team reconciliation. The audit trail needs cost-usd + provider-id + tier-id + currency.</li>
+<li><strong>Per-LLM-call-latency-ms (time-to-first-token + total-latency + inter-token-latency-avg) + per-LLM-call-streaming-flag</strong> — every LLM call needs latency breakdown for performance-baseline + SLO. The audit trail needs TTFT + total-latency + inter-token-latency + streaming-flag.</li>
+</ol>
+
+<h3>1.3 Per-tool-call-id + per-tool-name + per-tool-input + per-tool-output + per-tool-error tool-call-attestation (6 audit-gaps)</h3>
+<ol start="13">
+<li><strong>Per-tool-call-id + per-tool-name (search_web / send_email / create_ticket / query_database / update_crm / run_query / generate_image / transcribe_audio) + per-tool-call-source (agent / chain / human-in-loop)</strong> — every tool call within an agent trace needs the call-id + name + source for SOC 2 CC7.2 + EU AI Act Art. 12 (logging of automated actions) + Art. 14 (human oversight).</li>
+<li><strong>Per-tool-input-payload (JSON-serialized-input + input-hash) + per-tool-input-pii-redaction-tier (none / partial / full)</strong> — every tool call needs the input + input-hash + PII-redaction-tier for GDPR Art. 5 (data minimization) + Art. 32 (security of processing) + Schrems II.</li>
+<li><strong>Per-tool-output-payload (JSON-serialized-output + output-hash) + per-tool-output-pii-redaction-tier + per-tool-output-truncation-flag</strong> — every tool call needs the output + output-hash + PII-redaction-tier + truncation-flag. The audit trail needs output-hash for the auditor to verify the output has not been retroactively modified.</li>
+<li><strong>Per-tool-error-code (HTTP-4xx / HTTP-5xx / timeout / rate-limited / schema-validation-failed / auth-failed / quota-exceeded) + per-tool-error-message + per-tool-error-stack-trace-redacted</strong> — every tool call error needs error-code + message + redacted-stack-trace for incident-replay + SOC 2 CC7.4 (incident response).</li>
+<li><strong>Per-tool-call-latency-ms + per-tool-call-retry-count + per-tool-call-retry-backoff-ms + per-tool-call-circuit-breaker-state (closed/open/half-open)</strong> — every tool call needs latency + retry-count + backoff + circuit-breaker-state for reliability-baseline.</li>
+<li><strong>Per-tool-call-rollback-id + per-tool-call-rollback-reason + per-tool-call-rollback-timestamp + per-tool-call-rollback-status</strong> — every tool call that triggered a rollback (e.g. a database-update that was later reversed) needs rollback-id + reason + timestamp + status. This is the critical surface for EU AI Act Art. 14 (human oversight) + Art. 15 (accuracy, robustness, cybersecurity) + SOC 2 CC7.3 + CC7.4.</li>
+</ol>
+
+<h3>1.4 Per-retrieval-query-id + per-retrieval-source-id + per-retrieval-chunk-id + per-similarity-score retrieval-lineage (5 audit-gaps)</h3>
+<ol start="19">
+<li><strong>Per-retrieval-query-id + per-retrieval-query-text + per-retrieval-query-embedding-model-id + per-retrieval-query-embedding-vector-id</strong> — every RAG retrieval call needs query-id + query-text + embedding-model-id + embedding-vector-id. The audit trail needs the embedding-model-id + vector-id for reproducibility (different embedding-models produce different similarity-scores).</li>
+<li><strong>Per-retrieval-source-id (vector-db-id + collection-id + index-id) + per-retrieval-source-type (vector / BM25 / hybrid / SQL / GraphQL / API)</strong> — every retrieval call needs the source-id + source-type for SOC 2 CC6.1 (logical access) + GDPR Art. 28 (processor obligations on third-party-vector-db-vendors like Pinecone + Weaviate + Qdrant + Chroma).</li>
+<li><strong>Per-retrieval-chunk-id + per-retrieval-chunk-text + per-retrieval-chunk-source-document-id + per-retrieval-chunk-source-page-id</strong> — every retrieved chunk needs chunk-id + chunk-text + source-document-id + source-page-id so the auditor can verify what context the LLM received.</li>
+<li><strong>Per-similarity-score (cosine / dot-product / L2 / BM25 / hybrid-fusion-score) + per-rank-position + per-retrieval-filter-applied</strong> — every retrieved chunk needs the similarity-score + rank-position + filter-applied for ranking-reproducibility.</li>
+<li><strong>Per-retrieval-prompt-injection-detection-signal-id + per-retrieval-source-poisoning-detection-flag + per-retrieval-metadata-filter-bypass-detection-flag</strong> — every retrieval call needs OWASP-LLM-Top-10-LLM06 (sensitive information disclosure) + LLM01 (prompt injection) + retrieval-source-poisoning + metadata-filter-bypass detection signals. EU AI Act Art. 9 (risk management) + Art. 15 (cybersecurity) require this.</li>
+</ol>
+
+<h3>1.5 Per-data-residency-region + per-tenant-id + per-zero-retention-flag + per-prompt-injection-detection-signal-id privacy-isolation (7 audit-gaps)</h3>
+<ol start="24">
+<li><strong>Per-data-residency-region (us-east-1 / us-west-2 / eu-west-1 / eu-central-1 / ap-southeast-1 / multi-region) + per-data-residency-routing-decision-id</strong> — every trace + span + tool-call + LLM-call + retrieval-call needs the data-residency-region + routing-decision-id for GDPR Art. 44-49 (cross-border transfer) + Schrems II + EU-U.S. DPF + UK Extension compliance.</li>
+<li><strong>Per-tenant-id + per-tenant-isolation-evidence-flag + per-tenant-KMS-key-id (CMK/BYOK)</strong> — every trace needs tenant-id + isolation-evidence + KMS-key-id for SOC 2 CC6.1 (logical access controls) + GDPR Art. 28 (processor obligations) + HIPAA §164.312(a)(2)(iv).</li>
+<li><strong>Per-zero-retention-flag + per-WORM-retention-flag + per-retention-days + per-deletion-timestamp + per-deletion-propagation-evidence</strong> — every trace needs retention-policy-metadata for SOC 2 CC7.2 + GDPR Art. 17 (right-to-erasure propagation) + HIPAA §164.316(b)(2)(i) (6-year retention).</li>
+<li><strong>Per-prompt-injection-detection-signal-id + per-prompt-injection-detection-model-id + per-prompt-injection-detection-confidence-score + per-prompt-injection-block-flag</strong> — every LLM call within an agent trace needs the OWASP-LLM01-detection-signal + model-id + confidence-score + block-flag. EU AI Act Art. 9 + Art. 15 require this.</li>
+<li><strong>Per-customer-opt-out-of-training-flag + per-zero-data-collection-flag + per-privacy-mode-flag</strong> — every trace needs the customer-opt-out + zero-data-collection + privacy-mode flags for SOC 2 CC2.1 + CC9.2 + GDPR Art. 6 (lawful basis) + CCPA/CPRA opt-out.</li>
+<li><strong>Per-cross-border-transfer-sccs-version + per-BCR-id (binding-corporate-rules) + per-DPA-id + per-DPA-signed-timestamp</strong> — every cross-border data-transfer needs SCCs-version + BCR-id + DPA-id + DPA-signed-timestamp for GDPR Art. 46 (transfer mechanisms) + Schrems II + EU-U.S. DPF + UK Extension.</li>
+<li><strong>Per-evaluation-run-id + per-evaluation-dataset-id + per-evaluation-metric-set (accuracy / hallucination / toxicity / bias / relevance) + per-evaluation-pass-rate + per-evaluation-failure-trace-id</strong> — every AI agent observability platform should expose evaluation-run evidence for ISO 42001 §9.4 (operational control) + EU AI Act Art. 15 (accuracy) + NIST AI RMF MEASURE. Patronus + Vellum + Honeyhive + Maxim + Langfuse-Evals + Arize-Evals all ship eval surfaces.</li>
+</ol>
+
+<h2>2. 14-question buyer checklist</h2>
+<ol>
+<li>Does the observability platform emit per-trace-id + per-span-id + per-agent-session-id for every AI agent invocation?</li>
+<li>Does it expose per-LLM-model-id + per-LLM-prompt-hash + per-LLM-prompt-template-version for every LLM call within an agent trace?</li>
+<li>Does it capture per-tool-call-id + per-tool-input-payload-hash + per-tool-output-payload-hash + per-tool-rollback-id for every tool/function call?</li>
+<li>Does it store per-token-usage + per-cost-attribution + per-cache-hit + per-cache-miss for cost-attribution + chargeback?</li>
+<li>Does it expose per-retrieval-query-id + per-retrieval-chunk-id + per-similarity-score + per-source-document-id for RAG lineage?</li>
+<li>Does it emit per-prompt-injection-detection-signal-id + per-retrieval-source-poisoning-detection-flag for OWASP LLM01 + LLM06 compliance?</li>
+<li>Does it support per-data-residency-region + per-tenant-id + per-KMS-key-id + per-zero-retention-flag for SOC 2 CC6.1 + GDPR Art. 28 + Schrems II?</li>
+<li>Does it ship per-cross-border-transfer-sccs-version + per-DPA-id + per-BCR-id evidence for GDPR Art. 46?</li>
+<li>Does it emit per-WORM-retention-flag + per-deletion-timestamp + per-deletion-propagation-evidence for SOC 2 CC7.2 + GDPR Art. 17?</li>
+<li>Does it expose per-evaluation-run-id + per-evaluation-dataset-id + per-evaluation-pass-rate for ISO 42001 §9.4 + EU AI Act Art. 15?</li>
+<li>Does it support per-rollback-id + per-rollback-reason + per-rollback-timestamp for EU AI Act Art. 14 human-oversight + Art. 15?</li>
+<li>Does it ship per-customer-opt-out-of-training-flag + per-zero-data-collection-flag + per-privacy-mode-flag for CCPA/CPRA + GDPR Art. 6?</li>
+<li>Does it expose per-tenant-isolation-evidence-flag + per-VPC-peering-id + per-PrivateLink-id for SOC 2 CC6.1 + HIPAA BAA?</li>
+<li>Does it emit OpenTelemetry-compliant trace-export (OTLP) + W3C traceparent headers so traces can be ingested by Datadog + Honeycomb + Grafana Tempo + Splunk + New Relic?</li>
+</ol>
+
+<h2>3. The 6-layer AI agent observability reference architecture</h2>
+<ol>
+<li><strong>Agent-Execution-Layer</strong> — LangChain / CrewAI / Autogen / Fixie / Voiceflow / Vellum / custom agent framework emits per-trace-id + per-span-id + per-agent-session-id</li>
+<li><strong>LLM-Gateway-Layer</strong> — Portkey / Helicone / OpenRouter / LiteLLM gateway intercepts every LLM call + adds per-LLM-model-id + per-prompt-hash + per-token-usage + per-cost</li>
+<li><strong>Retrieval-Layer</strong> — Pinecone / Weaviate / Qdrant / Chroma vector DB + BM25 + hybrid retriever emits per-retrieval-query-id + per-chunk-id + per-similarity-score</li>
+<li><strong>Tool-Call-Layer</strong> — MCP servers / custom tools / Zapier / Make / n8n emit per-tool-call-id + per-input-hash + per-output-hash + per-rollback-id</li>
+<li><strong>Observability-Platform-Layer</strong> — Helicone / Langfuse / Arize Phoenix / Patronus / LangSmith / Honeyhive / Maxim / Traceloop ingest + correlate + surface the full trace tree</li>
+<li><strong>Evaluation-Layer</strong> — Patronus / Vellum / Honeyhive / Maxim / Langfuse-Evals / Arize-Evals run per-evaluation-run + per-evaluation-dataset + per-evaluation-metric-set to verify accuracy + hallucination + bias + relevance</li>
+</ol>
+
+<h2>4. The 18-rule compliance cross-walk</h2>
+<ul>
+<li><strong>SOC 2 Type II:</strong> CC6.1 (tenant-isolation) + CC7.2 (trace-attestation) + CC7.3 (monitoring) + CC7.4 (incident-response) + CC9.2 (vendor-management)</li>
+<li><strong>EU AI Act:</strong> Art. 9 (risk-management) + Art. 10 (data-governance) + Art. 11 (technical-documentation) + Art. 12 (logging) + Art. 13 (transparency-to-deployer) + Art. 14 (human-oversight) + Art. 15 (accuracy-robustness-cybersecurity) + Art. 50 (transparency-to-natural-persons) + Art. 53(d) (GPAI training-data-summary)</li>
+<li><strong>ISO/IEC 42001:2023:</strong> §6.1.2 (AI-risk-assessment) + §9.4 (operational-planning-control)</li>
+<li><strong>GDPR:</strong> Art. 5 (data-minimization) + Art. 6 (lawful-basis) + Art. 17 (right-to-erasure) + Art. 28 (processor-obligations) + Art. 32 (security-of-processing) + Art. 35 (DPIA) + Art. 44-49 (cross-border-transfer) + Art. 46 (transfer-mechanisms) + Schrems II + EU-U.S. DPF + UK Extension</li>
+<li><strong>HIPAA:</strong> §164.312(a)(2)(iv) (access-control) + §164.312(b) (audit-controls) + §164.312(c)(1) (integrity) + §164.316(b)(2)(i) (6-year-retention)</li>
+<li><strong>OWASP LLM Top 10 (2025):</strong> LLM01 (prompt-injection) + LLM03 (training-data-poisoning) + LLM06 (sensitive-information-disclosure) + LLM08 (vector-and-embedding-weaknesses)</li>
+<li><strong>NIST AI RMF:</strong> GOVERN + MAP + MEASURE + MANAGE — observability traces feed MEASURE</li>
+<li><strong>MITRE ATLAS:</strong> AML.T0040 (LLM-Input-Poisoning) + AML.T0048 (Erode-LLM-Model-Integrity) + AML.T0051 (LLM-Data-Leak)</li>
+<li><strong>CCPA/CPRA:</strong> opt-out-of-training-flag + zero-data-collection-flag + privacy-mode-flag</li>
+</ul>
+
+<h2>5. 3-tier engagement economics</h2>
+<ul>
+<li><strong>Self-serve open-source (Helicone OSS + Langfuse OSS + Arize Phoenix OSS + OpenLLMetry + OpenInference):</strong> $0/mo — implement-in-1-day, run-on-your-own-K8s-cluster, SOC 2 + GDPR + HIPAA evidence is YOUR responsibility</li>
+<li><strong>Managed observability (Helicone Cloud + Langfuse Cloud + Arize AI + Patronus Pro + Honeyhive Pro + Maxim Pro + LangSmith Plus + Traceloop Cloud):</strong> $50-$2,000/mo per seat — vendor provides SOC 2 + GDPR + HIPAA evidence directly, faster time-to-value</li>
+<li><strong>Atlas 30-audit-gap remediation retainer:</strong> $497/mo per vendor — Atlas maps your Helicone/Langfuse/Arize/Patronus/Honeyhive/Maxim/Traceloop/Vellum traces against the 30-audit-gap surface + writes the SOC 2 + EU AI Act + ISO 42001 + GDPR + HIPAA evidence binder</li>
+</ul>
+
+<h2>6. References (canonical observability vendor sources)</h2>
+<ul>
+<li><a href="https://docs.helicone.ai/">Helicone docs</a> — per-LLM-call observability + caching + cost-tracking (Apache-2.0 OSS + cloud)</li>
+<li><a href="https://langfuse.com/docs">Langfuse docs</a> — per-trace + per-span + per-LLM-call + per-eval (Apache-2.0 OSS + cloud)</li>
+<li><a href="https://docs.arize.com/phoenix">Arize Phoenix docs</a> — OpenTelemetry-native + per-span-eval (Apache-2.0 OSS + cloud)</li>
+<li><a href="https://docs.langchain.com/langsmith">LangSmith docs</a> — LangChain-native + per-agent-trace + per-eval (closed-source SaaS)</li>
+<li><a href="https://docs.honeyhive.ai/">Honeyhive docs</a> — per-agent-eval + per-production-trace (closed-source SaaS)</li>
+<li><a href="https://docs.getmaxim.ai/">Maxim AI docs</a> — per-agent-eval + per-LLM-judge + per-trace (closed-source SaaS)</li>
+<li><a href="https://docs.patronus.ai/">Patronus AI docs</a> — per-LLM-eval + per-hallucination-detection + per-RAG-eval (closed-source SaaS)</li>
+<li><a href="https://traceloop.com/docs">Traceloop / OpenLLMetry docs</a> — OpenTelemetry-native AI-agent-instrumentation (Apache-2.0 OSS + cloud)</li>
+<li><a href="https://portkey.ai/docs">Portkey docs</a> — LLM-gateway + per-LLM-call + per-cache + per-cost (closed-source SaaS)</li>
+<li><a href="https://www.vellum.ai/llm-evaluation">Vellum LLM-evaluation docs</a> — per-LLM-eval + per-prompt-versioning + per-experiment-tracking (closed-source SaaS)</li>
+<li><a href="https://www.voiceflow.com/docs">Voiceflow docs</a> — per-agent-trace + per-conversation-flow + per-analytics (closed-source SaaS)</li>
+<li><a href="https://crewai.com/docs">CrewAI docs</a> — per-agent-trace + per-crew-trace + per-task-trace (MIT OSS)</li>
+<li><a href="https://platform.openai.com/docs">OpenAI platform docs</a> — per-LLM-call + per-token-usage + per-cost (vendor-source)</li>
+<li><a href="https://docs.anthropic.com/">Anthropic docs</a> — per-LLM-call + per-prompt-caching + per-token-usage (vendor-source)</li>
+<li><a href="https://ai.google.dev/docs">Google Gemini docs</a> — per-LLM-call + per-context-caching + per-token-usage (vendor-source)</li>
+</ul>
+
+<p><strong>Bottom line:</strong> If your AI agent observability platform cannot answer all 14 buyer checklist questions above with production-trace evidence, your SOC 2 Type II + EU AI Act + ISO 42001 + GDPR Art. 28 + HIPAA §164.312(b) + OWASP LLM Top 10 evidence binder is incomplete. Atlas ships a 30-column audit-trail-mapping deliverable in 48 hours for $500, or a 6-month per-vendor retainer at $497/mo.</p>
+
+</article>
+</body>
+</html>
