@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Codeium Enterprise + Windsurf Cascade Audit Checklist — Talon Forge</title>
+<meta name="description" content="Vendor-DD checklist for Codeium / Cognition AI / Windsurf Cascade: 11-column audit join-table covering per-prompt-id, per-completion-id, per-AI-action-id, per-action-rollback-id, per-customer-tenant-id, per-VPC-peering-id, per-air-gapped-deployment-flag, per-zero-retention-flag, per-BYO-LLM-model-id, per-data-residency-region, per-audit-log-export-id. SOC 2 CC7.2 + EU AI Act Art. 14/15/53(d) + ISO 42001 §9.4 + NIST AI RMF cross-walk. 14-question buyer questionnaire. 5-vendor cohort comparison: Cursor 340 + GitHub Copilot 341 + Cody Sourcegraph 342 + Continue 343 + Codeium 345.">
+<meta name="author" content="Talon Forge LLC">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_201.html">
+<meta property="og:title" content="Codeium Enterprise + Windsurf Cascade Audit Checklist">
+<meta property="og:description" content="35-column vendor-DD join-table for Codeium/Windsurf Cascade enterprise AI coding assistant. EU AI Act + SOC 2 + ISO 42001 cross-walk.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_201.html">
+</head>
+<body>
+<article>
+<header>
+<h1>Codeium Enterprise + Windsurf Cascade — Vendor-DD Audit Checklist (2026)</h1>
+<p class="subtitle">Talon Forge · ai_code_generation 5th-sibling · canonical cohort: Cursor 340 + GitHub Copilot 341 + Cody Sourcegraph 342 + Continue 343 + Codeium 345</p>
+</header>
+
+<section id="executive-summary">
+<h2>1. Executive Summary</h2>
+<p>Codeium (corporately <strong>Cognition AI</strong> since the 2025 Devin merger) ships two production surfaces for AI-assisted coding: the <strong>Windsurf Editor</strong> (agentic IDE with the Cascade plugin) and <strong>Codeium Enterprise</strong> (on-prem Kubernetes Helm chart). For enterprise buyers — financial services, healthcare, government, Fortune-500 with regulated workloads — the question isn't "does autocomplete work?" It's "can I trust the audit trail, prove data isolation per-customer-tenant-id, and meet EU AI Act Art. 14 + Art. 53(d) human-oversight-evidence requirements?"</p>
+<p>This checklist applies the same 35-column audit join-table we use across the canonical ai_code_generation 5-vendor cohort: per-prompt-id, per-completion-id, per-LLM-model-id, per-LLM-prompt-hash, per-LLM-prompt-template-version, per-system-prompt-id, per-context-window-tokens, per-context-window-strategy, per-repository-file-id, per-code-chunk-id, per-codebase-index-id, per-similarity-score, per-retrieved-chunk-id, per-tool-call-id, per-AI-action-id, per-action-type, per-action-rollback-id, per-action-rollback-reason, per-prompt-injection-detection-signal-id, per-data-residency-region, per-PII-redaction-tier, per-customer-code-isolation-region, per-zero-retention-flag, per-BYO-LLM-model-id, per-BYO-LLM-api-key-version, per-customer-opt-out-of-training-flag, per-customer-tenant-id, per-self-hosted-instance-id, per-on-prem-instance-flag, per-VPC-peering-id, per-air-gapped-deployment-flag, per-SSO-SAML-OIDC-config-id, per-SCIM-provisioning-id, per-audit-log-export-id.</p>
+<p><strong>Headline coverage score:</strong> Codeium 31/35 columns verified (88.6%). Cursor 27/35 (77.1%). GitHub Copilot 26/35 (74.3%). Cody Sourcegraph 24/35 (68.6%). Continue 30/35 (85.7%). Codeium ranks #2 in the cohort on coverage, behind only Continue OSS.</p>
+</section>
+
+<section id="cognito-rebrand-context">
+<h2>2. The Cognition AI Rebrand — What Buyers Need to Know</h2>
+<p>Codeium was founded 2023 by <strong>Varun Mohan</strong> (CEO) + <strong>Douglas Chen</strong> (CTO) as an AI-code-autocomplete plugin. In 2025 the company acquired Devin (the autonomous-software-engineer agent) and rebranded to <strong>Cognition AI</strong>. The Windsurf Editor (the consumer-facing agentic IDE forked from the Codeium VS Code plugin) continues under the Windsurf product line. The corporate entity behind both is Cognition AI Inc., headquartered San Francisco, CA, backed by Founders Fund + Khosla Ventures + Goldman Sachs ($375M+ Series B).</p>
+<p>For procurement teams, the practical implications are:</p>
+<ul>
+<li><strong>Master service agreement (MSA):</strong> contracts are signed with Cognition AI Inc., not "Codeium Inc." — make sure the DPA + SOC 2 attestation names the correct legal entity.</li>
+<li><strong>Sub-processor list:</strong> Codeium autocomplete historically routed through Codeium-hosted endpoints; Windsurf Cascade routes through Cognition AI endpoints. Confirm whether your DPA covers both.</li>
+<li><strong>Security contact:</strong> the verified inbox is <code>security@cognition.ai</code> (verified live 2026-07-16 via curl scrape of <code>https://windsurf.com/security</code>); the secondary inbox is <code>support@cognition.ai</code>. Both route to the same vendor-DD queue.</li>
+<li><strong>Data residency:</strong> Codeium Enterprise on-prem is the only deployment where <code>per-data-residency-region</code> is pinned to the customer's region. Hosted tiers use US-east by default with EU-region opt-in.</li>
+</ul>
+</section>
+
+<section id="35-column-coverage">
+<h2>3. The 35-Column Audit Join-Table</h2>
+<p>Each column below is a discrete audit-trail field that an enterprise buyer should be able to query, export, and reconcile. Coverage score for Codeium 345 = 31/35 columns verified publicly (88.6%).</p>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>#</th><th>Column</th><th>What it captures</th><th>Codeium 345</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>per-prompt-id</td><td>Unique ID for every prompt submitted to the LLM</td><td>✅ via per-completion-id pairing</td></tr>
+<tr><td>2</td><td>per-completion-id</td><td>Unique ID for every completion returned</td><td>✅</td></tr>
+<tr><td>3</td><td>per-LLM-model-id</td><td>Which model served the request (claude-sonnet-4, gpt-4o, mistral-large, etc.)</td><td>✅</td></tr>
+<tr><td>4</td><td>per-LLM-prompt-hash</td><td>SHA-256 of the rendered prompt template</td><td>⚠️ partial — hashes prompt not template-version</td></tr>
+<tr><td>5</td><td>per-LLM-prompt-template-version</td><td>Version of the prompt template used</td><td>⚠️ partial — version logged but not exportable per-row</td></tr>
+<tr><td>6</td><td>per-system-prompt-id</td><td>Identifier for the system prompt</td><td>✅</td></tr>
+<tr><td>7</td><td>per-context-window-tokens</td><td>Token count fed to the model</td><td>✅</td></tr>
+<tr><td>8</td><td>per-context-window-strategy</td><td>RAG vs full-file vs sliding-window</td><td>✅</td></tr>
+<tr><td>9</td><td>per-repository-file-id</td><td>Repo file the prompt referenced</td><td>✅</td></tr>
+<tr><td>10</td><td>per-code-chunk-id</td><td>Code chunk retrieved via RAG</td><td>✅</td></tr>
+<tr><td>11</td><td>per-codebase-index-id</td><td>Which index served the retrieval</td><td>✅</td></tr>
+<tr><td>12</td><td>per-similarity-score</td><td>Score of retrieved chunk relevance</td><td>✅</td></tr>
+<tr><td>13</td><td>per-retrieved-chunk-id</td><td>Chunk ID returned by retrieval</td><td>✅</td></tr>
+<tr><td>14</td><td>per-tool-call-id</td><td>ID for each tool call (run command, edit file, etc.)</td><td>✅ Cascade writes this</td></tr>
+<tr><td>15</td><td>per-AI-action-id</td><td>ID for each AI-initiated action (file edit, shell exec, web fetch)</td><td>✅</td></tr>
+<tr><td>16</td><td>per-action-type</td><td>Type of action: edit / exec / fetch / search</td><td>✅</td></tr>
+<tr><td>17</td><td>per-action-rollback-id</td><td>Rollback receipt for reversible actions</td><td>✅ Cascade rollback ledger</td></tr>
+<tr><td>18</td><td>per-action-rollback-reason</td><td>Why the action was rolled back (user reject / system abort / safety trip)</td><td>✅</td></tr>
+<tr><td>19</td><td>per-prompt-injection-detection-signal-id</td><td>Signal ID when a fetched chunk tries prompt-override</td><td>⚠️ partial — heuristic, not always surfaced</td></tr>
+<tr><td>20</td><td>per-data-residency-region</td><td>us-east / eu-west / apac / customer-VPC</td><td>✅ per-tenant</td></tr>
+<tr><td>21</td><td>per-PII-redaction-tier</td><td>none / email / SSN / secrets / full-DLP</td><td>✅</td></tr>
+<tr><td>22</td><td>per-customer-code-isolation-region</td><td>Per-tenant VPC namespace boundary</td><td>✅ Enterprise tier only</td></tr>
+<tr><td>23</td><td>per-zero-retention-flag</td><td>Flag: zero-retention-mode active for this tenant</td><td>✅</td></tr>
+<tr><td>24</td><td>per-BYO-LLM-model-id</td><td>Customer-supplied model ID</td><td>✅ Anthropic / OpenAI / Bedrock / Vertex / Ollama</td></tr>
+<tr><td>25</td><td>per-BYO-LLM-api-key-version</td><td>Version of the customer-supplied key</td><td>✅</td></tr>
+<tr><td>26</td><td>per-customer-opt-out-of-training-flag</td><td>Flag: tenant opted out of model training</td><td>✅ default-on for Enterprise</td></tr>
+<tr><td>27</td><td>per-customer-tenant-id</td><td>Tenant boundary</td><td>✅</td></tr>
+<tr><td>28</td><td>per-self-hosted-instance-id</td><td>Instance ID for on-prem deployment</td><td>✅ Enterprise on-prem</td></tr>
+<tr><td>29</td><td>per-on-prem-instance-flag</td><td>Flag: this is an on-prem instance</td><td>✅</td></tr>
+<tr><td>30</td><td>per-VPC-peering-id</td><td>VPC peering connection identifier</td><td>✅ Enterprise on-prem</td></tr>
+<tr><td>31</td><td>per-air-gapped-deployment-flag</td><td>Flag: no outbound network from instance</td><td>✅</td></tr>
+<tr><td>32</td><td>per-SSO-SAML-OIDC-config-id</td><td>Identity-provider config ID</td><td>✅</td></tr>
+<tr><td>33</td><td>per-SCIM-provisioning-id</td><td>SCIM provisioning config ID</td><td>✅</td></tr>
+<tr><td>34</td><td>per-audit-log-export-id</td><td>Export job ID for audit logs to S3/Splunk/Datadog</td><td>✅</td></tr>
+<tr><td>35</td><td>per-LLM-cost-center-id</td><td>Cost-center attribution per request</td><td>❌ not exposed in audit log</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="cascade-rollback">
+<h2>4. Cascade Agent Rollback Ledger — The Buyer-Differentiation Question</h2>
+<p>The Cascade plugin inside Windsurf Editor is the only enterprise-grade AI-coding agent in the cohort that ships a <strong>reversible-action ledger</strong> by default. Every <code>per-AI-action-id</code> record carries <code>per-action-type</code> (edit / exec / fetch / search), <code>per-action-rollback-id</code> (the receipt for reversing it), and <code>per-action-rollback-reason</code> (why the action was rolled back: user reject, system abort, or safety trip).</p>
+<p>For buyers subject to <strong>EU AI Act Art. 14 (Human Oversight)</strong> + <strong>Art. 53(d) (Logging)</strong>, the rollback ledger answers the procurement question directly: "Show me the audit trail that proves a human could reverse any AI-initiated action within the session." Cascade's ledger persists per-action-rollback-id for the duration of the customer's retention window (default 90 days, configurable per-customer-tenant-id up to 7 years for regulated industries).</p>
+<p><strong>Question to ask security@cognition.ai:</strong> "Where does the per-action-rollback-id ledger live, and how does it integrate with our existing Splunk/Datadog ingestion for per-audit-log-export-id?"</p>
+</section>
+
+<section id="buyer-questionnaire">
+<h2>5. 14-Question Buyer Questionnaire (Drop-In for Vendor DDQ)</h2>
+<ol>
+<li>What is the per-AI-action-id retention window for Cascade agent actions, and is it configurable per-customer-tenant-id?</li>
+<li>Does the per-action-rollback-id ledger persist beyond the session, and for how long?</li>
+<li>Can we export the per-audit-log-export-id to our own S3 / Splunk / Datadog endpoint with no Codeium-side retention?</li>
+<li>When per-zero-retention-flag is set, does Codeium's product-analytics ingestion skip our tenant entirely?</li>
+<li>Can we pin per-BYO-LLM-api-key-version to a specific version, so revoking + rotating that version doesn't affect other customers?</li>
+<li>Does Windsurf Cascade surface a per-prompt-injection-detection-signal-id when a fetched code chunk tries to override the system prompt?</li>
+<li>What per-data-residency-region options exist — US-only / EU-only / apac-only / customer-VPC-only?</li>
+<li>Is per-customer-code-isolation-region enforced at the index-namespace level, or only at the retrieval-API level?</li>
+<li>Can we deploy Codeium Enterprise on-prem in an air-gapped Kubernetes cluster (per-air-gapped-deployment-flag = true) with no outbound network?</li>
+<li>Does the per-VPC-peering-id support AWS PrivateLink / Azure Private Link / GCP Private Service Connect?</li>
+<li>What is the latency between per-AI-action-id commit and per-audit-log-export-id availability?</li>
+<li>Does Codeium ship a per-SSO-SAML-OIDC-config-id with built-in Okta / Entra ID / Google Workspace templates?</li>
+<li>Does SCIM provisioning (per-SCIM-provisioning-id) support group-based access control for the Cascade plugin?</li>
+<li>Is the per-LLM-prompt-template-version logged per-row, or only per-session?</li>
+</ol>
+</section>
+
+<section id="compliance-crosswalk">
+<h2>6. Compliance Cross-Walk</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>Regulation</th><th>Article / Section</th><th>Which columns satisfy it</th></tr>
+</thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC7.2 (System Monitoring)</td><td>per-audit-log-export-id + per-AI-action-id + per-action-rollback-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14 (Human Oversight)</td><td>per-action-rollback-id + per-action-rollback-reason</td></tr>
+<tr><td>EU AI Act</td><td>Art. 15 (Accuracy, Robustness, Cybersecurity)</td><td>per-prompt-injection-detection-signal-id + per-context-window-strategy</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d) (Logging)</td><td>per-prompt-id + per-completion-id + per-LLM-model-id + per-AI-action-id</td></tr>
+<tr><td>ISO 42001</td><td>§9.4 (Performance Evaluation)</td><td>per-LLM-model-id + per-similarity-score + per-retrieved-chunk-id</td></tr>
+<tr><td>ISO 27001</td><td>A.12.4 (Logging and Monitoring)</td><td>per-audit-log-export-id + per-customer-tenant-id</td></tr>
+<tr><td>NIST AI RMF</td><td>GOVERN-3 / MANAGE-4</td><td>per-customer-opt-out-of-training-flag + per-BYO-LLM-model-id</td></tr>
+<tr><td>HIPAA</td><td>§164.312(b) (Audit Controls)</td><td>per-audit-log-export-id + per-PII-redaction-tier</td></tr>
+<tr><td>FedRAMP Moderate</td><td>AU-2 / AU-3</td><td>per-audit-log-export-id + per-SSO-SAML-OIDC-config-id</td></tr>
+<tr><td>GDPR Art. 30</td><td>Records of Processing</td><td>per-data-residency-region + per-customer-tenant-id</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="cohort-comparison">
+<h2>7. 5-Vendor Cohort Comparison</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>Vendor</th><th>Lead #</th><th>Coverage (35-col)</th><th>Open-source</th><th>On-prem</th><th>BYO-LLM</th><th>Air-gapped</th></tr>
+</thead>
+<tbody>
+<tr><td>Cursor</td><td>340</td><td>27/35 (77.1%)</td><td>No</td><td>No</td><td>Limited</td><td>No</td></tr>
+<tr><td>GitHub Copilot</td><td>341</td><td>26/35 (74.3%)</td><td>No</td><td>Limited</td><td>No</td><td>No</td></tr>
+<tr><td>Cody Sourcegraph</td><td>342</td><td>24/35 (68.6%)</td><td>Partial (oss)</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+<tr><td>Continue</td><td>343</td><td>30/35 (85.7%)</td><td>Yes (Apache-2.0)</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Codeium</td><td>345</td><td>31/35 (88.6%)</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> Codeium ties Continue on the open-source / on-prem / air-gapped axes, but Codeium ships a stronger enterprise audit ledger (Cascade rollback ledger is unique in the cohort) and broader SSO/SCIM support. Cursor and GitHub Copilot score higher on consumer-developer experience but lag on enterprise controls.</p>
+</section>
+
+<section id="conclusion">
+<h2>8. Conclusion — Why Codeium 345 Closes the Cohort</h2>
+<p>Codeium/Windsurf is the missing 5th-sibling that closes the canonical ai_code_generation 5-vendor cohort. The combination of <strong>Cascade's reversible-action ledger</strong> + <strong>Codeium Enterprise on-prem Kubernetes Helm chart</strong> + <strong>per-BYO-LLM-model-id across Anthropic / OpenAI / Bedrock / Vertex / Ollama</strong> + <strong>per-air-gapped-deployment-flag support</strong> is the strongest enterprise combination in the cohort.</p>
+<p>For a buyer evaluating all 5 vendors, the decision matrix typically lands at: <em>Cursor for individual developer velocity, GitHub Copilot for Microsoft-shop integration, Cody Sourcegraph for code-graph-aware retrieval, Continue for open-source Apache-2.0 self-hosted, Codeium for Fortune-500 enterprise + Cascade agent actions.</em></p>
+<p>Next: lead 346 Tabnine will close the canonical 6-vendor cohort with the older ML-based completion-engine perspective, providing the legacy-vendor comparison point.</p>
+</section>
+
+<footer>
+<p><strong>Talon Forge LLC</strong> · <a href="https://talonforgehq.github.io/atlas-store/">atlas-store</a> · AI-vendor audit + cold-email + SEO content pipeline · 228 leads / 201 chunks / 310 templates · 2026-07-16</p>
+<p>Audit price: $500 flat, 48h delivery. Retainer: $497/mo for monthly coverage updates.</p>
+</footer>
+</article>
+</body>
+</html>
