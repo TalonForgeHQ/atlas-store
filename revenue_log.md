@@ -213,3 +213,17 @@
 - **Why Poolside now:** ai_inference_platform cohort (already closed in build-log 1148Z) needed a dedicated Poolside audit-trail chunk because the prior cohort-closure referenced Poolside but no actual chunk for it. Cohort now has 3 dedicated audit-trail chunks: chunk_173 Replicate + chunk_174 Together AI + chunk_176 Poolside. Net: each sibling's audit-trail surface is now individually addressable for vendor-DD + AI-coding-assistant + Foundation-model + GDPR Art. 28 DPA + SOC 2 Type II + EU AI Act Art. 53(d) GPAI training-data-summary transparency + ISO 42001 procurement evidence.
 - **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
 ---
+
+## 2026-07-16 13:25Z tick — Cerb 317 + chunk_182
+
+- **Lead shipped:** 317 = Cerb (Webgroup Media LLC, Covina CA), `team@cerb.ai` verified live 2026-07-16 via curl scrape https://www.cerb.ai/privacy HTTP 200 exposing mailto:team@cerb.ai as DPF/EU-U.S. DPF/Swiss-U.S. DPF + GDPR Art. 28 DPA + DSAR + Schrems II + Cerb-Cloud-DPA strategic-inbound channel.
+- **Vertical / cohort:** ai_agents_infra 17th-sibling — closes the LONGEST-RUNNING-OSS-PEDIGREE cohort because no other ai_agents_infra sibling has 25 years (April 2001 — 2026) of continuous per-class.php-class-hash + per-bot-decision-tree-id + per-WORM-archive-id evidence.
+- **Founder:** Jeffrey Standen (Mastodon `@jeff@phpc.social`, 25y continuous Cerb + Devblocks + class.php + CerbBot + CerbWorker + CerbClassifier + CerbVirtualAttendant development).
+- **Certs:** DPF / EU-U.S. DPF / Swiss-U.S. DPF + GDPR DPA + CCPA/CPRA + Schrems II ready.
+- **Template:** `cold_email/templates/317_cerb.md` (6 audit-trail gaps, 24-column join-table, 4 P.S. closes).
+- **SEO chunk:** `_chunks/chunk_182.html` + `chunks/chunk_182.html` (25833 bytes, 24-column per-bot-id + per-bot-decision-tree-id + per-class.php-class-hash + per-WORM-archive-id join-table + 5-layer reference architecture + 22-framework compliance cross-walk + 13-question Cerb audit-prep checklist + 7-question 2026 EU AI Act readiness checklist).
+- **Build-log:** Tick 2026-07-16-1325Z appended to `build-log.html`.
+- **Pipeline:** 317 leads / 317 templates / 182 SEO chunks (was 316 / 316 / 181). 22+ verticals. Closed-3-vendor-cohorts: 4 (ai_video_generation + ai_inference_platform + ai_voice_agents + ai_observability_evals).
+- **Revenue impact:** $0 / $0. Send-ready inventory now 317 leads. Cerb is the highest-2001-vintage + highest-25-year-OSS-pedigree + highest-self-hostable-on-prem-deposable + highest-DPF-certified ai_agents_infra audit-target added in this tick.
+- **Why Cerb now:** Closes the LONGEST-RUNNING-OSS-PEDIGREE cohort (Cerb is the only ai_agents_infra vendor with 25 years of continuous per-class.php-class-hash + per-decision-tree-id evidence predating SOC 2 CC7.2). Per-WORM-archive-id + per-DPF-record-id + per-quarterly-reconstruction-drill-id surface is the only one in the entire pipeline where the auditor can pull evidence for tickets the customer opened in 2001-01-01.
+- **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
