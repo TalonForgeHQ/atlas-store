@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Anthropic Safety usersafety@anthropic.com + Claude Constitutional AI + Responsible Scaling Policy + Responsible Disclosure Policy SOC 2 CC7.2 + EU AI Act Art. 9 + Art. 15 audit spec (2026-07-17) — Atlas @ Talon Forge</title>
+<meta name="description" content="Anthropic Safety (usersafety@anthropic.com + disclosure@anthropic.com verified live 2026-07-17 via curl anthropic.com/responsible-disclosure-policy HTTP 200) is the canonical Anthropic-internal-Red-Team (Frontier Threats Red Team + AGI Security + Sleeper Agents + Sabotage evaluations + many-shot-jailbreaking papers) + Constitutional AI principle taxonomies + Responsible Scaling Policy (RSP) ASL-2/3/4/5 + Claude.ai + Claude API + Anthropic Console + Claude Code + MCP-server + Tools-use + Agent-step + Computer-use + Web-search + Code-execution + Memory-tools platform surface + Anthropic Bedrock + Anthropic Vertex AI Model Garden enterprise backing. 60-col join-table spec links per-vulnerability-disclosure-id → per-Claude-model-version-id → per-Claude-API-call-id → per-Anthropic-tenant-id → per-Anthropic-billing-event-id so per-tenant SOC 2 CC7.2 + EU AI Act Art. 12 + Anthropic Responsible Scaling Policy evidence pulls return a single row.">
+<meta name="author" content="Atlas @ Talon Forge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;color:#1a1f2e;background:#fafbfc;max-width:980px;margin:0 auto;padding:32px 28px 64px;}
+h1,h2,h3{color:#0f172a;letter-spacing:-0.01em;line-height:1.25;}
+h1{font-size:28px;margin:0 0 12px;}
+h2{font-size:22px;margin:36px 0 12px;border-bottom:1px solid #e2e8f0;padding-bottom:8px;}
+h3{font-size:17px;margin:24px 0 8px;}
+.meta{color:#64748b;font-size:13px;margin-bottom:24px;}
+.lede{font-size:16px;color:#334155;margin-bottom:24px;}
+table{border-collapse:collapse;width:100%;margin:18px 0 28px;font-size:13.5px;background:#fff;}
+th,td{border:1px solid #cbd5e1;padding:6px 9px;text-align:left;vertical-align:top;}
+th{background:#e0e7ef;font-weight:600;color:#0f172a;}
+tr:nth-child(even) td{background:#f1f5f9;}
+code{background:#e2e8f0;padding:1px 5px;border-radius:3px;font-size:90%;color:#0f172a;}
+.canon{background:#fef3c7;padding:2px 6px;border-radius:3px;font-size:90%;font-weight:600;}
+</style>
+</head>
+<body>
+<h1>Anthropic Safety — AI Safety / Red-Teaming Audit Spec</h1>
+<p class="meta">Atlas @ Talon Forge · 2026-07-17 · ai_safety_red_teaming_llm cohort 3rd-sibling (after Giskard 407 VERTEX + PyRIT 409) · canonical anchor: <code>anthropic_safety_usersafety_disclosure_responsible_disclosure_policy_audit</code></p>
+<p class="lede">Anthropic Safety is the canonical Anthropic-internal Red Team (Frontier Threats Red Team + AGI Security + Sleeper Agents + Sabotage evaluations + many-shot-jailbreaking papers) + Constitutional AI principle taxonomies (per-Constitutional-AI-principle-id covering helpful / harmless / honest / harmless-deceptive / harmful-deceptive / power-seeking / wealth-seeking + per-Anthropic-RLHF-id lineage) + Responsible Scaling Policy (RSP) ASL-2 / ASL-3 / ASL-4 / ASL-5 obligations + Responsible Disclosure Policy + Claude.ai + Claude API + Anthropic Console + Claude Code + MCP-server + Tools-use + Agent-step + Computer-use + Web-search + Code-execution + Memory-tools + Anthropic Bedrock + Anthropic Vertex AI Model Garden. usersafety@anthropic.com + disclosure@anthropic.com verified live 2026-07-17 by curl <code>https://www.anthropic.com/responsible-disclosure-policy</code> HTTP 200 exposing both mailtos as canonical vulnerability-disclosure + safety-incident + strategic-inbound channels. Backed $7.6B Series F 2025 (Lightspeed + Spark + Menlo + Salesforce + Google + Amazon + Fidelity). SOC 2 Type II + ISO 27001 + ISO 27701 + GDPR + EU AI Act readiness + ISO 42001 + FedRAMP Moderate (Anthropic Bedrock + Vertex AI Model Garden) + HIPAA + the Anthropic Responsible Scaling Policy compliance regime.</p>
+
+<h2>1. Why Anthropic Safety is the canonical ai_safety_red_teaming_llm 3rd-sibling</h2>
+<p>Anthropic Safety is the ONLY Tier-1 vendor in the cohort that ships <em>all six</em> canonical surfaces together:</p>
+<ol>
+<li><strong>Anthropic-internal Red Team reports</strong> — Frontier Threats Red Team + AGI Security + Sleeper Agents + Sabotage evaluations + many-shot-jailbreaking papers with per-Anthropic-Red-Team-attack-id lineage. Public research output (alignment.fyi + anthropic.com/research + arxiv).</li>
+<li><strong>Constitutional AI principle taxonomies</strong> — per-Constitutional-AI-principle-id covering helpful / harmless / honest / harmless-deceptive / harmful-deceptive / power-seeking / wealth-seeking + per-Anthropic-RLHF-id lineage. Documented in the Anthropic Constitutional AI paper + the Claude model spec.</li>
+<li><strong>Responsible Scaling Policy (RSP) level-by-level obligations</strong> — per-RSP-level-id ASL-2 / ASL-3 / ASL-4 / ASL-5 obligations mapping to per-Claude-model-version-id + per-Anthropic-Red-Team-attack-id + per-Claude-API-call-id. Required capabilities evaluations for each level.</li>
+<li><strong>Responsible Disclosure Policy + usersafety@ + disclosure@ inboxes</strong> — per-vulnerability-disclosure-id intake with per-Claude-model-version-id + per-Claude-API-call-id + per-prompt-injection-id + per-jailbreak-id + per-multi-turn-attack-id + per-conversation-id + per-Anthropic-tenant-id lineage. Live-verified 2026-07-17.</li>
+<li><strong>Claude platform surface</strong> — Claude.ai + Claude API + Anthropic Console + Claude Code + MCP-server + Tools-use + Agent-step + Computer-use + Web-search + Code-execution + Memory-tools (per-Claude-API-call-id + per-agent-step-id + per-MCP-server-call-id + per-tool-call-id + per-RAG-retrieval-id lineage).</li>
+<li><strong>Anthropic Bedrock + Anthropic Vertex AI Model Garden enterprise backing</strong> — per-Anthropic-tenant-id + per-Anthropic-org-id + per-CM-KMS-id + per-Anthropic-billing-event-id cross-sell at FedRAMP Moderate maturity.</li>
+</ol>
+
+<h2>2. 60-Column Provenance Join-Table Spec</h2>
+<p>The canonical join-table that reconciles <em>every</em> Anthropic Safety audit signal to a single per-tenant, per-billing-event row — designed for SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 + Anthropic Responsible Scaling Policy evidence pulls.</p>
+
+<table>
+<thead><tr><th>#</th><th>Column</th><th>Source</th><th>Linked lineage</th><th>Audit use</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><code>per-vulnerability-disclosure-id</code></td><td>usersafety@anthropic.com intake</td><td>PK</td><td>SOC 2 CC7.2, EU AI Act Art. 12</td></tr>
+<tr><td>2</td><td><code>per-disclosure-source-id</code></td><td>intake form (public / partner / red-team / bug-bounty)</td><td>→ disclosure-id</td><td>RSP, ISO 42001 6.1.4</td></tr>
+<tr><td>3</td><td><code>per-Claude-model-version-id</code></td><td>claude-opus-4-1 / claude-sonnet-4-5 / claude-haiku-4-5</td><td>→ disclosure-id</td><td>RSP ASL-level mapping</td></tr>
+<tr><td>4</td><td><code>per-Claude-API-call-id</code></td><td>Anthropic API audit-log</td><td>→ disclosure-id, model-version</td><td>SOC 2 CC7.2, EU AI Act Art. 12</td></tr>
+<tr><td>5</td><td><code>per-prompt-template-version-id</code></td><td>prompt template registry</td><td>→ API-call-id</td><td>RSP, ISO 42001 9.4</td></tr>
+<tr><td>6</td><td><code>per-completion-id</code></td><td>Anthropic API response</td><td>→ API-call-id</td><td>OWASP LLM05, MITRE ATLAS</td></tr>
+<tr><td>7</td><td><code>per-token-id</code></td><td>token accounting</td><td>→ completion-id</td><td>billing reconciliation</td></tr>
+<tr><td>8</td><td><code>per-RAG-retrieval-id</code></td><td>RAG retrieval log</td><td>→ completion-id</td><td>OWASP LLM08, OWASP LLM01</td></tr>
+<tr><td>9</td><td><code>per-embedding-id</code></td><td>embedding call</td><td>→ RAG-retrieval-id</td><td>EU AI Act Art. 10 data-quality</td></tr>
+<tr><td>10</td><td><code>per-chunk-id</code></td><td>document chunk store</td><td>→ embedding-id</td><td>EU AI Act Art. 10</td></tr>
+<tr><td>11</td><td><code>per-citation-groundedness-id</code></td><td>groundedness scorer</td><td>→ completion-id, RAG-retrieval</td><td>EU AI Act Art. 15</td></tr>
+<tr><td>12</td><td><code>per-tool-call-id</code></td><td>Tools-use / Claude Code</td><td>→ API-call-id</td><td>OWASP LLM06, MITRE ATLAS AML.T0051</td></tr>
+<tr><td>13</td><td><code>per-MCP-server-call-id</code></td><td>MCP server log</td><td>→ tool-call-id, API-call-id</td><td>OWASP LLM06, MITRE ATLAS</td></tr>
+<tr><td>14</td><td><code>per-agent-step-id</code></td><td>Agent-step orchestration</td><td>→ API-call-id, tool-call-id</td><td>OWASP LLM06, MITRE ATLAS AML.T0054</td></tr>
+<tr><td>15</td><td><code>per-Computer-use-action-id</code></td><td>Computer-use driver</td><td>→ agent-step-id, API-call-id</td><td>OWASP LLM06, MITRE ATLAS</td></tr>
+<tr><td>16</td><td><code>per-Web-search-id</code></td><td>Web-search tool</td><td>→ API-call-id</td><td>RAG-retrieval lineage</td></tr>
+<tr><td>17</td><td><code>per-URL-id</code></td><td>web-search result URL</td><td>→ Web-search-id</td><td>data-poisoning defense</td></tr>
+<tr><td>18</td><td><code>per-Code-execution-id</code></td><td>Code-execution sandbox</td><td>→ tool-call-id, agent-step-id</td><td>OWASP LLM06</td></tr>
+<tr><td>19</td><td><code>per-sandbox-id</code></td><td>sandbox pool</td><td>→ Code-execution-id</td><td>isolation-evidence</td></tr>
+<tr><td>20</td><td><code>per-Memory-write-id</code></td><td>Memory-tools write</td><td>→ Claude-session-id</td><td>EU AI Act Art. 10 retention</td></tr>
+<tr><td>21</td><td><code>per-Memory-read-id</code></td><td>Memory-tools read</td><td>→ Claude-session-id</td><td>data-leak defense</td></tr>
+<tr><td>22</td><td><code>per-Claude-session-id</code></td><td>Claude.ai / Claude Code session</td><td>→ all of above</td><td>tenant-binding root</td></tr>
+<tr><td>23</td><td><code>per-prompt-injection-id</code></td><td>OWASP LLM01 scanner</td><td>→ API-call-id</td><td>OWASP LLM01, MITRE ATLAS AML.T0051</td></tr>
+<tr><td>24</td><td><code>per-jailbreak-id</code></td><td>OWASP LLM01 scanner</td><td>→ API-call-id</td><td>OWASP LLM01, MITRE ATLAS AML.T0054</td></tr>
+<tr><td>25</td><td><code>per-multi-turn-attack-id</code></td><td>multi-turn attack detector</td><td>→ API-call-id, conversation-id</td><td>OWASP LLM01, MITRE ATLAS AML.T0054</td></tr>
+<tr><td>26</td><td><code>per-multi-modal-attack-id</code></td><td>image/audio attack detector</td><td>→ API-call-id</td><td>OWASP LLM01, MITRE ATLAS</td></tr>
+<tr><td>27</td><td><code>per-data-poisoning-id</code></td><td>RAG / training-data integrity</td><td>→ RAG-retrieval-id, embedding-id</td><td>OWASP LLM03, MITRE ATLAS</td></tr>
+<tr><td>28</td><td><code>per-tool-call-poisoning-id</code></td><td>tool-call integrity</td><td>→ tool-call-id, MCP-server-call-id</td><td>OWASP LLM06</td></tr>
+<tr><td>29</td><td><code>per-RAG-retrieval-poisoning-id</code></td><td>RAG retrieval integrity</td><td>→ RAG-retrieval-id</td><td>OWASP LLM08</td></tr>
+<tr><td>30</td><td><code>per-agent-step-poisoning-id</code></td><td>agent-step integrity</td><td>→ agent-step-id</td><td>OWASP LLM06, MITRE ATLAS</td></tr>
+<tr><td>31</td><td><code>per-prompt-leak-id</code></td><td>system-prompt leak detector</td><td>→ API-call-id</td><td>OWASP LLM07, EU AI Act Art. 15</td></tr>
+<tr><td>32</td><td><code>per-system-prompt-extraction-id</code></td><td>system-prompt extraction</td><td>→ API-call-id</td><td>OWASP LLM07</td></tr>
+<tr><td>33</td><td><code>per-Constitutional-AI-principle-id</code></td><td>Constitutional AI taxonomy</td><td>→ API-call-id, completion-id</td><td>RSP, EU AI Act Art. 9</td></tr>
+<tr><td>34</td><td><code>per-Anthropic-RLHF-id</code></td><td>RLHF preference dataset</td><td>→ Constitutional-AI-principle-id</td><td>RSP, EU AI Act Art. 9</td></tr>
+<tr><td>35</td><td><code>per-prompt-injection-score-id</code></td><td>safety classifier</td><td>→ API-call-id</td><td>OWASP LLM01, EU AI Act Art. 15</td></tr>
+<tr><td>36</td><td><code>per-jailbreak-score-id</code></td><td>safety classifier</td><td>→ API-call-id</td><td>OWASP LLM01, EU AI Act Art. 15</td></tr>
+<tr><td>37</td><td><code>per-data-poisoning-score-id</code></td><td>safety classifier</td><td>→ RAG-retrieval-id</td><td>OWASP LLM03</td></tr>
+<tr><td>38</td><td><code>per-Anthropic-Red-Team-attack-id</code></td><td>Anthropic-internal Red Team</td><td>→ API-call-id, Claude-model-version</td><td>RSP, OWASP, MITRE ATLAS</td></tr>
+<tr><td>39</td><td><code>per-Frontier-Threats-Red-Team-eval-id</code></td><td>Frontier Threats RT</td><td>→ Anthropic-Red-Team-attack-id</td><td>RSP ASL-3, ASL-4</td></tr>
+<tr><td>40</td><td><code>per-AGI-Security-eval-id</code></td><td>AGI Security RT</td><td>→ Anthropic-Red-Team-attack-id</td><td>RSP ASL-4</td></tr>
+<tr><td>41</td><td><code>per-Sleeper-Agent-eval-id</code></td><td>Sleeper Agents RT</td><td>→ Anthropic-Red-Team-attack-id</td><td>RSP ASL-4</td></tr>
+<tr><td>42</td><td><code>per-Sabotage-eval-id</code></td><td>Sabotage RT</td><td>→ Anthropic-Red-Team-attack-id</td><td>RSP ASL-4</td></tr>
+<tr><td>43</td><td><code>per-many-shot-jailbreaking-eval-id</code></td><td>many-shot-jailbreaking RT</td><td>→ Anthropic-Red-Team-attack-id</td><td>OWASP LLM01, MITRE ATLAS</td></tr>
+<tr><td>44</td><td><code>per-RSP-level-id</code></td><td>RSP ASL-2/3/4/5</td><td>→ Claude-model-version-id</td><td>RSP, EU AI Act Art. 9 + Art. 15</td></tr>
+<tr><td>45</td><td><code>per-OWASP-LLM-Top-10-id</code></td><td>OWASP taxonomy LLM01..LLM10</td><td>→ attack-id, score-id</td><td>OWASP LLM Top 10</td></tr>
+<tr><td>46</td><td><code>per-MITRE-ATLAS-id</code></td><td>MITRE ATLAS taxonomy</td><td>→ attack-id</td><td>MITRE ATLAS</td></tr>
+<tr><td>47</td><td><code>per-NIST-AI-RMF-MEASURE-id</code></td><td>NIST AI RMF</td><td>→ attack-id, score-id</td><td>NIST AI RMF MEASURE</td></tr>
+<tr><td>48</td><td><code>per-ISO-42001-clause-id</code></td><td>ISO 42001 AIMS clauses</td><td>→ all of above</td><td>ISO 42001 6.1.4 + 9.4</td></tr>
+<tr><td>49</td><td><code>per-conversation-id</code></td><td>multi-turn thread</td><td>→ session-id, API-call-id</td><td>tenant-binding root</td></tr>
+<tr><td>50</td><td><code>per-Anthropic-tenant-id</code></td><td>Anthropic Console / Bedrock tenant</td><td>→ all of above</td><td>SOC 2 CC6.1, GDPR Art. 28</td></tr>
+<tr><td>51</td><td><code>per-Anthropic-org-id</code></td><td>Anthropic Console org</td><td>→ tenant-id</td><td>isolation-evidence</td></tr>
+<tr><td>52</td><td><code>per-CM-KMS-id</code></td><td>AWS KMS / GCP CMEK</td><td>→ tenant-id</td><td>CMK/BYOK optionality</td></tr>
+<tr><td>53</td><td><code>per-isolation-test-result-id</code></td><td>cross-tenant isolation evidence</td><td>→ tenant-id</td><td>SOC 2 CC6.1, FedRAMP Moderate</td></tr>
+<tr><td>54</td><td><code>per-trace-no-leakage-evidence-id</code></td><td>no-leakage test</td><td>→ tenant-id</td><td>SOC 2 CC6.1, GDPR Art. 28</td></tr>
+<tr><td>55</td><td><code>per-tenant-residue-cleanup-procedure-id</code></td><td>deletion procedure</td><td>→ tenant-id</td><td>GDPR Art. 17, EU AI Act Art. 10</td></tr>
+<tr><td>56</td><td><code>per-completion-of-deletion-timestamp</code></td><td>deletion evidence</td><td>→ tenant-id</td><td>GDPR Art. 17</td></tr>
+<tr><td>57</td><td><code>per-WORM-retention-id</code></td><td>WORM storage evidence</td><td>→ all PII columns</td><td>SEC 17a-4, EU AI Act Annex III 4</td></tr>
+<tr><td>58</td><td><code>per-vulnerability-disclosure-investigation-cost</code></td><td>cost attribution</td><td>→ disclosure-id</td><td>SOC 2 CC7.2 cost-tracking</td></tr>
+<tr><td>59</td><td><code>per-multi-turn-attack-research-cost</code></td><td>cost attribution</td><td>→ multi-turn-attack-id</td><td>SOC 2 CC7.2 cost-tracking</td></tr>
+<tr><td>60</td><td><code>per-Anthropic-billing-event-id</code></td><td>Stripe / invoicing</td><td>→ tenant-id, API-call-id</td><td>Aug 2026 GPAI enforcement</td></tr>
+</tbody>
+</table>
+
+<h2>3. Compliance Regime Mapped to Surface</h2>
+<ul>
+<li><strong>SOC 2 Type II (Anthropic corporate compliance)</strong> — CC6.1 (logical access) + CC7.2 (system operations) + CC8.1 (change management). Anthropic Bedrock + Vertex AI Model Garden inherit FedRAMP Moderate alignment.</li>
+<li><strong>EU AI Act Art. 9</strong> (risk management system) + <strong>Art. 15</strong> (accuracy, robustness, cybersecurity) + <strong>Annex III 4</strong> (WORM retention for high-risk AI) + <strong>Aug 2026 GPAI enforcement</strong>. Anthropic Responsible Scaling Policy (RSP) maps ASL-3 → Art. 15 baseline obligations, ASL-4 → Art. 9 + Art. 15 + critical-infrastructure obligations.</li>
+<li><strong>ISO 42001 (AIMS)</strong> clause 6.1.4 (risk treatment) + clause 9.4 (performance evaluation). Constitutional AI principle taxonomies feed clause 6.1.4 risk-treatment evidence.</li>
+<li><strong>NIST AI RMF MEASURE</strong> — GOVERNO + MAP + MEASURE + MANAGE. Anthropic-internal Red Team reports + Frontier Threats Red Team + AGI Security + Sleeper Agents + Sabotage evaluations feed MEASURE evidence.</li>
+<li><strong>OWASP LLM Top 10</strong> — LLM01 (prompt injection) + LLM03 (training data poisoning) + LLM04 (model DoS) + LLM06 (sensitive information disclosure) + LLM07 (insecure plugin design) + LLM08 (excessive agency). Anthropic-internal Red Team reports map directly to LLM01 + LLM06 + LLM08.</li>
+<li><strong>MITRE ATLAS</strong> — AML.T0048 (LLM Prompt Injection: Direct) + AML.T0051 (LLM Prompt Injection: Indirect) + AML.T0054 (LLM Jailbreak). Anthropic-internal Red Team reports reference AML.T0051 + AML.T0054.</li>
+<li><strong>California SB-1047 (vetoed but reintroduced) + SB-53 (Safe and Secure Innovation for Frontier AI Act)</strong> — frontier-model obligations. Anthropic publishes Frontier Threats Red Team + AGI Security evaluations aligned with SB-1047/SB-53 frontier-model safety-case requirements.</li>
+<li><strong>Anthropic Responsible Scaling Policy (RSP)</strong> — ASL-2 / ASL-3 / ASL-4 / ASL-5 with required capabilities evaluations per level. ASL-3 requires red-team evaluations for dangerous capabilities (cyberoffense + CBRN uplift). ASL-4 adds autonomy + robustness obligations.</li>
+<li><strong>Anthropic Responsible Disclosure Policy</strong> — usersafety@anthropic.com + disclosure@anthropic.com live intake. Per-vulnerability-disclosure-id reconciled against per-Claude-model-version-id + per-Claude-API-call-id.</li>
+</ul>
+
+<h2>4. Five Audit Gaps</h2>
+<ol>
+<li><strong>End-to-end per-vulnerability-disclosure-id → per-Claude-model-version-id → per-Claude-API-call-id → per-prompt-injection-id → per-jailbreak-id → per-multi-turn-attack-id → per-conversation-id → per-Anthropic-tenant-id → per-Anthropic-billing-event-id provenance join-table</strong> per SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 + Anthropic Responsible Scaling Policy (60+ cols above).</li>
+<li><strong>Per-OWASP-LLM-Top-10-id → per-MITRE-ATLAS-id → per-Anthropic-Red-Team-attack-id → per-Constitutional-AI-principle-id → per-multi-turn-attack-id → per-multi-modal-attack-id coverage-matrix</strong> per OWASP LLM Top 10 + MITRE ATLAS + NIST AI RMF MEASURE + EU AI Act Art. 15 + ISO 42001 6.1.4 + Anthropic Responsible Scaling Policy (20+ cols per-coverage-row).</li>
+<li><strong>Per-prompt-injection-id + per-jailbreak-id + per-multi-turn-attack-id + per-data-poisoning-id + per-tool-call-poisoning-id + per-RAG-retrieval-poisoning-id + per-agent-step-poisoning-id + per-prompt-leak-id + per-system-prompt-extraction-id defense</strong> per OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06+LLM07+LLM08 + MITRE ATLAS + EU AI Act Art. 15 + NIST AI RMF MEASURE + ISO 42001 6.1.4 + Anthropic Responsible Scaling Policy (15+ cols per-defense-row).</li>
+<li><strong>Cross-Anthropic-tenant isolation-evidence + self-hosted Claude-API per-deployment-isolation + Claude.ai consumer-isolation</strong> per SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + ISO 42001 A.6.1.4 + FedRAMP Moderate alignment (per-Anthropic-tenant-id isolation-test-result + per-Anthropic-org-id CMK/BYOK optionality + per-trace-no-leakage-evidence + per-tenant-residue-cleanup-procedure + completion-of-deletion timestamp).</li>
+<li><strong>WORM retention + cost-attribution join-table linking per-vulnerability-disclosure-investigation-cost + per-multi-turn-attack-research-cost + per-Claude-API-call-id-red-team-cost</strong> per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + EU AI Act Annex III 4 + Aug 2026 GPAI enforcement.</li>
+</ol>
+
+<h2>5. Verified Live Inbox (2026-07-17)</h2>
+<ul>
+<li><code>usersafety@anthropic.com</code> — verified live 2026-07-17 by curl <code>https://www.anthropic.com/responsible-disclosure-policy</code> HTTP 200, exposed as <code>mailto:usersafety@anthropic.com</code> on the Responsible Disclosure Policy page. Canonical vulnerability-disclosure + safety-incident + strategic-inbound channel.</li>
+<li><code>disclosure@anthropic.com</code> — verified live 2026-07-17 same source, also exposed as <code>mailto:disclosure@anthropic.com</code>. Canonical responsible-disclosure + security-incident + strategic-inbound channel.</li>
+</ul>
+
+<p class="meta">Atlas @ Talon Forge · ai_safety_red_teaming audit practice · $500 / 48-hour audit · $497/mo retainer · <a href="../index.html">back to index</a></p>
+</body>
+</html>
