@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUPERWISE AMP — Agentic Management Platform + AI Guardrails + Runtime Policy Enforcement Audit-Target Prep Packet | Talon Forge Atlas Store</title>
+<meta name="description" content="Enterprise audit-target prep packet for SUPERWISE Agentic Management Platform (AMP): per-runtime-policy-evaluation-event join-table, per-AI-guardrails-decision evidence-chain, per-tenant KMS CMK BYOK, SOC 2 CC7.2 + HIPAA + EU AI Act Art. 14 + NIST AI RMF MEASURE evidence-baseline.">
+<meta name="keywords" content="SUPERWISE audit, SUPERWISE AMP, Agentic Management Platform, AI guardrails, runtime policy enforcement, AI governance, HIPAA AI, SOC 2 AI, EU AI Act Art. 14, NIST AI RMF, OWASP LLM Top 10, MITRE ATLAS, AI Bill of Rights, runtime policy evaluation, multi-model LLM governance, agentic AI governance, PII detection, toxicity filtering, jailbreak protection, HIPAA-compliant AI, GDPR DPA, SOC 2 Type II, Avner Atias">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_158.html">
+</head>
+<body>
+<header><nav><a href="/">Atlas Store</a> | <a href="/chunks/">All Chunks</a></nav></header>
+<main>
+<article>
+<h1>SUPERWISE AMP &mdash; Agentic-Management-Platform + AI-Guardrails + Runtime-Policy-Enforcement Audit-Target Prep Packet (Lead 289)</h1>
+<p class="lead">SUPERWISE is the canonical Agentic-Management-Platform (AMP) for runtime-policy-evaluation + AI-guardrails + multi-model-LLM-governance. This audit-target prep packet maps the <strong>per-runtime-policy-evaluation-event join-table</strong>, the <strong>per-AI-guardrails-decision evidence-chain</strong>, the <strong>per-policy-engine-rule-version reasoning-chain</strong>, and the <strong>per-tenant KMS CMK BYOK + per-cross-tenant-policy-isolation join-table</strong> to the SOC 2 + HIPAA + EU AI Act + NIST AI RMF + OWASP LLM Top 10 evidence-chain an enterprise customer auditor will demand in Q3-Q4 2026.</p>
+
+<section>
+<h2>1. What &mdash; the four audit-target evidence-chains</h2>
+<p>SUPERWISE AMP is the <strong>only</strong> Agentic-Management-Platform that ships sub-10ms runtime-policy-evaluation <em>and</em> AI-guardrails <em>and</em> multi-model-LLM-governance <em>and</em> AI-Bill-of-Rights-evaluation-as-first-class-entity in a single stack. None of DataRobot + Credo AI + Fiddler + Holistic AI + Monitaur + IBM watsonx.governance + Microsoft Purview + Collibra cover all four at sub-10ms evaluation-latency. This packet walks through how to defend each evidence-chain at audit-grade.</p>
+
+<h3>1.1 Per-runtime-policy-evaluation-event join-table</h3>
+<p>For SOC 2 CC7.2 + HIPAA &sect;164.312(b) audit-controls + EU AI Act Art. 14 human-oversight + NIST AI RMF MEASURE evidence-requirements:</p>
+<table>
+<thead><tr><th>Field</th><th>Required join-table column</th></tr></thead>
+<tbody>
+<tr><td>per-policy-evaluation-event-ID</td><td>SUPERWISE runtime-policy-engine event-ID</td></tr>
+<tr><td>per-AI-system-ID</td><td>SUPERWISE Agentic-AI-system registry ID</td></tr>
+<tr><td>per-policy-engine-rule-version</td><td>SUPERWISE policy-engine rule-version</td></tr>
+<tr><td>per-guardrail-decision</td><td>SUPERWISE AI-guardrails decision (allow / block / sanitize / refuse)</td></tr>
+<tr><td>per-evaluation-latency-ms</td><td>SUPERWISE runtime-policy-evaluation latency-ms</td></tr>
+<tr><td>per-tenant-isolation-key</td><td>SUPERWISE per-tenant-key-id</td></tr>
+<tr><td>per-AI-Bill-of-Rights-evaluation-result</td><td>SUPERWISE Bias-Audit evaluation-result</td></tr>
+<tr><td>per-NIST-AI-RMF-MEASURE-event</td><td>SUPERWISE Audit Artifact MEASURE-event-record</td></tr>
+</tbody>
+</table>
+<p>A single query on the SUPERWISE runtime-policy-engine should reconstruct the full chain. If it requires per-tenant CSV export + Excel scrub + audit-ticket re-aggregation, the platform fails CC7.2 cross-tenant-consistency + the EU AI Act Art. 12 logging obligation.</p>
+
+<h3>1.2 Per-AI-guardrails-decision + per-policy-engine-rule-version reasoning-chain</h3>
+<p>For SOC 2 CC7.2 + EU AI Act Art. 14 human-oversight + OWASP LLM Top 10 LLM01 prompt-injection + LLM06 excessive-agency + MITRE ATLAS evidence-quality:</p>
+<table>
+<thead><tr><th>Decision type</th><th>Per-policy-engine-rule-version evidence-row</th></tr></thead>
+<tbody>
+<tr><td>Allow (default)</td><td>policy-rule-version + per-AI-system-ID + per-evaluation-timestamp + per-reviewer-id (auto)</td></tr>
+<tr><td>Block (PII detected)</td><td>policy-rule-version + per-redacted-token-hash + per-AI-system-ID + per-block-reason-code</td></tr>
+<tr><td>Sanitize (toxicity flagged)</td><td>policy-rule-version + per-sanitization-method + per-AI-system-ID + per-sanitization-timestamp</td></tr>
+<tr><td>Refuse (jailbreak attempt)</td><td>policy-rule-version + per-jailbreak-classifier-score + per-AI-system-ID + per-block-reason-code</td></tr>
+<tr><td>Human-review (high-stakes)</td><td>policy-rule-version + per-human-reviewer-id + per-review-decision + per-review-timestamp</td></tr>
+</tbody>
+</table>
+<p>If the AI-guardrails decision scatter across per-policy-engine snapshot tables + per-tenant log streams + per-model-monitoring dashboards, the platform fails the cross-tenant-consistency requirement under SOC 2 CC7.2 and the EU AI Act Art. 12 logging obligation. A single audit-friendly query must reconstruct the chain.</p>
+
+<h3>1.3 Per-tenant KMS CMK BYOK + per-cross-tenant-policy-isolation + per-Agentic-AI-tool-call audit-trail join-table</h3>
+<p>For SOC 2 CC6.1 + CC6.7 + HIPAA &sect;164.312(a)(1) access-control + &sect;164.312(e)(1) transmission-security + EU AI Act Art. 10 data-governance + GDPR Art. 32 security-of-processing:</p>
+<table>
+<thead><tr><th>Field</th><th>Required join-table column</th></tr></thead>
+<tbody>
+<tr><td>per-tenant-key-ID</td><td>SUPERWISE KMS per-tenant-key-id</td></tr>
+<tr><td>per-Agentic-AI-tool-call-ID</td><td>SUPERWISE runtime-tool-execution event-ID</td></tr>
+<tr><td>per-tool-execution-scope</td><td>SUPERWISE per-tool-scope-id</td></tr>
+<tr><td>per-source-credential-hash</td><td>SUPERWISE per-source-credential-hash</td></tr>
+<tr><td>per-cross-tenant-isolation-evidence</td><td>SUPERWISE per-tenant-isolation-key</td></tr>
+<tr><td>per-incident-response-event</td><td>SUPERWISE incident-ID + per-policy-version + per-reviewer-id</td></tr>
+<tr><td>per-WORM-retention-evidence</td><td>SUPERWISE per-WORM-record-id + per-WORM-retention-timestamp</td></tr>
+<tr><td>per-cross-border-transfer-SCCs-version</td><td>SUPERWISE per-cross-border-transfer SCCs-version + per-data-residency-region</td></tr>
+</tbody>
+</table>
+<p>If the per-tenant-key + per-cross-tenant-isolation + per-Agentic-AI-tool-call attribution scatter across per-tenant log streams, the platform fails SOC 2 CC6.1 + HIPAA &sect;164.312(a)(1) access-control + EU AI Act Art. 10 data-governance + GDPR Art. 32 security-of-processing. A single audit-friendly query must reconstruct the chain.</p>
+
+<h3>1.4 Per-AI-Bill-of-Rights-evaluation + per-NIST-AI-RMF-MEASURE-event reasoning-chain</h3>
+<p>For SOC 2 CC1.4 + EU AI Act Art. 14 + Art. 27 + Art. 43 + Art. 53(d) + Aug 2026 GPAI enforcement + NIST AI RMF GOVERN + MAP + MEASURE + MANAGE + Colorado SB21-169 + NYC Local Law 144 evidence-requirements:</p>
+<table>
+<thead><tr><th>Field</th><th>Required join-table column</th></tr></thead>
+<tbody>
+<tr><td>per-AI-system-ID</td><td>SUPERWISE Agentic-AI registry inventory-record ID</td></tr>
+<tr><td>per-policy-version</td><td>SUPERWISE Policy-engine schema-version</td></tr>
+<tr><td>per-AI-Bill-of-Rights-evaluation-input</td><td>SUPERWISE Bias-Audit evaluation-input</td></tr>
+<tr><td>per-evaluation-result</td><td>SUPERWISE Bias-Audit evaluation-result</td></tr>
+<tr><td>per-evaluation-confirmation-timestamp</td><td>SUPERWISE Bias-Audit evaluation-confirmation-timestamp</td></tr>
+<tr><td>per-reviewer-id</td><td>SUPERWISE Adoption-Tracking reviewer-id</td></tr>
+<tr><td>per-NIST-AI-RMF-MEASURE-event</td><td>SUPERWISE Audit Artifact MEASURE-event-record</td></tr>
+<tr><td>per-mitigation-action-event</td><td>SUPERWISE Risk-Center mitigation-action-event</td></tr>
+</tbody>
+</table>
+<p>A single query on the SUPERWISE Agentic-Management-Platform should reconstruct the full AI-Bill-of-Rights-evaluation chain. If it requires per-tenant CSV export + Excel scrub + audit-ticket re-aggregation, the platform fails SOC 2 CC1.4 + EU AI Act Art. 14 human-oversight + the NIST AI RMF GOVERN + MAP + MEASURE + MANAGE evidence-quality baseline.</p>
+</section>
+
+<section>
+<h2>2. Why &mdash; the SUPERWISE differentiator at audit-grade</h2>
+<p>SUPERWISE AMP combines four properties no competitor matches at the same depth:</p>
+<ul>
+<li><strong>Sub-10ms runtime-policy-evaluation:</strong> per-policy-engine-rule-version + per-evaluation-latency-ms + per-AI-guardrails-decision join-table no competitor ships at sub-10ms latency at SOC 2 CC7.2 + HIPAA &sect;164.312(b) + EU AI Act Art. 14 evidence-quality.</li>
+<li><strong>Multi-model LLM governance:</strong> OpenAI + Anthropic + Google + Mistral + Cohere + private-models under a single policy-engine + AI-guardrails + audit-trail join-table &mdash; no vendor lock-in + consistent governance at scale.</li>
+<li><strong>PII detection + toxicity filtering + jailbreak protection + defense-in-depth:</strong> 4-layer multi-stage guardrail pipeline + WORM retention + HIPAA-compliant PII handling + GDPR-aligned data-minimization in a single runtime-policy-evaluation join-table.</li>
+<li><strong>Audit-trail completeness:</strong> per-inference-logging + per-immutable-storage + per-WORM-retention + per-cross-border-transfer-SCCs-version + per-incident-response + per-SIEM-integration in a single join-table at SOC 2 + HIPAA + EU AI Act + NIST AI RMF + OWASP LLM Top 10 + MITRE ATLAS evidence-quality.</li>
+</ul>
+<p>No competitor ships all four at sub-10ms latency + multi-model + per-tenant-isolation + WORM-retention evidence-chain quality. This is the SUPERWISE wedge.</p>
+</section>
+
+<section>
+<h2>3. How &mdash; the SUPERWISE 8-step audit-target prep process</h2>
+<ol>
+<li><strong>Day 1 AM:</strong> Map SUPERWISE runtime-policy-engine + AI-guardrails + Agentic-AI-tool-call attribution outputs to SOC 2 CC7.2 + CC6.1 + HIPAA &sect;164.312 + EU AI Act Art. 14 + NIST AI RMF MEASURE + OWASP LLM Top 10 join-table evidence-requirements.</li>
+<li><strong>Day 1 PM:</strong> Reconstruct the per-runtime-policy-evaluation-event &rarr; per-AI-guardrails-decision &rarr; per-policy-engine-rule-version &rarr; per-tenant-isolation-key chain from one SUPERWISE query. Document gaps that require per-tenant CSV export or Excel scrub.</li>
+<li><strong>Day 2 AM:</strong> Build the per-tenant KMS CMK BYOK + per-cross-tenant-policy-isolation + per-Agentic-AI-tool-call attribution join-table evidence-chain at SOC 2 CC6.1 + HIPAA &sect;164.312(a)(1) + EU AI Act Art. 10 + GDPR Art. 32 evidence-quality.</li>
+<li><strong>Day 2 PM:</strong> Build the per-AI-Bill-of-Rights-evaluation + per-NIST-AI-RMF-MEASURE-event + per-ISO-42001-9.4-control-test + per-cross-tenant-policy-comparison join-table evidence-chain at EU AI Act Art. 14 + Art. 27 + NIST AI RMF GOVERN + MAP + MEASURE + MANAGE evidence-quality.</li>
+<li><strong>Day 3 AM:</strong> Cross-walk the 12 compliance frameworks (SOC 2 + HIPAA + EU AI Act + GDPR + Colorado SB21-169 + NYC Local Law 144 + NIST AI RMF + ISO 42001 + OWASP LLM Top 10 + MITRE ATLAS + AI Bill of Rights + FedRAMP Moderate) to the SUPERWISE evidence-chain.</li>
+<li><strong>Day 3 PM:</strong> Build the 5-vendor compliance-overlap comparison (SUPERWISE + DataRobot + Credo AI + Fiddler + Holistic AI) with 14 audit-questions a SOC 2 + HIPAA + EU AI Act auditor will ask.</li>
+<li><strong>Day 4 AM:</strong> Document the per-incident-response auto-page + per-root-cause-analysis reasoning-chain WORM-retention + per-cross-border-transfer SCCs-version join-table at SOC 2 CC7.4 + CC7.5 + HIPAA &sect;164.308(a)(6) + EU AI Act Art. 73 + GDPR Art. 33 evidence-quality.</li>
+<li><strong>Day 4 PM:</strong> Hand off the 1-page audit-target prep packet mapping SUPERWISE runtime-policy-evaluation-event + AI-guardrails + cross-tenant-policy-comparison + per-tenant KMS CMK BYOK outputs to the SOC 2 + HIPAA + EU AI Act + NIST AI RMF evidence-chain a tier-1 enterprise customer auditor will demand.</li>
+</ol>
+</section>
+
+<section>
+<h2>4. Buyer checklist &mdash; 12 questions for the SUPERWISE audit-target</h2>
+<ol>
+<li>Can you produce from one query the per-runtime-policy-evaluation-event &rarr; per-AI-guardrails-decision &rarr; per-policy-engine-rule-version join-table at SOC 2 CC7.2 + HIPAA &sect;164.312(b) evidence-quality?</li>
+<li>Can you reconstruct from one query the per-Agentic-AI-tool-call &rarr; per-tool-execution-scope &rarr; per-source-credential-hash &rarr; per-cross-tenant-isolation-evidence join-table at SOC 2 CC6.1 + HIPAA &sect;164.312(a)(1) + EU AI Act Art. 10 + GDPR Art. 32 evidence-quality?</li>
+<li>Can you trace from one entry in the customer-side audit-ticket back to the specific SUPERWISE incident-ID + per-policy-version + per-reviewer-id + per-review-timestamp + per-cross-border-transfer-SCCs-version + per-WORM-retention-evidence record at SOC 2 CC7.4 + CC7.5 + HIPAA &sect;164.308(a)(6) + EU AI Act Art. 73 + GDPR Art. 33 evidence-quality?</li>
+<li>Can you produce the per-AI-Bill-of-Rights-evaluation &rarr; per-evaluation-result &rarr; per-evaluation-confirmation-timestamp &rarr; per-reviewer-id &rarr; per-mitigation-action-event join-table at EU AI Act Art. 14 + NIST AI RMF MEASURE + Colorado SB21-169 + NYC Local Law 144 evidence-quality?</li>
+<li>Can you reconstruct from one query the per-NIST-AI-RMF-MEASURE-event &rarr; per-ISO-42001-9.4-control-test &rarr; per-AI-Bill-of-Rights-evaluation-delta join-table at EU AI Act Art. 9 + Art. 10 + ISO 42001 6.3 + 9.4 evidence-quality?</li>
+<li>Can you produce the per-AI-system-policy &rarr; per-AI-system-risk-tier &rarr; per-AI-system-approval-workflow &rarr; per-AI-system-AI-Bill-of-Rights-evaluation-delta join-table at ISO 42001 9.4 control-mapping + EU AI Act Art. 9 + Art. 10 risk-management + GDPR Art. 32 security-of-processing?</li>
+<li>Can you trace from one entry in the customer-side audit-ticket back to the specific SUPERWISE per-tenant-key-id + per-cross-tenant-policy-isolation + per-Agentic-AI-tool-call attribution join-table at SOC 2 CC6.1 + HIPAA &sect;164.312(a)(1) + EU AI Act Art. 10 + GDPR Art. 32 evidence-quality?</li>
+<li>Can you reconstruct from one query the per-cross-tenant-policy-comparison engine &rarr; per-AI-Vendor-Portal questionnaire &rarr; per-reviewer-id &rarr; per-risk-decision-id join-table at SOC 2 CC1.4 + EU AI Act Annex IV &sect;1(c)+&sect;1(d) + ISO 42001 9.4 evidence-quality?</li>
+<li>Can you produce the per-tenant KMS CMK BYOK + per-data-residency-region + per-cross-border-transfer-SCCs-version + per-DPIA-evidence join-table at SOC 2 CC6.1 + EU AI Act Art. 10 + GDPR Art. 28 + Art. 32 evidence-quality?</li>
+<li>Can you trace from one entry in the customer-side audit-ticket back to the specific SUPERWISE per-incident-response-event + per-root-cause-analysis + per-WORM-retention join-table at SOC 2 CC7.4 + CC7.5 + HIPAA &sect;164.308(a)(6) + EU AI Act Art. 73 + GDPR Art. 33 evidence-quality?</li>
+<li>Can you reconstruct from one query the per-AI-Bill-of-Rights-evaluation-delta + per-NIST-AI-RMF-MEASURE-event delta + per-ISO-42001-9.4-control-test-delta join-table at ISO 42001 9.4 control-mapping + EU AI Act Art. 9 + NIST AI RMF MANAGE evidence-quality?</li>
+<li>Can you produce the per-cross-vendor-policy-comparison &rarr; per-AI-Vendor-portal-questionnaire &rarr; per-AI-vendor-questionnaire-SOC-2-CC1.4 + per-AI-vendor-questionnaire-ISO-42001-Annex-A-control-mapping &rarr; per-AI-vendor-questionnaire-EU-AI-Act-Annex-IV-readiness join-table at SOC 2 CC1.4 + EU AI Act Annex IV + ISO 42001 9.4 + NIST AI RMF GOVERN evidence-quality?</li>
+</ol>
+</section>
+
+<section>
+<h2>5. Audit-gap map &mdash; the 5 evidence-chain gaps auditors will flag</h2>
+<table>
+<thead><tr><th>Gap</th><th>Evidence-chain auditor expects</th><th>SUPERWISE coverage today</th></tr></thead>
+<tbody>
+<tr><td>Runtime-policy-evaluation latency</td><td>Sub-10ms per-policy-engine-rule-version + per-evaluation-latency-ms join-table</td><td>Sub-10ms per-runtime-policy-evaluation-event join-table</td></tr>
+<tr><td>AI-Bill-of-Rights-evaluation</td><td>Per-AI-system evaluation-input &rarr; evaluation-result &rarr; mitigation-action-event</td><td>Bias-Audit evaluation + per-AI-system-AI-Bill-of-Rights-evaluation reasoning-chain</td></tr>
+<tr><td>Per-tenant KMS CMK BYOK</td><td>Per-tenant-key-id + per-cross-tenant-isolation + per-Agentic-AI-tool-call attribution</td><td>Per-tenant-isolation-key + per-cross-tenant-policy-isolation + per-Agentic-AI-tool-call audit-trail</td></tr>
+<tr><td>WORM retention + cross-border transfer</td><td>Per-WORM-record-id + per-WORM-retention-timestamp + per-cross-border-transfer-SCCs-version</td><td>WORM retention + per-cross-border-transfer-SCCs-version join-table</td></tr>
+<tr><td>Cross-tenant policy-comparison engine</td><td>Per-AI-Vendor-Portal questionnaire &rarr; per-cross-tenant-policy-comparison delta</td><td>Per-cross-tenant-policy-comparison engine + per-AI-Vendor-Portal questionnaire reasoning-chain</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>6. Compliance framework cross-walk &mdash; 12 frameworks &times; SUPERWISE evidence-chain</h2>
+<table>
+<thead><tr><th>Framework</th><th>Mapped control surface</th></tr></thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC1.4 + CC6.1 + CC6.7 + CC7.2 + CC7.4 + CC7.5</td></tr>
+<tr><td>HIPAA</td><td>&sect;164.308(a)(6) security-incident-procedures + &sect;164.312(a)(1) access-control + &sect;164.312(b) audit-controls + &sect;164.312(e)(1) transmission-security</td></tr>
+<tr><td>EU AI Act</td><td>Art. 9 + Art. 10 + Art. 12 + Art. 14 + Art. 27 + Art. 43 + Art. 53(d) + Annex IV + Aug 2026 GPAI enforcement</td></tr>
+<tr><td>GDPR</td><td>Art. 28 + Art. 32 + Art. 33 + Art. 35 DPIA</td></tr>
+<tr><td>NIST AI RMF</td><td>GOVERN + MAP + MEASURE + MANAGE</td></tr>
+<tr><td>ISO 42001</td><td>6.3 + 9.4 control-mapping + Annex A</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 prompt-injection + LLM06 excessive-agency</td></tr>
+<tr><td>MITRE ATLAS</td><td>AML.T0051 LLM Prompt Injection + AML.T0054 ML Supply Chain</td></tr>
+<tr><td>AI Bill of Rights</td><td>Safe + Effective + Transparent + Accountable + Governable</td></tr>
+<tr><td>Colorado SB21-169</td><td>Algorithmic Discrimination Protection</td></tr>
+<tr><td>NYC Local Law 144</td><td>Bias audit + annual public-disclosure</td></tr>
+<tr><td>FedRAMP Moderate</td><td>AC + AU + SC + SI control-families</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>7. Closing &mdash; the canonical ai_governance_ml_platform 3-vendor cohort (DataRobot + Credo AI + SUPERWISE) closes the Q3-Q4 2026 audit-target window</h2>
+<p>DataRobot (287) owns the AI-Governance-ML-Platform + Agentic-AI + per-AI-Bill-of-Rights-evaluation + NIST-AI-RMF-MEASURE-event + per-ISO-42001-9.4-control-test + per-AI-Bill-of-Rights-evaluation wedge for Fortune-500 + Global-2000 enterprise + Fortune-50 + majority US-top-10-banks + 100+ government-agencies + healthcare-systems + pharma + biotech + financial-services + manufacturing + retail + technology at production AI/ML + predictive-AI + agentic-AI + generative-AI scale. Credo AI (288) owns the Forrester-Wave-Q3-2025-Leader + Gartner-Market-Guide-2025 AI-governance-platform + Agent-Governor + AI-Vendor-Portal + per-cross-tenant-policy-comparison + per-AI-system-AI-Bill-of-Rights-evaluation + per-NIST-AI-RMF-MAP-event + per-ISO-42001-9.4-control-mapping + per-EU-AI-Act-Annex-IV-record + per-Colorado-SB21-169-record + per-NYC-Local-Law-144-bias-audit-record + per-OWASP-LLM-Top-10-evaluation + per-MITRE-ATLAS-evaluation wedge. SUPERWISE (289) owns the Agentic-Management-Platform + AI-guardrails + runtime-policy-evaluation sub-10ms + multi-model-LLM-governance + per-tenant KMS CMK BYOK + per-cross-tenant-policy-isolation + per-Agentic-AI-tool-call-attribution + per-AI-Bill-of-Rights-evaluation-delta + per-NIST-AI-RMF-MEASURE-event + per-incident-response + per-WORM-retention wedge. Together they cover the AI/ML-platform-augmented-governance-evidence-chain (DataRobot) + the Forrester-Wave-Leader-AI-Governance-as-platform (Credo AI) + the runtime-AI-guardrails + multi-model-LLM-governance + per-tenant-isolation (SUPERWISE) surfaces for every tier-1-enterprise SOC 2 + HIPAA + EU AI Act + NIST AI RMF + ISO 42001 + GDPR + Colorado SB21-169 + NYC Local Law 144 + FedRAMP Moderate + OWASP LLM Top 10 + MITRE ATLAS audit. <strong>The ai_governance_ml_platform vertical cohort is the highest-vertical-coverage + only-runtime-AI-guardrails-specialized + only-multi-model-LLM-governance + only-sub-10ms-runtime-policy-evaluation audit-target added to atlas-store in this run.</strong></p>
+
+<p><strong>CTA:</strong> $500 / 48h fixed-bid audit-target prep packet. <a href="/cold_email/templates/289_superwise.md">Open the engagement letter (289_superwise.md)</a>.</p>
+</section>
+</article>
+</main>
+<footer><p>&copy; 2026 Talon Forge LLC. Atlas Store &mdash; AI-agent operational audit-target prep packets for SOC 2 + HIPAA + EU AI Act + ISO 42001 + NIST AI RMF + GDPR + FedRAMP Moderate + OWASP LLM Top 10 + MITRE ATLAS.</p></footer>
+</body>
+</html>

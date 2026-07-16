@@ -1,0 +1,27 @@
+# SUPERWISE — Agentic Management Platform + AI-Guardrails + Runtime-Policy-Enforcement (Lead 289)
+
+**Subject:** Audit-friendly Agentic-AI runtime-policy-evaluation-event + per-policy-engine-rule-version join-table for SUPERWISE AMP?
+
+Hi SUPERWISE team,
+
+I help Agentic-AI governance + AI-guardrails + runtime-policy-enforcement vendors (DataRobot 287 + Credo AI 288 in our ai_governance_ml_platform cohort) close the evidence-chain gap that SOC 2 + HIPAA + EU AI Act auditors hit when they ask for the per-runtime-policy-evaluation-event → per-AI-guardrails-decision → per-policy-engine-rule-version → per-tenant KMS CMK BYOK join-table. The four questions I'd want to ask up front, then I'll go away:
+
+1. **For the per-Agentic-AI runtime-policy-evaluation-event join-table** — when an AI-guardrail decision fires in <10ms (per SUPERWISE marketing), can you produce from one query a per-policy-evaluation-event-ID → per-AI-system-ID → per-policy-engine-rule-version → per-guardrail-decision (allow / block / sanitize / refuse) → per-evaluation-latency-ms → per-tenant-isolation-key join-table that satisfies SOC 2 CC7.2 + HIPAA §164.312(b) audit-controls + EU AI Act Art. 14 human-oversight + NIST AI RMF MEASURE? Most runtime-policy platforms store the decision but scatter the join-table across per-tenant log streams + per-model monitoring dashboards + per-policy-engine snapshot tables, which fails the per-tenant-cross-policy-consistency requirement under CC7.2 and the EU AI Act Art. 12 logging obligation.
+
+2. **For the per-AI-Bill-of-Rights-evaluation reasoning-chain + per-cross-tenant-policy-comparison join-table** — when an EU-public-sector auditor or a US-federal-agency auditor asks "show me the reasoning-chain for an AI-Bill-of-Rights-evaluation on AI-System-XYZ at time T across all your tenants", can you reconstruct from one query a per-AI-system-ID → per-AI-Bill-of-Rights-evaluation-input → per-evaluation-result → per-evaluation-confirmation-timestamp → per-reviewer-id → per-cross-tenant-policy-comparison-delta join-table that satisfies the EU AI Act Art. 9 risk-management + Art. 14 human-oversight + Colorado SB21-169 + NIST AI RMF GOVERN + MAP requirements at the per-AI-system-ID + per-policy-version evidence-level?
+
+3. **For the per-tenant KMS CMK BYOK + per-cross-tenant-policy-isolation + per-Agentic-AI-tool-call audit-trail join-table** — when a regulated customer (HIPAA-covered-entity + EU-public-sector + US-federal-agency) asks for evidence of per-tenant encryption + per-cross-tenant-isolation + per-Agentic-AI-tool-call-attribution, can you produce from one query a per-tenant-key-ID → per-Agentic-AI-tool-call-ID → per-tool-execution-scope → per-source-credential-hash → per-cross-tenant-data-isolation-evidence join-table that satisfies SOC 2 CC6.1 + CC6.7 + HIPAA §164.312(a)(1) access-control + §164.312(e)(1) transmission-security + EU AI Act Art. 10 data-governance + GDPR Art. 32 security-of-processing?
+
+4. **For the per-incident-response auto-page + per-root-cause-analysis reasoning-chain WORM retention + per-cross-border-transfer SCCs-version join-table** — when a SOC 2 + HIPAA + EU AI Act auditor asks for evidence of an AI-governance incident-response + per-cross-border-transfer compliance, can you trace from one entry in the customer-side audit-ticket back to the specific SUPERWISE incident-ID + per-policy-version + per-reviewer-id + per-review-timestamp + per-cross-border-transfer-SCCs-version + per-WORM-retention-evidence record at SOC 2 CC7.4 + CC7.5 + HIPAA §164.308(a)(6) security-incident-procedures + EU AI Act Art. 73 post-market-monitoring + GDPR Art. 33 breach-notification evidence-quality?
+
+Why ask: SUPERWISE is the **3rd-sibling** in our **ai_governance_ml_platform** vertical (DataRobot 287 was the 1st; Credo AI 288 closed the 2-vendor cohort; SUPERWISE 289 closes the 3-vendor cohort). A single SUPERWISE AMP runtime-policy-evaluation-event gap propagates simultaneously to: SOC 2 CC7.2 + CC6.1 + CC6.7 + CC7.4 + CC7.5 + HIPAA §164.308 + §164.312 + EU AI Act Art. 9 + Art. 10 + Art. 12 + Art. 14 + Art. 27 + Art. 43 + Art. 53(d) + Aug 2026 GPAI enforcement + GDPR Art. 28 + Art. 32 + Art. 33 + Colorado SB21-169 + NIST AI RMF GOVERN + MAP + MEASURE + MANAGE + OWASP LLM Top 10 — that's the highest-runtime-policy-evaluation-latency-fanout (sub-10ms) + only-Agentic-Management-Platform + only-AI-guardrails-specialized + only-multi-model-LLM-governance + highest-AI-Bill-of-Rights-evaluation-coverage ai_governance_ml_platform audit-target on the platform today.
+
+**Free offer (no strings, 1 page):** I can draft a SUPERWISE vs DataRobot vs Credo AI compliance-overlap map for your tier-1 enterprise customers — 14 audit-questions a SOC 2 + HIPAA + EU AI Act + ISO 42001 auditor will ask, and which vendor covers which. Useful for sales decks and trust-center pages.
+
+If any of those questions flag an evidence-chain gap, I'm offering a **$500 / 48h fixed-bid audit-target prep packet** for SUPERWISE — a 1-page document mapping your AMP runtime-policy-evaluation-event + per-AI-guardrails-decision + per-cross-tenant-policy-comparison + per-tenant KMS CMK BYOK outputs to the SOC 2 CC7.2 + HIPAA §164.312 + EU AI Act Art. 12 + Art. 14 + NIST AI RMF MEASURE evidence-chain a tier-1 enterprise customer auditor will demand.
+
+15-min scope call if any of this resonates: [calendly link]. Reply to privacy@superwise.ai for the credibility-thread handoff.
+
+Best,
+Atlas (Talon Forge LLC)
+atlas@talonforgehq.com | talonforgehq.github.io/atlas-store
