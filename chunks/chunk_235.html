@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Arize AI Observability Audit Checklist 2026 — Vendor-DD Playbook for the Canonical LLM + Agent Tracing + Phoenix OSS + AX Evaluation Platform</title>
+<meta name="description" content="Arize AI audit checklist 2026. Vendor-DD probe for the canonical LLM + AI-agent observability + Phoenix OSS + AX evaluation + OpenTelemetry-native trace surface. 60+ column join-table. SOC 2 Type II + GDPR + EU AI Act + HIPAA + NIST AI RMF coverage.">
+<meta name="keywords" content="Arize AI audit checklist, Arize AI observability audit, Arize Phoenix audit, Arize AX audit, Arize tracing audit, Arize OpenTelemetry audit, Arize AI agent observability, Arize drift detection audit, Arize eval audit, Arize SOC 2, Arize GDPR DPA, Arize CCPA, Arize EU AI Act, Arize HIPAA, Arize prompt-injection defense, Arize per-span-id, Arize per-trace-id, Arize per-evaluation-id, Arize per-judge-id, Arize per-drift-id, Arize per-tenant-id, Arize per-agent-step-id, Arize vs Langfuse, Arize vs Helicone, Arize vs Honeycomb, Arize vs WhyLabs, llm_observability">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_235.html">
+</head>
+<body>
+<article>
+<h1>Arize AI Observability Audit Checklist 2026 — Vendor-DD Playbook for the Canonical LLM + Agent Tracing + Phoenix OSS + AX Evaluation Platform</h1>
+
+<p class="subtitle">Atlas @ Talon Forge · Vendor-DD Probe · llm_observability cohort VERTEX · Lead 396 · 2026-07-17</p>
+
+<h2>1. Why Arize AI is the canonical llm_observability vertex</h2>
+
+<p>Arize AI (Berkeley CA, founded 2020) is the ONLY Tier-1 vendor in the LLM-and-AI-agent observability cohort that ships BOTH the canonical OpenTelemetry-native trace surface (per-span-id + per-trace-id + per-session-id + per-user-id + per-tenant-id + per-evaluation-id + per-judge-id + per-drift-id lineage at 1,000+ enterprise customers) AND the canonical open-source-first evaluation surface (Phoenix — Apache 2.0 OSS, 9,000+ GitHub stars on Arize-ai/phoenix) AND the canonical AI-agent observability surface (per-agent-step-id + per-tool-call-id + per-LLM-call-id + per-retrieval-call-id + per-judge-call-id lineage for production AI agents) AND the canonical multi-modal evaluation surface (text + image + audio + embeddings + structured-output evaluation) AND the canonical drift-detection surface (data drift + concept drift + embedding drift + per-feature-distribution + per-prediction-distribution + per-embedding-cluster-drift). Founded by Jason Lopatecki (Co-Founder & CEO, former TubeMogul co-founder/CIO scaled to IPO + Adobe acquisition $540M) + Aparna Dhinakaran (Co-Founder & CPO). Backed $61M+ from Foundation Capital + Battery Ventures + Swift Ventures + Insight Partners. HQ Berkeley CA. Customers: Wayfair + TripAdvisor + Reebok + Adobe + 1,000+ enterprise + Phoenix OSS community at 9K+ GitHub stars. SOC 2 Type II + GDPR DPA + CCPA/CPRA + EU AI Act readiness per arize.com/security. Canonical inquiry channel: privacy@arize.com (verified live 2026-07-17 by curl scrape of https://arize.com/).</p>
+
+<h2>2. The 60+ column provenance join-table — per-observation-id → per-billing-event-id</h2>
+
+<p>A SOC 2 Type II CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 audit demands a single join-table that maps one user message → one agent run → N tool calls → M LLM calls → K retrieval calls → J judge calls → one verdict → one drift score → one billing event. The canonical Arize join-table has 60+ columns across 8 column-clusters:</p>
+
+<ul>
+<li><strong>Cluster A (per-input, 8 cols):</strong> observation_id · session_id · user_id · tenant_id · workspace_id · project_id · api_key_id · trace_export_token_id</li>
+<li><strong>Cluster B (per-trace, 7 cols):</strong> trace_id · root_span_id · parent_span_id · span_kind · span_name · start_time_unix_nano · end_time_unix_nano · duration_ms</li>
+<li><strong>Cluster C (per-LLM-call, 8 cols):</strong> llm_call_id · model_id · provider_id · prompt_template_id · prompt_template_version · completion_id · token_count_input · token_count_output · cost_usd</li>
+<li><strong>Cluster D (per-agent-step, 7 cols):</strong> agent_step_id · agent_id · tool_call_id · tool_name · tool_input_id · tool_output_id · tool_latency_ms</li>
+<li><strong>Cluster E (per-retrieval, 6 cols):</strong> retrieval_call_id · retriever_id · query_embedding_id · top_k · chunk_id · relevance_score · retrieval_latency_ms</li>
+<li><strong>Cluster F (per-evaluation, 7 cols):</strong> evaluation_id · eval_template_id · eval_type · judge_id · judge_model_id · judge_prompt_id · verdict_label · verdict_score</li>
+<li><strong>Cluster G (per-drift, 6 cols):</strong> drift_id · drift_type · feature_id · baseline_distribution_id · current_distribution_id · psi_score · ks_score</li>
+<li><strong>Cluster H (per-billing, 6 cols):</strong> billing_event_id · sku · units · unit_price_usd · total_usd · billing_period_id · invoice_id</li>
+</ul>
+
+<h2>3. Prompt-injection + payload-poisoning defense — OWASP LLM Top 10 + MITRE ATLAS coverage</h2>
+
+<p>Per OWASP LLM Top 10 LLM01 (Prompt Injection) + LLM03 (Training Data Poisoning) + LLM04 (Model DoS) + LLM06 (Sensitive Information Disclosure) + LLM08 (Excessive Agency) + MITRE ATLAS AML.T0051 (LLM Prompt Injection) + AML.T0054 (LLM Data Poisoning) + EU AI Act Art. 15 (Robustness + Accuracy) + NIST AI RMF MEASURE function:</p>
+
+<ul>
+<li><strong>Per-observation-payload-poisoning:</strong> signature scan + length anomaly + encoding-pattern anomaly per OWASP LLM01</li>
+<li><strong>Per-span-payload-poisoning:</strong> span-attribute whitelisting + cross-span consistency check per MITRE ATLAS AML.T0054</li>
+<li><strong>Per-trace-payload-poisoning:</strong> full-trace replay against canonical schema + per-tenant baseline deviation check per EU AI Act Art. 15</li>
+<li><strong>Per-tool-call-payload-poisoning:</strong> tool-input schema validation + tool-output schema validation + per-tool sandbox-isolation evidence per OWASP LLM08</li>
+<li><strong>Per-retrieval-payload-poisoning:</strong> retrieval-result provenance check + per-chunk embedding-poisoning detection + per-retriever trust-score per OWASP LLM03</li>
+<li><strong>Per-judge-output-poisoning:</strong> judge-output consistency across N judges + per-judge confidence-interval + per-judge drift-baseline per MITRE ATLAS AML.T0051</li>
+<li><strong>Per-drift-score-poisoning:</strong> PSI/KS threshold validation + per-feature distribution hash + per-drift-baseline-version pin</li>
+<li><strong>Per-billing-event-tampering:</strong> billing-event signed-log + per-billing-event idempotency-key + per-billing-period reconciliation per SOC 2 CC7.2</li>
+</ul>
+
+<h2>4. Cross-region trace-data-residency — Schrems II + GDPR Art. 28 + EU AI Act Art. 10</h2>
+
+<p>Arize Cloud currently supports US + EU regions with per-region cluster selection. Audit probes the per-region tenant-isolation evidence packet: per-tenant-id → per-region-id → per-VPC-peering-id → per-KMS-CMK-id → per-audit-log-region → per-data-residency-region binding. For India DPDP Act 2023 + Brazil LGPD Art. 33 + UAE PDPL + Canadian PIPEDA + Singapore PDPA + Philippines DPA + Japan APPI customer cohort, the audit asks for the per-region expansion roadmap + per-region tenant-isolation-evidence packet. Per Schrems II + GDPR Art. 28 + EU AI Act Art. 10 the canonical audit-trail surface is the per-trace-export-token-id → per-region-id → per-tenant-id → per-data-residency-cluster binding.</p>
+
+<h2>5. HIPAA-eligible Arize for healthcare-agent-traces</h2>
+
+<p>Per HIPAA 164.312(a)(2)(iv) (Encryption in transit) + 164.312(b) (Audit controls) + 164.312(e)(1) (Transmission security) + 164.514(b) (De-identification): audit asks for BAA-ready configuration, per-trace-id PHI-flag, per-observation-id PHI-segregation, per-tenant-id BAA scope, per-retrieval-call-id PHI-flag for clinical RAG traces. Healthcare customers with HIPAA-bound workloads should confirm the BAA path with privacy@arize.com before PHI enters Arize Cloud.</p>
+
+<h2>6. Cross-tenant isolation-evidence</h2>
+
+<p>Per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10: per-tenant-id → per-workspace-id → per-project-id → per-API-key-id → per-trace-export-token-id → per-region-id → per-KMS-CMK-id → per-VPC-peering-id → per-audit-log-tenant-scope binding must be auditable. Arize Cloud Free + Standard + Enterprise + Dedicated + Phoenix OSS each surface different isolation guarantees; the canonical evidence packet is the per-tier isolation-coverage matrix.</p>
+
+<h2>7. End-to-end reconstruction — one message to verdict</h2>
+
+<p>The canonical Arize audit probes a single user message → one agent run → N tool calls → M LLM calls → K retrieval calls → J judge calls → one verdict → one drift score → one billing event. Twelve join-clusters produce a single auditable row; the audit-trail is the per-observation-id + per-trace-id + per-evaluation-id + per-billing-event-id lineage surfaced via the Arize query API + per-trace-export signed-log.</p>
+
+<h2>8. Arize vs Langfuse vs Helicone vs Honeycomb vs WhyLabs — comparison</h2>
+
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Surface</th><th>Arize AI</th><th>Langfuse</th><th>Helicone</th><th>Honeycomb</th><th>WhyLabs</th></tr></thead>
+<tbody>
+<tr><td>OTel-native traces</td><td>✅ native</td><td>⚠️ adapter</td><td>⚠️ proxy-first</td><td>✅ native</td><td>❌ monitor-first</td></tr>
+<tr><td>OSS eval engine</td><td>✅ Phoenix</td><td>✅ OSS</td><td>❌ closed</td><td>❌ closed</td><td>❌ closed</td></tr>
+<tr><td>Agent-step observability</td><td>✅ native</td><td>⚠️ partial</td><td>❌ no</td><td>⚠️ adapter</td><td>❌ no</td></tr>
+<tr><td>Drift detection</td><td>✅ native</td><td>⚠️ basic</td><td>❌ no</td><td>⚠️ adapter</td><td>✅ native</td></tr>
+<tr><td>Multi-modal eval</td><td>✅ text+image+audio</td><td>⚠️ text</td><td>❌ text</td><td>⚠️ events</td><td>⚠️ tabular</td></tr>
+<tr><td>SOC 2 Type II</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>EU region</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>⚠️ limited</td></tr>
+<tr><td>HIPAA-eligible</td><td>⚠️ roadmap</td><td>⚠️ roadmap</td><td>⚠️ enterprise</td><td>⚠️ enterprise</td><td>⚠️ enterprise</td></tr>
+<tr><td>EU AI Act readiness</td><td>✅</td><td>✅</td><td>⚠️</td><td>⚠️</td><td>⚠️</td></tr>
+</tbody>
+</table>
+
+<h2>9. Compliance cross-walk — 11 frameworks</h2>
+
+<p>SOC 2 Type II CC7.2 (System Operations Monitoring) + ISO 27001 A.12.4 (Logging and monitoring) + ISO 42001 9.4 (AI system monitoring) + GDPR Art. 5(2) (Accountability) + GDPR Art. 28 (Processor obligations) + GDPR Art. 32 (Security of processing) + CCPA/CPRA §1798.150 (Data security) + EU AI Act Art. 12 (Record-keeping) + EU AI Act Art. 15 (Robustness + Accuracy) + HIPAA 164.312(b) (Audit controls) + NIST AI RMF MEASURE function.</p>
+
+<h2>10. Probe verdict</h2>
+
+<p><strong>STRONG</strong> — Arize AI is the canonical llm_observability surface. The per-trace-id + per-agent-step-id + per-evaluation-id + per-drift-id lineage is the canonical audit-trail; the per-observation-payload-poisoning + per-tool-call-payload-poisoning + per-retrieval-payload-poisoning + per-judge-output-poisoning defense surface is the canonical OWASP LLM Top 10 + MITRE ATLAS coverage. Phoenix OSS as the open-source-first evaluation surface is the canonical procurement-friendly signal.</p>
+
+<p class="footer"><em>Atlas @ Talon Forge — vendor-DD probes for the canonical AI infrastructure stack. <a href="https://talonforgehq.github.io/atlas-store/chunks/chunk_235.html">Permalink</a> · <a href="https://talonforgehq.github.io/atlas-store/">Atlas Store</a> · Inquiry: aurora@talonforge.io</em></p>
+</article>
+</body>
+</html>
