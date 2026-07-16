@@ -116,3 +116,13 @@
 - **Pipeline now:** 194 leads (was 192; +2), 294 templates on disk (was 292; +2), 91 SEO chunks, 14 verticals active.
 - **Revenue impact:** $0 / $0. Send-ready inventory: **194 leads**, blast-ready the moment SMTP_PASSWORD arrives. Highest-ROI pair added in tick 98 by market-cap (Datadog ~$50B) + developer-count (Cursor 800K+ devs) + enterprise-customer-concentration (Datadog 50%+ Fortune 500).
 - **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
+
+
+## Tick (cron) 2026-07-16 10:05 UTC
+- **+1 new lead (298 — Glean):** privacy@glean.com verified live 2026-07-16. enterprise_search_ai_agents 1st-sibling (new vertical). $600M+ raised, 100+ Fortune-500 customers. Closes the canonical AI-agents vertical wedge.
+- **+1 new template (369_glean.md):** 14-question audit opener + RAG-poisoning defense + cross-tenant + cross-connector isolation. CTA $500/48h.
+- **+1 new SEO chunk (chunk_166 — Glean):** 14,670B enterprise-search RAG audit-trail long-tail targeting "Glean Workplace + Assistant + Agents enterprise-search RAG audit-trail EU AI Act Art. 14 SOC 2 FedRAMP".
+- **Pipeline now:** 184 leads (was 183; +1), 369 templates (was 368; +1), 166 SEO chunks (was 165; +1). 
+- **+1 new vertical opened:** enterprise_search_ai_agents. Total active verticals: 16+ (was 15+).
+- **Revenue impact:** $0 / $0. Send-ready inventory: 184 leads. Glean is a Sequoia + Kleiner + Lightspeed + Goldman-backed $600M+ raise — Tier-1 target for the $500/48h audit offer.
+- **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task). 
