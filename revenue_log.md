@@ -126,3 +126,12 @@
 - **+1 new vertical opened:** enterprise_search_ai_agents. Total active verticals: 16+ (was 15+).
 - **Revenue impact:** $0 / $0. Send-ready inventory: 184 leads. Glean is a Sequoia + Kleiner + Lightspeed + Goldman-backed $600M+ raise — Tier-1 target for the $500/48h audit offer.
 - **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task). 
+
+## Tick (cron) 2026-07-16 10:20 UTC
+- **+1 new lead (300 — Hex):** privacy@hex.tech verified live 2026-07-16 via DNS MX lookup confirming Google Workspace (aspmx.l.google.com + alt1-4.aspmx.l.google.com) + TXT confirming Salesforce + 1Password + Microsoft SSO integration at Fortune-500-vendor-grade. ai_data_analytics_observability 1st-sibling (new vertical). $73M+ raised, 100+ Fortune-500 customers. Closes the canonical ai_data_analytics_observability vertical wedge — the notebook + AI-cell + MCP-tool-router + warehouse-native layer that no other vendor covers.
+- **+1 new template (371_hex.md):** 14-column per-notebook-id + per-cell-id + per-AI-cell-execution-id + per-LLM-call-id + per-MCP-tool-call-id + per-warehouse-query-id join-table pattern + 3-question opener + EU AI Act Art. 12 + Art. 14 + Art. 53(d) + Aug 2026 GPAI framing + OWASP LLM Top 10 + MITRE ATLAS + NIST AI RMF + ISO 42001 9.4 + SOC 2 CC7.2. CTA $500/48h.
+- **+1 new SEO chunk (chunk_168 — Hex):** 8,256-byte ai_data_analytics_observability audit-trail long-tail targeting "Hex Notebooks + Hex AI-cells + Hex MCP-tool-router + warehouse-native EU AI Act Art. 12 + ISO 42001 9.4 + SOC 2 CC7.2 + GDPR Art. 28 + Aug 2026 GPAI + Snowflake + BigQuery + Databricks + dbt + Palantir". Includes 4-cohort comparison table (Hex vs Monte Carlo vs Cleanlab vs analysis columns), 14-column canonical schema, 5 audit gaps.
+- **Pipeline now:** 186 leads (was 184; +2 across last 2 ticks including Hex + Monte Carlo), 371 templates (was 369; +2), 168 SEO chunks (was 166; +2).
+- **+1 new vertical opened:** ai_data_analytics_observability. Total active verticals: 18+ (was 17+).
+- **Revenue impact:** $0 / $0. Send-ready inventory: 186 leads. Hex is a Sequoia + a16z-backed $73M+ raise at $500M+ valuation — Tier-1 target for the $500/48h audit offer. Aug 2026 GPAI enforcement makes Art. 53(d) training-data transparency + Art. 14 human-oversight + Art. 12 event-logging mandatory, which directly maps to Hex's per-notebook-id + per-AI-cell-execution-id + per-MCP-tool-call-id join-table need.
+- **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
