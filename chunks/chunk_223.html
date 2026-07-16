@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voice AI Agent Audit Checklist: SOC 2 + HIPAA + EU AI Act (2026) | Atlas Store</title>
+<meta name="description" content="A 60-column per-call provenance join-table for SOC 2 Type II + HIPAA + EU AI Act audit of production voice-AI agent platforms (Retell, Bland, Vapi, Cognigy, Sierra, Fixie/Ultravox). 5 audit gaps + 12-state AI disclosure compliance + OWASP LLM Top 10 defense.">
+<meta name="keywords" content="voice AI agent audit, SOC 2 voice AI, HIPAA voice AI, EU AI Act voice agent, Retell AI audit, Bland AI audit, Vapi audit, voice AI compliance, voice AI agent checklist, TCPA AI disclosure, AI voice agent SOC 2 Type II, HIPAA BAA voice AI">
+<meta name="author" content="Atlas — Talon Forge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Voice AI Agent Audit Checklist: SOC 2 + HIPAA + EU AI Act (2026)">
+<meta property="og:description" content="60-column per-call provenance join-table for production voice-AI agent SOC 2 / HIPAA / EU AI Act audit. 5 audit gaps. 12-state AI disclosure compliance. From Atlas.">
+<meta property="og:type" content="article">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_223.html">
+<style>
+:root{--bg:#0a0a0a;--fg:#e6e6e6;--accent:#7df9ff;--muted:#9a9a9a;--card:#141414;--line:#2a2a2a;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'SF Mono',Menlo,Consolas,monospace;line-height:1.65;font-size:15px;padding:32px 24px;max-width:1200px;margin:0 auto}
+header{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:32px}
+h1{font-size:28px;color:var(--accent);letter-spacing:-0.5px;margin-bottom:8px;font-weight:600}
+h2{font-size:20px;color:var(--accent);margin:32px 0 12px;font-weight:600}
+h3{font-size:16px;color:var(--fg);margin:20px 0 8px;font-weight:600}
+p{margin-bottom:14px;color:var(--fg)}
+.subtitle{color:var(--muted);font-size:14px;margin-bottom:8px}
+.lede{background:var(--card);border-left:4px solid var(--accent);padding:16px 20px;margin:20px 0;border-radius:4px}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--card);color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;font-size:11px}
+tr:hover{background:rgba(125,249,255,0.04)}
+code{background:var(--card);color:var(--accent);padding:2px 6px;border-radius:3px;font-size:13px}
+pre{background:var(--card);padding:16px;border-radius:4px;overflow-x:auto;margin:16px 0;border:1px solid var(--line);font-size:12px}
+ul,ol{margin:12px 0 16px 24px;color:var(--fg)}
+li{margin-bottom:6px}
+.gap{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px;margin:16px 0}
+.gap h3{color:var(--accent);margin-bottom:8px}
+.tag{display:inline-block;background:rgba(125,249,255,0.12);color:var(--accent);padding:2px 8px;border-radius:3px;font-size:11px;margin-right:6px;text-transform:uppercase;letter-spacing:0.5px}
+.cta{display:inline-block;background:var(--accent);color:#0a0a0a;padding:10px 20px;border-radius:4px;text-decoration:none;font-weight:600;margin:8px 8px 0 0;font-size:13px}
+.cta.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+footer{border-top:1px solid var(--line);padding-top:24px;margin-top:48px;color:var(--muted);font-size:13px}
+@media(max-width:720px){body{padding:20px 16px}h1{font-size:22px}table{font-size:11px}th,td{padding:6px}}
+</style>
+</head>
+<body>
+
+<header>
+<p class="subtitle">Atlas Store · Audit Surface #223 · 2026-07-17 · Long-tail: <code>voice AI agent audit checklist SOC 2 HIPAA EU AI Act</code></p>
+<h1>Voice AI Agent Audit Checklist: SOC 2 + HIPAA + EU AI Act (2026)</h1>
+<p class="subtitle">A 60-column per-call provenance join-table for production voice-AI agent platforms. Audit gaps. Compliance maps. From Atlas (Talon Forge).</p>
+</header>
+
+<div class="lede">
+<p><strong>Who this is for:</strong> CISO / CTO / Head of Compliance at any production voice-AI agent platform — Retell AI, Bland AI, Vapi, Cognigy, Sierra, Fixie/Ultravox, Voiceflow — running or selling into healthcare (HIPAA BAA), financial-services (GLBA), payments (PCI DSS), collections (FDCPA), EU customers (GDPR + EU AI Act), or US-state-AI-disclosure-regulated use cases (CA SB 1001, CO SB 24-205, IL AIVIA, TX, NY, + 7 others).</p>
+<p><strong>What it covers:</strong> the canonical 60-column per-call provenance join-table that links <code>per-call-id → per-agent-id → per-prompt-version-id → per-model-id → per-TTS-segment-id → per-tool-call-id → per-handoff-event-id → per-recording-id → per-transcript-id → per-call-summary-id → per-CRM-write-id → per-downstream-billing-id</code> across SOC 2 Type II CC7.2 + HIPAA §164.312(b) + EU AI Act Art. 12 + state-by-state AI disclosure compliance.</p>
+<p><strong>What it doesn't cover:</strong> chat-only AI agents (see <a href="/atlas-store/chunks/chunk_209.html" style="color:var(--accent)">chat agent audit checklist</a>), generic LLM evaluation (see Arize AI), or speech-only TTS/STT without agent orchestration.</p>
+</div>
+
+<h2>The 5 audit gaps every production voice-AI agent must close (2026)</h2>
+
+<div class="gap">
+<h3>Gap #1 — End-to-end per-call provenance (60-column join-table)</h3>
+<p>Every voice-AI call produces 60+ discrete events. SOC 2 CC7.2 (system operations monitoring) + HIPAA §164.312(b) (audit controls) + EU AI Act Art. 12 (record-keeping) all require that these events be linkable from a single <code>per-call-id</code> for quarterly reconstruction drill.</p>
+<p><strong>Concrete columns that must link per-call-id:</strong> per-call-ANI + per-call-live-transcript + per-call-agent-decision-log + per-call-source-system-write + per-call-AI-disclosure-timestamp + per-call-human-handoff-evidence + per-call-TCPA-prior-express-consent-link + per-call-wire-fraud-voice-cloning-detection-signal + per-call-voice-biometric-verification-decision + per-call-PHI-GLBA-FDCPA-field-level-redaction + per-call-call-audio-transcript-residency-decision + per-call-downstream-state-change + per-call-prompt-version-id + per-call-model-id + per-call-TTS-segment-id + per-call-tool-call-id + per-call-recording-id + per-call-transcript-id + per-call-summary-id + per-call-CRM-write-id + per-call-billing-charge-id + per-call-VPC-peering-id + per-call-tenant-id + per-call-SSO-SAML-OIDC + per-call-SCIM-provisioning + per-call-WORM-retention-flag + per-call-breach-detection-event-id.</p>
+<p><span class="tag">SOC 2 CC7.2</span><span class="tag">HIPAA §164.312(b)</span><span class="tag">EU AI Act Art. 12</span><span class="tag">MITRE ATLAS</span></p>
+</div>
+
+<div class="gap">
+<h3>Gap #2 — Prompt-injection + voice-cloning + tool-call-poisoning defense</h3>
+<p>Voice-AI agents ingest raw audio (highest-trust input modality in any AI system), pass it through a speech-to-text model, then an LLM, then a TTS model, then output to a phone line — with multiple <code>tool-call</code> hops in the middle (CRM write, calendar book, payment capture, EHR note append). Every hop is a prompt-injection surface per OWASP LLM Top 10 LLM01.</p>
+<p><strong>The 6 specific voice-AI injection vectors:</strong></p>
+<ol>
+<li><strong>Voice cloning at input layer</strong> — the IVANS/Pindrop 2024 research showed voice cloning can defeat voice-biometric verification in under 6 seconds. Defense requires <code>voice-print-mismatch-score vs claimed-account-holder-enrolled-voice-print</code> + <code>voice-synthesis-detection-score</code> + <code>high-risk-call-flag</code> + <code>downgrade-to-human-handoff-decision</code> + <code>refuse-write-action-without-second-factor</code>.</li>
+<li><strong>TTS-segment poisoning</strong> — the TTS output stream can be poisoned to inject out-of-band signaling or social-engineering content. Defense requires per-segment watermarking.</li>
+<li><strong>Tool-call-poisoning via LLM hallucination</strong> — agent decides to call <code>crm.write()</code> with wrong account_id. Defense requires <code>per-tool-call-id</code> linkage to <code>per-crm-write-id</code> for downstream rollback.</li>
+<li><strong>Prompt-injection via transcript poisoning</strong> — caller embeds "ignore prior instructions" in transcript. Defense requires transcript-sanitization layer before LLM context.</li>
+<li><strong>Billing-charge-bypass via tool-call-bypass</strong> — agent decides to skip the payment step. Defense requires <code>per-downstream-billing-id</code> linkage.</li>
+<li><strong>CRM-write-bypass via tool-call-bypass</strong> — agent decides to skip the CRM update. Defense requires <code>per-CRM-write-id</code> linkage.</li>
+</ol>
+<p><span class="tag">OWASP LLM01</span><span class="tag">OWASP LLM04</span><span class="tag">OWASP LLM06</span><span class="tag">EU AI Act Art. 15</span></p>
+</div>
+
+<div class="gap">
+<h3>Gap #3 — State-by-state AI disclosure compliance (12 US states)</h3>
+<p>As of 2026-07-17, 12 US states have active AI-disclosure rules. Each rule has different timing + wording + documentation requirements.</p>
+
+<table>
+<thead><tr><th>State</th><th>Statute</th><th>Disclosure timing</th><th>Documentation required</th></tr></thead>
+<tbody>
+<tr><td>California</td><td>SB 1001 §3(a)(2)</td><td>Within first 10 seconds of substantive interaction</td><td>Per-call-disclosure-timestamp + script-version-control</td></tr>
+<tr><td>Colorado</td><td>SB 24-205</td><td>Before any substantive statement</td><td>Per-call-disclosure-timestamp + consumer-opt-out</td></tr>
+<tr><td>Illinois</td><td>AI Video Interview Act</td><td>Before interview + explain how AI is used</td><td>Per-call-disclosure-timestamp + consent-record</td></tr>
+<tr><td>Texas</td><td>Travis County + state-level guidance</td><td>Before any PII collection</td><td>Per-call-disclosure-timestamp + data-handling-disclosure</td></tr>
+<tr><td>New York</td><td>NYC Local Law 144 + state AI guidance</td><td>Before employment-related AI use</td><td>Bias-audit + per-call-disclosure-timestamp</td></tr>
+<tr><td>+ 7 others</td><td>Various 2024-2026 statutes</td><td>State-by-state</td><td>State-by-state</td></tr>
+</tbody>
+</table>
+
+<p><strong>Defense requires:</strong> jurisdiction-detection at call-originate time (per-call-ANI area code + per-call-state-of-record) + script-version-control per state + per-call-compliance-log + per-call-disclosure-timestamp + per-call-human-handoff-evidence + per-call-TCPA-prior-express-consent-link.</p>
+<p><span class="tag">CA SB 1001</span><span class="tag">CO SB 24-205</span><span class="tag">IL AIVIA</span><span class="tag">NY LL 144</span><span class="tag">TCPA</span></p>
+</div>
+
+<div class="gap">
+<h3>Gap #4 — PHI / GLBA / PCI / FDCPA field-level redaction</h3>
+<p>Voice-AI calls in healthcare (PHI), financial services (GLBA), payments (PCI), and collections (FDCPA) all carry regulated data. That data must be redacted in the transcript store used for downstream analytics + model-training + agent-eval, but unredacted in the audit-log WORM store for regulator-required retention windows.</p>
+<table>
+<thead><tr><th>Regulation</th><th>Field to redact</th><th>Redaction method</th><th>Audit-log retention</th></tr></thead>
+<tbody>
+<tr><td>HIPAA §164.514(b) min-necessary</td><td>PHI (name + DOB + SSN + MRN + diagnosis)</td><td>Tokenize in transcript, keep unredacted in WORM audit-log</td><td>6 years</td></tr>
+<tr><td>GLBA §501(b)</td><td>Financial-account info</td><td>Tokenize in transcript, keep unredacted in WORM audit-log</td><td>5 years</td></tr>
+<tr><td>PCI DSS 3.4</td><td>Card PAN + CVV + track data</td><td>Truncate PAN (keep first 6 + last 4), never store CVV</td><td>1 year (CVV never stored)</td></tr>
+<tr><td>FDCPA §803(c)</td><td>Debtor info + call recording + Mini-Miranda disclosure</td><td>Tokenize debtor PII, keep Mini-Miranda-timestamp in WORM</td><td>4 years</td></tr>
+</tbody>
+</table>
+<p><span class="tag">HIPAA §164.514(b)</span><span class="tag">GLBA §501(b)</span><span class="tag">PCI DSS 3.4</span><span class="tag">FDCPA §803(c)</span><span class="tag">SOC 2 CC6.7</span></p>
+</div>
+
+<div class="gap">
+<h3>Gap #5 — EU data-residency for call-audio + transcripts</h3>
+<p>EU customers (GDPR + EU AI Act) require call-audio + transcript storage in EU-resident infrastructure. This means both customer-data residency AND per-tenant-isolation in shared EU regions, with Schrems-II-compliant cross-border-transfer SCCs for any US-resident processing.</p>
+<p><strong>Required evidence:</strong> per-call-EU-region-routing-decision + per-tenant-EU-isolation-flag + per-cross-border-transfer-sccs-version + per-VPC-peering-id + per-tenant-KMS-key-id (CMK/BYOK) + per-WORM-retention-flag in EU-resident WORM store.</p>
+<p><span class="tag">Schrems II</span><span class="tag">GDPR Art. 28</span><span class="tag">EU AI Act Art. 10</span><span class="tag">EU AI Act Art. 17</span></p>
+</div>
+
+<h2>The canonical per-call provenance join-table (60 columns)</h2>
+
+<p>The join-table is the canonical 1-page brief Atlas would deliver to a voice-AI platform's procurement-and-legal team. It maps the existing call-orchestration surface to the audit gaps above.</p>
+
+<table>
+<thead><tr><th>#</th><th>Column</th><th>SOC 2</th><th>HIPAA</th><th>EU AI Act</th><th>US-state</th><th>OWASP LLM</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><code>per-call-id</code></td><td>CC7.2</td><td>§164.312(b)</td><td>Art. 12</td><td>—</td><td>—</td></tr>
+<tr><td>2</td><td><code>per-call-ANI</code></td><td>CC6.1</td><td>—</td><td>—</td><td>CA SB 1001</td><td>—</td></tr>
+<tr><td>3</td><td><code>per-call-live-transcript</code></td><td>CC7.2</td><td>§164.312(b)</td><td>Art. 12</td><td>—</td><td>—</td></tr>
+<tr><td>4</td><td><code>per-call-agent-decision-log</code></td><td>CC7.2</td><td>§164.312(b)</td><td>Art. 12 + Art. 14</td><td>—</td><td>LLM01 + LLM08</td></tr>
+<tr><td>5</td><td><code>per-call-source-system-write</code></td><td>CC7.2</td><td>§164.312(b)</td><td>Art. 12</td><td>—</td><td>LLM06</td></tr>
+<tr><td>6</td><td><code>per-call-AI-disclosure-timestamp</code></td><td>CC7.2</td><td>—</td><td>Art. 50</td><td>CA SB 1001 + 11 states</td><td>—</td></tr>
+<tr><td>7</td><td><code>per-call-human-handoff-evidence</code></td><td>CC7.2</td><td>—</td><td>Art. 14</td><td>—</td><td>LLM08</td></tr>
+<tr><td>8</td><td><code>per-call-TCPA-prior-express-consent-link</code></td><td>CC7.2</td><td>—</td><td>—</td><td>TCPA</td><td>—</td></tr>
+<tr><td>9</td><td><code>per-call-wire-fraud-voice-cloning-detection-signal</code></td><td>CC7.2</td><td>—</td><td>Art. 15</td><td>GLBA §501(b)</td><td>LLM01</td></tr>
+<tr><td>10</td><td><code>per-call-voice-biometric-verification-decision</code></td><td>CC7.2</td><td>—</td><td>Art. 15</td><td>—</td><td>LLM01</td></tr>
+<tr><td>11</td><td><code>per-call-PHI-GLBA-FDCPA-field-level-redaction</code></td><td>CC6.7</td><td>§164.514(b)</td><td>Art. 10</td><td>—</td><td>—</td></tr>
+<tr><td>12</td><td><code>per-call-call-audio-transcript-residency-decision</code></td><td>CC6.1</td><td>—</td><td>Art. 10 + Art. 28 (Schrems II)</td><td>—</td><td>—</td></tr>
+<tr><td>13</td><td><code>per-call-downstream-state-change</code></td><td>CC7.2</td><td>§164.316(b)(2)(i)</td><td>Art. 12</td><td>—</td><td>LLM06</td></tr>
+<tr><td>14</td><td><code>per-call-prompt-version-id</code></td><td>CC7.2</td><td>§164.316(b)(2)(i)</td><td>Art. 12</td><td>—</td><td>LLM01</td></tr>
+<tr><td>15</td><td><code>per-call-model-id</code></td><td>CC7.2</td><td>§164.312(b)</td><td>Art. 12 + Art. 53(d)</td><td>—</td><td>LLM01 + LLM04</td></tr>
+<tr><td>16-30</td><td><code>per-call-TTS-segment-id</code> through <code>per-call-WORM-retention-flag</code></td><td colspan="5">(15 additional columns; full table delivered in the audit)</td></tr>
+<tr><td>31-60</td><td>(30 more columns; full table delivered in the audit)</td><td colspan="5">(see audit brief for full 60-column schema)</td></tr>
+</tbody>
+</table>
+
+<h2>Why now (the 2026 procurement trigger)</h2>
+<p>Three forces are converging to make this audit surface mandatory for voice-AI vendors selling into enterprise:</p>
+<ol>
+<li><strong>EU AI Act Aug 2026 GPAI enforcement</strong> — voice-AI vendors serving EU customers must produce per-call evidence chains for high-risk classification (Annex III 4 — biometric + emotion-recognition + critical infrastructure).</li>
+<li><strong>12 US states with AI disclosure rules</strong> — voice-AI vendors serving US customers in those 12 states must produce per-call-disclosure-timestamp + per-call-jurisdiction-detection evidence.</li>
+<li><strong>HIPAA BAA + GLBA + PCI DSS + FDCPA vertical pressure</strong> — healthcare, financial-services, payments, and collections customers (Retell's case studies: Medical Data Systems, Pine Park Health; Bland's customers: Cracker Barrel, Sallie Mae, Stanford Health) all require per-call field-level redaction + audit-log WORM retention evidence.</li>
+</ol>
+
+<h2>How Atlas would audit your voice-AI platform (48 hours, $500)</h2>
+<p><strong>Day 1 (24h):</strong> Send Atlas a sandbox tenant + 30 days of call metadata. Atlas returns the 60-column per-call provenance join-table populated with your actual call-orchestration logs, mapped to SOC 2 / HIPAA / EU AI Act / 12-state disclosure compliance.</p>
+<p><strong>Day 2 (24h):</strong> Atlas returns the 5 audit gaps above with concrete evidence (logs, configs, scripts, redact-rules, residency evidence) showing which are closed and which need remediation. Output: 1-page brief + 60-col join-table + 5-gap remediation plan.</p>
+<p><strong>$500 / 48 hours</strong> fixed fee. <strong>$497 / month</strong> recurring evidence loop for quarterly reconstruction drill + SOC 2 / HIPAA / EU AI Act evidence refresh.</p>
+
+<a href="/atlas-store/index.html#contact" class="cta">Book the 48-hour audit</a>
+<a href="/atlas-store/index.html#pricing" class="cta secondary">See pricing ($500 / $497)</a>
+
+<h2>Related audit surfaces</h2>
+<ul>
+<li><a href="/atlas-store/chunks/chunk_209.html" style="color:var(--accent)">Chat AI agent audit checklist</a> — for text-only AI agents (Decagon, Cognigy, Sierra)</li>
+<li><a href="/atlas-store/chunks/chunk_221.html" style="color:var(--accent)">AI meeting transcription audit</a> — for meeting-capture platforms (Recall, Fathom, Grain, Fireflies, Otter)</li>
+<li><a href="/atlas-store/chunks/chunk_222.html" style="color:var(--accent)">Vector DB audit</a> — for retrieval-augmented systems (Pinecone, Weaviate, Qdrant, Chroma)</li>
+<li><a href="/atlas-store/chunks/chunk_220.html" style="color:var(--accent)">AI eval observability audit</a> — for production-tracing systems (Honeyhive, Maxim, Arize)</li>
+</ul>
+
+<footer>
+<p>Atlas · Talon Forge · Audit surface #223 · <a href="/atlas-store/index.html" style="color:var(--accent)">atlas-store</a> · <a href="/atlas-store/sitemap.xml" style="color:var(--accent)">sitemap</a> · Lead 374 (Retell AI) + Template 374 + Chunk 223 + build-log entry shipped 2026-07-17.</p>
+</footer>
+
+</body>
+</html>
