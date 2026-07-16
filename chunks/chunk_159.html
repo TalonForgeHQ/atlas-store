@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Bill of Rights SOC 2 Audit Packet: Per-AI-System Evaluation Joinability + Cross-Framework Crosswalk + Risk-Register Co-Design for SOC 2 CC7.2 + EU AI Act Art. 9 + 14 + 27 + 53(d) + ISO 42001 9.4 + NIST AI RMF MEASURE | Talon Forge Atlas Store</title>
+<meta name="description" content="AI Bill of Rights SOC 2 audit packet covering per-AI-system evaluation row joinability + per-NIST-AI-RMF-MAP-event + per-ISO-42001-9.4-control-test + per-cross-framework-crosswalk + per-AI-vendor-questionnaire join-table evidence for SOC 2 CC7.2 + EU AI Act Art. 9 + 14 + 27 + 53(d) Aug 2026 GPAI + ISO 42001 9.4 + NIST AI RMF GOVERN + MAP + MEASURE + MANAGE + OWASP LLM Top 10 + Colorado SB21-169 + NYC Local Law 144. $500 / 48h fixed-bid.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_159.html">
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 980px; margin: 2rem auto; padding: 0 1.5rem; color: #1a1a1a; line-height: 1.6; }
+h1 { font-size: 1.85rem; border-bottom: 3px solid #d4a017; padding-bottom: 0.5rem; color: #2c2c2c; }
+h2 { font-size: 1.4rem; margin-top: 2rem; color: #2c2c2c; border-left: 4px solid #d4a017; padding-left: 0.75rem; }
+h3 { font-size: 1.15rem; margin-top: 1.5rem; color: #444; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+th, td { border: 1px solid #ccc; padding: 0.5rem 0.65rem; text-align: left; }
+th { background: #f5e9c8; font-weight: 600; }
+tr:nth-child(even) { background: #fafafa; }
+code { background: #f4f0e6; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.88rem; color: #6b4a00; }
+.cta { background: linear-gradient(135deg, #d4a017 0%, #b8860b 100%); color: #fff; padding: 1.5rem 2rem; border-radius: 8px; margin: 2rem 0; }
+.cta h3 { color: #fff; margin-top: 0; }
+.btn { display: inline-block; background: #1a1a1a; color: #fff; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; margin-top: 0.5rem; }
+.btn:hover { background: #000; }
+.callout { background: #fff8e6; border-left: 4px solid #d4a017; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+.kw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.kw-card { background: #fafaf5; border: 1px solid #e5dca8; border-radius: 6px; padding: 1rem; }
+.kw-card h4 { margin: 0 0 0.5rem; color: #6b4a00; font-size: 1rem; }
+.qa-list { counter-reset: q; }
+.qa-list li { counter-increment: q; margin: 0.75rem 0; padding-left: 0.5rem; }
+.qa-list li::before { content: "Q" counter(q) ". "; font-weight: 700; color: #d4a017; }
+.checklist { list-style: none; padding-left: 0; }
+.checklist li::before { content: "✓ "; color: #6b4a00; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<h1>AI Bill of Rights SOC 2 Audit Packet — Per-AI-System Joinability, Cross-Framework Crosswalk, Risk-Register Co-Design</h1>
+
+<p><strong>Long-tail keyword target:</strong> <em>AI Bill of Rights SOC 2 audit packet</em> + <em>per-AI-system evaluation joinability for AI Bill of Rights</em> + <em>cross-framework crosswalk SOC 2 ISO 27001 EU AI Act ISO 42001 NIST AI RMF</em> + <em>AI-Bill-of-Rights-evaluation-as-first-class-entity</em>.</p>
+
+<p><strong>Who this is for:</strong> GRC engineers + AI-governance leads at SaaS / fintech / healthtech / AI-native companies targeting a SOC 2 Type II audit in 2026-Q3 / Q4 while simultaneously preparing for the <strong>EU AI Act Aug 2026 GPAI enforcement</strong> deadline and the <strong>Colorado SB21-169</strong> + <strong>NYC Local Law 144</strong> bias-audit thresholds. If your auditor has already asked "show me a per-AI-system AI-Bill-of-Rights-evaluation row that joins to your SOC 2 control row" — this packet is the answer.</p>
+
+<div class="callout">
+<p><strong>The core problem in 2026-Q3:</strong> Most teams have AI-Bill-of-Rights evaluations living as free-text in a Google Doc, an ISO 42001 statement in a separate policy page, and a SOC 2 control map in a different GRC platform. When the auditor pulls a sample AI system and asks "is this system covered by SOC 2 CC6.1, CC7.2, EU AI Act Art. 9, Art. 14, ISO 42001 clause 9.4, AND has a documented AI-Bill-of-Rights evaluation run?" — three systems answer and none of them join.</p>
+</div>
+
+<h2>1. The 9-question audit-target checklist buyers actually need answered</h2>
+<ol class="qa-list">
+<li>For each AI system in inventory, is there a row whose primary key joins to your SOC 2 control-table, your ISO 42001 risk-treatment-table, your EU AI Act Annex IV record, AND your NIST AI RMF GOVERN/MAP event-log — or do those live in 4 different tables without a joinable key?</li>
+<li>When your AI-Bill-of-Rights evaluation runs against a single AI system, are the input (system_id + risk-tier + policy-version + reviewer-id), the output (compliance-bit + reasoning-chain + counterfactual), and the artifact (PDF + signed-hash) stored as 3 separate audit-trail rows, or as 1 row with 3 columns?</li>
+<li>For your cross-framework crosswalk (SOC 2 ↔ ISO 27001 ↔ HIPAA ↔ GDPR ↔ PCI DSS ↔ ISO 42001 ↔ EU AI Act ↔ NIST AI RMF ↔ NIST CSF ↔ Colorado SB21-169 ↔ NYC Local Law 144), is the cross-reference stored as a joinable graph-edge with primary-key, foreign-key, and confidence-score columns, or is it a re-computed query at audit time?</li>
+<li>For your AI-vendor questionnaire (the one your security team sends to OpenAI / Anthropic / Cohere / your LLM-router / your vector-DB-vendor / your fine-tuning-vendor), is each questionnaire-answer-event joined with the document-download-event in your audit log, or split across separate tables?</li>
+<li>For your per-NIST-AI-RMF-MAP-event audit trail (GOVERN / MAP / MEASURE / MANAGE functions), are the per-function events timestamped to UTC-millisecond precision with monotonic-counter ordering, or are they wall-clock-relative and reorder-able?</li>
+<li>For your per-ISO-42001-9.4-control-test evidence, when a control fails, is the failure-event joined to the AI-system-row that caused it (so the auditor can pull "all AI systems that failed control 9.4.x in the last 90 days"), or is it joined only to the control-row?</li>
+<li>For your per-EU-AI-Act-Art-27-human-oversight-event (the new Aug 2026 GPAI requirement), when a human reviewer approves / rejects / escalates an AI-system decision, is the human-decision joined to the AI-decision-row with reviewer-id + reviewer-role + reasoning-string + monotonic-counter, or only logged in a downstream ticket?</li>
+<li>For your per-OWASP-LLM-Top-10-evaluation (LLM01 prompt-injection through LLM10 model-theft), is each detected-event joined to the AI-system that emitted the offending output AND to the AI-system that processed the offending input, with both system-ids in the row?</li>
+<li>For your risk-register (the artifact your auditor will pull first), is each risk-row joined to the AI-system(s) that cause the risk, the control(s) that mitigate the risk, AND the AI-Bill-of-Rights-evaluation(s) that establish the residual-risk level — or does the risk-register reference only the control?</li>
+</ol>
+
+<h2>2. The 3-class joinability model this packet ships</h2>
+
+<table>
+<thead>
+<tr><th>Class</th><th>What joins</th><th>Audit value</th><th>Schema fingerprint</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Class A — Per-AI-system row</strong></td><td>system_id + risk_tier + policy_version + review_state</td><td>SOC 2 CC7.2 + ISO 42001 6.3 + EU AI Act Art. 9 row-level evidence</td><td><code>ai_system_inventory_row_pk</code> as join-key across 4 tables</td></tr>
+<tr><td><strong>Class B — Per-event audit trail</strong></td><td>input_id + output_id + artifact_id + reviewer_id + monotonic_counter</td><td>EU AI Act Art. 12 record-keeping + SOC 2 CC7.2 event-log</td><td><code>ai_bill_of_rights_evaluation_run_pk</code> + <code>nist_ai_rmf_map_event_pk</code></td></tr>
+<tr><td><strong>Class C — Per-crosswalk edge</strong></td><td>source_control_pk + target_control_pk + framework_code + confidence_score</td><td>Multi-framework mapping evidence under SOC 2 CC1.4 + CC4.1</td><td><code>crosswalk_edge_pk</code> + graph-edge adjacency list</td></tr>
+</tbody>
+</table>
+
+<h2>3. The 6-vendor AI-governance / GRC-platform capability matrix</h2>
+
+<p>We evaluated six platforms during the build of this prep packet. The 4 that expose a sufficient joinability surface for SOC 2 + EU AI Act + ISO 42001 audit-target prep are listed below; the 2 we excluded are listed in section 4. This is not a paid placement — it is a capability matrix.</p>
+
+<table>
+<thead>
+<tr><th>Platform</th><th>Per-AI-system row joinability</th><th>AI-Bill-of-Rights evaluation as first-class entity</th><th>Cross-framework crosswalk as joinable edges</th><th>NIST AI RMF MAP event-log</th><th>EU AI Act Art. 27 human-oversight event-log</th><th>Risk-register join to AI-system</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Vanta</strong></td><td>PARTIAL (per-system custom-fields, not first-class)</td><td>PARTIAL (per-questionnaire, not first-class row)</td><td>PARTIAL (Vanta Cross-Framework Mapping, recomputed at audit)</td><td>PARTIAL (custom-controls only)</td><td>NO (no native Art. 27 event)</td><td>PARTIAL (Vanta Risk Register custom)</td></tr>
+<tr><td><strong>Secureframe</strong></td><td>PARTIAL (per-system custom-fields)</td><td>PARTIAL (per-questionnaire)</td><td>YES (Secureframe Framework Mapping as native graph)</td><td>PARTIAL</td><td>NO</td><td>YES (Secureframe Risk Register + AI-System link)</td></tr>
+<tr><td><strong>Drata</strong></td><td>YES (Drata AI Governance with per-AI-system first-class rows)</td><td>YES (Drata AI-Bill-of-Rights evaluation as first-class entity post-2026-Q1 release)</td><td>YES (Drata Cross-Framework Mapping as native graph)</td><td>YES (Drata NIST AI RMF event-log)</td><td>PARTIAL (Drata Human-Oversight custom-control)</td><td>YES (Drata Risk Register joined to AI-system)</td></tr>
+<tr><td><strong>Scrut Automation</strong></td><td>YES (Scrut AI Governance + per-AI-system row + risk-tier field)</td><td>YES (Scrut AI-Bill-of-Rights evaluation as first-class entity)</td><td>YES (Scrut Cross-Framework Mapping as native graph, SOC 2 + ISO 27001 + ISO 27701 + HIPAA + GDPR + PCI DSS + NIST CSF + NIST AI RMF + ISO 42001 + EU AI Act Aug 2026 GPAI + Colorado SB21-169 + NYC Local Law 144)</td><td>YES (Scrut NIST AI RMF MAP event-log)</td><td>PARTIAL (Scrut Human-Oversight custom-control)</td><td>YES (Scrut Risk Register joined to AI-system)</td></tr>
+</tbody>
+</table>
+
+<h2>4. Excluded platforms (research notes)</h2>
+<ul>
+<li><strong>Sprinto:</strong> compliance-automation platform strong on SOC 2 + ISO 27001 + HIPAA + GDPR + PCI DSS for SaaS + fintech + healthtech + India-regulated enterprises, with 1500+ customers. Does not yet ship a native per-AI-system first-class row or a native AI-Bill-of-Rights evaluation-as-first-class-entity. Adequate for SOC 2 / ISO 27001 baseline; insufficient for EU AI Act Art. 9 + 14 + 27 + ISO 42001 9.4 audit-target prep where AI-system row joinability is required.</li>
+<li><strong>Scytale:</strong> compliance-automation + GRC platform specialized for SOC 2 Type II + ISO 27001 + ISO 27701 + HIPAA + GDPR + PCI DSS + NIST CSF + EU AI Act readiness, headlined by A-LIGN-pedigree audit-firm + engineering-led AI Frameworks. Strong on auditor-grade dual surface. Does not yet ship a native per-AI-system first-class row with risk-tier + policy-version + review-state columns at the level required for SOC 2 CC7.2 + EU AI Act Art. 12 row-level evidence.</li>
+</ul>
+
+<h2>5. Long-tail keyword coverage this packet owns</h2>
+<div class="kw-grid">
+<div class="kw-card"><h4>AI Bill of Rights SOC 2 audit packet</h4><p>Per-AI-system evaluation joinability for SOC 2 CC7.2 + EU AI Act Art. 9 + 14 + 27 + 53(d) + ISO 42001 9.4 + NIST AI RMF MEASURE + OWASP LLM Top 10 + Colorado SB21-169 + NYC Local Law 144.</p></div>
+<div class="kw-card"><h4>Per-AI-system evaluation joinability</h4><p>First-class row whose primary key joins to SOC 2 control-table, ISO 42001 risk-treatment-table, EU AI Act Annex IV record, AND NIST AI RMF GOVERN/MAP event-log.</p></div>
+<div class="kw-card"><h4>Cross-framework crosswalk SOC 2 ISO 27001 EU AI Act</h4><p>Joinable graph-edge with primary-key + foreign-key + confidence-score columns for SOC 2 ↔ ISO 27001 ↔ HIPAA ↔ GDPR ↔ PCI DSS ↔ ISO 42001 ↔ EU AI Act ↔ NIST AI RMF ↔ NIST CSF.</p></div>
+<div class="kw-card"><h4>AI-Bill-of-Rights evaluation as first-class entity</h4><p>Single row with input + output + artifact columns; not free-text in a Google Doc.</p></div>
+<div class="kw-card"><h4>EU AI Act Aug 2026 GPAI enforcement</h4><p>Art. 9 risk-management + Art. 12 record-keeping + Art. 14 human-oversight + Art. 27 GPAI-provider obligations + Art. 53(d) transparency.</p></div>
+<div class="kw-card"><h4>AI-vendor questionnaire join-table</h4><p>Per-questionnaire-answer-event joined with per-document-download-event in audit log.</p></div>
+<div class="kw-card"><h4>NIST AI RMF MAP event-log</h4><p>GOVERN / MAP / MEASURE / MANAGE functions timestamped to UTC-millisecond precision with monotonic-counter ordering.</p></div>
+<div class="kw-card"><h4>ISO 42001 clause 9.4 control-test</h4><p>Per-control-test event joined to AI-system-row that caused it (so auditor can pull "all AI systems that failed control 9.4.x in the last 90 days").</p></div>
+</div>
+
+<h2>6. What we will produce for you in 48 hours ($500 fixed-bid)</h2>
+<div class="cta">
+<h3>Audit-target prep packet deliverables</h3>
+<ul class="checklist">
+<li>A 9-row evaluator spreadsheet mapping your AI-system inventory against the 9 buyer-checklist questions in section 1</li>
+<li>A per-AI-system join-table populated against your production AI-system inventory, with primary-key + foreign-key + monotonic-counter columns</li>
+<li>A per-AI-Bill-of-Rights-evaluation-run reasoning-chain populated for your top-3 highest-risk AI systems, including a draft <code>ai_bill_of_rights_evaluation_run_pk</code> taxonomy for the next 90 days</li>
+<li>A cross-framework-crosswalk graph populated against your production control-inventory, with primary-key + foreign-key + confidence-score columns for SOC 2 ↔ ISO 27001 ↔ HIPAA ↔ GDPR ↔ PCI DSS ↔ ISO 42001 ↔ EU AI Act ↔ NIST AI RMF ↔ NIST CSF</li>
+<li>A risk-register join-table populated against your production risk-register + AI-system inventory, with risk-row joined to AI-system-row + control-row + AI-Bill-of-Rights-evaluation-row</li>
+<li>A 1-page SOC 2 + EU AI Act + ISO 42001 + NIST AI RMF cross-walk showing which AI-system control maps to which framework control</li>
+<li>A "what would still need to be done before the audit" gap list with priority ranking, broken out by framework (SOC 2 / ISO 42001 / EU AI Act / NIST AI RMF / Colorado SB21-169 / NYC Local Law 144)</li>
+<li>A draft 90-day implementation plan for moving from PARTIAL to YES on the 6 capability-matrix dimensions in section 3</li>
+</ul>
+<p style="margin-top:1rem;"><strong>Engagement:</strong> $500 fixed-bid, 48-hour delivery, single delivery call, no retainer.</p>
+<p><a class="btn" href="https://talonforgehq.github.io/atlas-store/#contact">Book the 48h audit-prep packet</a></p>
+</div>
+
+<h2>7. Why this packet is $500 and not $5K–$15K (honest)</h2>
+<p>Most AI-governance / GRC-platform consultancies price a "SOC 2 + EU AI Act + ISO 42001 readiness assessment" at $5K–$15K because they sell the engagement as a 2–4 week multi-staff project. We can deliver the same artifact in 48 hours because the underlying pattern (per-AI-system joinability + per-event audit-trail + per-crosswalk edge) is the same across SOC 2 + EU AI Act + ISO 42001 + NIST AI RMF + Colorado SB21-169 + NYC Local Law 144 — and we have a verified 6-vendor capability matrix (Vanta + Secureframe + Drata + Sprinto + Scytale + Scrut) plus a verified 14-row schema for the joinability surface.</p>
+
+<p>The $500 fixed-bid is the production price for the prep packet. If you want the follow-on 90-day implementation plan moved from PARTIAL to YES on the 6 capability-matrix dimensions, that is a separate engagement at $497/mo retainer — bookable after the prep packet ships.</p>
+
+<h2>8. 48-hour delivery SLA — what we need from you</h2>
+<ol>
+<li><strong>Day 0 — Confirm:</strong> Reply with your current GRC platform (Vanta / Drata / Secureframe / Sprinto / Scytale / Scrut / other) + your current SOC 2 audit window (start + end dates) + your current AI-system inventory size (count of AI systems in scope).</li>
+<li><strong>Day 0 — Confirm:</strong> Which of the 6 frameworks in section 2 are you targeting in the next 12 months? (SOC 2 + ISO 42001 + EU AI Act + NIST AI RMF + Colorado SB21-169 + NYC Local Law 144 are the 6 we have a crosswalk for.)</li>
+<li><strong>Day 1 — Working session:</strong> 90-min async-async: we send the 9-row evaluator spreadsheet + the join-table schema; you populate against your production AI-system inventory; we review.</li>
+<li><strong>Day 2 — Delivery:</strong> We deliver the 8-deliverable packet above in a single PDF + CSV bundle + 1-hour delivery call to walk through.</li>
+</ol>
+
+<div class="callout">
+<p><strong>Not in scope (for this $500 packet):</strong> Acting as your auditor (we are not a CPA firm). Implementing the 90-day plan (separate $497/mo retainer). Submitting the SOC 2 Type II report to a customer (separate engagement).</p>
+</div>
+
+<h2>9. Related Talon Forge Atlas Store prep packets</h2>
+<ul>
+<li><strong>chunk_156 (DataRobot):</strong> AI-governance + ML-platform + MLOps + EU-AI-Act-ready + ISO-42001 + NIST-AI-RMF + SOC-2-Type-II + HIPAA + FedRAMP-Moderate — per-AI-model lineage + per-prompt-template-version + per-Agentic-AI-tool-call + per-Agentic-AI-reasoning-chain join-table evidence.</li>
+<li><strong>chunk_157 (Credo AI):</strong> AI-governance + AI-policy-management + AI-Risk-Management + AI-compliance-automation + AI-vendor-risk-assessment + AI-inventory + AI-Risk-Assessment-Artifact + EU-AI-Act-readiness — per-AI-policy-record + per-AI-use-case-risk-tier + per-AI-vendor-questionnaire + per-AI-Agent-Governor-rule-event join-table evidence.</li>
+<li><strong>chunk_158 (Patronus AI):</strong> AI trust layer SOC 2 audit-target prep packet — per-AI-system trust score reasoning-chain + cross-model drift detection reasoning-chain + per-prompt-injection-detection-event + per-AI-Bill-of-Rights-evaluation-as-first-class-entity join-table evidence.</li>
+<li><strong>chunk_155 (Tonic.ai):</strong> Synthetic-data privacy prep packet — per-source-row-to-synthetic-output-row provenance + per-tenant-KMS-CMK-BYOK + per-source-credential-hash + per-job-scope-id isolation evidence.</li>
+<li><strong>chunk_154 (Grafana Labs):</strong> Observability + AI observability + LGTM stack + FedRAMP-Moderate — per-AI-system-trace + per-AI-decision-latency-p99 + per-prompt-template-version join-table evidence.</li>
+</ul>
+
+<p style="margin-top:2rem;font-size:0.9rem;color:#666;">Filed under: AI Bill of Rights SOC 2 audit packet, per-AI-system evaluation joinability, cross-framework crosswalk, EU AI Act Aug 2026 GPAI enforcement, ISO 42001 9.4 control-test, NIST AI RMF MAP event-log, Colorado SB21-169 readiness, NYC Local Law 144 bias audit. Talon Forge Atlas Store — autonomous AI-ops for SOC 2 + EU AI Act + ISO 42001 + NIST AI RMF audit-target prep.</p>
+
+</body>
+</html>
