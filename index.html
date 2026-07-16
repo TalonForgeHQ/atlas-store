@@ -16214,5 +16214,164 @@ code { background: #f4f0e6; padding: 0.1rem 0.35rem; border-radius: 3px; font-si
 
 </article>
 
+<article id="chunk-170" data-tick="2026-07-16-1040Z" data-vertical="ai_video_generation" data-lead="302" data-template="373_luma" data-cohort-2nd-sibling="runway-301">
+
+<h1>Luma AI Dream Machine + Ray2 + Ray3 + Genie + Flythroughs — Per-Prompt + Per-3D-Scene-Graph + Per-Camera-Trajectory Audit-Trail</h1>
+
+<p class="lede">
+<strong>Luma AI</strong> is the canonical <strong>ai_video_generation</strong> 2nd-sibling vendor (paired with Runway / lead 301) — the physically-grounded ray-traced foundation-model layer (Dream Machine + Ray2 + Ray3 + Luma Diffusion) paired with the production-tooling layer (Genie 3D-aware + Flythroughs camera-trajectory + Luma Studio + Luma Enterprise). This chunk walks the audit-trail evidence pattern that links per-prompt-id + per-Dream-Machine-inference-call-id + per-Ray2-Ray3-temporal-window-id + per-Genie-3D-scene-graph-node-id + per-camera-trajectory-keyframe-id + per-video-frame-id + per-training-corpus-clip-id + per-C2PA-content-credential-id + per-watermark-detection-id + per-deepfake-detection-score + per-Luma-Fine-Tune-corpus-clip-id + per-Luma-Ray2-Ray3-Diffusion-pipeline-step-id + per-fine-tune-corpus-id + per-training-dataset-version-id + per-human-oversight-approval-id evidence back to a queryable 24-column join-table row for SOC 2 CC7.2 + EU AI Act Art. 12 + Art. 14 + Art. 50 + Art. 53(d) + Aug 2026 GPAI + ISO 42001 9.4 + GDPR Art. 28 + Art. 32 + OWASP LLM Top 10 + MITRE ATLAS + NIST AI RMF MEASURE.
+</p>
+
+<h2>1. Why Luma (and not Runway alone)</h2>
+
+<table>
+<thead>
+<tr><th>Surface</th><th>Runway (1st-sibling)</th><th>Luma AI (2nd-sibling)</th><th>Why it matters for audit</th></tr>
+</thead>
+<tbody>
+<tr><td>Foundation-model layer (per-inference-call)</td><td>✅ Gen-4 + Gen-4 Aleph</td><td>✅ Dream Machine + Ray2 + Ray3</td><td>Both surface the per-prompt + per-inference-call join row</td></tr>
+<tr><td>Production-tooling layer (per-Custom/Fine-Tune)</td><td>✅ Runway Custom Models</td><td>✅ Luma Fine-Tune API</td><td>Both surface the per-Custom-Model-version + per-fine-tune-corpus-clip row</td></tr>
+<tr><td>Per-temporal-coherence audit</td><td>✅ Runway Frames</td><td>✅ Ray2 Ray3 + Ray3 multi-keyframe</td><td>Both surface the per-frame-temporally-coherent-window row</td></tr>
+<tr><td>Per-identity-preservation audit</td><td>✅ Runway Act-Two</td><td>⚠️ partial (Luma Genie avatar)</td><td>Runway leads on identity-preservation</td></tr>
+<tr><td>Per-C2PA + watermark + deepfake-detection</td><td>✅ full</td><td>⚠️ partial</td><td>Runway leads on C2PA + deepfake-detection surface</td></tr>
+<tr><td><strong>Per-3D-scene-graph + camera-trajectory audit (Luma-distinct)</strong></td><td>❌</td><td><strong>✅ Luma Genie + Flythroughs</strong></td><td>Luma is the ONLY vendor with this surface — no Runway equivalent</td></tr>
+<tr><td><strong>Per-ray-traced-physics audit (Luma-distinct)</strong></td><td>❌</td><td><strong>✅ Ray2 + Ray3 ray-traced</strong></td><td>Luma is the ONLY vendor with per-ray-traced-physics-event audit</td></tr>
+<tr><td>Frameworks covered</td><td>SOC 2 + ISO 27001 + ISO 42001 + GDPR + EU AI Act + HIPAA + NIST AI RMF</td><td>SOC 2 (in progress) + GDPR + EU AI Act + NIST AI RMF + C2PA v2.x</td><td>Runway leads on framework coverage; Luma trails slightly</td></tr>
+</tbody>
+</table>
+
+<h2>2. The audit-trail join-table pattern (canonical schema)</h2>
+
+<p>The shape auditors query under SOC 2 CC7.2 + EU AI Act Art. 12 + Art. 50 + ISO 42001 9.4 + GDPR Art. 28 + NIST AI RMF MEASURE is a single join-table row per Dream Machine + Ray2 Ray3 + Genie + Flythroughs inference call. For Luma, the 24 columns are:</p>
+
+<ol>
+<li><code>prompt_id</code> — per-prompt-row identifier (UUID v4)</li>
+<li><code>inference_call_id</code> — per-Dream-Machine + Ray2 Ray3 + Genie + Flythroughs inference-call (UUID v4)</li>
+<li><code>dream_machine_inference_step_id</code> — per-Ray2-Ray3-diffusion-step audit-trail under EU AI Act Art. 9 + Art. 14</li>
+<li><code>ray2_ray3_temporal_window_id</code> — per-frame-temporally-coherent-window provenance under MITRE ATLAS AML.T0048</li>
+<li><code>genie_3d_scene_graph_id</code> — per-3D-scene-graph-node + per-camera-trajectory-keyframe (Luma-distinct)</li>
+<li><code>video_frame_id</code> — per-generated-frame provenance under EU AI Act Art. 50 + NIST AI RMF MEASURE</li>
+<li><code>training_corpus_clip_id</code> — per-trained-on-clip audit under EU AI Act Art. 53(d) + ISO 42001 6.1.4</li>
+<li><code>training_dataset_version_id</code> — per-Ray2-Ray3-training-dataset-version provenance under Art. 53(1)(b) + ISO 42001 6.1.4</li>
+<li><code>fine_tune_corpus_clip_id</code> — per-Luma-Fine-Tune-corpus-clip audit under Art. 53(d)</li>
+<li><code>third_party_licensed_corpus_id</code> — per-third-party-trained-on-corpus license-provenance under Art. 53(d) + GDPR Art. 28</li>
+<li><code>c2pa_content_credential_id</code> — per-C2PA-content-credential under EU AI Act Art. 50 + C2PA v2.x</li>
+<li><code>watermark_removal_detection_id</code> — per-watermark-removal-detection under EU AI Act Art. 50 + OWASP LLM Top 10 LLM05</li>
+<li><code>deepfake_detection_score</code> — per-deepfake-defense-score under EU AI Act Art. 50 + MITRE ATLAS AML.T0048</li>
+<li><code>ai_generated_disclosure_flag</code> — per-AI-generated-content-disclosure-propagation under EU AI Act Art. 50</li>
+<li><code>downstream_decision_record_id</code> — per-downstream-decision provenance under EU AI Act Annex III 4 + GDPR Art. 22</li>
+<li><code>human_oversight_approval_id</code> — per-human-oversight-approval under EU AI Act Art. 14 + ISO 42001 9.4</li>
+<li><code>risk_management_event_id</code> — per-risk-management-event under EU AI Act Art. 9 + NIST AI RMF GOVERN + MAP + MEASURE + MANAGE</li>
+<li><code>eu_ai_act_art_12_event</code> — per-Art.12-event-logging under EU AI Act + Aug 2026 GPAI enforcement</li>
+<li><code>eu_ai_act_art_50_synthetic_content_disclosure_event</code> — per-Art.50-disclosure-event under EU AI Act + downstream-propagation</li>
+<li><code>eu_ai_act_art_53_d_summary_event</code> — per-Art.53(d)-training-data-summary-event under EU AI Act + Aug 2026 GPAI</li>
+<li><code>iso_42001_9_4_control_test_id</code> — per-ISO-42001-9.4-control-test under ISO 42001 + SOC 2 CC7.2</li>
+<li><code>owasp_llm_top_10_evaluation_id</code> — per-OWASP-LLM-Top-10-evaluation under OWASP LLM01-LLM10</li>
+<li><code>mitre_atlas_evaluation_id</code> — per-MITRE-ATLAS-evaluation under MITRE ATLAS AML.T0010-AML.T0048</li>
+<li><code>nist_ai_rmf_measure_event_id</code> — per-NIST-AI-RMF-MEASURE-event under NIST AI RMF + ISO 42001 9.4</li>
+</ol>
+
+<h2>3. The five audit gaps</h2>
+
+<h3>Gap 1 — End-to-end per-prompt + per-3D-scene-graph + per-camera-trajectory provenance</h3>
+<p>Auditors want one row that joins per-prompt-id → per-Dream-Machine-inference-call-id → per-Ray2-Ray3-temporal-window-id → per-Genie-3D-scene-graph-node-id → per-camera-trajectory-keyframe-id → per-video-frame-id → per-training-corpus-clip-id under SOC 2 CC7.2 + EU AI Act Art. 12 + Art. 50 + ISO 42001 9.4 + GDPR Art. 28. Luma's Luma Audit Log exposes per-inference-call events, but the per-3D-scene-graph + per-camera-trajectory-keyframe linkage requires a 24-column join — currently requires a per-customer-data-engineer to assemble. Atlas's deliverable ships the canonical 24-column join-table view.</p>
+
+<h3>Gap 2 — EU AI Act Art. 53(d) GPAI training-data transparency</h3>
+<p>Luma's per-training-corpus-clip-id + per-fine-tune-corpus-clip-id + per-Luma-Ray2-Ray3-training-data-asset-id + per-training-dataset-version-id + per-Luma-Fine-Tune-corpus-clip + per-third-party-trained-on-corpus license-provenance table needs mapping to Art. 53(d) + Art. 53(1)(b) + ISO 42001 6.1.4. Currently a per-screenshot workflow. Atlas ships the 12-column license-provenance table.</p>
+
+<h3>Gap 3 — Prompt-injection + Luma-Fine-Tune-backdoor + 3D-scene-graph-spoofing + camera-trajectory-injection + training-corpus-poisoning defense</h3>
+<p>OWASP LLM Top 10 (LLM01-LLM10) + MITRE ATLAS (AML.T0048 deepfake, AML.T0010 ML supply chain, AML.T0024 exploit public model) + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14 + Art. 50 require a per-prompt execution defense matrix. <strong>Luma-distinct vector: 3D-scene-graph-spoofing</strong> — an attacker manipulates per-Genie-3D-scene-graph-node to inject malicious geometry into a Flythroughs camera-trajectory generation. Atlas ships the 10-column per-prompt-id defense matrix.</p>
+
+<h3>Gap 4 — Cross-tenant isolation-evidence</h3>
+<p>SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate + ITAR + CMMC Level 2/3 require per-tenant + per-deployment isolation evidence (Luma Cloud + Luma API Enterprise + Luma on-prem + Luma air-gapped + Luma government). Atlas ships the isolation-evidence row.</p>
+
+<h3>Gap 5 — WORM retention + cost-attribution + GDPR Art. 17 deletion-propagation</h3>
+<p>EU AI Act Annex III 4 + GDPR Art. 17 + Art. 50 + Aug 2026 GPAI enforcement require WORM retention + cost-attribution + deletion-propagation evidence. Atlas ships the WORM map.</p>
+
+<h2>4. Why this matters now (Aug 2026 GPAI enforcement)</h2>
+
+<p>Aug 2026 GPAI enforcement makes Art. 53(d) training-data transparency + Art. 53(1)(b) copyright-summary + Art. 14 human-oversight + Art. 12 event-logging + Art. 50 synthetic-content-disclosure mandatory. Luma customers (tens of thousands of enterprise + studio + agency + media + broadcast + sports customers) face enterprise-procurement blockers without this evidence row. Atlas's 48-hour deliverable produces it for $500 flat.</p>
+
+<h2>5. CTA</h2>
+
+<p>Reply to <code>hello@lumalabs.ai</code> with which of the 5 audit-gaps is most acute — Atlas sends a 2-page scope on the same thread.</p>
+</article>
+
+<article id="chunk-171" data-tick="2026-07-16-1050Z" data-vertical="ai_video_generation" data-lead="303" data-template="374_synthesia" data-cohort-3rd-sibling="runway-301+luma-302">
+
+<h1>Synthesia STUDIO + Avatars + Express Avatars + AI Script Generator — Per-Script-Segment + Per-Consented-Likeness + Per-GDPR-Art-9-Biometric Audit-Trail</h1>
+
+<p class="lede">
+<strong>Synthesia</strong> is the canonical <strong>ai_video_generation</strong> 3rd-sibling vendor (paired with Runway / lead 301 + Luma / lead 302) — the enterprise avatar-led + consented-likeness + script-driven + GDPR-Art-9-biometric + lip-sync foundation-model layer (Synthesia Avatars + AI Script Generator + Synthesia Diffusion + Synthesia Lip-Sync Diffusion) paired with the consented-likeness-clip + script-driven production-tooling layer (Synthesia STUDIO + Synthesia Express Avatars + Synthesia API + Synthesia Brand Kits + Synthesia Consent Receipt). This chunk walks the audit-trail evidence pattern that links per-script-segment-id + per-avatar-id + per-Synthesia-inference-call-id + per-lip-sync-keyframe-id + per-video-frame-id + per-avatar-training-corpus-clip-id + per-consented-likeness-clip-id + per-GDPR-Art-9-special-category-biometric-data + per-Express-Avatar-fine-tune-corpus-clip-id + per-consent-revocation-cascade-event-id + per-C2PA-content-credential-id + per-watermark-detection-id + per-deepfake-detection-score + per-human-oversight-approval-id + per-Synthia-lip-sync-Diffusion-pipeline-step-id evidence back to a queryable 19-column join-table row for SOC 2 CC7.2 + EU AI Act Art. 9 + Art. 12 + Art. 14 + Art. 27 (EU representative for non-EU providers — Synthesia is UK-based post-Brexit so Art. 27 applies) + Art. 50 + Art. 53(d) + Aug 2026 GPAI + ISO 42001 9.4 + GDPR Art. 9 (special-category biometric data — explicitly named) + Art. 28 + Art. 32 + OWASP LLM Top 10 + MITRE ATLAS + NIST AI RMF MEASURE.
+</p>
+
+<h2>1. Why Synthesia (and not Runway + Luma alone)</h2>
+
+<table>
+<thead>
+<tr><th>Surface</th><th>Runway (1st-sibling)</th><th>Luma AI (2nd-sibling)</th><th>Synthesia (3rd-sibling)</th><th>Why it matters for audit</th></tr>
+</thead>
+<tbody>
+<tr><td>Generation modality</td><td>Gen-from-prompt</td><td>Gen-from-prompt + 3D-scene</td><td>Script-driven + consented-avatar</td><td>Synthesia is the ONLY avatar-led sibling — Runway + Luma are prompt-driven</td></tr>
+<tr><td>Consent + likeness surface</td><td>⚠️ limited (Act-Two identity-preservation)</td><td>⚠️ limited (Genie avatar)</td><td>✅ Per-consented-likeness-clip + per-GDPR-Art-9-biometric-consent-record + per-consent-revocation-cascade</td><td>Synthesia is the ONLY vendor with the full GDPR-Art-9 + EU-AI-Act-Annex-III-1 biometric cascade</td></tr>
+<tr><td>Lip-sync + temporal-coherence audit</td><td>⚠️ partial (Runway Frames)</td><td>✅ Ray2-Ray3 temporal-window</td><td>✅ Per-lip-sync-keyframe-id + per-Synthia-lip-sync-Diffusion-pipeline-step-id (Synthesia-distinct)</td><td>Synthesia surfaces the per-lip-sync-frame temporal audit no other vendor matches</td></tr>
+<tr><td>Fine-tune + custom-model surface</td><td>✅ Runway Custom Models</td><td>✅ Luma Fine-Tune API</td><td>✅ Synthesia Express Avatars</td><td>All 3 surface per-fine-tune-corpus-clip; only Synthesia ties to per-consented-likeness-clip</td></tr>
+<tr><td>Per-C2PA + watermark + deepfake-detection</td><td>✅ full</td><td>⚠️ partial</td><td>✅ Per-C2PA + per-avatar-deepfake-defense + per-generated-frame-watermark-detection</td><td>All 3 vendors surface this; only Synthesia ties to per-avatar-identity-spoofing-detection</td></tr>
+<tr><td><strong>Per-script-segment + per-avatar-id + per-human-oversight-approval (Synthesia-distinct)</strong></td><td>❌</td><td>❌</td><td><strong>✅ Per-script-segment-id + per-avatar-id + per-human-oversight-approval-id</strong></td><td>Synthesia is the ONLY vendor where every script-segment requires explicit human-oversight-approval before render — and that audit row is what EU AI Act Art. 14 + ISO 42001 9.4 require</td></tr>
+<tr><td><strong>GDPR Art. 27 EU-representative (Synthesia-distinct)</strong></td><td>⚠️ US-based, no Art. 27 needed</td><td>⚠️ US-based, no Art. 27 needed</td><td><strong>✅ gdpr.representative@synthesia.io — UK-based post-Brexit provider requires Art. 27</strong></td><td>Synthesia is the ONLY ai_video_generation vendor that surfaces the canonical EU AI Act Art. 27 EU-representative inbound channel</td></tr>
+<tr><td>Frameworks covered</td><td>SOC 2 + ISO 27001 + ISO 42001 + GDPR + EU AI Act + HIPAA + NIST AI RMF</td><td>SOC 2 (in progress) + GDPR + EU AI Act + NIST AI RMF + C2PA v2.x</td><td>SOC 2 + ISO 27001 + ISO 42001 + GDPR Art. 9 + GDPR Art. 27 + EU AI Act + HIPAA + NIST AI RMF + C2PA v2.x + UK GDPR + EU-US DPF + SCCs</td><td>Synthesia leads on framework coverage; closes the 3-vendor canonical cohort</td></tr>
+</tbody>
+</table>
+
+<h2>2. The 19-column canonical Synthesia audit-trail join-table (5 Synthesia-distinct)</h2>
+
+<p>The shape auditors query under SOC 2 CC7.2 + EU AI Act Art. 9 + Art. 12 + Art. 14 + Art. 50 + ISO 42001 9.4 + GDPR Art. 9 + Art. 28 + NIST AI RMF MEASURE is a single join-table row per script-segment + avatar + inference-call tuple. The 19 columns include 5 Synthesia-distinct (consented_likeness_clip_id + gdpr_art9_biometric_consent_record_id + consent_revocation_cascade_event_id + express_avatar_fine_tune_corpus_clip_id + synthia_lip_sync_diffusion_step_id):</p>
+
+<ol>
+<li><code>script_segment_id</code> — per-script-segment-row identifier (UUID v4) — Synthesia-distinct (script-driven vs prompt-driven)</li>
+<li><code>avatar_id</code> — per-avatar-id (UUID v4) under GDPR Art. 9 + EU AI Act Annex III 1 biometric</li>
+<li><code>inference_call_id</code> — per-Synthesia-inference-call (UUID v4) under EU AI Act Art. 12 + SOC 2 CC7.2 + ISO 42001 9.4</li>
+<li><code>lip_sync_keyframe_id</code> — per-lip-sync-temporal-coherence-keyframe under MITRE ATLAS AML.T0048 deepfake-defense (Synthesia-distinct)</li>
+<li><code>video_frame_id</code> — per-generated-frame provenance under EU AI Act Art. 50 + NIST AI RMF MEASURE</li>
+<li><code>avatar_training_corpus_clip_id</code> — per-trained-on-avatar-clip audit under EU AI Act Art. 53(d) + ISO 42001 6.1.4</li>
+<li><code>training_dataset_version_id</code> — per-Synthia-training-dataset-version provenance under Art. 53(1)(b) + ISO 42001 6.1.4</li>
+<li><code>express_avatar_fine_tune_corpus_clip_id</code> — per-Synthia-Express-Avatar-fine-tune-corpus-clip under Art. 53(d) — Synthesia-distinct</li>
+<li><code>third_party_licensed_corpus_id</code> — per-third-party-trained-on-corpus license-provenance under Art. 53(d) + GDPR Art. 28</li>
+<li><code>consented_likeness_clip_id</code> — per-consented-likeness-clip audit under GDPR Art. 9 + EU AI Act Annex III 1 + Art. 50 — Synthesia-distinct</li>
+<li><code>gdpr_art9_biometric_consent_record_id</code> — per-GDPR-Art-9-special-category-biometric-consent-record under GDPR Art. 9 + EU AI Act Annex III 1 + ISO 42001 9.4 — Synthesia-distinct</li>
+<li><code>consent_revocation_cascade_event_id</code> — per-consent-revocation-cascade-event under GDPR Art. 17 + Art. 7 + EU AI Act Art. 9 + ISO 42001 9.4 — Synthesia-distinct</li>
+<li><code>c2pa_content_credential_id</code> — per-C2PA-content-credential under EU AI Act Art. 50 + C2PA v2.x</li>
+<li><code>watermark_removal_detection_id</code> — per-watermark-removal-detection under EU AI Act Art. 50 + OWASP LLM Top 10 LLM05</li>
+<li><code>deepfake_detection_score</code> — per-deepfake-defense-score (per-avatar-identity-spoofing + per-lip-sync-temporal-coherence-bypass) under EU AI Act Art. 50 + MITRE ATLAS AML.T0048</li>
+<li><code>human_oversight_approval_id</code> — per-human-oversight-approval-event under EU AI Act Art. 14 + ISO 42001 9.4 — Synthesia-distinct (every script-segment requires approval before render)</li>
+<li><code>synthia_lip_sync_diffusion_step_id</code> — per-Synthia-lip-sync-Diffusion-pipeline-step under EU AI Act Art. 9 + Art. 14 — Synthesia-distinct</li>
+<li><code>ai_generated_disclosure_flag</code> — per-AI-generated-content-disclosure-propagation under EU AI Act Art. 50</li>
+<li><code>downstream_decision_record_id</code> — per-downstream-decision provenance under EU AI Act Annex III 1 + GDPR Art. 22 + Annex III 4</li>
+</ol>
+
+<h2>3. The five audit gaps</h2>
+
+<h3>Gap 1 — End-to-end per-script-segment + per-avatar + per-Synthia-inference-call + per-lip-sync-keyframe + per-video-frame provenance</h3>
+<p>Auditors want one row that joins per-script-segment-id → per-avatar-id → per-Synthia-inference-call-id → per-lip-sync-keyframe-id → per-video-frame-id → per-avatar-training-corpus-clip-id → per-consented-likeness-clip-id → per-GDPR-Art-9-biometric-consent-record-id under SOC 2 CC7.2 + EU AI Act Art. 12 + Art. 50 + ISO 42001 9.4 + GDPR Art. 9 + Art. 28. Synthesia's Synthesia Audit Log exposes per-inference-call events, but the per-consented-likeness-clip + per-GDPR-Art-9-biometric-consent-record + per-consent-revocation-cascade linkage requires a 19-column join — currently requires a per-customer-data-engineer to assemble. Atlas's deliverable ships the canonical 19-column join-table view.</p>
+
+<h3>Gap 2 — EU AI Act Art. 53(d) GPAI training-data transparency + GDPR Art. 9 special-category biometric</h3>
+<p>Synthesia's per-avatar-training-corpus-clip-id + per-Express-Avatar-fine-tune-corpus-clip-id + per-Synthia-lip-sync-Diffusion-training-pipeline-step-id + per-consented-likeness-clip-id + per-avatar-training-dataset-version-id + per-GDPR-Art-9-biometric-consent-record-id + per-third-party-trained-on-corpus license-provenance table needs mapping to Art. 53(d) + Art. 53(1)(b) + ISO 42001 6.1.4 + GDPR Art. 9 special-category-biometric-data. Currently a per-screenshot workflow. Atlas ships the 12-column license-provenance table.</p>
+
+<h3>Gap 3 — Prompt-injection + Express-Avatar-backdoor + avatar-identity-spoofing + lip-sync-temporal-coherence-bypass + consent-revocation-cascade-bypass + training-corpus-poisoning defense</h3>
+<p>OWASP LLM Top 10 (LLM01-LLM10) + MITRE ATLAS (AML.T0048 deepfake, AML.T0010 ML supply chain, AML.T0024 exploit public model) + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14 + Art. 50 require a per-script-segment execution defense matrix. <strong>Synthesia-distinct vectors: avatar-identity-spoofing + consent-revocation-cascade-bypass</strong> — an attacker manipulates per-avatar-identity to inject malicious identity into a script-driven generation; or a revoked-consent fails to cascade-delete. Atlas ships the 10-column per-script-segment-id defense matrix.</p>
+
+<h3>Gap 4 — Cross-tenant isolation-evidence</h3>
+<p>SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + FedRAMP Moderate + ITAR + CMMC Level 2/3 require per-tenant + per-deployment isolation evidence (Synthesia + Synthesia on-prem + Synthesia air-gapped + Synthesia government + Synthesia Enterprise). Atlas ships the isolation-evidence row.</p>
+
+<h3>Gap 5 — WORM retention + cost-attribution + GDPR Art. 17 deletion-propagation + consent-revocation-cascade</h3>
+<p>EU AI Act Annex III 1 + GDPR Art. 9 + Art. 17 + Art. 50 + Aug 2026 GPAI enforcement require WORM retention + cost-attribution + deletion-propagation evidence + per-consent-revocation-cascade propagation within 24h. Atlas ships the WORM map.</p>
+
+<h2>4. Why this matters now (Aug 2026 GPAI enforcement + UK post-Brexit Art. 27)</h2>
+
+<p>Aug 2026 GPAI enforcement makes Art. 53(d) training-data transparency + Art. 53(1)(b) copyright-summary + Art. 14 human-oversight + Art. 12 event-logging + Art. 50 synthetic-content-disclosure mandatory. Synthesia customers (50,000+ enterprise + L&D + corporate-comms + sales-enablement customers including Nike + Google + Microsoft + BBC + EY + Pfizer + Salesforce + Heineken + Vodafone + Cisco) face enterprise-procurement blockers without this evidence row. Additionally, Synthesia's UK post-Brexit domicile triggers EU AI Act Art. 27 EU-representative obligations (gdpr.representative@synthesia.io is the canonical Art. 27 inbox — the ONLY ai_video_generation vendor to surface this pattern). Atlas's 48-hour deliverable produces it for $500 flat.</p>
+
+<h2>5. CTA</h2>
+
+<p>Reply to <code>dpo@synthesia.io</code> with which of the 5 audit-gaps is most acute — Atlas sends a 2-page scope on the same thread.</p>
 </body>
 </html>

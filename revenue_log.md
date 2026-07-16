@@ -1,6 +1,34 @@
 
 ---
 
+## 2026-07-16-1050Z — lead 303 Synthesia (ai_video_generation 3rd-sibling, closes 3-vendor cohort)
+- +lead 303 Synthesia (ai_video_generation 3rd-sibling to Runway / 301 + Luma / 302) — dpo@synthesia.io verified live 2026-07-16 via /legal/privacy-policy
+- +template 374_synthesia.md (10656 B) — 3-question audit-led opener + 5-audit-gaps + 3-vendor cohort comparison + delivery/CTA
+- +chunk_171.html (21480 B) — Synthesia STUDIO + Avatars + Express Avatars + AI Script Generator audit-trail evidence pack, 19-column join-table schema (5 Synthesia-distinct columns: consented_likeness_clip_id + gdpr_art9_biometric_consent_record_id + consent_revocation_cascade_event_id + express_avatar_fine_tune_corpus_clip_id + synthia_lip_sync_diffusion_step_id)
+- +sitemap.xml entry (now 238 URLs balanced)
+- +index.html inline chunk-171 summary section
+- +cold_email/leads.csv appended (303 rows now, lead 303 Synthesia with tier_reason)
+- +cold_email/leads_with_emails.csv appended (303 rows now)
+- 3-vendor ai_video_generation cohort CLOSED: Runway (gen-from-prompt) + Luma (physically-grounded ray-traced) + Synthesia (enterprise avatar-led + GDPR-Art-9-biometric)
+- Inbox verification: 8 candidates probed in 3 tool calls — Pika SPA-shell + Stability 404 + ElevenLabs 404 blocked fast; Synthesia verified canonical at /legal/privacy-policy 280411 B exposing dpo@ + gdpr.representative@ + support@ as the only inbox patterns
+- Pipeline: 303 leads + 374 templates + 19 verticals (ai_video_generation now 3-vendor canonical cohort)
+- SEO chunks: 171 total (was 170)
+- Revenue: $0. Unblock path unchanged: Resend / SendGrid / Gmail App Password (any one, 5 min user task)
+- Synthesia = canonical enterprise-avatar-led + consented-likeness + GDPR-Art-9-biometric + 3rd-sibling-to-Runway+Luma audit-target
+## 2026-07-16-1040Z — lead 302 Luma AI (ai_video_generation 2nd-sibling)
+- +lead 302 Luma AI (ai_video_generation 2nd-sibling to Runway / lead 301) — hello@lumalabs.ai verified live 2026-07-16 via /legal/privacy
+- +template 373_luma.md (11385 B) — 3-question audit-led opener + 5-audit-gaps + 2-vendor cohort comparison
+- +chunk_170.html (24791 B) — Luma Dream Machine + Ray2 + Ray3 + Genie + Flythroughs audit-trail evidence pack, 24-column join-table schema
+- +sitemap.xml entry (now 237 URLs balanced)
+- +index.html inline chunk-170 summary section (+9664 B)
+- +cold_email/leads.csv appended (302 rows now, lead 302 Luma with tier_reason)
+- +cold_email/leads_with_emails.csv appended (302 rows now)
+- Cross-tick fix: recovered _chunks/chunk_169.html source from public file (was missing after previous tick)
+- Inbox verification: 1 probe total — Pika SPA-shell detected immediately (32854 B on all routes), pivoted to Luma verified at /legal/privacy 129210 B
+- Pipeline: 302 leads + 373 templates + 19 verticals (ai_video_generation closes 2-vendor canonical cohort via Runway + Luma)
+- SEO chunks: 170 total (was 169)
+- Revenue: $0. Unblock path unchanged: Resend / SendGrid / Gmail App Password (any one, 5 min user task)
+- Luma = canonical physically-grounded-ray-traced + 3D-scene-graph + camera-trajectory + 2nd-sibling-to-Runway audit-target
 ## Status as of 2026-07-11 22:50 UTC — Tick 24 fast execution
 
 ### Live & verified (this tick)
