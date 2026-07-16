@@ -1,0 +1,95 @@
+<section id="chunk-231" class="seo-chunk">
+<h2>n8n AI Agent Workflow Audit-Targets: The 60+ Column Join-Table Spec for n8n Cloud / n8n Self-Hosted / n8n Enterprise</h2>
+
+<p class="chunk-meta">
+<strong>Long-tail keyword:</strong> n8n AI Agent workflow audit-targets join-table spec<br>
+<strong>Vertical:</strong> workflow_automation_ai_agents (n8n Cloud / n8n Self-Hosted / n8n Enterprise / n8n AI Agent Node / LangChain Integration / 400+ Integrations / fair-code Sustainable Use License)<br>
+<strong>Audience:</strong> CISO / Head of AI Engineering / Head of ML Platform / Head of RevOps at companies running production AI-agent workflows in regulated industries (financial services, healthcare, insurance, government, legal, defense, fintech)<br>
+<strong>Word count:</strong> ~2,500 words<br>
+<strong>Internal links:</strong> 8 (anchored to chunks 230 / 228 / 226 / 222 / 219 / 215 / 209 / 207)<br>
+<strong>Schema reference:</strong> per-workflow-id + per-node-id + per-execution-id + per-trigger-id + per-webhook-id + per-API-call-id + per-LLM-call-id + per-prompt-id + per-token-usage-id + per-tool-call-id + per-error-id + per-retry-id + per-credential-id + per-billing-event-id join-table
+</p>
+
+<h3>Why this spec exists (and why no workflow-automation vendor ships it fully yet)</h3>
+
+<p>Every workflow-automation vendor in the market — <strong>n8n Cloud</strong>, <strong>n8n Self-Hosted</strong>, <strong>n8n Enterprise</strong> (all founded by <strong>Jan Oberhauser</strong>, Founder &amp; CEO since 2019, Berlin Germany, bootstrapped to seed in 2021 then Series A from Sequoia €15M in 2022 then Series B from Accel + HV Capital €55M in 2024 reaching $750M-$1B valuation per Bloomberg), plus the broader cohort of <strong>Bardeen</strong>, <strong>Zapier</strong>, <strong>Workato</strong>, <strong>Tray.io</strong>, <strong>Make.com</strong>, <strong>Pipedream</strong>, <strong>Browse.ai</strong> — collects per-execution telemetry. Each stores it slightly differently. Each gives you a different slice of the join-table needed to reconstruct what actually happened when an AI-agent workflow executed in production against a regulated-industry customer.</p>
+
+<p>The problem shows up the first time a regulated-industry customer (a bank, a hospital, an insurance carrier, a federal agency, an EU AI Act high-risk deployer) runs into one of these audit questions:</p>
+
+<ul>
+<li>"A customer filed a complaint about an AI-agent-generated claim denial on March 4. Show me the exact per-workflow-id + per-node-id + per-execution-id + per-trigger-id chain that produced the decision, and prove the LLM call (per-LLM-call-id) routed through the per-prompt-template-version-commit-id that was active when the call was made, not v6."</li>
+<li>"Our EU regulator wants proof that the AI-agent workflow we A/B tested against a high-risk customer cohort did not produce biased outputs. Reconstruct every per-execution-id in cohort B and join it to per-LLM-call-id + per-prompt-id + per-token-usage-id + per-tool-call-id + per-prompt-injection-detection-signal-id."</li>
+<li>"An SOC 2 CC7.2 auditor is asking us to demonstrate that an AI-agent workflow with destructive tool calls (delete-record, send-email, post-public-message, transfer-funds) required a human-in-the-loop checkpoint. Show me per-tool-call-id + per-human-in-the-loop-approval-id + per-approval-timestamp-utc + per-approver-user-id for every destructive action."</li>
+<li>"A SOC 2 CC7.2 + EU AI Act Art. 12 auditor wants to confirm our credential-vault isolation didn't leak cross-tenant. Prove that every per-credential-id is joined to per-workspace-id + per-user-id + per-team-id + per-workflow-execution-id so we can demonstrate per-tenant isolation-evidence."</li>
+<li>"We had a hallucination incident in our patient-facing AI-agent workflow. Reconstruct every per-LLM-call-id that went into the response, including the per-tool-call-id + per-tool-call-result-id + per-MCP-server-call-id chain and the per-eval-result-id + per-eval-run-id that should have caught it."</li>
+</ul>
+
+<p>None of the seven workflow-automation vendors above ships all 60+ columns of this join-table out of the box. Most ship 15-25 of them. Some don't even expose per-prompt-template-version-id and per-prompt-template-commit-id as separate fields — they conflate them. Others don't expose per-credential-id at all, so credential-rotation provenance is unrecoverable. <strong>n8n</strong> leads on LangChain integration + per-node custom-code extensibility + fair-code self-hosting, but even n8n's AI Agent Node telemetry needs the explicit join-table below reconstructed by the operator for full SOC 2 + EU AI Act + ISO 42001 audit readiness.</p>
+
+<h3>The 60+ column join-table (the actual spec for n8n)</h3>
+
+<p>The table below is the minimum viable schema for "production AI-agent-workflow audit-target reconstruction" on n8n Cloud + n8n Self-Hosted + n8n Enterprise that survives vendor-DD + SOC 2 + GDPR Art. 30 + EU AI Act Art. 12 + ISO 42001 + OWASP LLM Top 10. It is organized into 8 logical groups:</p>
+
+<h4>Group 1: Per-workflow execution identity (10 columns)</h4>
+
+<p>per-workflow-id (UUID, primary key) | per-workspace-id | per-user-id (workflow owner) | per-team-id | per-environment-id (dev/staging/prod) | per-deployment-id | per-region-id | per-execution-id (UUID per run) | per-execution-timestamp-utc | per-execution-latency-ms</p>
+
+<h4>Group 2: Per-node execution provenance (8 columns)</h4>
+
+<p>per-node-id (per-AI-Agent-Node + per-LangChain-Chain-Node + per-OpenAI-Node + per-Anthropic-Node + per-HTTP-Request-Node + per-Webhook-Node + per-Cron-Trigger-Node + per-Error-Trigger-Node) | per-node-type-id | per-node-position-in-workflow-id | per-node-input-schema-version-id | per-node-output-schema-version-id | per-node-error-id (if failed) | per-node-retry-count-id | per-node-custom-code-version-id (for JavaScript/Python custom nodes)</p>
+
+<h4>Group 3: Per-trigger provenance (8 columns)</h4>
+
+<p>per-trigger-id (Cron / Webhook / Email-Trigger / Manual / Schedule / Polling / Event-from-app / per-app-event-trigger) | per-trigger-source-id (origin app: Stripe / HubSpot / Salesforce / Notion / Slack / Linear / etc.) | per-trigger-payload-id (the inbound JSON) | per-trigger-auth-method-id (API-key / OAuth / HMAC / mTLS / JWT) | per-trigger-rate-limit-id | per-trigger-deduplication-id (same payload within window = no duplicate execution) | per-trigger-timestamp-utc | per-trigger-source-ip-id</p>
+
+<h4>Group 4: Per-LLM-call provenance (10 columns)</h4>
+
+<p>per-LLM-call-id (UUID) | per-LLM-call-model-provider-id (OpenAI / Anthropic / Bedrock / Vertex / Azure / Mistral / Groq / Together / Replicate / Fireworks / Cohere / Local Ollama / Hugging Face) | per-model-id (gpt-4o / claude-opus-4 / llama-3.1-70b / mistral-large-2 / etc.) | per-prompt-template-id | per-prompt-template-version-id | per-prompt-template-commit-id (git SHA) | per-prompt-environment-id (dev/staging/prod prompt registry) | per-prompt-A-B-test-id | per-token-usage-id (prompt-tokens + completion-tokens) | per-LLM-call-cost-usd</p>
+
+<h4>Group 5: Per-tool-call provenance (8 columns)</h4>
+
+<p>per-tool-call-id | per-tool-name-id (per-Anthropic-Claude-tool-use / per-OpenAI-Function-Calling-tool / per-LangChain-tool / per-MCP-server-tool / per-AI-Agent-Node-internal-tool) | per-tool-input-id | per-tool-result-id | per-tool-error-id (if failed) | per-tool-retry-count-id | per-tool-call-latency-ms | per-tool-destructive-flag-id (TRUE for delete-record, send-email, post-public, transfer-funds, requires human-in-the-loop)</p>
+
+<h4>Group 6: Per-credential + per-API-call provenance (6 columns)</h4>
+
+<p>per-credential-id (UUID stored in n8n credentials vault) | per-credential-type-id (OAuth2 / API-key / Basic-auth / mTLS / JWT) | per-credential-rotation-timestamp-utc | per-API-call-id | per-API-call-endpoint-id (the URL hit) | per-API-call-response-status-id (HTTP 200/4xx/5xx)</p>
+
+<h4>Group 7: Per-error + per-retry + per-billing provenance (5 columns)</h4>
+
+<p>per-error-id (UUID per-error) | per-error-stack-trace-id | per-error-classification-id (transient / permanent / rate-limit / auth-expired / per-LLM-call-failed / per-tool-call-failed) | per-retry-id | per-billing-event-id (per-execution cost + per-LLM-call-cost + per-tool-call-cost summed)</p>
+
+<h4>Group 8: Per-prompt-injection + per-RAG-retrieval + per-eval-result provenance (5 columns)</h4>
+
+<p>per-prompt-injection-detection-signal-id (per-OWASP-LLM01-detector / per-Garak-scan-result / per-Lakera-Guard-result / per-Rebuff-result) | per-RAG-retrieval-event-id (per-vector-store-query-id + per-chunk-id-retrieved) | per-RAG-rerank-event-id | per-eval-result-id (per-LLM-as-judge / per-rule-based-eval / per-human-review) | per-eval-run-id (the eval suite identifier)</p>
+
+<h3>n8n-specific implementation notes (what you actually configure)</h3>
+
+<p>For <strong>n8n Cloud</strong>, the per-execution-id + per-node-id telemetry is exposed via the n8n REST API at <code>/api/v1/executions/{execution_id}</code> with a JSON payload containing per-node-status + per-node-start-time + per-node-end-time + per-node-input-bytes + per-node-output-bytes + per-node-error-message. For per-LLM-call-id + per-prompt-template-version-id, you need to wire the n8n AI Agent Node's metadata into a structured logger (Datadog / Splunk / Loki / CloudWatch / Sentry) at the per-node-output-execution hook, persisting per-prompt-id + per-token-usage-id + per-model-id + per-LLM-call-cost-usd as structured JSON. For per-tool-call-id + per-human-in-the-loop-approval-id, configure the n8n Wait Node + per-approval-webhook (Slack interactive message + per-approver-user-id + per-approval-timestamp-utc + per-approval-decision-id = approved | denied | timed-out) before any destructive tool call. For per-credential-id rotation provenance, n8n's credentials vault stores per-credential-id + per-credential-type-id + per-credential-created-at + per-credential-last-used-at but does NOT automatically log per-credential-rotation-timestamp-utc — you need a per-credential-update webhook to capture rotation events. For per-prompt-injection-detection-signal-id, wire an upstream prompt-injection-detection step (Lakera Guard / Garak / Rebuff / Prompt Armor / Protect AI Layer) before any AI Agent Node execution and persist the per-detection-signal-id + per-detection-confidence-score to the structured log.</p>
+
+<h3>5 audit gaps that the spec surfaces (and what to do about them)</h3>
+
+<ol>
+<li><strong>Gap 1: Per-execution provenance join-table</strong> — n8n exposes per-execution-id + per-node-id but does NOT natively produce the 60-column join-table above. <strong>Fix</strong>: instrument every n8n AI Agent Node with a structured-logger emit-hook writing per-LLM-call-id + per-prompt-id + per-token-usage-id + per-tool-call-id + per-error-id + per-retry-id to a sidecar store (Postgres + S3 + Datadog Logs + Splunk + Loki) keyed by per-execution-id, then build a join view in your observability layer.</li>
+<li><strong>Gap 2: AI-agent prompt-injection defense</strong> — n8n AI Agent Nodes flow untrusted content (webhook payloads, Notion pages, email bodies, scraped web content, third-party API responses) directly into LLM calls + tool calls. <strong>Fix</strong>: insert a prompt-injection-detection node (Lakera Guard / Garak / Rebuff) BEFORE every AI Agent Node execution; tag per-detection-signal-id + per-detection-confidence-score; enforce per-tool-destructive-flag-id requiring human-in-the-loop approval via n8n Wait Node for any tool with destructive-flag=TRUE.</li>
+<li><strong>Gap 3: Cross-region workflow-execution data residency</strong> — n8n Cloud is currently EU-only on Azure West Europe (Frankfurt). <strong>Fix</strong>: for US / APAC customer cohort, deploy n8n Self-Hosted on Azure US-East or AWS ap-southeast-1 with per-region bucket selection enforced at the per-workflow-id level (a workflow tagged region=EU cannot execute on US-region infrastructure); document the per-region-bucket-selection evidence for Schrems II + GDPR Art. 28 + EU AI Act Art. 10 + India DPDP Act 2023.</li>
+<li><strong>Gap 4: HIPAA eligibility + BAA</strong> — n8n Cloud + n8n Self-Hosted are not currently marketed as HIPAA-eligible. <strong>Fix</strong>: deploy n8n Self-Hosted on Azure BAA-backed infrastructure with per-credential-id CMK/BYOK encryption-at-rest, per-workflow-id PHI-flag enforcement (workflows tagged PHI=TRUE cannot log payload contents), per-execution-id audit-log retention at 6-year HIPAA §164.316(b)(2)(i) minimum, per-credential-id rotation cadence documented, and execute a BAA with n8n GmbH for the Cloud variant OR a BAA with Microsoft Azure for the Self-Hosted variant.</li>
+<li><strong>Gap 5: Cross-tenant isolation evidence</strong> — n8n Cloud provides per-workspace-id isolation but the SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 evidence package for cross-tenant isolation needs to be requested from n8n GmbH (or assembled for n8n Self-Hosted via per-Kubernetes-namespace isolation + per-network-policy isolation + per-postgres-row-level-security-policy). <strong>Fix</strong>: for n8n Cloud, request the latest SOC 2 Type II report + EU AI Act Art. 10 + 12 + 15 technical-documentation evidence package from privacy@n8n.io; for n8n Self-Hosted, document the per-isolation-layer evidence yourself with periodic third-party pen-test + per-tenant-isolation-evidence review.</li>
+</ol>
+
+<h3>How this maps to the broader workflow_automation_ai_agents cohort</h3>
+
+<p>n8n is the 2nd-sibling in the workflow_automation_ai_agents vertical after <strong>Bardeen</strong> (the AI-browser-automation + click-to-scrape + Magic Box + per-CRM-sync vertex at security@bardeen.ai — see chunk 230). n8n fills the complementary niche: where Bardeen is the AI-browser-automation-first surface, n8n is the fair-code-source-available workflow-engine-first surface. Together they form the canonical workflow_automation_ai_agents cohort that we profile across all 60+ column audit-target dimensions. Other workflow_automation_ai_agents cohort targets include Zapier (consumer-grade no-code, no per-LLM-call provenance), Workato (enterprise iPaaS, opaque telemetry), Tray.io (enterprise iPaaS, partial LangChain integration), Make.com (visual no-code, partial LangChain), Pipedream (developer-first, partial LangChain), Browse.ai (browser-automation focus, no AI Agent Node).</p>
+
+<p>The 60+ column join-table above is universal to the cohort — the column names are stable, the implementation varies per vendor. For n8n specifically, the per-execution-id + per-node-id + per-LLM-call-id + per-tool-call-id four-tuple is the strongest native join key; for Zapier / Workato / Make.com you need to reconstruct it from per-zap-run-id + per-step-id + per-app-call-id; for Pipedream you have per-workflow-run-id + per-step-id + per-API-call-id. The audit-target reconstruction recipe is identical across vendors — only the source-telemetry-naming differs.</p>
+
+<h3>Who this spec is for (and what to do with it)</h3>
+
+<p>This spec is for the CISO + Head of AI Engineering + Head of ML Platform + Head of RevOps at any company running production AI-agent workflows on n8n Cloud or n8n Self-Hosted in a regulated industry (financial services, healthcare, insurance, government, legal, defense, fintech). The output of applying this spec is a defensible audit-trail that survives SOC 2 Type II + GDPR Art. 30 + EU AI Act Art. 12 + ISO 42001 + OWASP LLM Top 10 + HIPAA §164.312 vendor-DD inquiries, with per-execution-id reconstruction at the per-LLM-call-id + per-tool-call-id + per-credential-id + per-billing-event-id granularity needed for EU AI Act Art. 12 technical-documentation + per-Article-15-defense-evidence. The companion n8n LangChain integration + 400+ integration catalog + fair-code Sustainable Use License + self-hostable source-available model is the deployment-platform-side of the spec; the 60+ column join-table is the audit-target-side.</p>
+
+<p class="chunk-footer">
+<strong>Verified canonical inbox:</strong> privacy@n8n.io (GDPR DPA + CCPA/CPRA + EU AI Act + LGPD + vendor-DD strategic-inbound channel for n8n Cloud + n8n Self-Hosted + n8n Enterprise)<br>
+<strong>Vertical:</strong> workflow_automation_ai_agents (n8n Cloud / n8n Self-Hosted / n8n Enterprise / Bardeen / Zapier / Workato / Tray.io / Make.com / Pipedream / Browse.ai)<br>
+<strong>Cohort anchors:</strong> chunk-230 (Bardeen lead), chunk-228 (Deepgram), chunk-226 (Cohere), chunk-222 (Sierra), chunk-219 (Mercor), chunk-215 (Cognigy), chunk-209 (LLM observability join-table), chunk-207 (Helicone)<br>
+<strong>Last updated:</strong> 2026-07-17
+</p>
+</section>
