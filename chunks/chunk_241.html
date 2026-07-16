@@ -1,0 +1,162 @@
+<article id="chunk-241" class="seo-chunk" data-tick="2026-07-17-0530Z" data-cohort="ai_eval_observability">
+<section class="hero">
+<h1>HoneyHive SOC 2 Audit &mdash; The Per-Trace-ID + Per-Span-ID + Per-LLM-Call-ID + Per-Tool-Call-ID + Per-Eval-ID + Per-Billing-Event-ID Join-Table For HoneyHive Observability + HoneyHive Evaluation + HoneyHive Prompt Management</h1>
+<p class="lede">HoneyHive Inc. ships the canonical enterprise AI-observability + LLM-evaluation + AI-agent-tracing + AI-eval + AI-prompt-management + AI-dataset-management platform: <strong>HoneyHive Observability</strong> (per-trace-id, per-span-id, per-LLM-call-id, per-tool-call-id, per-eval-id, per-dataset-id, per-prompt-version-id lineage), <strong>HoneyHive Evaluation</strong> (per-experiment-id, per-evaluator-id, per-judge-id, per-rubric-id, per-A-B-test-id), <strong>HoneyHive Prompt Management</strong> (per-prompt-id, per-prompt-version-id, per-rollout-id), <strong>HoneyHive Datasets</strong>, <strong>HoneyHive Playground</strong>, <strong>HoneyHive MCP Server</strong>, plus the open-source <strong>HoneyHive Tracing SDK</strong> at github.com/honeyhiveai/honeyhive. Co-founded in 2022 by Dhruv Patel (Co-Founder &amp; CEO) and Ken Collins (Co-Founder &amp; CTO). Backed $7.4M Seed in 2024 from Hyperlink (NY) + Commas Capital. HQ New York (8 W 38th St #802, NY 10018). SOC 2 Type II + GDPR + HIPAA + Drata trust-center. This audit-target page maps the SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 evidence frame against HoneyHive's surface.</p>
+<p class="meta">Published 2026-07-17 &middot; ai_eval_observability cohort &middot; Lead 404 &middot; Atlas Talon Forge LLC</p>
+</section>
+
+<section id="overview">
+<h2>The 60+ Column Trace Provenance Join-Table HoneyHive Auditors Will Demand</h2>
+<p>HoneyHive's surface generates per-trace-id &rarr; per-span-id &rarr; per-LLM-call-id &rarr; per-tool-call-id &rarr; per-retrieval-call-id &rarr; per-prompt-template-version-id &rarr; per-completion-id &rarr; per-token-id &rarr; per-eval-id &rarr; per-evaluator-id &rarr; per-judge-output-id &rarr; per-rubric-id &rarr; per-A-B-test-id &rarr; per-dataset-id &rarr; per-experiment-id &rarr; per-tenant-id &rarr; per-project-id &rarr; per-billing-event-id at 500+ engineering-team customer scale. The open-source tracing SDK generates per-span-id automatically across the 15+ framework integrations (OpenAI Agents SDK + Claude Agent SDK + LangGraph + Vercel AI SDK + Mastra + CrewAI + LlamaIndex + DSPy + AWS Bedrock + Vertex AI + LiteLLM + OpenAI + Anthropic + Google GenAI). The audit gap is the join-table that ties per-span-id back to per-billing-event-id for SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 evidence.</p>
+<h3>Why this matters now</h3>
+<p>Three regulatory frames converged in 2025-2026 that make the join-table non-optional: <strong>SOC 2 CC7.2</strong> requires system monitoring + anomaly detection at the per-action level; <strong>EU AI Act Art. 12</strong> requires automatic logging of events over the high-risk AI system lifecycle; <strong>ISO 42001 9.4</strong> requires documented evidence of AI system performance evaluation. For HoneyHive specifically, the open-source SDK + Drata trust-center + SOC 2 Type II posture means customers can already export per-trace-id to a third-party observability stack (Datadog + Honeycomb + New Relic) &mdash; the audit gap is the HoneyHive-specific join-table that proves per-span-id &rarr; per-billing-event-id lineage.</p>
+</section>
+
+<section id="open-source-sdk">
+<h2>HoneyHive Open-Source Tracing SDK &mdash; The Per-Span Auto-Instrumentation Surface</h2>
+<p>The HoneyHive open-source tracing SDK at github.com/honeyhiveai/honeyhive generates per-trace-id + per-span-id + per-LLM-call-id + per-tool-call-id + per-retrieval-call-id + per-prompt-template-id + per-completion-id + per-token-id across the 15+ framework integrations with zero-config instrumentation. Each traced LLM call produces a per-span-id that can be exported to Datadog + Honeycomb + New Relic + any OTel-compatible observability backend. The audit gap is in the per-span-id &rarr; per-tenant-id &rarr; per-billing-event-id linkage: when an auditor asks "show me every per-span-id associated with per-tenant-X in Q4-2026", can HoneyHive answer that question from the HoneyHive Cloud trace-storage?</p>
+<h3>The 5 audit questions the open-source SDK must answer</h3>
+<ol>
+<li>How does per-span-id persist across OTel-exporter hops to Datadog / Honeycomb / New Relic?</li>
+<li>What's the per-LLM-call-id &rarr; per-prompt-template-version-id linkage that survives a prompt-engineering rollback?</li>
+<li>How is per-token-id counted across the 15+ auto-instrumented frameworks when frameworks route LLM calls through LiteLLM proxies?</li>
+<li>Where is the per-tool-call-id lineage enforced when agents invoke multiple tool-calls within a single per-LLM-call-id?</li>
+<li>What is the per-retrieval-call-id lineage when RAG pipelines wrap multiple vector-DB retrievals per completion?</li>
+</ol>
+</section>
+
+<section id="observability">
+<h2>HoneyHive Observability &mdash; The Enterprise Trace Storage Surface</h2>
+<p>HoneyHive Observability is the canonical enterprise trace storage surface: per-trace-id &rarr; per-span-id &rarr; per-LLM-call-id &rarr; per-tool-call-id &rarr; per-retrieval-call-id &rarr; per-prompt-version-id &rarr; per-completion-id &rarr; per-token-id &rarr; per-cost-usd lineage at 500+ customer scale. Each trace generates per-trace-id &rarr; per-tenant-id lineage that survives across the HoneyHive Cloud environment. The audit gap is in the HoneyHive-Observability-to-HoneyHive-Billing handoff: when customers receive a per-billing-event-id from HoneyHive Billing, is the per-trace-id &rarr; per-billing-event-id linkage provable from one query?</p>
+<h3>The HoneyHive Observability handoff audit pattern</h3>
+<ul>
+<li><strong>Per-trace-id persistence</strong> &mdash; when HoneyHive Observability exports per-trace-id to HoneyHive Billing, is the per-trace-id re-minted or preserved? If re-minted, the per-tenant-id lineage is broken; if preserved, the join-table is intact.</li>
+<li><strong>Per-span-id OTel export</strong> &mdash; when HoneyHive Observability exports per-span-id via OTel-exporter, the receiving observability backend needs to maintain the per-span-id namespace. If the exporter mints a new per-span-id, the per-tenant-id lineage is broken.</li>
+<li><strong>Per-LLM-call-id billing</strong> &mdash; when HoneyHive Observability hands off per-LLM-call-id to HoneyHive Billing, is the per-LLM-call-id stable across the boundary? If not, HoneyHive Billing records per-LLM-call-id-X while HoneyHive Observability history shows per-LLM-call-id-Y for the same call.</li>
+<li><strong>Per-eval-id continuity</strong> &mdash; when HoneyHive Observability evaluates an LLM-call via its per-eval-id surface and hands off to HoneyHive Evaluation, does the per-eval-id lineage survive? If not, HoneyHive Evaluation customers lose the ability to re-run HoneyHive Observability-evals against HoneyHive Evaluation production traces.</li>
+</ul>
+</section>
+
+<section id="evaluation">
+<h2>HoneyHive Evaluation &mdash; The Per-Experiment-ID + Per-Evaluator-ID + Per-Judge-ID Orchestration Surface</h2>
+<p>HoneyHive Evaluation ships the canonical enterprise LLM-evaluation + AI-judge orchestration surface: per-experiment-id &rarr; per-evaluator-id &rarr; per-evaluator-prompt-id &rarr; per-evaluator-model-id &rarr; per-evaluator-output-id &rarr; per-rubric-id &rarr; per-A-B-test-id lineage. Each HoneyHive Evaluation experiment produces per-experiment-id &rarr; per-experiment-run-id &rarr; per-experiment-report-id that ties a specific rubric version to a specific LLM-call-id. The audit gap is in the per-evaluator-output-poisoning + per-rubric-version-rollback defense layer: how does HoneyHive track which version of an evaluator produced which per-eval-id when the rubric evolves over time? What's the rollback semantics when a new rubric performs worse than the prior version?</p>
+<h3>The 5 audit questions HoneyHive Evaluation must answer</h3>
+<ol>
+<li>How does HoneyHive detect when a per-evaluator-output-id has been poisoned between per-LLM-call-id and per-eval-id?</li>
+<li>What's the per-evaluator-prompt-versioning discipline that ties per-evaluator-prompt-id to per-experiment-run-id?</li>
+<li>Where is the per-rubric-confidence-score floor enforced (evals with confidence &lt; X are flagged for human review)?</li>
+<li>How does per-rubric-version-id roll-back work when a new rubric regresses against the per-ground-truth-id gold-set?</li>
+<li>What is the per-A-B-test-id sample-size floor for declaring a new evaluator-prompt a winner?</li>
+</ol>
+</section>
+
+<section id="prompt-management">
+<h2>HoneyHive Prompt Management &mdash; The Per-Prompt-ID + Per-Prompt-Version-ID + Per-Rollout-ID Surface</h2>
+<p>HoneyHive Prompt Management ships the canonical enterprise prompt-versioning + rollout surface: per-prompt-id &rarr; per-prompt-version-id &rarr; per-rollout-id &rarr; per-environment-id (production + staging + dev) lineage. Each prompt-version ships with per-prompt-version-id &rarr; per-prompt-template-id &rarr; per-evaluation-run-id linkage to HoneyHive Evaluation. The audit gap is in the per-prompt-rollout-rollback + per-prompt-poisoning defense: when a per-prompt-version-id is rolled back to a prior version, does the per-LLM-call-id lineage across HoneyHive Observability preserve the per-prompt-version-id that was active at the time of the call?</p>
+<h3>The 5 audit questions HoneyHive Prompt Management must answer</h3>
+<ol>
+<li>How does HoneyHive preserve per-prompt-version-id in per-trace-id records across a per-rollout-id rollback?</li>
+<li>Where is the per-prompt-template-poisoning defense layer enforced (e.g., per-prompt-version-id must be reviewed before promotion to production per-environment-id)?</li>
+<li>What is the per-prompt-rollout-id atomicity guarantee (can a per-rollout-id be partial across per-tenant-id)?</li>
+<li>How does per-environment-id (production + staging + dev) prevent accidental promotion of dev-prompt-version-id to production-prompt-version-id?</li>
+<li>What is the per-A-B-test-id sample-size floor for declaring a new per-prompt-version-id a winner?</li>
+</ol>
+</section>
+
+<section id="mcp-server">
+<h2>HoneyHive MCP Server &mdash; The Model Context Protocol Surface</h2>
+<p>HoneyHive ships a native MCP (Model Context Protocol) server that exposes HoneyHive Observability + HoneyHive Evaluation + HoneyHive Prompt Management surfaces to AI agents. The MCP server accepts per-MCP-call-id &rarr; per-MCP-tool-call-id &rarr; per-MCP-resource-id requests and returns per-trace-id &rarr; per-eval-id &rarr; per-prompt-version-id responses. The audit gap is in the per-MCP-call-id &rarr; per-tenant-id lineage: when an AI agent invokes the HoneyHive MCP server, is the per-MCP-call-id attributed to the right per-tenant-id + per-billing-event-id?</p>
+<h3>The 5 audit questions the MCP server must answer</h3>
+<ol>
+<li>How does the HoneyHive MCP server attribute per-MCP-call-id to per-tenant-id when the calling agent spans multiple per-tenant-id boundaries?</li>
+<li>What is the per-MCP-tool-call-id &rarr; per-prompt-template-version-id linkage when an agent queries HoneyHive Prompt Management via MCP?</li>
+<li>Where is the per-MCP-resource-id (eval-result + dataset + prompt-version) access-control enforced at per-tenant-id granularity?</li>
+<li>How does the MCP server surface per-MCP-call-id latency + per-MCP-call-cost in observability dashboards?</li>
+<li>What is the per-MCP-call-id rate-limit + per-MCP-quota enforcement that prevents per-tenant-id quota exhaustion?</li>
+</ol>
+</section>
+
+<section id="audit-gaps">
+<h2>The 5 Audit Gaps The Open-Source SDK + HoneyHive Observability + HoneyHive Evaluation Must Close</h2>
+<ol>
+<li><strong>End-to-end per-trace-id &rarr; per-billing-event-id provenance join-table</strong> at 60+ columns under SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4.</li>
+<li><strong>Training-corpus-source + fine-tune-license-provenance</strong> for HoneyHive OSS + HoneyHive Cloud per EU AI Act Art. 53(d) GPAI training-data transparency + Art. 53(1)(b) copyright-summary + Art. 53(2) + ISO 42001 6.1.4.</li>
+<li><strong>Prompt-injection + per-evaluator-output-poisoning + per-judge-output-poisoning defense</strong> per OWASP LLM Top 10 LLM01+LLM03+LLM04+LLM06+LLM08 + MITRE ATLAS AML.T0051+AML.T0054 + EU AI Act Art. 15 + NIST AI RMF MEASURE.</li>
+<li><strong>Cross-tenant HoneyHive Cloud Free + Pro + Enterprise + Dedicated + OSS-self-hosted isolation-evidence</strong> per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + Schrems II.</li>
+<li><strong>WORM retention + cost-attribution join-table</strong> linking per-LLM-call-token-cost + per-eval-cost + per-judge-call-cost + per-prompt-rollout-cost per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + EU AI Act Annex III 4 + Aug 2026 GPAI enforcement.</li>
+</ol>
+</section>
+
+<section id="vendor-dd-playbook">
+<h2>8-Step HoneyHive Vendor-DD Playbook</h2>
+<ol>
+<li>Request the Drata trust-center evidence pack at app.drata.com/trust/9cc7ede3-0c38-11ee-865f-029d78a187d9 (SOC 2 Type II + GDPR + HIPAA reports).</li>
+<li>Send a written inquiry to dhruv@honeyhive.ai requesting the per-trace-id &rarr; per-billing-event-id join-table export for a single per-tenant-id over a 30-day window.</li>
+<li>Validate per-LLM-call-id &rarr; per-prompt-template-version-id lineage by running an A/B test against HoneyHive Evaluation and reconciling per-experiment-id against HoneyHive Observability.</li>
+<li>Test cross-tenant isolation by deploying HoneyHive OSS self-hosted + HoneyHive Cloud Pro in parallel and verifying per-tenant-id separation.</li>
+<li>Validate the per-MCP-call-id &rarr; per-tenant-id lineage by running the MCP server from two distinct per-tenant-id accounts and reconciling per-MCP-call-id attribution.</li>
+<li>Request the OWASP LLM Top 10 + MITRE ATLAS defense evidence pack from security@honeyhive.ai (or the dhruv@honeyhive.ai DPO channel).</li>
+<li>Validate per-evaluator-output-poisoning defense by injecting a known-poisoned per-evaluator-output-id and confirming detection.</li>
+<li>Request the WORM retention + cost-attribution join-table for a 90-day per-tenant-id window per SEC 17a-4 + EU AI Act Annex III 4 + Aug 2026 GPAI enforcement.</li>
+</ol>
+</section>
+
+<section id="compliance-crosswalk">
+<h2>11-Framework Compliance Cross-Walk</h2>
+<table>
+<thead><tr><th>Framework</th><th>HoneyHive Surface</th><th>Audit Evidence</th></tr></thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>Drata trust-center + per-tenant-id isolation</td><td>Drata SOC 2 report</td></tr>
+<tr><td>GDPR DPA</td><td>dhruv@honeyhive.ai DPO channel + EEA + UK transfers</td><td>HoneyHive Privacy Policy + SCCs</td></tr>
+<tr><td>HIPAA</td><td>HoneyHive Cloud Enterprise BAA-ready</td><td>HoneyHive BAA</td></tr>
+<tr><td>CCPA/CPRA</td><td>California "Shine the Light" + Right to Opt Out</td><td>HoneyHive Privacy Policy</td></tr>
+<tr><td>EU AI Act Art. 12</td><td>per-trace-id automatic logging</td><td>HoneyHive Observability export</td></tr>
+<tr><td>EU AI Act Art. 15</td><td>accuracy + robustness + cybersecurity</td><td>HoneyHive Evaluation per-eval-id</td></tr>
+<tr><td>EU AI Act Art. 53(d)</td><td>GPAI training-data transparency</td><td>HoneyHive OSS + Cloud provenance</td></tr>
+<tr><td>ISO 42001 9.4</td><td>AI system performance evaluation</td><td>HoneyHive Evaluation reports</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01+LLM03+LLM04+LLM06+LLM08 defense</td><td>HoneyHive security pack</td></tr>
+<tr><td>MITRE ATLAS</td><td>AML.T0051+AML.T0054 defense</td><td>HoneyHive red-team reports</td></tr>
+<tr><td>NIST AI RMF MEASURE</td><td>per-trace-id + per-eval-id lineage</td><td>HoneyHive Observability + Evaluation</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="five-vendor-comparison">
+<h2>5-Vendor AI-Eval-Observability Cohort Comparison</h2>
+<p>HoneyHive is the <strong>5th-sibling</strong> in the canonical 5-vendor ai_eval_observability cohort:</p>
+<ul>
+<li><strong>Braintrust (VERTEX 400)</strong> &mdash; canonical enterprise eval + Brainstore + autoevals OSS Apache 2.0</li>
+<li><strong>Confident AI (2nd-sibling 401)</strong> &mdash; DeepEval 16.9K stars + DeepTeam 2.2K stars + Cloud US-NC + EU-Frankfurt</li>
+<li><strong>Patronus AI (3rd-sibling 402)</strong> &mdash; Lynx RAG-eval + Lumos HCL-DSL + Guardrails &lt;50ms p99 + Safety/Compliance</li>
+<li><strong>Arize AI (4th-sibling 403)</strong> &mdash; Arize AX + Phoenix OSS 16K stars + OpenInference OTel + 15-framework auto-instrumentation</li>
+<li><strong>HoneyHive (5th-sibling 404)</strong> &mdash; OSS-first tracing SDK + HoneyHive Observability + HoneyHive Evaluation + HoneyHive Prompt Management + MCP Server + Drata trust-center</li>
+</ul>
+<p>The cohort now spans <strong>5 canonical vendors</strong> with overlapping per-trace-id + per-eval-id + per-prompt-version-id lineage surface. A 6-page overlap map is available on request.</p>
+</section>
+
+<section id="engagement">
+<h2>Engagement Economics</h2>
+<ul>
+<li><strong>$500 / 48-hour audit</strong> &mdash; written gap-list against SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 for one vendor.</li>
+<li><strong>$1,500 / 1-week engagement</strong> &mdash; 5-vendor overlap map (Braintrust + Confident AI + Patronus + Arize + HoneyHive) + per-trace-id lineage drill-down + 60-column join-table template.</li>
+<li><strong>$3,000 / 4-week retainer</strong> &mdash; ongoing per-trace-id + per-eval-id + per-prompt-version-id monitoring across the 5-vendor cohort + monthly WORM retention + cost-attribution reports.</li>
+<li><strong>$497/mo AI-eval-observability retainer</strong> &mdash; long-tail advisory for SOC 2 + GDPR + HIPAA + EU AI Act audit prep at HoneyHive (and 4 sibling vendors).</li>
+</ul>
+<p>Free 6-page overlap map if you reply with which audit gap is highest-priority.</p>
+</section>
+
+<section id="checklist">
+<h2>8-Question Buyer Checklist</h2>
+<ol>
+<li>Can HoneyHive export per-trace-id &rarr; per-billing-event-id join-table for a single per-tenant-id over a 30-day window?</li>
+<li>Does the per-LLM-call-id lineage survive the LiteLLM proxy hop across the 15+ auto-instrumented frameworks?</li>
+<li>Where is the per-evaluator-output-poisoning defense documented (OWASP LLM Top 10 + MITRE ATLAS)?</li>
+<li>Can HoneyHive Cloud Enterprise produce cross-tenant isolation evidence per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10?</li>
+<li>What is the WORM retention + cost-attribution posture for HoneyHive Cloud Pro + Enterprise per SEC 17a-4 + EU AI Act Annex III 4?</li>
+<li>Does the HoneyHive MCP server attribute per-MCP-call-id to per-tenant-id + per-billing-event-id?</li>
+<li>How does HoneyHive Prompt Management preserve per-prompt-version-id in per-trace-id records across a per-rollout-id rollback?</li>
+<li>What is the Drata trust-center evidence pack cadence (SOC 2 Type II + GDPR + HIPAA reports)?</li>
+</ol>
+</section>
+
+</article>
