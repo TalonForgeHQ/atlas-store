@@ -194,3 +194,12 @@
 - **+1 new vertical opened:** ai_inference_platform. Total active verticals: 23+ (was 22+).
 - **Revenue impact:** $0 / $0. Send-ready inventory: 306 leads. Replicate is a Cloudflare-acquired $100,000+ developer-platform with 100,000+ open-source-models — Tier-1 target for the $500/48h audit offer. Aug 2026 GPAI enforcement makes Art. 53(d) training-data transparency + Art. 50 synthetic-content disclosure + Art. 14 human-oversight + Art. 12 event-logging mandatory, which directly maps to Replicate's per-prediction-id + per-cog-build-id + per-cog-docker-image-id + per-cog-model-weights-hash + per-private-model-tenant-isolation + per-BYOK-CMK + per-Cloudflare-Workers-AI-tenant-isolation join-table need.
 - **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
+
+## 2026-07-16 12:00:00 UTC — Tick (cron, fast execution mode)
+
+- **+1 lead (308 Vapi AI)** + **+1 template (308_vapi.md)** + **+1 SEO chunk (175)** + **+1 sitemap entry** + **+1 inline index.html article** + **+1 build-log entry**.
+- **+1 vertical cohort closed (ai_voice_agents):** Bland 189 + Cognigy 99 + Vapi 308. Total closed-3-vendor canonical cohorts: 3 (ai_video_generation + ai_inference_platform + ai_voice_agents).
+- **Total active verticals:** 23+. **Pipeline state:** 308 leads in leads.csv + 308 templates on disk + 175 SEO chunks (was 174).
+- **Revenue impact:** $0 / $0. Send-ready inventory: 308 leads. Vapi is the canonical dev-tools-layer + carrier-bridge (Twilio/Telnyx/Vonage) + orchestration-policy (Transfer-Calls/Voicemail-Detection/End-Call-Functions) + 28-column per-call-id provenance audit-target — closes the ai_voice_agents 3-vendor cohort that templates (Bland 277 + Cognigy 99 + Sierra 70) had been referencing without an actual lead.
+- **Why Vapi now:** Vapi was the missing cohort-sibling. Bland template 277 referenced "Vapi 230" but Vapi was never added. Cohort is now closed: Bland (deployment-layer 1st) + Cognigy (conversational-platform 2nd) + Vapi (dev-tools-layer 3rd). Vapi is YC W23 + Khosla + Bessemer + 100,000+ developers stage — Fortune-500 enterprise dev-tools buyers are already in sales pipeline.
+- **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
