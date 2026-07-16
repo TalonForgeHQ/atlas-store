@@ -203,3 +203,13 @@
 - **Revenue impact:** $0 / $0. Send-ready inventory: 308 leads. Vapi is the canonical dev-tools-layer + carrier-bridge (Twilio/Telnyx/Vonage) + orchestration-policy (Transfer-Calls/Voicemail-Detection/End-Call-Functions) + 28-column per-call-id provenance audit-target — closes the ai_voice_agents 3-vendor cohort that templates (Bland 277 + Cognigy 99 + Sierra 70) had been referencing without an actual lead.
 - **Why Vapi now:** Vapi was the missing cohort-sibling. Bland template 277 referenced "Vapi 230" but Vapi was never added. Cohort is now closed: Bland (deployment-layer 1st) + Cognigy (conversational-platform 2nd) + Vapi (dev-tools-layer 3rd). Vapi is YC W23 + Khosla + Bessemer + 100,000+ developers stage — Fortune-500 enterprise dev-tools buyers are already in sales pipeline.
 - **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
+
+## 2026-07-16 12:15:00 UTC — Tick (cron, fast execution mode)
+
+- **+1 lead (309 Poolside AI)** + **+1 template (309_poolside.md)** + **+1 SEO chunk (176)** + **+1 sitemap entry** + **+1 inline index.html article** + **_chunks/chunk_175.html BACKFILLED** (previous tick shipped chunks/chunk_175.html to public + sitemap + index inline but never committed the _chunks/chunk_175.html source — static-concat-build-recovery pattern per skill red-flag).
+- **+1 vertical cohort closed (ai_inference_platform):** Replicate 306 + Together AI 307 + Poolside 309. Total closed-3-vendor canonical cohorts: 3 (ai_video_generation + ai_inference_platform + ai_voice_agents).
+- **Total active verticals:** 24+. **Pipeline state:** 309 leads in leads.csv + 309 templates on disk + 176 SEO chunks.
+- **Revenue impact:** $0 / $0. Send-ready inventory: 309 leads. Poolside is the canonical ai_inference_platform 3rd-sibling — AI-software-engineering + AI-coding-assistant + Foundation-model layer — pairing Foundation-model + AI-coding-assistant + Inference-platform layers at production scale (Jason Warner ex-GitHub CTO + Eiso Kant ex-Elementl/PyTorch Lightning + $286M+ raised + 250+ enterprise customers).
+- **Why Poolside now:** ai_inference_platform cohort (already closed in build-log 1148Z) needed a dedicated Poolside audit-trail chunk because the prior cohort-closure referenced Poolside but no actual chunk for it. Cohort now has 3 dedicated audit-trail chunks: chunk_173 Replicate + chunk_174 Together AI + chunk_176 Poolside. Net: each sibling's audit-trail surface is now individually addressable for vendor-DD + AI-coding-assistant + Foundation-model + GDPR Art. 28 DPA + SOC 2 Type II + EU AI Act Art. 53(d) GPAI training-data-summary transparency + ISO 42001 procurement evidence.
+- **Unblock unchanged:** Resend / SendGrid / Gmail App Password (any one, 5 min user task).
+---
