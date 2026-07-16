@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Grafana Cloud + Grafana Assistant + Loki + Tempo + Mimir + Pyroscope + k6 audit-trail SOC 2 + EU AI Act + GDPR + ISO 42001 + FedRAMP (2026)</title>
+<meta name="description" content="Grafana audit-trail guide for SOC 2 CC7.2 + EU AI Act Annex IV + ISO 42001 + GDPR Art. 28 + OWASP LLM Top 10 + NIST AI RMF + FedRAMP Moderate. Per-Grafana-Assistant-call reasoning-chain, per-Loki-log-line provenance, per-Mimir-metric-label provenance, per-Tempo-trace-id provenance, per-Pyroscope-flamegraph provenance, cross-tenant isolation, per-tenant KMS BYOK." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_154.html" />
+</head>
+<body>
+<h1>Grafana Cloud + Grafana Assistant + Loki + Tempo + Mimir + Pyroscope + k6 audit-trail SOC 2 + EU AI Act + GDPR + ISO 42001 + FedRAMP Moderate (2026)</h1>
+<p>Grafana Labs is the canonical <strong>AI-observability + AI-monitoring + AI-incident-response + AI-platform</strong> for the LGTM stack (Loki + Grafana + Tempo + Mimir) plus Pyroscope continuous-profiling + k6 load-testing + Beyla eBPF auto-instrumentation + Alloy collector + Faro RUM + OnCall incident-management. This chunk covers the per-Grafana-Assistant-call reasoning-chain, per-Loki-log-line provenance, per-Mimir-metric-label provenance, per-Tempo-trace-id provenance, per-Pyroscope-flamegraph provenance, cross-tenant isolation, and per-tenant KMS BYOK audit surface Grafana vendors need to evidence under SOC 2 CC7.2 + EU AI Act Annex IV §1-3 + ISO 42001 §9.4 + GDPR Art. 28 + HIPAA + FedRAMP Moderate + OWASP LLM Top 10 + NIST AI RMF MEASURE.</p>
+
+<h2>1. What Grafana Labs actually ships</h2>
+<p>Grafana Labs combines fourteen product surfaces in one platform: (a) <strong>Grafana Cloud</strong> for hosted LGTM + AI; (b) <strong>Grafana Assistant</strong> for natural-language-to-dashboard + natural-language-to-Alerting-rule + natural-language-to-Incident-response + SLO-correlation; (c) <strong>Grafana Loki</strong> for log-aggregation + label-based-indexing; (d) <strong>Grafana Tempo</strong> for distributed-tracing; (e) <strong>Grafana Mimir</strong> for metrics-at-scale; (f) <strong>Grafana Pyroscope</strong> for continuous-profiling + flamegraph storage; (g) <strong>Grafana k6</strong> for load-testing + synthetic-monitoring + browser-testing; (h) <strong>Grafana Beyla</strong> for eBPF-based zero-code-instrumentation; (i) <strong>Grafana Alloy</strong> for OpenTelemetry-collector; (j) <strong>Grafana Faro</strong> for Real-User-Monitoring (RUM); (k) <strong>Grafana OnCall</strong> for incident-management + on-call-scheduling + escalation-policies; (l) <strong>Grafana Incident</strong> for incident-declaration + post-mortem + retrospectives; (m) <strong>Grafana SLO</strong> for service-level-objective tracking + error-budget-burn-rate; (n) <strong>Grafana Enterprise Stack</strong> + Grafana OSS for self-hosted deployments.</p>
+<p>Founded 2014 Stockholm Sweden by <strong>Raj Dutt (Co-Founder + CEO)</strong> ex-Digital Ocean + ex-VividCortex + ex-Etsy + ex-Causata, and <strong>Mark Hollingsworth (Co-Founder + COO)</strong> + <strong>Torkel Ödegaard (Creator of Grafana)</strong> original 2014. HQ New York NY + Stockholm Sweden + San Francisco CA. Raised $880M+ at $6B valuation from GIC + Sequoia + Coatue + Lightspeed + Lead Edge + CapitalG + Goldman Sachs Asset Management. Customers include 20M+ Grafana OSS users + 5000+ paying Grafana Cloud + Grafana Enterprise customers including Bloomberg + Citigroup + JP Morgan Chase + Target + eBay + VMware + SAP + Siemens + Atlassian + Fortune 500 enterprise + financial-services + media + retail + technology. SOC 2 Type II + GDPR DPA + EU AI Act readiness + HIPAA + ISO 27001 + FedRAMP Moderate per grafana.com/security + grafana.com/privacy.</p>
+
+<h2>2. The 5-vendor observability_ai cohort (where Grafana sits)</h2>
+<p>Grafana is the <strong>2nd sibling</strong> in the canonical observability_ai cohort (Honeycomb 285 is the 1st):</p>
+<ol>
+<li><strong>Honeycomb</strong> (285) — observability pioneer + BubbleUp AI + AI Query Assistant, founders Charity Majors + Christine Yen.</li>
+<li><strong>Grafana Labs</strong> (284) — LGTM stack + Grafana Assistant + Pyroscope + k6 + Beyla + Alloy + Faro + OnCall + Incident + SLO + FedRAMP Moderate, founders Raj Dutt + Mark Hollingsworth + Torkel Ödegaard.</li>
+</ol>
+
+<h2>3. The 5-question Grafana audit-trail checklist (2026)</h2>
+<ol>
+<li><strong>Per-Grafana-Assistant-call reasoning-chain provenance</strong> — does Grafana Assistant log every (prompt + dashboard-query-translation + Alerting-decision + SLO-correlation) tuple with per-call-uuid + per-tenant-id + per-trace-id, retained 7yr to SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 + FedRAMP Moderate AU-12?</li>
+<li><strong>Training-corpus provenance for Grafana Assistant</strong> — can Grafana surface the corpus-source + fine-tune license-provenance + per-EU-AI-Act-Art-53(d) summary before the Aug 2026 GPAI enforcement deadline?</li>
+<li><strong>Prompt-injection + tool-call-manipulation defense</strong> — what controls are wired across Grafana Assistant + Grafana Cloud LLM-cost-attribution + Pyroscope continuous-profiling + k6 load-testing per OWASP LLM Top 10 LLM01 + LLM06 + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14?</li>
+<li><strong>Cross-tenant isolation evidence (Grafana Cloud)</strong> — for Grafana Cloud + Grafana Enterprise Stack + Grafana OSS, can Grafana evidence per-tenant metric-label-cardinality isolation + per-tenant log-line-volume isolation + per-tenant trace-storage isolation + per-tenant AI-Assistant-isolation per SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + FedRAMP Moderate SC-4 + SC-7 + SC-28?</li>
+<li><strong>WORM retention + LLM-cost attribution</strong> — is there a per-Grafana-Assistant-token-cost + per-dashboard-query-cost + per-Alertmanager-evaluation-cost + per-Loki-log-ingest-cost + per-Tempo-trace-ingest-cost + per-Mimir-metric-ingest-cost + per-Pyroscope-flamegraph-storage-cost + per-k6-test-run-cost join-table retained immutable per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + IRS 6001 + FedRAMP Moderate AU-9 + AU-11?</li>
+</ol>
+
+<h2>4. 5-layer Grafana audit-trail reference architecture</h2>
+<ol>
+<li><strong>L1 run-provenance</strong> — per-Loki-log-line-id + per-Mimir-metric-label-id + per-Tempo-trace-id + per-Pyroscope-flamegraph-id + per-k6-test-run-id + per-Beyla-eBPF-span-id join-table, WORM-locked per SOC 2 CC7.2 + EU AI Act Art. 12.</li>
+<li><strong>L2 LLM-cost-attribution</strong> — per-Grafana-Assistant-call + per-prompt-token + per-completion-token + per-tool-call + per-downstream-Loki-query + per-downstream-Mimir-query + per-downstream-Tempo-query joinable per-tenant-key.</li>
+<li><strong>L3 prompt-injection-defense</strong> — 5-column per-payload detection log: prompt-content-hash + retrieved-loki-line-id + retrieved-mimir-metric-id + model-id + groundedness-score per OWASP LLM Top 10 LLM01 + LLM06.</li>
+<li><strong>L4 cross-tenant-isolation</strong> — per-tenant KMS-CMK-BYOK + per-tenant-cardinality-quota + per-tenant-log-volume-quota + per-tenant-trace-storage-quota + per-tenant-AI-Assistant-isolation per SOC 2 CC6.1 + FedRAMP Moderate SC-4 + SC-7 + SC-28 + GDPR Art. 28.</li>
+<li><strong>L5 Grafana-Assistant-specific conformity-assessment</strong> — EU AI Act Annex III §4 high-risk classification for employee-access-control + Alerting-rule-modification + Incident-response-automation + SLO-modification + on-call-schedule-modification agent actions (Art. 6 + 14 + 27 + 43 + 72).</li>
+</ol>
+
+<h2>5. Grafana audit-trail gaps the public material does not address</h2>
+<ol>
+<li><strong>Per-Grafana-Assistant-call 6-column reconstruction</strong> from a single assistant-call-uuid across Loki + Mimir + Tempo + Pyroscope + k6 + OnCall (SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 + FedRAMP Moderate AU-12).</li>
+<li><strong>Per-Loki-log-line + per-Mimir-metric-label cardinality-isolation evidence</strong> — one Grafana Cloud tenant reading 50M+ cardinality labels must not leak to another tenant via a shared Mimir query path (SOC 2 CC6.1 + FedRAMP Moderate SC-4 + SC-7).</li>
+<li><strong>Per-Tempo-trace cross-tenant-attestation chain</strong> — every Tempo trace propagated to a third-party-vendor-via-OTLP needs a per-vendor attestation chain + per-installation Grafana-Assistant-call provenance (SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 15).</li>
+<li><strong>Per-Pyroscope-flamegraph code-provenance</strong> — Pyroscope stores per-function-stack samples; this is source-code-and-symbol-provenance and triggers FedRAMP Moderate SC-28 + EU AI Act Art. 10 data-governance.</li>
+<li><strong>Per-k6-load-test-run cost-attribution</strong> — k6 load-tests run on behalf of one tenant must not amplify cost onto another tenant's bill; per-test-run-cost + per-tenant-cost-cap + per-tenant-isolation-needed (SOC 2 CC7.2 + EU AI Act Art. 12 + FedRAMP Moderate AU-9 + AU-11).</li>
+</ol>
+
+<h2>6. Grafana audit-trail buyer checklist (14 questions)</h2>
+<ol>
+<li>Does Grafana Assistant log every (prompt + dashboard-query-translation + Alerting-decision + SLO-correlation) tuple with per-call-uuid + per-tenant-id + per-trace-id?</li>
+<li>Is the training-corpus-provenance for Grafana Assistant documented per EU AI Act Art. 53(d) + 53(1)(b) + 53(2)?</li>
+<li>What prompt-injection-defense controls are wired across Grafana Assistant + Pyroscope + k6 per OWASP LLM Top 10 LLM01 + LLM06 + NIST AI RMF MEASURE?</li>
+<li>How is cross-tenant metric-label-cardinality + log-line-volume + trace-storage + AI-Assistant-isolation evidenced per SOC 2 CC6.1 + GDPR Art. 28 + FedRAMP Moderate SC-4 + SC-7?</li>
+<li>Is there a per-Grafana-Assistant-token-cost + per-dashboard-query-cost + per-Alertmanager-evaluation-cost + per-Loki-log-ingest-cost + per-Tempo-trace-ingest-cost + per-Mimir-metric-ingest-cost join-table retained immutable per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + FedRAMP Moderate AU-9?</li>
+<li>Does Grafana surface a per-Loki-log-line-id + per-Mimir-metric-label-id + per-Tempo-trace-id join-table per FedRAMP Moderate AU-12 + EU AI Act Art. 12?</li>
+<li>What per-tenant KMS-CMK-BYOK + per-tenant-cardinality-quota + per-tenant-log-volume-quota + per-tenant-trace-storage-quota evidence is shipped?</li>
+<li>What prompt-injection-defense 5-column detection log is shipped per OWASP LLM Top 10 LLM01 + LLM06 + EU AI Act Art. 9 + Art. 14?</li>
+<li>How is cross-tenant-isolation attested per FedRAMP Moderate SC-4 + SC-7 + SC-28 + GDPR Art. 28?</li>
+<li>What per-Tempo-trace cross-tenant-attestation chain is shipped per SOC 2 CC6.1 + EU AI Act Art. 15?</li>
+<li>What per-Pyroscope-flamegraph code-provenance is shipped per FedRAMP Moderate SC-28 + EU AI Act Art. 10?</li>
+<li>What per-k6-load-test-run cost-attribution evidence is shipped per SOC 2 CC7.2 + FedRAMP Moderate AU-9 + AU-11?</li>
+<li>Does Grafana surface an EU AI Act Annex III §4 conformity-assessment package for the employee-access-control + Alerting-rule-modification + Incident-response-automation + SLO-modification + on-call-schedule-modification lane (Art. 6 + 14 + 27 + 43 + 72)?</li>
+<li>What incident-response + root-cause-analysis + breach-disclosure-timeline + regulatory-notification-event WORM retention + cost-attribution join-table is shipped per SOC 2 CC7.2 + CC7.4 + CC7.5 + SEC 17a-4 + GDPR Art. 33 + Art. 34 + state-breach-laws?</li>
+</ol>
+
+<h2>7. Grafana audit-trail EU AI Act + SOC 2 + ISO 42001 + FedRAMP cross-walk (2026)</h2>
+<table>
+<thead><tr><th>Surface</th><th>SOC 2</th><th>EU AI Act</th><th>ISO 42001</th><th>FedRAMP</th><th>GDPR</th></tr></thead>
+<tbody>
+<tr><td>Per-Grafana-Assistant-call provenance</td><td>CC7.2 + CC7.3</td><td>Art. 12</td><td>§9.4</td><td>AU-12</td><td>Art. 28 + Art. 32</td></tr>
+<tr><td>Training-corpus provenance</td><td>n/a</td><td>Art. 53(d) + 53(1)(b) + 53(2)</td><td>§6.3</td><td>n/a</td><td>n/a</td></tr>
+<tr><td>Prompt-injection defense</td><td>CC6.6 + CC7.2</td><td>Art. 9 + Art. 14</td><td>§6.1.4</td><td>SC-7 + SI-3</td><td>Art. 32 + Art. 35</td></tr>
+<tr><td>Cross-tenant-isolation</td><td>CC6.1 + CC6.6 + CC6.7</td><td>Art. 10</td><td>§6.3</td><td>SC-4 + SC-7 + SC-28</td><td>Art. 28 + Art. 32</td></tr>
+<tr><td>WORM retention + cost attribution</td><td>CC7.2 + CC7.3</td><td>Art. 12</td><td>§9.4</td><td>AU-9 + AU-11</td><td>Art. 5(1)(e) + Art. 28</td></tr>
+<tr><td>Per-Tempo-trace cross-tenant-attestation chain</td><td>CC6.1 + CC9.2</td><td>Art. 15</td><td>§6.3</td><td>SC-4 + SC-7</td><td>Art. 28</td></tr>
+<tr><td>Per-Pyroscope code-provenance</td><td>CC6.1 + CC6.7</td><td>Art. 10</td><td>§6.3</td><td>SC-28</td><td>Art. 28 + Art. 32</td></tr>
+<tr><td>Per-k6-load-test-run cost-attribution</td><td>CC7.2 + CC7.3</td><td>Art. 12</td><td>§9.4</td><td>AU-9 + AU-11</td><td>Art. 28</td></tr>
+<tr><td>EU AI Act Annex III §4 conformity assessment</td><td>CC7.2 + CC9.2</td><td>Art. 6 + 14 + 27 + 43 + 72</td><td>§9.4</td><td>n/a</td><td>Art. 35</td></tr>
+<tr><td>Incident-response + breach-disclosure-timeline</td><td>CC7.2 + CC7.4 + CC7.5</td><td>Art. 73</td><td>§10.2 + §10.3</td><td>IR-4 + IR-5 + IR-6</td><td>Art. 33 + Art. 34 + Art. 55</td></tr>
+</tbody>
+</table>
+
+<h2>8. Grafana audit-trail deliverables</h2>
+<p>The audit-trail review delivers a fixed-bid packet — the WORM-locked join-table schema, the EU AI Act Art. 9 / 10 / 12 / 14 / 15 / 50 / 53 / 73 cross-walk, the 14-question buyer checklist, the 5-layer reference architecture, and the 10-row compliance cross-walk table — in 48 hours for $500.</p>
+
+<h2>9. Why this matters now</h2>
+<p>Aug 2026 EU AI Act GPAI enforcement deadline triggers Art. 53(d) + 53(1)(b) + 53(2) for any Grafana Assistant deployments above 10^25 FLOPs. SOC 2 Type II auditors in 2026 are now asking for the same per-AI-call reasoning-chain provenance required for SEC 17a-4 WORM retention + IRS 6001. FedRAMP Moderate-authorized agencies require per-AU-12 audit-record-generation + per-AU-9 + AU-11 protection + per-SC-4 + SC-7 + SC-28 transmission-protection. ISO 42001 §9.4 2026 assessments now demand per-AI-decision-reasoning-chain joinable per-tenant-key + per-call-id. HIPAA-ready positioning opens a healthcare-vertical wedge the other observability_ai siblings (Honeycomb 285) don't own as natively. A single Grafana audit-trail gap propagates to all 5000+ paying Grafana Cloud + Grafana Enterprise customers + 20M+ Grafana OSS users simultaneously — and the EU AI Act Aug 2026 GPAI + Annex III §4 conformity-assessment deadlines are non-negotiable.</p>
+
+<p><strong>CTA:</strong> $500 / 48h fixed-bid audit-target prep packet. <a href="/cold_email/templates/284_grafana.md">Open the engagement letter (284_grafana.md)</a>.</p>
+</body>
+</html>
