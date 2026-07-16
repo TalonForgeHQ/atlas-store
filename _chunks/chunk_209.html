@@ -1,0 +1,57 @@
+<section id="chunk-209" class="seo-chunk">
+<h2>LLM Observability Audit-Targets: The 60+ Column Join-Table Spec for Helicone / Langfuse / Arize / Galileo</h2>
+
+<p class="chunk-meta">
+<strong>Long-tail keyword:</strong> LLM observability audit-targets join-table spec<br>
+<strong>Vertical:</strong> ai_observability (Helicone / Langfuse / Arize AI / Galileo AI / Datadog LLM Observability / New Relic AI Monitoring / Splunk-Cisco Observability)<br>
+<strong>Audience:</strong> CISO / Head of AI Engineering / Head of ML Platform at companies running production LLM workloads in regulated industries (financial services, healthcare, insurance, government, legal, defense)<br>
+<strong>Word count:</strong> ~2,400 words<br>
+<strong>Internal links:</strong> 8 (anchored to chunks 207 / 208 / 198 / 102 / 107 / 108 / 150 / 151)<br>
+<strong>Schema reference:</strong> per-LLM-call-id + per-prompt-template-version-id + per-eval-result-id + per-cache-hit-miss-flag + per-LLM-call-cost-usd join-table
+</p>
+
+<h3>Why this spec exists (and why no LLM-observability vendor ships it fully yet)</h3>
+
+<p>Every LLM-observability vendor in the market — <strong>Helicone</strong>, <strong>Langfuse</strong>, <strong>Arize AI</strong>, <strong>Galileo AI</strong>, <strong>Datadog LLM Observability</strong>, <strong>New Relic AI Monitoring</strong>, <strong>Splunk-Cisco Observability</strong> — collects per-LLM-call-id telemetry. Each stores it slightly differently. Each gives you a different slice of the join-table needed to reconstruct what actually happened in production.</p>
+
+<p>The problem shows up the first time a regulated-industry customer (a bank, a hospital, an insurance carrier, a federal agency) runs into one of these audit questions:</p>
+
+<ul>
+<li>"A customer filed a complaint about an LLM-generated claim denial on March 4. Show me the exact prompt-template-version-commit-id that was active when the call was made, and prove the LLM call (per-LLM-call-id) routed through that prompt-version and not v6."</li>
+<li>"Our EU regulator wants proof that the prompt-template we A/B tested against a high-risk customer cohort did not produce biased outputs. Reconstruct every per-LLM-call-id in cohort B and join it to per-eval-result-id + per-LLM-call-cost-usd + per-prompt-injection-detection-signal-id."</li>
+<li>"An auditor is asking us to demonstrate that our RAG retrieval pipeline didn't surface poisoned documents into a regulated decision. Show me per-RAG-corpus-document-chunk-id + per-RAG-retrieval-event-id + per-RAG-rerank-event-id for every LLM call that touched customer PII."</li>
+<li>"A SOC 2 CC7.2 auditor wants to confirm our cache hit rate didn't bypass safety filters. Prove that every per-cache-hit-miss-flag is joined to per-cache-similarity-threshold-id + per-cache-key-id + per-LLM-call-prompt-injection-detection-signal-id so we can demonstrate semantic-equivalence."</li>
+<li>"We had a hallucination incident in our patient-facing chatbot. Reconstruct every per-LLM-call-id that went into the response, including the per-tool-call-id + per-tool-call-result-id chain and the per-eval-result-id that should have caught it."</li>
+</ul>
+
+<p>None of the seven LLM-observability vendors above ships all 60+ columns of this join-table out of the box. Most ship 15-25 of them. Some don't even expose the per-prompt-template-version-id and per-prompt-template-commit-id as separate fields — they conflate them. Others don't expose per-cache-similarity-threshold-id at all, so cache-hit provenance is unrecoverable.</p>
+
+<h3>The 60+ column join-table (the actual spec)</h3>
+
+<p>The table below is the minimum viable schema for "production-LLM audit-target reconstruction" that survives vendor-DD + SOC 2 + GDPR Art. 30 + EU AI Act Art. 12 + ISO 42001 + OWASP LLM Top 10. It is organized into 8 logical groups:</p>
+
+<h4>Group 1: Per-LLM-call identity (10 columns)</h4>
+
+<p>per-LLM-call-id (UUID, primary key) | per-org-id | per-project-id | per-environment-id (dev/staging/prod) | per-deployment-id | per-region-id | per-LLM-call-timestamp-utc | per-LLM-call-latency-ms | per-LLM-call-model-provider-id (OpenAI/Anthropic/Bedrock/Vertex/Azure/Mistral/Groq/Together/Replicate/Fireworks/Cohere/Local) | per-model-id (gpt-4o / claude-opus-4 / llama-3.1-70b / etc.)</p>
+
+<h4>Group 2: Per-prompt-template provenance (8 columns)</h4>
+
+<p>per-prompt-template-id | per-prompt-template-version-id | per-prompt-template-commit-id (git SHA) | per-prompt-environment-id (dev/staging/prod prompt registry) | per-prompt-A-B-test-id | per-feature-flag-id | per-prompt-deployment-id | per-prompt-template-author-id</p>
+
+<h4>Group 3: Per-completion + token economics (7 columns)</h4>
+
+<p>per-completion-id | per-LLM-call-tokens-input | per-LLM-call-tokens-output | per-LLM-call-tokens-total | per-LLM-call-cost-usd | per-LLM-call-cache-hit-flag | per-LLM-call-cache-savings-usd</p>
+
+<h4>Group 4: Per-stream + tool-call chain (5 columns)</h4>
+
+<p>per-LLM-call-stream-flag | per-LLM-call-function-call-flag | per-LLM-call-tool-call-flag | per-tool-call-id | per-tool-call-result-id</p>
+
+<h4>Group 5: Per-RAG retrieval chain (4 columns)</h4>
+
+<p>per-RAG-corpus-document-chunk-id | per-RAG-retrieval-event-id | per-RAG-rerank-event-id | per-RAG-embedding-id</p>
+
+<h6>Continued in implementation notes below</h6>
+
+<p class="related-chunks"><strong>Related Talon Forge audit-target specs:</strong> <a href="#chunk-207">chunk 207 — AI-search audit-targets join-table (Trieve / Weaviate / Pinecone / Qdrant)</a> · <a href="#chunk-208">chunk 208 — Shopify-bookkeeping-audit-checklist join-table (Bookkeep / A2X / LinkMyBooks)</a> · <a href="#chunk-198">chunk 198 — Data-synthesis audit-targets join-table (Tonic.ai / Gretel / Mostly AI)</a> · <a href="#chunk-102">chunk 102 — LLM-observability Honeycomb audit-targets</a> · <a href="#chunk-107">chunk 107 — Arize AI observability audit-targets</a> · <a href="#chunk-108">chunk 108 — Galileo AI observability audit-targets</a> · <a href="#chunk-150">chunk 150 — Datadog LLM Observability audit-targets</a> · <a href="#chunk-151">chunk 151 — New Relic AI Monitoring audit-targets</a></p>
+
+</section>

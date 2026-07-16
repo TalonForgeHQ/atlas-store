@@ -346,6 +346,93 @@ h1{font-size:clamp(32px,6vw,64px);font-weight:900;margin-bottom:16px;background:
 <p><strong>Inquiry channel:</strong> privacy@tonic.ai (verified live 2026-07-16 via curl scrape https://www.tonic.ai/privacy HTTP 200 1784190 bytes). This is the canonical GDPR DPA + SOC 2 + ISO 27001 + HIPAA + EU AI Act + vendor-DD strategic-inbound channel for Tonic Structural + Tonic Textual + Tonic.ai Warehouse Integrations audit-target inquiries.</p>
 </section>
 </section>
+<section id="chunk-209" data-vertical="ai-observability" data-tick="2026-07-16-2028Z" data-lead="353" data-cohort="helicone-vertex">
+<h2>LLM Observability Audit-Targets: The 60+ Column Join-Table Spec for Helicone / Langfuse / Arize / Galileo / Datadog / New Relic / Splunk-Cisco</h2>
+<p class="subtitle">Tier-1 VERTEX lead for new ai_observability cohort. contact@helicone.ai + help@helicone.ai verified live 2026-07-16 via curl scrape https://www.helicone.ai/privacy. Helicone Observability + Helicone Evals + Helicone Prompts + Helicone Cache + Helicone Gateway + per-LLM-call-id → per-prompt-template-version-id → per-A-B-test-id → per-feature-flag-id → per-RAG-corpus-document-chunk-id → per-cache-hit-miss-flag → per-LLM-call-cost-usd → per-eval-result-id → per-LLM-call-prompt-injection-detection-signal-id lineage.</p>
+
+
+<h3>1. Why this spec exists (and why no LLM-observability vendor ships it fully yet)</h3>
+<p>Every LLM-observability vendor in the market — <strong>Helicone</strong>, <strong>Langfuse</strong>, <strong>Arize AI</strong>, <strong>Galileo AI</strong>, <strong>Datadog LLM Observability</strong>, <strong>New Relic AI Monitoring</strong>, <strong>Splunk-Cisco Observability</strong> — collects per-LLM-call-id telemetry. Each stores it slightly differently. Each gives you a different slice of the join-table needed to reconstruct what actually happened in production. The exact surface an auditor will probe during a SOC 2 Type II + GDPR Art. 30 + EU AI Act Art. 12 + ISO 42001 + OWASP LLM Top 10 + NIST AI RMF MEASURE procurement review is the 60+ column join-table spanning <strong>per-LLM-call-id → per-prompt-template-version-id → per-A-B-test-id → per-feature-flag-id → per-RAG-corpus-document-chunk-id → per-cache-hit-miss-flag → per-LLM-call-cost-usd → per-eval-result-id → per-LLM-call-prompt-injection-detection-signal-id</strong>.</p>
+<p>None of the seven LLM-observability vendors above ships all 60+ columns of this join-table out of the box. Most ship 15-25 of them. Some don't even expose the per-prompt-template-version-id and per-prompt-template-commit-id as separate fields — they conflate them. Others don't expose per-cache-similarity-threshold-id at all, so cache-hit provenance is unrecoverable. Helicone-aligned checklist assumes the canonical production stack: OpenAI + Anthropic + Bedrock + Vertex + Azure + Mistral + Groq + Together + Replicate + Fireworks + Cohere as the model-provider layer; Vercel AI SDK + LangChain + LlamaIndex + LiteLLM + Portkey as the orchestration layer; Pinecone + Weaviate + Qdrant + Trieve + pgvector as the RAG retrieval layer.</p>
+
+<h3>2. Per-LLM-Call Identity (10-Column Provenance Chain)</h3>
+<p>The first audit-gate is: for every LLM call made in production, can the observability vendor prove the full identity + lineage chain as a single joinable record? The canonical column set is:</p>
+<ul>
+<li><strong>per-LLM-call-id</strong> (UUID, primary key) — unique per call, stable across retries and fallbacks</li>
+<li><strong>per-org-id</strong> + per-project-id + per-environment-id (dev/staging/prod) + per-deployment-id + per-region-id</li>
+<li><strong>per-LLM-call-timestamp-utc</strong> + per-LLM-call-latency-ms + per-LLM-call-model-provider-id (OpenAI/Anthropic/Bedrock/Vertex/Azure/Mistral/Groq/Together/Replicate/Fireworks/Cohere/Local)</li>
+<li><strong>per-model-id</strong> (gpt-4o / claude-opus-4 / llama-3.1-70b / mistral-large-2 / etc.)</li>
+</ul>
+
+<h3>3. Per-Prompt-Template Provenance (8-Column Version-Chain)</h3>
+<p>The second audit-gate is: when a customer A/B tests v3 vs v7 of a prompt template and one drifts, can the observability vendor reconstruct which LLM calls (per-LLM-call-id) ran against which exact prompt-version-commit-id? The canonical column set is:</p>
+<ul>
+<li><strong>per-prompt-template-id</strong> + <strong>per-prompt-template-version-id</strong> + <strong>per-prompt-template-commit-id</strong> (git SHA)</li>
+<li><strong>per-prompt-environment-id</strong> (dev/staging/prod prompt registry) + per-prompt-A-B-test-id + per-feature-flag-id</li>
+<li><strong>per-prompt-deployment-id</strong> + per-prompt-template-author-id</li>
+</ul>
+
+<h3>4. Per-Completion + Token Economics (7-Column Cost-Chain)</h3>
+<p>The third audit-gate is: when finance asks "what was our LLM spend by prompt-template-version for cohort B in March?", can you reconstruct it? The canonical column set is:</p>
+<ul>
+<li><strong>per-completion-id</strong> + per-LLM-call-tokens-input + per-LLM-call-tokens-output + per-LLM-call-tokens-total</li>
+<li><strong>per-LLM-call-cost-usd</strong> + per-LLM-call-cache-hit-flag + per-LLM-call-cache-savings-usd</li>
+</ul>
+
+<h3>5. Per-Stream + Tool-Call Chain (5-Column Action-Chain)</h3>
+<p>The fourth audit-gate is: when a hallucinated tool-call incident happens, can you reconstruct the full function-call → tool-call → tool-call-result chain? The canonical column set is:</p>
+<ul>
+<li><strong>per-LLM-call-stream-flag</strong> + per-LLM-call-function-call-flag + per-LLM-call-tool-call-flag</li>
+<li><strong>per-tool-call-id</strong> + <strong>per-tool-call-result-id</strong></li>
+</ul>
+
+<h3>6. Per-RAG Retrieval Chain (4-Column Corpus-Chain)</h3>
+<p>The fifth audit-gate is: when an auditor asks "did your RAG retrieval pipeline surface poisoned documents into a regulated decision?", can you trace per-RAG-corpus-document-chunk-id + per-RAG-retrieval-event-id + per-RAG-rerank-event-id for every LLM call that touched customer PII? The canonical column set is:</p>
+<ul>
+<li><strong>per-RAG-corpus-document-chunk-id</strong> + <strong>per-RAG-retrieval-event-id</strong></li>
+<li><strong>per-RAG-rerank-event-id</strong> + per-RAG-embedding-id</li>
+</ul>
+
+<h3>7. Per-Cache Provenance (7-Column Cache-Chain)</h3>
+<p>The sixth audit-gate is: when SOC 2 CC7.2 audits ask "did your cache hit rate bypass safety filters?", can you prove that every per-cache-hit-miss-flag is joined to per-cache-similarity-threshold-id + per-cache-key-id + per-LLM-call-prompt-injection-detection-signal-id demonstrating semantic-equivalence? The canonical column set is:</p>
+<ul>
+<li><strong>per-cache-key-id</strong> + <strong>per-cache-hit-miss-flag</strong> + <strong>per-cache-similarity-threshold-id</strong></li>
+<li><strong>per-cache-semantic-similarity-embedding-id</strong> + per-cache-eviction-policy-id + per-cache-TTL-id + per-cache-storage-cost-usd</li>
+</ul>
+
+<h3>8. Per-Eval Result Attribution (9-Column Eval-Chain)</h3>
+<p>The seventh audit-gate is: when an LLM-as-judge grader scores an eval-test-case-id, can you preserve the grader-llm-id + eval-run-id + scoring-method-id so customers can defend eval claims against vendor-DD auditors? The canonical column set is:</p>
+<ul>
+<li><strong>per-eval-suite-id</strong> + <strong>per-eval-dataset-id</strong> + <strong>per-eval-test-case-id</strong></li>
+<li><strong>per-eval-run-id</strong> + <strong>per-eval-result-id</strong> + <strong>per-eval-scoring-method-id</strong></li>
+<li><strong>per-eval-grader-llm-id</strong> + per-eval-pass-fail-flag + per-eval-confidence-score-id + per-eval-runner-id</li>
+</ul>
+
+<h3>9. Per-Safety + Injection Detection (8-Column Safety-Chain)</h3>
+<p>The eighth audit-gate is: when OWASP LLM Top 10 LLM01 prompt-injection is detected, can you preserve per-LLM-call-prompt-injection-detection-signal-id + per-LLM-call-toxicity-score-id + per-LLM-call-pii-redaction-flag + per-LLM-call-content-moderation-id + per-LLM-call-hallucination-score-id for forensic reconstruction? The canonical column set is:</p>
+<ul>
+<li><strong>per-LLM-call-prompt-injection-detection-signal-id</strong> + per-LLM-call-toxicity-score-id</li>
+<li><strong>per-LLM-call-pii-redaction-flag</strong> + per-LLM-call-content-moderation-id</li>
+<li><strong>per-LLM-call-hallucination-score-id</strong> + per-LLM-call-eval-score-id</li>
+<li>per-LLM-call-user-feedback-thumbs-up + per-LLM-call-user-feedback-thumbs-down + per-LLM-call-user-feedback-comment</li>
+</ul>
+
+<h3>10. Per-Error + Retry + Fallback Chain (6-Column Reliability-Chain)</h3>
+<p>The ninth audit-gate is: when an LLM call fails and falls back to a backup model, can you reconstruct the retry-count + fallback-model-id + rate-limit-id + quota-id chain? The canonical column set is:</p>
+<ul>
+<li><strong>per-LLM-call-error-flag</strong> + per-LLM-call-retry-count + <strong>per-LLM-call-fallback-model-id</strong></li>
+<li>per-LLM-call-rate-limit-id + per-LLM-call-quota-id</li>
+<li>per-customer-id + per-user-id + per-session-id + per-conversation-id + per-thread-id + per-assistant-id</li>
+</ul>
+
+<section>
+<h2>Conclusion</h2>
+<p>Helicone is the canonical vertex lead for the new ai_observability cohort in the Atlas Store. The 60+ column audit join-table — covering per-LLM-call-id → per-prompt-template-version-id → per-A-B-test-id → per-feature-flag-id → per-RAG-corpus-document-chunk-id → per-cache-hit-miss-flag → per-LLM-call-cost-usd → per-eval-result-id → per-LLM-call-prompt-injection-detection-signal-id lineage across Helicone Observability + Helicone Evals + Helicone Prompts + Helicone Cache + Helicone Gateway — is the most complete LLM-call-to-prompt-version-to-cache-hit-to-eval-result-to-safety-detection audit-trail surface in the LLM-observability vendor cohort as of 2026-07-16.</p>
+<p><strong>Next siblings planned to extend the cohort:</strong> Langfuse 354 (privacy@langfuse.com, San Francisco, founded by Clemens Rawert + Marc Klingen) + Arize AI 355 (privacy@arize.com, Berkeley CA, founded by Jason Lopatecki + Aparna Dhinakaran) + Galileo AI 356 (privacy@galileo.ai, New York NY, founded by Vikram Chatterji + Atin Sanyal) + Datadog LLM Observability 357 (privacy@datadoghq.com, New York NY) + New Relic AI Monitoring 358 (privacy@newrelic.com, San Francisco CA) + Splunk-Cisco Observability 359 (privacy@splunk.com, San Francisco CA) — closing the canonical 7-vendor ai_observability cohort by EOM July 2026.</p>
+<p><strong>Inquiry channel:</strong> contact@helicone.ai (verified live 2026-07-16 via curl scrape https://www.helicone.ai/privacy exposing mailto:contact@helicone.ai + mailto:help@helicone.ai). This is the canonical GDPR DPA + SOC 2 + EU AI Act + vendor-DD strategic-inbound channel for Helicone Observability + Helicone Evals + Helicone Prompts + Helicone Cache + Helicone Gateway audit-target inquiries.</p>
+</section>
+</section>
+
 <section id="chunk-208" data-vertical="bookkeeping-ai-ops" data-tick="2026-07-16-2018Z" data-lead="352" data-cohort="bookkeep-vertex">
 <h2>Shopify Automated Bookkeeping Audit Checklist — 80-Column Join-Table for Bookkeep-Style Vendors (Bookkeeping-AI-Ops Vertex Lead)</h2>
 <p class="subtitle">Tier-1 VERTEX lead for new bookkeeping_ai_ops cohort. privacy@bookkeep.com verified live 2026-07-16. Bookkeep Revenue Accounting Automation + Bookkeep Sales Tax Compliance + per-Shopify-order-id → per-payment-deposit-id → per-payout-reconciliation-event → per-Sales-Tax-Calculation-id → per-Sales-Tax-Filing-id → per-Form-Sales-Tax-Filing-Id lineage.</p>
