@@ -18,7 +18,7 @@ Five audit gaps the 1000+ Arize AI engineering teams will hit in the next SOC 2 
 
 4. **Cross-tenant + cross-org + cross-project + cross-environment isolation-evidence.** SOC 2 CC6.1 + GDPR Art. 28 + HIPAA §164.312 + EU AI Act Art. 10 (data-governance) require 11-column per-LLM-call-id + per-eval-run-id join-table with CMK/BYOK + per-tenant-KMS-key-id + per-org-isolation-flag + cross-border-transfer-sccs-version-US-EU.
 
-5. **WORM retention + cost-attribution join-table + EU AI Act Annex III high-risk-classification per Art. 6 + Art. 14 + Art. 27 + Art. 43 + Art. 72 + Art. 50 transparency-obligation.** Arize Phoenix + Arize AX engagements at $5,000-$15,000 per audit-pack (48h delivery) + $497-$2,497/mo retainer for ongoing eval-dataset-poisoning + cross-tenant isolation-evidence + WORM-retention monitoring.
+5. **WORM retention + cost-attribution join-table + EU AI Act Annex III high-risk-classification per Art. 6 + Art. 14 + Art. 27 + Art. 43 + Art. 72 + Art. 50 transparency-obligation.** Arize Phoenix + Arize AX engagements at **$500/48h audit** (Tier 1) + **$5,000-$15,000 per audit-pack** (Tier 2/3, 1-4 weeks) + **$497/mo retainer** (ongoing) + **$497-$2,497/mo retainer** for ongoing eval-dataset-poisoning + cross-tenant isolation-evidence + WORM-retention monitoring.
 
 Worth a 15-min call this week to see if it fits Arize? I can show the canonical Helicone 353 60+ column join-table + where Arize 354 would land in the cohort ranking.
 
