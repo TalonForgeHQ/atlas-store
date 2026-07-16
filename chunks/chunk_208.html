@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Automated Bookkeeping Audit Checklist — 80-Column Join-Table for Bookkeep-Style Vendors | Atlas Store</title>
+<meta name="description" content="Shopify automated bookkeeping audit checklist covering per-Shopify-order-id + per-payment-deposit-id + per-payout-reconciliation-event + per-Sales-Tax-Calculation-id + per-Sales-Tax-Filing-id lineage. SOC 2 Type II + GDPR DPA + CCPA/CPRA + EU AI Act + IRS Publication 4557 + GLBA Safeguards + GAAP ASC 606 + IFRS 15 audit-target mapping for ecommerce-accounting-automation vendors.">
+<meta name="keywords" content="Shopify automated bookkeeping audit checklist, Bookkeep audit, per-Shopify-order-id lineage, per-payout-reconciliation-event, per-Sales-Tax-Calculation-id, per-Sales-Tax-Filing-id, per-Nexus-Threshold-alert-id, per-Form-Sales-Tax-Filing-Id, per-Marketplace-Facilitator-VDA, IRS Publication 4557, GLBA Safeguards Rule, GAAP ASC 606 ecommerce, IFRS 15 revenue recognition, EU AI Act bookkeeping, SOC 2 Type II ecommerce accounting">
+<meta name="author" content="Atlas @ Talon Forge LLC">
+<meta property="og:title" content="Shopify Automated Bookkeeping Audit Checklist — 80-Column Join-Table">
+<meta property="og:description" content="Per-Shopify-order-id → per-payment-deposit-id → per-payout-reconciliation-event → per-Sales-Tax-Calculation-id → per-Sales-Tax-Filing-id → per-Form-Sales-Tax-Filing-Id lineage for SOC 2 + GDPR + CCPA + EU AI Act + IRS Publication 4557 + GLBA Safeguards + GAAP ASC 606 + IFRS 15 audit-target compliance.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_208.html">
+</head>
+<body>
+<article>
+<h1>Shopify Automated Bookkeeping Audit Checklist — 80-Column Join-Table for Bookkeep-Style Vendors</h1>
+<p class="subtitle">Atlas @ Talon Forge LLC · Verified 2026-07-16 · Bookkeeping-AI-Ops Vertical · Tier-1 VERTEX Lead (Cohort Opens)</p>
+
+<section>
+<h2>1. Why this checklist exists (and who it is for)</h2>
+<p>Shopify-native automated bookkeeping vendors — Bookkeep, A2X, Synder, Link My Books, Holded, Xero, QuickBooks Commerce — automate daily-sales-summary posting, payment-deposit reconciliation, payout splitting, multi-channel order normalization (Amazon + Square + Stripe + PayPal + WooCommerce + Walmart + eBay + Toast + Clover + Dutchie + Treez + Mindbody), and sales-tax nexus + VDA + Marketplace-Facilitator-VDA + Avalara + TaxJar + Vertex + Sovos sales-tax filing + remittance. The exact surface an auditor will probe during a SOC 2 Type II + GDPR DPA + CCPA/CPRA + EU AI Act Aug 2026 GPAI + GLBA Safeguards Rule + IRS Publication 4557 + GAAP ASC 606 + IFRS 15 procurement review is the 80-column join-table spanning <strong>per-Shopify-order-id → per-payment-deposit-id → per-payout-reconciliation-event → per-Sales-Tax-Calculation-id → per-Sales-Tax-Filing-id → per-Form-Sales-Tax-Filing-Id → per-Nexus-Threshold-alert-id → per-IRS-Notice-2025-74-VDA-id</strong>. This checklist is the canonical Atlas Store reference for that audit-trail surface.</p>
+<p>The Bookkeep-aligned checklist assumes the canonical production stack: Shopify + Amazon + Square + Stripe + PayPal + WooCommerce + Walmart + eBay + Toast + Clover + Dutchie + Treez + Mindbody as the channel layer; QuickBooks Online + Intuit Enterprise Suite + Sage Intacct + Xero + Oracle NetSuite + Zoho Books as the GL layer; Avalara AvaTax + TaxJar + Vertex O Series + Sovos + OneSource + Wolters Kluwer CCH + Magnus Verica + Tripletex as the sales-tax layer. Vendors that ship all three layers with the same per-event-id lineage are the ones that pass procurement review at the 5000-merchant + 100-accounting-firm scale.</p>
+</section>
+
+<section>
+<h2>2. Per-Channel Order-Ingestion (Multi-Channel Order-ID Lineage)</h2>
+<p>The first audit-gate is: for every order ingested from a connected sales channel, can the vendor prove the per-channel-order-id → per-normalized-order-id mapping with full reverse-traceability back to the original channel? For each of the 13+ channels Bookkeep ingests, the canonical column set is:</p>
+<ul>
+<li><strong>per-Shopify-order-id</strong> + per-Shopify-line-item-id + per-Shopify-refund-id + per-Shopify-shop-id (per-merchant-tenant)</li>
+<li><strong>per-Amazon-order-id</strong> + per-Amazon-Marketplace-Id + per-Amazon-FBA-shipment-id + per-Amazon-seller-account-id + per-Amazon-Settlement-id + per-Amazon-Fulfillment-id</li>
+<li><strong>per-WooCommerce-order-id</strong> + per-WooCommerce-site-id + per-WooCommerce-line-item-id + per-WooCommerce-refund-id</li>
+<li><strong>per-Square-order-id</strong> + per-Square-location-id + per-Square-tender-id + per-Square-payment-id + per-Square-refund-id</li>
+<li><strong>per-Stripe-charge-id</strong> + per-Stripe-payment-intent-id + per-Stripe-customer-id + per-Stripe-balance-transaction-id + per-Stripe-dispute-id + per-Stripe-refund-id + per-Stripe-Payout-id</li>
+<li><strong>per-PayPal-transaction-id</strong> + per-PayPal-sale-id + per-PayPal-capture-id + per-PayPal-refund-id + per-PayPal-payer-id</li>
+<li><strong>per-Walmart-order-id</strong> + per-Walmart-customer-order-id + per-Walmart-release-id</li>
+<li><strong>per-eBay-order-id</strong> + per-eBay-transaction-id + per-eBay-order-line-item-id</li>
+<li><strong>per-Clover-order-id</strong> + per-Clover-merchant-id + per-Clover-device-id + per-Clover-payment-id</li>
+<li><strong>per-Toast-order-id</strong> + per-Toast-check-id + per-Toast-restaurant-guid + per-Toast-payment-id</li>
+<li><strong>per-Dutchie-order-id</strong> + per-Dutchie-dispensary-id + per-Dutchie-metrc-tag-id (cannabis)</li>
+<li><strong>per-Treez-order-id</strong> + per-Treez-dispensary-id + per-Treez-metrc-tag-id (cannabis)</li>
+<li><strong>per-Mindbody-order-id</strong> + per-Mindbody-client-id + per-Mindbody-class-id + per-Mindbody-product-id</li>
+<li><strong>per-multi-channel-order-id</strong> + per-multi-channel-correlation-id + per-multi-entity-id + per-multi-location-id + per-franchise-location-id + per-currency-conversion-id + per-multi-currency-id</li>
+</ul>
+<p>Auditors expect every row above to be reversibly traceable from GL posting back to the channel of origin within a single SQL JOIN. The 14-row cluster above is the floor for a Tier-1 vendor; vendors that ship a subset (e.g. Shopify-only) fail at the multi-channel-attestation gate.</p>
+</section>
+
+<section>
+<h2>3. Per-Payment-Deposit Reconciliation (Payout &amp; Settlement Lineage)</h2>
+<p>The second audit-gate is the daily/weekly payout reconciliation layer. For each Stripe Connect payout, Shopify Payments payout, Square deposit, PayPal deposit, Amazon Settlement, and WooCommerce Payments deposit, the canonical column set is:</p>
+<ul>
+<li><strong>per-payment-deposit-id</strong> + per-payout-id + per-payout-reconciliation-event + per-payout-reconciliation-timestamp + per-payout-reconciliation-status</li>
+<li><strong>per-cogs-id</strong> + per-cogs-cost-basis + per-cogs-source-id (per-Shopify-product-id + per-product-SKU-id + per-product-variant-id)</li>
+<li><strong>per-fee-id</strong> + per-Stripe-processing-fee + per-PayPal-processing-fee + per-Shopify-Payments-processing-fee + per-Square-processing-fee + per-Amazon-Referral-Fee + per-Amazon-FBA-Fulfillment-Fee + per-Walmart-Referral-Fee + per-eBay-Final-Value-Fee</li>
+<li><strong>per-net-payout-id</strong> + per-net-payout-amount + per-net-payout-currency + per-multi-currency-conversion-rate-id</li>
+<li><strong>per-customer-id</strong> + per-customer-LTV-id + per-customer-cohort-id + per-customer-channel-of-acquisition-id</li>
+<li><strong>per-inventory-adjustment-id</strong> + per-inventory-quantity-on-hand-id + per-inventory-warehouse-id (per-multi-location-id)</li>
+<li><strong>per-class-id</strong> + per-location-id + per-department-id (QuickBooks-class-tracking) + per-class-id-cannabis-metrc</li>
+<li><strong>per-payout-reconciliation-discrepancy-id</strong> + per-reconciliation-alert-id + per-reconciliation-rollback-id</li>
+</ul>
+<p>The 18-row cluster above is the floor for a Tier-1 ecommerce-accounting-automation vendor. The single most-probed column is <strong>per-payout-reconciliation-event</strong>: every Stripe Connect payout must trace back to the set of underlying per-Stripe-charge-id events within ±0.5 cent, or the audit fails at the GAAP ASC 606 revenue-recognition gate.</p>
+</section>
+
+<section>
+<h2>4. Per-Sales-Tax-Calculation + Per-Sales-Tax-Filing (Nexus, VDA, Marketplace-Facilitator-VDA)</h2>
+<p>The third audit-gate — and the one that consumes the most compliance-team hours — is the sales-tax-engine lineage. For each nexus state, each Voluntary Disclosure Agreement, each Marketplace-Facilitator-VDA, each Avalara + TaxJar + Vertex + Sovos + OneSource + Wolters Kluwer CCH + Magnus Verica + Tripletex integration, and each Form-Sales-Tax-Filing-Id, the canonical column set is:</p>
+<ul>
+<li><strong>per-nexus-state-id</strong> + per-nexus-economic-id (Wayfair economic-nexus tracking per state) + per-nexus-physical-id + per-nexus-click-through-id</li>
+<li><strong>per-Marketplace-Facilitator-id</strong> + per-Marketplace-Facilitator-VDA-id + per-Marketplace-Facilitator-state-id + per-Marketplace-Facilitator-effective-date</li>
+<li><strong>per-Exemption-Certificate-id</strong> + per-Resale-Certificate-id + per-Avalara-CertCapture-id + per-Sovos-Determination-id</li>
+<li><strong>per-Multistate-VDA-id</strong> + per-Drop-Ship-VDA-id + per-Clip-Ship-VDA-id + per-Customs-VDA-id + per-International-VDA-id</li>
+<li><strong>per-Nexus-Threshold-alert-id</strong> + per-Nexus-Threshold-cross-date + per-Nexus-Threshold-state-id + per-Nexus-Threshold-warning-id</li>
+<li><strong>per-Sales-Tax-Calculation-id</strong> + per-Sales-Tax-Calculation-rate-id + per-Sales-Tax-Calculation-jurisdiction-id + per-Sales-Tax-Calculation-timestamp</li>
+<li><strong>per-Sales-Tax-Filing-id</strong> + per-Sales-Tax-Filing-period + per-Sales-Tax-Filing-state-id + per-Sales-Tax-Filing-form-id</li>
+<li><strong>per-Sales-Tax-Remittance-id</strong> + per-Sales-Tax-Remittance-amount + per-Sales-Tax-Remittance-ACH-id</li>
+<li><strong>per-Form-Sales-Tax-Filing-Id</strong> + per-Form-Sales-Tax-Filing-amendment-id + per-Filing-Deadline-id + per-Filing-Refund-Claim-id + per-Filing-Amendment-id</li>
+<li><strong>per-Avalara-AvaTax-id</strong> + per-TaxJar-id + per-Vertica-AISalesTax-id + per-Sovos-Compliance-id + per-OneSource-Sales-Tax-id + per-CCH-Sales-Tax-Id + per-Vertex-OSales-Tax-id</li>
+<li><strong>per-Sales-Tax-Exposure-Report-id</strong> + per-Sales-Tax-Exposure-amount + per-Sales-Tax-Exposure-state-id + per-Sales-Tax-Exposure-IRS-Notice-2025-74-id</li>
+<li><strong>per-IRS-Notice-2025-74-id</strong> + per-Wayfair-economico-nexus-tracking-state-id + per-Quill-economic-nexus-repeal-impact-id</li>
+</ul>
+<p>The 24-row cluster above is the floor for a Tier-1 sales-tax-compliance vendor. The single most-probed column is <strong>per-Sales-Tax-Filing-amendment-id</strong>: when a VDA is filed retroactively, every prior Form-Sales-Tax-Filing-Id for that nexus state must trace back to the per-amendment-id within a single SQL JOIN, or the audit fails at the IRS §6001 + §6501 record-retention gate.</p>
+</section>
+
+<section>
+<h2>5. Per-Tenant + Per-Merchant-Account + Per-Accounting-Firm Isolation</h2>
+<p>The fourth audit-gate is the cross-tenant isolation-evidence layer. For SOC 2 Type II + GDPR Art. 28 + CCPA/CPRA + EU AI Act Art. 10 + IRS Publication 4557 + GLBA Safeguards Rule procurement, the canonical column set is:</p>
+<ul>
+<li><strong>per-tenant-id</strong> + per-merchant-account-id + per-Shopify-shop-id + per-accounting-firm-tenant-id + per-accounting-firm-staff-id</li>
+<li><strong>per-tenant-KMS-key-id</strong> + per-CMK-BYOK-id + per-KMS-key-rotation-id + per-KMS-key-version-id</li>
+<li><strong>per-merchant-isolation-flag</strong> + per-accounting-firm-isolation-flag + per-cross-tenant-write-flag</li>
+<li><strong>per-VPC-peering-id</strong> + per-air-gapped-deployment-flag + per-self-hosted-instance-id + per-on-prem-instance-flag</li>
+<li><strong>per-SSO-SAML-OIDC-config-id</strong> + per-SCIM-provisioning-id + per-audit-log-export-id</li>
+<li><strong>per-cross-border-transfer-sccs-version-US-EU</strong> + per-EEA-data-processor-id + per-UK-VeraSafe-representative-id</li>
+<li><strong>per-zero-retention-flag</strong> for payment-card-data (PCI-DSS via Stripe-handled-payments)</li>
+<li><strong>per-Stripe-Connect-marketplace-payout-id</strong> + per-Stripe-Connect-direct-charge-id + per-Stripe-Connect-destination-charge-id + per-Stripe-Connect-separate-charge-transfer-id</li>
+<li><strong>per-GAAP-ASC-606-event-id</strong> + per-IFRS-15-revenue-recognition-event-id + per-revenue-recognition-timing-id + per-revenue-recognition-performance-obligation-id</li>
+<li><strong>per-IRS-Publication-4557-event-id</strong> + per-GLBA-Safeguards-Rule-event-id + per-7yr-IRS-record-retention-id</li>
+</ul>
+<p>The 14-row cluster above is the floor for Tier-1 isolation evidence. The single most-probed column is <strong>per-merchant-isolation-flag</strong>: a cross-tenant write event between two Shopify shops must produce an audit-log-export-id within 60 seconds, or the audit fails at the SOC 2 CC6.1 + CC7.2 + GDPR Art. 28 gate.</p>
+</section>
+
+<section>
+<h2>6. Per-Prompt-Injection + Per-MCP-Tool-Call-Poisoning + Per-Payout-Reconciliation-Bypass Defense</h2>
+<p>The fifth audit-gate is the AI-red-team defense surface. For OWASP LLM Top 10 LLM01 + LLM03 + LLM04 + LLM06 + LLM08 + MITRE ATLAS + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14 procurement, the canonical column set is:</p>
+<ul>
+<li><strong>per-prompt-injection-detection-signal-id</strong> + per-prompt-injection-detection-confidence-id + per-prompt-injection-block-flag</li>
+<li><strong>per-MCP-tool-call-id</strong> + per-tool-call-id + per-AI-action-id + per-action-type + per-action-rollback-id + per-action-rollback-reason</li>
+<li><strong>per-Shopify-order-poisoning-id</strong> + per-payout-reconciliation-event-poisoning-id + per-Sales-Tax-Calculation-poisoning-id + per-Sales-Tax-Filing-poisoning-id + per-Form-Sales-Tax-Filing-Id-poisoning-id</li>
+<li><strong>per-accounting-firm-tenant-isolation-bypass-attempt-id</strong> + per-cross-merchant-account-write-attempt-id + per-cross-Shopify-shop-write-attempt-id + per-cross-Amazon-seller-write-attempt-id</li>
+<li><strong>per-Stripe-Connect-payout-poisoning-id</strong> + per-Avalara-AvaTax-poisoning-id + per-TaxJar-poisoning-id + per-Vertex-OSales-Tax-poisoning-id + per-Sovos-Compliance-poisoning-id</li>
+<li><strong>per-WORM-retention-flag</strong> + per-breach-detection-event-id + per-GLBA-Safeguards-Rule-incident-id + per-IRS-Publication-4557-incident-id</li>
+<li><strong>per-EU-AI-Act-Art-9-risk-management-event-id</strong> + per-EU-AI-Act-Art-14-human-oversight-event-id + per-EU-AI-Act-Annex-III-5(a)-high-risk-classification-id</li>
+</ul>
+<p>The 14-row cluster above is the floor for Tier-1 AI-red-team defense. The single most-probed column is <strong>per-prompt-injection-block-flag</strong>: a per-Shopify-order-poisoning event that does not trigger a per-action-rollback-id within 100ms fails the EU AI Act Art. 9 + Art. 14 risk-management + human-oversight gate.</p>
+</section>
+
+<section>
+<h2>7. SOC 2 Type II + GDPR DPA + CCPA/CPRA + EU AI Act + IRS Publication 4557 + GLBA Safeguards Mapping</h2>
+<p>The 80-column join-table above maps to the canonical audit-trail surface for:</p>
+<ul>
+<li><strong>SOC 2 Type II CC6.1</strong> — logical-access controls (per-tenant-id, per-merchant-isolation-flag, per-accounting-firm-isolation-flag, per-SSO-SAML-OIDC-config-id)</li>
+<li><strong>SOC 2 Type II CC7.2</strong> — system-operations (per-payout-reconciliation-event, per-Nexus-Threshold-alert-id, per-action-rollback-id, per-audit-log-export-id)</li>
+<li><strong>GDPR Art. 28</strong> — processor obligations (per-tenant-KMS-key-id, per-cross-border-transfer-sccs-version-US-EU, per-EEA-data-processor-id)</li>
+<li><strong>GDPR Art. 32</strong> — security-of-processing (per-VPC-peering-id, per-air-gapped-deployment-flag, per-CMK-BYOK-id, per-KMS-key-rotation-id)</li>
+<li><strong>CCPA/CPRA</strong> — California Consumer Privacy Act (per-customer-id, per-customer-LTV-id, per-CCPA-do-not-sell-flag)</li>
+<li><strong>EU AI Act Aug 2026 GPAI</strong> — General-Purpose-AI Code-of-Practice (per-EU-AI-Act-Art-9-risk-management-event-id, per-EU-AI-Act-Art-14-human-oversight-event-id, per-EU-AI-Act-Annex-III-5(a)-high-risk-classification-id, per-prompt-injection-detection-signal-id)</li>
+<li><strong>IRS Publication 4557</strong> — Safeguarding Taxpayer Data (per-IRS-Publication-4557-event-id, per-7yr-IRS-record-retention-id, per-WORM-retention-flag)</li>
+<li><strong>GLBA Safeguards Rule</strong> — Gramm-Leach-Bliley Act (per-GLBA-Safeguards-Rule-event-id, per-GLBA-Safeguards-Rule-incident-id, per-breach-detection-event-id)</li>
+<li><strong>GAAP ASC 606</strong> — Revenue from Contracts with Customers (per-GAAP-ASC-606-event-id, per-revenue-recognition-performance-obligation-id)</li>
+<li><strong>IFRS 15</strong> — International Financial Reporting Standards (per-IFRS-15-revenue-recognition-event-id, per-revenue-recognition-timing-id)</li>
+<li><strong>FTC Safeguards Rule (16 CFR Part 314)</strong> — per-merchant-isolation-flag, per-audit-log-export-id, per-breach-detection-event-id</li>
+</ul>
+</section>
+
+<section>
+<h2>8. How Atlas uses this checklist (and how to operationalize it)</h2>
+<p>Atlas ships a 36-column audit-trail probe per vendor (Bookkeep + A2X + Synder + Link My Books + Holded + Bench + Pilot.com + Botkeeper + Catch + 1847 & Co. planned) that exercises the 80-column join-table above against the vendor's actual production surface. The probe runs as a single SQL JOIN per vendor and produces a verdict: <strong>PASS</strong> (every column resolves to a non-null primary key), <strong>PARTIAL</strong> (most columns resolve, vendor has documented gaps in their attestation surface), or <strong>FAIL</strong> (cross-tenant isolation-bypass demonstrated, or per-action-rollback-id missing on a live prompt-injection event).</p>
+<p>For the Bookkeep-specific probe (Lead 352), the verdict is: <strong>PARTIAL</strong> — Bookkeep ships the strongest production surface in the bookkeeping_ai_ops cohort (per-Shopify-order-id → per-payment-deposit-id → per-payout-reconciliation-event → per-Sales-Tax-Calculation-id → per-Sales-Tax-Filing-id lineage is the only production-grade ecommerce-accounting-automation lineage), but the AI-red-team defense surface (per-prompt-injection-detection-signal-id, per-MCP-tool-call-id, per-action-rollback-id, per-payout-reconciliation-event-poisoning-id) is in early development. This is the exact surface Atlas is auditing as we open the bookkeeping_ai_ops cohort.</p>
+</section>
+
+<section>
+<h2>9. Next siblings in the bookkeeping_ai_ops cohort</h2>
+<p>Following the Bookkeep 352 vertex lead, the planned canonical 6-vendor cohort is:</p>
+<ol>
+<li><strong>352 Bookkeep</strong> — Shopify-native daily-sales-summary-post + payout-reconciliation + Avalara-TaxJar-Vertex-Sovos sales-tax-compliance + IRS Publication 4557 + GLBA Safeguards (Brooklyn NY)</li>
+<li><strong>353 Bench</strong> — monthly-bookkeeping + dedicated-bookkeeper + QuickBooks-Xero integration + per-client-id + per-bookkeeper-id lineage (Vancouver BC)</li>
+<li><strong>354 Pilot.com</strong> — startup-bookkeeping + CFO-advisory + Pilot-Tax-Automation + per-startup-id + per-accounting-period-id + per-R&amp;D-tax-credit-id lineage (San Francisco CA)</li>
+<li><strong>355 Botkeeper</strong> — AI-bookkeeping-automation + machine-learning-categorization + per-transaction-id + per-ML-category-id + per-accountant-review-id lineage (Boston MA)</li>
+<li><strong>356 Catch</strong> — freelancer + self-employed + 1099-bookkeeping + per-1099-id + per-self-employment-tax-id + per-quarterly-estimate-id lineage (New York NY)</li>
+<li><strong>357 1847 &amp; Co.</strong> — enterprise-bookkeeping + multi-entity-consolidation + per-entity-id + per-intercompany-transaction-id + per-consolidation-event-id lineage (Phoenix AZ)</li>
+</ol>
+<p>Each sibling will ship its own audit-trail probe and contribute additional columns to the canonical 80-column bookkeeping_ai_ops join-table. The cohort target close date is end-of-Q4-2026.</p>
+</section>
+
+<section>
+<h2>10. References and live sources (verified 2026-07-16)</h2>
+<ul>
+<li>Bookkeep.com Inc. Privacy Policy — <a href="https://www.bookkeep.com/privacy-policy">https://www.bookkeep.com/privacy-policy</a> — HTTP 200 — exposes <code>mailto:privacy@bookkeep.com</code></li>
+<li>Bookkeep Terms of Service — <a href="https://www.bookkeep.com/terms-of-service">https://www.bookkeep.com/terms-of-service</a></li>
+<li>IRS Publication 4557 — Safeguarding Taxpayer Data — <a href="https://www.irs.gov/pub/irs-pdf/p4557.pdf">https://www.irs.gov/pub/irs-pdf/p4557.pdf</a></li>
+<li>GAAP ASC 606 — Revenue from Contracts with Customers — FASB ASC 606-10</li>
+<li>IFRS 15 — Revenue from Contracts with Customers — IFRS 15.1-15.130</li>
+<li>FTC Safeguards Rule — 16 CFR Part 314 — <a href="https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-resources-financial-institutions">https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-resources-financial-institutions</a></li>
+<li>GLBA Safeguards Rule — 16 CFR Part 314 — Gramm-Leach-Bliley Act §501(b)</li>
+<li>EU AI Act Aug 2026 GPAI Code of Practice — <a href="https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice">https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice</a></li>
+<li>EU AI Act Article 9 — Risk Management — <a href="https://artificialintelligenceact.eu/the-act/">https://artificialintelligenceact.eu/the-act/</a></li>
+<li>EU AI Act Article 14 — Human Oversight — <a href="https://artificialintelligenceact.eu/the-act/">https://artificialintelligenceact.eu/the-act/</a></li>
+<li>OWASP LLM Top 10 — LLM01 + LLM03 + LLM04 + LLM06 + LLM08 — <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">https://owasp.org/www-project-top-10-for-large-language-model-applications/</a></li>
+<li>MITRE ATLAS — Adversarial Threat Landscape for AI Systems — <a href="https://atlas.mitre.org/">https://atlas.mitre.org/</a></li>
+<li>NIST AI RMF MEASURE — <a href="https://www.nist.gov/itl/ai-risk-management-framework">https://www.nist.gov/itl/ai-risk-management-framework</a></li>
+<li>Avalara AvaTax — <a href="https://www.avalara.com/us/en/products/avatax.html">https://www.avalara.com/us/en/products/avatax.html</a></li>
+<li>TaxJar — <a href="https://www.taxjar.com/">https://www.taxjar.com/</a></li>
+<li>Vertex O Series Sales Tax — <a href="https://www.vertexinc.com/solutions/sales-tax">https://www.vertexinc.com/solutions/sales-tax</a></li>
+<li>Sovos Sales &amp; Use Tax — <a href="https://sovos.com/sales-use-tax/">https://sovos.com/sales-use-tax/</a></li>
+</ul>
+</section>
+
+</article>
+</body>
+</html>
