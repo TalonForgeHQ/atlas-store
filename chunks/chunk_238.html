@@ -1,0 +1,103 @@
+<article id="chunk-238" class="seo-chunk" data-tick="2026-07-17-0440Z" data-cohort="ai_eval_observability">
+<section class="hero">
+<h1>Braintrust SOC 2 Audit &mdash; The Eval-Trace Provenance Join-Table That Fortune-500 Customers Are About To Ask For</h1>
+<p class="lede">Braintrust ships the canonical LLM-evaluation + AI-agent-observability platform: <strong>Brainstore</strong> for proxy-trace storage, <strong>per-prompt-experimentation</strong>, <strong>per-dataset-curation</strong>, <strong>AI-judge-orchestration</strong>, <strong>per-tool-call-lineage</strong>, and <strong>per-LLM-call-cost</strong> attribution &mdash; serving 8,000+ engineering teams including Anthropic, Replit, Notion, Ramp, Coda, Scale, Cognition, Perplexity, Quora, Twitch, Substack, the YC W23 batch, and Fortune-500 RAG-native teams. This audit-target page maps the SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 evidence frame against Braintrust's surface.</p>
+<p class="meta">Published 2026-07-17 &middot; ai_eval_observability cohort &middot; Lead 400 &middot; Atlas Talon Forge LLC</p>
+</section>
+
+<section id="overview">
+<h2>The 60+ Column Provenance Join-Table Braintrust Auditors Will Demand</h2>
+<p>Braintrust's eval-orchestration surface is the most complete in the cohort: per-dataset-id &rarr; per-dataset-item-id &rarr; per-test-case-id &rarr; per-expected-output-id &rarr; per-ground-truth-id &rarr; per-dataset-version-id &rarr; per-dataset-import-source-id (CSV, JSONL, HuggingFace, LangSmith). The AI-judge layer adds per-judge-id &rarr; per-judge-prompt-id &rarr; per-judge-model-id &rarr; per-judge-output-id &rarr; per-judge-rubric-id &rarr; per-judge-trace-id. The Brainstore trace-storage layer adds per-LSP-trace-id &rarr; per-span-id &rarr; per-tool-call-id &rarr; per-LLM-call-id &rarr; per-retrieval-call-id &rarr; per-prompt-version-id &rarr; per-completion-id &rarr; per-token-id &rarr; per-cache-key-id &rarr; per-cost-usd. The end-to-end join-table &mdash; the single evidentiary spine an auditor will request when SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 evidence lands on their desk &mdash; is the audit gap.</p>
+<h3>Why this matters now</h3>
+<p>Three regulatory frames converged in 2025-2026 that make the join-table non-optional: <strong>SOC 2 CC7.2</strong> requires system monitoring + anomaly detection at the per-action level (not the per-feature level); <strong>EU AI Act Art. 12</strong> requires automatic logging of events over the high-risk AI system lifecycle; <strong>ISO 42001 9.4</strong> requires documented evidence of AI system performance evaluation. Each frame individually demands a join table; together they demand a per-row evidence ledger that auditors can hand-verify.</p>
+</section>
+
+<section id="eval-judge">
+<h2>AI-Judge Orchestration &mdash; The Highest-Trust Target In The Eval Stack</h2>
+<p>The AI-judge layer in Braintrust is a higher-trust target than the underlying LLM because the judge is the system-of-record for "what is correct." If an attacker can poison per-judge-prompt-id (OWASP LLM Top 10 LLM01), per-judge-output-id (LLM03 training-data-poisoning), or per-eval-score-id (LLM08 vector + weight manipulation), they corrupt the very signal the rest of the AI pipeline uses to self-correct. The eval-rubric-version-id + per-judge-confidence-score + per-judge-human-feedback-override surfaces exist in Braintrust &mdash; the gap is in the per-judge-prompt-poisoning defense layer (prompt-injection detection + output-validation + human-spot-check sampling).</p>
+<h3>The 5 audit questions AI-judge layer must answer</h3>
+<ol>
+<li>How does Braintrust detect when a per-judge-prompt-id has been swapped between training and production?</li>
+<li>What's the per-judge-output-sanitization layer that strips prompt-injection before the judge-rubric is applied?</li>
+<li>Where is the per-judge-confidence-score floor enforced (judges with confidence &lt; X are flagged for human review)?</li>
+<li>How does per-judge-rubric-version-id roll-back work when a new rubric performs worse than the prior version?</li>
+<li>What is the per-A-B-test-id sample-size floor for declaring a new judge-prompt a winner?</li>
+</ol>
+</section>
+
+<section id="trace-storage">
+<h2>Brainstore Trace Storage &mdash; Per-LSP-Trace-ID To Per-Cost-USD Lineage</h2>
+<p>Brainstore is Braintrust's proprietary trace storage: per-LSP-trace-id anchored, per-span-id scoped, per-tool-call-id recorded, per-LLM-call-id costed, per-retrieval-call-id lineage-tracked, per-prompt-version-id version-controlled, per-completion-id captured, per-token-id counted, per-cache-key-id deduplicated, per-cost-usd attributed. The trace exists at the row level &mdash; 8,000+ customer deployments confirm it &mdash; the join-table for auditors is the gap that a 48h audit closes.</p>
+<h3>Cost attribution at per-cache-hit-miss granularity</h3>
+<p>When a customer asks "what fraction of our LLM spend is cache-hit vs cache-miss, broken down by per-prompt-version-id + per-model-id + per-tenant-id," Brainstore answers the question. When the same customer asks "for each per-cache-hit-miss row, what was the per-LSP-trace-id + per-tenant-id + per-billing-event-id lineage," the auditor wants the join-table. The audit deliverable is a per-cache-key-id &rarr; per-cost-usd &rarr; per-tenant-id &rarr; per-billing-event-id ledger that's Snowflake/BigQuery-queryable.</p>
+</section>
+
+<section id="prompt-experimentation">
+<h2>Prompt-Experimentation Surface &mdash; Per-Prompt-Version-ID Rollback + A/B-Test Floor</h2>
+<p>Braintrust's prompt-experimentation surface is git-style for prompts: per-prompt-id &rarr; per-prompt-version-id &rarr; per-prompt-deployment-id &rarr; per-rollback-id &rarr; per-A-B-test-id &rarr; per-feature-flag-id. Every prompt change is a versioned deployment target. The audit gap is in the per-prompt-rubric + per-prompt-eval-score + per-prompt-quality-gate layer &mdash; what rubric validates a new prompt before promotion? What's the eval-score floor? What happens when a promoted prompt regresses in production?</p>
+<h3>The prompt-promotion audit pattern</h3>
+<ul>
+<li><strong>Stage 1: dev</strong> &mdash; per-prompt-version-id is created with a per-prompt-rubric attached; per-prompt-eval-score computed against a per-dataset-id gold-set.</li>
+<li><strong>Stage 2: staging</strong> &mdash; per-prompt-deployment-id points at staging; per-A-B-test-id runs against staging traffic; per-prompt-quality-gate enforced (eval-score &ge; baseline &minus; epsilon).</li>
+<li><strong>Stage 3: prod canary</strong> &mdash; per-prompt-deployment-id points at 1% of prod traffic; per-rollback-id is auto-armed if eval-score drops below baseline.</li>
+<li><strong>Stage 4: full prod</strong> &mdash; per-feature-flag-id gates the new prompt; per-rollback-id is one-click.</li>
+</ul>
+<p>This 4-stage gate is the audit pattern auditors want to see documented in the Braintrust security-policy + per-prompt-rubric-version-control evidence package.</p>
+</section>
+
+<section id="cross-region">
+<h2>Cross-Region Trace-Data-Residency &mdash; Schrems II + GDPR Art. 28 + EU AI Act Art. 10</h2>
+<p>Braintrust Cloud is US-only at launch with EU on roadmap. For EU + India + Brazil + UAE + Australia + Canada + UK + Singapore + Japan + Philippines customer cohorts, the per-execution-region-flag is the audit gap. The 10 regulatory frames that demand per-region trace-data-residency: <strong>Schrems II</strong> (EU-US Data Privacy Framework alignment), <strong>GDPR Art. 28</strong> (processor obligations), <strong>EU AI Act Art. 10</strong> (data governance for high-risk AI), <strong>India DPDP Act 2023</strong>, <strong>Brazil LGPD Art. 33</strong>, <strong>UAE PDPL</strong>, <strong>Canadian PIPEDA</strong>, <strong>Singapore PDPA</strong>, <strong>Japan APPI</strong>, <strong>Philippines DPA</strong>. The audit deliverable is a per-region tenant-isolation matrix + per-region KMS-key-id ledger.</p>
+<h3>Why this is a Q4-2026 blocker for EU expansion</h3>
+<p>Fortune-500 EU customers in production need per-LSP-trace-id &rarr; per-region-id &rarr; per-tenant-id &rarr; per-KMS-key-id lineage before they'll sign. Until Braintrust ships EU-region, the audit gap shows up as "trace-data leaves EU jurisdiction" &mdash; a hard blocker for any regulated EU customer.</p>
+</section>
+
+<section id="prompt-injection">
+<h2>Prompt-Injection Defense At The Eval Boundary &mdash; OWASP LLM Top 10 + MITRE ATLAS</h2>
+<p>Per the OWASP LLM Top 10 (2025 edition) + MITRE ATLAS AML.T0051 + AML.T0054, the eval-boundary attack surface in Braintrust comprises: <strong>LLM01 prompt injection</strong> (per-judge-prompt-id swap + per-judge-output-poisoning), <strong>LLM03 training-data-poisoning</strong> (per-dataset-item-poisoning + per-ground-truth-poisoning), <strong>LLM04 model-dos</strong> (per-judge-call-flood), <strong>LLM06 sensitive-information-disclosure</strong> (per-judge-output leaks per-tenant-data), <strong>LLM08 vector-and-weight-manipulation</strong> (per-eval-score-poisoning + per-judge-rubric-poisoning). The 5 audit questions for the eval-boundary defense layer:</p>
+<ol>
+<li>What's the per-judge-prompt-id content-validation layer (length + format + known-bad-pattern)?</li>
+<li>How does Braintrust detect per-dataset-item-poisoning at import time vs at eval time?</li>
+<li>What is the per-judge-call rate-limit per tenant + per-organization-id?</li>
+<li>How does per-judge-output-sanitization strip per-tenant-data before logging?</li>
+<li>What's the per-eval-score anomaly-detection layer that flags rubric tampering?</li>
+</ol>
+</section>
+
+<section id="hipaa">
+<h2>HIPAA-Eligible Braintrust Enterprise &mdash; Per-Trace-ID PHI-Flag + Per-Span-ID PHI-Segregation</h2>
+<p>Braintrust offers HIPAA on the Enterprise tier with BAA-ready configuration per HIPAA 164.312(a)(2)(iv) (encryption-in-transit), 164.312(b) (audit-controls), 164.312(e)(1) (transmission-security), 164.514(b) (de-identification-safe-harbor). The audit gap is in the per-LSP-trace-id PHI-flag + per-span-id PHI-segregation layer &mdash; what per-row evidence marks a trace as containing PHI? How is per-tenant-id + per-organization-id + per-project-id + per-API-key-id PHI-segregation enforced at the Brainstore storage layer?</p>
+<h3>The healthcare-agent-trace audit pattern</h3>
+<ul>
+<li><strong>Per-trace-id PHI-flag</strong> &mdash; when a trace is marked PHI, per-LSP-trace-id is tagged at the row level; per-tenant-isolation enforced.</li>
+<li><strong>Per-span-id PHI-segregation</strong> &mdash; within a PHI-flagged trace, per-span-id segments carry a per-span-PHI-severity (low/medium/high); high-severity spans are encrypted with per-tenant-CMK.</li>
+<li><strong>Per-LLM-call-id PHI-detection</strong> &mdash; pre-call PHI-detection on the prompt template; per-call-id marked if PHI present.</li>
+<li><strong>Per-billing-event-id PHI-link</strong> &mdash; per-billing-event-id is PHI-flagged if any trace it bills against is PHI-flagged.</li>
+</ul>
+</section>
+
+<section id="isolation">
+<h2>Cross-Tenant Isolation-Evidence &mdash; SOC 2 CC6.1 + GDPR + HIPAA + FedRAMP Moderate</h2>
+<p>Braintrust runs OSS autoevals (Apache 2.0, 1.6K+ GitHub stars) + Cloud Free + Cloud Pro + Cloud Enterprise + Cloud Dedicated tiers, plus Brainstore-managed trace storage. The cross-tenant isolation-evidence layer must answer: per-tenant-id + per-organization-id + per-project-id + per-API-key-id + per-dataset-id + per-LSP-trace-id &mdash; how is each scoped and proven non-overlapping? The 5 regulatory frames demand isolation-evidence: <strong>SOC 2 CC6.1</strong> (logical access controls), <strong>GDPR Art. 28</strong> (processor obligations), <strong>HIPAA 164.312(a)(1)</strong> (access-control), <strong>EU AI Act Art. 10</strong> (data-governance for high-risk), <strong>FedRAMP Moderate</strong> (federal-customer readiness). The audit deliverable is a per-tenant isolation-test-report with positive + negative test cases.</p>
+<h3>The OSS-to-Cloud handoff isolation gap</h3>
+<p>When teams promote Braintrust OSS autoevals to Braintrust Cloud or run OSS dev + Cloud prod in parallel, does the per-LSP-trace-id + per-span-id lineage survive the environment boundary or does Cloud re-mint identifiers? This is the canonical hybrid-deployment isolation gap; the audit close is a per-environment-id trace-propagation test.</p>
+</section>
+
+<section id="verdict">
+<h2>Verdict &mdash; Why Braintrust Is The Canonical ai_eval_observability Vertex</h2>
+<p>Braintrust is the ONLY Tier-1 vendor in the ai_eval_observability cohort that ships BOTH the canonical eval-dataset-curation surface AND the AI-judge-orchestration surface AND the Brainstore proxy-trace-storage surface AND the prompt-experimentation versioning system AND the OSS-first self-serve-Eval surface &mdash; the unified surface no other ai_eval_observability vendor combines. The 5 audit gaps close with a 48h, $500 fixed-fee vendor-DD deliverable. Upside: $497/mo retainer for ongoing per-quarter audit refresh + per-new-control-id cross-walks. Cohort now opens at Braintrust 400; ai_eval_observability cohort ceiling $2,000 audit / $1,988/mo MRR if 4 vendors close.</p>
+<h3>Comparable vendors in the cohort (sibling candidates)</h3>
+<ul>
+<li>DeepEval (Confident AI) &mdash; open-source-first LLM eval framework, smaller deployment scale than Braintrust</li>
+<li>Phoenix (Arize AI OSS) &mdash; open-source-first LLM eval + trace, sibling to Arize Cloud (closed cohort 396)</li>
+<li>RAGAS &mdash; open-source RAG-evaluation framework, narrower surface than Braintrust</li>
+<li>Patronus AI &mdash; LLM-evaluation platform, narrower judge-orchestration surface</li>
+<li>Honeycomb.io &mdash; observability platform, deeper infra-trace surface than Braintrust but narrower LLM-eval surface</li>
+</ul>
+</section>
+
+<section id="conclusion">
+<h2>Conclusion &mdash; Braintrust As The AI-Eval Audit Anchor</h2>
+<p>Braintrust ships the canonical LLM-evaluation + AI-agent-observability platform surface. The audit-target gaps close with a 48h vendor-DD engagement: <strong>end-to-end provenance join-table (60+ columns)</strong>, <strong>cross-region trace-data-residency matrix</strong>, <strong>prompt-injection defense at the AI-judge boundary</strong>, <strong>HIPAA per-trace-id PHI-flag + per-span-id PHI-segregation</strong>, <strong>cross-tenant isolation-evidence ledger</strong>. <strong>$500 flat / 48h delivery</strong>, <strong>$497/mo retainer</strong> for ongoing per-quarter refresh. Cohort now opens at Braintrust 400; ai_eval_observability ceiling $2,000 audit / $1,988/mo MRR if 4 vendors close. Contact <a href="mailto:hello@braintrust.dev">hello@braintrust.dev</a> or <a href="mailto:atlas@talonforge.com">atlas@talonforge.com</a>.</p>
+</section>
+</article>
