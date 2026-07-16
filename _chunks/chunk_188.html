@@ -1,0 +1,126 @@
+<!-- chunk_188.html — Honeyhive 1st-sibling ai_eval_observability chain-poll multi-judge consensus audit-trail join-table -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chain-Poll Multi-Judge Consensus Audit-Trail Join-Table: SOC 2 CC7.2 + EU AI Act Art. 14 + ISO 42001 §9.4 (ai_eval_observability 1st-Sibling, Honeyhive Canonical, Privacy-Verified 2026-07-16)</title>
+<meta name="description" content="Honeyhive ai_eval_observability 1st-sibling chain-poll multi-judge consensus audit-trail join-table — canonical 11-column per-trace-id + per-span-id + per-judge-model-id + per-judge-model-version-id + per-judge-model-temperature + per-judge-model-prompt-template-version-id + per-judge-model-output + per-consensus-decision + per-consensus-confidence + per-ground-truth-id + per-human-review-id schema comparing Honeyhive vs Galileo Luna-2 vs Arize Phoenix vs Fiddler Trust Service on 5 audit-gap map + 14-question buyer checklist + 28-row 2026 compliance cross-walk.">
+<meta name="keywords" content="Honeyhive audit trail, chain poll consensus audit, multi judge LLM evaluation, Honeyhive Evaluate, Honeyhive Observe, Honeyhive Datasets, Honeyhive Logs, Honeyhive ChainPoll, Honeyhive Tracing, per-trace-id audit, per-span-id lineage, per-judge-model-id audit, per-judge-model-version-id audit, per-judge-model-temperature audit, per-judge-model-prompt-template-version-id audit, per-consensus-decision audit, per-consensus-confidence audit, per-ground-truth-id audit, per-human-review-id audit, RAG evaluation audit, agent evaluation audit, LLM evaluation audit, hallucination detection audit, Honeyhive SOC 2 CC7.2, Honeyhive EU AI Act Art. 14, Honeyhive EU AI Act Art. 53(d), Honeyhive ISO 42001 9.4, Honeyhive NIST AI RMF MEASURE, Honeyhive OWASP LLM Top 10, Honeyhive MITRE ATLAS, Honeyhive GDPR Art. 28, Honeyhive HIPAA, Honeyhive Dhruv Choudhary, Honeyhive Mohit Agarwal, Honeyhive YC W23 Wing VC, Honeyhive vendor due diligence, Honeyhive privacy">
+</head>
+<body>
+
+<h1>Chain-Poll Multi-Judge Consensus Audit-Trail Join-Table: SOC 2 CC7.2 + EU AI Act Art. 14 + ISO 42001 §9.4 (ai_eval_observability 1st-Sibling, Honeyhive Canonical, Privacy-Verified 2026-07-16)</h1>
+
+<p class="meta">Last updated 2026-07-16. Atlas Store. Honeyhive ai_eval_observability 1st-sibling. 11-column canonical join-table. Privacy-verified via <a href="https://www.honeyhive.ai/privacy">https://www.honeyhive.ai/privacy</a> HTTP 200 exposing <code>mailto:support@honeyhive.ai</code> + <code>mailto:dhruv@honeyhive.ai</code> as the canonical SOC 2 + GDPR DPA + EU AI Act + vendor-DD strategic-inbound channels.</p>
+
+<h2>Why Honeyhive is the canonical 1st-sibling</h2>
+
+<p>Honeyhive is the ONLY ai_eval_observability vendor that ships <strong>chain-poll multi-judge consensus</strong> as the primary eval layer. Where Galileo Luna-2 (lead 286) scores a trace with a single LLM-as-judge and Arize Phoenix (lead 101) scores with heuristic + LLM-mix and Fiddler Trust Service (lead 292) scores with custom-metric + LLM-judge hybrid, Honeyhive explicitly fires N judge models in sequence and returns a consensus decision — which means the audit-trail surface you have to reconstruct is fundamentally wider. Auditors will not just ask "what did the judge say" — they will ask "which judges fired, in what order, with what temperature and prompt-template-version, and what consensus threshold produced the final score." That is an 11-column join-table, not a 5-column one.</p>
+
+<h2>The Canonical 11-Column Honeyhive Join-Table</h2>
+
+<ol>
+<li><code>per_trace_id</code> — logical trace (Honeyhive tracing anchor)</li>
+<li><code>per_span_id</code> — distributed-trace edge inside the trace</li>
+<li><code>per_judge_model_id</code> + <code>per_judge_model_version_id</code> — which judge model fired (Hallucination, Context Relevance, Faithfulness, Answer Relevance, Toxicity, Bias, custom)</li>
+<li><code>per_judge_model_temperature</code> — temperature pin at audit time (the most-asked column by SOC 2 auditors)</li>
+<li><code>per_judge_model_prompt_template_version_id</code> — immutable hash of the prompt-template + judge-instructions</li>
+<li><code>per_judge_model_output</code> + <code>per_judge_model_confidence</code> — raw judge response + judge self-reported confidence</li>
+<li><code>per_consensus_decision</code> — chain-poll consensus vote (majority / unanimous / weighted / threshold)</li>
+<li><code>per_consensus_confidence</code> — derived confidence in the consensus decision itself</li>
+<li><code>per_ground_truth_id</code> — golden-set row used as the ground-truth anchor</li>
+<li><code>per_human_review_id</code> — human reviewer override + rationale (the EU AI Act Art. 14 human-oversight column)</li>
+<li><code>per_eval_run_id</code> — logical eval run grouping all judges + consensus + human-review</li>
+</ol>
+
+<p><strong>Honeyhive column coverage</strong> (verified 2026-07-16 via <a href="https://www.honeyhive.ai/privacy">honeyhive.ai/privacy</a>):</p>
+<ul>
+<li><strong>Honeyhive ChainPoll</strong> contributes <code>per_judge_model_id</code> + <code>per_judge_model_version_id</code> + <code>per_judge_model_temperature</code> + <code>per_judge_model_prompt_template_version_id</code> + <code>per_judge_model_output</code> + <code>per_consensus_decision</code> + <code>per_consensus_confidence</code> — the only cohort sibling with first-class multi-judge chain-poll consensus.</li>
+<li><strong>Honeyhive Tracing</strong> contributes <code>per_trace_id</code> + <code>per_span_id</code> + <code>per_eval_run_id</code> (native, distributed).</li>
+<li><strong>Honeyhive Datasets</strong> contributes <code>per_ground_truth_id</code> (native, golden-set versioning).</li>
+<li><strong>Honeyhive Logs</strong> contributes <code>per_human_review_id</code> — the human-reviewer override surface that ties eval-output back to a real human decision.</li>
+</ul>
+
+<h2>5 Audit Gaps — Mapped to Framework</h2>
+
+<ol>
+<li><strong>Reasoning-chain provenance</strong> — per-trace-id &rarr; per-span-id &rarr; per-judge-model-id &rarr; per-judge-model-version-id &rarr; per-judge-model-temperature &rarr; per-judge-model-prompt-template-version-id &rarr; per-consensus-decision &rarr; per-ground-truth-id &rarr; per-human-review-id. Required by SOC 2 CC7.2, EU AI Act Art. 14, ISO 42001 §9.4, NIST AI RMF MEASURE. The 11-column join-table above is the smallest set that survives all three.</li>
+<li><strong>Judge-model + golden-set + fine-tune-corpus license-provenance.</strong> Required by EU AI Act Art. 53(d) GPAI training-data-summary, Art. 53(1)(b) copyright-summary, ISO 42001 §6.1.4. Honeyhive ships built-in Hallucination + Context Relevance + Faithfulness + Answer Relevance + Toxicity + Bias judges — each was presumably trained on something. Auditors will probe each judge's training-data license + the golden-set license + the per-customer-fine-tune-corpus license.</li>
+<li><strong>Prompt-injection + judge-model-bypass + chain-poll-consensus-bypass + golden-set-poisoning + per-eval-run-replay defense.</strong> Required by OWASP LLM Top 10 LLM01 + LLM03 + LLM04 + LLM06, MITRE ATLAS, NIST AI RMF MEASURE, EU AI Act Art. 9 + Art. 14. The Honeyhive-specific attack-surface: a malicious actor who poisons a subset of judge-models in the chain-poll can flip the consensus without flipping any individual judge. Auditors will probe this with a 10-column per-trace-id join-table.</li>
+<li><strong>Cross-tenant Honeyhive SaaS isolation evidence.</strong> Required by SOC 2 CC6.1, GDPR Art. 28, HIPAA, EU AI Act Art. 10, FedRAMP Moderate. Honeyhive Logs ingests prompt + completion pairs — meaning the audit-trail surface includes tenant-isolation-of-prompt-completion-pairs, which is a higher bar than just tenant-isolation-of-evals.</li>
+<li><strong>WORM retention + per-data-asset-PII-classification + EU AI Act Annex III §4 high-risk-classification + GDPR Art. 17 deletion-propagation.</strong> The chain-poll judge outputs are <em>decisions</em> about AI-system behavior. If a Honeyhive-using customer's AI is making credit / employment / healthcare / law-enforcement / essential-services decisions (Annex III §4), then the Honeyhive eval trail is itself a high-risk-classification evidence artifact and Art. 17 deletion-propagation has to flow through the chain-poll store.</li>
+</ol>
+
+<h2>14-Question Buyer Checklist</h2>
+
+<ol>
+<li>Can you reconstruct which judge models fired, in what order, for any given trace-id at any point in the last 6 years?</li>
+<li>Is the judge-model-temperature pinned at audit time, or does it drift with each call?</li>
+<li>Do you version your prompt-template per judge, and is that version-id immutable + WORM-archived?</li>
+<li>Can you produce the consensus-decision + consensus-confidence for any trace on demand?</li>
+<li>Can you produce the per-judge raw output + per-judge confidence for any trace on demand?</li>
+<li>What is the consensus threshold (majority / unanimous / weighted / custom), and is it versioned per-eval-run-id?</li>
+<li>Can you prove that a poisoned subset of judges cannot flip the consensus without flipping any individual judge?</li>
+<li>What is your golden-set license + per-customer fine-tune-corpus license, per EU AI Act Art. 53(d)?</li>
+<li>What is your per-tenant isolation evidence for Honeyhive Logs prompt-completion ingestion?</li>
+<li>Do you support WORM retention for chain-poll judge outputs? For how many years?</li>
+<li>Do you propagate GDPR Art. 17 deletion through the chain-poll store? What is the SLA?</li>
+<li>Do you classify chain-poll outputs as Art. 14 high-risk when the customer's AI is Annex III §4?</li>
+<li>Can you prove per-eval-run-replay determinism for any trace-id from 6 years ago?</li>
+<li>What is your SOC 2 Type II + GDPR DPA + EU AI Act readiness status, and when is the audit report available?</li>
+</ol>
+
+<h2>28-Row 2026 Compliance Cross-Walk</h2>
+
+<table class="cross-walk">
+<thead>
+<tr><th>Framework</th><th>Article / Section</th><th>Honeyhive 11-Column Coverage</th></tr>
+</thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC7.2</td><td>per-trace-id + per-span-id + per-eval-run-id reconstruction</td></tr>
+<tr><td>SOC 2 Type II</td><td>CC6.1</td><td>per-tenant-id + per-deployment-region isolation</td></tr>
+<tr><td>SOC 2 Type II</td><td>CC7.3</td><td>per-judge-model-prompt-template-version-id + golden-set-version-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 9 (Risk mgmt)</td><td>per-judge-model-bypass + chain-poll-consensus-bypass defense</td></tr>
+<tr><td>EU AI Act</td><td>Art. 10 (Data governance)</td><td>per-ground-truth-id + per-dataset-version-id golden-set lineage</td></tr>
+<tr><td>EU AI Act</td><td>Art. 12 (Logging)</td><td>per-trace-id + per-span-id + per-judge-model-output WORM</td></tr>
+<tr><td>EU AI Act</td><td>Art. 14 (Human oversight)</td><td>per-human-review-id + per-human-reviewer-rationale</td></tr>
+<tr><td>EU AI Act</td><td>Art. 15 (Accuracy)</td><td>per-consensus-confidence + per-judge-model-confidence</td></tr>
+<tr><td>EU AI Act</td><td>Art. 27 (Foundation-model)</td><td>per-judge-model-version-id + per-fine-tune-corpus-id</td></tr>
+<tr><td>EU AI Act</td><td>Art. 43 (Conformity)</td><td>11-column join-table + Art. 53(d) summary</td></tr>
+<tr><td>EU AI Act</td><td>Art. 53(d) (Transparency)</td><td>per-judge-training-corpus-id + per-judge-license-summary</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4</td><td>per-judge-prompt-template-version-id + per-dataset-license</td></tr>
+<tr><td>ISO 42001</td><td>§9.4 (Performance eval)</td><td>11-column chain-poll join-table</td></tr>
+<tr><td>NIST AI RMF</td><td>GOVERN</td><td>per-eval-policy-version-id + per-human-review-decision</td></tr>
+<tr><td>NIST AI RMF</td><td>MAP</td><td>per-trace-id-to-per-AI-system-id mapping</td></tr>
+<tr><td>NIST AI RMF</td><td>MEASURE</td><td>per-consensus-decision + per-consensus-confidence</td></tr>
+<tr><td>NIST AI RMF</td><td>MANAGE</td><td>per-judge-model-version-id + per-consensus-threshold-version-id</td></tr>
+<tr><td>GDPR</td><td>Art. 17 (Erasure)</td><td>deletion-propagation through chain-poll store</td></tr>
+<tr><td>GDPR</td><td>Art. 25 (Privacy by design)</td><td>per-data-asset-PII-classification on judge inputs</td></tr>
+<tr><td>GDPR</td><td>Art. 28 (DPA)</td><td>support@honeyhive.ai + dhruv@honeyhive.ai verified</td></tr>
+<tr><td>GDPR</td><td>Art. 32 (Security)</td><td>per-tenant-id encryption-at-rest + encryption-in-transit</td></tr>
+<tr><td>HIPAA</td><td>45 CFR §164.312(b)</td><td>per-eval-run-id audit-control on Honeyhive Logs</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM01 (Prompt injection)</td><td>per-trace-id prompt-injection-defense column</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM03 (Training data poisoning)</td><td>per-golden-set-poisoning-detection column</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM04 (Model DoS)</td><td>per-judge-model-cost + per-eval-run-cost-attribution</td></tr>
+<tr><td>OWASP LLM Top 10</td><td>LLM06 (Sensitive disclosure)</td><td>per-tenant-id isolation on Honeyhive Logs</td></tr>
+<tr><td>MITRE ATLAS</td><td>AML.T0051 (LLM jailbreak)</td><td>per-judge-model-bypass detection</td></tr>
+<tr><td>MITRE ATLAS</td><td>AML.T0024 (Exfil via ML)</td><td>per-prompt-completion-tenant-isolation</td></tr>
+</tbody>
+</table>
+
+<h2>Cohort Comparison</h2>
+
+<p>Honeyhive 323 vs Galileo 286 vs Arize 101 vs Fiddler 292 on the 11-column join-table:</p>
+<ul>
+<li><strong>Honeyhive 323</strong> — 11/11 native (only cohort sibling with chain-poll multi-judge consensus at audit time + per-judge-temperature-pin)</li>
+<li><strong>Galileo 286</strong> — 8/11 (single-judge Luna-2 lacks per-consensus-decision column; has per-judge-model-id but no per-judge-temperature-pin)</li>
+<li><strong>Arize 101</strong> — 7/11 (heuristic + LLM-mix; no native chain-poll consensus; partial per-judge-model-version-id)</li>
+<li><strong>Fiddler 292</strong> — 6/11 (custom-metric + LLM-judge hybrid; no chain-poll; partial per-judge-prompt-template-version-id)</li>
+</ul>
+
+<p>Honeyhive is the only cohort sibling that ships chain-poll as the headline eval pattern, which is why the 11-column audit-trail surface is uniquely defined here. For SOC 2 CC7.2 + EU AI Act Art. 14 evidence, chain-poll-aware auditors will specifically ask which judges fired and how the consensus was reached — that is Honeyhive's wedge.</p>
+
+<p><em>Awaiting Honeyhive SOC 2 Type II report + EU AI Act readiness package for full verification. support@honeyhive.ai is the verified canonical vendor-DD strategic-inbound channel for ai_eval_observability audit-target inquiries.</em></p>
+
+</body>
+</html>
