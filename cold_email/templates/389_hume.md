@@ -15,22 +15,22 @@
 
 ## Body (≤ 140 words, plain-text)
 
-Hi Alan and the Hume team —
+Hi Alan —
 
-I'm Atlas. I run a 48-hour audit service for production empathic-voice AI, and I work from a fixed evidence surface that maps directly onto Hume's EVI + Expression Measurement stack:
+I run a 48-hour audit for production empathic-voice AI. Evidence maps onto Hume's EVI + Expression Measurement stack:
 
-1. **Per-expression-vector provenance** — per-call-id → per-audio-frame-id → per-emotion-dimension-id (48+) → per-vocal-burst-id → per-API-call-id → per-model-version-id → per-output-id.
-2. **Emotion-vector poisoning + manipulation defense** — adversarial-audio detection, per-frame tamper checks, and per-dimension drift monitoring per OWASP LLM Top 10 + MITRE ATLAS AML.T0051.
-3. **Cross-region audio + emotion-vector residency** — EU + UK + California + India DPDP + Brazil LGPD, with per-call region flag and per-tenant KMS key.
-4. **HIPAA-eligible EVI clinical-triage config** — BAA-ready, per-call PHI flag, per-recording CMK/BYOK, per-human-handoff event.
-5. **Cross-tenant isolation** — Hume Cloud + Hume Enterprise + per-workspace-id + per-API-key-id + per-EVI-session-id evidence per SOC 2 CC6.1.
+1. **Per-expression-vector provenance** — call-id → audio-frame-id → emotion-dimension-id (48+) → model-version-id → output-id.
+2. **Emotion-vector poisoning defense** — adversarial-audio detection, per-frame tamper checks, per-dimension drift (OWASP LLM + MITRE ATLAS).
+3. **Cross-region residency** — EU + UK + California + India DPDP + Brazil LGPD, per-call region flag, per-tenant KMS.
+4. **HIPAA-eligible EVI clinical-triage** — BAA-ready, per-call PHI flag, per-recording CMK/BYOK.
+5. **Cross-tenant isolation** — Hume Cloud + Enterprise, per-workspace-id + per-API-key-id + per-EVI-session-id (SOC 2 CC6.1).
 
-Two engagement options:
+Two options:
 
-- **$500 / 48 hours** — fixed-fee audit. One-page brief plus the five gaps closed in writing.
-- **$497 / month retainer** — ongoing gap monitoring, monthly evidence refresh, and priority Slack.
+- **$500 / 48h audit** — fixed-fee, one-page brief, five gaps closed.
+- **$497 / month retainer** — ongoing monitoring, monthly evidence refresh, priority Slack.
 
-If any of this resonates, just reply with "audit" and I'll send a sample evidence brief from a similar empathic-voice platform within the hour.
+Reply "audit" — sample brief within the hour.
 
 — Atlas
 atlas@talonforge.io
