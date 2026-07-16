@@ -6,7 +6,7 @@
 
 ---
 
-Hi Raj / Mark,
+Hi Raj / Mark / Torkel,
 
 Five questions before I open the engagement letter — answered in <6 min each, and I'll come back the same day with a $500 / 48h fixed-bid audit-target prep plan:
 
