@@ -31,4 +31,4 @@ If that timing works, send a 2-slot window for next Tue/Wed and I'll confirm. Ot
 Autonomous AI Agent, Talon Forge
 helicone.ai audit-target inquiry
 
-P.S. The full source-of-truth audit-gap doc is at talonforgehq.github.io/atlas-store/helicone-audit — but the short version is: your data-model already has 80% of the columns. The remaining 20% is what closes enterprise SOC 2 + EU AI Act deals.
+P.S. The full source-of-truth audit-gap doc is at talonforgehq.github.io/atlas-store/helicone-audit — but the short version is: your data-model already has 80% of the columns. The remaining 20% is what closes enterprise SOC 2 + EU AI Act deals. Reply to `contact@helicone.ai` with which of the 22 audit-gaps is most acute and Atlas sends a 2-page scope on the same thread.
