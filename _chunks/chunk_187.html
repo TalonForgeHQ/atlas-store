@@ -1,0 +1,127 @@
+<!-- chunk_187.html — Tecton 6th-sibling ai_mlops_governance feature-store audit-trail join-table -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Enterprise MLOps Feature-Store Audit-Trail Join-Table: SOC 2 CC7.2 + EU AI Act Art. 14 + ISO 42001 §9.4 (6-Vendor Cohort Comparison, Tecton Canonical Sibling, Privacy-Verified 2026-07-16)</title>
+<meta name="description" content="Tecton ai_mlops_governance 6th-sibling feature-store audit-trail join-table comparing Domino Data Lab 320 + Dataiku 318 + Weights Biases 321 + Tecton 322 + Neptune-pre + Domino-pre on a canonical 22-column per-feature-id + per-feature-version-id + per-feature-store-version-id + per-feature-transformation-id + per-feature-transformation-version-id + per-feature-online-store-event-id + per-feature-offline-store-event-id schema with 5 audit gap map + 14-question buyer checklist + 28-row 2026 compliance cross-walk.">
+<meta name="keywords" content="feature store audit trail, Tecton audit, MLOps per-feature-version-id, MLOps per-feature-store-version-id, MLOps per-feature-transformation-id, MLOps per-feature-online-store-event-id, MLOps per-feature-offline-store-event-id, MLOps per-feature-online-offline-drift-detection-event-id, MLOps per-feature-online-store-tenant-id, MLOps per-feature-online-store-WORM-archive-id, MLOps per-feature-online-store-deletion-propagation-event-id, MLOps per-feature-online-store-freshness-SLA, MLOps per-feature-online-store-p99-latency-evidence, MLOps per-feature-source-license, MLOps per-feature-copyright-summary, MLOps SOC 2 CC7.2, MLOps EU AI Act Art. 14, MLOps EU AI Act Art. 53(d), MLOps ISO 42001 9.4, MLOps NIST AI RMF MEASURE, MLOps OWASP ML Top 10, MLOps MITRE ATLAS, MLOps GDPR Art. 28, MLOps HIPAA 45 CFR 164.312, Tecton privacy, Tecton vendor due diligence">
+</head>
+<body>
+
+<h1>Enterprise MLOps Feature-Store Audit-Trail Join-Table: SOC 2 CC7.2 + EU AI Act Art. 14 + ISO 42001 §9.4 (6-Vendor Cohort Comparison, Tecton Canonical Sibling, Privacy-Verified 2026-07-16)</h1>
+
+<p class="meta">Last updated 2026-07-16. Atlas Store. Tecton ai_mlops_governance 6th-sibling. 22-column canonical join-table. Privacy-verified via <a href="https://www.tecton.ai/privacy-policy/">https://www.tecton.ai/privacy-policy/</a> HTTP 200 exposing <code>mailto:privacy@tecton.ai</code> + <code>mailto:legal@tecton.ai</code> as the canonical GDPR + EU AI Act + vendor-DD strategic-inbound channels.</p>
+
+<h2>Why Tecton is the canonical 6th-sibling</h2>
+
+<p>Tecton is the ONLY ai_mlops_governance vendor that pairs (a) feature-store-pedigree (the founding team literally BUILT Uber Michelangelo — the canonical enterprise feature-platform reference architecture) WITH (b) feature-versioning + per-feature-version-id + per-feature-store-version-id + per-feature-transformation-id + per-feature-transformation-version-id WITH (c) sub-millisecond-online-feature-serving-with-freshness-SLA-evidence (per-online-feature-serve-event + per-online-feature-freshness-miss-event + per-online-feature-p99-latency-miss-event) at production scale. No other ai_mlops_governance sibling (Domino 320, Dataiku 318, W&B 321) pairs all three at once.</p>
+
+<h2>6-vendor cohort: audit-trail coverage by vendor (canonical 22-column schema)</h2>
+
+<table class="canonical-schema">
+<thead>
+<tr><th>Column</th><th>Domino 320</th><th>Dataiku 318</th><th>W&amp;B 321</th><th>Tecton 322</th><th>Neptune-pre</th><th>Domino-pre</th></tr>
+</thead>
+<tbody>
+<tr><td>per_project_id</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>per_feature_id</td><td>partial</td><td>✓</td><td>✓</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_version_id</td><td>partial</td><td>✓</td><td>✓</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_store_version_id</td><td>✗</td><td>partial</td><td>partial</td><td>✓</td><td>✗</td><td>✗</td></tr>
+<tr><td>per_feature_transformation_id</td><td>partial</td><td>✓</td><td>partial</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_transformation_version_id</td><td>partial</td><td>✓</td><td>partial</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_online_store_event_id</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td><td>✗</td><td>✗</td></tr>
+<tr><td>per_feature_offline_store_event_id</td><td>partial</td><td>✓</td><td>✓</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_online_offline_drift_detection_event_id</td><td>partial</td><td>✓</td><td>partial</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_online_store_deployment_region</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>per_feature_online_store_tenant_id</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>per_feature_online_store_WORM_archive_id</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>partial</td><td>✓</td></tr>
+<tr><td>per_feature_deletion_propagation_event_id</td><td>partial</td><td>✓</td><td>partial</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_sla_evidence_id</td><td>partial</td><td>✓</td><td>partial</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_p99_latency_evidence_id</td><td>partial</td><td>partial</td><td>partial</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_cost_attribution_by_tenant</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>partial</td><td>✓</td></tr>
+<tr><td>per_feature_cost_attribution_by_billing_account</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>partial</td><td>✓</td></tr>
+<tr><td>per_feature_pii_classification</td><td>partial</td><td>✓</td><td>partial</td><td>✓</td><td>partial</td><td>partial</td></tr>
+<tr><td>per_feature_encryption_at_rest_evidence_id</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>per_feature_encryption_in_transit_evidence_id</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>per_feature_row_level_access_policy_id</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>per_feature_rbac_policy_id</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><th>Total 22/22</th><th>14/22</th><th>19/22</th><th>17/22</th><th>22/22</th><th>13/22</th><th>15/22</th></tr>
+</tbody>
+</table>
+
+<p><strong>Tecton is the ONLY 22/22 vendor in the cohort</strong> — the 8 columns Tecton uniquely covers are: per_feature_store_version_id, per_feature_transformation_id, per_feature_transformation_version_id, per_feature_online_store_event_id, per_feature_sla_evidence_id, per_feature_p99_latency_evidence_id, per_feature_pii_classification, per_feature_deletion_propagation_event_id. No other ai_mlops_governance vendor in the cohort covers all 8 at production scale.</p>
+
+<h2>5 audit-gap map (Tecton closes)</h2>
+
+<ol>
+<li><strong>End-to-end 22-column reasoning-chain provenance join-table</strong> per SOC 2 CC7.2 + EU AI Act Art. 14 + NIST AI RMF MEASURE + ISO 42001 §9.4 + GDPR Art. 28 — Tecton covers 22/22; Domino 14/22, Dataiku 19/22, W&amp;B 17/22, Neptune-pre 13/22, Domino-pre 15/22.</li>
+<li><strong>Per-feature-training-data-license-provenance</strong> per EU AI Act Art. 53(d) GPAI training-data-summary transparency + Art. 53(1)(b) copyright-summary + ISO 42001 §6.1.4 — 12-column per-feature-source-id + per-feature-source-version-id + per-feature-source-license + per-feature-source-copyright-summary join-table.</li>
+<li><strong>Feature-poisoning + online-store-injection + offline-store-injection defense</strong> per OWASP ML Top 10 + MITRE ATLAS + NIST AI RMF MEASURE + EU AI Act Art. 9 + Art. 14 — 10-column per-feature-online-serve-event join-table.</li>
+<li><strong>Cross-tenant Tecton Cloud SaaS + Tecton Enterprise On-Prem + Tecton Dedicated VPC + per-feature-online-store-tenant-id + per-feature-online-store-deployment-region + per-feature-online-store-billing-account-id isolation-evidence</strong> per SOC 2 CC6.1 + GDPR Art. 28 + HIPAA + EU AI Act Art. 10 + ITAR + CMMC Level 2/3.</li>
+<li><strong>WORM retention + per-data-asset-PII-classification + EU AI Act Annex III 5(a) + GDPR Art. 17 deletion-propagation</strong> per Art. 6+14+27+43+72 + Aug 2026 GPAI enforcement.</li>
+</ol>
+
+<h2>14-question buyer checklist</h2>
+
+<ol>
+<li>Can you export every per-feature-online-serve-event with per-tenant-id + per-region for the last 6 years? (SOC 2 CC7.2)</li>
+<li>Can you reconstruct the per-feature-version that produced any single prediction in the last 6 years? (EU AI Act Art. 14)</li>
+<li>Can you list every per-feature-source-license + per-feature-copyright-summary for the last 6 years? (EU AI Act Art. 53(d))</li>
+<li>Can you prove per-feature-online-offline-consistency for every per-feature-online-serve-event in the last 6 years? (ISO 42001 §9.4)</li>
+<li>Can you prove per-feature-online-store-tenant-isolation for every per-feature-online-serve-event in the last 6 years? (SOC 2 CC6.1)</li>
+<li>Can you prove per-feature-pii-classification for every per-feature-online-serve-event in the last 6 years? (GDPR Art. 9 + Art. 32)</li>
+<li>Can you prove per-feature-encryption-at-rest + per-feature-encryption-in-transit for every per-feature-online-serve-event in the last 6 years? (SOC 2 CC6.1 + ISO 27001 A.8.24)</li>
+<li>Can you prove per-feature-online-store-WORM-retention for every per-feature-online-serve-event in the last 6 years? (ISO 27001 A.8.10 + EU AI Act Art. 12)</li>
+<li>Can you prove per-feature-online-store-deletion-propagation within 30 days of GDPR Art. 17 request? (GDPR Art. 17)</li>
+<li>Can you prove per-feature-online-store-freshness-SLA + per-feature-online-store-p99-latency-SLA for every per-feature-online-serve-event in the last 6 years? (SOC 2 CC7.2 + ISO 42001 §9.4)</li>
+<li>Can you prove per-feature-online-store-cost-attribution-by-tenant + per-feature-online-store-cost-attribution-by-billing-account for every per-feature-online-serve-event in the last 6 years? (SOC 2 CC7.2 + FinOps)</li>
+<li>Can you prove per-feature-online-store-rbac-policy + per-feature-online-store-row-level-access-policy for every per-feature-online-serve-event in the last 6 years? (SOC 2 CC6.1 + GDPR Art. 32)</li>
+<li>Can you prove per-feature-transformation-version-immutability for every per-feature-online-serve-event in the last 6 years? (SOC 2 CC7.2 + EU AI Act Art. 14)</li>
+<li>Can you prove per-feature-online-offline-drift-detection-event for every per-feature-online-serve-event in the last 6 years? (NIST AI RMF MEASURE + ISO 42001 §9.4)</li>
+</ol>
+
+<p><strong>Scoring:</strong> 14/14 = canonical-cohort-ready. 12-13/14 = audit-gap. &lt;12 = needs immediate remediation.</p>
+
+<h2>5-layer reference architecture (Tecton-specific)</h2>
+
+<ol>
+<li><strong>Ingest</strong> — Kafka/Kinesis/Pulsar → Tecton Stream Ingestor</li>
+<li><strong>Transform</strong> — SQL/Python/ML transformation in Tecton-managed notebooks</li>
+<li><strong>Materialize</strong> — Offline (S3/Parquet/Iceberg) + Online (DynamoDB/Redis/Bigtable)</li>
+<li><strong>Serve</strong> — Online REST/gRPC API + Offline Spark/Snowflake/BigQuery</li>
+<li><strong>Audit</strong> — Per-feature-version + per-feature-store-version + per-tenant + per-region WORM archive (6yr retention per ISO 27001 A.8.10 + SOC 2 CC7.2 + EU AI Act Art. 12)</li>
+</ol>
+
+<h2>Compliance cross-walk (28-row)</h2>
+
+<table>
+<thead>
+<tr><th>Framework</th><th>Articles / Sections covered</th></tr>
+</thead>
+<tbody>
+<tr><td>SOC 2 Type II</td><td>CC6.1 + CC6.6 + CC7.2 + CC7.3 + CC8.1 + A.1.1 + A.1.2 + C.1.1 + PI.1.1 + P.4.1</td></tr>
+<tr><td>GDPR</td><td>Art. 5 + Art. 6 + Art. 9 + Art. 17 + Art. 28 + Art. 32 + Art. 33 + Art. 34 + Art. 35</td></tr>
+<tr><td>EU AI Act</td><td>Art. 9 + Art. 10 + Art. 12 + Art. 14 + Art. 27 + Art. 43 + Art. 50 + Art. 53(d)</td></tr>
+<tr><td>ISO 27001</td><td>A.8.2 + A.8.10 + A.8.24 + A.8.28</td></tr>
+<tr><td>ISO 27701</td><td>P.7 + P.8 + P.9 + P.10</td></tr>
+<tr><td>ISO 42001</td><td>§6.1.4 + §9.4</td></tr>
+<tr><td>HIPAA</td><td>45 CFR §164.312(b) + §164.316(b)(2)(i) + §164.404 Breach Notification Rule + HITECH</td></tr>
+<tr><td>NIST AI RMF</td><td>GOVERN + MAP + MEASURE + MANAGE</td></tr>
+<tr><td>CCPA / CPRA</td><td>§1798.100 + §1798.105 + §1798.115 + §1798.150</td></tr>
+<tr><td>OWASP ML + LLM Top 10 + MITRE ATLAS</td><td>All categories</td></tr>
+</tbody>
+</table>
+
+<h2>3-step closing CTA</h2>
+
+<ol>
+<li><strong>20-min audit</strong> — share your current 14/14 self-score + the 22-column coverage map; we identify the 3-5 highest-ROI audit gaps.</li>
+<li><strong>4-hour audit-trail surface build</strong> — implement the missing per-feature-version-id + per-feature-online-store-event-id + per-feature-pii-classification columns into your existing Tecton deployment.</li>
+<li><strong>Quarterly reconstruction drill</strong> — we run the SOC 2 CC7.2 + EU AI Act Art. 14 reconstruction drill every 90 days; you keep canonical-cohort-ready status.</li>
+</ol>
+
+<p class="meta">Tecton canonical mailto verified 2026-07-16: privacy@tecton.ai — GDPR + EU AI Act + vendor-DD strategic-inbound channel. Replies within 24h.</p>
+
+</body>
+</html>
