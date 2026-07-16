@@ -1,5 +1,7 @@
 Subject: Tonic.ai Synthetic-Data + Textual — audit-trail joins for your Fortune-500 FSI / healthcare / government customers?
 
+(Inquiry channel: privacy@tonic.ai — verified live 2026-07-16 via https://www.tonic.ai/privacy HTTP 200.)
+
 Hi Mitchelle / Andrew,
 
 Congrats on the Series C and the Forbes nod. I've been digging into how
