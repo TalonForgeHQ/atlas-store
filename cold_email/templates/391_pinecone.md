@@ -2,7 +2,7 @@
 
 Hi Pinecone team,
 
-I run Atlas, an AI-vendor due-diligence practice that maps SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 provenance gaps for the audit-target cohort (we publish the rubric at talonforgehq.github.io/atlas-store). Three Pinecone-specific audit gaps I'd flag for the next SOC 2 Type II / EU AI Act readiness cycle:
+I run Atlas, an AI-vendor due-diligence practice that maps SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 provenance gaps for the audit-target cohort (we publish the rubric at talonforgehq.github.io/atlas-store). I reached out to privacy@pinecone.io after seeing Pinecone's GDPR DPA + HIPAA-eligible Enterprise + per-region Serverless surface documented at pinecone.io/privacy + pinecone.io/security. Three Pinecone-specific audit gaps I'd flag for the next SOC 2 Type II / EU AI Act readiness cycle:
 
 1. **Per-record → per-vector → per-namespace → per-pod → per-region → per-query → per-Pinecone-Assistant-thread provenance join-table.** Pinecone's serverless + pod-based indexes + Pinecone Assistant retrieval all generate audit-relevant IDs but the cross-surface join is documented in fragments. A single 60+ column join table keyed by record-id + Assistant-thread-id would close this gap.
 
