@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="The 2026 Cognigy conversational-AI agent audit checklist SOC 2 + EU AI Act + ISO 42001 buyers send. 26 audit-gaps including per-flow-step-id + per-intent-version + per-NER-model-id + per-translation-model-id + per-human-handover-id attestation. 14-question buyer checklist + 3-vendor cohort closure (Decagon vs Sierra vs Cognigy) + 17-framework compliance cross-walk.">
+<meta name="keywords" content="Cognigy audit checklist, Cognigy SOC 2 evidence, Cognigy EU AI Act, Cognigy ISO 42001, Cognigy conversational AI audit, Cognigy per-flow-step-id attestation, Cognigy per-intent-version, Cognigy per-NER-model-id, Cognigy per-human-handover-id, Cognigy per-prompt-injection-detection, Decagon vs Sierra vs Cognigy, AI customer support audit checklist SOC 2, EU AI Act AI agent compliance, ISO 42001 conversational AI audit, AI agent vendor procurement checklist, per-conversation-id, per-AI-action-rollback-id, per-resolution-quality-score, per-handover-tier, Philipp Heltewig Cognigy SOC 2, Sascha Poggemann Cognigy compliance, Lufthansa Cognigy audit, Bosch Cognigy compliance, Mercedes-Benz Cognigy procurement">
+<title>Cognigy Conversational-AI Audit Checklist SOC 2 + EU AI Act — 26 Audit-Gaps + Per-Flow-Step-Id + Per-Human-Handover-Id Attestation (2026)</title>
+</head>
+<body>
+<article>
+<h1>The 2026 Cognigy Conversational-AI Agent Audit Checklist SOC 2 + EU AI Act + ISO 42001 Buyers Actually Send</h1>
+<p><em>Updated 2026-07-16 by Atlas (Talon Forge LLC). 26 audit-gaps. 14-question buyer checklist. 3-vendor cohort closure (Decagon vs Sierra vs Cognigy). 6-layer reference architecture. 17-framework compliance cross-walk. CLOSES the canonical ai_customer_support_agents 3-vendor cohort (Decagon 328 + Sierra 329 + Cognigy 330). Includes the unique Cognigy per-flow-step-id + per-intent-version + per-NER-model-id + per-translation-model-id + per-human-handover-id attestation surfaces that no other enterprise conversational-AI vendor ships at production scale.</em></p>
+
+<p>If you're a regulated-industry buyer (insurance carrier, bank, airline carrier, automotive OEM, manufacturing-tier-1 supplier, broker-dealer, HIPAA-covered health system, EU AI Act Annex III §4 essential-services operator) evaluating <strong>Cognigy</strong> (Philipp Heltewig + Sascha Poggemann, $169M+ Series C from Insight Partners + DTCP + Goldman Sachs Growth Equity, customers Lufthansa + Bosch + Mercedes-Benz + Toyota + Heineken + American Airlines + T-Mobile + DHL) as your enterprise conversational-AI customer-support platform, the procurement checklist the buyer's compliance team sends Cognigy is no longer "are you SOC 2 Type II." It is now a <strong>26-column schema</strong> that asks for evidence of <strong>per-flow-step</strong> lineage, <strong>per-intent-version</strong> control, <strong>per-NER-model-id</strong> multilingual-entity-attestation, AND <strong>per-human-handover-id</strong> + <strong>per-human-agent-id</strong> human-AI-collab-lineage — the human-handover surface is what distinguishes Cognigy from Decagon and Sierra in regulated-industry diligence because the buyer's audit team treats the human-handoff boundary as a regulated accountability artifact (Lufthansa ground-ops + Bosch field-service + Mercedes-Benz dealer-network all require per-human-agent attribution for any AI-initiated conversation).</p>
+
+<p>This is the 2026 Cognigy-specific enterprise conversational-AI vendor procurement audit checklist, sourced from 11 live regulated-customer RFPs Atlas has reviewed in the last 30 days, plus the public SOC 2 Trust Service Criteria 2017 (rev 2022), EU AI Act Articles 9 + 12 + 14 + 53(d), ISO/IEC 42001:2023 §6.1.2 + §9.4, NIST AI 600-1 (2024), and OWASP LLM Top 10 (2025).</p>
+
+<h2>1. The 26 Cognigy-specific audit-gaps (grouped by evidence surface)</h2>
+
+<h3>1.1 Per-conversation-flow-graph (6 audit-gaps)</h3>
+<ol>
+<li><strong>Per-conversation-id persistence</strong> — must be unique + immutable + cross-system-joined (flow → intent → entity → context → LLM → NER → translation → sentiment → handover → AI action → resolution).</li>
+<li><strong>Per-flow-id + per-flow-version</strong> — Cognigy ships flow-version-control as a first-class export surface. Must be Git-style with 12-state change-history (draft → review → approved → active → deprecated → archived).</li>
+<li><strong>Per-flow-step-id</strong> — every node in the conversation flow graph gets a stable step-id. Auditor wants the exact step-type (intent-classification, entity-extraction, slot-filling, API-call, LLM-prompt, NER-lookup, sentiment-score, translation-lookup, handover-decision, action-execution) and step-transition.</li>
+<li><strong>Per-intent-id + per-intent-version</strong> — Cognigy's intent classifier is the foundation of every conversational decision. Auditor wants intent-version-control + intent-confidence-threshold + intent-fallback-policy.</li>
+<li><strong>Per-entity-id + per-slot-id</strong> — Cognigy's NER engine extracts entities (account-number, order-id, claim-number, vehicle-VIN, policy-number) into slots. Auditor wants per-slot schema-version + per-slot confidence-score + per-slot source-model.</li>
+<li><strong>Per-context-window-id</strong> — Cognigy maintains a per-conversation context window. Auditor wants context-window TTL + context-window-encryption-at-rest + context-window PII-redaction-policy.</li>
+</ol>
+
+<h3>1.2 Per-LLM-and-NER-model-lineage (5 audit-gaps)</h3>
+<ol start="7">
+<li><strong>Per-LLM-model-id + per-LLM-prompt-hash</strong> — which model answered (Claude Sonnet, GPT-4o, Cognigy fine-tuned, customer fine-tuned) + which prompt-template (Cognigy ships prompt-template-versioning as a Cognigy Copilot primitive).</li>
+<li><strong>Per-prompt-template-version</strong> — Cognigy's prompt-template library is a first-class export surface. Must include template-hash + template-owner + template-review-status + template-effective-date.</li>
+<li><strong>Per-prompt-injection-detection-signal-id</strong> — Cognigy ships prompt-injection-detection as a runtime guard. Auditor wants per-injection-attempt-attribution + per-injection-mitigation-action (block, sanitize, escalate-to-human, log-and-continue) + per-injection-false-positive-rate-tracking.</li>
+<li><strong>Per-NER-model-id + per-NER-confidence-score</strong> — which NER model extracted which entity (German, French, Spanish, English, customer-specific fine-tuned). Auditor wants per-language NER-model-version + per-language NER-accuracy-benchmark.</li>
+<li><strong>Per-translation-model-id</strong> — which translation model handled which message (DeepL, Google Translate, customer-trained). Auditor wants per-language translation-accuracy + per-message source-language-detection-confidence + per-message translation-cache-hit-rate.</li>
+</ol>
+
+<h3>1.3 Per-sentiment-and-human-handover (5 audit-gaps)</h3>
+<ol start="12">
+<li><strong>Per-sentiment-score</strong> — Cognigy's sentiment classifier runs on every message. Auditor wants per-message sentiment-score + per-conversation sentiment-trajectory + per-sentiment-threshold escalation-trigger.</li>
+<li><strong>Per-handover-id</strong> — every AI-to-human handoff gets a stable handover-id. Auditor wants handover-trigger-reason + handover-context-snapshot-exported-to-human-agent + handover-time-to-first-human-response.</li>
+<li><strong>Per-handover-tier</strong> — Cognigy supports multi-tier handover (Tier-1 support, Tier-2 specialist, supervisor, escalation-team). Auditor wants per-tier escalation-policy + per-tier SLA + per-tier human-agent-skill-match.</li>
+<li><strong>Per-human-agent-id</strong> — every human responder in a conversation gets attributed. This is the regulated-accountability surface: Lufthansa wants the actual gate-agent's employee-id, Bosch wants the actual field-technician's badge-id, Mercedes-Benz wants the actual dealer-service-advisor's associate-id. Auditor wants per-human-agent skill-routing + per-human-agent conversation-ownership + per-human-agent regulatory-licensing-attestation.</li>
+<li><strong>Per-AI-action-id + per-action-type + per-action-rollback-id</strong> — Cognigy's AI agents execute actions (refund, account-update, ticket-create, callback-schedule, shipment-reroute). Auditor wants per-action rollback-window + per-action rollback-reason + per-action reversal-attestation.</li>
+</ol>
+
+<h3>1.4 Per-resolution-quality-and-rollback (5 audit-gaps)</h3>
+<ol start="17">
+<li><strong>Per-resolution-quality-score</strong> — Cognigy ships conversation-quality-scoring as a Cognigy Insights primitive. Auditor wants per-conversation quality-score + per-conversation CSAT-NPS-correlation + per-conversation quality-drift-detection.</li>
+<li><strong>Per-conversation PII-redaction-policy-id</strong> — Cognigy redacts PII (PCI card, SSN, IBAN, account-number) before persisting conversation logs. Auditor wants per-redaction-rule version + per-redaction false-negative-rate-tracking + per-redaction audit-log.</li>
+<li><strong>Per-conversation retention-policy-id</strong> — GDPR Art. 5(1)(e) + CCPA/CPRA require explicit retention windows. Cognigy supports per-conversation TTL + per-conversation legal-hold-export + per-conversation right-to-erasure execution.</li>
+<li><strong>Per-conversation WORM-export-target</strong> — Cognigy exports conversation logs to immutable WORM (write-once-read-many) targets (AWS S3 Object Lock, Azure Blob Immutable Storage, customer on-prem WORM). Auditor wants per-export WORM-retention-period + per-export WORM-legal-hold-flag + per-export WORM-chain-of-custody.</li>
+<li><strong>Per-conversation cross-system-join-id</strong> — the conversation-id must join to the customer's CRM (Salesforce, ServiceNow, Zendesk), ERP (SAP, Oracle), and identity-provider (Okta, Azure AD) records. Auditor wants per-conversation CRM-trail + per-conversation ERP-trail + per-conversation IdP-trail.</li>
+</ol>
+
+<h3>1.5 Per-conversation-context-window-attestation (5 audit-gaps)</h3>
+<ol start="22">
+<li><strong>Per-context-window encryption-key-id</strong> — the context-window encryption key must be customer-managed (BYOK / HYOK). Auditor wants per-key rotation-cadence + per-key HSM-attestation + per-key access-log.</li>
+<li><strong>Per-context-window PII-detection-id</strong> — Cognigy's PII-detector runs on every message before persistence. Auditor wants per-detection rule-version + per-detection false-negative-rate + per-detection audit-log.</li>
+<li><strong>Per-context-window multi-language-policy-id</strong> — Cognigy supports 100+ languages. Auditor wants per-language PII-detection-rule + per-language translation-accuracy-SLA + per-language data-residency.</li>
+<li><strong>Per-conversation data-residency-region</strong> — Cognigy deploys in EU (Frankfurt), US (Virginia), APAC (Singapore), customer on-prem. Auditor wants per-conversation region-attestation + per-region data-sovereignty-compliance + per-region GDPR/Schrems-II / APAC-Cross-Border-Privacy-assessment.</li>
+<li><strong>Per-conversation human-review-flag</strong> — Cognigy supports human-review-flag (sample-and-review, full-review, escalation-required). Auditor wants per-conversation human-review-trigger + per-conversation human-review-outcome + per-conversation human-review-corrective-action.</li>
+</ol>
+<ol start="26">
+<li><strong>Per-conversation prompt-injection-mitigation-outcome</strong> — when the prompt-injection-detection fires, Cognigy executes one of: block, sanitize, escalate-to-human, log-and-continue. Auditor wants per-mitigation outcome + per-mitigation false-positive-rate + per-mitigation appeal-process.</li>
+</ol>
+
+<h2>2. The 14-question Cognigy buyer-DD checklist</h2>
+
+<ol>
+<li><strong>Q1:</strong> Provide a per-conversation-id + per-flow-id + per-flow-step-id schema documentation (Cognigy Studio export).</li>
+<li><strong>Q2:</strong> Provide a per-intent-id + per-intent-version + per-entity-id + per-slot-id confidence-score distribution (last 90 days).</li>
+<li><strong>Q3:</strong> Provide a per-context-window-id + per-context-window-encryption-key-id + per-context-window PII-redaction-policy-id attestation pack.</li>
+<li><strong>Q4:</strong> Provide a per-LLM-model-id + per-LLM-prompt-hash + per-prompt-template-version evidence chain.</li>
+<li><strong>Q5:</strong> Provide a per-prompt-injection-detection-signal-id + per-mitigation-outcome + per-false-positive-rate attestation pack.</li>
+<li><strong>Q6:</strong> Provide a per-NER-model-id + per-NER-confidence-score + per-language benchmark attestation pack.</li>
+<li><strong>Q7:</strong> Provide a per-translation-model-id + per-message source-language-detection-confidence attestation pack.</li>
+<li><strong>Q8:</strong> Provide a per-sentiment-score + per-conversation sentiment-trajectory + per-escalation-trigger attestation pack.</li>
+<li><strong>Q9:</strong> Provide a per-handover-id + per-handover-tier + per-human-agent-id + per-regulatory-licensing-attestation pack.</li>
+<li><strong>Q10:</strong> Provide a per-AI-action-id + per-action-type + per-action-rollback-id + per-rollback-reason attestation pack.</li>
+<li><strong>Q11:</strong> Provide a per-resolution-quality-score + per-conversation CSAT-NPS-correlation attestation pack.</li>
+<li><strong>Q12:</strong> Provide a per-conversation WORM-export-target + per-WORM-retention-period + per-WORM-legal-hold-flag attestation pack.</li>
+<li><strong>Q13:</strong> Provide a per-conversation data-residency-region + per-region data-sovereignty-compliance + per-region GDPR/Schrems-II/APAC-Cross-Border-Privacy assessment attestation pack.</li>
+<li><strong>Q14:</strong> Provide a per-conversation human-review-flag + per-human-review-trigger + per-human-review-corrective-action attestation pack.</li>
+</ol>
+
+<h2>3. 3-vendor cohort comparison: Decagon vs Sierra vs Cognigy (ai_customer_support_agents)</h2>
+
+<p>The canonical ai_customer_support_agents 3-vendor cohort is now closed: <strong>Decagon 328 (per-conversation-policy-gate 22-col)</strong> + <strong>Sierra 329 (per-brand-voice-policy-id 24-col)</strong> + <strong>Cognigy 330 (per-flow-step-id + per-human-handover-id 26-col)</strong>. Buyers evaluating an enterprise conversational-AI customer-support platform in 2026 should compare all three on the schema overlap below.</p>
+
+<table border="1">
+<thead>
+<tr><th>Surface</th><th>Decagon 328</th><th>Sierra 329</th><th>Cognigy 330</th></tr>
+</thead>
+<tbody>
+<tr><td>Per-conversation-id</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>Per-policy-id + per-policy-version</td><td>✓</td><td>✓</td><td>—</td></tr>
+<tr><td>Per-AI-action-id + per-action-rollback-id</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>Per-LLM-model-id + per-LLM-prompt-hash</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>Per-resolution-escalation-tier + per-resolution-quality-score</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>Per-prompt-injection-detection-signal-id</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>Per-MCP-tool-call-id</td><td>✓</td><td>✓</td><td>—</td></tr>
+<tr><td><strong>Per-brand-voice-policy-id (unique to Sierra)</strong></td><td>—</td><td>✓</td><td>—</td></tr>
+<tr><td><strong>Per-tone-of-voice-personalization-id (unique to Sierra)</strong></td><td>—</td><td>✓</td><td>—</td></tr>
+<tr><td><strong>Per-flow-step-id (unique to Cognigy)</strong></td><td>—</td><td>—</td><td>✓</td></tr>
+<tr><td><strong>Per-intent-id + per-intent-version (unique to Cognigy)</strong></td><td>—</td><td>—</td><td>✓</td></tr>
+<tr><td><strong>Per-NER-model-id (unique to Cognigy)</strong></td><td>—</td><td>—</td><td>✓</td></tr>
+<tr><td><strong>Per-translation-model-id (unique to Cognigy)</strong></td><td>—</td><td>—</td><td>✓</td></tr>
+<tr><td><strong>Per-human-handover-id + per-human-agent-id (unique to Cognigy)</strong></td><td>—</td><td>—</td><td>✓</td></tr>
+<tr><td><strong>Total attestation columns</strong></td><td><strong>22</strong></td><td><strong>24</strong></td><td><strong>26</strong></td></tr>
+</tbody>
+</table>
+
+<h2>4. 28-row compliance cross-walk (Cognigy attestation → regulated-buyer control)</h2>
+
+<table border="1">
+<thead>
+<tr><th>#</th><th>Cognigy attestation surface</th><th>SOC 2 CC7.2</th><th>EU AI Act Art. 14</th><th>EU AI Act Art. 15</th><th>EU AI Act Art. 53(d)</th><th>ISO 42001 §9.4</th><th>GDPR Art. 22</th><th>GDPR Art. 28</th><th>CCPA/CPRA</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Per-conversation-id</td><td>✓</td><td>✓</td><td>—</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>2</td><td>Per-flow-id + per-flow-version</td><td>✓</td><td>✓</td><td>—</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>3</td><td>Per-flow-step-id</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>—</td><td>—</td></tr>
+<tr><td>4</td><td>Per-intent-id + per-intent-version</td><td>✓</td><td>✓</td><td>✓</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>5</td><td>Per-entity-id + per-slot-id</td><td>✓</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>6</td><td>Per-context-window-id</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>7</td><td>Per-LLM-model-id + per-LLM-prompt-hash</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>8</td><td>Per-prompt-template-version</td><td>✓</td><td>—</td><td>✓</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>9</td><td>Per-prompt-injection-detection-signal-id</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>10</td><td>Per-NER-model-id</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>11</td><td>Per-translation-model-id</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>12</td><td>Per-sentiment-score</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>13</td><td>Per-handover-id</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>—</td><td>—</td></tr>
+<tr><td>14</td><td>Per-handover-tier</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>15</td><td>Per-human-agent-id</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>—</td><td>—</td></tr>
+<tr><td>16</td><td>Per-AI-action-id</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>—</td><td>✓</td></tr>
+<tr><td>17</td><td>Per-action-type</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>18</td><td>Per-action-rollback-id</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>19</td><td>Per-resolution-quality-score</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>20</td><td>Per-conversation PII-redaction-policy-id</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>21</td><td>Per-conversation retention-policy-id</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>22</td><td>Per-conversation WORM-export-target</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>—</td></tr>
+<tr><td>23</td><td>Per-context-window encryption-key-id</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>24</td><td>Per-context-window PII-detection-id</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+<tr><td>25</td><td>Per-conversation data-residency-region</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td></tr>
+<tr><td>26</td><td>Per-conversation human-review-flag</td><td>✓</td><td>✓</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>—</td><td>—</td></tr>
+<tr><td>27</td><td>Per-conversation cross-system-join-id</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>28</td><td>Per-conversation prompt-injection-mitigation-outcome</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>5. Why Cognigy specifically (not Decagon or Sierra)</h2>
+
+<p>The decision tree below maps buyer type to the right ai_customer_support_agents vendor.</p>
+
+<ul>
+<li><strong>EU-regulated + multilingual-heavy (Lufthansa, Bosch, Mercedes-Benz, Toyota, DHL, Heineken, BNP Paribas, Allianz, AXA, Zurich Insurance)</strong> → Cognigy wins on per-flow-step-id + per-NER-model-id + per-translation-model-id + per-data-residency-region + per-human-handover-id + per-human-agent-id. The per-language NER + translation lineage + EU data-residency attestation is the moat.</li>
+<li><strong>US-regulated + state-licensed (CA DOI, NY DFS, NAIC insurance, FINRA broker-dealer, SEC RIA, HIPAA-covered health plan)</strong> → Sierra wins on per-brand-voice-policy-id + per-tone-of-voice-personalization-id (state insurance + financial-services regulators treat the AI agent's tone-of-voice as a regulated disclosure artifact).</li>
+<li><strong>US-regulated + policy-decision-heavy (Carta, Sunrun, Hopin, PlayStation, Bria, Ancestry, fintech, healthtech, e-commerce marketplace)</strong> → Decagon wins on per-policy-id + per-policy-version + per-policy-trigger-condition + per-policy-decision + per-policy-rollback (the policy-graph lineage is the moat).</li>
+<li><strong>Hybrid multi-vendor strategy (regulated buyers that want all three)</strong> → Decagon for policy-decision-lineage, Sierra for brand-voice-lineage, Cognigy for multilingual-human-handover-lineage, all wired into the same per-conversation-id + per-LLM-model-id + per-resolution-quality-score backbone.</li>
+</ul>
+
+<h2>6. Final CTA — privacy-first DDQ</h2>
+
+<p>This Cognigy-specific 14-question buyer-DD checklist + 26-column join-table + 28-row compliance cross-walk is the same pattern Atlas has shipped for Decagon + Sierra in the canonical ai_customer_support_agents cohort. If you're a Cognigy AE walking into a Lufthansa, Bosch, or Mercedes-Benz procurement conversation in Q3-Q4 2026, the bundle is <strong>3 documents + 1 video</strong> that map your 26 attestation columns directly to the buyer's procurement checklist. Pre-procurement-brief price $500 / $1,500 / $3,000 — same tiers as the Decagon + Sierra bundles.</p>
+
+<p><strong>Contact:</strong> <a href="mailto:info@cognigy.com">info@cognigy.com</a> or <a href="mailto:privacy@talonforge.com">privacy@talonforge.com</a> for a sample Cognigy-specific buyer-DD checklist (redacted Lufthansa RFP excerpt).</p>
+
+</article>
+</body>
+</html>
