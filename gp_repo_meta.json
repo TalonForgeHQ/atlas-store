@@ -120,5 +120,10 @@
   "default_branch": "main",
   "temp_clone_token": null,
   "network_count": 3826,
-  "subscribers_count": 169
+  "subscribers_count": 169,
+  "last_tick": "2026-07-16-1325Z",
+  "last_tick_summary": "lead 317 Cerb (Webgroup Media LLC, 25-year OSS) + template 317_cerb.md + chunk_182",
+  "total_leads": 317,
+  "total_templates": 317,
+  "total_chunks": 182
 }
