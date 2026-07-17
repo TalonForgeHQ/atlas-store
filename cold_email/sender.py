@@ -42,7 +42,7 @@ import time
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from email.message import EmailMessage
-from email.utils import formataddr
+from email.utils import formataddr, getaddresses
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -117,16 +117,46 @@ def load_leads() -> list[Lead]:
 
 # --------------------------------------------------------------------------- template
 SUBJECT_RE = re.compile(r"^\*\*Subject:\*\*\s*(.+?)\s*$", re.MULTILINE)
+PLAIN_SUBJECT_RE = re.compile(r"^Subject:\s*(.+?)\s*$", re.MULTILINE)
+SUBJECT_LINE_RE = re.compile(r"^\*\*Subject line(?: A)?:\*\*\s*(.+?)\s*$", re.MULTILINE)
+LABELED_SUBJECT_RE = re.compile(
+    r"^\*\*Subject(?:\s*\([^)]*\))?:\*\*\s*(.+?)\s*$",
+    re.MULTILINE,
+)
+HEADING_SUBJECT_RE = re.compile(
+    r"^## Subject\s*\n+(.*?)(?=\n+## (?:Pre-header|Body)\b)",
+    re.MULTILINE | re.DOTALL,
+)
+HEADING_BODY_RE = re.compile(r"^## Body\s*\n+(.*)\Z", re.MULTILINE | re.DOTALL)
+
+
+def _subject_from_text(text: str, company: str) -> str:
+    """Generate a conservative fallback only when a template omitted a subject."""
+    labeled = LABELED_SUBJECT_RE.search(text)
+    if labeled:
+        return labeled.group(1).strip()
+    return f"{company} audit question"
 
 
 def render_template(lead: Lead) -> tuple[str, str]:
-    """Returns (subject, body). Strips metadata header + the Subject line."""
+    """Return a plain-text subject/body from legacy or current markdown templates."""
     tpl_path = TEMPLATES_DIR / lead.template
     if not tpl_path.exists():
         raise FileNotFoundError(f"template not found: {tpl_path}")
     raw = tpl_path.read_text(encoding="utf-8")
 
-    # Strip metadata block (leading lines starting with #)
+    # Current templates use explicit sections. Extract only the mail content so
+    # metadata and pre-header notes never leak into the delivered body.
+    heading_subject = HEADING_SUBJECT_RE.search(raw)
+    heading_body = HEADING_BODY_RE.search(raw)
+    if heading_subject and heading_body:
+        subject = " ".join(heading_subject.group(1).split()).strip()
+        body = heading_body.group(1).strip()
+        if not subject or not body:
+            raise ValueError(f"empty Subject or Body section in {tpl_path}")
+        return subject, body
+
+    # Legacy templates place metadata comments first and use **Subject:**.
     body_lines = []
     in_meta = True
     for line in raw.splitlines():
@@ -136,14 +166,43 @@ def render_template(lead: Lead) -> tuple[str, str]:
         body_lines.append(line)
     body = "\n".join(body_lines).strip()
 
-    # Extract subject
-    m = SUBJECT_RE.search(body)
-    if not m:
-        raise ValueError(f"no '**Subject:**' line in {tpl_path}")
-    subject = m.group(1).strip()
-    body = (body[: m.start()] + body[m.end():]).strip()
+    # Legacy variants use **Subject:**, plain Subject:, or metadata
+    # **Subject line A:** followed by a --- separator and the actual body.
+    match = SUBJECT_RE.search(body) or PLAIN_SUBJECT_RE.search(body)
+    if match:
+        subject = match.group(1).strip()
+        body = (body[: match.start()] + body[match.end():]).strip()
+        return subject, body
 
-    return subject, body
+    subject_line = SUBJECT_LINE_RE.search(raw)
+    separator = raw.find("---", subject_line.end()) if subject_line else -1
+    if subject_line and separator >= 0:
+        subject = subject_line.group(1).strip()
+        body = raw[separator + 3 :].strip()
+        if subject and body:
+            return subject, body
+
+    # YAML-frontmatter templates carry `subject:` in the front matter.
+    if raw.startswith("---"):
+        frontmatter_end = raw.find("\n---", 3)
+        if frontmatter_end >= 0:
+            frontmatter = raw[3:frontmatter_end]
+            yaml_subject = re.search(r'^subject:\s*["\']?(.*?)["\']?\s*$', frontmatter, re.MULTILINE)
+            body = raw[frontmatter_end + 4 :].strip()
+            if yaml_subject and body:
+                return yaml_subject.group(1).strip(), body
+
+    # Some historical templates are body-only or have metadata before `---`.
+    # Keep them sendable with a low-risk internal-looking fallback subject.
+    separator = raw.find("---")
+    if separator >= 0:
+        body = raw[separator + 3 :].strip()
+        if body:
+            return _subject_from_text(raw[:separator], lead.name), body
+    if raw.strip():
+        return _subject_from_text(raw, lead.name), raw.strip()
+
+    raise ValueError(f"empty template: {tpl_path}")
 
 
 # --------------------------------------------------------------------------- rate limit
@@ -217,15 +276,10 @@ def smtp_send(env: dict[str, str], msg: EmailMessage) -> None:
         s.starttls(context=ssl.create_default_context())
         s.ehlo()
         s.login(user, pw)
-        recipients = [addr for _, addr in (msg["To"].addresses if hasattr(msg["To"], "addresses") else [(None, msg["To"])])]
-        # EmailMessage["To"] returns a Header; simpler: use msg.get_all
-        to_addrs = []
-        for hdr in (msg.get_all("To") or []) + (msg.get_all("Cc") or []):
-            for _, addr in [a for a in (s.getaddresses([hdr]) if False else [(None, h.strip()) for h in hdr.split(",")])]:
-                if addr:
-                    to_addrs.append(addr)
+        headers = (msg.get_all("To") or []) + (msg.get_all("Cc") or [])
+        to_addrs = [addr for _, addr in getaddresses(headers) if addr]
         if not to_addrs:
-            to_addrs = [env["FROM_EMAIL"]]
+            raise ValueError("message has no valid To/Cc recipient addresses")
         s.send_message(msg, to_addrs=to_addrs)
 
 

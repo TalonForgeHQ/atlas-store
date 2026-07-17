@@ -6,3 +6,12 @@ __pycache__/
 !install-*.log
 !install-*.done
 .DS_Store_tmp/
+
+# Local credentials and sender state must never be committed.
+.env
+.env.*
+!.env.example
+cold_email/.env
+cold_email/.send_state.json
+cold_email/send_log*.json
+cold_email/.hermes/
