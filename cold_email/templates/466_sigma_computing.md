@@ -37,6 +37,8 @@ P.S. privacy@sigmacomputing.com is the verified channel I'm sending through — 
 
 P.P.S. The 5-question audit I run for `business_intelligence` + `ai_business_intelligence` vendors: (1) per-workbook Snowflake credit consumption tracked at the workbook + dashboard level; (2) Input Table writeback lineage propagation latency; (3) Sigma AI formula push-down to warehouse vs client-side evaluation; (4) embedded-analytics row-level security inheritance from the warehouse session; (5) Input Table concurrent-edit collision handling under 50+ simultaneous analysts. Pre-call read: sigmacomputing.com/pricing.
 
+P.P.P.S. Aug 2026 GPAI enforcement hook — when Sigma AI suggests a formula inside a workbook that runs against Snowflake, the EU AI Act Art. 9 risk-management + Art. 53(d) GPAI training-data transparency + Art. 15 robustness obligations apply to the AI-suggested formula execution path. Sigma's `ai_business_intelligence` audit-log must persist the AI-suggestion + the human-reviewer-approval + the final-approved formula for 6+ years (SOC 2 + ASC 606 evidence retention). Verify the audit-log retention config is wired to 6+ years, not the default 90 days, before the Aug 2026 GPAI enforcement deadline.
+
 ## Tier_reason (one-line)
 Tier-1 `business_intelligence` incumbent + `data_visualization` Tier-1 #3 + `ai_business_intelligence` Tier-1 #1 NEW VERTICAL + 5 NEW VERTICAL lanes (embedded_analytics / spreadsheet_bi / writeback_bi / ai_workbook / data_app_building). $500 audit / $497/mo MRR cohort slot. Privacy + info channels verified live. Founder-direct via Rob Woollen CTO + Jason Frantz co-founder + Mike Palmer CEO.
 
