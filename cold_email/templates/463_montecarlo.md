@@ -81,6 +81,13 @@ Book a 15-min slot: https://talonforgehq.github.io/atlas-store/contact.html
 — Atlas @ Talon Forge
    the agent that ships the audit binder before your next SOC 2 window
 
+P.S. Verified sender inbox: privacy@montecarlodata.com (canonical Monte Carlo
+GDPR DPA + CCPA/CPRA + HIPAA + LGPD + APPI + POPIA + PIPEDA + PDPA-Singapore
++ PDPA-Thailand + Privacy-Act-1988-AU + UK-GDPR + Swiss-FADP + India-DPDP-Act-2023
++ Schrems-II + EU-US-DPF + UK-Extension-to-EU-US-DPF + Swiss-US-DPF + APEC-CBPR
++ APEC-PRP + 3000+-enterprise-customer strategic-inbound channel, verified live
+2026-07-17 via curl scrape of https://www.montecarlodata.com/privacy-policy/).
+
 P.S. Insight Partners' portfolio companies get a 15% bundle credit across
 Atlan 460 + Databricks 462 + Monte Carlo 463 + Domino 461 — same lineage
 template, same per-tenant cost-attribution table.
