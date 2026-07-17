@@ -6,7 +6,7 @@
 ## Recipient
 - **To:** privacy@bigeye.com (verified live 2026-07-17 via curl https://www.bigeye.com/privacy HTTP 200)
 - **CC:** hello@bigeye.com (front door)
-- **Founder-direct:** Kyle Kirrage (Co-Founder + CEO) + Egor Gryaznov (Co-Founder + CTO)
+- **Founder-direct:** Kyle Kirwan (Co-Founder + CEO) + Egor Gryaznov (Co-Founder + CTO)
 
 ## Subject
 Agent Trust Hub x Aug 2026 GPAI — 5 audit gaps your Tier-2 challenger position can close
