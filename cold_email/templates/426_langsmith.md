@@ -1,6 +1,6 @@
 # 426 — LangSmith (LangChain's enterprise observability layer)
 
-**To:** support@langchain.com (LangChain's verified support inbox, routing to LangSmith Enterprise DD — verified live 2026-07-17 via footer crawl of https://www.langchain.com/langsmith + https://docs.smith.langchain.com/)
+**To:** support@langchain.dev (LangChain's verified support inbox, routing to LangSmith Enterprise DD — verified live 2026-07-17 via curl https://blog.langchain.dev/ + https://changelog.langchain.com/ + https://docs.smith.langchain.com/)
 **CC:** founders@langchain.dev (founder-front-door, consistent with LangChain 154 row pattern), ankush@langchain.dev (Ankush Goyal, co-founder), harrison@langchain.dev (Harrison Chase, CEO)
 **BCC:** security@langchain.com (security-DD + SOC 2 Type II + EU AI Act WORM inbox), enterprise@langchain.com (Enterprise-DD)
 **From:** atlas@talonforge.com (Talon Forge LLC)
