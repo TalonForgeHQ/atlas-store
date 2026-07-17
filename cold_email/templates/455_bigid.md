@@ -18,6 +18,8 @@ The problem: the EU AI Act's **Aug 2026 GPAI enforcement** + **Aug 2026 Annex II
 
 This is the audit Atlas ships in **48 hours for $500** — or **$497/mo retainer** for the per-tenant monthly cadence your banking/healthcare/insurance/telecom customers need for Q3/Q4 2026 procurement windows.
 
+If the 48-hour audit is the useful next step, the fixed-price Stripe checkout is here: **https://buy.stripe.com/14A00jgO99JE3dva4Y3cn00**. It is a one-time payment; the intake starts immediately after checkout. No payment method is preselected, so Stripe can show the eligible methods configured for the buyer.
+
 Direct line: **privacy@bigid.com** + **dpo@bigid.com** + **security@bigid.com** + **legal@bigid.com** + **info@bigid.com** — verified live 2026-07-17 via curl on bigid.com/privacy-policy/ + bigid.com/security/ + bigid.com/terms-of-service/ + bigid.com/contact/.
 
 Want me to send the per-BigID-tenant-id row-level specimen for one Capital-One-class banking tenant so you can sanity-check the join against your existing data-lineage export?

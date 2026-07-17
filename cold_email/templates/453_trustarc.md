@@ -21,7 +21,9 @@ I noticed TrustArc has shipped the canonical 27-year-old TRUSTe trust-mark (TRUS
 4. **Cross-TrustArc-tenant + per-TrustArc-workspace-id + per-TrustArc-vendor-id + per-banking-tenant + per-healthcare-tenant + per-insurance-tenant + per-retail-tenant + per-TrustArc-tenant-residue-cleanup-procedure + completion-of-deletion timestamp + per-TrustArc-DSAR-WORM-retention-evidence + per-PCI-card-data-no-leakage-evidence + per-LGPD-PII-no-leakage-evidence + per-APEC-CBPR-cross-border-transfer-no-leakage-evidence isolation-evidence** per SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + ISO 42001 A.6.1.4 + Schrems II + India-DPDP-Act-2023 cross-border-transfer + Aug 2026 GPAI enforcement alignment.
 5. **WORM retention + cost-attribution join-table** linking per-TrustArc-tenant-cost + per-TrustArc-workspace-cost + per-TrustArc-DSAR-cost + per-TrustArc-consent-cost + per-TrustArc-cookie-consent-cost + per-TrustArc-vendor-risk-cost + per-TrustArc-data-mapping-cost + per-APEC-CBPR-cross-border-cost + per-banking-tenant-cost + per-healthcare-tenant-cost + per-insurance-tenant-cost + per-retail-tenant-cost + per-monthly-TrustArc-workspace-cost + per-billing-event-cost + per-EU-data-residency-premium-cost + per-India-data-residency-premium-cost per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + GDPR + HIPAA + EU AI Act Annex III 4 + Aug 2026 GPAI enforcement + APEC CBPR + PRP + banking + healthcare + insurance + retail vertical-specific cost-attribution.
 
-I do a 48-hour vendor-DD audit for SOC 2 + ISO 27701 + GDPR + EU AI Act 2026 + APEC CBPR + PRP — $500 flat — or a $497/mo retainer covering unlimited audit-gap evidence packs across your TrustArc Privacy Management Platform + PrivacyCentral + Assessment Manager + Consent Management + DSAR Manager + Vendor Risk Manager + Cookie Consent + Data Mapping + Governance product surface. Booking a 20-min scoping call this week?
+I do a 48-hour vendor-DD audit for SOC 2 + ISO 27701 + GDPR + EU AI Act 2026 + APEC CBPR + PRP — $500 flat — or a $497/mo retainer covering unlimited audit-gap evidence packs across your TrustArc Privacy Management Platform + PrivacyCentral + Assessment Manager + Consent Management + DSAR Manager + Vendor Risk Manager + Cookie Consent + Data Mapping + Governance product surface.
+
+If the 48-hour audit is the useful next step, the fixed-price Stripe checkout is here: **https://buy.stripe.com/14A00jgO99JE3dva4Y3cn00**. It is a one-time payment; the intake starts immediately after checkout. No payment method is preselected, so Stripe can show the eligible methods configured for the buyer.
 
 Best,
 Atlas
@@ -35,4 +37,6 @@ Atlas
 
 ## CTA
 
-$500 / 48h audit or $497/mo retainer — https://talonforgehq.github.io/atlas-store
+$500 / 48h audit — https://buy.stripe.com/14A00jgO99JE3dva4Y3cn00
+
+$497/mo retainer — reply with the target vendor cohort and monthly evidence cadence.
