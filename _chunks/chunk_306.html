@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Looppanel AI Interview Transcription Audit 2026: Consent, Citation Lineage, EU AI Act</title>
+<meta name="description" content="A buyer checklist for auditing Looppanel AI interview transcription, participant consent, PII redaction, cited-source research answers, deletion propagation, tenant isolation, and EU AI Act evidence.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_306.html">
+</head>
+<body>
+<article>
+<header>
+<h1>Looppanel AI Interview Transcription and Research Repository Audit 2026</h1>
+<p class="meta">Long-tail buyer guide · user interviews · AI transcription · research repository search · EU AI Act · $500 audit / $497/mo retainer</p>
+</header>
+
+<section id="why-now">
+<h2>Why AI-assisted interview research needs its own evidence trail</h2>
+<p>Looppanel can turn recorded interviews into transcripts, AI-generated notes, tags, themes, clips, and repository answers. That workflow saves research time, but it also transforms participant speech and personal data into evidence used for product decisions. A procurement reviewer needs to trace every generated claim back to consented source material and verify that deletion, redaction, and tenant boundaries survive the full AI path.</p>
+<p>This checklist targets the long-tail questions buyers search for: <strong>Looppanel AI interview transcription audit</strong>, <strong>UX research repository citation lineage</strong>, <strong>participant consent and PII redaction checklist</strong>, and <strong>EU AI Act qualitative research vendor due diligence</strong>.</p>
+</section>
+
+<section id="buyer-checklist">
+<h2>Seven questions to ask before approving an AI research repository</h2>
+<ol>
+<li><strong>Can every recording be joined to participant consent?</strong> Require <code>participant_id</code>, <code>consent_event_id</code>, <code>research_study_id</code>, <code>recording_id</code>, <code>purpose_id</code>, and <code>customer_tenant_id</code> in one exportable row.</li>
+<li><strong>Is sensitive data removed before model access?</strong> Distinguish capture-time masking, transcription-time redaction, prompt-time filtering, and human overrides. Record the redaction-policy version and exception decision for every segment sent to a model.</li>
+<li><strong>Can every AI note or repository answer cite its source?</strong> Join <code>ai_note_id</code>, <code>theme_id</code>, and <code>repository_answer_id</code> to the exact transcript segment, recording timestamp, model version, prompt version, retrieval query, and cited clip.</li>
+<li><strong>What blocks prompt injection through participant speech?</strong> Interview transcripts and uploaded notes are untrusted content. Require input delimiting, tool restrictions, retrieval filtering, output validation, and human approval under OWASP LLM01 and LLM06.</li>
+<li><strong>Are customers isolated throughout search and synthesis?</strong> Check recordings, transcripts, vector indexes, caches, evaluation datasets, exports, model gateways, and support tooling against SOC 2 CC6.1 and GDPR Art. 28.</li>
+<li><strong>Does deletion propagate everywhere?</strong> A participant deletion must reach the recording, transcript, clip, note, embedding, AI theme, repository answer, evaluation copy, export, and backup-expiry record.</li>
+<li><strong>Who approved a research conclusion?</strong> Link every report export, product recommendation, Jira or Linear write, and stakeholder summary to <code>human_approval_id</code>, purpose, timestamp, and rollback record.</li>
+</ol>
+</section>
+
+<section id="reference-row">
+<h2>The minimum interview-to-insight provenance row</h2>
+<p>A procurement-ready export should contain: <code>participant_id</code>, <code>consent_event_id</code>, <code>research_study_id</code>, <code>recording_id</code>, <code>transcript_segment_id</code>, <code>redaction_policy_version_id</code>, <code>ai_note_id</code>, <code>theme_id</code>, <code>repository_answer_id</code>, <code>model_version_id</code>, <code>prompt_version_id</code>, <code>retrieval_query_id</code>, <code>cited_clip_id</code>, <code>human_approval_id</code>, <code>customer_tenant_id</code>, <code>residency_region_id</code>, <code>deletion_request_id</code>, and <code>audit_log_entry_id</code>.</p>
+<p>This join supports SOC 2 CC7.2 event reconstruction, EU AI Act Art. 12 record keeping, Art. 14 human oversight and Art. 50 transparency, GDPR Arts. 5, 17 and 28, and ISO 42001 evidence evaluation.</p>
+</section>
+
+<section id="failure-modes">
+<h2>Five failure modes buyers should test</h2>
+<ul>
+<li>A participant withdraws consent, but a transcript fragment remains in a vector index or evaluation dataset.</li>
+<li>A health detail, customer name, email address, or confidential roadmap item reaches the model before redaction.</li>
+<li>An adversarial sentence in a transcript changes the AI summary or causes retrieval of another study.</li>
+<li>A repository answer presents a theme without source segments, timestamps, or contrary evidence.</li>
+<li>A generated recommendation reaches a downstream workflow without a named reviewer or approval timestamp.</li>
+</ul>
+</section>
+
+<section id="crosswalk">
+<h2>2026 compliance cross-walk</h2>
+<table>
+<thead><tr><th>Control</th><th>Required evidence</th><th>Framework</th></tr></thead>
+<tbody>
+<tr><td>Consent and recording purpose</td><td>Consent event, study purpose, recording and withdrawal status</td><td>GDPR Arts. 5/6/9; SOC 2 CC6.1</td></tr>
+<tr><td>Transcription and PII redaction</td><td>Segment, policy version, detected field, exception reviewer</td><td>GDPR Art. 25; ISO 42001 6.1.4</td></tr>
+<tr><td>AI insight citation lineage</td><td>Source segment, model, prompt, retrieval query, cited clip</td><td>EU AI Act Arts. 12/14/50; SOC 2 CC7.2</td></tr>
+<tr><td>Adversarial transcript defense</td><td>Injection test, retrieval boundary, output validation</td><td>OWASP LLM01/LLM06; NIST AI RMF</td></tr>
+<tr><td>Deletion and retention</td><td>Object inventory, tombstone, embedding purge, backup expiry</td><td>GDPR Art. 17; EU AI Act Art. 12</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="offer">
+<h2>Turn the checklist into a 48-hour evidence pack</h2>
+<p>Atlas maps one representative Looppanel workflow—from participant consent and interview recording through transcription, AI synthesis, repository search, citation, and human-approved product action—into the provenance row, redaction test, injection test, deletion map, and compliance cross-walk.</p>
+<p><strong>$500 fixed-scope audit:</strong> delivered in 48 hours with prioritized gaps and procurement-ready evidence requests.</p>
+<p><strong>$497/mo evidence-maintenance retainer:</strong> monthly evidence refresh as models, prompts, redaction policies, and integrations change.</p>
+<p><a href="https://talonforgehq.github.io/atlas-store/#contact">Book the Atlas AI evidence audit</a></p>
+</section>
+</article>
+</body>
+</html>
