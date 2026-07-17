@@ -1,0 +1,26 @@
+<!-- chunk_274.html — SEO long-tail: kustomer iq ai copilot audit 2026 -->
+<section id="kustomer-iq-ai-copilot-audit-2026" class="seo-chunk" data-keyword="kustomer iq ai copilot audit 2026" data-vertical="customer_service_ai">
+  <h2>Kustomer IQ AI Copilot Audit 2026 — What AI-Native Customer-Service Ops Operators Need Before EU AI Act Aug 2026</h2>
+  <p>If you operate an AI-native customer-service platform with an embedded copilot (Kustomer IQ, Front AI, Gorgias Automate, Hiver AI, Freshdesk Freddy AI), the May 2025 deadline for the EU AI Act Annex III high-risk classification and the Aug 2026 GPAI enforcement date have both passed into operational reality. This audit walks through the five concrete gaps every AI customer-service copilot operator needs to close before a SOC 2 Type II audit, ISO 42001 certification, or EU AI Act conformity assessment.</p>
+
+  <h3>Gap 1 — Per-conversation provenance join-table</h3>
+  <p>Every copilot turn must be joinable back to: per-conversation-id → per-copilot-action-id → per-LLM-call-id → per-tool-call-id → per-customer-PII-redaction-id. Without this join, you cannot answer the SOC 2 CC7.2 question "show me every LLM decision that touched customer PII in the last 90 days." Without it, EU AI Act Art. 12 logging obligations are unmet, and ISO 42001 9.4 control fails on first inspection.</p>
+
+  <h3>Gap 2 — OWASP LLM Top 10 + MITRE ATLAS attack coverage matrix</h3>
+  <p>Your threat model needs at minimum 15 columns mapping per-OWASP-LLM-Top-10-id (LLM01 prompt injection, LLM02 sensitive disclosure, LLM03 training data poisoning, LLM06 excessive agency, LLM07 system prompt leakage, LLM08 vector and embedding weaknesses) and per-MITRE-ATLAS-id to per-attack-id, per-prompt-injection-id, per-jailbreak-id, per-multi-turn-attack-id, per-multi-modal-attack-id, per-RAG-retrieval-poisoning-id, per-knowledge-base-document-poisoning-id, per-agent-step-poisoning-id, per-tool-call-poisoning-id, per-conversation-history-poisoning-id, per-output-format-poisoning-id. AI customer-service operators that skip this matrix fail EU AI Act Art. 15 on day one.</p>
+
+  <h3>Gap 3 — Defense-in-depth per attack class</h3>
+  <p>For every attack row in Gap 2, you need a corresponding defense row: per-prompt-injection-defense-id, per-jailbreak-defense-id, per-multi-turn-attack-defense-id, per-data-poisoning-defense-id, per-tool-call-poisoning-defense-id, per-output-validation-defense-id, per-prompt-leak-defense-id, per-system-prompt-extraction-defense-id, per-flow-validation-defense-id, per-customer-PII-redaction-defense-id, per-human-supervision-defense-id. Each defense row must be tested quarterly and evidence must be retained for at least the audit retention window (typically 7 years for SOC 2, 10 for ISO 42001).</p>
+
+  <h3>Gap 4 — Cross-tenant isolation evidence</h3>
+  <p>SOC 2 CC6.1 and GDPR Art. 28 both require evidence that tenant A's conversations cannot leak into tenant B's copilot context, embeddings, or vector store. The minimum evidence package: per-tenant-id, per-workspace-id, per-copilot-id, per-tenant-residue-cleanup-procedure, completion-of-deletion timestamp, per-conversation-WORM-retention-evidence, per-customer-PII-no-leakage-evidence, per-cross-border-transfer-sccs-version, per-cross-border-transfer-data-flow-country-chain.</p>
+
+  <h3>Gap 5 — WORM retention + cost attribution</h3>
+  <p>SEC 17a-4 WORM retention applies to financial-services tenants; PCI DSS Req. 10 applies to any tenant processing card data; HIPAA applies to any tenant touching PHI. Your cost-attribution join-table must link per-copilot-call-cost, per-LLM-call-target-cost, per-knowledge-base-storage-cost, per-conversation-WORM-storage-cost, per-workspace-monthly-cost, per-billing-event-cost, per-EU-data-residency-premium-cost, per-cross-border-transfer-sccs-cost. Without this join, you cannot answer the procurement question "what does it cost to run a regulated tenant in EU jurisdiction for 12 months?"</p>
+
+  <h3>What the 48-hour audit delivers</h3>
+  <p>A fixed-scope $500 audit produces a 5-row gap matrix (one row per gap above), a remediation plan with sequencing, and a Trello/Linear-ready ticket breakdown. The $497/mo retainer adds monthly checkpoint + EU AI Act Annex III 4 readiness tracking + Aug 2026 GPAI enforcement monitoring. Reference operators: Kustomer (Brad Birnbaum, $1.6B+ raised, 7000+ customers), Front (Mathilde Collin, $200M+ raised, 8000+ customers), Gorgias (Romain Lapeyre, $100M+ raised, 15000+ customers), Hiver (Niraj Ranjan, $30M+ raised, 3000+ customers).</p>
+
+  <h3>CTA</h3>
+  <p>Book a 15-min audit walkthrough at talonforgehq.com/audit — we run the gap analysis live against your copilot trace and ship the matrix in 48 hours.</p>
+</section>
