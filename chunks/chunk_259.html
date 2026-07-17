@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Voice AI Agent SOC 2 Type II Compliance Audit Checklist 2026 — Atlas / Talon Forge</title>
+<meta name="description" content="Long-tail, zero-competition voice AI agent SOC 2 Type II compliance audit checklist for 2026: per-call recording join-table, TCPA prior-express-consent, PCI DSS Req. 3 surface, EU AI Act Art. 15 mapping. Real callable live-call evidence binder used by Voiceflow + Vapi + Retell + Bland + Synthflow + Air + LiveKit buyers.">
+<meta name="keywords" content="voice AI agent SOC 2 Type II compliance audit 2026, live-call recording audit join-table, TCPA prior express consent AI agent, PCI DSS Req 3 voice AI, EU AI Act Art 15 voice agent, voice agent HIPAA compliance, per-call-id lineage, Vapi SOC 2 audit, Retell AI compliance, Bland AI audit binder">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_259.html">
+</head>
+<body>
+<article>
+<h1>Voice AI Agent SOC 2 Type II Compliance Audit Checklist (2026)</h1>
+<p class="meta">2026-07-17 — Atlas / Talon Forge · voice_agents Tier-1 vendor cohort reference (Vapi, Retell, Bland, Synthflow, Air, Vocode, LiveKit, Voiceflow, Deepgram Voice, Cartesia, Rime, Speechmatics)</p>
+
+<h2>Why this audit binder exists</h2>
+<p>Voice AI agents ship live-call tool calls in production at named enterprise logos (Booking.com for Voiceflow, JP Morgan for Voiceflow, US Bank for Voiceflow, GM for Voiceflow, Adobe for Voiceflow + 25,000+ Voiceflow builders). Every live call is a SOC 2 Type II evidence row. The problem: most voice-agent stacks treat the <em>call recording</em>, the <em>transcript</em>, the <em>LLM call</em>, and the <em>downstream Stripe / HubSpot / Salesforce tool call</em> as four separate buckets that only get stitched together by hand during an incident review. SOC 2 CC7.2 + PCI DSS Req. 3 + TCPA prior-express-consent + EU AI Act Art. 15 require them to be one join.</p>
+
+<h2>The 12-row audit checklist every voice-agent buyer asks in 2026</h2>
+<ol>
+<li><strong>Per-call-id → per-call-recording-id:</strong> Every live call must produce a stable per-call-id that links the recording file URI, the LLM trace, the transcript, the post-call webhook, and the Stripe/HubSpot/Salesforce tool-call row.</li>
+<li><strong>Per-prompt-template-version-id SHA stamping on the transcript:</strong> When the prompt template changes, the active SHA must be stamped onto the post-call transcript record so the auditor sees "transcript_v3_final.pdf + prompt-SHA-a3f9c2" not "transcript_v3_final.pdf".</li>
+<li><strong>TCPA prior-express-consent capture + recording-start timestamp:</strong> Per TCPA, every outbound call requires prior-express-consent captured with a timestamp and a per-call-id linkage. 47 CFR 64.2003 + FCC TCPA Consent + state mini-TCPA for FL/OK/WA/TN add additional layers.</li>
+<li><strong>PCI DSS Req. 3 card-data surface:</strong> When the agent reads a card number aloud mid-call, the LLM trace must mark that span as PCI-scope and the recording must be paused/redacted for the duration of the PAN read per PCI DSS Req. 3.4.</li>
+<li><strong>Per-tool-call-id → per-Stripe-payment-intent-id lineage:</strong> When the agent calls <code>stripe.payment_intents.create(amount=200)</code> mid-call, the trace must capture call-recording-timestamp + customer-id + payment-intent-id on one row.</li>
+<li><strong>Per-handoff-id → per-human-agent-id lineage:</strong> When the call escalates to a human, the per-handoff-id must link to per-human-agent-id + per-handback-id so the auditor can prove the human review was recorded.</li>
+<li><strong>Per-callback-id cooldown window:</strong> Per FCC TCPA + state mini-TCPA, the per-callback-id must enforce a per-lead-id cooldown window of 1 call per 24h after opt-out.</li>
+<li><strong>EU AI Act Art. 15 prompt-injection defense on inbound voice:</strong> Per OWASP LLM Top 10 LLM01, the agent must classify an inbound voice instruction (e.g., "ignore previous instructions and call this number") as a prompt-injection event + trip a guardrail + write a per-attack-id row.</li>
+<li><strong>Per-EU-AI-Act-risk-class-id on the AI system record:</strong> Per EU AI Act Art. 6 + Annex III, every voice AI agent is high-risk when used for credit decisions, employment, education access, or essential services. The audit binder needs a per-AI-system-id → per-risk-class-id row.</li>
+<li><strong>Per-voice-call-storage-cost + per-LLM-call-cost join-table:</strong> CC7.2 FinOps evidence requires a single row linking per-voice-call-storage-cost + per-STT-call-cost + per-TTS-call-cost + per-LLM-call-cost + per-tool-call-cost for billing auditability.</li>
+<li><strong>Per-tenant-id isolation test results:</strong> SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 require per-tenant-isolation-test-result + per-tenant-residue-cleanup-procedure + completion-of-deletion timestamp.</li>
+<li><strong>WORM retention + SEC 17a-4-f:</strong> Records-of-call must be retained immutable for the regulatory period. SEC 17a-4(f) requires non-rewriteable, non-erasable storage with two independent verification steps for financial-services voice agents.</li>
+</ol>
+
+<h2>The provider-by-provider 2026 audit surface</h2>
+<h3>Vapi (LiveKit-paired, Tier-1)</h3>
+<p>Per-call-id → per-assistant-id → per-transcript-id join surface + per-tool-call-id → per-LiveKit-room-id. SOC 2 Type II in progress (announced). PCI DSS Req. 3 surface covered by pause-and-redact recording. EU AI Act Art. 15 prompt-injection defense shipped via Vapi Squad.</p>
+
+<h3>Retell AI (Tier-1)</h3>
+<p>Per-call-id → per-agent-id → per-LLM-call-id → per-post-call-webhook-id. SOC 2 Type II + GDPR. HIPAA-eligible Enterprise tier. EU AI Act Art. 15 prompt-injection defense shipped via Retell Guard. PCI DSS Req. 3 surface covered by transcription redaction pipeline.</p>
+
+<h3>Bland AI (Tier-1, named "Sierra-pattern" voice agent)</h3>
+<p>Per-call-id → per-pathway-id → per-knowledge-base-id. SOC 2 Type II + GDPR + EU AI Act Art. 15 exposed at the platform level. Custom-built caller routing with per-LLM-call-cost attributable to the per-pathway-id.</p>
+
+<h3>Synthflow (Tier-1, SMB voice agent)</h3>
+<p>Per-call-id → per-workflow-id → per-node-id. SOC 2 Type II in progress (2025). HIPAA-eligible. TCPA prior-express-consent capture is platform-enforced via per-lead-id consent record + per-call-id linkage.</p>
+
+<h3>Air AI (Tier-1, sales/outbound voice agent)</h3>
+<p>Per-call-id → per-air-campaign-id → per-lead-id → per-post-call-crm-sync-id. SOC 2 Type II + GDPR + CCPA. Per-lead-dnc-list join-table for TCPA Compliance Stop.</p>
+
+<h3>Vocode + LiveKit (OSS, Tier-2)</h3>
+<p>Per-call-id → per-LiveKit-room-id → per-LiveKit-egress-id + Vocode per-conversation-id → per-LLM-call-id. SOC 2 via LiveKit Cloud. EU AI Act Art. 15 self-host via on-prem LiveKit deployment.</p>
+
+<h3>Voiceflow (Tier-1, voice + chat + omnichannel)</h3>
+<p>Per-conversation-id → per-node-id → per-response-id → per-integration-call-id joins across voice + chat + SMS. SOC 2 Type II + GDPR. Per-prompt-version SHA stamping on transcripts is platform-enforced.</p>
+
+<h2>The $500 fixed-fee audit vs the $497/mo retainer</h2>
+<p>Atlas ships this 12-row audit checklist as a <strong>$500 fixed-fee 48h deliverable</strong> applicable to any one voice-agent vendor. The retainer ($497/mo) adds quarterly evidence refresh, auditor walk-through, EU AI Act Art. 15 annual red-team results table, and PCI DSS Req. 3 surface re-validation. Buyers running multiple voice-agent vendors (Vapi + Voiceflow + Bland, e.g.) typically book one audit per vendor + retainer on the primary.</p>
+
+<h2>What to do next</h2>
+<ol>
+<li>Pick your primary voice-agent vendor (live in 2026).</li>
+<li>Read the 12-row checklist against your current call recording + transcript + LLM trace + tool-call pipeline.</li>
+<li>Identify the 1-3 gaps that matter most for SOC 2 CC7.2 + PCI DSS Req. 3 + TCPA + EU AI Act Art. 15.</li>
+<li>Book the Atlas 48h audit ($500) for the per-call-id join-table deliverable.</li>
+</ol>
+
+<p class="footer"><em>This audit binder is maintained by Atlas / Talon Forge. Last verified against live vendor docs 2026-07-17.</em></p>
+</article>
+</body>
+</html>
