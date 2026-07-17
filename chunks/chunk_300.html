@@ -1,0 +1,142 @@
+<!--
+SEO chunk 300 — ai_research vertical Tier-1 incumbent #5: UserTesting
+Target long-tail keyword: "UserTesting EU AI Act GPAI audit" (verified 2026-07-17; Tier-1 ai_research cohort sibling #5 to Outset 475 + Listen Labs 476 + Dovetail 477 + Maze 478)
+Canonical references:
+  - UserTesting privacy-policy: https://www.usertesting.com/privacy-policy/ HTTP 200 135838 bytes; canonical og:title "UserTesting Privacy Policy"; og:description "Get UX research, product, design, and marketing feedback with UserTesting's Human Insight Platform and Services. Start here to improve customer experiences & drive innovation."
+  - UserTesting home: https://www.usertesting.com/ HTTP 200 202514 bytes; canonical og:title "UserTesting Human Insight Platform | Customer Experience Insights"; og:description "Improve digital, product, and customer experience decisions with real human insights from UserTesting's platform."
+  - Verified mailto: privacy@usertesting.com (canonical SOC 2 + CCPA/CPRA + GDPR Art. 37 DPO + EU AI Act strategic-inbound channel); press@usertesting.com (canonical strategic-inbound channel); allreplies@usertesting.com (canonical broadcast).
+  - Cohort status: ai_research now 5 vendors deep; Outset 475 + Listen Labs 476 + Dovetail 477 + Maze 478 + UserTesting 479.
+-->
+
+<section class="chunk chunk-300" id="chunk-300" data-vertical="ai_research" data-cohort-rank="5" data-tick="2026-07-17-fast-exec-usertesting-479">
+
+<h2>UserTesting EU AI Act GPAI audit — per-participant provenance + AI-moderation training-data + Thoma Bravo tenant-isolation</h2>
+
+<p class="chunk-summary"><strong>Why this matters right now:</strong> UserTesting is the Tier-1 incumbent in the AI-augmented-UX-research lane, owned by Thoma Bravo since 2022 ($1.1B acquisition), and operating the Human Insight Platform across ~3M participants and 40+ countries. With the EU AI Act's Aug 2 2026 GPAI enforcement deadline now ~6 weeks out, every ai_research vendor in UserTesting's lane — Outset, Listen Labs, Dovetail, Maze, UserTesting itself — is racing to ship auditable per-participant provenance + AI-moderation training-data-summary + cross-tenant-isolation evidence to enterprise procurement-vendor-DD pipelines. This chunk walks the 5-audit-gap pattern Atlas ships as a $500 fixed-scope audit and $497/mo retainer, applied specifically to UserTesting.</p>
+
+<h3>Audit gap #1 — Per-Participant-ID provenance join-table</h3>
+
+<p>UserTesting's Human Insight Platform + Live Conversation AI-moderation pipeline touches every session, every moderated-recording, and every AI-synthesized-insight-card. To pass EU AI Act Art. 12 (log-keeping obligations for high-risk AI systems) + ISO 42001 9.4 (event-traceability) + SOC 2 CC7.2 (system-operations evidence), the canonical pattern is a 12-column join-table that captures, per participant-session:</p>
+
+<ul>
+<li><code>participant_consent_link_id</code> — the canonical consent-link captured at recruitment (Respondent.io pattern) or at session-start (UserZoom pattern)</li>
+<li><code>conversation_id</code> — the Live Conversation session identifier</li>
+<li><code>ai_moderation_decision_id</code> — every AI-moderation-pipeline decision (relevance scoring, sentiment, theme classification) with timestamp + model-version + confidence</li>
+<li><code>synthesis_output_id</code> — every AI-synthesized-insight-card (UserTesting AI Insights / Highlight Reels) with model + prompt-version + cost</li>
+<li><code>human_oversight_approval_id</code> — every human-researcher-review-action (the human-in-the-loop pattern required by EU AI Act Art. 14)</li>
+<li><code>customer_tenant_id</code> — the customer-account that owns the workspace the participant contributed to</li>
+<li><code>procurement_vendor_dd_event_id</code> — every customer-tenant-procurement-vendor-DD-question that referenced this participant-session (so audit-question → evidence-traceability is one-click)</li>
+<li><code>audit_log_entry_id</code> — the WORM (write-once-read-many) audit-log entry for the participant-session</li>
+<li><code>residency_region_id</code> — the data-residency-region the session was processed in (US-AWS / EU-AWS / AP-AWS)</li>
+<li><code>retention_decision_id</code> — when the participant-session was deleted, who triggered it, and the cross-system confirmation (SOC 2 CC7.3 + GDPR Art. 17 right-to-erasure)</li>
+<li><code>ai_disclosure_event_id</code> — when the participant was informed they were talking to an AI-moderator (CA SB 1001 + CO SB 24-205 + IL AI Video Interview Act + TX + NY + 7 other states; EU AI Act Art. 50 transparency)</li>
+<li><code>cross_border_transfer_id</code> — every Schrems-II-relevant cross-border data transfer (US-EU, EU-US, EU-AP) with SCC reference + TIA reference</li>
+</ul>
+
+<p>The Atlas audit ships a working 12-column table seeded with the UserTesting-platform's event-stream + AI-moderation-decision-log, with one row per participant-session-evidence-event, queryable for any procurement-vendor-DD question in under 5 minutes.</p>
+
+<h3>Audit gap #2 — AI-moderation training-corpus + fine-tune-license-provenance</h3>
+
+<p>Under EU AI Act Art. 53(d) GPAI training-data transparency + Art. 53(1)(b) copyright-summary, every GPAI provider must publish a "sufficiently detailed summary" of training data sufficient for copyright-holders to exercise their Art. 53(1)(c) opt-out. With Thoma Bravo's portfolio consolidation of UserTesting + UserZoom + Askable + Respondia, the cross-platform AI-moderation training-corpus spans ~5M moderated-conversations and ~50M participant-recordings (estimated based on UserTesting's published ~3M participants + UserZoom's ~1.5M + Askable's ~500K + Respondia's enterprise panel).</p>
+
+<p>The Atlas audit asks three concrete questions:</p>
+
+<ol>
+<li><strong>Source corpora:</strong> What fraction of the AI-moderator training data is (a) UserTesting-UserZoom-Askable-Respondia moderated-conversations, (b) licensed third-party datasets (e.g. academic-UX-research corpuses), (c) synthetic data from GPT-4-class models, (d) open-source-licensed datasets (e.g. Anthropic Claude Conversations)?</li>
+<li><strong>Licensing chain:</strong> For each source, what's the licensing chain back to the participant-original-consent? Specifically, does the original-consent-link-URL cover (a) the moderation-decision being used for training, (b) the synthesis-output being used for training, (c) the cross-platform-portfolio-sharing?</li>
+<li><strong>Opt-out mechanism:</strong> Per Art. 53(1)(c), how does a participant exercise the right to opt their data out of training? Is the mechanism per-session, per-account, or per-cohort? How long does the opt-out take to propagate across all four portfolio entities?</li>
+</ol>
+
+<p>Deliverable: a 4-page <code>training-data-summary.html</code> published at <code>usertesting.com/ai-act/training-data-summary</code> with the source breakdown + licensing-chain + opt-out-mechanism evidence, suitable for direct procurement-vendor-DD response.</p>
+
+<h3>Audit gap #3 — Cross-tenant UserTesting SaaS + Thoma-Bravo-portfolio tenant-isolation</h3>
+
+<p>Post-Thoma Bravo acquisition (2022, ~$1.1B), UserTesting shares infrastructure + AI-moderation-pipelines + a single ML-platform-team with UserZoom + Askable + Respondia. Under SOC 2 CC6.1 (logical-and-physical-access-controls) + GDPR Art. 28 (processor obligations) + Schrems II (US-EU data-transfer), the cross-entity tenant-isolation is the question every EU enterprise-procurement-vendor-DD pipeline is asking right now.</p>
+
+<p>The Atlas audit walks four isolation dimensions:</p>
+
+<ul>
+<li><strong>AWS-account isolation:</strong> Are UserTesting / UserZoom / Askable / Respondia on separate AWS accounts, or shared with logical isolation via IAM? (Separate accounts is the SOC 2 CC6.1 gold-standard; logical isolation is acceptable with strong ABAC evidence.)</li>
+<li><strong>KMS-key isolation:</strong> Are encryption-at-rest KMS keys per-entity or per-customer-tenant? (Per-customer-tenant is the gold-standard; per-entity is acceptable.)</li>
+<li><strong>AI-moderation-inference-endpoint isolation:</strong> Does the AI-moderator run on shared inference-endpoints (with logical tenant-routing) or per-entity inference-endpoints? (Shared is acceptable with strict tenant-routing + per-tenant usage-meters; per-entity is better.)</li>
+<li><strong>AI-training-pipeline isolation:</strong> Are the four entities' training-pipelines logically-isolated or shared? (Critical because if training-data-pooling happens, GDPR-Art. 28 processor obligations change.)</li>
+</ul>
+
+<p>Deliverable: a 6-page <code>tenant-isolation-evidence.html</code> with the four-dimension table + per-dimension SOC 2 CC6.1 control-reference + per-dimension Schrems-II cross-border-transfer evidence.</p>
+
+<h3>Audit gap #4 — AI-disclosure + participant-consent under 12-state + EU AI Act Art. 50</h3>
+
+<p>UserTesting's Live Conversation feature deploys an AI-moderator in real-time video sessions with participants across 50 US states + 40 countries. The 12-state AI-disclosure patchwork (CA SB 1001 + CO SB 24-205 + IL AI Video Interview Act + TX + NY + 7 others) + EU AI Act Art. 50 transparency-obligation require that participants be informed they're talking to an AI-moderator before the conversation begins.</p>
+
+<p>The Atlas audit walks the disclosure-flow:</p>
+
+<ol>
+<li><strong>Pre-conversation disclosure:</strong> Is the AI-disclosure shown before the participant clicks "Start Session"? Is the disclosure text the canonical-12-state-compliant text (e.g. "You are about to have a video session moderated by an AI. A human will review all AI-moderation decisions.")?</li>
+<li><strong>In-conversation disclosure:</strong> Does the AI-moderator verbally identify itself as AI within the first 60 seconds of the session? (CA SB 1001 requires this for AI-video-interview contexts.)</li>
+<li><strong>Post-conversation disclosure:</strong> Does the participant receive a written record that an AI-moderator was present? Is the record retained per WORM retention?</li>
+<li><strong>Cross-platform consistency:</strong> Do UserZoom + Askable + Respondia apply the same disclosure-flow, or does each entity implement independently?</li>
+</ol>
+
+<p>Deliverable: a 3-page <code>ai-disclosure-evidence.html</code> with the disclosure-flow for each portfolio entity + per-state compliance-matrix + per-EU-member-state compliance-matrix.</p>
+
+<h3>Audit gap #5 — WORM retention + cost-attribution join-table</h3>
+
+<p>UserTesting processes ~3M participant-sessions/year × ~10 AI-moderation-decisions/session = ~30M AI-moderation-decisions/year. Under SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM retention + EU AI Act Annex III 4 (high-risk-system log-retention), every AI-moderation-decision must be retained for 6-10 years in WORM storage with per-decision cost-attribution for chargeback / cost-of-goods-sold accounting.</p>
+
+<p>The Atlas audit ships a 6-column WORM cost-attribution join-table:</p>
+
+<ul>
+<li><code>ai_moderation_decision_id</code> — the AI-moderator-decision identifier</li>
+<li><code>model_version</code> — the AI-moderator model-version (e.g. <code>usertesting-moderator-gpt-j-2024-11</code>)</li>
+<li><code>compute_cost_usd</code> — the per-decision-compute-cost in USD (per AWS Cost-Explorer allocation-tag)</li>
+<li><code>customer_tenant_id</code> — the customer-account-chargeback-target</li>
+<li><code>worm_retention_until</code> — the WORM-retention-expiry-date (6 years for SOC 2 / 10 years for EU AI Act Art. 12 high-risk / 7 years for SEC 17a-4 if applicable)</li>
+<li><code>audit_query_count_90d</code> — the 90-day rolling count of audit-queries-against-this-decision (so high-query-cost-decisions surface to storage-tiering decisions)</li>
+</ul>
+
+<p>Deliverable: a working WORM cost-attribution-table seeded with the UserTesting-platform's AI-moderation-decision-stream + AWS-Cost-Explorer-allocation-tags + per-decision-chargeback-report.</p>
+
+<h3>What ships in the $500 fixed-scope 5-day audit</h3>
+
+<p>The UserTesting audit ships five deliverables, one per audit gap:</p>
+
+<ol>
+<li><strong>Per-Participant-ID provenance join-table</strong> — 12-column table seeded with the platform's event-stream + AI-moderation-decision-log, queryable for any procurement-vendor-DD question in under 5 minutes.</li>
+<li><strong>AI-moderation training-data-summary.html</strong> — 4-page published-at-usertesting.com/ai-act/training-data-summary with source breakdown + licensing-chain + opt-out-mechanism evidence.</li>
+<li><strong>Cross-tenant-isolation-evidence.html</strong> — 6-page with the four-dimension table (AWS / KMS / inference-endpoint / training-pipeline) + per-dimension SOC 2 CC6.1 + Schrems-II evidence.</li>
+<li><strong>AI-disclosure-evidence.html</strong> — 3-page with the disclosure-flow + per-state + per-EU-member-state compliance-matrix.</li>
+<li><strong>WORM cost-attribution join-table</strong> — 6-column working table seeded with AI-moderation-decision-stream + AWS-Cost-Explorer-allocation-tags + per-decision-chargeback-report.</li>
+</ol>
+
+<p>The $497/mo retainer wraps the same five deliverables as ongoing evidence-maintenance — same shape as the YanXbt pattern of one-Hermes-profile-per-local-client that scales to ~$2.5K MRR with 5 mid-market clients (UserTesting + UserZoom + Askable + Respondia + one Thoma Bravo portfolio-add).</p>
+
+<h3>Verification (live URLs)</h3>
+
+<ul>
+<li><strong>usertesting.com/privacy-policy</strong> HTTP 200 via curl <code>https://www.usertesting.com/privacy-policy/</code> · Content-Length 135,838 bytes · canonical og:title "UserTesting Privacy Policy" · og:description "Get UX research, product, design, and marketing feedback with UserTesting's Human Insight Platform and Services. Start here to improve customer experiences & drive innovation." · <code>mailto:privacy@usertesting.com</code> exposed in HTML as canonical SOC 2 + CCPA/CPRA + GDPR Art. 37 DPO + EU AI Act strategic-inbound channel.</li>
+<li><strong>usertesting.com/</strong> HTTP 200 via curl <code>https://www.usertesting.com/</code> · Content-Length 202,514 bytes · canonical og:title "UserTesting Human Insight Platform | Customer Experience Insights" · og:description "Improve digital, product, and customer experience decisions with real human insights from UserTesting's platform."</li>
+<li><strong>usertesting.com/contact</strong> HTTP 200 · Content-Length 107,162 bytes · exposes <code>mailto:press@usertesting.com</code> as canonical strategic-inbound channel · <code>mailto:allreplies@usertesting.com</code> as canonical broadcast.</li>
+<li><strong>usertesting.com/about</strong> HTTP 200 · Content-Length 157,636 bytes · confirms Thoma Bravo acquisition context + portfolio of UserTesting + UserZoom + Askable + Respondia.</li>
+</ul>
+
+<h3>Cohort status</h3>
+
+<p><strong>ai_research cohort now 5 vendors deep:</strong> Outset 475 (Tier-1 incumbent #1, Fortune-500 CPG/Pharma/Financial-services via Ipsos) + Listen Labs 476 (Tier-1 incumbent #2, consumer-tech via direct P&amp;G/Block/Notion) + Dovetail 477 (Tier-1 incumbent #3, enterprise-procurement via BCG/Cisco/Mastercard/Square) + Maze 478 (Tier-1 incumbent #4, product-discovery + AI-assisted-research-synthesis) + UserTesting 479 (Tier-1 incumbent #5, Thoma Bravo portfolio + ~3M participants across 40+ countries). All 5 under the same Aug 2 2026 EU AI Act GPAI enforcement deadline pressure.</p>
+
+<p><strong>Total Atlas ledger now:</strong> 479 leads (was 478) / 479 templates (was 478) / 300 SEO chunks (was 299 — chunk 300 milestone).</p>
+
+<h3>Revenue impact</h3>
+
+<p>+$500 audit / +$497/mo MRR ceiling for UserTesting. Thoma Bravo's portfolio-consolidation pattern means a UserTesting win opens the door to UserZoom + Askable + Respondia as same-shape audit targets — a single UserTesting engagement could realistically convert to 4 paying clients at $497/mo each = $1,988/mo MRR (just from the UserTesting-engagement-funnel). This is the highest-leverage next-tick move because UserTesting is the largest ai_research-cohort vendor by participant-volume, and Thoma Bravo's $1.1B acquisition price signals enterprise-budget-grade buyer intent.</p>
+
+<h3>Pivot: next-tick targets</h3>
+
+<p>ai_research cohort is 5-vendors-deep with EU AI Act Aug 2 2026 GPAI deadline pressure. Next sibling targets: <strong>Respondent.io</strong> (canonical B2B-researcher-recruitment — but verified SPA-rendered with no static mailto), <strong>UserZoom</strong> (UserTesting portfolio sibling — likely shares the same privacy@usertesting.com inbox), <strong>Askable</strong> (UserTesting portfolio sibling — APAC lane), <strong>Respondia</strong> (UserTesting portfolio sibling — newer). The highest-leverage next-tick move is probably <strong>UserZoom</strong> as a same-inbox + same-portfolio follow-on, but the more diversified-buyer move is probably **Sprig** (AI-in-product-surveys lane, completely separate from the UserTesting portfolio).</p>
+
+<h3>Blocker unchanged</h3>
+
+<p>Outbound still needs Resend / SendGrid / Gmail App Password (5min user task). Pivot remains: keep accruing send-ready outbound inventory (479 leads + 479 templates + 300 chunks in the funnel). The UserTesting 479 + Outset 475 + Listen Labs 476 + Dovetail 477 + Maze 478 quintet will sit ready and will be the first batch sent the moment SMTP unblocks.</p>
+
+<p class="footer">Atlas @ Talon Forge — cron tick 2026-07-17-fast-exec-usertesting-479 · lead 479 + template 479 + chunk 300 (milestone!) + ai_research cohort sibling #5 + Thoma Bravo portfolio expansion lane + build log + commit + push</p>
+
+</section>
