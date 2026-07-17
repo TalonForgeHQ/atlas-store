@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synthesia AI Avatar Voice Clone Vendor Audit 2026: Per-Render Provenance, Consent Lineage, EU AI Act</title>
+<meta name="description" content="A buyer checklist for auditing Synthesia AI avatar and voice-clone platforms: per-render provenance, voice-clone consent lineage, deepfake misuse defense, cross-tenant isolation, EU AI Act Art. 53, FCC TCPA, BIPA, and procurement-ready evidence.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_304.html">
+</head>
+<body>
+<article>
+<header>
+<h1>Synthesia AI Avatar Voice Clone Vendor Audit 2026</h1>
+<p class="meta">Long-tail buyer guide · AI presenter video · voice clone · deepfake defense · FCC TCPA · BIPA · EU AI Act · $500 audit / $497/mo retainer</p>
+</header>
+
+<section id="why-now">
+<h2>Why synthetic media demands a distinct audit lane</h2>
+<p>Synthesia generates AI-avatar videos at enterprise scale: a presenter speaks a script in 130+ languages, with a cloned voice and a synthetic face. Each render is a new piece of media carrying a voice that resembles a real person, a script that may contain policy text, and a downstream use case (L&D, sales enablement, marketing, financial-services training, healthcare-pharma training). A procurement reviewer therefore needs more than a generic SaaS security page: they need evidence joining voice-clone consent, script authorship, translation provenance, render metadata, and tenant isolation into a single auditable row.</p>
+<p>This checklist targets the long-tail questions buyers search for: <strong>Synthesia AI avatar voice clone vendor audit</strong>, <strong>AI presenter deepfake defense procurement</strong>, <strong>voice clone consent lineage TCPA BIPA</strong>, and <strong>EU AI Act synthetic media vendor due diligence</strong>.</p>
+</section>
+
+<section id="buyer-checklist">
+<h2>Seven questions to ask before approving a synthetic-media vendor</h2>
+<ol>
+<li><strong>Is every voice clone joined to a consent record?</strong> Require <code>voice_clone_id</code>, <code>consent_event_id</code>, <code>consent_method</code> (TCPA prior-express-written-consent / BIPA biometric-release / GDPR Art. 9 explicit-consent / Illinois AI Video Interview Act written-notice), <code>consent_withdrawal_event_id</code>, and <code>tenant_id</code> in one exportable row.</li>
+<li><strong>Is every render joined to script + translation + avatar + voice?</strong> Distinguish per-render <code>render_job_id</code>, <code>avatar_id</code>, <code>voice_clone_id</code>, <code>ai_script_id</code>, <code>ai_translation_id</code>, <code>model_version_id</code>, <code>prompt_version_id</code>, and <code>tenant_id</code> in the same row, with a <code>render_timestamp</code> and <code>residency_region_id</code>.</li>
+<li><strong>Can the platform defend against deepfake + voice-clone-misuse?</strong> Require per-render provenance metadata (C2PA Content Credentials or equivalent), watermark, and a named reviewer for any render above a configurable trust threshold. Tie the defense to OWASP LLM Top 10 LLM01/LLM06 and EU AI Act Art. 14 human oversight.</li>
+<li><strong>Does the AI script inherit disclosure obligations?</strong> If a Synthesia video reaches audiences in California, Colorado, Illinois, Texas, New York, or 7 other states with AI-disclosure statutes, the script and render must carry a <code>ai_disclosure_state_set</code> field plus a per-state notice template.</li>
+<li><strong>Are tenants isolated through the full render path?</strong> Check avatar instances, voice instances, script storage, translation caches, model gateways, render queues, and watermarking keys — not only the primary database — against SOC 2 CC6.1, GDPR Art. 28, and Schrems II.</li>
+<li><strong>Can the vendor honor voice-clone consent withdrawal?</strong> A consent-withdrawal event must propagate to the voice_clone_id (no new renders), to existing renders (clear tombstone + flag), to caches (purge), to evaluation datasets (purge), and to backup-expiry records. Preserve an auditable tombstone without retaining the cloned voice biometric.</li>
+<li><strong>Who approved the render for the intended audience?</strong> Link each published video to <code>human_approval_id</code>, <code>approver_role</code>, <code>intended_audience</code>, <code>intended_jurisdiction</code>, and <code>rollback_record_id</code> for SOC 2 CC7.2, EU AI Act Art. 14, and 12-state AI-disclosure evidence.</li>
+</ol>
+</section>
+
+<section id="reference-row">
+<h2>The minimum provenance row</h2>
+<p>A procurement-ready evidence export should contain at least: <code>render_job_id</code>, <code>avatar_id</code>, <code>voice_clone_id</code>, <code>consent_event_id</code>, <code>consent_method</code>, <code>consent_withdrawal_event_id</code>, <code>ai_script_id</code>, <code>ai_translation_id</code>, <code>model_version_id</code>, <code>prompt_version_id</code>, <code>c2pa_provenance_id</code>, <code>ai_disclosure_state_set</code>, <code>human_approval_id</code>, <code>intended_audience</code>, <code>customer_tenant_id</code>, <code>residency_region_id</code>, and <code>audit_log_entry_id</code>.</p>
+<p>This single join supports SOC 2 CC7.2 event reconstruction, EU AI Act Art. 12 record keeping and Art. 14 human oversight and Art. 50 transparency, GDPR Arts. 5, 9, and 28, FCC TCPA prior-express-written-consent, Illinois BIPA biometric-privacy consent, Illinois AI Video Interview Act written-notice, and 12-state AI-disclosure.</p>
+</section>
+
+<section id="failure-modes">
+<h2>Five failure modes buyers should test</h2>
+<ul>
+<li>A voice clone persists after consent withdrawal, with new renders queued.</li>
+<li>A render to a California or Colorado audience ships without the required AI-presenter disclosure.</li>
+<li>An AI script contains a prompt-injection attempt that alters translation or suppresses compliance text in the translated output.</li>
+<li>A healthcare-tenant render shares a render queue with a financial-services tenant, leaking draft script text across tenant boundaries.</li>
+<li>A deepfake-misuse investigation cannot reconstruct which <code>voice_clone_id</code> generated which <code>render_job_id</code> because the join table is missing.</li>
+</ul>
+</section>
+
+<section id="crosswalk">
+<h2>2026 compliance cross-walk</h2>
+<table>
+<thead><tr><th>Control</th><th>Evidence</th><th>Framework</th></tr></thead>
+<tbody>
+<tr><td>Voice clone consent lineage</td><td>Consent method, withdrawal event, biometric tombstone</td><td>FCC TCPA; BIPA; GDPR Art. 9; Illinois AI Video Interview Act</td></tr>
+<tr><td>Per-render provenance</td><td>Avatar, voice, script, translation, render job, C2PA</td><td>SOC 2 CC7.2; EU AI Act Arts. 12/14/50</td></tr>
+<tr><td>Training and fine-tune data</td><td>Voice corpus source, license, withdrawal status</td><td>EU AI Act Art. 53; ISO 42001 6.1.4</td></tr>
+<tr><td>Adversarial script defense</td><td>Injection test, output validation, human approval gate</td><td>OWASP LLM01/LLM06; NIST AI RMF; EU AI Act Art. 15</td></tr>
+<tr><td>Cross-tenant render isolation</td><td>Avatar instance, voice instance, render queue, KMS key</td><td>SOC 2 CC6.1; GDPR Art. 28; Schrems II</td></tr>
+<tr><td>AI-presenter disclosure</td><td>State-set, notice template, render-time enforcement</td><td>CA SB 1001; CO SB 24-205; IL AI Video Interview Act; TX; NY</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="offer">
+<h2>Turn the checklist into a 48-hour evidence pack</h2>
+<p>Atlas maps one representative Synthesia workflow — from voice-clone consent capture through AI script authoring, translation, render, disclosure enforcement, and human approval — into the provenance row, consent-lineage test, deepfake-misuse test, prompt-injection test, deletion map, and compliance cross-walk.</p>
+<p><strong>$500 fixed-scope audit:</strong> delivered in 48 hours with prioritized gaps and procurement-ready evidence requests.</p>
+<p><strong>$497/mo evidence-maintenance retainer:</strong> monthly evidence refresh as models, voices, scripts, languages, and disclosure statutes evolve.</p>
+<p><a href="https://talonforgehq.github.io/atlas-store/#contact">Book the Atlas AI evidence audit</a></p>
+</section>
+</article>
+</body>
+</html>
