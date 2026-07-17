@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Labelbox Recursion RL-Platform Vendor Audit 2026: Per-Labeler Provenance, Alignerr Consent, EU AI Act GPAI</title>
+<meta name="description" content="A buyer checklist for auditing Labelbox Annotate + Model + Catalog + Recursion RL-platform: per-labeler provenance, Alignerr-network consent, RLHF preference-data poisoning defense, cross-tenant isolation, EU AI Act Art. 53 GPAI documentation, and procurement-ready evidence.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_305.html">
+</head>
+<body>
+<article>
+<header>
+<h1>Labelbox Recursion RL-Platform Vendor Audit 2026</h1>
+<p class="meta">Long-tail buyer guide · RL-platform · data labeling · RLHF · Alignerr · GPAI · $500 audit / $497/mo retainer</p>
+</header>
+
+<section id="why-now">
+<h2>Why AI data-labeling + RL-platform demands a distinct audit lane</h2>
+<p>Labelbox powers the data factory for frontier-model labs and enterprise-specialist-agent buyers: a 2.6M+ Alignerr network produces human-preference annotations, RLHF preference-decisions, eval-benchmark decisions, and Recursion RL-training-steps. Each annotation is a human judgment that downstream RL agents will inherit. A procurement reviewer therefore needs more than a generic SaaS security page: they need evidence joining labeler identity, task design, annotation lineage, preference-decision provenance, and tenant isolation into a single auditable row.</p>
+<p>This checklist targets the long-tail questions buyers search for: <strong>Labelbox vendor audit</strong>, <strong>Alignerr labeler consent provenance</strong>, <strong>RLHF preference-data poisoning defense</strong>, <strong>EU AI Act GPAI training-data documentation</strong>, and <strong>Recursion RL-platform procurement due diligence</strong>.</p>
+</section>
+
+<section id="buyer-checklist">
+<h2>Seven questions to ask before approving an AI data-labeling + RL-platform vendor</h2>
+<ol>
+<li><strong>Is every annotation joined to a labeler identity and consent record?</strong> Require <code>annotation_id</code>, <code>labeler_id</code>, <code>labeler_consent_event_id</code>, <code>labeler_compensation_record_id</code>, <code>labeler_demographic_bucket_id</code> (separate-statistical-purpose), <code>tenant_id</code>, and <code>labeler_withdrawal_event_id</code> in one exportable row.</li>
+<li><strong>Is every RLHF preference-decision joined to its annotation lineage?</strong> Distinguish per-preference <code>preference_decision_id</code>, <code>prompt_id</code>, <code>completion_a_id</code>, <code>completion_b_id</code>, <code>labeler_id</code>, <code>task_id</code>, <code>rubric_version_id</code>, <code>model_version_id</code>, <code>tenant_id</code>, with <code>preference_timestamp</code> and <code>residency_region_id</code>.</li>
+<li><strong>Can the platform defend against labeler-poisoning + preference-data-poisoning?</strong> Require per-labeler statistical-baseline monitoring, per-task disagreement-distribution anomaly detection, golden-task sanity checks, and a named reviewer for any preference-decision that exceeds a configurable trust threshold. Tie the defense to OWASP LLM Top 10 LLM01/LLM06 and EU AI Act Art. 14 human oversight.</li>
+<li><strong>Does the Recursion RL-training-step inherit GPAI documentation obligations?</strong> Each Recursion RL-training-step must carry <code>gpaio_training_data_summary_id</code> linking to the EU AI Act Art. 53(1)(b) copyright-summary + Art. 53(d) training-data-transparency record. The buyer needs to walk from training-step → preference-decisions → annotations → labelers → consent events in one query.</li>
+<li><strong>Are tenants isolated through the full RL-training path?</strong> Check labeler pools, task routing, annotation storage, preference-decision caches, RL-training-run clusters, eval-benchmark isolates, and KMS keys — not only the primary database — against SOC 2 CC6.1, GDPR Art. 28, and Schrems II.</li>
+<li><strong>Can the vendor honor labeler-consent withdrawal?</strong> A consent-withdrawal event must propagate to the labeler_id (no new tasks), to existing annotations (flag + tombstone without retention of the human judgment), to RL-training-datasets (purge from training queue + flag completed models), to eval-benchmarks (purge), and to backup-expiry records. Preserve an auditable tombstone without retaining the personal annotation.</li>
+<li><strong>Who approved the RLHF preference-decision for the intended downstream use?</strong> Link each published preference-decision to <code>human_approval_id</code>, <code>approver_role</code>, <code>downstream_model_id</code>, <code>intended_buyer</code>, <code>intended_jurisdiction</code>, and <code>rollback_record_id</code> for SOC 2 CC7.2, EU AI Act Art. 14, and 12-state AI-disclosure evidence.</li>
+</ol>
+</section>
+
+<section id="reference-row">
+<h2>The minimum provenance row</h2>
+<p>A procurement-ready evidence export should contain at least: <code>annotation_id</code>, <code>labeler_id</code>, <code>labeler_consent_event_id</code>, <code>labeler_compensation_record_id</code>, <code>labeler_demographic_bucket_id</code>, <code>task_id</code>, <code>rubric_version_id</code>, <code>preference_decision_id</code>, <code>rl_training_step_id</code>, <code>eval_benchmark_decision_id</code>, <code>gpaio_training_data_summary_id</code>, <code>human_approval_id</code>, <code>downstream_model_id</code>, <code>customer_tenant_id</code>, <code>residency_region_id</code>, and <code>audit_log_entry_id</code>.</p>
+<p>This single join supports SOC 2 CC7.2 event reconstruction, EU AI Act Art. 12 record keeping and Art. 14 human oversight and Art. 50 transparency and Art. 53 GPAI training-data-summary, GDPR Arts. 5, 9, and 28, Alignerr 1099-classification, EU Pay-Transparency-Directive demographic-disparity-evidence, and 12-state AI-disclosure.</p>
+</section>
+
+<section id="join-table-1">
+<h2>Join-table 1 — per-asset + per-labeler + per-task + per-annotation lineage</h2>
+<p>This is the SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 backbone. Every annotation row joins asset → labeler → task → annotation → tenant → audit-log. The buyer can query "show me all annotations that contributed to model version X for tenant Y" in a single SQL statement. Without this join-table, every downstream evidence request turns into a multi-system reconciliation that doesn't survive an auditor's spot-check.</p>
+<p>Columns: <code>asset_id</code>, <code>asset_source_system</code>, <code>labeler_id</code>, <code>task_id</code>, <code>annotation_id</code>, <code>annotation_type</code> (bbox / polygon / classification / preference / rubric-score / span), <code>annotation_timestamp</code>, <code>rubric_version_id</code>, <code>customer_tenant_id</code>, <code>procurement_vendor_dd_event_id</code>, <code>audit_log_entry_id</code>, <code>residency_region_id</code>, <code>labeler_demographic_bucket_id</code> (separate-statistical-purpose).</p>
+</section>
+
+<section id="join-table-2">
+<h2>Join-table 2 — Alignerr-network labeler-consent + compensation + demographic-disparity</h2>
+<p>This is the EU AI Act Art. 53(d) + ISO 42001 6.1.4 + Alignerr 1099-classification + EU Pay-Transparency-Directive backbone. Without per-labeler consent + compensation + demographic-bucket evidence, the buyer cannot answer a frontier-model-lab procurement reviewer's question: "show me the consent, compensation, and demographic distribution for the labelers whose annotations trained your model." The buyer also needs the demographic-disparity evidence for EU Pay-Transparency-Directive reporting, kept in a separate-statistical-purpose table to avoid mixing it with the primary annotation lineage.</p>
+<p>Columns: <code>labeler_id</code>, <code>labeler_consent_event_id</code>, <code>labeler_consent_method</code> (TCPA prior-express-written-consent / GDPR Art. 9 explicit-consent / Alignerr 1099-independent-contractor-agreement), <code>labeler_consent_withdrawal_event_id</code>, <code>labeler_compensation_record_id</code>, <code>compensation_amount_usd</code>, <code>compensation_currency</code>, <code>labeler_country_code</code>, <code>labeler_demographic_bucket_id</code>, <code>labeler_language_id</code>, <code>labeler_expertise_domain</code>, <code>audit_log_entry_id</code>.</p>
+</section>
+
+<section id="join-table-3">
+<h2>Join-table 3 — RLHF preference-decision + eval-benchmark + Recursion RL-training-step lineage</h2>
+<p>This is the EU AI Act Art. 12 + Art. 53 + Recursion RL-platform-specific backbone. Every preference-decision, every eval-benchmark decision, and every Recursion RL-training-step must trace back to its constituent annotations and labelers. The buyer needs to answer: "for Recursion RL-training-step X, which preference-decisions contributed, which labelers made them, and which downstream model was retrained." Without this trace, the buyer cannot meet Aug 2026 GPAI documentation-readiness.</p>
+<p>Columns: <code>preference_decision_id</code>, <code>prompt_id</code>, <code>completion_a_id</code>, <code>completion_b_id</code>, <code>labeler_id</code>, <code>task_id</code>, <code>rubric_version_id</code>, <code>preference_timestamp</code>, <code>rl_training_step_id</code>, <code>eval_benchmark_decision_id</code>, <code>downstream_model_id</code>, <code>gpaio_training_data_summary_id</code>, <code>human_approval_id</code>, <code>customer_tenant_id</code>, <code>audit_log_entry_id</code>.</p>
+</section>
+
+<section id="join-table-4">
+<h2>Join-table 4 — cross-tenant Annotate + Model + Catalog + Recursion isolation</h2>
+<p>This is the SOC 2 CC6.1 + GDPR Art. 28 + Schrems II backbone. The buyer needs to verify that tenant A's labeler-pool, annotation storage, preference-decision caches, RL-training-run clusters, eval-benchmark isolates, and KMS keys are physically or cryptographically separated from tenant B's. A single shared labeler-pool across financial-services and consumer-tenants is a procurement-disqualifying finding. The evidence must include a per-tenant KMS-key rotation log + a per-tenant labeler-pool membership log + a per-tenant RL-training-run-isolation log.</p>
+<p>Columns: <code>tenant_id</code>, <code>labeler_pool_id</code>, <code>annotation_storage_partition_id</code>, <code>preference_decision_cache_partition_id</code>, <code>rl_training_run_cluster_id</code>, <code>eval_benchmark_isolate_id</code>, <code>kms_key_id</code>, <code>kms_key_rotation_event_id</code>, <code>residency_region_id</code>, <code>audit_log_entry_id</code>.</p>
+</section>
+
+<section id="join-table-5">
+<h2>Join-table 5 — WORM retention + per-decision cost-attribution</h2>
+<p>This is the SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + EU AI Act Annex III 4 backbone. Every annotation, preference-decision, eval-benchmark decision, and Recursion RL-training-step is cost-attributed to the tenant that consumed it, retained WORM-style for the longest applicable regulatory window (SEC 17a-4 for financial-services tenants, EU AI Act Annex III 4 for high-risk AI deployments, HIPAA for healthcare tenants), and queryable by the buyer's procurement team for billing reconciliation + audit-evidence. Without this join-table, every cost reconciliation turns into a multi-system forensic exercise.</p>
+<p>Columns: <code>annotation_id</code>, <code>preference_decision_id</code>, <code>eval_benchmark_decision_id</code>, <code>rl_training_step_id</code>, <code>annotation_cost_usd</code>, <code>preference_decision_cost_usd</code>, <code>eval_benchmark_cost_usd</code>, <code>rl_training_step_cost_usd</code>, <code>customer_tenant_id</code>, <code>worm_retention_until</code>, <code>audit_log_entry_id</code>.</p>
+</section>
+
+<section id="regulatory-frame">
+<h2>Regulatory frame this evidence supports</h2>
+<ul>
+<li><strong>SOC 2 CC7.2</strong> — system operations monitoring + event reconstruction.</li>
+<li><strong>EU AI Act Art. 12</strong> — record-keeping for high-risk AI systems.</li>
+<li><strong>EU AI Act Art. 14</strong> — human oversight of AI systems.</li>
+<li><strong>EU AI Act Art. 50</strong> — transparency obligations for AI systems interacting with natural persons.</li>
+<li><strong>EU AI Act Art. 53</strong> — GPAI training-data-summary + copyright-summary obligations (Aug 2026 enforcement).</li>
+<li><strong>GDPR Art. 5</strong> — purpose limitation + data minimization.</li>
+<li><strong>GDPR Art. 9</strong> — special-category-data explicit-consent.</li>
+<li><strong>GDPR Art. 28</strong> — processor obligations + sub-processor controls.</li>
+<li><strong>ISO 42001 6.1.4 + 9.4</strong> — AI management system + AI system record-keeping.</li>
+<li><strong>Alignerr 1099-classification</strong> — US independent-contractor vs employee classification evidence.</li>
+<li><strong>EU Pay-Transparency-Directive</strong> — demographic-disparity evidence in pay + compensation.</li>
+<li><strong>12-state AI-disclosure</strong> — CA SB 1001, CO SB 24-205, IL AI Video Interview Act, TX, NY, plus 7 others.</li>
+<li><strong>SEC 17a-4 WORM</strong> — financial-services tenant retention.</li>
+<li><strong>EU AI Act Annex III 4</strong> — high-risk AI deployment retention.</li>
+</ul>
+</section>
+
+<section id="pricing">
+<h2>How to engage</h2>
+<p>Atlas runs a <strong>fixed-scope 48-hour AI evidence audit</strong> ($500) that produces the 5 join-tables above as working SQL, signed off against your SOC 2 Type II + GDPR DPA + EU AI Act readiness posture. The deliverable is a procurement-bundle that a frontier-model-lab or enterprise-specialist-agent buyer's CISO + privacy counsel + procurement lead can each read independently and arrive at the same approval decision.</p>
+<p>After the audit, a <strong>$497/mo evidence-maintenance retainer</strong> keeps the join-tables current as Labelbox Annotate + Model + Catalog + Recursion evolves — every new feature ships with the matching join-table column already populated, and the buyer never sees a regression in the audit-evidence surface.</p>
+<p>Reply to info@labelbox.com if you'd like the 2-page audit scoping doc. We can ship a starter pack for one buyer scenario (e.g. financial-services RL-agent training-data lineage) within 48 hours of kickoff.</p>
+</section>
+
+<section id="sibling-cohort">
+<h2>Sibling cohort (so the buyer can compare)</h2>
+<ul>
+<li><strong>Lead 484 Tonic.ai</strong> — synthetic_data_privacy cohort; canonical tabular + free-text de-identification + generator-to-record lineage + membership-inference-attack regression suite.</li>
+<li><strong>Lead 485 Synthesia</strong> — synthetic_media cohort; canonical AI-avatar + voice-clone + render provenance + voice-clone-consent lineage + deepfake defense.</li>
+<li><strong>Lead 486 Labelbox</strong> — ai_data_labeling + ai_training_data cohort; canonical Alignerr-network labeler-consent + RLHF preference-decision + eval-benchmark + Recursion RL-training-step lineage.</li>
+<li><strong>Lead 475 Outset</strong> — ai_research NEW VERTICAL Tier-1; canonical AI-research-division buyer-channel for Ipsos EVR-LON ~$4.5B Fortune-500 CPG + Pharma + Financial-services procurement-vendor-DD.</li>
+<li><strong>Lead 476 Listen Labs + Lead 477 Dovetail + Lead 478 Maze + Lead 479 UserTesting + Lead 480 Sprig + Lead 481 Looppanel + Lead 482 Kraftful + Lead 483 Condens</strong> — ai_research cohort siblings 1-9.</li>
+</ul>
+</section>
+
+<footer>
+<p class="meta">Atlas — Talon Forge LLC — https://talonforgehq.github.io/atlas-store/ — $500 fixed-scope audit · $497/mo retainer · info@labelbox.com strategic-inbound channel verified live 2026-07-17</p>
+</footer>
+</article>
+</body>
+</html>
