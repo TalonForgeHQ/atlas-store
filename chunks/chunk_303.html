@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sprig Session Replay PII Redaction Audit 2026: AI Product Insights, Survey Summaries, EU AI Act</title>
+<meta name="description" content="A buyer checklist for auditing Sprig session-replay PII redaction, in-product survey AI summaries, product-insight provenance, consent, tenant isolation, and EU AI Act evidence before procurement.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_303.html">
+</head>
+<body>
+<article>
+<header>
+<h1>Sprig Session Replay PII Redaction Audit 2026</h1>
+<p class="meta">Long-tail buyer guide · AI product insights · in-product surveys · session replay · EU AI Act · $500 audit / $497/mo retainer</p>
+</header>
+
+<section id="why-now">
+<h2>Why session replay plus AI product insights creates a distinct audit lane</h2>
+<p>Sprig combines in-product surveys, session replay, feedback analysis, and AI-generated product insights. That combination can turn clicks, text inputs, survey answers, account metadata, and replay frames into a recommendation that influences a roadmap. A procurement reviewer therefore needs more than a generic security page: they need evidence joining consent, capture policy, redaction, AI processing, insight generation, human approval, and downstream use.</p>
+<p>This checklist targets the long-tail questions buyers search for: <strong>Sprig session replay PII redaction audit</strong>, <strong>in-product survey AI summary procurement checklist</strong>, <strong>AI product insights evidence</strong>, and <strong>EU AI Act product analytics vendor due diligence</strong>.</p>
+</section>
+
+<section id="buyer-checklist">
+<h2>Seven questions to ask before approving an AI product-research vendor</h2>
+<ol>
+<li><strong>Can every replay be joined to consent and capture policy?</strong> Require <code>participant_id</code>, <code>consent_event_id</code>, <code>session_replay_id</code>, <code>capture_policy_version_id</code>, and <code>tenant_id</code> in one exportable row.</li>
+<li><strong>Is PII redacted before storage and before model access?</strong> Distinguish client-side masking, ingestion-time redaction, storage-time controls, and prompt-time filtering. Record the redaction rule version and exception decision for every frame or event sent to an AI service.</li>
+<li><strong>Can an AI summary cite its source?</strong> Join each <code>ai_summary_id</code> and <code>ai_product_insight_id</code> to the exact survey response, replay timestamp, transcript segment, model version, prompt version, and cited evidence.</li>
+<li><strong>What prevents prompt injection through user feedback?</strong> Treat free-text surveys, DOM text, and replayed inputs as untrusted content. Require input delimiting, tool restrictions, output validation, and a human-approval gate under OWASP LLM01 and LLM06.</li>
+<li><strong>Are tenants isolated through the full AI path?</strong> Check storage, vector indexes, caches, model gateways, evaluation datasets, and support tooling—not only the primary database—against SOC 2 CC6.1 and GDPR Art. 28.</li>
+<li><strong>Can the vendor honor deletion and retention requests?</strong> A participant deletion must propagate to raw replay, extracted text, survey response, embedding, AI summary, evaluation copy, and backup-expiry record. Preserve an auditable tombstone without retaining the deleted personal data.</li>
+<li><strong>Who approved the recommendation?</strong> Link product-roadmap exports, Jira or Linear writes, experiment changes, and customer-facing actions to <code>human_approval_id</code>, purpose, timestamp, and rollback record.</li>
+</ol>
+</section>
+
+<section id="reference-row">
+<h2>The minimum provenance row</h2>
+<p>A procurement-ready evidence export should contain at least: <code>participant_id</code>, <code>consent_event_id</code>, <code>session_replay_id</code>, <code>replay_event_id</code>, <code>redaction_policy_version_id</code>, <code>survey_response_id</code>, <code>ai_summary_id</code>, <code>ai_product_insight_id</code>, <code>model_version_id</code>, <code>prompt_version_id</code>, <code>cited_source_id</code>, <code>human_approval_id</code>, <code>customer_tenant_id</code>, <code>residency_region_id</code>, <code>deletion_request_id</code>, and <code>audit_log_entry_id</code>.</p>
+<p>This single join supports SOC 2 CC7.2 event reconstruction, EU AI Act Art. 12 record keeping and Art. 14 human oversight, GDPR Arts. 5, 17, and 28, ISO 42001 performance evaluation, and enterprise vendor-due-diligence evidence requests.</p>
+</section>
+
+<section id="failure-modes">
+<h2>Five failure modes buyers should test</h2>
+<ul>
+<li>A password, health detail, payment value, or private message appears unmasked in a replay frame.</li>
+<li>A survey response contains adversarial instructions that alter the AI summary or suppress competing evidence.</li>
+<li>An AI insight cites a cohort trend but cannot identify the underlying responses or replay timestamps.</li>
+<li>A deleted participant remains present in embeddings, evaluation datasets, cached summaries, or exports.</li>
+<li>A product recommendation reaches a downstream workflow without a named reviewer, approval timestamp, or rollback path.</li>
+</ul>
+</section>
+
+<section id="crosswalk">
+<h2>2026 compliance cross-walk</h2>
+<table>
+<thead><tr><th>Control</th><th>Evidence</th><th>Framework</th></tr></thead>
+<tbody>
+<tr><td>Replay capture and redaction</td><td>Consent, policy version, masked fields, exceptions</td><td>GDPR Arts. 5/25/28; SOC 2 CC6.1</td></tr>
+<tr><td>AI insight lineage</td><td>Source event, model, prompt, citation, approval</td><td>EU AI Act Arts. 12/14/50; SOC 2 CC7.2</td></tr>
+<tr><td>Training and evaluation data</td><td>Corpus source, license, purpose, deletion status</td><td>EU AI Act Art. 53; ISO 42001 6.1.4</td></tr>
+<tr><td>Adversarial feedback defense</td><td>Injection test, tool boundary, output validation</td><td>OWASP LLM01/LLM06; NIST AI RMF</td></tr>
+<tr><td>Retention and deletion</td><td>Object inventory, tombstone, backup expiry</td><td>GDPR Art. 17; EU AI Act Art. 12</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="offer">
+<h2>Turn the checklist into a 48-hour evidence pack</h2>
+<p>Atlas maps one representative Sprig workflow—from replay capture and survey response through AI product insight and human-approved action—into the provenance row, redaction test, prompt-injection test, deletion map, and compliance cross-walk.</p>
+<p><strong>$500 fixed-scope audit:</strong> delivered in 48 hours with prioritized gaps and procurement-ready evidence requests.</p>
+<p><strong>$497/mo evidence-maintenance retainer:</strong> monthly evidence refresh as models, prompts, capture rules, and integrations change.</p>
+<p><a href="https://talonforgehq.github.io/atlas-store/#contact">Book the Atlas AI evidence audit</a></p>
+</section>
+</article>
+</body>
+</html>
