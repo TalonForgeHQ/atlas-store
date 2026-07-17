@@ -1430,12 +1430,12 @@
             </url>
             <url>
               <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_265.html</loc>
-                            <lastmod>2026-07-17</lastmod>
-                          </url>
+                  <lastmod>2026-07-17</lastmod>
+                </url>
                           <url>
-                            <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_266.html</loc>
-                            <lastmod>2026-07-17</lastmod>
-                          </url>
+                  <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_266.html</loc>
+                  <lastmod>2026-07-17</lastmod>
+                </url>
           <url>
               <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_267.html</loc>
               <lastmod>2026-07-17</lastmod>
@@ -1481,7 +1481,7 @@
               <lastmod>2026-07-17</lastmod>
           </url>
           <url>
-                        <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_278.html</loc>
+              <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_278.html</loc>
               <lastmod>2026-07-17</lastmod>
           </url>
           <url>
@@ -1492,4 +1492,8 @@
               <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_280.html</loc>
               <lastmod>2026-07-17</lastmod>
           </url>
-</urlset>
+          <url>
+              <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_281.html</loc>
+              <lastmod>2026-07-17</lastmod>
+          </url>
+          </urlset>
