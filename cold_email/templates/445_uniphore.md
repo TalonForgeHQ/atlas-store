@@ -6,6 +6,9 @@ Congrats on the $1.5B+ raise + the BT + Vodafone + Reliance Jio deployments.
 I work with conversational-AI-cloud vendors on the SOC 2 + EU AI Act + Indian
 DPDP Act + Saudi PDPL audit gaps that show up the quarter after the unicorn round.
 
+Quick context so this isn't spam: writing to you via info@uniphore.com (your
+public front-door), with cc to privacy@uniphore.com for the GDPR-DPA side.
+
 The 4 questions your Big-4 EU AI Act + Indian DPDP Act + Saudi PDPL assessor
 will ask Uniphore specifically (not generic voice-AI questions):
 
@@ -54,6 +57,11 @@ I do a 24h audit ($500, flat) that produces a 1-page memo answering each
 of these with the specific evidence your assessor will request. Happy to
 send the memo outline + a sample from a Cognigy / Cresta / Cerence
 engagement.
+
+Reply to info@uniphore.com or hit me at the $497/mo retainer CTA below
+if a quarterly audit-gap subscription across the voice_agents cohort is
+a better fit (12 vendor audits per quarter + monthly regulatory feed +
+per-vendor Slack channel).
 
 Want me to send it?
 
