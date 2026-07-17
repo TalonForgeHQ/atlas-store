@@ -1,0 +1,25 @@
+# Template 439 — Cerence Inc. (NASDAQ:CRNC)
+
+**To:** privacy@cerence.com
+**Cc:** ir@cerence.com
+**Subject A:** Cerence audit pack — In-Car Assistant + Cloud Services + Edge SDK provenance join-table SOC 2 + EU AI Act + ISO 26262 intake
+**Subject B:** Atlas AI Audit — Cerence vendor DD for In-Car Assistant + Edge SDK + Cloud Services + UNECE R155/R156
+**Subject C:** Atlas audit-pack intake for Cerence In-Car Assistant + Multi-Modal + OEM Voice Clone + automotive AI Act
+
+Hi Cerence,
+
+I'm reaching out because Cerence's In-Car Assistant + Cloud Services + Edge SDK + Multi-Modal + Voice Clone stack ships a 60+ column per-session-id → per-vehicle-VIN-id → per-on-device-tenant-id provenance join-table that we'd like to audit for one specific shape: per-vehicle-VIN-impersonation-id → per-HVAC-bypass-id → per-climate-bypass-id → per-navigation-bypass-id → per-payment-voice-bypass-id → per-emergency-call-bypass-id → per-PCI-DSS-card-data-voice-capture-id → per-payment-token-voice-exfil-id → per-wake-word-bypass-id → per-driver-attention-defense-id → per-driver-identity-spoofing-id → per-OEM-tenant-impersonation-id defense coverage per OWASP LLM Top 10 + MITRE ATLAS + EU AI Act Art. 15 + UNECE R155/R156 + ISO/SAE 21434.
+
+Five questions to scope it:
+
+1. Does Cerence publish a per-session-id → per-utterance-id → per-intent-id → per-domain-id → per-context-id → per-conversation-turn-id → per-LLM-call-id → per-prompt-template-version-id → per-completion-id → per-token-id → per-knowledge-base-id → per-document-id → per-chunk-id → per-embedding-id → per-RAG-retrieval-id → per-tool-call-id → per-Cerence-tenant-id → per-OEM-tenant-id → per-VIN-id → per-deployment-id → per-billing-event-id → per-call-recording-id → per-call-summary-id → per-call-sentiment-id → per-call-evaluation-id → per-Cerence-org-id → per-vehicle-VIN-id → per-phone-number-id → per-E.164-number-id → per-region-jurisdiction-id → per-HVAC-control-id → per-navigation-control-id → per-media-control-id → per-climate-control-id → per-seat-heater-control-id → per-ambient-light-control-id → per-defrost-control-id → per-call-emergency-id → per-cloud-tenant-id → per-on-device-tenant-id → per-on-device-deployment-id → per-on-device-model-version-id → per-on-device-voice-command-id SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 9.4 + UNECE R155/R156 + ISO 26262 ASIL-B + ISO/SAE 21434 provenance join-table?
+2. Is the per-vehicle-VIN-impersonation-id + per-HVAC-bypass-id + per-climate-bypass-id + per-navigation-bypass-id + per-payment-voice-bypass-id + per-emergency-call-bypass-id + per-PCI-DSS-card-data-voice-capture-id + per-payment-token-voice-exfil-id + per-wake-word-bypass-id + per-custom-wake-word-poisoning-id + per-driver-distraction-id + per-driver-drowsiness-id + per-driver-attention-id + per-driver-identity-spoofing-id + per-OEM-tenant-impersonation-id + per-VIN-spoofing-id automotive + multi-modal + in-cabin attack surface covered in the OWASP LLM Top 10 + MITRE ATLAS + UNECE R155/R156 + ISO/SAE 21434 coverage matrix?
+3. Does Cerence publish a per-PCI-DSS-card-data-voice-redaction-id + per-payment-token-redaction-id + per-PCI-DSS-PAN-tokenization-id + per-HVAC-bypass-detection-id + per-climate-bypass-detection-id + per-navigation-bypass-detection-id + per-wake-word-spoofing-detection-id + per-driver-attention-defense-id + per-driver-identity-defense-id + per-OEM-tenant-isolation-defense-id + per-VIN-isolation-defense-id + per-on-device-tenant-defense-id + per-cloud-tenant-defense-id defense layer for In-Car Assistant + Cloud Services + Edge SDK + Multi-Modal + Voice Clone?
+4. Is the per-Cerence-tenant-id + per-Cerence-org-id + per-automotive-OEM-tenant + per-vehicle-VIN-id + per-on-device-tenant + per-cloud-tenant + per-Cerence-Life-tenant cross-tenant isolation evidence auditable per SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + PCI DSS Req. 1 + UNECE R155/R156 + ISO/SAE 21434 alignment?
+5. Does Cerence publish a per-VIN-voice-cost + per-HVAC-cost + per-climate-cost + per-navigation-cost + per-media-cost + per-defrost-cost + per-seat-heater-cost + per-ambient-light-cost + per-knowledge-base-storage-cost + per-LLM-call-cost + per-TTS-call-cost + per-STT-call-cost + per-Cerence-org-monthly-cost + per-call-recording-storage-cost + per-OEM-fleet-monthly-cost + per-cloud-storage-cost + per-on-device-storage-cost WORM retention + cost-attribution join-table per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + PCI DSS Req. 10 + Aug 2026 GPAI enforcement + UNECE-R155-R156-incident-reporting + QSR-payment-data-PCI-DSS-Req-10 + automotive-fleet-cost-attribution?
+
+Reply with the audit-pack PDF or the SOC 2 + EU AI Act + UNECE R155/R156 + ISO 26262 ASIL-B vendor-DD form and we'll close the loop in a week.
+
+— Atlas
+Atlas AI Audit, Talon Forge LLC
+https://atlas-audit.example.com
