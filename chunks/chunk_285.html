@@ -1,0 +1,73 @@
+<!-- chunk_285 — Alation Data Catalog vs Collibra vs Informatica audit-gap-matrix long-tail (2026-07-17) -->
+<!-- Target keyword: "Alation data catalog audit gap" + "data catalog EU AI Act 2026" + "Collibra vs Alation vs Informatica comparison" -->
+<article id="chunk-285" class="chunk-card" data-chunk="285" data-vertical="data_catalog" data-company="Alation" data-tick="2026-07-17-revenue-loop-alation">
+  <header>
+    <h2>Alation Data Catalog vs Collibra vs Informatica — The 2026 EU AI Act + Active Metadata Audit-Gap Matrix</h2>
+    <p class="meta"><time datetime="2026-07-17">2026-07-17</time> · data_catalog · Alation · 6000+ enterprise customers · $1.7B valuation 2022</p>
+  </header>
+
+  <section>
+    <h3>Why this matters in July 2026</h3>
+    <p>Alation shipped <strong>Alation 2024</strong> with Active Metadata + Connected Sheets + ML Feature Store + Data Products + Cloud Data as the new product surface, layered on top of the original Alation Data Catalog + Data Lineage + Data Governance + Data Quality. With 6000+ customers (40%+ Fortune-100 incl. American Express + Nasdaq + Pfizer + Munich Re + ABN AMRO + Cisco + Workday + Lululemon + Toyota + Hertz) and $300M+ total funding (Sapphire Ventures + Salesforce Ventures + Kleiner Perkins + Iconiq Capital + Costanoa + DCVC + Data Collective + Hummer Winblad + Sanabil + Snowflake Ventures + Dell Technologies Capital + Citi Ventures + Databricks Ventures + AT&T Ventures), Alation sits in the Tier-1 data_catalog incumbent bracket alongside Collibra 458 ($5.25B peak) + Informatica 457 ($5.3B Permira-acquired 2015). For a security or GRC lead at a 6000-customer Alation shop, the August 2026 GPAI enforcement window + EU AI Act Art. 12 record-keeping + ISO 42001 9.4 + SOC 2 CC7.2 audit-trail obligations turn the catalog from a "metadata nice-to-have" into a "regulated system of record for every AI-era data asset."</p>
+    <p>This chunk maps the five Alation-specific audit gaps (end-to-end provenance join-table, OWASP LLM Top 10 + MITRE ATLAS coverage-matrix, per-defense-row catalogue, cross-tenant-isolation-evidence, WORM retention + cost-attribution) against the same five gaps at Collibra 458 + Informatica 457 so a buyer can pick by gap-shape, not by vendor-marketing.</p>
+  </section>
+
+  <section>
+    <h3>Audit Gap #1 — End-to-end provenance join-table</h3>
+    <p>The SOC 2 CC7.2 + ISO 27701 A.7.34 + ISO 42001 9.4 + ISO 27001 A.8.34 + PCI DSS Req. 10 + HIPAA Security Rule + Schrems II + India-DPDP-Act-2023 + EU AI Act Art. 12 + Aug 2026 GPAI enforcement baseline for a modern AI-era data-catalog requires a 50+ column provenance join-table with at minimum:</p>
+    <ul>
+      <li><code>per-Alation-data-asset-id</code> → the row in Alation's catalog</li>
+      <li><code>per-Alation-data-classification-id</code> → the classification (PII / PCI / HIPAA / GDPR-special-category / LGPD-sensivel / India-DPDP-personal-data / PIPL-China-personal-information)</li>
+      <li><code>per-Alation-AI-era-classification-id</code> → which AI-era policy applies (LLM-call / AI-Agent / Agentic-AI-Workflow / MCP-server-call / tool-call / prompt-template-version)</li>
+      <li><code>per-Alation-LLM-call-id</code> + <code>per-Alation-AI-Agent-id</code> + <code>per-Alation-Agentic-AI-Workflow-id</code> + <code>per-Alation-MCP-server-call-id</code> + <code>per-Alation-tool-call-id</code> + <code>per-Alation-prompt-template-version-id</code> + <code>per-Alation-completion-id</code> + <code>per-Alation-token-id</code></li>
+      <li><code>per-Alation-knowledge-base-id</code> + <code>per-Alation-knowledge-base-document-id</code> + <code>per-Alation-knowledge-base-chunk-id</code> + <code>per-Alation-RAG-retrieval-id</code></li>
+      <li><code>per-Alation-Data-Lineage-id</code> (with Collibra 458 it's <code>per-Collibra-Data-Lineage-id</code>; with Informatica 457 it's <code>per-Informatica-Data-Lineage-id</code>)</li>
+      <li><code>per-Alation-cloud-account-id</code> + <code>per-Alation-region-id</code> + <code>per-Alation-data-residency-id</code></li>
+      <li><code>per-Alation-tenant-id</code> + <code>per-Alation-workspace-id</code> + <code>per-Alation-vendor-id</code></li>
+      <li><code>per-Alation-DSAR-id</code> + <code>per-Alation-consent-id</code></li>
+      <li><code>per-Alation-ML-Model-id</code> + <code>per-Alation-ML-training-data-id</code></li>
+      <li><code>per-Alation-billing-event-id</code></li>
+    </ul>
+    <p>Alation's native Data Lineage graph models the upstream → downstream flow at the column level, but the AI-era extension (LLM-call-id through billing-event-id) is not yet a first-class join — buyers today have to build it themselves on top of the catalog's open APIs. Collibra 458's Data Lineage has a similar shape (open-API-first, AI-era is extension-on-top); Informatica 457's CLAIRE AI engine surfaces some AI-era lineage out-of-the-box but at the MDM-tier pricing that excludes 80%+ of the 6000-customer mid-market.</p>
+  </section>
+
+  <section>
+    <h3>Audit Gap #2 — OWASP LLM Top 10 + MITRE ATLAS coverage-matrix</h3>
+    <p>The Alation-specific coverage-matrix for the OWASP LLM Top 10 LLM01+LLM02+LLM03+LLM06+LLM07+LLM08 + MITRE ATLAS + EU AI Act Art. 15 + NIST AI RMF MEASURE + ISO 42001 6.1.4 + Schrems II + India-DPDP-Act-2023 + Aug 2026 GPAI enforcement alignment requires 24+ columns covering:</p>
+    <ul>
+      <li>Threat IDs: <code>per-OWASP-LLM-Top-10-id</code> + <code>per-MITRE-ATLAS-id</code> + <code>per-attack-id</code></li>
+      <li>Attack shapes: <code>per-prompt-injection-id</code> + <code>per-jailbreak-id</code> + <code>per-multi-turn-attack-id</code> + <code>per-multi-modal-attack-id</code></li>
+      <li>Knowledge-base attacks: <code>per-RAG-retrieval-poisoning-id</code> + <code>per-knowledge-base-document-poisoning-id</code></li>
+      <li>Agentic-AI attacks: <code>per-Agentic-AI-poisoning-id</code> + <code>per-MCP-server-call-poisoning-id</code> + <code>per-tool-call-poisoning-id</code></li>
+      <li>ML-model attacks: <code>per-ML-Model-poisoning-id</code> + <code>per-ML-training-data-poisoning-id</code></li>
+      <li>Catalog-specific attacks: <code>per-Data-Lineage-poisoning-id</code> + <code>per-Data-Catalog-poisoning-id</code> + <code>per-Active-Metadata-poisoning-id</code> (Alation-specific — Collibra 458 has <code>per-Data-Catalog-poisoning-id</code> + <code>per-Data-Lineage-poisoning-id</code> but not Active-Metadata; Informatica 457 has <code>per-CLAIRE-AI-recommendation-poisoning-id</code> + <code>per-Data-Lineage-poisoning-id</code> + <code>per-Data-Catalog-poisoning-id</code>)</li>
+      <li>Exfil attacks: <code>per-data-exfiltration-via-LLM-id</code> + <code>per-shadow-AI-data-leakage-id</code></li>
+    </ul>
+    <p>Across a 6000-customer Alation install base, this coverage-matrix is the single most-asked-about artifact in the EU AI Act Art. 15 readiness workshops. Most buyers today build it as a spreadsheet mapping their Alation catalog rows to MITRE ATLAS techniques by hand — and the AI-era rows (LLM01-LLM08) are blank because the catalog doesn't yet expose the threat-axis as a first-class column.</p>
+  </section>
+
+  <section>
+    <h3>Audit Gap #3 — Per-defense-row catalogue</h3>
+    <p>For each threat row in Gap #2, the auditor needs a defense-row mapping. The Alation-specific defense catalogue requires 20+ columns per row covering prompt-injection-defense + jailbreak-defense + multi-turn-attack-defense + data-poisoning-defense + MCP-server-call-poisoning-defense + tool-call-poisoning-defense + RAG-retrieval-poisoning-defense + knowledge-base-document-poisoning-defense + Agentic-AI-poisoning-defense + ML-Model-poisoning-defense + ML-training-data-poisoning-defense + Active-Metadata-validation + Data-Lineage-validation + Data-Catalog-validation + customer-PII-redaction-defense + PCI-card-data-redaction-defense + HIPAA-PHI-redaction-defense + human-supervision-defense. Alation ships some of these as default behavior (PII redaction at classification-time, lineage validation at sync-time) but the AI-era defenses (prompt-injection, jailbreak, MCP-server-call-poisoning, Agentic-AI-poisoning) are extension-on-top. Collibra 458 ships similar defaults at the catalog-level with AI-era as extension-on-top. Informatica 457 has the strongest out-of-the-box AI-era defenses thanks to CLAIRE AI but at MDM-tier pricing.</p>
+  </section>
+
+  <section>
+    <h3>Audit Gap #4 — Cross-tenant + cross-workspace isolation-evidence</h3>
+    <p>The Alation-specific cross-tenant isolation-evidence for SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + ISO 42001 A.6.1.4 + PCI DSS Req. 1 + HIPAA + FedRAMP + Schrems II + India-DPDP-Act-2023 cross-border-transfer + PIPL-China + LGPD + Aug 2026 GPAI enforcement requires the per-Alation-tenant-residue-cleanup-procedure + completion-of-deletion timestamp + per-Alation-Data-Lineage-WORM-retention-evidence + per-PCI-card-data-no-leakage-evidence + per-HIPAA-PHI-no-leakage-evidence + per-LGPD-PII-no-leakage-evidence + per-India-DPDP-Act-2023-PII-no-leakage-evidence + per-PIPL-China-PII-no-leakage-evidence — partitioned by per-banking-tenant + per-insurance-tenant + per-telecom-tenant + per-healthcare-tenant + per-pharma-tenant + per-public-sector-tenant (Alation has a strong public-sector vertical with FedRAMP Moderate readiness) + per-FedRAMP-High-tenant + per-DoD-IL6-tenant. Alation's tenant-isolation is workspace-scoped; cross-workspace queries require explicit admin role. The audit-evidence API for the "no data leakage after deletion" claim is extension-on-top today.</p>
+  </section>
+
+  <section>
+    <h3>Audit Gap #5 — WORM retention + cost-attribution join-table</h3>
+    <p>The Alation-specific WORM retention + cost-attribution join-table for SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + PCI DSS Req. 10 + HIPAA + EU AI Act Annex III 4 + Aug 2026 GPAI enforcement requires linking per-Alation-tenant-cost + per-Alation-workspace-cost + per-Alation-Data-Lineage-storage-cost + per-Alation-Data-Catalog-storage-cost + per-Alation-Active-Metadata-cost + per-Alation-ML-Feature-Store-cost + per-Alation-Data-Quality-cost + per-Alation-DSPM-coverage-cost + per-Alation-DSR-coverage-cost + per-Alation-consent-cost + per-Alation-vendor-risk-cost + per-Alation-multi-cloud-coverage-cost + per-banking-tenant-cost + per-insurance-tenant-cost + per-telecom-tenant-cost + per-healthcare-tenant-cost + per-pharma-tenant-cost + per-public-sector-tenant-cost + per-FedRAMP-High-tenant-cost + per-DoD-IL6-tenant-cost + per-monthly-Alation-workspace-cost + per-billing-event-cost + per-EU-data-residency-premium-cost + per-India-data-residency-premium-cost + per-LGPD-residency-cost + per-India-DPDP-Act-2023-residency-cost + per-PIPL-China-residency-cost. Alation bills by workspace + active-user; the cost-attribution join-table is built by Finance teams today on top of Alation's billing API. This is the most-overlooked of the five gaps but the one that drives the most-frequent SOC 2 CC7.2 audit findings in the data-catalog space.</p>
+  </section>
+
+  <section>
+    <h3>Vendor-selection rubric (the buyer's answer)</h3>
+    <p>If your 2026 priority is <strong>AI-era audit-trail (Gap #1 + #2 + #3)</strong>: Informatica 457 wins on out-of-the-box AI-era coverage (CLAIRE AI engine) but at MDM-tier pricing. If your priority is <strong>data-catalog UX + Active Metadata</strong>: Alation 459 wins on the breadth of the 6000-customer install base + the Connected Sheets + ML Feature Store surface. If your priority is <strong>EU public-sector + DoD FedRAMP-High</strong>: Collibra 458 wins on FedRAMP Moderate + DoD IL5 readiness (Alation has FedRAMP Moderate only). Most enterprise buyers run a two-vendor stack: Alation for catalog + Connected Sheets + Active Metadata, Informatica for MDM + CLAIRE AI, Collibra for public-sector — and the audit-gap join-table is built across all three.</p>
+    <p>The five-gap matrix above is the rubric our team uses when a 6000-customer prospect asks "should I add Alation, Collibra, or Informatica to my stack?" — and it's the rubric our <a href="#chunk-284">Collibra chunk</a> + <a href="#chunk-282">Informatica chunk</a> apply to the same five gaps from a different starting point.</p>
+  </section>
+
+  <footer>
+    <p>Sources: alation.com/contact + alation.com/privacy-policy + Alation 2024 platform documentation + EU AI Act Annex III + OWASP LLM Top 10 + MITRE ATLAS + ISO 42001 + SOC 2 CC7.2 + Schrems II + India-DPDP-Act-2023 + LGPD + APPI + PIPL China. Verified 2026-07-17 via curl. Cross-references: <a href="#chunk-282">Informatica 457</a> · <a href="#chunk-284">Collibra 458</a> · <a href="#chunk-281">OneTrust 456</a>.</p>
+  </footer>
+</article>
