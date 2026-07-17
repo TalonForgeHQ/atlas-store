@@ -106,7 +106,8 @@ CCPA/CPRA + HIPAA + LGPD + APPI + POPIA + PIPEDA + PDPA-Singapore + PDPA-Thailan
 + Privacy-Act-1988-AU + UK-GDPR + Swiss-FADP + India-DPDP-Act-2023 + Schrems-II +
 EU-US-DPF + UK-Extension-to-EU-US-DPF + Swiss-US-DPF + APEC-CBPR + APEC-PRP +
 700+-enterprise-customer strategic-inbound channel, verified live 2026-07-17 via
-curl scrape of https://arize.com/).
+curl scrape of https://arize.com/privacy-policy HTTP 200 + 217KB exposing
+mailto:privacy@arize.com + privacy@arize.com literal (homepage https://arize.com/ also HTTP 200 but does not expose the inbox)).
 
 P.S. Adams Street Partners' portfolio companies get a 15% bundle credit across
 Arize 468 + Monte Carlo 463 + Datadog 193 + Atlan 460 + Soda 467 — same lineage
