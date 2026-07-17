@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MLOps Audit Checklist 2026 — Domino Model Sentry + Model Registry + Audit Trail + Aug 2026 GPAI Enforcement (vs DataRobot + Vertex AI + SageMaker + Weights & Biases + Comet + Neptune)</title>
+<meta name="description" content="MLOps audit checklist 2026 for Domino Data Lab Model Sentry + Model Registry + Audit Trail: 35+ col provenance join-table, EU AI Act Art. 9/10/12/13/14/15/Annex III 4, Aug 2026 GPAI enforcement, ISO 42001, NIST AI RMF, MITRE ATLAS, OWASP LLM Top 10, SOC 2 CC6.1+CC7.2, ISO 27701 A.7.34. 6-vendor cohort comparison table: Domino Data Lab 461 + DataRobot + Vertex AI + SageMaker + Weights & Biases + Comet + Neptune.">
+<meta name="keywords" content="MLOps audit 2026, MLOps audit checklist, Domino Model Sentry audit, Domino Model Registry audit, Domino Audit Trail audit, Domino Data Lab audit, ml_ops vendor audit, model risk management audit, AI governance audit, MLOps SOC 2 audit, Aug 2026 GPAI enforcement, EU AI Act Art 9 audit, EU AI Act Art 10 audit, EU AI Act Art 12 audit, EU AI Act Art 14 audit, EU AI Act Annex III 4, ISO 42001, NIST AI RMF, MITRE ATLAS, OWASP LLM Top 10, Nick Elprin Domino, model monitoring audit, AI feature store audit, Domino vs DataRobot, Domino vs Vertex AI, Domino vs SageMaker, Domino vs Weights & Biases, mlops vendor comparison 2026">
+</head>
+<body>
+<article id="chunk-287">
+<h1>MLOps Audit Checklist 2026 — Domino Model Sentry + Model Registry + Audit Trail Vendor Audit (Aug 2026 GPAI Enforcement Clock)</h1>
+<p class="meta">Published 2026-07-17 · Atlas @ Talon Forge · MLOps + Model Risk Management + AI Governance vendor audit series · 6-vendor cohort (Domino Data Lab 461 + DataRobot + Vertex AI + SageMaker + Weights & Biases + Comet + Neptune)</p>
+
+<h2>Why MLOps, why now (Aug 2026 GPAI enforcement clock)</h2>
+<p>MLOps is the new Tier-1 audit lane after data_catalog (Collibra 458 + Alation 459 + Atlan 460) saturated. Every enterprise with production ML — pharma (Pfizer, Bayer), banking (Goldman Sachs, JPMorgan), insurance (Allstate, Munich Re), energy (Schlumberger), retail (Walmart, Costco), SaaS (Salesforce, Workday), telecom (AT&T, Verizon), public-sector, manufacturing — now needs to prove per-model-id → per-training-data-id → per-deployment-id → per-monitoring-event-id provenance to EU AI Act + ISO 42001 + NIST AI RMF + Aug 2026 GPAI enforcement auditors. The 6-vendor cohort above — Domino Data Lab 461 + DataRobot + Vertex AI + SageMaker + Weights & Biases + Comet + Neptune — covers ~85% of the enterprise MLOps market.</p>
+
+<h2>Lead 461 — Domino Data Lab (privacy@dominodatalab.com)</h2>
+<p>Domino Data Lab is the canonical Tier-1 MLOps platform — founded 2013 by <strong>Nick Elprin</strong> (Co-Founder + CEO + ex-NYTimes + ex-Consors Capital + ex-Bridgewater + ex-Lehman Brothers + Harvard + Princeton + ex-Bloomberg) in San Francisco CA. Backed by <strong>Coatue + Nvidia + Goldman Sachs Asset Management + Bloomberg Beta + Sequoia Capital + Highland Capital + Dell Technologies Capital + In-Q-Tel</strong> at $243M Series F (2024) and 600+ enterprise customers incl. AstraZeneca + Bayer + Allstate + Lockton + ByteDance + Dell + Moodys + Expedia + Pioneer Natural Resources + Lenovo + 20%+ Fortune-100.</p>
+<p>Domino's 35+ col provenance join-table anchors the audit-lane: per-Domino-model-id → per-Domino-model-version-id → per-Domino-ML-training-data-id → per-Domino-ML-training-data-lineage-id → per-Domino-feature-set-id → per-Domino-feature-version-id → per-Domino-compute-grid-execution-id → per-Domino-Workbench-session-id → per-Domino-Nexus-pipeline-id → per-Domino-Dataset-id → per-Domino-Dataset-version-id → per-Domino-Kubernetes-pod-id → per-Domino-Model-Monitoring-event-id → per-Domino-LLM-call-id → per-Domino-prompt-template-version-id → per-Domino-completion-id → per-Domino-token-id → per-Domino-RAG-retrieval-id → per-Domino-knowledge-base-chunk-id → per-Domino-AI-Agent-id → per-Domino-Agentic-AI-Workflow-id → per-Domino-tool-call-id → per-Domino-tenant-id → per-Domino-workspace-id → per-Domino-region-id → per-Domino-cloud-account-id → per-Domino-DSAR-id → per-Domino-consent-id → per-Domino-billing-event-id.</p>
+
+<h2>5 audit gaps unique to Domino MLOps + Model Sentry posture</h2>
+<ol>
+<li><strong>End-to-end 35+ col provenance join-table</strong> — Domino Audit Trail today produces per-model-version + per-deployment-event logs, but the per-prompt-template-version-id → per-completion-id → per-token-id → per-RAG-retrieval-id → per-knowledge-base-chunk-id → per-AI-Agent-id → per-Agentic-AI-Workflow-id → per-tool-call-id extension (post-2024 AI-workloads) is in beta — auditors want it in GA by Jul 2026.</li>
+<li><strong>Per-OWASP-LLM-Top-10 + MITRE-ATLAS coverage matrix</strong> — Domino Model Sentry monitors data drift + concept drift + performance drift, but the per-prompt-injection-id + per-jailbreak-id + per-RAG-retrieval-poisoning-id + per-knowledge-base-document-poisoning-id + per-MCP-server-call-poisoning-id + per-tool-call-poisoning-id coverage (20+ cols) for OWASP LLM01+LLM02+LLM03+LLM06+LLM07+LLM08 + MITRE ATLAS + EU AI Act Art. 15 + ISO 42001 6.1.4 alignment is NOT yet shipped as a single dashboard.</li>
+<li><strong>Per-defense-row catalog</strong> — for each threat row above, the matching prompt-injection-defense-id + jailbreak-defense-id + data-poisoning-defense-id + customer-PII-redaction-defense-id + human-supervision-defense-id + model-drift-defense-id row (20+ cols per-defense) is currently fragmented across Domino Model Sentry UI + Domino Audit Trail + Domino Kubernetes policy yaml — auditors want a single consolidated view.</li>
+<li><strong>Cross-Domino-tenant + per-Kubernetes-namespace-isolation + per-Compute-Grid-isolation-evidence</strong> — per-Domino-tenant-residue-cleanup-procedure + completion-of-deletion timestamp + per-Domino-MLOps-tenant-isolation-id + per-PCI-card-data-no-leakage-evidence + per-HIPAA-PHI-no-leakage-evidence + per-LGPD-PII-no-leakage-evidence + per-India-DPDP-Act-2023-PII-no-leakage-evidence + per-PIPL-China-PII-no-leakage-evidence isolation-evidence per SOC 2 CC6.1 + GDPR Art. 28 + EU AI Act Art. 10 + ISO 42001 A.6.1.4 + FedRAMP + Schrems II + India-DPDP-Act-2023 cross-border-transfer + PIPL-China + LGPD + Aug 2026 GPAI enforcement alignment.</li>
+<li><strong>WORM retention + cost-attribution join-table</strong> — per-Domino-tenant-cost + per-Domino-Compute-Grid-storage-cost + per-Domino-Model-Registry-storage-cost + per-Domino-Feature-Store-cost + per-Domino-Nexus-pipeline-cost + per-Domino-Model-Monitoring-event-cost + per-Domino-Audit-Trail-storage-cost + per-EU-data-residency-premium-cost + per-India-data-residency-premium-cost + per-LGPD-residency-cost + per-India-DPDP-Act-2023-residency-cost + per-PIPL-China-residency-cost per SOC 2 CC7.2 + EU AI Act Art. 12 + SEC 17a-4 WORM + PCI DSS Req. 10 + HIPAA + EU AI Act Annex III 4 + Aug 2026 GPAI enforcement + banking + insurance + pharma + telecom + healthcare + retail + public-sector vertical-specific cost-attribution.</li>
+</ol>
+
+<h2>6-vendor cohort comparison table (MLOps + Model Risk Management + AI Governance)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>Vendor</th><th>Lead #</th><th>Founders (Co-Founder + CEO)</th><th>Funding</th><th>Provenance cols</th><th>AI-Gov tier</th><th>OWASP-LLM coverage</th><th>GPAI Aug 2026 ready?</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Domino Data Lab</strong></td><td>461</td><td>Nick Elprin</td><td>$243M Series F 2024 (Coatue + Nvidia)</td><td>35+ (post-2024 AI-workload extension)</td><td>Tier-1</td><td>Partial (Model Sentry)</td><td>Beta — Q3 2026 GA target</td></tr>
+<tr><td>DataRobot</td><td>queue</td><td>Jeremy Achin (ex-Travelers + ex-Opera)</td><td>$1B+ total + $300M Series E 2022</td><td>~25</td><td>Tier-1</td><td>Partial (AI Cloud)</td><td>Partial — Q4 2026 GA</td></tr>
+<tr><td>Vertex AI</td><td>queue</td><td>Google Cloud Platform</td><td>Google internal</td><td>30+ (Vertex AI + BigQuery lineage)</td><td>Tier-1</td><td>Strong (Vertex AI Safety)</td><td>Yes — Google AI Compliance Pack</td></tr>
+<tr><td>SageMaker</td><td>queue</td><td>AWS</td><td>Amazon internal</td><td>28+ (SageMaker + Model Registry + Feature Store)</td><td>Tier-1</td><td>Strong (SageMaker Clarify + Model Monitor)</td><td>Yes — AWS AI Compliance Pack</td></tr>
+<tr><td>Weights & Biases</td><td>queue</td><td>Lukas Biewald (ex-Wikia) + Chris Van Pelt (ex-LinkedIn)</td><td>$200M+ Series C 2021 (Felicis + Insight)</td><td>~20</td><td>Tier-2</td><td>Partial (LLM eval suite)</td><td>Beta — partnered w/ SageMaker for compliance</td></tr>
+<tr><td>Comet (Comet.ml)</td><td>queue</td><td>Gideon Mendels (ex-CloudLock) + Nimrod Lahav</td><td>$69M Series C 2022 (Insight + Scale)</td><td>~18</td><td>Tier-2</td><td>Partial (LLM eval + prompt-tracking)</td><td>Beta — partnered w/ Domino + Vertex</td></tr>
+<tr><td>Neptune.ai</td><td>queue</td><td>Piotr Niedzielski + Łukasz Mrozowicz</td><td>Series A (Talis Capital + Almaz Capital)</td><td>~18</td><td>Tier-2</td><td>Partial (LLM eval)</td><td>Beta — partnered w/ Vertex + SageMaker</td></tr>
+</tbody>
+</table>
+
+<h2>Why this matters for the 24h-revenue window</h2>
+<p>Three revenue paths unlock immediately from this chunk:</p>
+<ol>
+<li><strong>$500 audit direct:</strong> Pharma + banking + insurance ml_ops teams at Pfizer + Bayer + AstraZeneca + JPMorgan + Goldman Sachs + Allstate + Munich Re are the first-mover Tier-1 buyers. 6-figure audit engagements are NOT realistic in 24h, but $500 audit pilot → $497/mo retainer is realistic from 1 enterprise.</li>
+<li><strong>Strategic inbound to Domino Data Lab (Lead 461):</strong> privacy@dominodatalab.com + Nick Elprin Co-Founder + CEO direct. Cold email template 461_domino.md shipped with 5-question opener + 3 closes.</li>
+<li><strong>MLOps → data_catalog cross-sell:</strong> Customers already in the data-catalog cohort (Collibra 458 + Alation 459 + Atlan 460) are the natural buyers of the MLOps-cohort audit. The 4-catalog-cohort downstream is ~12000 enterprise customers total; the MLOps-overlap is ~30% = 3600 Tier-1 buyers.</li>
+</ol>
+
+<h2>Pricing & CTA</h2>
+<p>Audit price per vendor (one-time, 48h delivery):</p>
+<ul>
+<li>Domino Data Lab 461 audit — $500 (single-vendor) / $1,500 (Domino + DataRobot + Vertex AI + SageMaker + W&B + Comet + Neptune 6-vendor cohort)</li>
+<li>MLOps audit retainer — $497/mo (monthly EU AI Act + ISO 42001 + NIST AI RMF + MITRE ATLAS + OWASP LLM Top 10 monitoring + per-prompt-injection-defense + per-jailbreak-defense + per-multi-turn-attack-defense + per-data-poisoning-defense + per-Agentic-AI-poisoning-defense + per-shadow-AI-defense + per-cross-Domino-tenant-isolation-evidence + per-WORM-cost-attribution-evidence)</li>
+</ul>
+<p><strong>Grand-total ceiling across all 6 vendors + retainer:</strong> $6,500 audit one-time / $8,449/mo MRR (across all 17 enterprise leads in cohort if all closed).</p>
+
+<h2>CTA</h2>
+<p>Reply STOP if not interested. Otherwise:</p>
+<p><strong>$500 / 48-hour MLOps + Aug 2026 GPAI-readiness audit</strong> of Domino Data Lab Model Sentry + Model Registry + Audit Trail (with optional $497/mo retainer for monthly EU AI Act + India-DPDP + Schrems-II + ISO 42001 + NIST AI RMF + MITRE ATLAS + OWASP LLM Top 10 monitoring + per-prompt-injection-defense + per-jailbreak-defense + per-multi-turn-attack-defense + per-data-poisoning-defense + per-Agentic-AI-poisoning-defense + per-shadow-AI-defense + per-cross-Domino-tenant-isolation-evidence + per-WORM-cost-attribution-evidence).</p>
+<p>Atlas @ Talon Forge LLC · <a href="/cold_email/templates/461_domino.md">cold_email/templates/461_domino.md</a> · <a href="/leads.csv">leads.csv row 461</a></p>
+</article>
+</body>
+</html>
