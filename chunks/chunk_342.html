@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arize AI SOC 2 Audit 2026: LLM Tracing + Eval Join-Table + EU AI Act Art. 12 Gap | Talon Forge Atlas</title>
+<meta name="description" content="A 2026 buyer-intent guide to the Arize AI SOC 2 + EU AI Act Art. 12 audit surface. Covers the per-trace provenance join-table, eval-judge + rubric version-control evidence, cross-region trace residency isolation, hostile-input defense, and agent-trace-to-business-outcome cryptographic binding. Compare against Honeycomb, Galileo, LangSmith, and Patronus. 48-hour fixed-fee audit available.">
+<meta name="keywords" content="Arize AI SOC 2 audit 2026, Arize AI EU AI Act Art. 12 audit, LLM tracing provenance join-table, AI observability SOC 2 CC7.2, Phoenix open-source audit, Arize vs Honeycomb vs Galileo, Arize AX enterprise eval audit, AI agent tracing audit, prompt-injection defense AI observability, ISO 42001 AI observability">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_342.html">
+<meta property="og:title" content="Arize AI SOC 2 Audit 2026">
+<meta property="og:description" content="2026 buyer-intent guide to the Arize AI SOC 2 + EU AI Act Art. 12 audit gap: per-trace join-table, eval version-control, cross-region isolation.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_342.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Arize AI SOC 2 Audit 2026",
+  "author": {"@type": "Organization", "name": "Talon Forge LLC"},
+  "publisher": {"@type": "Organization", "name": "Talon Forge LLC"},
+  "datePublished": "2026-07-19",
+  "dateModified": "2026-07-19",
+  "description": "Buyer guide: Arize AI SOC 2 + EU AI Act Art. 12 audit surface, per-trace provenance join-table, eval version-control, cross-region isolation."
+}
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;color:#172033;max-width:920px;margin:0 auto;padding:24px;background:#f8fafc}header,.panel{background:#fff;border:1px solid #dbe4f0;border-radius:10px;padding:22px;margin:18px 0}header{border-top:5px solid #5427D8}h1,h2{color:#3a1a8c}h1{font-size:31px;line-height:1.18}h2{margin-top:34px;border-left:4px solid #5427D8;padding-left:12px}h3{color:#263b57}.meta{font-size:13px;color:#64748b}.cta{display:inline-block;background:#5427D8;color:#fff;padding:12px 18px;border-radius:6px;text-decoration:none;font-weight:700}table{border-collapse:collapse;width:100%;background:#fff;margin:18px 0}th,td{border:1px solid #cbd5e1;padding:10px;text-align:left;vertical-align:top}th{background:#5427D8;color:#fff}code{background:#e8eef6;padding:2px 5px;border-radius:3px}.note{background:#f3e8ff;border-left:4px solid #5427D8;padding:14px 16px}.warning{background:#fff7ed;border-left:4px solid #f97316;padding:14px 16px}footer{margin-top:40px;padding-top:18px;border-top:1px solid #cbd5e1;color:#64748b;font-size:13px}
+</style>
+</head>
+<body data-tick="2026-07-19-fast-exec-arize-538">
+<header>
+<h1>Arize AI SOC 2 Audit 2026</h1>
+<p class="meta">Buyer guide · Procurement + Legal + Security + AI Governance · Published 2026-07-19</p>
+<p>Arize AI's Phoenix open-source project passed 100K+ developers in 2025 and the Arize AX enterprise platform now sits in the trace path of every regulated Fortune 500 LLM deployment in 2026. This guide explains the SOC 2 Type II + EU AI Act Art. 12 audit surface that a buyer must cover when Arize is the AI-observability vendor of record.</p>
+<a class="cta" href="https://talonforgehq.github.io/atlas-store/#contact">Request a $500 / 48-hour Arize AI audit</a>
+</header>
+
+<div class="note"><strong>Scope:</strong> Independent buyer's review, not a certification or legal opinion. Verify all evidence directly with Arize AI and your own counsel. Phoenix is open-source (Apache-2.0); Arize AX is the enterprise control-plane. EU AI Act Aug 2 2026 GPAI documentation deadline applies.</div>
+
+<h2>Why Arize matters to SOC 2 in 2026</h2>
+<p>Arize was founded in 2019 by Aparna Dhinakaran (Co-Founder + CPO, ex-Uber ML) and Jason Lopatecki (Co-Founder + CEO) in Berkeley, CA. Phoenix is the open-source tracing + eval library; Arize AX is the enterprise control-plane that adds per-tenant isolation, eval-judge scheduling, prompt-engineering, agent-monitoring, drift detection, and WORM evidence retention. When Arize is in the trace path of a regulated AI deployment, the trace + eval log becomes a SOC 2 CC7.2 audit artifact — meaning a buyer's auditor will request it during the vendor-DD cycle, the SOC 2 Type II observation window, and the EU AI Act Art. 12 reconstruction drill.</p>
+<p>The risk: if Arize cannot reconstruct a per-trace provenance join-table on demand, the buyer cannot answer a regulator's question about which prompt template + retrieval chunk + tool call + eval rubric produced which AI decision for which customer. That is a CC7.2 evidence gap and a EU AI Act Art. 12 violation that surfaces during a Schrems II or ISO 42001 audit.</p>
+
+<h2>The per-trace provenance join-table</h2>
+<table>
+<tr><th>Column</th><th>What it captures</th><th>Why auditors need it</th></tr>
+<tr><td>trace_id + span_id</td><td>The OpenTelemetry-compatible trace identity</td><td>Per-decision lineage</td></tr>
+<tr><td>agent_id + model_id + model_version_id</td><td>Which agent invoked which model version</td><td>EU AI Act Art. 12 + ISO 42001 §6.1.4</td></tr>
+<tr><td>prompt_template_id + prompt_template_version_id</td><td>The exact prompt that was sent</td><td>Hallucination attribution + EU AI Act Art. 14 human-oversight</td></tr>
+<tr><td>retrieval_query_id + retrieval_corpus_id + retrieval_chunk_id</td><td>RAG ground-truth provenance</td><td>EU AI Act Art. 53(d) GPAI training-data transparency + GDPR Art. 22</td></tr>
+<tr><td>tool_call_id + tool_response_id</td><td>Agent tool-use provenance</td><td>MITRE ATLAS hostile-input defense + FRCP 34 production</td></tr>
+<tr><td>eval_score_id + eval_judge_id + eval_rubric_id</td><td>The eval-judge + rubric version that produced the score</td><td>EU AI Act Art. 14 + ISO 42001 §9.4</td></tr>
+<tr><td>Arize_tenant_id + audit_log_entry_id + residency_region_id</td><td>Tenant + region + WORM evidence stamp</td><td>SOC 2 CC6.1 + Schrems II SCC + APPI + PH DPA</td></tr>
+</table>
+<p>Without these 13 columns cryptographically bound per-trace, the buyer cannot answer a regulator's question in a reconstructible way. The audit artifact is a quarterly cold-storage rebuild drill that reconstructs 1,000 random traces end-to-end and verifies the join-table is intact.</p>
+
+<h2>How Arize compares to peer AI-observability vendors</h2>
+<table>
+<tr><th>Vendor</th><th>Model</th><th>Best fit</th></tr>
+<tr><td>Arize AI</td><td>Phoenix OSS + Arize AX enterprise eval + agent-monitoring + prompt-engineering</td><td>Engineering teams who want open-source tracing + enterprise eval</td></tr>
+<tr><td>Honeycomb</td><td>Observability with traces, events, BubbleUp</td><td>Engineering teams with general (non-AI) observability needs</td></tr>
+<tr><td>Galileo</td><td>AI-eval + agent-reliability + hallucination-detection</td><td>Frontier-model builders who need premium eval quality</td></tr>
+<tr><td>LangSmith</td><td>LangChain-native tracing + eval</td><td>Teams already on the LangChain ecosystem</td></tr>
+<tr><td>Patronus</td><td>AI-evaluation + LLM-judges + safety-scoring</td><td>Buyers who need premium safety-eval</td></tr>
+<tr><td>Maxim AI</td><td>AI-simulator + agent-eval + prompt-management</td><td>Agentic-AI deployers who need simulation</td></tr>
+</table>
+
+<h2>5 evidence gaps a buyer must cover</h2>
+<ol>
+<li><strong>End-to-end per-trace provenance join-table</strong> — 13-column join per-trace per-span per-model-version per-prompt-version per-retrieval-chunk per-tool-call per-eval-judge per-region (SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 + ISO 27701 + GDPR Art. 30 + Schrems II SCC + APPI + PH DPA + 12-state AI-disclosure).</li>
+<li><strong>Per-eval-judge + per-rubric + per-prompt-template version-control evidence</strong> — every eval-score must be cryptographically bound to the exact eval-judge + rubric + prompt-template version that produced it (EU AI Act Art. 14 human-oversight + ISO 42001 §6.1.4 + ABA Model Rule 1.1).</li>
+<li><strong>Cross-region + cross-tenant trace residency isolation</strong> — per-region + per-Arize-tenant + per-customer trace-partition manifest + per-region KMS-key-rotation log + per-region Schrems-II-cross-border-transfer-provenance (SOC 2 CC6.1 + GDPR Art. 28 + Schrems II SCC + EU-US DPF + APPI + PH DPA + ISO 27701).</li>
+<li><strong>Hostile-input + eval-poisoning + rubric-poisoning + tool-call-replay + WORM-tampering defense</strong> — per-trace hostile-input classifier score + per-eval-judge anomaly log + per-rubric integrity hash + tool-call replay-detection log + WORM-evidence-store integrity proof (OWASP LLM Top 10 LLM01/03/06/08 + MITRE ATLAS + EU AI Act Art. 14 + Art. 50 + 12-state AI-disclosure).</li>
+<li><strong>Agent-trace ↔ business-outcome cryptographic binding</strong> — per-trace ↔ per-business-outcome cryptographic binding manifest + per-decision downstream-effect log + 7-year WORM retention (SOC 2 CC8.1 + FRCP 34 + EU AI Act Art. 12 + SEC 17a-4 WORM + ISO 42001).</li>
+</ol>
+
+<h2>What to ask Arize in vendor-DD</h2>
+<ul>
+<li>A sample per-trace 13-column join-table export from a Fortune 500 customer (de-identified).</li>
+<li>The per-eval-judge + per-rubric + per-prompt-template version-control policy + the per-quarter drift-detection log.</li>
+<li>The per-region + per-tenant + per-customer trace-partition manifest + the per-region KMS-key-rotation log.</li>
+<li>The per-trace hostile-input classifier score distribution + the per-eval-judge anomaly log from the last 90 days.</li>
+<li>The agent-trace ↔ business-outcome cryptographic binding manifest + the 7-year WORM retention policy.</li>
+<li>The EU AI Act Art. 53(d) GPAI training-data transparency summary for the Arize eval-judge corpus.</li>
+<li>The Schrems II SCC + EU-US DPF + APPI + PH DPA cross-border-data-transfer-provenance log for the trace residency evidence.</li>
+</ul>
+
+<h2>How a 48-hour audit would work</h2>
+<p>For a fixed <strong>$500 / 48-hour</strong> fee, an Atlas-side audit produces a working reference implementation of the 13-column join-table export pipeline, an eval-judge + rubric version-control evidence drill, a per-region trace-partition manifest, a hostile-input classifier scoring matrix, and a one-page memo for the QSA + ISO 42001 + EU AI Act conformity auditor. References: chunks 34 (SOC 2 AI agent), 39 (permission inheritance), 100 (Arize baseline), 102 (Honeycomb), 103 (Galileo), 105 (Moveworks), 425 (Maxim AI) — all live at talonforgehq.github.io/atlas-store.</p>
+
+<div class="warning"><strong>Don't accept "we have traces" as the answer.</strong> SOC 2 CC7.2 + EU AI Act Art. 12 require cryptographic binding between every trace and the prompt + retrieval + tool-call + eval-rubric + region + tenant + WORM-evidence that produced it. Ask for the 13-column join-table export before you sign.</div>
+
+<footer>Atlas · Talon Forge LLC · Independent AI-observability audit practice · 2026-07-19</footer>
+</body>
+</html>
