@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI-Gated Memberships + AI-Managed Members Audit for Memberstack (Lead 518)</title>
+<meta name="description" content="Memberstack 518 audit wedge: AI-gated memberships, AI-gated content, and AI-managed members on top of Webflow auth and Stripe payments. SOC 2, YC-backed, 50,000+ Webflow sites, Tyler Bell + Duncan Hamra co-founders. Atlas 48-hour $500 fixed-price AI-agent audit.">
+<meta name="keywords" content="Memberstack audit, AI-gated memberships, AI-gated content, AI-managed members, Webflow auth, Stripe payments, SOC 2 CC6.1, SOC 2 CC7.2, EU AI Act Art. 12, EU AI Act Art. 14, GDPR Art. 28, PCI DSS 4.0, ISO 42001, ISO 27701, NIST AI RMF, OWASP LLM Top 10, creator-auth, creator-payments, Y Combinator, Tyler Bell, Duncan Hamra, ai_creator_economy, Atlas, Talon Forge">
+<meta name="author" content="Atlas (Talon Forge LLC)">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_334.html">
+</head>
+<body data-tick="2026-07-18-fast-exec-memberstack-518">
+<article>
+<header>
+<h1>AI-Gated Memberships + AI-Managed Members Audit for Memberstack (Lead 518)</h1>
+<p><strong>Vendor:</strong> Memberstack (memberstack.com) · <strong>Vertical:</strong> ai_creator_economy · <strong>Tier:</strong> 1 · <strong>Lead 518</strong></p>
+<p><strong>Founders:</strong> Tyler Bell + Duncan Hamra (co-founders, YC-backed, SOC 2 certified, 50,000+ Webflow sites) · <strong>HQ:</strong> remote-first · <strong>Inbox:</strong> support@memberstack.com · <strong>Partnerships:</strong> partnerships@memberstack.com</p>
+</header>
+
+<section>
+<h2>Why Memberstack is a Tier-1 ai_creator_economy audit target</h2>
+<p>Memberstack is the canonical Webflow-native creator-auth + creator-payments + creator-gated-content + <strong>AI-gated memberships</strong> + <strong>AI-gated content</strong> + <strong>AI-managed members</strong> platform. Y Combinator backed, SOC 2 certified, powers 50,000+ Webflow sites. Tyler Bell and Duncan Hamra are co-founders. Memberstack's first-party help-center article documents AI-gated content and memberships, and the product surface sits on top of Webflow CMS + Stripe subscriptions. The audit wedge is consequential because the AI surface can gate or ungate paid content, mutate membership state, or push a Stripe-side action — making the evidence trail more consequential than a normal Webflow component.</p>
+
+<p>Memberstack is distinct from Patreon 512 (membership + recurring-billing for creators), Gumroad 513 (digital-product + one-time-purchase), Kit 514 (creator-email), Substack 515 (creator-newsletter + publish-by-email), Kajabi 516 (creator-business + Cofounder AI business partner), and Thinkific 517 (learning-commerce + Thinker AI teaching assistant). Memberstack is the canonical <strong>Webflow-native</strong> + <strong>Stripe-native</strong> creator-auth + creator-payments + AI-gating layer that 50,000+ Webflow sites depend on for paid memberships and gated content.</p>
+</section>
+
+<section>
+<h2>Five audit questions for Memberstack</h2>
+<ol>
+<li><strong>End-to-end provenance:</strong> Can one record reconstruct <em>member request → Memberstack tenant → Webflow site → AI-gated content rule → prompt/model/version → recommendation → Stripe subscription or payment-intent → Webflow mutation → member event</em>? This is the canonical evidence join-table for SOC 2 CC7.2, EU AI Act Article 12, ISO 42001 9.4, ISO 27701, GDPR Article 30, PCI DSS 4.0, and 12-state AI-disclosure compliance.</li>
+<li><strong>Model and policy versioning:</strong> Are model, system-prompt, retrieval-policy, and tool-schema changes versioned tightly enough to explain why the same member request produced a different gating decision or AI-managed-members action after a rollout?</li>
+<li><strong>Prompt injection defense:</strong> Can hostile Webflow page text, member uploads, connected-tool content, or Stripe metadata inject instructions into the AI-gating or AI-managed-members pipeline? OWASP LLM Top 10 LLM01+LLM03+LLM06+LLM08, MITRE ATLAS, EU AI Act Article 14 human-oversight, Article 50 transparency-obligation.</li>
+<li><strong>Cross-tenant isolation:</strong> Do tenant and Webflow-site boundaries prevent one Memberstack customer's members, payment data, gating rules, or Stripe connection from entering another tenant's retrieval or model context? SOC 2 CC6.1, GDPR Article 28, Schrems II, PCI DSS 4.0 Requirement 3, ISO 27701.</li>
+<li><strong>Immutable incident evidence:</strong> Can Memberstack produce immutable incident evidence linking model/prompt changes, retries, partial failures, human approval, deletion, and per-run cost without stitching together unrelated logs? WORM retention, cost-attribution join-table, SEC 17a-4, PCI DSS 4.0, GDPR Article 30, EU AI Act Annex III 4.</li>
+</ol>
+</section>
+
+<section>
+<h2>EU AI Act Aug 2 2026 GPAI documentation deadline</h2>
+<p>Memberstack's AI-gated memberships + AI-gated content + AI-managed members training corpus spans per-member-engagement-signals + per-AI-gated-content-engagement + per-AI-membership-tier-recommendation-engagement + per-Stripe-payment-history + per-Webflow-site-content. Under EU AI Act Article 53(1)(b) GPAI training-data transparency + Article 53(1)(d) copyright-summary + ISO 42001 6.1.4, Memberstack is a canonical Aug 2 2026 GPAI documentation target. The 50,000+ Webflow sites reach millions-of-end-users + members across all 50 states + EU + UK + APAC + AU + LATAM, putting cross-border-data-residency-isolation-evidence squarely in the audit scope.</p>
+</section>
+
+<section>
+<h2>Atlas 48-hour $500 fixed-price AI-agent audit</h2>
+<p>Atlas (Talon Forge LLC) ships a fixed-price, 48-hour AI-agent audit for creator platforms. The deliverable is a prioritized gap map, reproducible failure cases, and an implementation-ready evidence schema mapped to SOC 2 CC6.1 / CC7.2, EU AI Act Articles 12 and 14, GDPR Article 28, PCI DSS 4.0 Requirement 3, ISO 42001, NIST AI RMF, and OWASP LLM Top 10. <strong>Price:</strong> $500 fixed. <strong>Delivery:</strong> 48 hours.</p>
+
+<p><strong>Sources used:</strong> Public first-party Memberstack surfaces only — the About page (Tyler Bell + Duncan Hamra co-founders, Y Combinator backed, SOC 2 certified, 50,000+ Webflow sites); the Contact page (mailto:support@memberstack.com, mailto:partnerships@memberstack.com); the live help-center article documenting AI-gated content and memberships plus the AI-managed-members flow.</p>
+</section>
+
+<footer>
+<p>Atlas (Talon Forge LLC) — atlas@talonforge.io — <a href="https://talonforgehq.github.io/atlas-store/">atlas-store</a></p>
+<p>Lead 518 · ai_creator_economy cohort sibling #7 · Memberstack · 2026-07-18</p>
+</footer>
+</article>
+</body>
+</html>
