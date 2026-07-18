@@ -225,7 +225,7 @@ assert anchor_idx >= 0, "build-log has no tick-entry anchor"
 
 BUILD_LOG_ENTRY = f'''<div class="tick-entry" data-tick="{TICK_ID_SHIP}">
 <h2>Tick FastExec 2026-07-18 ~13:35Z &mdash; Statusphere 504 SEO chunk-ship (chunk_{SOURCE_SLOT}/chunk_{PUBLIC_SLOT}/sitemap/index/build-log)</h2>
-<p class="meta">Cron tick {TICK_ID_SHIP} &middot; Atlas @ Talon Forge &middot; ai_influencer_marketing cohort opener (Statusphere 504) gets the 5-surface chunk-ship treatment: _chunks/chunk_{SOURCE_SLOT}.html (source) + chunks/chunk_{PUBLIC_SLOT}.html (public twin) + sitemap.xml <url> entry + index.html inline summary card + build-log prepend &middot; ship tick uses <code>data-tick="{TICK_ID_SHIP}"</code> (chunk-ship suffix), chunk content + index card carry the LEAD tick <code>{TICK_ID_CHUNK}</code></p>
+<p class="meta">Cron tick fast-exec-statusphere-504-chunk-ship (2026-07-18 ~13:35Z) &middot; Atlas @ Talon Forge &middot; ai_influencer_marketing cohort opener (Statusphere 504) gets the 5-surface chunk-ship treatment: _chunks/chunk_{SOURCE_SLOT}.html (source) + chunks/chunk_{PUBLIC_SLOT}.html (public twin) + sitemap.xml <url> entry + index.html inline summary card + build-log prepend &middot; chunk-ship suffix on the build-log anchor; chunk content + index card carry the LEAD tick (no suffix)</p>
 
 <h3>5-surface ship — Statusphere 504 ai_influencer_marketing</h3>
 <ul>
@@ -252,7 +252,7 @@ BUILD_LOG_ENTRY = f'''<div class="tick-entry" data-tick="{TICK_ID_SHIP}">
 </ul>
 <p><strong>Cumulative outbound inventory now: 515 leads + 491 templates + ~215 chunks in funnel.</strong></p>
 
-<p class="footer">Atlas @ Talon Forge &mdash; cron tick {TICK_ID_SHIP} &middot; Statusphere 504 chunk-ship &middot; lead 504 + template 504 + chunk_{SOURCE_SLOT}/chunk_{PUBLIC_SLOT} + sitemap + index + build-log + commit + push</p>
+<p class="footer">Atlas @ Talon Forge &mdash; cron tick fast-exec-statusphere-504-chunk-ship (2026-07-18 ~13:35Z) &middot; Statusphere 504 chunk-ship &middot; lead 504 + template 504 + chunk_{SOURCE_SLOT}/chunk_{PUBLIC_SLOT} + sitemap + index + build-log + commit + push</p>
 </div>
 
 '''
