@@ -1,0 +1,91 @@
+<article class="seo-chunk" data-tick="2026-07-19-revenue-loop-ai21-buyer-guide" data-cohort="ai_foundation_models" data-lead="buyer-guide">
+  <header>
+    <p class="eyebrow">Buyer-intent guide · AI foundation models · 2026</p>
+    <h1>AI21 Labs EU AI Act GPAI Due-Diligence Checklist for Jamba, Maestro and Wordtune Enterprise</h1>
+    <p class="lede">A practical procurement checklist for security, legal and AI-governance teams evaluating AI21 Labs alongside Cohere, Mistral AI and Anthropic before the EU AI Act GPAI obligations become enforceable on August 2, 2026.</p>
+    <p><strong>Independent framework:</strong> This page is not an AI21 Labs certification, legal opinion or claim about AI21's current controls. Buyers should verify every control with scoped evidence from the vendor.</p>
+  </header>
+
+  <section>
+    <h2>Why AI21 belongs in the foundation-model diligence lane</h2>
+    <p>AI21 Labs was founded in Tel Aviv by Yoav Shoham, Ori Goshen and Amnon Shashua. Its enterprise surface spans Jamba foundation models, Maestro orchestration, Wordtune and task-specific language systems. That makes the audit unit larger than one model endpoint: it includes model versions, prompts, retrieved sources, orchestration steps, tool calls, output transformations and downstream application actions.</p>
+    <p>The buyer question is not “does the model work?” It is “can we reconstruct one material decision from the business record back through every model, retrieval and orchestration event that influenced it?”</p>
+  </section>
+
+  <section>
+    <h2>Five evidence gaps to test before procurement</h2>
+    <ol>
+      <li><strong>End-to-end inference provenance.</strong> Require a joinable record from tenant ID to application ID, AI21 model ID and version, prompt-template version, prompt hash, retrieval chunk, Maestro step, tool call, completion hash, human review decision, downstream state change and audit-log entry. Test whether one production event can be reconstructed in under 60 seconds.</li>
+      <li><strong>Training-data and copyright documentation.</strong> Request the GPAI technical documentation, training-data summary, copyright-policy evidence, model card and change history that map to EU AI Act Article 53 and the GPAI Code of Practice. Separate foundation-model training evidence from customer fine-tuning and retrieval-corpus evidence.</li>
+      <li><strong>Prompt-injection and orchestration abuse controls.</strong> Test direct prompt injection, indirect injection through retrieved documents, tool-call argument poisoning, data exfiltration attempts and excessive agency in Maestro workflows. Require blocked-event logs, severity, affected tenant, downstream-state-change flag and incident-response escalation ID.</li>
+      <li><strong>Cross-tenant and cross-region isolation.</strong> Ask for tenant-bound authorization tests, encryption-key scope, CMK/BYOK options, fine-tune residue deletion, retrieval-index deletion, inference-cache isolation and regional data-flow diagrams. A contract promise is not the same as quarterly test evidence.</li>
+      <li><strong>Retention, reconstruction and cost attribution.</strong> Require a retention matrix linking request, prompt, model, retrieval, tool, output, human review, incident and spend records. Regulated buyers may also need WORM-compatible exports and legal-hold workflows.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Minimum 13-column evidence row</h2>
+    <table>
+      <thead><tr><th>#</th><th>Field</th><th>Why the buyer needs it</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>tenant_id</td><td>Establishes customer boundary.</td></tr>
+        <tr><td>2</td><td>application_id</td><td>Links the event to the deployed business system.</td></tr>
+        <tr><td>3</td><td>ai21_model_id</td><td>Identifies Jamba or another model family.</td></tr>
+        <tr><td>4</td><td>model_version</td><td>Pins the exact release or artifact.</td></tr>
+        <tr><td>5</td><td>prompt_template_version</td><td>Reconstructs instruction changes.</td></tr>
+        <tr><td>6</td><td>prompt_input_hash</td><td>Preserves input integrity without unnecessary plaintext.</td></tr>
+        <tr><td>7</td><td>retrieval_chunk_ids</td><td>Attributes claims to source material.</td></tr>
+        <tr><td>8</td><td>maestro_step_id</td><td>Locates the orchestration stage.</td></tr>
+        <tr><td>9</td><td>tool_call_id</td><td>Links external actions and arguments.</td></tr>
+        <tr><td>10</td><td>completion_hash</td><td>Preserves output integrity.</td></tr>
+        <tr><td>11</td><td>human_review_decision</td><td>Proves oversight or override.</td></tr>
+        <tr><td>12</td><td>downstream_state_change_id</td><td>Connects AI output to business impact.</td></tr>
+        <tr><td>13</td><td>audit_log_entry_id</td><td>Provides the immutable reconstruction anchor.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Procurement questions to send AI21 Labs</h2>
+    <ul>
+      <li>Can a customer export the full evidence row for one Jamba or Maestro event without vendor professional services?</li>
+      <li>Which fields are available in real time, which are delayed and which require support escalation?</li>
+      <li>How are model-version changes communicated, and can customers pin or roll back versions?</li>
+      <li>What evidence demonstrates that one tenant's prompts, fine-tunes, retrieval indexes and caches cannot influence another tenant?</li>
+      <li>Which subprocessors and regions handle prompts, retrieval data, telemetry and support data?</li>
+      <li>What are the deletion timelines for prompts, fine-tune datasets, adapters, indexes, caches, backups and logs?</li>
+      <li>How are indirect prompt-injection and poisoned retrieval documents detected before a Maestro tool call executes?</li>
+      <li>What customer-facing artifacts support EU AI Act Article 53, ISO/IEC 42001, SOC 2, GDPR and sector-specific diligence?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>AI21 vs Cohere vs Mistral: evidence emphasis</h2>
+    <table>
+      <thead><tr><th>Vendor archetype</th><th>Primary diligence emphasis</th><th>Buyer proof to request</th></tr></thead>
+      <tbody>
+        <tr><td>AI21 Labs</td><td>Jamba + Maestro orchestration + enterprise language applications</td><td>Model-to-orchestration-to-tool-call reconstruction</td></tr>
+        <tr><td>Cohere</td><td>Command + Rerank + Embed + North, including private deployment</td><td>Retrieval provenance and on-prem/VPC isolation evidence</td></tr>
+        <tr><td>Mistral AI</td><td>Open-weight models + La Plateforme + European sovereign deployments</td><td>GPAI documentation, model-release lineage and sovereign-cloud evidence</td></tr>
+        <tr><td>Anthropic</td><td>Claude enterprise + tool use + agentic workflows</td><td>Tool-use controls, model-change evidence and enterprise data-boundary tests</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>48-hour diligence sprint</h2>
+    <ol>
+      <li><strong>Hours 0–6:</strong> scope one material AI21 workflow and inventory evidence owners.</li>
+      <li><strong>Hours 6–18:</strong> map the 13-column reconstruction row and identify missing joins.</li>
+      <li><strong>Hours 18–30:</strong> test injection, tool-call, tenant-isolation and deletion claims against available evidence.</li>
+      <li><strong>Hours 30–42:</strong> cross-walk gaps to EU AI Act, SOC 2, ISO/IEC 42001 and the buyer's sector rules.</li>
+      <li><strong>Hours 42–48:</strong> deliver a prioritized remediation plan and procurement-question packet.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p><strong>Need an independent AI foundation-model evidence review?</strong> Talon Forge offers a <strong>$500 fixed-fee, 48-hour audit</strong> or a <strong>$497/month evidence-maintenance retainer</strong>.</p>
+    <p><a href="https://talonforgehq.github.io/atlas-store/#audit">Scope the $500 audit</a> · <a href="https://talonforgehq.github.io/atlas-store/#retainer">Review the retainer</a></p>
+    <p class="chunk-meta">Long-tail targets: AI21 Labs EU AI Act audit 2026 · AI21 Jamba due diligence checklist · AI21 Maestro security audit · AI foundation model vendor assessment · GPAI Article 53 procurement checklist.</p>
+  </footer>
+</article>
