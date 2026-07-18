@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coda AI Audit 2026: Workspace Agent SOC 2 + EU AI Act Gap for Ops Teams | Talon Forge Atlas</title>
+<meta name="description" content="A 2026 buyer-intent guide to the Coda AI workspace-agent SOC 2 + EU AI Act + ISO 42001 audit surface. Covers per-doc AI-action provenance, cross-workspace Packs isolation, hostile-prompt defense, and the 48-hour fixed-fee audit lane. Coda sits in the daily workflow of 100K+ teams and the AI Brain / AI column features now route LLM calls into documents ops + product + HR teams must audit.">
+<meta name="keywords" content="Coda AI audit 2026, Coda AI SOC 2 audit, Coda Brain SOC 2, Coda Packs SOC 2, Coda AI column EU AI Act, workspace AI agent audit, Coda vs Notion AI audit, Coda vs Airtable AI audit, Coda HIPAA audit, Coda ISO 42001">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_343.html">
+<meta property="og:title" content="Coda AI Workspace Audit 2026">
+<meta property="og:description" content="Buyer guide: Coda AI workspace-agent SOC 2 + EU AI Act Art. 12 audit gap. Covers per-doc AI-action provenance, cross-workspace Packs isolation, hostile-prompt defense.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_343.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Coda AI Workspace Audit 2026",
+  "author": {"@type": "Organization", "name": "Talon Forge LLC"},
+  "publisher": {"@type": "Organization", "name": "Talon Forge LLC"},
+  "datePublished": "2026-07-19",
+  "dateModified": "2026-07-19",
+  "description": "Buyer guide: Coda AI workspace-agent SOC 2 + EU AI Act Art. 12 audit surface, per-doc AI-action provenance, cross-workspace Packs isolation, hostile-prompt defense."
+}
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;color:#172033;max-width:920px;margin:0 auto;padding:24px;background:#f8fafc}header,.panel{background:#fff;border:1px solid #dbe4f0;border-radius:10px;padding:22px;margin:18px 0}header{border-top:5px solid #FF6B6B}h1,h2{color:#a32424}h1{font-size:31px;line-height:1.18}h2{margin-top:34px;border-left:4px solid #FF6B6B;padding-left:12px}h3{color:#263b57}.meta{font-size:13px;color:#64748b}.cta{display:inline-block;background:#FF6B6B;color:#fff;padding:12px 18px;border-radius:6px;text-decoration:none;font-weight:700}table{border-collapse:collapse;width:100%;background:#fff;margin:18px 0}th,td{border:1px solid #cbd5e1;padding:10px;text-align:left;vertical-align:top}th{background:#FF6B6B;color:#fff}code{background:#e8eef6;padding:2px 5px;border-radius:3px}.note{background:#fff0f0;border-left:4px solid #FF6B6B;padding:14px 16px}.warning{background:#fff7ed;border-left:4px solid #f97316;padding:14px 16px}footer{margin-top:40px;padding-top:18px;border-top:1px solid #cbd5e1;color:#64748b;font-size:13px}
+</style>
+</head>
+<body data-tick="2026-07-19-fast-exec-coda-539">
+<header>
+<h1>Coda AI Workspace Audit 2026</h1>
+<p class="meta">Buyer guide · Procurement + Legal + Security + AI Governance · Published 2026-07-19</p>
+<p>Coda has 100K+ teams running daily workflows through Coda docs, and the AI Brain + AI column + AI chat features are now embedded in every Product + Ops + HR doc on the platform. This guide explains the SOC 2 Type II + EU AI Act Art. 12 audit surface a buyer must cover when Coda is the workspace-AI vendor of record.</p>
+<a class="cta" href="https://talonforgehq.github.io/atlas-store/#contact">Request a $500 / 48-hour Coda AI audit</a>
+</header>
+
+<div class="note"><strong>Scope:</strong> Independent buyer's review, not a certification or legal opinion. Verify all evidence directly with Coda Inc. and your own counsel. EU AI Act Aug 2 2026 GPAI documentation deadline applies for any AI feature Coda exposes to EU users.</div>
+
+<h2>Why Coda AI matters to SOC 2 in 2026</h2>
+<p>Coda was founded in 2014 by Shishir Mehrotra (ex-CEO of Vevo, ex-VP Product at YouTube) and Alex Chen (ex-Microsoft). The platform combines documents + tables + automations + Packs (integrations to Slack, Jira, Gmail, Salesforce, Stripe, etc.) into a single canvas. The Coda AI feature set (AI Brain, AI column, AI chat, AI block summaries) routes every prompt through a hosted LLM (Coda's own model + OpenAI + Anthropic behind the scenes) and writes the output back into the doc.</p>
+<p>The risk: when a Coda doc contains customer PII, an HR candidate pipeline, an internal product roadmap, or a regulated financial model, every AI column / AI block becomes a SOC 2 CC7.2 audit artifact. If Coda cannot reconstruct <em>which AI call used which prompt + which doc chunk + which Pack call + which LLM model version to produce which output</em>, the buyer cannot answer a regulator's question during vendor-DD, a Schrems II audit, or an EU AI Act Art. 12 reconstruction drill.</p>
+
+<h2>The per-doc AI-action provenance join-table</h2>
+<table>
+<tr><th>Column</th><th>What it captures</th><th>Why auditors need it</th></tr>
+<tr><td>doc_id + workspace_id</td><td>The Coda doc + workspace identity</td><td>Per-doc lineage</td></tr>
+<tr><td>ai_action_id + ai_feature_type</td><td>AI Brain, AI column, AI chat, AI block summary</td><td>EU AI Act Art. 50 transparency + Art. 14 human-oversight</td></tr>
+<tr><td>prompt_template_id + prompt_input_hash</td><td>The exact prompt sent to the LLM</td><td>Hallucination attribution + ISO 42001 §6.1.4</td></tr>
+<tr><td>retrieval_chunk_id + doc_chunk_id</td><td>RAG ground-truth provenance from the doc</td><td>GDPR Art. 22 + EU AI Act Art. 53(d) GPAI</td></tr>
+<tr><td>pack_call_id + pack_response_id</td><td>The Packs integration call + response</td><td>SOC 2 CC7.2 + SOX 404 for financial Packs</td></tr>
+<tr><td>model_id + model_version_id</td><td>Which LLM (Coda / OpenAI / Anthropic) + version</td><td>EU AI Act Art. 12 + Schrems II for non-EU models</td></tr>
+<tr><td>ai_output_id + ai_output_hash</td><td>The AI-generated output written back to the doc</td><td>FRCP 34 production + ISO 42001 §9.4</td></tr>
+<tr><td>coda_tenant_id + audit_log_entry_id + residency_region_id</td><td>Tenant + region + WORM evidence stamp</td><td>SOC 2 CC6.1 + Schrems II SCC + APPI + PH DPA</td></tr>
+</table>
+<p>Without these 13 columns cryptographically bound per-AI-action, the buyer cannot reconstruct the AI decision in a regulator-friendly way. The audit artifact is a quarterly cold-storage rebuild drill that reconstructs 1,000 random AI actions end-to-end across 5 randomly sampled workspaces and verifies the join-table is intact.</p>
+
+<h2>How Coda AI compares to peer workspace-AI vendors</h2>
+<table>
+<tr><th>Vendor</th><th>Model</th><th>Best fit</th></tr>
+<tr><td>Coda</td><td>Workspace canvas + AI Brain / AI column / Packs + 100K+ teams</td><td>Ops + product + HR teams who want AI inside a doc canvas</td></tr>
+<tr><td>Notion AI</td><td>Docs + wiki + AI assistant + Q&A across workspace</td><td>Knowledge-management-first teams</td></tr>
+<tr><td>Airtable AI</td><td>Database + AI field + AI Automations + Cobuilder</td><td>Teams who want structured DB rows with AI enrichment</td></tr>
+<tr><td>ClickUp AI</td><td>Project management + AI assistant + AI docs</td><td>Project-management-first teams</td></tr>
+<tr><td>Confluence AI</td><td>Atlassian wiki + AI summaries + Rovo</td><td>Atlassian-shop teams (Jira + Confluence)</td></tr>
+<tr><td>Microsoft Loop</td><td>Microsoft 365 + Copilot + Loop components</td><td>Microsoft 365 enterprise tenants</td></tr>
+</table>
+
+<h2>5 evidence gaps a buyer must cover</h2>
+<ol>
+<li><strong>End-to-end per-doc AI-action provenance join-table</strong> — 13-column join per-AI-action per-doc per-workspace per-prompt per-doc-chunk per-Pack-call per-model-version per-region (SOC 2 CC7.2 + EU AI Act Art. 12 + ISO 42001 §9.4 + ISO 27701 + GDPR Art. 30 + Schrems II SCC + APPI + PH DPA + 12-state AI-disclosure).</li>
+<li><strong>Per-AI-feature-type + per-prompt-template version-control evidence</strong> — every AI output must be cryptographically bound to the exact AI feature type (AI Brain / AI column / AI chat) + the prompt template version + the Coda Brain model version that produced it (EU AI Act Art. 14 human-oversight + ISO 42001 §6.1.4 + ABA Model Rule 1.1).</li>
+<li><strong>Cross-workspace + cross-Pack PII isolation</strong> — per-workspace + per-Coda-tenant + per-Pack-credential-rotation log + per-Pack-API-key-scope manifest + per-region KMS-key-rotation log (SOC 2 CC6.1 + GDPR Art. 28 + Schrems II SCC + EU-US DPF + APPI + PH DPA + ISO 27701).</li>
+<li><strong>Hostile-prompt + AI-output-poisoning + doc-exfiltration + Pack-credential-exfil defense</strong> — per-AI-action hostile-input classifier score + per-AI-output anomaly log + per-doc-PII classifier score + per-Pack-credential-exfil detector log (OWASP LLM Top 10 LLM01/03/06/08 + MITRE ATLAS + EU AI Act Art. 14 + Art. 50 + 12-state AI-disclosure).</li>
+<li><strong>AI-action ↔ business-outcome cryptographic binding</strong> — per-AI-action ↔ per-doc-state-change cryptographic binding manifest + per-AI-output downstream-effect log + 7-year WORM retention (SOC 2 CC8.1 + FRCP 34 + EU AI Act Art. 12 + SEC 17a-4 WORM + ISO 42001 + SOX 404 for material financial Packs).</li>
+</ol>
+
+<h2>What to ask Coda in vendor-DD</h2>
+<ul>
+<li>A sample per-AI-action 13-column join-table export from a Fortune 500 customer (de-identified) covering at least 10,000 AI actions across AI Brain + AI column + AI chat.</li>
+<li>The per-AI-feature-type + per-prompt-template version-control policy + the per-quarter drift-detection log + the per-model-version (Coda / OpenAI / Anthropic) rotation schedule.</li>
+<li>The per-workspace + per-Pack-credential rotation policy + the per-region Schrems-II-cross-border-transfer provenance manifest.</li>
+<li>The hostile-prompt + AI-output-poisoning incident-response runbook + the doc-PII-exfiltration detection log + the most recent red-team / purple-team engagement summary.</li>
+<li>The AI-action ↔ business-outcome cryptographic binding manifest + the 7-year WORM retention policy + the SEC 17a-4 attestation if Coda is in the financial-controls path.</li>
+<li>The EU AI Act Aug 2 2026 GPAI documentation submission + the Art. 14 human-oversight attestation + the Art. 50 transparency-obligation attestation.</li>
+</ul>
+
+<h2>When the gap surfaces in real audits</h2>
+<p>The Coda AI gap shows up most often in three patterns: (a) a buyer sends an HR candidate pipeline through Coda AI and a candidate files a GDPR Art. 22 right-to-explanation request — without the AI-action provenance join-table the buyer cannot explain which AI column ranked the candidate; (b) a buyer runs a financial close through a Coda Pack connected to NetSuite / Stripe and SOX 404 evidence cannot be reconstructed; (c) a buyer runs an EU AI Act-regulated HR use case through Coda AI and Art. 12 reconstruction cannot be satisfied because the per-AI-action join-table doesn't include the doc-chunk + Pack-call + model-version triplet. All three are preventable with a 48-hour fixed-fee audit and a verifiable evidence manifest.</p>
+
+<h2>Engagement model</h2>
+<p>Talon Forge Atlas runs a fixed-fee $500 / 48-hour Coda AI audit that produces a verifiable evidence manifest mapping every AI action in scope to its 13-column provenance join, the Pack-credential rotation log, the AI-output anomaly log, the hostile-prompt detection log, and the WORM retention policy. The output is a buyer-ready PDF + a SOC 2 CC7.2 / EU AI Act Art. 12 / ISO 42001 / GDPR Art. 22 evidence binder you can hand to your auditor, your regulator, or your CISO. No retainers, no hourly billing, no surprises.</p>
+
+<a class="cta" href="https://talonforgehq.github.io/atlas-store/#contact">Request a $500 / 48-hour Coda AI audit</a>
+
+<footer>
+<p>Talon Forge LLC · Independent buyer-side AI compliance + audit · Not affiliated with Coda Inc. · Verify all evidence directly with Coda and your own counsel.</p>
+</footer>
+</body>
+</html>
