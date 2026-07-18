@@ -39,11 +39,24 @@ if not TEMPLATE.exists():
 
 with LEADS.open("r", encoding="utf-8", newline="") as fh:
     rows = list(csv.reader(fh))
-if any(existing and existing[0] == row[0] for existing in rows):
-    raise SystemExit("lead 559 already exists; refusing duplicate")
+id_matches = [existing for existing in rows if existing and existing[0] == row[0]]
+if id_matches:
+    complete = (
+        len(id_matches) == 1
+        and id_matches[0][:7] == row[:7]
+        and TEMPLATE.exists()
+        and TICK_ID in BUILD_LOG.read_text(encoding="utf-8")
+    )
+    if complete:
+        print("NO-OP: lead 559 and Tick 560 already exist")
+        raise SystemExit(0)
+    raise SystemExit("conflicting lead 559 exists; refusing mutation")
 if any(len(existing) > 1 and existing[1].strip().lower() == "avoma" for existing in rows):
     raise SystemExit("Avoma already exists; refusing duplicate")
+raw = LEADS.read_bytes()
 with LEADS.open("a", encoding="utf-8", newline="") as fh:
+    if raw and not raw.endswith((b"\n", b"\r")):
+        fh.write("\n")
     csv.writer(fh, quoting=csv.QUOTE_ALL, lineterminator="\n").writerow(row)
 
 entry = f'''<div class="tick-entry" data-tick="{TICK_ID}">
