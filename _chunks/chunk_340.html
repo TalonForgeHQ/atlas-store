@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Data Labeling Vendor Due Diligence Checklist 2026: EU AI Act, SOC 2, ISO 42001 | Talon Forge Atlas</title>
+<meta name="description" content="A practical 2026 AI data labeling vendor due diligence checklist for procurement, legal, security, and AI governance teams comparing Labelbox, Scale AI, Appen, Surge AI, Snorkel AI, and Innodata. Covers EU AI Act evidence, SOC 2, ISO 42001, dataset provenance, annotator controls, prompt-injection defenses, tenant isolation, retention, and a 48-hour audit option.">
+<meta name="keywords" content="AI data labeling vendor due diligence checklist 2026, AI annotation vendor security questionnaire, EU AI Act data labeling vendor, SOC 2 AI annotation, ISO 42001 data labeling, RLHF vendor due diligence, training data provenance checklist, AI procurement checklist">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_340.html">
+<meta property="og:title" content="AI Data Labeling Vendor Due Diligence Checklist 2026">
+<meta property="og:description" content="A 25-question buyer checklist for AI annotation, RLHF, evaluation-data, and training-data vendors.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_340.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Data Labeling Vendor Due Diligence Checklist 2026",
+  "author": {"@type": "Organization", "name": "Talon Forge LLC"},
+  "publisher": {"@type": "Organization", "name": "Talon Forge LLC"},
+  "datePublished": "2026-07-19",
+  "dateModified": "2026-07-19",
+  "description": "A practical procurement checklist for evaluating AI data labeling, RLHF, annotation, and evaluation-data vendors in 2026."
+}
+</script>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;color:#172033;max-width:920px;margin:0 auto;padding:24px;background:#f8fafc}header,.panel{background:#fff;border:1px solid #dbe4f0;border-radius:10px;padding:22px;margin:18px 0}header{border-top:5px solid #0f4c81}h1,h2{color:#0f4c81}h1{font-size:31px;line-height:1.18}h2{margin-top:34px;border-left:4px solid #0f4c81;padding-left:12px}h3{color:#263b57}.meta{font-size:13px;color:#64748b}.cta{display:inline-block;background:#0f4c81;color:#fff;padding:12px 18px;border-radius:6px;text-decoration:none;font-weight:700}.checklist li{margin:10px 0;padding-left:4px}table{border-collapse:collapse;width:100%;background:#fff;margin:18px 0}th,td{border:1px solid #cbd5e1;padding:10px;text-align:left;vertical-align:top}th{background:#0f4c81;color:#fff}code{background:#e8eef6;padding:2px 5px;border-radius:3px}.note{background:#eef6ff;border-left:4px solid #3b82f6;padding:14px 16px}.warning{background:#fff7ed;border-left:4px solid #f97316;padding:14px 16px}footer{margin-top:40px;padding-top:18px;border-top:1px solid #cbd5e1;color:#64748b;font-size:13px}
+</style>
+</head>
+<body data-tick="2026-07-19-fast-exec-ai-data-labeling-dd-checklist-535">
+<header>
+<h1>AI Data Labeling Vendor Due Diligence Checklist 2026</h1>
+<p class="meta">Buyer guide · Procurement + Legal + Security + AI Governance · Published 2026-07-19</p>
+<p>Use this checklist before purchasing AI annotation, RLHF, evaluation-data, red-team-data, programmatic labeling, or content-engineering services. It turns six vendor-specific Atlas reviews into one buyer-intent framework your procurement team can reuse.</p>
+<a class="cta" href="https://talonforgehq.github.io/atlas-store/#contact">Request a $500 / 48-hour vendor audit</a>
+</header>
+
+<div class="note"><strong>Scope:</strong> This is an independent due-diligence framework, not a certification or legal opinion. Ask each vendor for current evidence and verify contract language against your own systems, data classes, regions, and risk profile.</div>
+
+<h2>The short answer: what evidence should a buyer request?</h2>
+<p>A mature AI data vendor should be able to connect every delivered label or preference judgment to a source asset, task, annotator or labeling function, model or workflow version, quality-review decision, tenant, region, contract or license basis, and immutable audit event. A certificate alone does not prove that chain.</p>
+<p>The minimum useful evidence bundle is: <strong>(1) task-to-dataset provenance, (2) training-data and license provenance, (3) hostile-input and poisoning controls, (4) tenant and regional isolation evidence, and (5) retention, deletion, and cost attribution.</strong></p>
+
+<h2>25-question AI data labeling vendor checklist</h2>
+<div class="panel">
+<h3>1. Task, asset, annotator, and model provenance</h3>
+<ol class="checklist">
+<li>Can you export a join table linking <code>source_asset_id → task_id → annotation_id → reviewer_id → dataset_version_id → delivery_id</code>?</li>
+<li>For programmatic labeling, can you link each output to the exact labeling-function version and conflict-resolution policy?</li>
+<li>For RLHF or evaluation data, can you identify the preference rubric, evaluator cohort, language, region, and quality-review result?</li>
+<li>Can audit events be exported in a machine-readable format without opening a support ticket?</li>
+<li>How do you preserve provenance when a dataset is filtered, merged, deduplicated, re-labeled, or used in a fine-tuning run?</li>
+</ol>
+</div>
+<div class="panel">
+<h3>2. Training-data rights and documentation</h3>
+<ol class="checklist" start="6">
+<li>What contractual basis permits collection, annotation, transformation, model training, and downstream redistribution of each data class?</li>
+<li>Can you produce dataset cards, source summaries, consent records, and rights or license metadata at delivery time?</li>
+<li>How do you identify copyrighted, personal, biometric, health, financial, confidential, or location data before work begins?</li>
+<li>Can you support a customer preparing EU AI Act technical documentation or a copyright-policy summary without reconstructing evidence manually?</li>
+<li>What is the deletion and downstream-recall process when a source record is disputed, withdrawn, or found to lack rights?</li>
+</ol>
+</div>
+<div class="panel">
+<h3>3. Prompt injection, poisoned inputs, and evaluator integrity</h3>
+<ol class="checklist" start="11">
+<li>How are embedded instructions, malicious documents, data-poisoning attempts, and tool-output injection detected before annotators or models process them?</li>
+<li>Are annotator workspaces isolated from unnecessary secrets, customer systems, and model credentials?</li>
+<li>How do you detect collusion, copied answers, rubric gaming, synthetic-account abuse, or anomalous evaluator behavior?</li>
+<li>Can you replay the exact decision path for a disputed label, safety score, or preference judgment?</li>
+<li>Which controls map to your actual threat model, and which are merely generic policy statements?</li>
+</ol>
+</div>
+<div class="panel">
+<h3>4. Tenant, workforce, and regional isolation</h3>
+<ol class="checklist" start="16">
+<li>Are customer assets, annotation queues, exports, embeddings, and quality metrics isolated by tenant?</li>
+<li>Can customers restrict processing by annotator geography, language, clearance, or employment classification?</li>
+<li>Where are raw assets, temporary files, backups, logs, and derived datasets stored and replicated?</li>
+<li>What subprocessor and cross-border transfer mechanisms cover each processing region?</li>
+<li>Are customer-managed keys, single-tenant storage, private networking, or dedicated workforces available for high-risk data?</li>
+</ol>
+</div>
+<div class="panel">
+<h3>5. Retention, deletion, incident response, and unit economics</h3>
+<ol class="checklist" start="21">
+<li>Can retention be configured separately for raw assets, annotations, reviewer notes, prompts, logs, exports, and backups?</li>
+<li>Can the vendor prove deletion across primary storage, caches, backups, work queues, and downstream derived datasets?</li>
+<li>Are critical audit records tamper-evident or WORM-capable, with tested restoration and incident timelines?</li>
+<li>Can invoices be reconciled to tasks, assets, languages, quality tiers, rework, model calls, and reviewer hours?</li>
+<li>What happens to customer evidence, exports, and deletion obligations at contract termination or vendor acquisition?</li>
+</ol>
+</div>
+
+<h2>How to score the answers</h2>
+<table>
+<thead><tr><th>Score</th><th>Evidence quality</th><th>Buyer action</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>Claim only; no artifact or owner</td><td>Treat as an open control gap</td></tr>
+<tr><td>1</td><td>Policy or screenshot; limited scope</td><td>Request implementation evidence</td></tr>
+<tr><td>2</td><td>Export, log sample, contract clause, or tested control</td><td>Validate coverage and exceptions</td></tr>
+<tr><td>3</td><td>Repeatable export tied to IDs, owners, regions, and retention</td><td>Accept with monitoring</td></tr>
+</tbody>
+</table>
+<p>Score all 25 questions from 0–3. A raw score is less important than the distribution: any zero in provenance, data rights, tenant isolation, deletion, or incident reconstruction should trigger a documented risk acceptance or remediation condition before production use.</p>
+
+<h2>Six vendor archetypes in the Atlas comparison set</h2>
+<table>
+<thead><tr><th>Vendor</th><th>Archetype</th><th>Extra diligence question</th></tr></thead>
+<tbody>
+<tr><td>Labelbox</td><td>Data-labeling platform + catalog + model workflows</td><td>How do platform events connect source assets, annotation runs, model-assisted labels, and exported dataset versions?</td></tr>
+<tr><td>Scale AI</td><td>Frontier-model data + evaluation + public-sector workflows</td><td>Which controls and evidence vary across commercial, government, and high-assurance delivery environments?</td></tr>
+<tr><td>Appen</td><td>Large global workforce + managed annotation</td><td>How are geography, worker identity, subprocessor status, and cross-border transfers constrained per project?</td></tr>
+<tr><td>Surge AI</td><td>Curated RLHF and evaluation workforce</td><td>How are evaluator quality, independence, rubric drift, and preference-judgment provenance measured?</td></tr>
+<tr><td>Snorkel AI</td><td>Programmatic labeling + weak supervision</td><td>Can each label be traced through labeling-function versions, conflicts, applied policies, and model-development steps?</td></tr>
+<tr><td>Innodata</td><td>Enterprise content engineering + multi-region delivery</td><td>How are document extraction, domain-specific annotation, delivery-center access, and regional processing evidence joined?</td></tr>
+</tbody>
+</table>
+<div class="warning"><strong>Do not score vendors from marketing pages alone.</strong> The vendor names above describe public product positioning and the distinct questions each archetype creates. Current control status must come from a scoped evidence request.</div>
+
+<h2>Map the checklist to common frameworks</h2>
+<table>
+<thead><tr><th>Checklist area</th><th>Common control anchors</th></tr></thead>
+<tbody>
+<tr><td>Provenance and auditability</td><td>SOC 2 logical/monitoring controls; ISO/IEC 42001 operational and evaluation evidence; EU AI Act recordkeeping and technical-documentation duties where applicable</td></tr>
+<tr><td>Data rights and source documentation</td><td>GDPR accountability and records; contractual IP and confidentiality terms; EU AI Act GPAI documentation obligations where applicable</td></tr>
+<tr><td>Poisoning and hostile-input defense</td><td>OWASP guidance for LLM applications; MITRE ATLAS; secure-development and incident-response controls</td></tr>
+<tr><td>Tenant and regional isolation</td><td>SOC 2 logical access; ISO/IEC 27001; data-processing agreements; transfer mechanisms and subprocessor controls</td></tr>
+<tr><td>Retention and deletion</td><td>Contract schedules; privacy obligations; regulated-recordkeeping requirements applicable to the buyer</td></tr>
+</tbody>
+</table>
+
+<h2>A 48-hour diligence sprint</h2>
+<ol>
+<li><strong>Hour 0–4:</strong> classify the data, jurisdictions, users, downstream models, and prohibited uses.</li>
+<li><strong>Hour 4–12:</strong> send the 25-question request plus a sample-export request and contract-control matrix.</li>
+<li><strong>Hour 12–24:</strong> score evidence, identify unsupported claims, and map gaps to production use cases.</li>
+<li><strong>Hour 24–36:</strong> draft remediation conditions, compensating controls, and contract redlines.</li>
+<li><strong>Hour 36–48:</strong> deliver the executive decision memo, evidence register, risk owners, and next review date.</li>
+</ol>
+<p><a class="cta" href="https://talonforgehq.github.io/atlas-store/#contact">Book the $500 / 48-hour audit</a></p>
+
+<footer>
+<p>Talon Forge LLC · Atlas · Buyer guide for AI data labeling, annotation, RLHF, evaluation-data, and training-data vendor diligence.</p>
+<p>Long-tail target: AI data labeling vendor due diligence checklist 2026 · Related: AI annotation vendor security questionnaire · EU AI Act training-data vendor audit · ISO 42001 AI data labeling.</p>
+</footer>
+</body>
+</html>
