@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlphaSense + Tegus AI Market Intelligence Audit 2026: FINRA 4511 and SEC 17a-4 WORM</title>
+  <meta name="description" content="A 2026 AlphaSense and Tegus audit checklist for AI market intelligence, expert-call transcript provenance, FINRA Rule 4511, SEC Rule 17a-4 WORM retention, MNPI controls, and EU AI Act evidence." />
+  <meta name="keywords" content="AlphaSense audit 2026, Tegus expert call compliance, AI market intelligence audit, FINRA Rule 4511 AI, SEC Rule 17a-4 WORM AI, MNPI expert calls, AlphaSense vendor due diligence, EU AI Act financial services, AI research provenance" />
+  <link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_323.html" />
+</head>
+<body>
+  <main>
+    <article id="chunk-323" data-lead="502" data-vertical="ai_finance" data-cohort="hebbia-501-alphasense-502">
+      <header>
+        <p><strong>2026 audit checklist · AI finance · Lead 502</strong></p>
+        <h1>AlphaSense + Tegus AI Market Intelligence Audit 2026: FINRA 4511, SEC 17a-4 WORM, and Expert-Call Provenance</h1>
+        <p>AlphaSense combines AI market-intelligence search, earnings-call transcripts, SEC filings, broker research, company analysis, event coverage, and the Tegus expert-call corpus in one analyst workflow. That consolidation creates a practical vendor-due-diligence question: can a regulated buyer reconstruct exactly which source, expert call, search result, citation, and model-generated summary informed an investment or strategy decision?</p>
+        <p><strong>Strategic privacy channel:</strong> <a href="mailto:dataprivacyteam@alpha-sense.com">dataprivacyteam@alpha-sense.com</a>. Founders: Jack Kokko and Raj Neervannan. AlphaSense is the second <code>ai_finance</code> cohort member after Hebbia 501.</p>
+      </header>
+
+      <section>
+        <h2>The long-tail compliance gap AlphaSense buyers are searching for</h2>
+        <p>The useful search is not simply “AlphaSense compliance.” Enterprise research, compliance, legal, and procurement teams need an <strong>AlphaSense + Tegus expert-call provenance audit</strong> that maps AI summaries back to their evidence while preserving FINRA Rule 4511 books and records, SEC Rule 17a-4 WORM retention, MiFID II timing, MNPI wall-crossing controls, and EU AI Act technical-documentation evidence.</p>
+        <p>A screenshot of a cited answer is not enough. The evidence has to survive quarterly reconstruction: the buyer should be able to start from an analyst output and traverse backward through the AlphaSense tenant, workflow, query, result, source document, citation, LLM summary, and any Tegus expert-call material involved.</p>
+      </section>
+
+      <section>
+        <h2>The minimum 14-column AlphaSense provenance row</h2>
+        <ol>
+          <li><strong>alpha_sense_document_id</strong> — canonical source object.</li>
+          <li><strong>search_query_id</strong> — user or workflow query.</li>
+          <li><strong>search_result_id</strong> — ranked result selected or cited.</li>
+          <li><strong>source_document_id</strong> — filing, transcript, research note, or event source.</li>
+          <li><strong>citation_id</strong> — citation pointer and page or timestamp.</li>
+          <li><strong>llm_summary_id</strong> — model-generated summary or answer.</li>
+          <li><strong>tegus_expert_call_id</strong> — expert-call transcript object, when present.</li>
+          <li><strong>expert_id</strong> — controlled expert identity reference.</li>
+          <li><strong>event_coverage_id</strong> — monitored company or market event.</li>
+          <li><strong>broker_research_id</strong> — licensed sell-side research object.</li>
+          <li><strong>analyst_workflow_id</strong> — end-to-end user workflow.</li>
+          <li><strong>alpha_sense_tenant_id</strong> — customer isolation boundary.</li>
+          <li><strong>customer_firm_id</strong> — regulated buyer or business unit.</li>
+          <li><strong>procurement_vendor_dd_event_id</strong> — evidence package and approval event.</li>
+        </ol>
+        <p>Store the row with immutable timestamps, model and prompt versions, access-control decisions, license terms, retention class, residency region, and a cryptographic evidence hash. Those fields support SOC 2 CC7.2, EU AI Act Article 12 logging, FINRA Rule 4511, SEC Rule 17a-4, MiFID II RTS 25, and internal model-risk review.</p>
+      </section>
+
+      <section>
+        <h2>Five audit gaps to test before approving AlphaSense + Tegus</h2>
+        <h3>1. Citation-to-source reconstruction</h3>
+        <p>Pick a sample of AI-generated answers and reconstruct each statement to the exact filing page, earnings-call timestamp, research note, event record, or expert-call segment. Record missing citations, stale index versions, inaccessible licensed sources, and any answer whose evidence changed after generation.</p>
+        <h3>2. Expert-call MNPI and wall-crossing controls</h3>
+        <p>Test whether Tegus expert-call content carries expert identity controls, consent and license provenance, call date, restricted-list checks, MNPI flags, wall-crossing status, review disposition, and downstream citation lineage. Map the control to FINRA Rule 5280, SEC Rule 10b-5 policies, and the buyer’s insider-trading procedures.</p>
+        <h3>3. Licensed research and training-data provenance</h3>
+        <p>Separate rights to display or summarize broker research from rights to use that material for retrieval, evaluation, tuning, or model training. Maintain source-level license terms, territory, retention period, deletion obligations, and model-use restrictions for every corpus class.</p>
+        <h3>4. Cross-tenant and cross-firm isolation</h3>
+        <p>Prove that queries, watchlists, uploaded documents, expert-call access, prompts, summaries, and audit logs cannot cross AlphaSense tenants or customer firms. Capture tenant key identifiers, CMK/BYOK configuration where available, region, role, policy decision, and negative isolation-test evidence.</p>
+        <h3>5. WORM retention and cost attribution</h3>
+        <p>Retain the query-to-answer reconstruction package for the buyer’s required period and test export into a WORM-capable archive. Add per-query, per-document, per-summary, per-expert-call, per-workflow, and per-business-unit cost fields so finance can reconcile usage without weakening evidence retention.</p>
+      </section>
+
+      <section>
+        <h2>AlphaSense vs. Hebbia: where the audit overlays differ</h2>
+        <table>
+          <thead><tr><th>Audit surface</th><th>AlphaSense + Tegus</th><th>Hebbia</th></tr></thead>
+          <tbody>
+            <tr><td>Primary workflow</td><td>Market-intelligence search, monitoring, broker research, and expert calls</td><td>Multi-document analysis and structured analyst workflows</td></tr>
+            <tr><td>Highest-risk source</td><td>Tegus expert-call transcript and licensed broker research</td><td>Customer-uploaded document set and multi-step synthesis</td></tr>
+            <tr><td>Unique control</td><td>Expert consent, MNPI flag, wall-crossing status, and research-license lineage</td><td>Document-chunk, reasoning-step, and citation-confidence lineage</td></tr>
+            <tr><td>Shared requirement</td><td colspan="2">FINRA 4511 + SEC 17a-4 WORM + MiFID II timing + tenant isolation + citation reconstruction + EU AI Act evidence</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Ten buyer questions for an AlphaSense vendor-DD review</h2>
+        <ol>
+          <li>Can we export a complete query-to-source and summary-to-citation lineage record?</li>
+          <li>Does the export include prompt, model, index, source, and access-policy versions?</li>
+          <li>How are Tegus expert identity, consent, MNPI, and wall-crossing controls represented?</li>
+          <li>Which broker-research licenses permit retrieval, summarization, evaluation, or model use?</li>
+          <li>Can retention events be mirrored into our SEC Rule 17a-4 WORM archive?</li>
+          <li>How is deletion handled when a licensed source or customer upload must be removed?</li>
+          <li>What prevents cross-tenant leakage through search, summaries, caches, or support tooling?</li>
+          <li>Which subprocessors receive queries, documents, embeddings, prompts, or completions?</li>
+          <li>Can we run quarterly reconstruction and tenant-isolation tests without vendor intervention?</li>
+          <li>Can costs be attributed to the exact query, source, expert call, workflow, and business unit?</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>What the 48-hour audit delivers</h2>
+        <p>The <strong>$500 one-time audit</strong> delivers the 14-column provenance schema, a source-license register, an expert-call MNPI control matrix, a tenant-isolation evidence checklist, and a FINRA 4511 / SEC 17a-4 WORM reconstruction drill. The <strong>$497/month retainer</strong> keeps those artifacts current as the AlphaSense + Tegus stack, subprocessors, customer workflows, and EU AI Act obligations change.</p>
+        <p>For an AlphaSense-side DPO, security, compliance, legal, or procurement review, email <a href="mailto:dataprivacyteam@alpha-sense.com">dataprivacyteam@alpha-sense.com</a> and reference the “AlphaSense + Tegus 14-column provenance workbook.”</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
