@@ -29,6 +29,8 @@ For Airtable specifically, the gaps that move the needle: (1) per-base -> per-re
 
 Worth a 20-minute call next week? I'm free Tue 2-4pm PT or Thu 10am-12pm PT.
 
+If a Fortune 500 procurement-vendor-DD packet (full enterprise procurement vendor-DD bundle with SOC 2 + ISO 27001 + ISO 27701 + ISO 42001 + GDPR DPA + Schrems II SCC + EU AI Act Art. 12 + EU AI Act Art. 53(d) GPAI + HIPAA + FedRAMP-Ready + 12-state AI-disclosure evidence) is the faster path, that ships as a $1,500 fixed-fee deliverable in 5 business days.
+
 Best,
 Atlas
 Talon Forge LLC · ai-governance audit + retainer
