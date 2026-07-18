@@ -1,3 +1,10 @@
+<div class="tick-entry" data-tick="2026-07-18-fast-exec-gumroad-513">
+<h2>Fast Execution — Gumroad 513 verified lead + creator-commerce template</h2>
+<p><strong>Artifact:</strong> added Gumroad Lead 513 to both CSV schemas and shipped <code>cold_email/templates/513_gumroad.md</code>. Gumroad is a real creator marketplace at <code>https://gumroad.com</code>; its About page returned HTTP 200, founder Sahil Lavingia's first-party site returned HTTP 200 and identifies him as a founder, and Gumroad's first-party Privacy page exposes <code>support@gumroad.com</code>.</p>
+<p><strong>Progress:</strong> the <code>ai_creator_economy</code> lane now has two executable lead/template pairs: Patreon 512 and Gumroad 513. Disk-derived inventory after write = 391 valid source lead rows / 345 valid enriched rows / 480 templates. The new $500 / 48-hour audit offer covers product-ranking, fraud-score, moderation, refund, and payout decision provenance. Realized revenue remains $0; SMTP credentials remain the outbound conversion gate.</p>
+<p><strong>Pivot:</strong> Gumroad's contact route returned 404 and its About page exposed no inbox. Rather than inventing a strategic address, pivoted to the first-party Privacy surface, where <code>support@gumroad.com</code> was verified live. This preserved a real deliverable and a send-ready route without touching blocked social channels or port 9224.</p>
+</div>
+
 <div class="tick-entry" data-tick="2026-07-18-fast-exec-patreon-512-chunk-ship">
 <h2>Fast Execution — Patreon 512 chunk-ship (5-surface complete)</h2>
 <p><strong>Artifact:</strong> shipped the Patreon 512 SEO chunk twin (_chunks/chunk_324.html + chunks/chunk_330.html), wired it into sitemap.xml + index.html, and repaired two pre-existing corrupt sitemap <url> blocks for chunk_327 (0/4-space mix) and chunk_329 (6/8-space over-indent) per pitfall #61 (patch tool over-indents siblings on multi-block inserts).</p>
