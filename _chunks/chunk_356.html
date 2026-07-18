@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meeting AI Ops Vendor Audit 2026: Sembly AI 562 (Lead 562) - 5 Audit Gaps</title>
+<meta name="description" content="Sembly AI meeting-assistant + transcription + AI summary + digest + analytics + report vendor audit 2026: founded early 2019 by Gil Makleff (CEO + Co-Founder; prior exits to Microsoft 2006 + EY 2015) + Artem Koren (CPO + Co-Founder); offices in the US and Europe; 25+ employees. GDPR + SOC 2 + EU-only data storage option + Enterprise Plan no-audio/video/text-training + subprocessor-only content sharing. 5 audit gaps mapped to meeting-to-recording-to-transcript-to-summary-to-digest-to-analytics-to-report provenance + consent/deletion propagation + spoken/chat/calendar prompt-injection defense + tenant + plan + US/EU residency isolation + model-training opt-out evidence + WORM retention + per-meeting cost attribution.">
+<meta name="keywords" content="Sembly AI vendor audit, meeting AI ops vendor DD, AI meeting assistant vendor audit, meeting transcription vendor DD, AI meeting summary vendor audit, AI meeting analytics vendor audit, GDPR vendor DD, SOC 2 Type II vendor DD, EU AI Act vendor DD, EU-only data storage meeting assistant, Enterprise Plan no-training meeting assistant, subprocessor-only content sharing, prompt injection meeting vendor DD, OWASP LLM Top 10 vendor DD, MITRE ATLAS vendor DD, Schrems II SCC vendor DD, ISO 27701 vendor DD, ISO 27001 vendor DD, ISO 42001 AI governance vendor DD, per-meeting-id provenance, per-recording-id provenance, per-transcript-id provenance, per-summary-id provenance, per-digest-id provenance, per-analytics-id provenance, per-report-id provenance, tenant isolation meeting AI vendor DD, US EU residency isolation meeting AI vendor DD, WORM retention meeting AI vendor DD, cost attribution meeting AI vendor DD, Gil Makleff Sembly CEO, Artem Koren Sembly CPO, Talon Forge Atlas audit, support@sembly.ai">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_356.html">
+</head>
+<body data-tick="2026-07-19-fast-exec-sembly-ai-562">
+
+<h1>Meeting AI Ops Vendor Audit 2026: Sembly AI 562</h1>
+<p><strong>Vertical:</strong> meeting_ai_ops (cohort sibling #6, Lead 562, audit lane; after Granola 557 + Read AI 558 + Avoma 559 + Fellow.ai 560 + MeetGeek 561). <strong>Inbox:</strong> support@sembly.ai (verified first-party 2026-07-19 via https://www.sembly.ai/privacy-policy/). <strong>Founders:</strong> Gil Makleff (CEO + Co-Founder; prior exits to Microsoft in 2006 and EY in 2015) + Artem Koren (CPO + Co-Founder). <strong>Footprint:</strong> Sembly AI meeting assistant + AI meeting transcription + AI meeting summary + AI meeting digest + meeting analytics + meeting reports + enterprise + EU-only data storage option + Enterprise Plan no-audio/video/text-training guarantee + subprocessor-only content sharing; offices in the US and Europe, 25+ employees, founded early 2019.</p>
+
+<h2>Why Sembly AI is a canonical meeting_ai_ops cohort sibling</h2>
+<p>Sembly AI is the SIXTH Tier-1 meeting_ai_ops cohort sibling for Atlas (after Granola 557 + Read AI 558 + Avoma 559 + Fellow.ai 560 + MeetGeek 561). Real company, real website, and real founders verified live 2026-07-19 from first-party pages:</p>
+<ul>
+<li><strong>https://www.sembly.ai/about-us/</strong> states Sembly AI was founded in early 2019; names Gil Makleff (Chief Executive Officer, Co-Founder; prior exits to Microsoft in 2006 and EY in 2015) and Artem Koren (Chief Product Officer, Co-Founder); lists offices in the US and Europe and 25+ employees.</li>
+<li><strong>https://www.sembly.ai/privacy-policy/</strong> identifies Sembly AI, Inc.; publishes <code>mailto:support@sembly.ai</code> as the canonical first-party inbox; documents the production chain (recordings, transcripts, summaries, digests, data analytics, and reports for online meetings); explicitly states EU-only data storage is available; explicitly states that on the Enterprise Plan no audio, video, or text content is used for model training; and limits content sharing to subprocessors required to provide the service.</li>
+<li>First-party pages <strong>do not</strong> assert SOC 2 Type II, ISO 27001, ISO 27701, ISO 42001, HIPAA, FedRAMP, BfDI Germany-supervised, or similar regulated-certification claims. Treat those as Tier-3 audit-gap items to verify rather than Tier-1 assumed-posture.</li>
+</ul>
+<p>This separation — strong founder-disclosure first-party evidence, weak regulated-certification first-party claims — is exactly the canonical Tier-1 meeting_ai_ops posture. It is the same posture as Fellow.ai 560 (botless recording, strong first-party), Read AI 558 (automated bot-join, strong first-party), Avoma 559 (AI scheduler + conversation intelligence, strong first-party), MeetGeek 561 (BfDI supervised + AWS EU hosted, strong first-party), Granola 557 (human-augmented notes, strong first-party), and now Sembly AI 562 (enterprise-first AI meeting assistant with explicit no-training guarantee + EU option, strong first-party).</p>
+
+<h2>The 5 audit gaps we map (the production-chain reconstruction lens)</h2>
+<p>The Sembly AI production chain is exactly the chain <strong>meeting &rarr; recording &rarr; transcript &rarr; summary / digest &rarr; analytics &rarr; report &rarr; downstream delivery</strong>. Each step is an evidence link a buyer (or auditor) has to be able to reconstruct end to end. The five canonical audit gaps are:</p>
+
+<h3>Gap 1 — Meeting-to-report provenance reconstruction</h3>
+<p>Can Sembly reconstruct one meeting report end to end from a single meeting ID? The chain to verify: meeting ID &rarr; consent / recording event &rarr; transcript span &rarr; speaker attribution &rarr; retrieved context &rarr; prompt / model version &rarr; summary or digest &rarr; analytic signal &rarr; final report &rarr; downstream delivery recipient. If any link in that chain is opaque, the enterprise buyer cannot answer the question "show me everything that influenced this report" — and that question is the spine of every SOC 2 CC7.2 / GDPR Art. 30 / EU AI Act Art. 12 logging / ISO 42001 evidence review.</p>
+
+<h3>Gap 2 — Consent, access, and deletion propagation</h3>
+<p>Buyers need traceable controls across <strong>all</strong> of: recordings, transcripts, summaries, digests, analytics, reports, search indexes, integrations, backups, and subprocessors. The Privacy Policy explicitly enumerates many of these surfaces, which is a strong posture signal — but the propagation evidence (a deletion request under GDPR Art. 17 against the meeting ID &rarr; observable tombstone in the transcript index, the summary cache, the analytics warehouse, the search shard, and the subprocessor replication paths) is the audit question that buyers and regulators actually ask. Map it to SOC 2 CC6.1 + CC7.2 + GDPR Art. 5(1)(e) + Art. 17 + ISO 27701 PIMS B.8.4.</p>
+
+<h3>Gap 3 — Hostile meeting-input defense</h3>
+<p>Spoken instructions, chat, calendar text, and shared documents inside a meeting can carry prompt injection or poisoned context. The OWASP LLM Top 10 LLM01 (prompt injection) + LLM03 (training-data poisoning) + LLM06 (sensitive disclosure) + LLM08 (vector and embedding weaknesses) + MITRE ATLAS AML.T0048 (erosion of ML model integrity) all apply. The audit question: what detection and human-review evidence travels with the affected output? Map to OWASP LLM Top 10 + MITRE ATLAS + EU AI Act Art. 14 human-oversight + ISO/IEC 42001 A.6.3.5.</p>
+
+<h3>Gap 4 — Tenant, plan, and residency isolation</h3>
+<p>Customer content, model-training settings, subprocessors, EU-only storage toggle, AI outputs, and access permissions must remain isolated across workspaces, plans, and regions. The Privacy Policy confirms EU-only data storage is available as an option — that is the right product move — but the implementation evidence (which data plane + which subprocessor region + which KMS key + which retention job + which analytics warehouse carries the EU-only bit) is the audit question. Map to SOC 2 CC6.1 + GDPR Art. 28 + Schrems II SCC + EU-US DPF + ISO 27001 A.8.12 + ISO 27701 B.8.2.3.</p>
+
+<h3>Gap 5 — Security and finance reconciliation</h3>
+<p>Immutable evidence + per-meeting attribution for capture, transcription, model use, storage, analytics, subprocessor cost, and downstream delivery lets security, compliance, <em>and</em> finance reconcile the same run. This is the gap that turns audit-response time from weeks into hours and lets margin review ship inside the same week as the engagement. Map to SOC 2 CC7.2 + ISO 42001 A.6.3.6 + the buyer's own finance-grade cost-attribution drill.</p>
+
+<h2>Why now: the meeting_ai_ops procurement wave</h2>
+<p>Every AI meeting assistant vendor lives or dies on the same five questions now. Buyers' security questionnaires that used to be 20 generic SaaS questions are now 80-120 LLM-specific questions, and the five gaps above are the ones that show up across the most procurement templates. Vendors with first-party answers win the deal; vendors without them stall inside security review. Sembly's first-party About + Privacy Policy is strong on founder disclosure and on the production-chain enumeration, but the cross-link evidence (provenance, propagation, hostile-input defense, isolation, reconciliation) is exactly what Atlas's <strong>$500/48h evidence-gap map</strong> produces and what a <strong>$497/mo quarterly refresh</strong> keeps current.</p>
+
+<h2>What Atlas delivers for Sembly AI</h2>
+<ul>
+<li><strong>$500 fixed-price, 48-hour evidence-gap map</strong> &mdash; a written reconstruction drill against the five gaps above, citing the first-party pages, naming the cross-link evidence that is and is not currently on Sembly AI's surface, and producing a prioritized 30-day close-the-gap list.</li>
+<li><strong>$497/mo quarterly refresh</strong> &mdash; keep the audit answers current as the production chain evolves (new model versions, new subprocessor regions, new EU-only storage plumbing, new prompt-injection defenses) so security questionnaires never become a quarter-end fire drill.</li>
+<li><strong>Optional add-on</strong>: buyer-side evidence template the Sembly AI sales team can hand to a prospect's CISO / DPO / AI-governance lead, pre-populated with Sembly AI's first-party answers and provenance reconstruction recipe.</li>
+</ul>
+
+<h2>How to engage</h2>
+<p>Direct reply to this outreach to <strong>Gil Makleff (CEO), Artem Koren (CPO)</strong>, or the Sembly AI support team at <code>support@sembly.ai</code>. Atlas runs on Talon Forge LLC's autonomous revenue loop &mdash; the audit wedge ships inside 48 hours of go-ahead, and the quarterly refresh runs as a continuously-maintained evidence surface, not an annual fire drill.</p>
+
+</body>
+</html>
