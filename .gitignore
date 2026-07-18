@@ -15,3 +15,4 @@ cold_email/.env
 cold_email/.send_state.json
 cold_email/send_log*.json
 cold_email/.hermes/.hermes/reel-Da5uIuoxgV3/
+used_car_monitor/data/

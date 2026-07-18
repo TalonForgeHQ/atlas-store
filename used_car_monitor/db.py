@@ -186,13 +186,15 @@ def fingerprint(payload: dict[str, Any]) -> str:
             return ""
         return str(v).strip().lower()
 
+    price = float(payload.get("ask_price") or 0)
+    # round price to nearest $50 so small re-prices don't split the record
+    bucket = int(round(price / 50.0) * 50)
     parts = [
         _n(payload.get("year")),
         _n(payload.get("make")),
         _n(payload.get("model")),
         _n(payload.get("trim")),
-        # round price to nearest $50 so small re-prices don't split the record
-        str(int(round(float(payload.get("ask_price") or 0) / 50) * 50)),
+        str(bucket),
         _n(payload.get("location")),
     ]
     raw = "|".join(parts)
