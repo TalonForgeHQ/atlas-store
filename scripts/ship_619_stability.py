@@ -1,4 +1,5 @@
 """Tick 619 — Stability AI ship script (5-surface + build-log prepend)."""
+import csv
 from pathlib import Path
 
 REPO = Path(r"C:\Users\Potts\projects\atlas-store")
@@ -43,8 +44,7 @@ TIER_REASON = (
 LEADS = REPO / "cold_email" / "leads.csv"
 assert LEADS.exists()
 leads_text = LEADS.read_text(encoding="utf-8")
-row_prefix = f'"{INDEX_ID}","'
-assert row_prefix not in leads_text, f"row {INDEX_ID} already in leads.csv"
+assert not leads_text.startswith(f'{INDEX_ID},') and INDEX_ID not in {r[0] for r in csv.reader(leads_text.splitlines()) if r}, f"row {INDEX_ID} already in leads.csv"
 # Escape any " in tier_reason
 tr_escaped = TIER_REASON.replace('"', '""')
 new_row = (
