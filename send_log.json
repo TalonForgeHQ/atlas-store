@@ -50,5 +50,18 @@
     "send_window": "Tue-Thu 9-11am PT",
     "send_method": "SMTP_unblocked_or_relay",
     "status": "queued"
+  },
+  {
+    "lead_index": 691,
+    "vendor": "Spellbook",
+    "inbox": "info@spellbook.legal",
+    "vertical": "ai_legal_compliance_os",
+    "tier": 1,
+    "template": "691_spellbook.md",
+    "cohort": "ai_legal_compliance_os sibling #2/5 after Harvey 690 OPENER",
+    "queued_at": "2026-07-20T05:00:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued"
   }
 ]
