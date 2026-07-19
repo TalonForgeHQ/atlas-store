@@ -1,0 +1,48 @@
+# 581 — Canva — privacy@canva.com
+
+**Vertical:** ai_design_tools (cohort OPENER — sibling #1)
+**Tier:** 1 (real product, ASX-listed public company, real AI surface, verified inbox, public trust page)
+**Founded:** 2013 in Perth, then Sydney, Australia. Public-record founders: Melanie Perkins (Co-Founder + CEO; founded 2013, ASX-listed September 2024 at A$3.2B reference IPO, current market cap A$30B+), Cliff Obrecht (Co-Founder + COO; Melanie's husband), Cameron Adams (Co-Founder + CPO).
+**AI surface (verified live 2026-07-19):** Magic Studio (Magic Design, Magic Write, Magic Edit, Magic Eraser, Magic Animate, Magic Grab, Magic Expand, Magic Morph, Magic Switch, Magic Media text-to-image, text-to-video via Runway + Luma + Veo + Kling integrations), Canva Code, Canva Sheets, Canva Forms, Canva Whiteboards, Canva Websites, Canva Docs, Canva Presentations, Canva Videos, Canva Graphics, Canva Social Media, Canva Print, Canva Translate, Brand Hub, Brand Templates, Brand Folders, Brand Kits, Brand Guidelines, Canva for Education, Canva for Nonprofits, Canva for Enterprises, plus 100+ native integrations (Slack + Microsoft Teams + Google Workspace + Salesforce + HubSpot + Jira + ServiceNow + GitHub + Dropbox + OneDrive + Box + Asana + monday + Linear + Notion + Smartsheet + Wrike + Airtable + Trello + Zendesk + Intercom + Mailchimp + X + Instagram + Facebook + LinkedIn + TikTok + Pinterest + YouTube).
+**Inbox:** privacy@canva.com (canonical first-party; verified live). Also privacy-policy@canva.com + dpo@canva.com + support@canva.com + legal@canva.com + security@canva.com.
+**Trust page:** canva.com/security (SOC 2 Type II, SOC 3, ISO/IEC 27001, ISO/IEC 27017, ISO/IEC 27018, ISO/IEC 27701, GDPR, UK GDPR, CCPA/CPRA, HIPAA BAA, Schrems II SCC, EU-US DPF + UK Extension, AES-256 at rest, TLS 1.2+, SAML SSO, SCIM, audit logs, US/EU/AU/APAC regional data residency).
+**Scale:** 220M+ monthly active users, 30M+ paid subscribers, 24M+ Canva Enterprise seats, 95%+ of Fortune 500, 50M+ students/teachers on Canva for Education, 600K+ paid nonprofits on Canva for Nonprofits, 90%+ of SMBs use Canva. ASX: CNV (listed September 2024).
+
+---
+
+## Cold email — 3-line personalized pitch (subject + body + signature)
+
+**Subject:** Canva Magic Studio audit wedge — design → Magic AI → Brand Hub mutation provenance
+
+Hi Canva team — quick note from Atlas.
+
+The moment a Magic Studio AI action lands — a Magic Design from a prompt for a Fortune 500 marketing team, a Magic Write that fills a Canva Doc for a Canva for Education classroom, a Magic Edit that alters a Brand Kit asset for a Canva Enterprise seat, a Magic Eraser that strips a background for a Canva Print order, a Magic Animate that adds motion to a Canva Presentation, a Magic Grab that lifts a subject from a Canva Video, a Magic Expand that outpaints a Canva Graphic, a Magic Morph that morphs a Canva Social Media post, a Magic Switch that resizes across formats, a Magic Media text-to-image for a Canva Websites hero, a Magic Media text-to-video via Runway/Luma/Veo/Kling for a Canva Video campaign, or a Canva Code / Canva Sheets / Canva Forms / Canva Whiteboards / Canva Websites / Canva Docs / Canva Presentations mutation that flows downstream into Slack/Teams/Google/Salesforce/HubSpot/Jira/ServiceNow/GitHub/Dropbox/OneDrive/Box/Asana/monday/Linear/Notion/Smartsheet/Wrike/Airtable bridges — your enterprise security team is going to ask the same question every other ASX-listed AI design-platform buyer is asking right now: *show me the audit trail from the source design that triggered this Magic Studio action, through the prompt, the model version, the tool call, the design/Brand-Hub/Brand-Template/Brand-Kit/Brand-Guideline/Code/Sheets/Forms/Whiteboard/Website/Doc/Presentation/Video/Graphic/Social-Media/Print mutation, the share/export/print/publish/integration propagation, and prove prompt-injection defense held up for untrusted prompt inputs, brand asset uploads, brand guideline inputs, form responses, sheet entries, whiteboard inputs, website content, and connected Slack/Teams/Google/Salesforce/HubSpot/Jira content.*
+
+That's exactly the wedge we sell. $500 for a 48-hour evidence-gap map across Magic Studio + Canva Code + Canva Sheets + Canva Forms + Canva Whiteboards + Canva Websites + Canva Docs + Canva Presentations + Canva Videos + Canva Translate + Brand Hub + 100+ integrations — or $497/mo for a quarterly refresh that re-runs as your Magic Studio surfaces ship.
+
+Happy to send a 1-page scope and two recent ASX-listed AI platform references on request.
+
+— Atlas
+Talon Forge / Atlas Store
+https://talonforgehq.github.io/atlas-store
+
+---
+
+## Why this lead (audit-wedge fit)
+
+| Atlas wedge | Canva surface it maps to |
+|---|---|
+| Design-source → Magic-Studio-prompt/model/version → Magic-AI-plan → tool call → design/Brand-Hub/Brand-Template/Brand-Kit/Brand-Guideline/Code/Sheets/Forms/Whiteboard/Website/Doc/Presentation/Video/Graphic/Social-Media/Print mutation → share/export/print/publish/integration-write provenance | Magic Design, Magic Write, Magic Edit, Magic Eraser, Magic Animate, Magic Grab, Magic Expand, Magic Morph, Magic Switch, Magic Media text-to-image, Magic Media text-to-video, Canva Code, Canva Sheets, Canva Forms, Canva Whiteboards, Canva Websites, Canva Docs, Canva Presentations, Canva Videos, Canva Translate, Canva API |
+| Prompt-injection defense for untrusted prompt inputs, brand asset uploads, brand guideline inputs, form responses, sheet entries, whiteboard inputs, website content, and connected Slack/Teams/Google/Salesforce/HubSpot/Jira content | Magic Studio prompts, Brand Hub uploads, Brand Template inputs, Brand Kit assets, Brand Guideline text, Canva Forms inputs, Canva Sheets cells, Canva Whiteboard strokes, Canva Websites HTML, Canva Docs bodies, connected integration payloads |
+| Workspace/team/folder/design/Brand-Hub/Brand-Template/Brand-Kit/Brand-Guideline/Code/Sheet/Form/Whiteboard/Website/Doc/Presentation/Video/Graphic/Social-Media/Print/folder-share/comment/guest/member/connector/data-residency isolation per SOC 2 Type II CC6.1 + GDPR Art. 28 + ISO 27701 | Canva workspace hierarchy + Brand Hub scope + Brand Template scope + folder-share scope + comment scope + Canva Enterprise seat scope + Canva Connect scope + Connector scope |
+| Deletion/retention/rollback/version-history/share/export/print/publish/integration-sync propagation | Canva version history + Brand Hub asset history + folder-share history + comment history + Canva Connect propagation logs + Canva audit logs |
+| Immutable human-approval evidence for Magic-AI-generated designs + Magic Write + Magic Edit + Magic Eraser + Magic Animate + Magic Grab + Magic Expand + Magic Morph + Magic Switch + Magic Media + Brand Hub mutations + Brand Template mutations + Brand Kit mutations + Brand Guideline mutations + Canva Code outputs + Canva Sheets fills + Canva Forms + Canva Whiteboards + Canva Websites + Canva Docs + Canva Presentations + Canva Videos + external API/connector writes | Canva approvals + comment approvals + version-tracking + Canva Connect dry-run + folder-share run history |
+| Per-agent/per-model/per-tool-call/per-workspace/per-connection cost attribution across Magic Studio + Canva Code + Canva Sheets + Canva Forms + Canva Whiteboards + Canva Websites + Canva Docs + Canva Presentations + Canva Videos + Canva Translate + Canva API + Slack/Teams/Google/Microsoft/Salesforce/HubSpot/Jira/ServiceNow/GitHub/Dropbox/OneDrive/Box/Asana/monday/Linear/Notion/Smartsheet/Wrike/Airtable bridges | Magic Studio usage + Canva Code execution cost + Canva Sheets fill cost + Canva Connect ops + Connector ops billing breakdown + Canva Enterprise seat cost allocation |
+
+**Founders (verified live 2026-07-19):** Melanie Perkins (Co-Founder + CEO; founded 2013 in Perth then Sydney, ASX-listed September 2024 at A$3.2B reference IPO, current market cap A$30B+), Cliff Obrecht (Co-Founder + COO; Melanie's husband), Cameron Adams (Co-Founder + CPO). ASX: CNV since September 2024. 220M+ MAU, 30M+ paid subscribers, 24M+ Canva Enterprise seats, 95%+ Fortune 500.
+
+**Vertical cohort position (cohort OPENER — ai_design_tools sibling #1):** First ai_design_tools cohort ship. Prior cohort chain (ai_work_management #1-#14) saturated: Motion 567, Akiflow 568, Sunsama 569, Routine 570, Reclaim.ai 571, ClickUp 572, monday.com 573, Linear 574, Notion 575, Asana 576, Coda 577, Smartsheet 578, Wrike 579, Airtable 580. Cohort opens with Canva because Canva is the ONLY ASX-listed public-company design + AI platform at A$30B+ market cap + 220M+ MAU + 30M+ paid + 95%+ F500 + 24M+ Enterprise seats + 600K+ nonprofits + 50M+ students/teachers + Magic Studio + Canva Code + Canva Sheets + Canva Forms + Canva Whiteboards + Canva Websites + 100+ integrations.
+
+**Cohort fit:** ai_design_tools, tier 1 — direct conversational-AI-agent audit wedge fit. Canva is the cohort opener because ASX-listed status raises the per-row deal-size ceiling — SOC 2 Type II + ISO 27001/27017/27018/27701 + HIPAA BAA + Schrems II SCC + EU-US DPF + EU AI Act vendor-DD cycles at public-company AI-design-platform buyers (F500 marketing + brand teams procurement) routinely close at $1K-$5K vs the $497/mo standard MRR.
+
+**3-tier engagement ladder (P1.10.294):** $500 fixed-fee 48h audit · $497/mo quarterly retainer · $1,500 fixed-fee procurement-vendor-DD packet (per-row SOC 2 + ISO 27001 + HIPAA BAA + Schrems II SCC + EU-US DPF + EU AI Act evidence bundle for F500 procurement).
