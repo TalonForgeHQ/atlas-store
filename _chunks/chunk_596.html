@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laminar AI Agent Replay Debugging EU AI Act Audit Trail 2026 | Atlas</title>
+<meta name="description" content="A practical Laminar AI agent replay debugging evidence map for EU AI Act Articles 12, 14, and 15: traces, agent steps, tool calls, state snapshots, replay deltas, and human oversight receipts.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_640.html">
+<meta name="data-tick" content="2026-07-19-fast-exec-laminar-642">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:820px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#172033}
+h1{font-size:2rem;line-height:1.2}
+h2{margin-top:2rem;color:#111827}
+.lede{background:#eff6ff;border-left:4px solid #2563eb;padding:1rem}
+.meta{color:#64748b;font-size:.92rem}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{border:1px solid #cbd5e1;padding:.55rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+.cta{background:#111827;color:#fff;padding:1.25rem;border-radius:8px;margin-top:2rem}
+.cta a{color:#93c5fd}
+</style>
+</head>
+<body data-tick="2026-07-19-fast-exec-laminar-642">
+<article>
+<h1>Laminar AI Agent Replay Debugging: EU AI Act Audit-Trail Evidence Map (2026)</h1>
+<p class="meta">Atlas @ Talon Forge LLC · Lead 642 · ai_eval_observability sibling #2 · 2026-07-19</p>
+<p class="lede"><strong>Long-tail keyword:</strong> Laminar AI agent replay debugging EU AI Act audit trail. Laminar is an open-source, agent-first observability platform designed to trace long-running agents, replay a failed execution from a chosen step, and detect failure patterns at scale. That execution-reconstruction surface is a practical starting point for EU AI Act logging, human-oversight, and robustness evidence.</p>
+<h2>Why Laminar is different from request-response LLM observability</h2>
+<p>Generic LLM monitoring often stops at prompt, completion, token count, latency, and cost. Long-running agents fail across a chain: an earlier state mutation changes a later retrieval, a tool call returns a partial result, or a retry runs under a different model or deployment version. Laminar's trace-and-replay model can preserve the causal chain needed to reproduce the failure.</p>
+<ul>
+<li><strong>Trace:</strong> capture the complete agent run rather than one isolated model call.</li>
+<li><strong>Step:</strong> locate the exact agent step where behavior diverged.</li>
+<li><strong>State snapshot:</strong> record the minimum state needed to reproduce the next action.</li>
+<li><strong>Replay origin:</strong> restart analysis from the failed step instead of rerunning the entire workflow.</li>
+<li><strong>Run delta:</strong> compare the original failure with the corrected replay.</li>
+<li><strong>Pattern detection:</strong> group recurring failures across production traces.</li>
+</ul>
+<h2>The 12-field audit-ready provenance schema</h2>
+<table>
+<thead><tr><th>Field</th><th>Evidence question</th></tr></thead>
+<tbody>
+<tr><td>agent_run_id</td><td>Which end-to-end agent execution is under review?</td></tr>
+<tr><td>trace_id</td><td>Which Laminar trace reconstructs the execution?</td></tr>
+<tr><td>agent_step_id</td><td>At which step did the material action or failure occur?</td></tr>
+<tr><td>model_and_prompt_version</td><td>Which model configuration and prompt version produced the step?</td></tr>
+<tr><td>tool_call_id</td><td>Which external tool was invoked, with what validated arguments?</td></tr>
+<tr><td>state_snapshot_hash</td><td>What minimum state can prove the replay started from the same point?</td></tr>
+<tr><td>error_class</td><td>Was the failure model, retrieval, tool, policy, timeout, or state related?</td></tr>
+<tr><td>replay_origin_step</td><td>From which step did the diagnostic replay begin?</td></tr>
+<tr><td>replay_run_id</td><td>Which corrected run can be compared with the original?</td></tr>
+<tr><td>evaluation_result</td><td>Which deterministic or human evaluation accepted the correction?</td></tr>
+<tr><td>reviewer_and_decision</td><td>Who approved, overrode, rejected, or rolled back the result?</td></tr>
+<tr><td>deployment_version</td><td>Which production release contains the correction?</td></tr>
+</tbody>
+</table>
+<h2>EU AI Act Article 12: automatic logging and reconstruction</h2>
+<p>For a deployer or provider operating an in-scope high-risk system, the useful question is not "do traces exist?" It is "can a reviewer reconstruct the material event without searching five disconnected tools?" A Laminar evidence map should join the agent run, failed step, model and prompt version, tool call, state hash, replay, reviewer decision, and deployment version into one exportable record.</p>
+<h2>Article 14: human-oversight receipts</h2>
+<ul>
+<li>Record who initiated the replay and why.</li>
+<li>Record whether the correction was approved, rejected, or escalated.</li>
+<li>Record the rollback or containment action when the replay still fails.</li>
+<li>Record acknowledgment time for a production incident.</li>
+<li>Separate diagnostic access from production-release authority.</li>
+</ul>
+<h2>Article 15: robustness evidence from replay deltas</h2>
+<p>The strongest robustness packet compares an original run with a replay under controlled changes. The report should identify the changed prompt, model, tool policy, state transition, or deployment version; show the evaluation result; and link the accepted correction to a regression test and production release.</p>
+<h2>Managed cloud and self-hosted evidence boundary</h2>
+<p>Laminar is open source and supports self-hosting, so the audit should distinguish product capability from each customer's deployment responsibility. The evidence map should state who controls encryption keys, regions, retention, backups, tenant isolation, deletion, sub-processors, and incident response in managed-cloud and self-hosted configurations.</p>
+<h2>Founder and contact verification</h2>
+<p>Laminar is a real Y Combinator S24 company. Its official YC company page identifies <strong>Robert Kim</strong> as Co-Founder and CEO and <strong>Din Mailibay</strong> as Co-Founder and CTO. The official Laminar site and YC page publish <a href="mailto:founders@lmnr.ai">founders@lmnr.ai</a>; the official product site links to the <a href="https://github.com/lmnr-ai/lmnr">open-source Laminar repository</a> and <a href="https://x.com/lmnrai">@lmnrai</a>.</p>
+<h2>48-hour deliverable</h2>
+<ol>
+<li>Current-state trace and replay data-flow diagram.</li>
+<li>12-field provenance schema with required, optional, and sensitive fields.</li>
+<li>Articles 12, 14, and 15 control-to-evidence matrix.</li>
+<li>Original-run vs replay-run robustness report template.</li>
+<li>Managed-cloud vs self-hosted responsibility matrix.</li>
+<li>Prioritized gap list: ship now, document next, monitor quarterly.</li>
+</ol>
+<div class="cta">
+<strong>Offer: $500 flat / 48 hours</strong><br>
+Implementation-ready evidence-gap map for Laminar's agent tracing and replay surface. Quarterly refresh: $497/mo.<br>
+Contact: <a href="mailto:founders@lmnr.ai">founders@lmnr.ai</a> · Template: <a href="../cold_email/templates/642_laminar.md">642_laminar.md</a>
+</div>
+<p class="meta">This page is an independent readiness analysis, not legal advice and not an official Laminar compliance statement.</p>
+</article>
+</body>
+</html>
