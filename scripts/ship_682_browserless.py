@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import json
+import sys
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -13,6 +14,31 @@ INDEX = ROOT / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 REVENUE = ROOT / "revenue_log.csv"
 SEND_LOG = ROOT / "cold_email" / "send_log.json"
+TARGET_ID = "682"
+TARGET_TICK = 'data-tick="2026-07-20-fast-exec-browserless-682"'
+TARGET_CHUNK = 'id="chunk-682"'
+TARGET_URL = "https://talonforgehq.github.io/atlas-store/chunks/chunk_682.html"
+
+
+def already_shipped() -> bool:
+    with LEADS.open("r", encoding="utf-8", newline="") as f:
+        lead_ids = {row["index"] for row in csv.DictReader(f)}
+    with ENRICHED.open("r", encoding="utf-8", newline="") as f:
+        enriched_ids = {row["lead_index"] for row in csv.DictReader(f)}
+    queue = json.loads(SEND_LOG.read_text(encoding="utf-8"))
+    return all((
+        TARGET_ID in lead_ids,
+        TARGET_ID in enriched_ids,
+        TARGET_TICK in BUILD_LOG.read_text(encoding="utf-8"),
+        TARGET_CHUNK in INDEX.read_text(encoding="utf-8"),
+        TARGET_URL in SITEMAP.read_text(encoding="utf-8"),
+        any(str(item.get("lead_index", item.get("lead_id", ""))) == TARGET_ID for item in queue),
+    ))
+
+
+if already_shipped():
+    print("completed-state no-op: lead 682 already shipped")
+    sys.exit(0)
 
 reason = (
     "Lead 682 — Browserless / browserless.io, Inc. (browserless.io managed and self-hosted browser infrastructure + "
@@ -41,10 +67,22 @@ def append_dict(path: Path, row: dict[str, str]) -> None:
         fields = reader.fieldnames
         assert fields is not None
         rows = list(reader)
-    assert "682" not in {r[fields[0]] for r in rows}, f"duplicate lead 682 in {path}"
+    assert TARGET_ID not in {r[fields[0]] for r in rows}, f"duplicate lead {TARGET_ID} in {path}"
     assert list(row) == fields, (list(row), fields)
+    raw = path.read_bytes()
     with path.open("a", encoding="utf-8", newline="") as f:
-        csv.DictWriter(f, fieldnames=fields, quoting=csv.QUOTE_ALL).writerow(row)
+        if raw and not raw.endswith((b"\n", b"\r")):
+            f.write("\n")
+        csv.DictWriter(
+            f,
+            fieldnames=fields,
+            quoting=csv.QUOTE_ALL,
+            lineterminator="\n",
+        ).writerow(row)
+    with path.open("r", encoding="utf-8", newline="") as f:
+        parsed = list(csv.DictReader(f))
+    target = [r for r in parsed if r[fields[0]] == TARGET_ID]
+    assert len(target) == 1 and None not in target[0], f"parse-back failed for {path}"
 
 
 append_dict(LEADS, {
