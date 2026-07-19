@@ -1,3 +1,13 @@
+## 2026-07-19 — tick 591 fast-exec-lucidspark-591
+
+- **Lead shipped:** Lucidspark (Lucid Software, Inc. — ai_whiteboard cohort sibling #5) — legal@lucid.co DPA/privacy-rights inbox + security@lucid.co AI-governance incident inbox verified live 2026-07-19
+- **Inventory:** 591 leads / 591 templates / 379 SEO chunks / 379 enriched
+- **Cohort:** ai_whiteboard sibling #5 (after Miro 587 + FigJam 588 + Mural 589 + Conceptboard 590), Lucidspark 591 closes the 4-vendor sibling block
+- **Inbound strategy:** $500/48h EU AI Act Art. 53(d) + FedRAMP Moderate + SOC 2 Type II + ISO 27001 + ISO 42001 + Schrems II SCC + GDPR Art. 28 evidence-gap drill OR $497/mo quarterly refresh; optional free 5-board audit on first 5 boards
+- **Cohort ceiling:** ai_whiteboard cohort now caps at **$2,500 audit / $2,485/mo MRR** if 5-vendor closes
+- **Compliance evidence:** SOC 2 Type II + ISO 27001 + FedRAMP Moderate + GDPR + EU AI Act readiness + SAML SSO + SCIM + AES-256 + TLS 1.2+ (all publicly named on lucid.co/security)
+- **Founder evidence:** Ben Dilts (Co-Founder + CTO) + Karl Sun (Co-Founder + CEO), founded 2010 in South Jordan UT, "Ben Dilts and Karl Sun co-founded Lucid Software in 2010" verbatim
+
 ## 2026-07-19 — tick 590 fast-exec-conceptboard-590
 
 - **Lead shipped:** Conceptboard (ai_whiteboard cohort sibling #4) — dataprotectionofficer@conceptboard.com DPO inbox verified live
