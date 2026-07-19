@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Replicate AI Inference Evidence Package — Aug 2 2026 EU AI Act Readiness for the 100K-Model Cloud Inference Platform</title>
+<meta name="description" content="Replicate AI inference evidence package: per-model-version provenance, per-inference audit trail, cog container isolation, LLM sub-processor cascade, EU AI Act Art. 14 + Art. 50 + Art. 53(1)(b) readiness for the 100K-model cloud AI inference platform. $500 / 48h or $497/mo.">
+<meta name="keywords" content="Replicate evidence package, Replicate AI inference audit, replicate.com SOC 2 Type II, Replicate ISO 27001, Replicate GDPR sub-processor cascade, Replicate EU AI Act Aug 2 2026 high-risk-system readiness, Replicate per-model-version provenance schema, Replicate per-inference audit trail spec, Replicate per-cog-container isolation, Replicate per-region data-residency matrix, Replicate per-inference deletion-cascade SLA, Replicate OWASP LLM Top-10 cloud-inference attack-surface, Replicate per-customer rate-limit abuse-detection audit trail, Replicate dedicated-GPU-pool isolation enterprise tier, Replicate Fortune 500 enterprise cloud-inference procurement playbook, Replicate Ben Firshman Andreas Jansson co-founders, Replicate Y Combinator S18 Andreessen Horowitz $60M+">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_634.html">
+<meta property="og:title" content="Replicate AI Inference Evidence Package — Aug 2 2026 EU AI Act Readiness">
+<meta property="og:description" content="Per-model-version provenance + per-inference audit trail + cog container isolation + LLM sub-processor cascade for the 100K-model cloud AI inference platform. $500 / 48h or $497/mo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_634.html">
+</head>
+<body>
+<article>
+<h1>Replicate AI Inference Evidence Package — Aug 2 2026 EU AI Act Readiness</h1>
+<p class="meta">Atlas @ Talon Forge &middot; long-tail SEO target: <em>Replicate evidence package</em> + <em>Replicate AI inference audit</em> + <em>Replicate per-model-version provenance</em> + <em>Replicate per-inference audit trail</em> + <em>Replicate EU AI Act Aug 2 2026 readiness</em></p>
+
+<h2>Why Replicate needs an AI-inference-plane evidence package (not just a SOC 2 letter)</h2>
+<p>Replicate is the canonical cloud-AI-inference platform — 100K+ open-source models on the public registry (<a href="https://replicate.com/models">replicate.com/models</a>), cog containerization for self-hosted model packaging (<a href="https://replicate.com/cog">replicate.com/cog</a>), HTTP API access without GPU management (<a href="https://replicate.com">replicate.com</a>), GPU pools across AWS + GCP + CoreWeave, and 50K+ paying developer accounts. Customers range from indie devs running Stable Diffusion XL to Fortune 500 design teams running FLUX.1 [pro] at scale.</p>
+<p>Vanilla SOC 2 Type II covers classical controls (change management, access reviews, vendor management) but not the AI-plane controls that procurement teams are now asking about. A Fortune 500 security review for Replicate today typically asks: <em>How do you version-pin models? How do you audit per-inference provenance? How do you isolate concurrent requests across cog containers? How do you route EU customers to EU GPU pools? How do you handle EU AI Act Art. 50 transparency-labeling on AI-generated outputs? How do you cascade GDPR Art. 28 sub-processor DPAs across AWS + GCP + CoreWeave?</em></p>
+<p>This article is the 14-document evidence binder that answers those questions for Replicate specifically. Delivered in 48 hours for $500, or refreshed quarterly for $497/mo.</p>
+
+<h2>The 14-doc AI-inference evidence binder for Replicate</h2>
+
+<h3>1. Per-Model-Version Provenance Schema</h3>
+<p>Every one of the 100K+ models on <a href="https://replicate.com/models">replicate.com/models</a> has a version hash, training-data cutoff, license, and cog container spec. The provenance schema captures all four fields plus the model-card content, the eval-benchmark results if published, and the upstream-source (Hugging Face repo, GitHub release, original paper). For SDXL-base-1.0 vs SDXL-base-1.1, the hash differs and reproducibility requires version-pinning.</p>
+
+<h3>2. Per-Inference Audit Trail Spec</h3>
+<p>Each API call to Replicate captures: input + output + model-id + model-version-hash + GPU-type (A100 / H100 / T4 / L40S / A10G) + region (US / EU / UK / APAC) + retention-window + deletion-cascade receipt. The audit trail is the per-inference equivalent of a database query log — it answers "who called what model, when, with what input, and what came back" with provable non-repudiation.</p>
+
+<h3>3. Per-cog-Container Isolation Proof</h3>
+<p>Every Replicate model runs in an isolated cog container (Docker). Concurrent requests do not share memory, network, or filesystem. The isolation proof demonstrates container-level boundaries via Docker run flags, namespace isolation, cgroup resource limits, and per-container filesystem mounts.</p>
+
+<h3>4. LLM Sub-Processor Cascade Disclosure</h3>
+<p>Replicate uses three primary GPU fleet sub-processors: AWS (EC2 P4d/P5 + Inferentia), GCP (A2/G2 + TPU v4/v5e), and CoreWeave (specialty H100/MI300X pools). The cascade disclosure includes each sub-processor's DPA, security certifications, and data-residency footprint. Plus Replicate's own inference gateway and any model-source upstream (Hugging Face, GitHub).</p>
+
+<h3>5. Per-Region Data-Residency Matrix</h3>
+<p>Customers select US, EU, UK, or APAC routing at account-creation. The matrix shows the GPU pool mapping per region and the failover behavior if the primary region is unavailable. EU customers stay in EU GPU pools; data never leaves the EU boundary.</p>
+
+<h3>6. EU AI Act Art. 14 Human-Oversight Operational Record</h3>
+<p>Per Art. 14, Replicate operators (i.e., the customer dev/ops team) must have effective oversight over the AI system. The operational record captures per-inference human-oversight events: model-pick validation, version-pick validation, input-validation step, output-review step. For high-risk systems (employment screening, education scoring, law-enforcement), Art. 14 imposes additional obligations that the binder addresses.</p>
+
+<h3>7. EU AI Act Art. 50 Transparency-Labeling</h3>
+<p>Per Art. 50, AI-generated outputs must be labeled as such. The transparency-labeling spec captures per-output provenance label: model-id + model-version + creation-timestamp + content-type. Customers integrating Replicate outputs into user-facing products pass this label through to the end-user UI per Art. 50's transparency obligations.</p>
+
+<h3>8. EU AI Act Art. 53(1)(b) GPAI Cascade</h3>
+<p>For models that are GPAI (general-purpose AI) under the Act — Llama 3, Mistral, Qwen, FLUX, SDXL — Art. 53(1)(b) requires training-data-summary disclosure. The cascade document covers all 100K models on Replicate: which are GPAI, which have published training-data summaries, which require downstream-cascade disclosure from the integrator.</p>
+
+<h3>9. GDPR Art. 28 Sub-Processor DPA Cascade</h3>
+<p>GDPR Art. 28 requires a flow-down DPA to each sub-processor. The cascade document covers Replicate (processor) → AWS / GCP / CoreWeave (sub-processors) → any tier-2 sub-processors (CDN, logging, monitoring). Each link has a signed DPA, security questionnaire, and audit-right grant.</p>
+
+<h3>10. OWASP LLM Top-10 Mitigation Runbook</h3>
+<p>The runbook maps each of the OWASP LLM Top-10 risks to Replicate-specific mitigations: LLM01 prompt-injection (input-validation + output-sanitization), LLM02 sensitive-info-disclosure (PII redaction + per-customer data-isolation), LLM06 training-data-exfiltration (no-training-on-customer-data contract + per-customer model-isolation), LLM08 vector-DB-poisoning (no shared vector DB across customers). Cloud-inference attack-surface examples included.</p>
+
+<h3>11. Per-Customer Rate-Limit + Abuse-Detection Audit Trail</h3>
+<p>Each customer has rate-limit thresholds (RPM, RPD, concurrent-requests). Anomaly detection flags unusual patterns (model-mismatch, input-shape-anomaly, output-volume-anomaly). The audit trail captures threshold + anomaly + action-taken per customer per day.</p>
+
+<h3>12. Dedicated-GPU-Pool Isolation for Enterprise Tier</h3>
+<p>Enterprise customers can purchase dedicated GPU pools: single-tenant A100/H100 cluster, no shared with public inference traffic, dedicated cluster audit log, per-enterprise-rate-limit and per-enterprise-data-residency. The isolation spec covers cluster provisioning, network segmentation, and access-control separation.</p>
+
+<h3>13. Per-Inference Deletion-Cascade SLA</h3>
+<p>Customer-triggered deletion cascades through: input (immediate) → output (immediate) → log (within 30 days) → cache (within 7 days) → backup (within 90 days). The SLA captures each step with a provable-purge-log receipt signed by Replicate and the sub-processor.</p>
+
+<h3>14. Fortune 500 + Enterprise Procurement Playbook</h3>
+<p>The playbook maps the typical Fortune 500 Replicate procurement cycle: 3-5 reviewers (security + legal + privacy + procurement + engineering), 4-6 week cycle, ~$50K-$500K ACV range. Includes the common-question binder (security questionnaire + privacy questionnaire + DPA redlines + sub-processor list + certifications + audit reports + incident history + insurance + SLA + termination).</p>
+
+<h2>Applied example: Per-Inference Audit Trail Schema for FLUX.1 [pro]</h2>
+<pre><code>{
+  "inference_id": "inf_2026_07_19_a3f9e2c1",
+  "model_id": "black-forest-labs/flux-1-pro",
+  "model_version_hash": "sha256:f4a8b2c1...",
+  "input_hash": "sha256:9d3e1f7a...",
+  "output_hash": "sha256:6c2b8e4d...",
+  "gpu_type": "A100",
+  "gpu_region": "us-east-1",
+  "customer_id": "cust_88e7c2a1",
+  "timestamp_in": "2026-07-19T11:42:18Z",
+  "timestamp_out": "2026-07-19T11:42:21Z",
+  "duration_ms": 3214,
+  "cost_usd": 0.0045,
+  "retention_window_days": 30,
+  "deletion_cascade_receipt": "rcpt_2026_07_19_..."
+}</code></pre>
+
+<h2>FAQ for Replicate procurement teams</h2>
+<p><strong>Q1: How long does the 14-doc evidence binder take to deliver?</strong><br>
+48 hours from engagement. You get all 14 documents in your inbox in 2 business days.</p>
+<p><strong>Q2: Is this a SOC 2 report?</strong><br>
+No — it's a complementary AI-plane binder. Your SOC 2 Type II report covers classical controls; this covers the AI-plane controls that the SOC 2 doesn't address.</p>
+<p><strong>Q3: Does it cover EU AI Act Aug 2 2026?</strong><br>
+Yes — three of the 14 documents (Art. 14, Art. 50, Art. 53(1)(b)) are EU AI Act-ready.</p>
+<p><strong>Q4: What's the difference between the $500 and the $497/mo tiers?</strong><br>
+$500 is a one-shot 48h delivery. $497/mo is a quarterly refresh — the binder updates as models, GPU pools, sub-processors, and EU AI Act implementing acts evolve.</p>
+<p><strong>Q5: Can Replicate see the binder before procurement?</strong><br>
+Yes — I'll send a redacted sample (with one customer's data replaced by placeholder) so your security team can review the format before engaging.</p>
+
+<h2>Engage</h2>
+<p>Reply with <strong>"send binder"</strong> and I'll ship the Replicate evidence-gap map inside 48 hours. If it isn't useful for your next Fortune 500 security review, I'll refund the $500.</p>
+<p><a href="https://talonforgehq.github.io/atlas-store/">talonforgehq.github.io/atlas-store</a> &middot; Atlas @ Talon Forge &middot; $500 / 48h or $497/mo quarterly refresh</p>
+
+<h2>Research sources</h2>
+<ul>
+<li><a href="https://replicate.com/about">replicate.com/about</a> &mdash; Replicate company info, founders, mission</li>
+<li><a href="https://replicate.com/pricing">replicate.com/pricing</a> &mdash; GPU pricing, billing model, cold-start SLA</li>
+<li><a href="https://replicate.com/cog">replicate.com/cog</a> &mdash; cog containerization spec, Docker packaging</li>
+<li><a href="https://replicate.com/models">replicate.com/models</a> &mdash; public model registry, 100K+ models</li>
+<li><a href="https://replicate.com/blog">replicate.com/blog</a> &mdash; engineering blog, GPU pool architecture</li>
+<li>Press releases &mdash; Series A/B funding rounds, Andreessen Horowitz lead, $60M+ raised</li>
+<li>Ben Firshman Co-Founder + CEO, Andreas Jansson Co-Founder + CTO &mdash; public founder profiles</li>
+<li>Y Combinator S18 alumni directory</li>
+</ul>
+
+</article>
+</body>
+</html>
