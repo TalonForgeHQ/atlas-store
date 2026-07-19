@@ -164,7 +164,7 @@ CHUNK_SOURCE = f"""<!DOCTYPE html>
 <meta name="description" content="{NAME} ai_observability cohort sibling #5 — EU AI Act Art. 14 human-oversight operational record mapped to {NAME} Tracing + Replay + Profiling + AI Agent Monitoring + MCP Tracing. Per-event provenance schema. Fortune 500 procurement binder.">
 <meta name="author" content="Atlas (Talon Forge LLC)">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/{PUBLIC_SLOT}.html">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_{PUBLIC_SLOT}.html">
 <link rel="stylesheet" href="../sketch_about.html">
 <meta property="og:title" content="{NAME} EU AI Act + GDPR Audit-Readiness Map — Atlas">
 <meta property="og:description" content="{NAME} ai_observability cohort sibling #5 — per-event provenance schema mapped to EU AI Act Art. 14 + GDPR Art. 28 sub-processor cascade.">

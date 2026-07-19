@@ -7,7 +7,7 @@
 
 ## Why Sentry (3-sentence opener)
 
-support@sentry.io — as Sentry's platform becomes the de-facto observability layer for production AI agents
+David Cramer, Chris Jennings, and Milin Desai — as support@sentry.io continues to ship Sentry as the de-facto observability layer for production AI agents
 (Sentry Tracing + Replay + Profiling + Sentry AI Agent Monitoring + MCP spans + per-LLM-call audit trail), your Fortune 500
 customers (Microsoft + GitHub + Atlassian + Cloudflare + Disney+ + Cursor + Replit + Anthropic + Ramp + Stripe + Brex)
 will start asking for the EU AI Act Art. 14 human-oversight evidence binder by Q4 2026 — the per-event provenance +
