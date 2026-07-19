@@ -2145,4 +2145,10 @@
           <changefreq>monthly</changefreq>
           <priority>0.8</priority>
         </url>
-      </urlset>
+                <url>
+            <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_638.html</loc>
+            <lastmod>2026-07-19T19:45:00+00:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+          </url>
+</urlset>
