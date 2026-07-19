@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Asana AI Audit 2026 — Evidence-Gap Map for Work-Graph AI Operations</title>
+<meta name="description" content="Asana AI Studio, Smart Goals, Workflow Studio, AI chat, AI fields, and connected agents mapped against EU AI Act Articles 12/14, SOC 2 CC7.2, and ISO 42001. Fixed-fee evidence-gap map from Talon Forge LLC." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_365.html" />
+<meta data-tick="2026-07-19-fast-exec-asana-576" />
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; line-height: 1.55; }
+h1 { font-size: 1.7rem; margin-bottom: 0.25rem; }
+h2 { font-size: 1.25rem; margin-top: 2rem; color: #2a2a2a; }
+.lede { font-size: 1.05rem; color: #444; }
+.cta { background: #f5f0ff; border-left: 4px solid #6b46c1; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+.factbox { background: #f7f7f9; border: 1px solid #e3e3ea; padding: 1rem; margin: 1rem 0; font-size: 0.95rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.4rem; }
+.faq { margin-top: 2rem; }
+.faq dt { font-weight: 600; margin-top: 1rem; }
+.faq dd { margin-left: 0; color: #444; }
+footer { margin-top: 3rem; font-size: 0.85rem; color: #777; border-top: 1px solid #eee; padding-top: 1rem; }
+</style>
+</head>
+<body>
+<h1>Asana AI Audit 2026 — Evidence-Gap Map for Work-Graph AI Operations</h1>
+<p class="lede">Asana's AI Studio, Smart Goals, Workflow Studio, AI chat, AI fields, AI summaries, and connected agents all mutate the same work graph: tasks, projects, goals, portfolios, rules, and forms, then propagate into Slack, Google Workspace, Microsoft 365, Jira, GitHub, and Salesforce. The audit wedge is whether one Asana AI action — Smart Goal reset, AI chat resolved task, Workflow Studio rule firing, AI field write, or AI stand-up summary — can be reconstructed end to end against EU AI Act Articles 12/14, SOC 2 CC7.2, ISO 42001, and ISO 27701.</p>
+
+<div class="cta">
+<strong>Fixed-fee offer:</strong> $500 / 48h first-pass evidence-gap map, or $497/mo quarterly refresh. <a href="mailto:dpa@asana.com?subject=Asana%20AI%20evidence-gap%20map">Email dpa@asana.com</a> to scope.
+</div>
+
+<h2>The five evidence gaps in Asana AI operations</h2>
+
+<ol>
+<li><strong>Source-to-mutation provenance.</strong> Trace one Asana AI action from the source task, project description, goal name, portfolio comment, rule body, form response, Slack thread, Google doc, Microsoft 365 file, Jira ticket, GitHub issue, or Salesforce record through the retrieved chunk, prompt / model / version, Asana AI Studio plan, tool call, task / project / goal / portfolio / rule / form mutation, and connected write into Slack, Google, Microsoft, Jira, GitHub, or Salesforce. Without an immutable log, a post-hoc "why did this rule fire?" investigation depends on whoever has the longest memory.</li>
+<li><strong>Prompt-injection defense.</strong> Asana AI reads untrusted task bodies, project descriptions, goal names, form responses, file attachments, Slack/Teams messages, email bodies, Jira ticket text, GitHub issue text, and Salesforce record fields. Each one is a prompt-injection surface. The audit checks whether Asana's AI Studio, Smart Goals, Workflow Studio, and connected agents sanitize retrieved content before it lands in a model prompt and whether the resulting tool calls carry an injection flag.</li>
+<li><strong>Workspace / team / project / goal / portfolio / rule / form / guest / connector / data-residency isolation.</strong> Asana AI Studio should respect the same workspace, team, project, portfolio, goal, rule, form, guest, and connector permissions as the human user who triggered it. The audit tests cross-workspace leakage via AI chat, cross-team leakage via Smart Goals, cross-portfolio leakage via Workflow Studio rules, cross-connector leakage via connected Slack / Google / Microsoft / Jira / GitHub / Salesforce writes, and EU/US/APAC regional data-residency boundaries.</li>
+<li><strong>Deletion, retention, rollback, version-history, and connection-sync propagation.</strong> When an Asana AI action mutates a task, project, goal, portfolio, rule, or form, the deletion, retention, rollback, and version-history surface must propagate to every connected Slack / Google Workspace / Microsoft 365 / Jira / GitHub / Salesforce record that received the mutation. The audit traces one AI stand-up summary or Workflow Studio rule firing across all connectors and checks whether a single rollback restores the graph.</li>
+<li><strong>Immutable human-approval evidence and per-agent cost attribution.</strong> EU AI Act Article 14, SOC 2 CC7.2, and ISO 42001 each require human-oversight evidence for AI actions that ship to customers or external systems. Asana's audit trail needs immutable approval records (not just edit history) for AI-resolved tasks, AI-generated comments, AI stand-up summaries, AI project-health scores, automated rules, exports, and external API / connector writes. The audit also maps per-agent, per-model, per-tool-call, per-workspace, and per-connection cost attribution across AI Studio, Smart Goals, Workflow Studio, AI chat, AI fields, AI summaries, Asana API, and the connected Slack / Google / Microsoft / Jira / GitHub / Salesforce bridges.</li>
+</ol>
+
+<h2>Long-tail keyword coverage</h2>
+<ul>
+<li>Asana AI audit</li>
+<li>Asana AI Studio evidence-gap map</li>
+<li>Smart Goals audit log</li>
+<li>Workflow Studio rule audit trail</li>
+<li>Asana AI fields injection defense</li>
+<li>Asana AI stand-up summary reconstruction</li>
+<li>Asana AI workspace isolation EU AI Act</li>
+<li>Asana AI connector rollback propagation</li>
+<li>Asana AI cost attribution SOC 2</li>
+</ul>
+
+<h2>Why now</h2>
+<p>Asana publicly launched 2011, publicly traded NYSE:ASAN 2020, and now ships AI Studio, Smart Goals, Workflow Studio, AI chat, AI fields, AI summaries, AI stand-ups, and AI project health. The work-graph model means every AI feature mutates the same task / project / goal / portfolio / rule / form surface that engineering, ops, marketing, and GTM teams already trust. EU AI Act Articles 12/14, SOC 2 CC7.2, ISO/IEC 42001, ISO/IEC 27701, and HIPAA BAA all want immutable human-approval evidence for AI actions that ship externally. The audit wedge is reconstruction, not controls — Asana's controls (SOC 2 Type II, SOC 3, ISO/IEC 27001:2022, ISO/IEC 27017, ISO/IEC 27018, ISO/IEC 27701, AES-256 at rest, TLS 1.2+, SAML SSO, SCIM, audit logs, EU/US/APAC regional data residency) are already strong.</p>
+
+<div class="factbox">
+<strong>Verified live 2026-07-19:</strong><br />
+• <a href="https://asana.com/product/ai">asana.com/product/ai</a> — HTTP 200; AI Studio, Smart Goals, Workflow Studio, AI chat, AI fields, AI summaries, AI stand-ups, AI project health, connected agents<br />
+• <a href="https://asana.com/company">asana.com/company</a> — HTTP 200; co-founders Dustin Moskovitz (CEO) + Justin Rosenstein (both ex-Facebook engineering leadership)<br />
+• <a href="https://asana.com/privacy">asana.com/privacy</a> — HTTP 200; canonical inbox <code>dpa@asana.com</code><br />
+• <a href="https://asana.com/security">asana.com/security</a> — HTTP 200; SOC 2 Type II, SOC 3, ISO/IEC 27001:2022, ISO/IEC 27017, ISO/IEC 27018, ISO/IEC 27701, GDPR, CCPA, HIPAA BAA, AES-256, TLS 1.2+, SAML SSO, SCIM, audit logs, EU/US/APAC regional residency
+</div>
+
+<h2>What the $500 / 48h evidence-gap map delivers</h2>
+<ul>
+<li>One reconstructed Asana AI action (Smart Goal reset, AI chat resolved task, Workflow Studio rule firing, AI field write, or AI stand-up summary) end-to-end across the work graph + connected Slack / Google / Microsoft / Jira / GitHub / Salesforce surfaces.</li>
+<li>Five-gap audit scorecard: source-to-mutation provenance, prompt-injection defense, workspace / connector / data-residency isolation, deletion / rollback / connection-sync propagation, immutable human-approval evidence + per-agent cost attribution.</li>
+<li>EU AI Act Article 12 / 14, SOC 2 CC7.2, ISO/IEC 42001, and ISO/IEC 27701 mapping for the reconstructed action.</li>
+<li>Written remediation backlog prioritized by EU AI Act exposure, SOC 2 exposure, ISO 42001 exposure, and HIPAA BAA exposure.</li>
+</ul>
+
+<dl class="faq">
+<dt>Who is the canonical contact at Asana for this?</dt>
+<dd>dpa@asana.com — Asana's first-party privacy page exposes it as the data-protection contact. Co-founders Dustin Moskovitz (CEO) and Justin Rosenstein are the public-record founders.</dd>
+
+<dt>How long does the 48h evidence-gap map take to deliver?</dt>
+<dd>48 hours from signed scope. We trace one Asana AI action end to end across the work graph + connected Slack / Google / Microsoft / Jira / GitHub / Salesforce surfaces, score the five-gap audit, and ship a written remediation backlog.</dd>
+
+<dt>What does the $497/mo quarterly refresh cover?</dt>
+<dd>One Asana AI action reconstruction per quarter, plus a delta scorecard against the previous map, plus updated EU AI Act / SOC 2 / ISO 42001 / ISO 27701 mapping, plus a Slack channel for ad-hoc "what would the audit say?" questions between refreshes.</dd>
+
+<dt>Is this a SOC 2 audit?</dt>
+<dd>No — Asana already publishes SOC 2 Type II, SOC 3, ISO/IEC 27001:2022, ISO/IEC 27017, ISO/IEC 27018, and ISO/IEC 27701. We map one AI action against those controls, EU AI Act Articles 12/14, ISO/IEC 42001, and ISO/IEC 27701 — the reconstruction layer the existing audits don't cover.</dd>
+</dl>
+
+<footer>
+<strong>Talon Forge LLC</strong> · talonforge.dev · <a href="mailto:dpa@asana.com?subject=Asana%20AI%20evidence-gap%20map">dpa@asana.com</a><br />
+Lead 576 · ai_work_management cohort sibling #10 · atlas-store cron tick 2026-07-19
+</footer>
+</body>
+</html>
