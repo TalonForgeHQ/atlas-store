@@ -1954,4 +1954,11 @@
           </url>
         <url><loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_374.html</loc><lastmod>2026-07-19</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
                 <url><loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_375.html</loc><lastmod>2026-07-19</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-              </urlset>
+              
+    <url>
+      <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_376.html</loc>
+      <lastmod>2026-07-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  </urlset>
