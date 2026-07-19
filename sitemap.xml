@@ -2079,8 +2079,14 @@
             <changefreq>weekly</changefreq>
             <priority>0.7</priority>
           </url>
-              <url>
+          <url>
             <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_626.html</loc>
+            <lastmod>2026-07-19</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.7</priority>
+          </url>
+          <url>
+            <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_627.html</loc>
             <lastmod>2026-07-19</lastmod>
             <changefreq>weekly</changefreq>
             <priority>0.7</priority>
