@@ -16,5 +16,19 @@
     "company": "Kit",
     "template": "cold_email\\templates\\27_kit.md",
     "status": "dry_run"
+  },
+  {
+    "to": "contact@defined.ai",
+    "lead_id": 671,
+    "vendor": "Defined.ai",
+    "cohort": "ai_data_labeling",
+    "sibling": "4/5",
+    "subject_a": "Daniela \u2014 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
+    "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail \u2014 14-col provenance we can deliver this week",
+    "subject_c": "your AI-data marketplace vendor-DD inquiry \u2014 reply 'send' and I'll forward the 5-gap map",
+    "status": "queued",
+    "send_window": "Tue-Thu 9-11am PT",
+    "queued_at": "2026-07-19T19:05:29.731960+00:00",
+    "verification": "inbox verified live 2026-07-20 in defined.ai footer translation bundle"
   }
 ]
