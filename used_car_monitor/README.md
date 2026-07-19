@@ -71,14 +71,39 @@ Each listing file is a JSON array. Required keys:
 |---|---|---|---|
 | Discover | `FileFeedAdapter` | ON | Reads `data/drops/manual_export/` |
 | Discover | `CommunityMCPAdapter` | OFF | Opt-in. Confirm Meta's automation policy. |
-| Value | `HeuristicValuation` | ON | Local depreciation curves. Floor estimate. |
+| Value | `CarsXEMarketValueAdapter` | ON if `CARSXE_API_KEY` set | Live API, $40.83/mo Starter. Industry standard. |
 | Value | `CompsLocalAdapter` | ON | Median of `data/comps.json` weighted comps. |
+| Value | `HeuristicValuation` | ON | Local depreciation curves. Floor estimate. |
 | Value | `KBBPublicAdapter` | OFF | KBB serves behind Akamai; needs residential proxy. |
 | Risk | `NHTSAVinDecodeAdapter` | ON | Hard-stop on VIN mismatch / failed decode. |
 | Risk | `NHTSARecallAdapter` | ON | Warns on open recalls. |
 | Risk | `ScarcitySignalsAdapter` | ON | Off-platform payment, impossible mileage, branded title. |
+| Risk | `CarsXEHistoryAdapter` | ON if `CARSXE_API_KEY` set | Accidents, title brand, owner count, odometer rollback. |
+| Risk | `CarGurusDealRatingAdapter` | ON | Reads `cargurus_rating` field from listing dict. |
 | Notify | `LocalLogNotifier` | ON | Appends to `data/alerts.jsonl`. |
 | Notify | `TelegramNotifier` | OFF | Needs `MONITOR_TG_BOT_TOKEN` + `MONITOR_TG_CHAT_ID`. |
+
+## CarsXE (recommended paid add-on)
+
+The best single-vendor vehicle-data API for personal use in 2026:
+
+| Endpoint | Purpose | Cost |
+|---|---|---|
+| `GET /specs` | VIN decode | free tier |
+| `GET /market-value` | Live private-party value | $0.04/call typical |
+| `GET /history` | Accidents, title brand, owners, odometer | $0.05/call typical |
+| `GET /recalls` | Recalls by VIN | $0.05/call typical |
+
+Plans (verified July 2026):
+
+| Plan | Price | Market-Value/mo | History/mo |
+|---|---|---|---|
+| Sandbox | $0 | 5 | 1 |
+| Starter | $40.83/mo | pay-as-you-go | pay-as-you-go |
+| Pro | $207.50/mo | pay-as-you-go | pay-as-you-go |
+
+Set `CARSXE_API_KEY=...` in the environment and the monitor picks it up
+automatically. Use `--no-carsxe` to force-disable.
 
 ## Approval policy
 
@@ -134,8 +159,11 @@ used_car_monitor/
 - It does **not** call Facebook Marketplace automatically. The reel's MCP
   flow is exposed via `CommunityMCPAdapter` but is opt-in and disabled by
   default because it conflicts with Meta's current Terms.
-- It does **not** pay for KBB, Carfax, or any paid valuation feed. If you
-  bring credentials, you can wire a new valuation adapter.
+- It does **not** pretend to be CarGurus. If you want their deal rating,
+  paste it onto a listing with `set-rating --listing-id N --rating "..."`.
+- It does **not** pay for KBB, Carfax, or any paid valuation feed by
+  default. If you bring a `CARSXE_API_KEY`, it does call CarsXE for
+  market value + history + recalls.
 - It does **not** message sellers on its own. Approvals are explicit
   commands you run after reviewing the alert.
 

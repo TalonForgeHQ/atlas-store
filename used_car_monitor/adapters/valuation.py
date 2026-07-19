@@ -1,77 +1,29 @@
-"""Valuation adapters.
-
-A valuation adapter takes a listing dict and returns a `Valuation` object
-with low/midpoint/high + a confidence label.
-
-We will NEVER rely on a single source. The monitor calls every adapter that
-is enabled and merges them. A listing needs >=2 independent sources to be
-considered "medium" confidence; >=3 different sources or any cross-checked
-"high" signal (e.g. comps_local median) to be "high".
-
-Built-in adapters:
-- `HeuristicValuation`: pure local rule of thumb based on MSRP depreciation curve
-  + mileage adjustment. No network. Always available; used as the floor.
-- `KBBPublicAdapter`: scrapes the KBB what's-my-car-worth search page or hits
-  a KBB-style endpoint if available. Network required. Disabled by default
-  because KBB serves behind aggressive bot walls; we tried and got 403s.
-- `CompsLocalAdapter`: median of recent `comparable_listings` you store in a
-  JSON file. Real local comps are how a real buyer beats the algorithm.
+"""Valuation adapters — CarsXE + CompsLocal + Heuristic, sharing types from
+`valuation_types`. The shared `merge()` lives there to avoid circular imports.
 """
 
 from __future__ import annotations
 
 import abc
 import json
-import re
+import os
 import statistics
-import time
 import urllib.parse
 import urllib.request
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable, Optional
+from typing import Any, Optional
 
+from .valuation_types import USER_AGENT, Valuation, merge
 
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-
-
-@dataclass
-class Valuation:
-    source: str
-    low: float
-    midpoint: float
-    high: float
-    confidence: str          # low|medium|high
-    notes: str = ""
-    raw: dict[str, Any] = field(default_factory=dict)
-
-    def as_db_row(self, listing_id: int, lookup_at: str) -> dict[str, Any]:
-        return {
-            "listing_id": listing_id,
-            "source": self.source,
-            "lookup_at": lookup_at,
-            "low": self.low,
-            "midpoint": self.midpoint,
-            "high": self.high,
-            "confidence": self.confidence,
-            "raw_json": json.dumps(self.raw, default=str),
-            "notes": self.notes,
-        }
-
-
-def _http_get(url: str, timeout: int = 15) -> tuple[int, str]:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT,
-                                               "Accept-Language": "en-US,en;q=0.9"})
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            return r.status, r.read().decode("utf-8", errors="replace")
-    except Exception as e:
-        return 0, f"{type(e).__name__}: {e}"
+__all__ = ["Adapter", "Valuation", "merge",
+           "CarsXEMarketValueAdapter", "HeuristicValuation",
+           "CompsLocalAdapter"]
 
 
 @dataclass
 class Adapter(abc.ABC):
-    name: str = ""  # subclasses override
+    name: str = ""
     enabled: bool = True
 
     @abc.abstractmethod
@@ -79,20 +31,80 @@ class Adapter(abc.ABC):
         ...
 
 
-class HeuristicValuation(Adapter):
-    """Pure-math valuation. Used as the floor.
+def _http_get(url: str, headers: Optional[dict] = None, timeout: int = 20) -> tuple[int, str]:
+    hdrs = {"User-Agent": USER_AGENT, "Accept": "application/json"}
+    if headers:
+        hdrs.update(headers)
+    req = urllib.request.Request(url, headers=hdrs)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.status, r.read().decode("utf-8", errors="replace")
+    except Exception as e:
+        return 0, f"{type(e).__name__}: {e}"
 
-    Year-depreciation model: 5-year-old vehicles lose ~40% of MSRP, 10-year-old
-    ~65%, 15-year-old ~80%. Mileage adjustment: -$0.05/mile above 12k/yr,
-    +$0.05/mile below 8k/yr, capped at +/- 20%.
 
-    These curves are deliberately conservative. They give us a screening
-    signal, not an appraisal. Real comps beat them every time.
+class CarsXEMarketValueAdapter(Adapter):
+    """Live market value via CarsXE.
+
+    Endpoint: GET https://api.carsxe.com/market-value
+    Auth:     ?key=YOUR_KEY  (env var CARSXE_API_KEY)
+    Pricing (carsxe.com/pricing, verified July 2026):
+      Sandbox: $0/mo, 100 calls lifetime
+      Starter: $40.83/mo, 2K calls/mo
+      Pro:     $207.50/mo, 25K calls/mo
     """
+    name = "carsxe"
+
+    def __init__(self, api_key: Optional[str] = None, timeout: int = 20):
+        self.api_key = api_key or os.environ.get("CARSXE_API_KEY")
+        self.enabled = bool(self.api_key)
+        self.timeout = timeout
+
+    def value(self, listing: dict[str, Any]) -> Optional[Valuation]:
+        if not self.api_key:
+            return None
+        params = {"key": self.api_key}
+        if listing.get("vin"):
+            params["vin"] = listing["vin"]
+        else:
+            for k in ("year", "make", "model", "trim", "mileage"):
+                if listing.get(k) is not None:
+                    params[k] = listing[k]
+        url = "https://api.carsxe.com/market-value?" + urllib.parse.urlencode(params)
+        status, body = _http_get(url, timeout=self.timeout)
+        if status != 200:
+            return None
+        try:
+            data = json.loads(body)
+        except json.JSONDecodeError:
+            return None
+        if not data.get("success"):
+            return None
+        # Two response shapes exist across API versions
+        v = data.get("value") or {}
+        low = v.get("min") or v.get("low") or data.get("range_low") or data.get("low")
+        high = v.get("max") or v.get("high") or data.get("range_high") or data.get("high")
+        mid = v.get("average") or data.get("average") or data.get("midpoint")
+        if mid is None and low is not None and high is not None:
+            mid = (low + high) / 2
+        if mid is None:
+            return None
+        confidence = "high" if listing.get("vin") else "medium"
+        return Valuation(
+            source="carsxe",
+            low=float(low) if low else float(mid) * 0.92,
+            midpoint=float(mid),
+            high=float(high) if high else float(mid) * 1.08,
+            confidence=confidence,
+            notes="CarsXE live market value API",
+            raw={"carsxe_payload": data},
+        )
+
+
+class HeuristicValuation(Adapter):
+    """Pure-math valuation. Used as the floor."""
     name = "heuristic"
 
-    # Common MSRP assumptions for popular used models. Override per-listing
-    # by setting `msrp` in the raw listing dict. Keep this table small on purpose.
     MSRP_TABLE = {
         ("Toyota", "Tacoma"): 36500,
         ("Toyota", "4Runner"): 41000,
@@ -120,28 +132,20 @@ class HeuristicValuation(Adapter):
         if not msrp:
             return None
         age = max(0, 2026 - int(year))
-        if age <= 3:
-            retained = 0.78
-        elif age <= 5:
-            retained = 0.62
-        elif age <= 8:
-            retained = 0.48
-        elif age <= 12:
-            retained = 0.35
-        elif age <= 18:
-            retained = 0.22
-        else:
-            retained = 0.13
+        if age <= 3:   retained = 0.78
+        elif age <= 5: retained = 0.62
+        elif age <= 8: retained = 0.48
+        elif age <= 12: retained = 0.35
+        elif age <= 18: retained = 0.22
+        else:           retained = 0.13
         mid = msrp * retained
-
         mileage = listing.get("mileage")
         if mileage:
             expected = age * 12000
             delta = mileage - expected
             adj = max(-0.20, min(0.20, -delta * 0.00005))
             mid *= (1 + adj)
-
-        spread = 0.08  # +/-8% range around midpoint
+        spread = 0.08
         return Valuation(
             source="heuristic",
             low=round(mid * (1 - spread), 0),
@@ -153,58 +157,8 @@ class HeuristicValuation(Adapter):
         )
 
 
-class KBBPublicAdapter(Adapter):
-    """Try the public KBB what's-my-car-worth page. Disabled by default because
-    KBB serves behind Akamai bot walls and we received 403 on bare requests.
-
-    To enable in your own deployment:
-      1. Set `KBB_ENABLED=1`
-      2. Bring your own residential proxy + cookie (NOT included here).
-    """
-    name = "kbb"
-
-    def value(self, listing: dict[str, Any]) -> Optional[Valuation]:
-        if not os.environ.get("KBB_ENABLED"):
-            return None
-        # Without a residential proxy + cookie, KBB returns 403. We refuse to
-        # pretend we got data. Surface the failure to the operator instead.
-        qs = urllib.parse.urlencode({
-            "make": listing.get("make", ""),
-            "model": listing.get("model", ""),
-            "year": listing.get("year", ""),
-        })
-        status, body = _http_get(f"https://www.kbb.com/whats-my-car-worth/?{qs}")
-        if status != 200 or "Access Denied" in body:
-            return None
-        m = re.search(r"\$([\d,]+)", body)
-        if not m:
-            return None
-        mid = float(m.group(1).replace(",", ""))
-        return Valuation(
-            source="kbb",
-            low=mid * 0.92, midpoint=mid, high=mid * 1.08,
-            confidence="medium",
-            notes="KBB public scrape (proxied); unverified range",
-        )
-
-
 class CompsLocalAdapter(Adapter):
-    """Median of recent comparable listings you maintain in a JSON file.
-
-    File format:
-      [
-        {"year": 2019, "make": "Toyota", "model": "Tacoma", "trim": "TRD",
-         "ask_price": 27200, "mileage": 61000, "location": "Austin, TX"},
-        ...
-      ]
-
-    Each comp is matched on (make, model) and weighted by:
-      - exact year match:    full weight
-      - within 1 year:       0.6 weight
-      - within 2 years:      0.3 weight
-      - same trim:           1.25x weight
-      - mileage within 15%:  1.10x weight
-    """
+    """Median of recent comparable listings you maintain in a JSON file."""
     name = "comps_local"
 
     def __init__(self, comps_path: Path):
@@ -225,7 +179,7 @@ class CompsLocalAdapter(Adapter):
         mileage = listing.get("mileage")
         if not (make and model and year):
             return None
-        weighted: list[tuple[float, float]] = []
+        weighted = []
         for c in comps:
             if (c.get("make", "").lower() != make or c.get("model", "").lower() != model):
                 continue
@@ -234,14 +188,10 @@ class CompsLocalAdapter(Adapter):
                 continue
             w = 1.0
             dy = abs(int(cy) - int(year))
-            if dy == 0:
-                w *= 1.0
-            elif dy == 1:
-                w *= 0.6
-            elif dy == 2:
-                w *= 0.3
-            else:
-                continue
+            if dy == 0: w *= 1.0
+            elif dy == 1: w *= 0.6
+            elif dy == 2: w *= 0.3
+            else: continue
             if trim and (c.get("trim") or "").lower() == trim:
                 w *= 1.25
             cm = c.get("mileage")
@@ -266,45 +216,3 @@ class CompsLocalAdapter(Adapter):
             notes=f"median of {len(weighted)} weighted comps",
             raw={"weighted": weighted, "comps_count": len(weighted)},
         )
-
-
-def merge(valuations: list[Valuation]) -> Optional[Valuation]:
-    """Combine multiple Valuation objects into one blended estimate.
-
-    We compute a weighted midpoint: each source contributes its midpoint
-    weighted by confidence (high=3, medium=2, low=1). The low/high are the
-    minimum low and maximum high across sources (conservative range).
-
-    The blended confidence equals the highest single-source confidence UNLESS
-    only one source contributed, in which case it's that source's confidence
-    but capped one notch lower (medium->low) to express that we didn't cross-check.
-    """
-    if not valuations:
-        return None
-    conf_w = {"high": 3.0, "medium": 2.0, "low": 1.0}
-    total_w = sum(conf_w.get(v.confidence, 1.0) for v in valuations)
-    blended = sum(v.midpoint * conf_w.get(v.confidence, 1.0) for v in valuations) / total_w
-    lo = min(v.low for v in valuations)
-    hi = max(v.high for v in valuations)
-    spread = 0.10 if len(valuations) >= 2 else 0.15
-    conf_rank = {"high": 3, "medium": 2, "low": 1}
-    max_conf = max(valuations, key=lambda v: conf_rank[v.confidence]).confidence
-    if len(valuations) == 1:
-        # single source → drop confidence one notch
-        bumped = {"high": "medium", "medium": "low", "low": "low"}
-        final_conf = bumped[max_conf]
-    else:
-        final_conf = max_conf
-    return Valuation(
-        source="blended",
-        low=round(min(lo, blended * (1 - spread)), 0),
-        midpoint=round(blended, 0),
-        high=round(max(hi, blended * (1 + spread)), 0),
-        confidence=final_conf,
-        notes=f"blended {len(valuations)} sources: " +
-              ", ".join(f"{v.source}({v.confidence})" for v in valuations),
-        raw={"blended_midpoint": blended, "inputs": [
-            {"source": v.source, "midpoint": v.midpoint, "confidence": v.confidence}
-            for v in valuations
-        ]},
-    )

@@ -182,12 +182,17 @@ def evaluate_listing(conn: sqlite3.Connection,
     cost = all_in_cost(row["ask_price"] or 0, target)
     rec = recommendation(row, blended, cost, flags, brief)
 
-    # Status update
-    new_status = "screened"
-    if risk_mod.has_hard_stop(flags):
+    # Status update. Preserve operator decisions: any listing that has been
+    # approved or explicitly declined stays in its terminal state.
+    cur_status = row["status"]
+    if cur_status in ("contacted", "rejected"):
+        new_status = cur_status
+    elif risk_mod.has_hard_stop(flags):
         new_status = "rejected"
     elif rec["action"] == "review":
         new_status = "flagged"
+    else:
+        new_status = "screened"
     conn.execute("UPDATE listings SET status = ? WHERE id = ?", (new_status, listing_id))
     db.audit(conn, "evaluation.done", listing_id, {
         "valuation_mid": blended.midpoint if blended else None,

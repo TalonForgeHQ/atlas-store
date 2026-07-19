@@ -26,7 +26,17 @@ COMPS_FILE = DATA_DIR / "comps.json"
 
 
 def _build_pipeline(enable_community_mcp: bool = False,
-                    enable_telegram: bool = False) -> pipeline.PipelineAdapters:
+                    enable_telegram: bool = False,
+                    enable_carsxe: Optional[bool] = None) -> pipeline.PipelineAdapters:
+    """Build the pipeline with the best-of-multiple-worlds stack.
+
+    Adapters are added in preference order:
+      - Discovery: file feed (always), community MCP (opt-in)
+      - Valuation: CarsXE if CARSXE_API_KEY set, comps + heuristic always
+      - Risk: NHTSA VIN + recall + scarcity always; CarsXE history + CarGurus
+              if enabled
+      - Notifier: local log always, Telegram if enabled
+    """
     drop = DROPS_DIR / "manual_export"
     drop.mkdir(parents=True, exist_ok=True)
     discoverers = [
@@ -38,15 +48,28 @@ def _build_pipeline(enable_community_mcp: bool = False,
             command=["npx", "-y", "secondhand-mcp"],
             source_tag="secondhand_mcp",
         ))
-    valuators = [
-        valuation_mod.HeuristicValuation(),
-        valuation_mod.CompsLocalAdapter(COMPS_FILE),
-        # KBB public scrape stays off until operator sets KBB_ENABLED=1.
-    ]
+    # Valuation stack
+    carsxe_key = os.environ.get("CARSXE_API_KEY")
+    if enable_carsxe is False or (enable_carsxe is None and not carsxe_key):
+        # Operator has either disabled CarsXE or no key
+        valuators = [
+            valuation_mod.HeuristicValuation(),
+            valuation_mod.CompsLocalAdapter(COMPS_FILE),
+        ]
+    else:
+        # CarsXE primary, comps cross-check, heuristic floor
+        valuators = [
+            valuation_mod.CarsXEMarketValueAdapter(api_key=carsxe_key),
+            valuation_mod.CompsLocalAdapter(COMPS_FILE),
+            valuation_mod.HeuristicValuation(),
+        ]
+    # Risk stack
     risk_screeners = [
         risk_mod.NHTSAVinDecodeAdapter(),
         risk_mod.NHTSARecallAdapter(),
         risk_mod.ScarcitySignalsAdapter(),
+        risk_mod.CarsXEHistoryAdapter(),   # auto-enabled if CARSXE_API_KEY set
+        risk_mod.CarGurusDealRatingAdapter(),  # reads cargurus_rating from listing
     ]
     notifiers = [
         notifier_mod.LocalLogNotifier(ALERTS_LOG),
@@ -102,7 +125,8 @@ def cmd_ingest(args, conn):
 
 def cmd_run(args, conn):
     pl = _build_pipeline(enable_community_mcp=args.enable_community_mcp,
-                         enable_telegram=args.enable_telegram)
+                         enable_telegram=args.enable_telegram,
+                         enable_carsxe=getattr(args, "enable_carsxe", None))
     only = args.brief
     rep = pipeline.run_once(conn, pl, only_brief_id=only)
     print(json.dumps(rep, indent=2, default=str))
@@ -218,6 +242,37 @@ def cmd_decline(args, conn):
     return 0
 
 
+def cmd_set_rating(args, conn):
+    """Attach a CarGurus-style rating to a listing. Triggers re-evaluation."""
+    listing = conn.execute("SELECT * FROM listings WHERE id = ?",
+                           (args.listing_id,)).fetchone()
+    if listing is None:
+        print(f"Listing #{args.listing_id} not found.", file=sys.stderr)
+        return 2
+    rating = args.rating.lower()
+    # We don't have a cargurus_rating column; store it in audit_log + risk_flags
+    # so it's both retrievable and the next pipeline run will re-evaluate it.
+    code = f"cargurus_{rating.replace(' ', '_')}"
+    # Clear any prior cargurus rating flags for this listing
+    conn.execute(
+        "DELETE FROM risk_flags WHERE listing_id = ? AND code LIKE 'cargurus_%'",
+        (args.listing_id,),
+    )
+    severity = "warn" if rating == "high_price" else "info"
+    conn.execute(
+        """INSERT INTO risk_flags(listing_id, severity, code, message, evidence_json)
+           VALUES (?, ?, ?, ?, ?)""",
+        (args.listing_id, severity, code,
+         f"CarGurus rating: {rating}",
+         json.dumps({"rating": rating})),
+    )
+    db.audit(conn, "rating.set", args.listing_id,
+             {"rating": rating, "by": "zinou"})
+    print(f"Rating '{rating}' attached to listing #{args.listing_id}. "
+          f"Re-run the pipeline to see it reflected in flags.")
+    return 0
+
+
 def cmd_dry_run(args, conn):
     pl = _build_pipeline(enable_community_mcp=False, enable_telegram=False)
     rep = pipeline.run_once(conn, pl, only_brief_id=args.brief)
@@ -259,9 +314,15 @@ def main(argv: Optional[list[str]] = None) -> int:
     sr.add_argument("--brief", type=int, default=None)
     sr.add_argument("--enable-community-mcp", action="store_true")
     sr.add_argument("--enable-telegram", action="store_true")
+    sr.add_argument("--enable-carsxe", dest="enable_carsxe", action="store_true",
+                    default=None, help="Force CarsXE Market Value + History (needs CARSXE_API_KEY)")
+    sr.add_argument("--no-carsxe", dest="enable_carsxe", action="store_false",
+                    help="Disable CarsXE even if CARSXE_API_KEY is set")
 
     sd = sub.add_parser("dry-run", help="Run pipeline without enabling MCP/Telegram")
     sd.add_argument("--brief", type=int, default=None)
+    sd.add_argument("--enable-carsxe", dest="enable_carsxe", action="store_true", default=None)
+    sd.add_argument("--no-carsxe", dest="enable_carsxe", action="store_false")
 
     sub.add_parser("status", help="Show current listings grouped by brief")
 
@@ -278,6 +339,12 @@ def main(argv: Optional[list[str]] = None) -> int:
     sd2.add_argument("--listing-id", type=int, required=True)
     sd2.add_argument("--who", default="zinou")
     sd2.add_argument("--note", default=None)
+
+    sr2 = sub.add_parser("set-rating", help="Attach a CarGurus-style rating to a listing")
+    sr2.add_argument("--listing-id", type=int, required=True)
+    sr2.add_argument("--rating", required=True,
+                     choices=["great deal", "good deal", "fair deal",
+                              "high price", "clear"])
 
     args = p.parse_args(argv)
     # Tests inject a connection via env var MONITOR_DB_CONN to share state.
@@ -297,6 +364,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         "ingest": cmd_ingest, "run": cmd_run, "dry-run": cmd_dry_run,
         "status": cmd_status, "alerts": cmd_alerts,
         "approve": cmd_approve, "decline": cmd_decline,
+        "set-rating": cmd_set_rating,
     }
     return handlers[args.cmd](args, conn)
 

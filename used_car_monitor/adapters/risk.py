@@ -24,7 +24,7 @@ import urllib.request
 from dataclasses import dataclass, field
 from typing import Any, Iterable, Optional
 
-from .valuation import USER_AGENT
+from .valuation_types import USER_AGENT
 
 VIN_RE = re.compile(r"^[A-HJ-NPR-Z0-9]{11,17}$")  # exclude I, O, Q
 
@@ -155,6 +155,119 @@ class NHTSARecallAdapter(Adapter):
                               "component": r.get("Component"),
                               "summary": r.get("Summary")} for r in results[:3]]},
         )
+
+
+class CarsXEHistoryAdapter(Adapter):
+    """Pull accident/owner/title-brand history from CarsXE.
+
+    Endpoint: GET https://api.carsxe.com/history
+    Auth:     CARSXE_API_KEY env var (same key as market-value)
+    Pricing:  ~$0.05/call on Starter; 1/mo on Sandbox
+    Docs:     https://docs.carsxe.com/products/history
+
+    Returns hard_stop on:
+      - Salvage/rebuilt/flood title brand
+      - Reported accident (1+ accidents counts as warn; 3+ as hard_stop)
+      - Odometer rollback detected
+      - Active lien without title-in-hand
+    """
+    name = "carsxe_history"
+
+    def __init__(self, api_key: Optional[str] = None, timeout: int = 20):
+        import os as _os
+        self.api_key = api_key or _os.environ.get("CARSXE_API_KEY")
+        self.enabled = bool(self.api_key)
+        self.timeout = timeout
+
+    def screen(self, listing: dict[str, Any]) -> Iterable[RiskFlag]:
+        if not self.api_key:
+            return
+        vin = (listing.get("vin") or "").strip()
+        if not vin:
+            return
+        url = "https://api.carsxe.com/history?" + urllib.parse.urlencode({
+            "key": self.api_key, "vin": vin,
+        })
+        status, body = _http_get(url, timeout=self.timeout)
+        if status != 200:
+            yield RiskFlag("warn", "history_unavailable",
+                           f"CarsXE history HTTP {status}",
+                           {"body_snippet": body[:200]})
+            return
+        try:
+            data = json.loads(body)
+        except json.JSONDecodeError:
+            return
+        if not data.get("success"):
+            yield RiskFlag("warn", "history_no_data",
+                           "CarsXE returned success=false",
+                           {"payload": data})
+            return
+        # Title brand — hard stop
+        title = (data.get("title_brand") or data.get("title_status") or "").lower()
+        if title and title not in ("clean", "none", ""):
+            yield RiskFlag("hard_stop", "title_brand",
+                           f"CarsXE history reports title brand: {title}",
+                           {"title_brand": title})
+        # Accident count
+        accidents = data.get("accidents") or data.get("accident_count") or 0
+        try:
+            accidents = int(accidents)
+        except (TypeError, ValueError):
+            accidents = 0
+        if accidents >= 3:
+            yield RiskFlag("hard_stop", "accidents_many",
+                           f"{accidents} accidents on record (CarsXE)",
+                           {"accidents": accidents})
+        elif accidents >= 1:
+            yield RiskFlag("warn", "accidents_present",
+                           f"{accidents} accident(s) on record (CarsXE)",
+                           {"accidents": accidents})
+        # Odometer rollback
+        if data.get("odometer_rollback") or data.get("odometer_inconsistency"):
+            yield RiskFlag("hard_stop", "odometer_rollback",
+                           "CarsXE detected odometer inconsistency",
+                           {})
+        # Owner count — info only
+        owners = data.get("owner_count")
+        if owners:
+            yield RiskFlag("info", "owner_count",
+                           f"{owners} previous owner(s) on record",
+                           {"owners": owners})
+
+
+class CarGurusDealRatingAdapter(Adapter):
+    """Honor a competitor's deal rating if the operator surfaces it.
+
+    CarGurus exposes 5 tiers per listing: Great Deal / Good Deal / Fair Deal /
+    High Price / No Rating. If the operator includes `cargurus_rating` in the
+    listing dict (e.g. by manually checking the same car on CarGurus and
+    pasting the badge), we use it as a warn/info flag, never as a buy trigger.
+
+    This adapter does NOT call CarGurus — it interprets a stored signal.
+    """
+    name = "cargurus_rating"
+
+    def screen(self, listing: dict[str, Any]) -> Iterable[RiskFlag]:
+        rating = (listing.get("cargurus_rating") or "").strip().lower()
+        if not rating:
+            return
+        if rating == "great deal":
+            yield RiskFlag("info", "cargurus_great_deal",
+                           "CarGurus independently rates this as Great Deal",
+                           {"rating": rating})
+        elif rating == "good deal":
+            yield RiskFlag("info", "cargurus_good_deal",
+                           "CarGurus independently rates this as Good Deal",
+                           {"rating": rating})
+        elif rating == "fair deal":
+            yield RiskFlag("info", "cargurus_fair_deal",
+                           "CarGurus independently rates this as Fair Deal",
+                           {"rating": rating})
+        elif rating == "high price":
+            yield RiskFlag("warn", "cargurus_high_price",
+                           "CarGurus rates this as High Price",
+                           {"rating": rating})
 
 
 class ScarcitySignalsAdapter(Adapter):
