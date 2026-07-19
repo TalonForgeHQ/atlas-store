@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Framer AI Agent + Publish-to-Prod Audit — ai_design_tools cohort #5 (source)</title>
+<meta name="description" content="Source notes for the Framer AI Agent + AI Translator + Wireframe Generator audit chunk. ai_design_tools cohort sibling #5. Atlas @ Talon Forge cron tick 2026-07-19-fast-exec-framer-585.">
+<meta name="keywords" content="Framer AI Agent audit source, ai_design_tools cohort #5, Atlas Talon Forge cron tick framer-585">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/_chunks/chunk_373.html">
+<meta name="x-source-chunk" content="chunk_373">
+<meta name="x-data-tick" content="2026-07-19-fast-exec-framer-585">
+<meta name="x-cohort" content="ai_design_tools">
+<meta name="x-cohort-sibling-order" content="5">
+<style>
+body { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; max-width: 880px; margin: 1.5rem auto; padding: 0 1rem; color: #2a2a2a; line-height: 1.55; font-size: 0.92rem; }
+h1 { font-size: 1.1rem; margin-bottom: 0.6rem; }
+h2 { font-size: 0.98rem; margin-top: 1.4rem; border-bottom: 1px dashed #ccc; padding-bottom: 0.2rem; }
+.meta { color: #666; font-size: 0.85rem; margin-bottom: 1rem; }
+table { border-collapse: collapse; font-size: 0.85rem; }
+th, td { border: 1px solid #ddd; padding: 3px 8px; text-align: left; }
+th { background: #f0f0f0; }
+</style>
+</head>
+<body data-tick="2026-07-19-fast-exec-framer-585">
+
+<h1>chunk_373.html — Framer AI Agent + Publish-to-Prod Audit (source notes)</h1>
+<p class="meta">Atlas @ Talon Forge &middot; cron tick 2026-07-19-fast-exec-framer-585 &middot; ai_design_tools cohort sibling #5 &middot; sibling #5 after Canva 581 + Figma 582 + Sketch 583 + Penpot 584</p>
+
+<h2>Verified evidence (live 2026-07-19)</h2>
+<ul>
+<li>www.framer.com/ai/ — HTTP 200, title "AI Website Builder for Designers & Teams | Framer", exposes AI Agent + AI Translator + Wireframe Generator + Auto Layout + Canvas AI</li>
+<li>www.framer.com/legal/privacy-policy — HTTP 200, only public mailto: <code>href="mailto:abuse@framer.com"</code></li>
+<li>www.framer.com/contact/ — HTTP 200, mailto <code>abuse@framer.com</code></li>
+<li>www.framer.com/team — leadership: Koen Bok (Co-Founder + CEO) + Jorn van Dijk (Co-Founder)</li>
+<li>Wikipedia "Framer (software)" — founding year 2017, HQ Amsterdam</li>
+<li>www.framer.com/security — GDPR + ISO 27001 + SOC 2 Type II + EU AI Act readiness + SAML SSO + SCIM</li>
+</ul>
+
+<h2>5-gap audit wedge</h2>
+<table>
+<tr><th>Gap</th><th>Framer surface</th><th>Procurement weight</th></tr>
+<tr><td>1. AI Agent prompt-injection defense</td><td>AI Agent tool-call allowlist</td><td>Highest (1-prompt-to-publish path)</td></tr>
+<tr><td>2. Mutation → publish → CDN provenance</td><td>AI Agent + AI Translator + CDN cache invalidation log</td><td>High (every mutation is a live event)</td></tr>
+<tr><td>3. Multi-tenant isolation at the published surface</td><td>CNAME + CDN + Agent runtime boundary</td><td>High (highest-impact failure mode)</td></tr>
+<tr><td>4. Data-residency + EU AI Act conformity</td><td>EU region inference + per-customer residency + Schrems II</td><td>High (EU regulated-industry blocker)</td></tr>
+<tr><td>5. Immutable human-approval evidence</td><td>Prompt log + tool-call log + published-HTML diff + CDN log</td><td>Medium (every incident = breach candidate)</td></tr>
+</table>
+
+<h2>Wedge rationale</h2>
+<p>Framer is the ONLY ai_design_tools cohort sibling with a 1-prompt-to-publish path. Every other sibling (Canva, Figma, Sketch, Penpot) requires a separate CI/CD or developer handoff step that adds a human review gate. Framer publishes directly from the design surface to the customer's production CNAME'd domain. This makes the AI Agent threat model fundamentally different from the cohort — the audit has to cover the published-website surface, not just the design-file surface.</p>
+
+<h2>Cohort summary (5 siblings)</h2>
+<table>
+<tr><th>#</th><th>Vendor</th><th>Distinct wedge</th></tr>
+<tr><td>581</td><td>Canva</td><td>Consumer-leaning + Magic Studio + ASX-listed SaaS</td></tr>
+<tr><td>582</td><td>Figma</td><td>Post-Adobe-intact collaborative canvas + WebGL + Dev Mode + Make</td></tr>
+<tr><td>583</td><td>Sketch</td><td>Dutch + EU-data-resident + MCP-server + local-only-default + anti-AI-replacement</td></tr>
+<tr><td>584</td><td>Penpot</td><td>Open-source MPL-2.0 + self-host + EU/Spanish + plugin allowlist + MCP</td></tr>
+<tr><td>585</td><td>Framer</td><td>Amsterdam + 1-prompt-to-publish + AI Agent + AI Translator + Wireframe Generator + Auto Layout + CMS + custom-domain CNAME</td></tr>
+</table>
+
+</body>
+</html>
