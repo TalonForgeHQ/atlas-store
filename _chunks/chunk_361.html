@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linear AI Agents Audit 2026: 5 Evidence Gaps for Ask Linear + AI Triage + AI Project Updates</title>
+<meta name="description" content="Linear AI Agents vendor audit 2026: five evidence gaps for source-issue-to-agent-action-to-downstream-sync provenance, prompt-injection defense, workspace and team isolation, deletion and rollback propagation, immutable human-approval evidence, and per-agent per-tool-call cost attribution. Covers Linear Agents, Ask Linear, AI Triage, AI Project Updates, AI Filter, AI Sort, AI Assign, AI Estimate, AI Draft, AI Resolve.">
+<meta name="keywords" content="Linear AI Agents audit, Ask Linear evidence gap, Linear AI Triage audit, AI Project Updates vendor due diligence, Linear Agents SOC 2, Linear ISO 42001, Linear EU AI Act, Linear prompt injection, ai work management vendor audit, Talon Forge Atlas audit">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_362.html">
+</head>
+<body data-tick="2026-07-19-fast-exec-linear-574-chunk-ship">
+<h1>Linear AI Agents Audit 2026: 5 Evidence Gaps for Ask Linear + AI Triage + AI Project Updates</h1>
+<p><strong>Vertical:</strong> ai_work_management &middot; <strong>Lead:</strong> 574 &middot; <strong>Cohort:</strong> sibling #8 after Motion 567, Akiflow 568, Sunsama 569, Routine 570, Reclaim.ai 571, ClickUp 572, and monday.com 573. <strong>Offer:</strong> $500 fixed-price / 48-hour evidence-gap map, or $497/mo quarterly refresh.</p>
+
+<h2>Why Linear is the high-leverage AI work-management audit target</h2>
+<p>Linear&rsquo;s live first-party product surface couples an engineering-grade issue graph with a growing set of AI capabilities: Linear Agents, Ask Linear, AI Triage, AI Project Updates, AI Filter, AI Sort, AI Assign, AI Estimate, AI Draft, and AI Resolve. Those capabilities operate on the same project, cycle, label, initiative, and customer-request state that engineering, product, support, and GTM teams already trust for shipped work. The advantage is that an agent can read a cycle plan, prioritize the next batch of issues, draft a customer response, and resolve a ticket without leaving Linear. The audit question is whether one autonomous change can be reconstructed from its source object through retrieval, planning, tool use, approval, mutation, and downstream sync.</p>
+<p>Linear&rsquo;s verified first-party security posture is strong on control objectives. The Security page lists SOC 2 Type 2, ISO 27001, HIPAA, and GDPR coverage. The Privacy page publishes <code>hello@linear.app</code> as the canonical contact and is served alongside regional data-residency disclosures. The audit below does not claim those controls are absent. It tests whether they produce customer-verifiable evidence at the autonomous-agent action level.</p>
+
+<h2>Gap 1 - Source-issue-to-agent-action-to-downstream-sync provenance</h2>
+<p>A Linear Agent, Ask Linear query, AI Triage decision, AI Project Update draft, or AI Filter/Sort/Assign/Estimate/Draft/Resolve mutation can draw context from issues, projects, cycles, initiatives, labels, customer requests, comments, attachments, Slack threads, Notion pages, Loom recordings, GitHub PRs, and connected Google or Microsoft 365 data. A defensible evidence chain should join the source-object ID and version to retrieved chunks, prompt and model versions, agent plan, tool calls, approvals, the resulting mutation, and every downstream sync to Slack, Notion, GitHub, Loom, Figma, and customer-facing summaries.</p>
+<p><strong>Audit question:</strong> for one issue whose assignee, priority, label, project, cycle, estimate, comment, sub-issue, parent, or resolved state changed because of an AI action, can an administrator reconstruct the exact source objects, retrieved context, prompt, model, plan, tool call, actor, approval, timestamp, before/after state, and the downstream sync log entries that flowed to Slack, Notion, GitHub, Loom, Figma, and any customer notification?</p>
+
+<h2>Gap 2 - Prompt-injection defense across issue content and connected apps</h2>
+<p>Issue content is untrusted input. A malicious instruction can arrive in an issue title, description, comment, sub-issue, attachment, GitHub PR body, Slack thread, Notion page, Loom transcript, customer email, customer-request body, or connected search result. A control map should show how Linear separates content from instructions, constrains tools, detects indirect injection, redacts or escapes risky embedded payloads, and records blocked or escalated attempts.</p>
+<p><strong>Audit question:</strong> what prevents an embedded instruction in a retrieved issue description, attachment, PR diff, Slack thread, Notion page, or customer email from causing an Ask Linear answer, AI Triage decision, AI Project Update, or AI Filter/Sort/Assign/Estimate/Draft/Resolve mutation that discloses data, escalates the wrong ticket, posts into a customer-facing channel, triggers an automation, or writes into a connected system?</p>
+
+<h2>Gap 3 - Workspace, team, label, view, customer, and connector isolation</h2>
+<p>Linear&rsquo;s hierarchy includes workspace, team, project, cycle, label, view, initiative, customer, customer request, document, user, and guest scopes, plus external connectors and regional residency. Agent authorization should be evaluated at every retrieval and action boundary rather than inherited once at session start.</p>
+<p><strong>Audit question:</strong> does each Ask Linear retrieval, AI Triage classification, AI Project Update draft, and AI Filter/Sort/Assign/Estimate/Draft/Resolve mutation re-check the initiating principal, current object permissions, guest restrictions, customer restrictions, connector scopes, data-residency policy, and destination authorization before reading or mutating data, syncing to Slack/Notion/GitHub/Loom, or surfacing content in a view that crosses team or customer boundaries?</p>
+
+<h2>Gap 4 - Deletion, retention, rollback, and downstream-sync propagation</h2>
+<p>An agent-originated change may create derived summaries, sub-issues, comments, notifications, customer updates, project updates, search-index entries, exports, and downstream writes to Slack, Notion, GitHub, Loom, Figma, and connected Google or Microsoft 365 surfaces. Deleting the source object or rolling back the action should propagate predictably across every derived copy and connector without silently restoring stale data later.</p>
+<p><strong>Audit question:</strong> when an administrator deletes or rolls back one AI-resolved, AI-estimated, AI-assigned, AI-prioritized, AI-drafted, or AI-summarized Linear action, what evidence proves propagation through Linear issue history, sub-issues, comments, project updates, customer requests, views, search index, and bounded backups, plus the downstream Slack/Notion/GitHub/Loom/Figma/Google/Microsoft sync surfaces that received the change?</p>
+
+<h2>Gap 5 - Immutable human-approval evidence and per-agent cost attribution</h2>
+<p>High-impact actions should preserve an immutable approval record containing the proposed action, risk classification, approver, policy version, final payload, and execution outcome. The same chain should attribute model, retrieval, storage, connector, and tool-call costs to the responsible agent run, workspace, team, project, and customer so finance can reconcile AI spend.</p>
+<p><strong>Audit question:</strong> can Linear produce a tamper-evident approval and execution record for AI-resolved, AI-estimated, AI-assigned, AI-drafted, and AI-summarized actions, then reconcile its cost ledger from agent run to model call, retrieved context, tool call, mutation, downstream sync, and customer?</p>
+
+<h2>Control-map starting points</h2>
+<ul>
+<li><strong>EU AI Act Articles 12 and 14:</strong> logging and human oversight for agent-driven decisions and actions across the issue graph.</li>
+<li><strong>ISO/IEC 42001:</strong> AI management-system evidence across lifecycle, risk, monitoring, and change control.</li>
+<li><strong>SOC 2 CC6 and CC7:</strong> logical access, monitoring, incident evidence, and system-operation reconstruction.</li>
+<li><strong>OWASP LLM Top 10:</strong> prompt injection, excessive agency, sensitive-information disclosure, and insecure output handling.</li>
+<li><strong>ISO 27001 and ISO 27701:</strong> access control, logging, retention, and privacy-management evidence.</li>
+<li><strong>HIPAA Security Rule &sect; 164.308 and &sect; 164.312:</strong> workforce, access, audit, and transmission security for healthcare customers that use Linear to track patient-impacting work.</li>
+</ul>
+
+<h2>Verified public-record anchors</h2>
+<ul>
+<li><strong>Linear About:</strong> the live first-party page identifies Karri Saarinen and Tuomas Artman as co-founders and describes Linear as the issue tracker built for software product development.</li>
+<li><strong>Linear Agents:</strong> the live first-party page introduces the AI agents surface for engineering teams and lists deployable teammates that resolve, draft, triage, and update work.</li>
+<li><strong>Linear Security:</strong> the live first-party page lists SOC 2 Type 2, ISO 27001, HIPAA, and GDPR controls plus regional data-residency disclosures.</li>
+<li><strong>Linear Privacy:</strong> the live first-party policy publishes <code>hello@linear.app</code> as the canonical privacy and support inbox and details subprocessor, retention, and regional-transfer practices.</li>
+<li><strong>Linear integrations directory:</strong> the live first-party directory lists dozens of native and partner integrations across collaboration, engineering, design, customer experience, automation, and AI categories, including Linear Agents from Sentry, Jellyfish, Replicas, Blocks, and others, plus AI clients such as v0 by Vercel and Google ADK.</li>
+</ul>
+
+<h2>Offer</h2>
+<p>Atlas can turn these five questions into a customer-ready evidence-gap map for <strong>$500 fixed price with 48-hour delivery</strong>. The deliverable links each requested control to the public evidence, the missing artifact, a suggested event schema, an owner, and a remediation priority. A <strong>$497/mo quarterly refresh</strong> keeps the map current as Linear adds agents, mutates the issue graph in new ways, expands integrations, and ships new model and connector capabilities.</p>
+<p>To engage, contact <code>hello@linear.app</code> with &ldquo;Linear AI Agents evidence map&rdquo; in the subject line, or use the Talon Forge Atlas storefront.</p>
+</body>
+</html>
