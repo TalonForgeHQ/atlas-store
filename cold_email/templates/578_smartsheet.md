@@ -39,5 +39,10 @@ https://talonforgehq.github.io/atlas-store
 | Immutable human-approval evidence for AI-generated formulas/text/summaries/translations/dynamic-views/Bridge automations/Control Center rollups | Smartsheet approval flows, change-tracking, Bridge dry-run |
 | Per-agent/per-model/per-tool-call/per-Bridge/per-workspace/per-tenant cost attribution | Smartsheet AI + Bridge + Data Shuttle + Control Center + Brandfolder + 10,000ft + Slope + Outfit billing breakdown |
 
-**Vertical siblings already in pipeline:** Motion 567, Akiflow 568, Sunsama 569, Routine 570, Reclaim.ai 571, ClickUp 572, monday.com 573, Linear 574, Notion 575, Asana 576, Coda 577.
+**Founders (verified live 2026-07-19):** Brent Frei (Co-Founder; ex-FilesAnywhere; GeekWire 2015 + NYT Corner Office 2014 interviews), Eric Browne (Co-Founder; CTO), Colby West (Co-Founder). Current CEO Rajeev Singh (joined 2023 as President; CEO since 2024-08; ex-Conga/Apttus/DealHub).
+
+**Vertical siblings already in pipeline (cohort sibling #12):** Motion 567, Akiflow 568, Sunsama 569, Routine 570, Reclaim.ai 571, ClickUp 572, monday.com 573, Linear 574, Notion 575, Asana 576, Coda 577.
+
 **Cohort fit:** ai_work_management, tier 1 — direct conversational-AI-agent audit wedge fit. Smartsheet is the only NASDAQ-listed public-company sibling in the cohort (NYSE: SMAR), which raises the per-row deal-size ceiling — SOC 2 + ISO 27001 + TX-RAMP + HIPAA BAA + EU AI Act vendor-DD cycles at public-company work-platform buyers (F100 procurement) routinely close at $1K-$5K vs the $497/mo standard MRR.
+
+**3-tier engagement ladder (P1.10.294):** $500 fixed-fee 48h audit · $497/mo quarterly retainer · $1,500 fixed-fee procurement-vendor-DD packet (per-row SOC 2 + ISO 27001 + TX-RAMP + EU AI Act evidence bundle for F100 procurement).
