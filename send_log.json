@@ -1,0 +1,15 @@
+[
+  {
+    "lead_index": 672,
+    "vendor": "CloudFactory",
+    "inbox": "contact@cloudfactory.com",
+    "vertical": "ai_data_labeling",
+    "tier": 1,
+    "template": "672_cloudfactory.md",
+    "cohort": "ai_data_labeling #5/5 CLOSER",
+    "queued_at": "2026-07-20T02:10:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued"
+  }
+]
