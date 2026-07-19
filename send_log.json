@@ -11,5 +11,18 @@
     "send_window": "Tue-Thu 9-11am PT",
     "send_method": "SMTP_unblocked_or_relay",
     "status": "queued"
+  },
+  {
+    "lead_index": 674,
+    "vendor": "Fixie.ai",
+    "inbox": "hello@fixie.ai",
+    "vertical": "ai_agents_autonomous",
+    "tier": 1,
+    "template": "674_fixie.md",
+    "cohort": "ai_agents_autonomous OPENER #1/5 (NEW VERTICAL)",
+    "queued_at": "2026-07-20T15:00:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued"
   }
 ]
