@@ -12,7 +12,9 @@ from pathlib import Path
 from typing import Any, Optional
 
 from . import db, pipeline
+from .adapters import craigslist as craigslist_mod
 from .adapters import discovery as discovery_mod
+from .adapters import nhtsa_safety as nhtsa_safety_mod
 from .adapters import notifier as notifier_mod
 from .adapters import risk as risk_mod
 from .adapters import valuation as valuation_mod
@@ -27,21 +29,28 @@ COMPS_FILE = DATA_DIR / "comps.json"
 
 def _build_pipeline(enable_community_mcp: bool = False,
                     enable_telegram: bool = False,
-                    enable_carsxe: Optional[bool] = None) -> pipeline.PipelineAdapters:
+                    enable_carsxe: Optional[bool] = None,
+                    enable_craigslist: bool = True,
+                    craigslist_site: Optional[str] = None) -> pipeline.PipelineAdapters:
     """Build the pipeline with the best-of-multiple-worlds stack.
 
     Adapters are added in preference order:
-      - Discovery: file feed (always), community MCP (opt-in)
+      - Discovery: Craigslist (free, ToS-friendly), file feed, community MCP
       - Valuation: CarsXE if CARSXE_API_KEY set, comps + heuristic always
-      - Risk: NHTSA VIN + recall + scarcity always; CarsXE history + CarGurus
-              if enabled
+      - Risk: NHTSA VIN + recall + safety ratings + vPIC specs + scarcity +
+              optional CarsXE history + CarGurus rating
       - Notifier: local log always, Telegram if enabled
     """
     drop = DROPS_DIR / "manual_export"
     drop.mkdir(parents=True, exist_ok=True)
-    discoverers = [
-        discovery_mod.FileFeedAdapter(drop, source_tag="manual_export"),
-    ]
+    discoverers = []
+    if enable_craigslist:
+        # Free, ToS-friendly P2P marketplace source. Bypasses Meta's wall.
+        discoverers.append(craigslist_mod.CraigslistAdapter(
+            default_site=craigslist_site,
+            source_tag="craigslist",
+        ))
+    discoverers.append(discovery_mod.FileFeedAdapter(drop, source_tag="manual_export"))
     if enable_community_mcp:
         # OPT IN. Operator accepts Meta's automation policy at their own risk.
         discoverers.append(discovery_mod.CommunityMCPAdapter(
@@ -63,10 +72,12 @@ def _build_pipeline(enable_community_mcp: bool = False,
             valuation_mod.CompsLocalAdapter(COMPS_FILE),
             valuation_mod.HeuristicValuation(),
         ]
-    # Risk stack
+    # Risk stack — free NHTSA data is the spine, paid options layered on top
     risk_screeners = [
         risk_mod.NHTSAVinDecodeAdapter(),
         risk_mod.NHTSARecallAdapter(),
+        nhtsa_safety_mod.NHTSASafetyRatingsAdapter(),
+        nhtsa_safety_mod.NHTSAVPICSpecsAdapter(),
         risk_mod.ScarcitySignalsAdapter(),
         risk_mod.CarsXEHistoryAdapter(),   # auto-enabled if CARSXE_API_KEY set
         risk_mod.CarGurusDealRatingAdapter(),  # reads cargurus_rating from listing
@@ -126,7 +137,9 @@ def cmd_ingest(args, conn):
 def cmd_run(args, conn):
     pl = _build_pipeline(enable_community_mcp=args.enable_community_mcp,
                          enable_telegram=args.enable_telegram,
-                         enable_carsxe=getattr(args, "enable_carsxe", None))
+                         enable_carsxe=getattr(args, "enable_carsxe", None),
+                         enable_craigslist=getattr(args, "enable_craigslist", True),
+                         craigslist_site=getattr(args, "craigslist_site", None))
     only = args.brief
     rep = pipeline.run_once(conn, pl, only_brief_id=only)
     print(json.dumps(rep, indent=2, default=str))
@@ -318,6 +331,12 @@ def main(argv: Optional[list[str]] = None) -> int:
                     default=None, help="Force CarsXE Market Value + History (needs CARSXE_API_KEY)")
     sr.add_argument("--no-carsxe", dest="enable_carsxe", action="store_false",
                     help="Disable CarsXE even if CARSXE_API_KEY is set")
+    sr.add_argument("--enable-craigslist", dest="enable_craigslist",
+                    action="store_true", default=True,
+                    help="Enable Craigslist discovery (default ON)")
+    sr.add_argument("--no-craigslist", dest="enable_craigslist", action="store_false")
+    sr.add_argument("--craigslist-site", default=None,
+                    help="Override the Craigslist subdomain (e.g. 'sfbay', 'newyork')")
 
     sd = sub.add_parser("dry-run", help="Run pipeline without enabling MCP/Telegram")
     sd.add_argument("--brief", type=int, default=None)

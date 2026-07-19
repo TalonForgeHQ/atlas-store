@@ -69,6 +69,7 @@ Each listing file is a JSON array. Required keys:
 
 | Layer | Adapter | Default | Notes |
 |---|---|---|---|
+| Discover | `CraigslistAdapter` | ON | Free, ToS-friendly. The real discovery source. |
 | Discover | `FileFeedAdapter` | ON | Reads `data/drops/manual_export/` |
 | Discover | `CommunityMCPAdapter` | OFF | Opt-in. Confirm Meta's automation policy. |
 | Value | `CarsXEMarketValueAdapter` | ON if `CARSXE_API_KEY` set | Live API, $40.83/mo Starter. Industry standard. |
@@ -77,6 +78,8 @@ Each listing file is a JSON array. Required keys:
 | Value | `KBBPublicAdapter` | OFF | KBB serves behind Akamai; needs residential proxy. |
 | Risk | `NHTSAVinDecodeAdapter` | ON | Hard-stop on VIN mismatch / failed decode. |
 | Risk | `NHTSARecallAdapter` | ON | Warns on open recalls. |
+| Risk | `NHTSASafetyRatingsAdapter` | ON | **Free** crash rating + complaint count + investigations. |
+| Risk | `NHTSAVPICSpecsAdapter` | ON | **Free** model existence check against official registry. |
 | Risk | `ScarcitySignalsAdapter` | ON | Off-platform payment, impossible mileage, branded title. |
 | Risk | `CarsXEHistoryAdapter` | ON if `CARSXE_API_KEY` set | Accidents, title brand, owner count, odometer rollback. |
 | Risk | `CarGurusDealRatingAdapter` | ON | Reads `cargurus_rating` field from listing dict. |
