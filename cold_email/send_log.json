@@ -123,5 +123,38 @@
     "send_window": "Tue-Thu 9-11am PT",
     "send_method": "SMTP_unblocked_or_relay",
     "status": "queued"
-  }
+  },
+  {
+    "lead_index": 696,
+    "vendor": "Sourcegraph",
+    "inbox": "security@sourcegraph.com",
+    "cc": [
+      "hi@sourcegraph.com",
+      "support@sourcegraph.com"
+    ],
+    "vertical": "ai_coding_agent_vertical",
+    "tier": 1,
+    "template": "696_sourcegraph.md",
+    "cohort": "ai_coding_agent_vertical sibling #2/5 after Cursor 695 OPENER #1/5",
+    "queued_at": "2026-07-20T23:10:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued",
+    "inbox_verification": "live 2026-07-20 on sourcegraph.com/security (mailto link on page) + sourcegraph.com/contact"
+  },
+{
+  "lead_index": 697,
+  "company": "Replit",
+  "handle": "@Replit",
+  "domain": "replit.com",
+  "vertical": "ai_coding_agent_vertical",
+  "cohort_position": "sibling #3/5 after Cursor 695 OPENER + Sourcegraph 696 sibling #2",
+  "inbox_used": "support@replit.com",
+  "inbox_verification": "live 2026-07-20 on replit.com/support + replit.com/contact",
+  "template": "697_replit.md",
+  "chunk": "chunk_697.html",
+  "tick": "2026-07-20-fast-exec-replit-697",
+  "queued": true,
+  "send_status": "queued_blocked_smtp"
+}
 ]
