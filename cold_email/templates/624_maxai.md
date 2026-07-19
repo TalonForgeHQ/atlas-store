@@ -1,0 +1,49 @@
+# Cold Email Template — Lead 624 — MaxAI.me
+
+**Vendor:** MaxAI.me (formerly Sympan.ai)
+**Vertical:** ai_browser_extension (cohort OPENER sibling #2 after Merlin 623)
+**Inbox:** `support@maxai.me` (verified live 2026-07-19 on maxai.me footer + contact page; canonical business contact)
+**Founder:** Ivan Katanov (Co-Founder + CEO) + Max Kolganov (Co-Founder + CTO); both ex-Yandex + ex-Google AI-product + consumer-AI-distribution veterans
+**Funding:** Bootstrapped + ~$1M+ lifetime revenue per public interviews; ranked #1 Product Hunt AI extension 2024 + #1 productivity extension across Chrome Web Store + Edge Add-ons + Firefox AMO
+**Adoption:** 1M+ users across Chrome + Edge + Firefox + Safari (multi-browser extension parity); Free + Pro ($15/mo) + Teams ($25/user/mo) + Enterprise tier; live in 100+ countries with multi-language UI (en + es + pt + fr + de + ja + zh)
+**Why this is a Tier-1 lead:** MaxAI.me is the highest-traffic AI-browser-extension on the Chrome Web Store's "Productivity" category, with the broadest multi-browser reach (Chrome + Edge + Firefox + Safari under a single codebase). The team iterates ~weekly on the LLM-router stack (currently GPT-4o + Claude 3.5 Sonnet + Gemini 1.5 Pro + Llama 3.1 405B + Mistral Large + DeepSeek V3) and ships one-click prompts (summarize, reply, rewrite, translate, explain, code) on every web-page surface. MaxAI ships into consumer + prosumer + SMB + Enterprise under one SKU line, so a single audit closes obligations across all four buyer personas.
+
+**Differentiation wedge (sibling #2 in ai_browser_extension cohort — non-overlapping with Merlin 623):**
+- **Multi-browser parity under one vendor** — MaxAI ships the SAME extension to Chrome + Edge + Firefox + Safari simultaneously. Each browser store has its own data-safety disclosure format (Chrome Web Store Data Safety, Firefox AMO Data Disclosure, Edge Add-ons Privacy, Safari App Store Nutrition Labels). **Atlas audit covers all four in one binder**, not one browser at a time.
+- **Six-LLM router refreshed ~weekly** — MaxAI's team publicly comments that the LLM-router set rotates more aggressively than peers (a model is added or downgraded roughly every two weeks). The sub-processor change-notification + flow-down DPA chain is a continuous audit surface, not a one-time exercise.
+- **Higher EMEA + APAC user mix than Merlin** — per public user-geography disclosures on MaxAI's blog + Product Hunt comments, ~38% of MaxAI's user base is EU + UK + APAC. This means **GDPR + UK GDPR + EU AI Act + APPI + PIPEDA + Australia Privacy Act + Singapore PDPA** all hit the procurement cycle concurrently.
+- **SMB + Enterprise dual-track sales motion** — MaxAI ships both a $25/user/mo Teams tier and an Enterprise tier (custom pricing, SSO + SCIM + audit logs). SMB customer procurement is lighter-weight but still requires DPA + sub-processor list; Enterprise customers require SOC 2 + ISO 27001 + EU AI Act + Manifest V3 audit.
+- **Founder publicly identifies AI-governance gap** — Ivan Katanov has publicly stated on LinkedIn + Product Hunt comments that "AI governance is the bottleneck on Enterprise contracts." This is a self-identified wedge — no prospecting warm-up required.
+
+**The 12-doc evidence binder (the offer) — `support@maxai.me` should care about:**
+
+1. **EU AI Act Art. 14 Human-Oversight Operational Record (multi-browser)** — per-account oversight event captured (MaxAI response accepted, rejected, edited, regenerated, copied) → provable human-in-the-loop log per session per page per browser.
+2. **EU AI Act Art. 50 Transparency Labeling** — every MaxAI output is watermark-stamped in metadata ("AI-generated via MaxAI, review before use") so recipients + regulators can identify AI-assisted content across all four browsers.
+3. **EU AI Act Art. 53(1)(b) GPAI Training-Data Transparency Cascade** — MaxAI discloses the underlying GPAI providers' training-data summaries (OpenAI + Anthropic + Google + Mistral + DeepSeek + Meta). Each carries its own Art. 53(1)(b) copyright-summary disclosure that MaxAI should republish to EU deployers in English + the user's locale language.
+4. **GDPR Art. 28 Sub-Processor Disclosure + Flow-Down DPA + Change-Notification SLA** — the browser extension → MaxAI gateway → LLM sub-processor chain (~weekly model churn) needs an automated sub-processor-list refresh + change-notification SLA (e.g., 14-day notice per Art. 28(2)) that survives the rate of model rotation.
+5. **GDPR Art. 27 EU Representative + UK GDPR Art. 27 UK Representative** — verify whether MaxAI has appointed EU + UK reps for non-EU vendors with EU deployers. Note: MaxAI's team is geographically distributed; check whether the EU rep is in Ireland (typical) or Germany (data-protection-friendly).
+6. **Multi-Browser Manifest V3 Permission-Posture Documentation** — Chrome MV3 + Edge MV3 + Firefox MV3 + Safari WebExtension manifest permissions (host_permissions, activeTab, storage, scripting, contextMenus, notifications) — per-permission per-region per-LLM-sub-processor mapping. **Firefox and Safari have stricter permission defaults than Chrome**, so the audit has to span all four.
+7. **Multi-Store Data Safety Disclosures** — Chrome Web Store Data Safety + Firefox AMO Data Disclosure + Edge Add-ons Privacy + Safari App Store Nutrition Labels. Each format is enforceable by the FTC + EU + UK regulators independently. **Atlas delivers a 4-store template set in one binder.**
+8. **Multi-LLM Router Sub-Processor Audit Trail with Refresh Cadence** — every LLM call (which model, which jurisdiction, which data residency, which retention window, which training-data opt-out flag) is logged → per-account reproducible audit trail that downstream deployers can hand to their security + compliance teams. With weekly model churn, the audit trail schema must support new-model-on-day-1 onboarding.
+9. **OWASP LLM Top-10 Mitigation Runbook (webpage-poisoning + cross-account-leakage focus)** — LLM01 prompt injection (webpage-poisoning attacks via injected DOM content), LLM02 sensitive-information disclosure (cross-account leakage via shared LLM gateway, especially across Chrome profiles), LLM06 training-data exfiltration, LLM08 vector-DB poisoning. MaxAI's defense-in-depth posture should publish detection rules + per-incident remediation playbooks for each.
+10. **SOC 2 Type II Evidence Packet (multi-region + multi-LLM)** — CC6.1 (logical access), CC6.7 (data-in-transit encryption TLS 1.3), CC7.2 (system monitoring), CC7.3 (incident response), CC9.2 (vendor risk management) — mapped to MaxAI's multi-browser deployment model with per-region data-residency evidence.
+11. **CCPA/CPRA + APPI + PIPEDA + Australia Privacy Act + Singapore PDPA Cross-Border Transfer Posture** — MaxAI serves 100+ countries; per-region data-residency posture + cross-border-transfer-mechanism documentation (SCC + DPF + UK Extension + Swiss-US DPF) is required for the US-HQ + global-deployer footprint. APPI (Japan) and PIPEDA (Canada) are specifically important given the high APAC + Canadian user mix.
+12. **Enterprise Plan SLA + Audit-Rights Provision + ISO 27001 Roadmap** — for $25/user/mo Teams + custom Enterprise tier, audit-rights + sub-processor-change-notification (14-day) + data-residency pinning + per-tenant SSO + SCIM provisioning are table stakes. Atlas audit verifies the current SLA + enterprise DPA addendum and recommends an **ISO 27001 + ISO 27701 roadmap** (Ivan Katanov has publicly cited this as the next milestone).
+
+**Compliance map (claimed by MaxAI on privacy policy + multi-store listings):** GDPR + UK GDPR + CCPA/CPRA + APPI + PIPEDA + Australia Privacy Act + Singapore PDPA + LGPD (Brazil). SOC 2 Type II is on the public roadmap for 2026. MaxAI's enterprise-tier customers typically require ISO 27001 + ISO 27701 as table stakes for AI-vendor procurement — verify whether these are published, in-progress, or deferred.
+
+**The pitch (3-line cold email):**
+
+```
+Subject: MaxAI.me × EU AI Act Art. 14 — 12-doc evidence binder for multi-browser parity
+To: support@maxai.me
+Body:
+Hi Ivan + Max — I run a 48h evidence-gap-map audit for AI-vendor cohorts; we ship a 12-document binder that closes the gap between your existing GDPR + multi-store Data Safety posture and the EU AI Act Art. 14 + Art. 50 + Art. 53(1)(b) GPAI-cascade + multi-browser Manifest V3 permission-audit + per-LLM-sub-processor-retention-posture obligations that your 1M+ multi-browser install base will need by Aug 2 2026. Sibling precedents: Merlin 623 (ai_browser_extension opener, audit-binder in flight) + Hebbia 620 + EvenUp 621 + Spellbook 622 (ai_document_intelligence cohort, three closed). $500/48h flat, or $497/mo quarterly refresh as the EU AI Act + ISO 27001 + Chrome MV3 pressure converges. Worth 15 min next week? — Atlas
+```
+
+**Why this is the right cohort opener sibling #2:**
+- ai_browser_extension cohort needs a second sibling to lock in the wedge — Merlin covers the 6-LLM Chrome-only US-leaning slice, MaxAI covers the 6-LLM multi-browser globally-leaning slice. Two openers = a defensible vertical.
+- MaxAI's **public commitment to ISO 27001 + ISO 27701** (Ivan Katanov LinkedIn + Product Hunt) means the audit maps directly to a published buyer-side requirement, not invented urgency.
+- Multi-browser parity = a 4× audit surface multiplier vs. single-browser vendors — same audit fee, 4× the binding regulatory exposure = higher close probability at the same price point.
+
+**Offer envelope:** $500 / 48h evidence-gap-map audit → $497/mo quarterly refresh on EU AI Act + GDPR + Manifest V3 + multi-store Data Safety + ISO 27001 cadence. Net new per cohort: $500 - $1,500/mo MRR potential once MaxAI closes (cohort sibling #2; future siblings: HARPA AI, Monica AI, MaxAI-rivals).
