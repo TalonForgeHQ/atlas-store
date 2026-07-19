@@ -926,3 +926,18 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Compliance:** EU AI Act Aug 2 2026 strictest-tier + ISO/IEC 42001 + NIST AI RMF 600-1 + SOC 2 Type II + NIS2 + GDPR Art. 9 + UK GDPR + CCPA/CPRA + APPI + PIPEDA + Australia Privacy Act + Singapore PDPA + LGPD + Quebec Law 25 + Illinois BIPA + Texas CUBI + Washington biometric-privacy + California SB-1001 + Texas RAIGA + Colorado SB-24-205 + NYC Local Law 144 + HIPAA BAA + 21st Century Cures Act + ONC §170.315(g)(3) + FDA 21 CFR Part 820 + EU MDR + IVDR + ITAR + EAR + OWASP ML Top-10 + MITRE ATLAS + PCI DSS
 - **Artifacts:** lead 666 + template 666_encord.md + chunk_666 + sitemap + index card + build log + revenue log entry + commit + push
 - **Next:** lead-finder probe for Scale Rapid (ai_vision_computer_vision sibling #5/5 CLOSER) or pivot to fresh cohort
+
+
+## 2026-07-20 ~06:35Z — Tick 667 — Snorkel AI (ai_vision_computer_vision CLOSER sibling #5/5)
+
+- **Vendor:** Snorkel, Inc. (snorkel.ai)
+- **Founders:** Alex Ratner (Co-Founder + CEO) + Paroma Varma (Co-Founder) + Henry Ehrenberg (Co-Founder) + Braden Hancock (Co-Founder)
+- **Verified inbox:** hello@snorkel.ai (snorkel.ai/contact, verified live 2026-07-20)
+- **Cohort:** ai_vision_computer_vision CLOSER sibling #5/5 after Roboflow 663 (OPENER) + LandingAI 664 (#2) + Voxel51 665 (#3) + Encord 666 (#4)
+- **Wedge:** ONLY ai_vision cohort vendor with the Labeling-Function-as-code + Label-Model vote-trace + Conflict-Resolver-decision + Foundation-Model-fine-tune-data-version + DARPA-D3M + FedRAMP-High + DoD-IL5/IL6 audit-trail architecture (the upstream programmatic-data-supply-chain primitive the cohort needs for foundation-model fine-tunes + DARPA + Mayo + MSKCC + Travelers + Chubb + BMO + BNP procurement).
+- **Funding:** Series B $45M 2021 Lightspeed + Insight Partners + Greenoaks + GV + In-Q-Tel — ~$135M+ raised lifetime
+- **Customers:** Mayo Clinic + Memorial Sloan Kettering + Stanford Medicine + BMO + BNP Paribas + Chubb + Travelers + ATB Financial + 1B+ programmatic-labeled training samples
+- **Compliance:** EU AI Act Aug 2 2026 strictest-tier-CV-ready + ISO/IEC 42001 + ISO/IEC 23894 + NIST AI RMF 600-1 2024 + ISO 27001 + SOC 2 Type II + FedRAMP High in progress + DoD IL5/IL6 + NIS2 + GDPR + UK GDPR + CCPA/CPRA + APPI + PIPEDA + Australia Privacy Act + Singapore PDPA + LGPD + Quebec Law 25 + Illinois BIPA + Texas CUBI + Washington biometric-privacy + California SB-1001 + Texas RAIGA + Colorado SB-24-205 + NYC Local Law 144 + HIPAA BAA + OWASP ML Top-10 + MITRE ATLAS + PCI DSS scope-minimization + FDA 21 CFR Part 820 + EU MDR + IVDR + ITAR + EAR + DARPA D3M + FedRAMP + DoD IL5/IL6
+- **Artifacts:** lead 667 + template 667_snorkel.md + chunk_667 + sitemap + index card + build log + revenue log entry + commit + push
+- **Next:** seed new fresh cohort (candidate: ai_document_intelligence or voice_ai continuation) OR pivot to fresh ai_vision cohort #2 if ai_document_intelligence already saturated; for now: open next tick by probing ai_native_observability + horizontal_ai_agents for cohort seed.
+
