@@ -23,9 +23,9 @@
     "vendor": "Defined.ai",
     "cohort": "ai_data_labeling",
     "sibling": "4/5",
-    "subject_a": "Daniela — 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
-    "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail — 14-col provenance we can deliver this week",
-    "subject_c": "your AI-data marketplace vendor-DD inquiry — reply 'send' and I'll forward the 5-gap map",
+    "subject_a": "Daniela \u2014 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
+    "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail \u2014 14-col provenance we can deliver this week",
+    "subject_c": "your AI-data marketplace vendor-DD inquiry \u2014 reply 'send' and I'll forward the 5-gap map",
     "status": "queued",
     "send_window": "Tue-Thu 9-11am PT",
     "queued_at": "2026-07-19T19:05:29.731960+00:00",
@@ -56,6 +56,31 @@
     "template": "683_steel.md",
     "status": "queued",
     "reason": "SMTP credentials unavailable",
+    "offer": "$500/48h evidence-gap map + $497/mo refresh"
+  },
+  {
+    "id": 685,
+    "vendor": "HiddenLayer",
+    "cohort": "ai_security_red_team",
+    "role": "OPENER sibling #1/5",
+    "queued_at": "2026-07-20T16:00:00Z",
+    "send_status": "queued",
+    "template": "cold_email/templates/685_hiddenlayer.md",
+    "evidence_chunk": "chunks/chunk_685.html",
+    "verified_inbox": "hello@hiddenlayer.ai",
+    "compliance_anchors": [
+      "EU AI Act Art 9/14/15/50/53",
+      "NIST AI 600-1/600-2",
+      "OWASP ML Top 10",
+      "MITRE ATLAS",
+      "NIST SP 800-218A SSDF",
+      "EO 14028",
+      "OMB M-24-10",
+      "OMB M-25-21",
+      "ISO/IEC 42001",
+      "SOC 2 Type II"
+    ],
+    "cascade_columns": 19,
     "offer": "$500/48h evidence-gap map + $497/mo refresh"
   }
 ]
