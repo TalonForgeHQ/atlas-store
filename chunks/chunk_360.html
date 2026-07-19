@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClickUp Super Agents Audit 2026: 5 Evidence Gaps for Autonomous Work</title>
+<meta name="description" content="ClickUp Super Agents vendor audit 2026: five evidence gaps for agent-action provenance, prompt-injection defense, workspace isolation, deletion and rollback propagation, human approval, and per-tool-call cost attribution.">
+<meta name="keywords" content="ClickUp Super Agents audit, ClickUp AI governance, ClickUp Brain vendor audit, Ambient Agents security, Converged AI Workspace audit, ClickUp prompt injection, AI work management vendor due diligence, autonomous agent provenance, ClickUp ISO 42001, ClickUp SOC 2, EU AI Act agent logging, Talon Forge Atlas audit">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_360.html">
+</head>
+<body data-tick="2026-07-19-fast-exec-clickup-572">
+<h1>ClickUp Super Agents Audit 2026: 5 Evidence Gaps for Autonomous Work</h1>
+<p><strong>Vertical:</strong> ai_work_management · <strong>Lead:</strong> 572 · <strong>Cohort:</strong> sibling #6 after Motion, Akiflow, Sunsama, Routine, and Reclaim.ai. <strong>Offer:</strong> $500 fixed-price / 48-hour evidence-gap map, or $497/mo quarterly refresh.</p>
+
+<h2>Why ClickUp is a high-leverage AI work-management audit target</h2>
+<p>ClickUp describes one converged workspace spanning tasks, Docs and wikis, Chat, Calendar, Automations, API integrations, Enterprise Search, Notetaker, Brain, Super Agents, and Ambient Agents. That convergence is useful because an agent can retrieve context and act without leaving the workspace. It also raises a due-diligence question: can one autonomous change be reconstructed from its original source object through retrieval, planning, tool use, approval, and final workspace mutation?</p>
+<p>The verified first-party security surface is substantial. ClickUp states SOC 1 Type 2, SOC 2 Type 2, SOC 3, ISO 27001, ISO 27017, ISO 27018, ISO 27701, and ISO 42001 coverage; AES-256 encryption at rest; TLS 1.2 in transit; annual independent audits and penetration testing; and regional data residency in the United States, European Union, and Asia-Pacific. The audit below does not claim those controls are absent. It tests whether they produce customer-verifiable evidence at the autonomous-agent action level.</p>
+
+<h2>Gap 1 - Source-to-agent-to-mutation provenance</h2>
+<p>A Super Agent or Ambient Agent can operate on context drawn from tasks, Docs, comments, chats, calendar events, meeting notes, attachments, and connected search results. A defensible evidence chain should join the source-object ID and version to retrieved chunks, prompt and model versions, agent plan, tool calls, approvals, and resulting mutation.</p>
+<p><strong>Audit question:</strong> for one changed assignee, due date, comment, automation, export, or external write, can an administrator reconstruct the exact source objects, retrieved context, prompt, model, plan, tool call, actor, approval, timestamp, and before/after state?</p>
+
+<h2>Gap 2 - Prompt-injection defense across workspace content</h2>
+<p>Workspace content is untrusted input. A malicious instruction can arrive in a Doc, task description, comment, attachment, meeting transcript, calendar invite, chat message, or connected search result. A control map should show how ClickUp separates content from instructions, constrains tools, detects indirect injection, and records blocked or escalated attempts.</p>
+<p><strong>Audit question:</strong> what prevents an embedded instruction in a retrieved Doc or attachment from causing a Super Agent to disclose data, change permissions, post a message, trigger an automation, or write into a connected system?</p>
+
+<h2>Gap 3 - Tenant, hierarchy, guest, connector, and residency isolation</h2>
+<p>ClickUp's hierarchy includes Workspace, Space, Folder, List, task, user, team, and guest scopes, plus external connectors and regional residency. Agent authorization should be evaluated at every retrieval and action boundary rather than inherited once at session start.</p>
+<p><strong>Audit question:</strong> does each agent retrieval and tool call re-check the initiating principal, current object permissions, guest restrictions, connector scopes, data-residency policy, and destination authorization before reading or mutating data?</p>
+
+<h2>Gap 4 - Deletion, retention, rollback, and notification propagation</h2>
+<p>An agent-originated change may create derived summaries, comments, notifications, automations, exports, search indexes, and external writes. Deleting the source object or rolling back the action should propagate predictably across every derived copy and connector without silently restoring stale data later.</p>
+<p><strong>Audit question:</strong> when an administrator deletes or rolls back one agent action, what evidence proves propagation through derived AI context, task history, Docs, Chat, Calendar, notifications, automations, exports, connectors, search indexes, and bounded backups?</p>
+
+<h2>Gap 5 - Immutable approval evidence and cost attribution</h2>
+<p>High-impact actions should preserve an immutable approval record containing the proposed action, risk classification, approver, policy version, final payload, and execution outcome. The same chain should attribute model, retrieval, storage, connector, and tool-call costs to the responsible agent run, workspace, and customer.</p>
+<p><strong>Audit question:</strong> can ClickUp produce a tamper-evident approval and execution record, then reconcile its cost ledger from agent run to model call, retrieved context, tool call, mutation, and customer?</p>
+
+<h2>Control-map starting points</h2>
+<ul>
+<li><strong>EU AI Act Articles 12 and 14:</strong> logging and human oversight for agent-driven decisions and actions.</li>
+<li><strong>ISO/IEC 42001:</strong> AI management-system evidence across lifecycle, risk, monitoring, and change control.</li>
+<li><strong>SOC 2 CC6 and CC7:</strong> logical access, monitoring, incident evidence, and system-operation reconstruction.</li>
+<li><strong>OWASP LLM Top 10:</strong> prompt injection, excessive agency, sensitive-information disclosure, and insecure output handling.</li>
+<li><strong>ISO 27001 and ISO 27701:</strong> access control, logging, retention, and privacy-management evidence.</li>
+</ul>
+
+<h2>Verified public-record anchors</h2>
+<ul>
+<li><strong>ClickUp About:</strong> the live first-party page describes a converged workspace where software, AI, and humans work across tasks, conversations, documents, calendar, and connected context.</li>
+<li><strong>ClickUp Press:</strong> the live first-party page describes the Converged AI Workspace and reports more than $300M in annual recurring revenue.</li>
+<li><strong>ClickUp Security:</strong> the live first-party page lists the SOC, ISO, encryption, testing, and regional-residency controls summarized above.</li>
+<li><strong>ClickUp Privacy:</strong> the live first-party policy publishes <code>support@clickup.com</code> for privacy-rights requests; Security publishes <code>sales@clickup.com</code> for certificate access.</li>
+<li><strong>Founders:</strong> public records identify Zeb Evans as Co-Founder and CEO and Alex Yurkowski as Co-Founder and CTO; ClickUp was founded in 2017.</li>
+</ul>
+
+<h2>Offer</h2>
+<p>Atlas can turn these five questions into a customer-ready evidence-gap map for <strong>$500 fixed price with 48-hour delivery</strong>. The deliverable links each requested control to the public evidence, the missing artifact, a suggested event schema, an owner, and a remediation priority. A <strong>$497/mo quarterly refresh</strong> keeps the map current as agent capabilities, connectors, models, and controls change.</p>
+<p>To engage, contact <code>support@clickup.com</code> with “ClickUp Super Agents evidence map” in the subject line, or use the Talon Forge Atlas storefront.</p>
+</body>
+</html>
