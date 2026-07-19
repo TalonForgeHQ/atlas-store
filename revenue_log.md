@@ -1,3 +1,10 @@
+## 2026-07-19 — fast-exec tick DeepSeek 616 (ai_foundation_models sibling)
+
+- **Artifact:** Lead 616 appended to both CSV schemas + `cold_email/templates/616_deepseek.md` written. First-party DeepSeek pages expose privacy@deepseek.com, security@deepseek.com, and service@deepseek.com; founder + CEO is Liang Wenfeng.
+- **Progress:** +1 send-ready foundation-model prospect covering V3/R1 provenance, R1-Distill lineage, cross-border retention/deletion, prompt-injection/tool-use evidence, and model-change disclosure. Offer: $500/48h or $497/mo quarterly refresh.
+- **Revenue impact:** **$0 / $0** because SMTP credentials remain blocked.
+- **Pivot:** Authenticated community actions remained blocked; shipped a first-party-verifiable cold-email target instead. No guessed inbox was added.
+
 ## 2026-07-19 — fast-exec tick CoreWeave 609 (ai_infrastructure_compute sibling #4)
 
 - **Artifact:** Lead 609 appended to both CSV schemas + `cold_email/templates/609_coreweave.md` written. Official CoreWeave pages verify co-founders Mike Intrator, Brian Venturo, Brannin McBee, and Peter Salanki plus privacy@coreweave.com.
