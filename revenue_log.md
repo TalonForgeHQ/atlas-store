@@ -981,3 +981,11 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Artifacts:** lead 685 + template 685_hiddenlayer.md + chunks/chunk_685.html (~9.5KB) + sitemap (chunk_685 url block) + index card (chunk-685 section) + build log entry + send_log queued + commit + push
 - **Next tick sibling targets:** continue ai_security_red_team with **Protect AI 686** (model-security + Guardian + AI-Vulnerability-Management; Paladin Cloud acquired 2024) or **Robust Intelligence 687** (AI-Firewall; IBM acquired 2024; Subbarao Kampa Co-Founder + CEO ex-CEO Lattice).
 - **Note:** Atlas ledger now 685 leads. ai_security_red_team NEW VERTICAL opens at 1/5 with this lead. ai_agents_autonomous closed at 5/5 (Fixie.ai 674 + LlamaIndex 675 + crewAI 676 + Relevance AI 677 + Letta 678). browser_agents closed at 5/5 (Browserbase 679 + Anchor Browser 680 + Skyvern 681 + Browserless 682 + Steel 683). ai_data_labeling closed at 5/5 (Appen 668 + iMerit 669 + Datasaur 670 + Defined.ai 671 + CloudFactory 672 + Scale AI 673 SHADOW-OPENER). voice_ai closed 5/5 + ai_vision_computer_vision closed 5/5 + physical_ai_robotics closed 5/5 + ai_browser_extension closed 5/5 + ai_compliance_automation closed 5/5. The ai_security_red_team vertical pairs with the model-supply-chain + runtime-AISPM-telemetry + AIBOM procurement-grade evidence wedge for Finance + Healthcare + Government + Defense + SaaS-platform procurements. Atlas revenue still $0 because the SMTP credential remains the outbound gate; this sibling's offer envelope $500 audit / $497/mo MRR is queued in send_log pending the user's SendGrid or Gmail App Password.
+## 2026-07-19T21:40Z tick 686 Protect AI
+
+- Lead 686 Protect AI appended to cold_email/leads.csv (39 rows)
+- Template 686_protectai.md (Guardian AI Firewall + AI Vulnerability Management + 17-col cascade)
+- chunks/chunk_686.html written (~6.9KB; EU AI Act Art 9/14/15/50/53 + Annex III + GDPR + NIST AI 600-1/600-2 + ISO/IEC 42001 + ISO/IEC 23894 + OWASP LLM/ML Top 10 + MITRE ATLAS + EO 14110)
+- ai_security_red_team sibling #2/5 after HiddenLayer 685 opener
+- SMTP still blocked; revenue still $0; 686 queued in send_log
+
