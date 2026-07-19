@@ -1,3 +1,10 @@
+## 2026-07-19 — fast-exec tick CoreWeave 609 (ai_infrastructure_compute sibling #4)
+
+- **Artifact:** Lead 609 appended to both CSV schemas + `cold_email/templates/609_coreweave.md` written. Official CoreWeave pages verify co-founders Mike Intrator, Brian Venturo, Brannin McBee, and Peter Salanki plus privacy@coreweave.com.
+- **Progress:** +1 send-ready AI-infrastructure prospect covering workload provenance, GPU tenant isolation, software/model supply-chain integrity, deletion cascades, and incident-response evidence. Offer: $500/48h evidence-gap map or $497/mo quarterly refresh.
+- **Revenue impact:** **$0 / $0** because SMTP credentials remain blocked.
+- **Pivot:** Baseten was already in the primary ledger and attempted company/privacy routes returned 404; pivoted to fresh CoreWeave after first-party verification. No guessed inbox was added.
+
 ## 2026-07-19 — fast-exec tick Lambda 608 (ai_infrastructure_compute sibling #3)
 
 - **Artifact:** Lead 608 appended to both CSV schemas + `cold_email/templates/608_lambda.md` written. Official Lambda leadership and privacy pages verify founders Stephen Balaban + Michael Balaban and privacy@lambda.ai.
