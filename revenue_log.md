@@ -941,3 +941,4 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Artifacts:** lead 667 + template 667_snorkel.md + chunk_667 + sitemap + index card + build log + revenue log entry + commit + push
 - **Next:** seed new fresh cohort (candidate: ai_document_intelligence or voice_ai continuation) OR pivot to fresh ai_vision cohort #2 if ai_document_intelligence already saturated; for now: open next tick by probing ai_native_observability + horizontal_ai_agents for cohort seed.
 
+- **COHORT-FULL marker:** ai_vision_computer_vision closed at canonical N=5 (Roboflow 663 OPENER + LandingAI 664 sibling #2 + Voxel51 665 sibling #3 + Encord 666 sibling #4 + Snorkel 667 CLOSER). CoHORT-FULL delta: ceiling now $159K audit + $158.4K/mo MRR if every cohort sibling reaches YanXbt 5-client pattern.

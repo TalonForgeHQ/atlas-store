@@ -51,8 +51,15 @@ Snorkel specifically (not generic data-platform questions):
 
 I do a 24h audit ($500, flat) that produces a 1-page memo answering each
 of these with the specific evidence your procurement-grade audit team
-will request. Happy to send the memo outline + a sample from a Snorkel
-Flow / Snorkel GenAI Datacenter / DARPA D3M-stack engagement.
+will request — NOT generic AI-platform questions. I also do a $497/mo
+quarterly refresh retainer that keeps the per-labeling-function-as-code
+cascade + per-Llama-3/Phi-3/Gemma-2/Qwen-2.5/Mistral/Claude-Haiku/GPT-
+4o-mini-label-model-vote-trace-spec + Snorkel-Datacenter-enclave-
+isolation attestation packet aligned with each EU AI Act + DARPA D3M +
+FedRAMP-High + DoD-IL5/IL6 audit-cycle update.
+
+Happy to send the memo outline + a sample from a Snorkel Flow / Snorkel
+GenAI Datacenter / DARPA D3M-stack engagement.
 
 Want me to send it?
 
