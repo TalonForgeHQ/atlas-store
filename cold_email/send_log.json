@@ -82,5 +82,20 @@
     ],
     "cascade_columns": 19,
     "offer": "$500/48h evidence-gap map + $497/mo refresh"
+  },
+  {
+    "id": 693,
+    "vendor": "Ironclad",
+    "cohort": "ai_legal_compliance_os",
+    "role": "sibling #4/5",
+    "queued_at": "2026-07-20T05:39:46Z",
+    "send_status": "queued",
+    "template": "cold_email/templates/693_ironclad.md",
+    "evidence_chunk": "chunks/chunk_693.html",
+    "verified_inbox": "trust@ironclad.com",
+    "cohort_siblings_remaining": 1,
+    "cascade_columns": 19,
+    "offer": "$500/48h evidence-gap map + $497/mo refresh",
+    "reason": "SMTP credentials unavailable"
   }
 ]
