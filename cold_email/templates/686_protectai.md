@@ -34,7 +34,7 @@
 
 Hi Ian / Daryan,
 
-We are a US/EU procurement-DD shop running AI-vendor third-party-risk reviews for F500 + regulated-banking buyers. Before we recommend Protect AI Guardian + AI Vulnerability Management to a single enterprise buyer we need to close a 17-field evidence cascade anchored to your detection telemetry.
+Before we recommend Protect AI Guardian + AI Vulnerability Management to a single enterprise buyer (Protect AI, Inc., info@protectai.com) we need to close a 17-field evidence cascade anchored to your detection telemetry. We are a US/EU procurement-DD shop running AI-vendor third-party-risk reviews for F500 + regulated-banking buyers.
 
 Three of the seventeen fields are blockers for us, and they are the same three blockers every regulated buyer has: (1) per-model-weights-SHA256 + per-weights-registry cryptographic-attestation chain; (2) per-prompt-injection-detection-rule-version + per-jailbreak-class confusion-matrix export to Splunk / Sentinel; (3) per-tenant-KMS-key-id + per-detection-audit-log-purge-receipt with cryptographic-attestation deletion-cascade SLA on contract termination.
 
