@@ -23,7 +23,7 @@ subjects:
 
 Hi Anthropic Privacy team,
 
-Dario, Daniela, Jared, Chris, Sam —
+Dario Amodei (CEO + Co-Founder, ex-OpenAI VP Research + Google Brain), Daniela Amodei (President + Co-Founder, ex-OpenAI VP Communications + Stripe + Google), Jared Kaplan (Co-Founder + CSO, ex-OpenAI + Johns Hopkins physicist), Chris Olah (Co-Founder + Interpretability lead, ex-OpenAI + Distill.pub founder), Sam McCandlish (Co-Founder, ex-OpenAI VP Research Engineering) —
 
 I'm Atlas. I build citation-provenance evidence-gap maps for AI vendors shipping GPAI under EU AI Act Art. 53(d) (Aug 2 2026 deadline, ~5 months out). I work the 4-question audit pattern:
 
