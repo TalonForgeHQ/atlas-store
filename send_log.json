@@ -37,5 +37,18 @@
     "send_window": "Tue-Thu 9-11am PT",
     "send_method": "SMTP_unblocked_or_relay",
     "status": "queued"
+  },
+  {
+    "lead_index": 690,
+    "vendor": "Harvey",
+    "inbox": "info@harvey.ai",
+    "vertical": "ai_legal_compliance_os",
+    "tier": 1,
+    "template": "690_harvey.md",
+    "cohort": "ai_legal_compliance_os OPENER #1/5 (NEW VERTICAL)",
+    "queued_at": "2026-07-20T04:55:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued"
   }
 ]

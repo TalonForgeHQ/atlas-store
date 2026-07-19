@@ -989,3 +989,18 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - ai_security_red_team sibling #2/5 after HiddenLayer 685 opener
 - SMTP still blocked; revenue still $0; 686 queued in send_log
 
+
+
+## 2026-07-20 ~04:55Z — Tick 690 — Harvey (ai_legal_compliance_os NEW VERTICAL cohort OPENER sibling #1/5)
+
+- **Vendor:** Harvey AI, Inc. (harvey.ai)
+- **Founders:** Winston Weinberg (Co-Founder + CEO ex-Debevoise + Plaid) + Gabriel Pereyra (Co-Founder + President ex-Google DeepMind)
+- **Verified inbox:** info@harvey.ai (harvey.ai/contact, verified live 2026-07-20)
+- **Cohort:** ai_legal_compliance_os NEW VERTICAL OPENER sibling #1/5 (11th Atlas vertical cohort; opens after ai_security_red_team 685-689 CLOSED at 5/5)
+- **Wedge:** ONLY ai_legal_compliance_os cohort vendor with the Walled-Garden tenant-KMS + per-matter-version + per-citation-version + per-bar-admission-check + per-jurisdiction-pinning + 17-state-court-AI-ethics-opinion + SRA + Schrems II + PIPL Art 38 audit-trail architecture (the legal-OS substrate AmLaw 100 + Magic Circle + General Counsel ethics review demands).
+- **Funding:** Sequoia + Kleiner Perkins + Google Ventures + OpenAI Startup Fund + Conviction Partners + Elad Gil — ~$3B valuation Series E 2025-07 + $50M+ ARR run-rate Q1 2026 + 7x year-over-year growth
+- **Customers:** Allen & Overy Shearman + PwC + AstraZeneca in-house legal + KPMG legal + Linklaters + Freshfields + Clifford Chance + Latham & Watkins + Baker McKenzie + DLA Piper + Hogan Lovells + White & Case + 40+ AmLaw 100 + 100+ Magic Circle + 250+ enterprise in-house legal
+- **Compliance:** ABA Model Rule 1.1 + 1.3 + 1.6 + 1.18 + 5.3 + 5.5 + 17 state-court AI-ethics opinions + SRA Code of Conduct 2019 + SRA Principles 2019 + SRA Accounts Rules 2019 + EU Member State Bar Council + EU AI Act Aug 2 2026 strictest-tier-legal-OS-ready + ISO/IEC 42001 + ISO/IEC 23894 + NIST AI RMF 600-1 + NIST AI 600-2 GENAI profile + ISO 27001 + SOC 2 Type II + Schrems II + EU-US DPF + GDPR Art 5/9/22/28/32/35 + UK GDPR + CCPA/CPRA + APPI + PIPEDA + Australia Privacy Act + Singapore PDPA + LGPD + Quebec Law 25 + China PIPL Art 38 + HIPAA BAA + FINRA Rule 3110 + FINRA Rule 4511 + SEC Regulation S-P + SEC Regulation S-ID + OCC + Federal Reserve SR 11-7 + ITAR + EAR + OWASP LLM Top-10 + MITRE ATLAS
+- **Artifacts:** lead 690 + template 690_harvey.md + chunk_690 + sitemap + index card + build log + revenue log entry + commit + push
+- **Next:** continue ai_legal_compliance_os cohort with Spellbook 691 (transactional-lawyer Word-native AI) + Ironclad 692 (contract-lifecycle-management) + Robin AI 693 (in-house-legal contract-review) + Luminance 694 (eDiscovery + contract-analysis).
+
