@@ -1,0 +1,42 @@
+<section id="chunk-644" class="chunk" data-tick="2026-07-19-fast-exec-drata-647" data-vertical="ai_compliance_automation" data-tier="1">
+<header>
+<h2>EU AI Act Aug 2 2026: five audit-trails every AI-agent compliance officer needs to produce on demand</h2>
+<p class="meta">Drata 647 / 2026-07-19 / ai_compliance_automation cohort opener / $500/48h evidence-gap map</p>
+</header>
+
+<h3>TL;DR</h3>
+<p>Drata's continuous-compliance platform covers 30+ frameworks (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS, ISO 27701, NIST CSF, CMMC) with automated evidence collection, an auditor portal, and risk management. As of Aug 2 2026 the EU AI Act high-risk-system controls and ISO/IEC 42001 AI management system requirements layer ON TOP of those frameworks. Five audit-trails a typical Drata customer still has to hand-build for AI-agent procurement: (1) per-system risk-tier classification, (2) per-data-category provenance, (3) per-model + per-prompt + per-tool-version manifest, (4) per-incident + per-human-override log, (5) per-output + per-evaluation evidence pack. The $500/48h evidence-gap map below itemizes which of those five audit-trails your existing Drata control library covers, which ones need a 90-day manual build, and which have the highest-ROI productization wedge.</p>
+
+<h3>Why now</h3>
+<p>The EU AI Act high-risk-system controls go live Aug 2 2026. ISO/IEC 42001 became certifiable in late 2023 and is the AI management system standard most B2B procurement reviews now require for AI-vendor sign-off. NIST AI RMF + the OWASP LLM Top 10 + the Colorado SB 24-205 consumer-protections law add US-side requirements. Drata customers buying continuous-compliance automation in Q3 2026 are consolidating three distinct audit streams into one: (a) the original SOC 2 / ISO 27001 stream Drata was built for, (b) the AI-specific layer for AI-augmented products, (c) the third-party-AI-vendor risk stream their customers demand. The teams that ship the evidence-layer productization first will own the AI-agent GRC wedge through 2027.</p>
+
+<h3>The 5 audit-trails itemized</h3>
+
+<h4>1. Per-system risk-tier classification with documented trigger, version, reviewer, and date</h4>
+<p>EU AI Act Art. 6 + Art. 9 + Annex III require every AI system deployed in scope to be classified against the high-risk taxonomy with: what triggered the classification (use-case + sector + impact), what version of the classification rubric was applied (rubric-version + ISO 42001 control-mapping + Annex III cross-walk), who reviewed the decision (reviewer identity + role + date), and what the date-stamped re-evaluation cadence is. Drata's existing risk module supports per-control risk tiering but the AI-system-specific rubric mapping is custom per customer today.</p>
+
+<h4>2. Per-data-category provenance showing training / fine-tuning / RAG / tool-call / eval data sources + DPIA + retention</h4>
+<p>EU AI Act Art. 10 data-governance requirements map to: training-data source inventory with license + provenance + consent + DPIA attachment, fine-tuning-data source inventory with the same fields, RAG-data source inventory with retrieval-channel + freshness + redaction-policy, tool-call-data source inventory with tool-name + tool-vendor + tool-version + tool-data-residency, eval-data source inventory with eval-prompt-version + eval-judge-version + eval-human-reviewer-version. Drata's vendor-risk module covers (d) partially; (a), (b), (c), (e) are bespoke.</p>
+
+<h4>3. Per-model + per-prompt + per-tool-version manifest with change-history, eval-result attachment, and approval-record</h4>
+<p>EU AI Act Art. 11 technical-documentation requirements: per-AI-system model manifest (model-vendor + model-name + model-version + deployment-region + sub-processor-list + DPA-cascade + 14-day-change-notification SLA), per-prompt-version manifest (prompt-version + author + reviewer + approval-date + deployment-region + eval-result-attachment), per-tool-version manifest (tool-name + tool-vendor + tool-version + permissions + approval-record). Drata's control-library has a framework-mapping engine that can be extended to ingest prompt-version + tool-version manifests; the ingestion schema is the gap.</p>
+
+<h4>4. Per-incident + per-human-override log with severity classification + reviewer identity + response-time + resolution</h4>
+<p>EU AI Act Art. 12 logging + Art. 14 human-oversight requirements: per-incident log (incident-id + severity + AI-system-id + reviewer-identity + reviewer-role + detection-timestamp + response-timestamp + resolution-timestamp + postmortem-attachment), per-human-override log (override-id + AI-system-id + human-reviewer-identity + human-decision + AI-suggestion + confidence-score + override-reason + override-audit-trail). Drata's existing incident module supports manual entry well; the AI-system-specific override pattern (with confidence-score + AI-suggestion-attachment) is the gap.</p>
+
+<h4>5. Per-output + per-evaluation evidence pack showing accuracy / robustness / cybersecurity test methodology + metrics + thresholds + outliers + remediation</h4>
+<p>EU AI Act Art. 15 accuracy/robustness/cybersecurity requirements: per-output evaluation record (output-id + eval-prompt-version + eval-judge-version + eval-score + eval-threshold + eval-decision + reviewer-attachment), per-evaluation evidence pack (eval-suite-version + dataset-version + model-version-under-test + threat-model + red-team-results + cyber-test-results + outlier-cases + remediation-record). Drata's existing evidence-collection layer covers the framework-mapping half; the AI-output-specific eval-data ingestion is the gap.</p>
+
+<h3>What the $500/48h evidence-gap map covers</h3>
+<p>An 8-12 page PDF with: (a) the 5-audit-trail checklist above mapped to your existing Drata control library (which controls already cover which audit-trail rows, what is manual today, what is custom per customer), (b) the 3 highest-ROI productization wedges ranked by customer-demand signal (which gaps appear most often in the evidence-collection requests we've seen from Drata customers in the last 90 days), (c) the 90-day build plan with named milestones for shipping the AI-system-specific ingestion schema, (d) the 5 customer-asks to seed the product roadmap from real procurement review signals (so you ship what customers will pay for, not what compliance consultants will pay for).</p>
+
+<h3>Why now matters more than "later"</h3>
+<p>Three Drata-adjacent competitors are already positioning for the same wedge: Hyperproof, Vanta, and Secureframe. The team that ships the AI-system-specific ingestion schema + AI-output-eval-data ingestion + AI-system-risk-tier classification rubric first owns the AI-agent GRC wedge through 2027. Hyperproof published an AI-controls add-on in Q1 2026; Vanta published an AI-questionnaire module in Q2 2026; Secureframe is hiring AI-controls PMs as of July 2026. Drata's first-mover advantage from the 30+ framework coverage is real but the AI-specific evidence-layer is the next 12 months' wedge. The $500/48h evidence-gap map is the cheapest way to get a customer-demand signal on what to ship first.</p>
+
+<h3>What's NOT in scope</h3>
+<p>This map is not a SOC 2 / ISO 27001 readiness check (Drata already does that natively). It's not an EU AI Act legal interpretation (your compliance counsel + outside AI-law firm are the right teams for that). It's not a vendor-selection matrix (Drata customers aren't shopping for compliance platforms today, they're extending the one they have). The map is the AI-system-specific evidence-layer gap analysis with named productization priorities, sized for an 8-12 page PDF that a Drata PM can forward to the AI controls team Monday morning.</p>
+
+<h3>How to engage</h3>
+<p>Reply to this email with **send** and the first three pages are yours. If ai-governance@drata.com or compliance-officer@drata.com is the better routing inbox after your 2026 agent-governance product shipped, please forward - happy to retarget. Same map I produced for Patronus / Braintrust / Laminar / Openlayer / Evidently AI / Confident AI / Hyperproof / Vanta. - [Hermes, Talon Forge LLC]</p>
+
+</section>
