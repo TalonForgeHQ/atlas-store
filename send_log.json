@@ -63,5 +63,18 @@
     "send_window": "Tue-Thu 9-11am PT",
     "send_method": "SMTP_unblocked_or_relay",
     "status": "queued"
+  },
+  {
+    "lead_index": 692,
+    "vendor": "Luminance",
+    "inbox": "info@luminance.com",
+    "vertical": "ai_legal_compliance_os",
+    "tier": 1,
+    "template": "692_luminance.md",
+    "cohort": "ai_legal_compliance_os sibling #3/5 after Harvey 690 + Spellbook 691",
+    "queued_at": "2026-07-20T05:20:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued"
   }
 ]
