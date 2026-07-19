@@ -24,5 +24,18 @@
     "send_window": "Tue-Thu 9-11am PT",
     "send_method": "SMTP_unblocked_or_relay",
     "status": "queued"
+  },
+  {
+    "lead_index": 675,
+    "vendor": "LlamaIndex",
+    "inbox": "privacy@runllama.ai",
+    "vertical": "ai_agents_autonomous",
+    "tier": 1,
+    "template": "675_llamaindex.md",
+    "cohort": "ai_agents_autonomous sibling #2/5 after Fixie.ai 674",
+    "queued_at": "2026-07-20T03:00:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued"
   }
 ]
