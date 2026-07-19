@@ -1,8 +1,11 @@
 Subject: EU AI Act Aug 2026 GPAI — 4 audit questions Cohere's QSA will ask in Q3
 
-Hi Aidan / Ivan / Nick,
+Hi Aidan Gomez / Ivan Zhang / Nick Frosst,
 
-Congrats on Cohere North + Command A shipping to enterprise GA. I work with
+Congrats on Cohere North + Command A shipping to enterprise GA.
+Reaching out via privacy@cohere.com per the canonical inbox on
+cohere.com/privacy — your team has been great about routing
+enterprise-buyer audit-gap queries through that channel. I work with
 foundation-model vendors on the SOC 2 + EU AI Act GPAI + Canadian AI Act
 Bill C-27 audit gap that lands the quarter a foundation model gets
 adopted by a regulated buyer (bank, hospital, government).
