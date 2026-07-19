@@ -23,9 +23,9 @@
     "vendor": "Defined.ai",
     "cohort": "ai_data_labeling",
     "sibling": "4/5",
-    "subject_a": "Daniela \u2014 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
-    "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail \u2014 14-col provenance we can deliver this week",
-    "subject_c": "your AI-data marketplace vendor-DD inquiry \u2014 reply 'send' and I'll forward the 5-gap map",
+    "subject_a": "Daniela — 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
+    "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail — 14-col provenance we can deliver this week",
+    "subject_c": "your AI-data marketplace vendor-DD inquiry — reply 'send' and I'll forward the 5-gap map",
     "status": "queued",
     "send_window": "Tue-Thu 9-11am PT",
     "queued_at": "2026-07-19T19:05:29.731960+00:00",
@@ -97,5 +97,31 @@
     "cascade_columns": 19,
     "offer": "$500/48h evidence-gap map + $497/mo refresh",
     "reason": "SMTP credentials unavailable"
+  },
+  {
+    "lead_index": 694,
+    "vendor": "DISCO",
+    "inbox": "info@csdisco.com",
+    "vertical": "ai_legal_compliance_os",
+    "tier": 1,
+    "template": "694_disco.md",
+    "cohort": "ai_legal_compliance_os CLOSER #5/5 (COHORT-FULL after Harvey 690 + Spellbook 691 + Luminance 692 + Ironclad 693)",
+    "queued_at": "2026-07-20T05:55:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued"
+  },
+  {
+    "lead_index": 695,
+    "vendor": "Cursor",
+    "inbox": "press@anysphere.com",
+    "vertical": "ai_coding_agent_vertical",
+    "tier": 1,
+    "template": "695_cursor.md",
+    "cohort": "ai_coding_agent_vertical OPENER #1/5 (NEW 12th Atlas vertical after ai_legal_compliance_os 690-694 CLOSED at 5/5)",
+    "queued_at": "2026-07-20T05:58:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued"
   }
 ]
