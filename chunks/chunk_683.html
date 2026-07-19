@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steel.dev AI Agent Browser Session Audit Trail (2026)</title>
+  <meta name="description" content="Steel.dev AI agent browser session audit trail for profiles, proxies, CAPTCHA handling, computer-use actions, external web mutations, replay, and teardown evidence.">
+  <link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_683.html">
+</head>
+<body>
+<article data-tick="2026-07-20-fast-exec-steel-683">
+<h1>Steel.dev AI Agent Browser Session Audit Trail and Teardown Evidence Map</h1>
+<p><strong>Long-tail keyword:</strong> Steel.dev AI agent browser session audit trail, persisted profile and proxy provenance, CAPTCHA boundary evidence, and computer-use action replay.</p>
+<p><strong>First-party evidence checked 2026-07-20:</strong> Steel describes itself as an open-source browser API purpose-built for AI agents. The official Steel GitHub organization publishes <a href="mailto:team@steel.dev">team@steel.dev</a>. Steel's site identifies Nen Labs, Inc. in its footer. The official GitHub profile for @hussufo identifies huss as co-founder / CEO @steel-dev; his X profile independently identifies him as CEO @steeldotdev and publishes his first-person Steel launch post.</p>
+
+<h2>Why a cloud-browser replay is not a complete audit trail</h2>
+<p>A recording proves that pixels changed. It does not prove which prompt and model initiated the run, which Steel runtime and integration interpreted the page, which persisted profile and credential scope were available, which proxy jurisdiction was used, whether a CAPTCHA solver crossed a security boundary, which external object changed, or whether the session was destroyed. A procurement-grade record joins intent, runtime, identity, page state, authorization, action, outcome, and cleanup.</p>
+
+<h2>The 20-field Steel browser-session receipt</h2>
+<ol>
+<li><code>agent_run_id</code> — immutable workflow execution key</li>
+<li><code>prompt_instruction_hash</code> — original intent and instruction version</li>
+<li><code>model_provider_version</code> — computer-use reasoning model</li>
+<li><code>steel_runtime_sdk_release</code> — deployed Steel and client build</li>
+<li><code>browser_session_id</code> — isolated browser execution</li>
+<li><code>pool_profile_id</code> — pool and persisted-auth identity</li>
+<li><code>credential_scope</code> — least-privilege secret boundary</li>
+<li><code>proxy_type_region</code> — residential/datacenter route and jurisdiction</li>
+<li><code>security_boundary_event</code> — CAPTCHA, 2FA, login, or download gate</li>
+<li><code>target_url</code> — destination and origin chain</li>
+<li><code>pre_action_page_hash</code> — DOM/screenshot state before action</li>
+<li><code>resolved_target</code> — selector, coordinates, or semantic element</li>
+<li><code>action_input_hash</code> — click, type, extract, upload, or download</li>
+<li><code>policy_validation_result</code> — allow, deny, retry, or escalate</li>
+<li><code>human_approval_override</code> — approver identity and reason</li>
+<li><code>live_view_replay_reference</code> — debugging and replay artifact</li>
+<li><code>downstream_object_id</code> — purchase, filing, ticket, or record changed</li>
+<li><code>post_action_page_hash</code> — observed resulting page state</li>
+<li><code>resulting_state_hash</code> — tamper-evident outcome record</li>
+<li><code>teardown_deletion_receipt</code> — browser, cookies, tokens, and artifacts erased</li>
+</ol>
+
+<h2>Cross-framework decision replay</h2>
+<p>A Steel session may be controlled by OpenAI CUA, Anthropic computer use, Browser Use, Stagehand, or a custom agent. The audit trail must preserve the exact framework and runtime versions, prompt, observed page state, candidate or resolved target, action, retry branch, validation, and outcome. The acceptance test replays one controlled page revision and explains any changed target or branch.</p>
+
+<h2>Persisted profiles and credential isolation</h2>
+<p>Persisted authentication is useful precisely because it survives between runs, which also makes it a high-value audit boundary. Every profile attachment, cookie retrieval, credential access, origin transition, and revocation should be tenant-scoped. A run must prove which profile was mounted, which origins it could access, when it expired, and that no cookie, token, download, or local-storage state leaked into another session.</p>
+
+<h2>Proxy and CAPTCHA boundary evidence</h2>
+<p>Proxy routing and CAPTCHA handling can determine both legal jurisdiction and security posture. Each event should record proxy type, provider, egress region, rotation, target origin, challenge type, solver or human handoff, validation result, and continuation decision. A change from datacenter to residential egress must be visible to policy and audit systems before an authenticated action executes.</p>
+
+<h2>Five evidence gaps enterprise buyers will test</h2>
+<ol>
+<li><strong>Framework-to-action traceability:</strong> model intent, Steel runtime, page state, selected target, action, and result are joined.</li>
+<li><strong>Profile and tenant isolation:</strong> cookies, credentials, recordings, downloads, and storage cannot cross run boundaries.</li>
+<li><strong>Proxy/CAPTCHA integrity:</strong> jurisdiction changes and security challenges produce structured policy events.</li>
+<li><strong>Open-source versus managed responsibility:</strong> patching, infrastructure, proxies, retention, keys, deletion, and incidents have named owners.</li>
+<li><strong>External mutation and teardown:</strong> irreversible actions preserve authorization and downstream ids, followed by provable cleanup.</li>
+</ol>
+
+<h2>Open-source versus managed responsibility parity</h2>
+<p>A regulated buyer needs one machine-readable responsibility matrix for the open-source Steel runtime and the managed control plane. It assigns browser-image patching, orchestration, network egress, proxy vendors, credential custody, live-view access, recordings, downloads, observability, retention, encryption keys, incident response, and deletion receipts. Deployment changes responsibility columns, not minimum evidence fields.</p>
+
+<h2>Compliance mapping</h2>
+<p>The evidence pack maps receipt fields to EU AI Act Articles 12, 14, 15 and 50; GDPR Articles 5, 22, 25, 28, 32 and 35; NIST AI RMF 1.0; NIST AI 600-1 and 600-2; ISO/IEC 42001 and 23894; ISO 27001; SOC 2 CC6, CC7, and CC8; OWASP LLM Top 10; OWASP Agentic AI Top 10; and MITRE ATLAS. Regulated overlays can add HIPAA, GLBA, PCI DSS, DORA, FedRAMP, or sector controls without changing the base receipt.</p>
+
+<h2>Threat map</h2>
+<p>The walkthrough tests hostile-page prompt injection, poisoned DOM or visual content, deceptive targets, credential exfiltration, cross-profile residue, proxy-region drift, CAPTCHA-state confusion, unsafe downloads, replay gaps, log tampering, and unintended purchases or submissions. Every threat maps to a receipt field, alert, owner, and replayable acceptance test.</p>
+
+<h2>FAQ</h2>
+<p><strong>Is a live viewer or recording sufficient?</strong> No. It is one replay artifact and must be joined to prompt, runtime, profile, credential scope, proxy, policy result, downstream object, outcome, and teardown evidence.</p>
+<p><strong>Does open source remove processor risk?</strong> No. It reallocates responsibility. The matrix records which party owns orchestration, runtime images, networking, proxies, recordings, retention, keys, deletion, and incidents.</p>
+<p><strong>Can the receipt be exported?</strong> Yes. The deliverable defines stable JSON and CSV schemas for SIEM, GRC, procurement, or customer audit ingestion.</p>
+<p><strong>What is the acceptance test?</strong> One real Steel-backed agent workflow is captured, replayed after a controlled page change, checked for profile/proxy isolation, and verified through final teardown.</p>
+
+<h2>Fixed-scope offer</h2>
+<p><strong>$500 / 48 hours:</strong> one 20-field receipt schema, five-gap walkthrough, open-source-versus-managed responsibility matrix, browser-agent threat map, compliance crosswalk, and replayable acceptance tests against one live workflow.</p>
+<p><strong>$497 / month:</strong> quarterly evidence refresh, runtime/integration change review, compliance-map updates, and acceptance-test replay after material releases.</p>
+
+<h2>Sources</h2>
+<ul>
+<li><a href="https://steel.dev/">Steel</a> — browser infrastructure for AI agents and Nen Labs, Inc. footer.</li>
+<li><a href="https://github.com/steel-dev">Official Steel GitHub organization</a> — product positioning and team@steel.dev.</li>
+<li><a href="https://api.github.com/orgs/steel-dev">GitHub organization API</a> — canonical domain and inbox.</li>
+<li><a href="https://github.com/hussufo">Official Steel contributor profile</a> — huss, co-founder / CEO @steel-dev.</li>
+<li><a href="https://x.com/hussufo">huss on X</a> — CEO @steeldotdev and first-person Steel launch post.</li>
+</ul>
+<p><a href="../index.html">Back to Atlas-Store</a> &middot; <a href="https://buy.stripe.com/6oU14n2CQfBRbAwaqeb7y01">Book the $500 audit</a></p>
+</article>
+</body>
+</html>
