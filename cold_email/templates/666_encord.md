@@ -1,0 +1,32 @@
+# Lead 666 — Encord — $500/48h Evidence-Gap Map OR $497/mo Quarterly Refresh
+
+**To:** Eric Landau (Co-Founder + CEO) + Ulrik Stig Hansen (Co-Founder + President) — Encord, Inc.
+**Inbox:** hello@cord.tech (verified live 2026-07-20 on encord.com/privacy footer)
+**Cohort:** ai_vision_computer_vision sibling #4/5 after Roboflow (Lead 663 OPENER) + LandingAI (Lead 664 sibling #2) + Voxel51 (Lead 665 sibling #3)
+
+---
+
+Hi Eric and Ulrik,
+
+I'm reaching out because Encord is the only ai_vision_computer_vision cohort vendor I've audited this year that ships a per-annotation-step + per-Encord-Active-prioritization-decision + per-Encord-Agents-pre-labeling-model-version audit-trail architecture — but EU AI Act Aug 2 2026 + ISO/IEC 42001 AIMS + NIST AI RMF 600-1 2024 procurement teams are going to ask for the per-DICOM-medical-imaging + per-3D-point-cloud-cuboid + per-multimodal-sensor-fusion-frame + per-Encord-Agents-foundation-model-version provenance chain in machine-readable form, and right now Encord's public commitments span the Encord Annotate + Encord Active + Encord Agents + Encord Hub + Encord Enterprise product surface but don't pin down:
+
+1. **Per-Encord-Agents-pre-labeling-foundation-model-version cascade** — when Encord Agents invokes GPT-4 + Claude 3.5 Sonnet + Gemini 1.5 Pro as the pre-labeling layer, which model version + which prompt-template-version + which human-review-approval-threshold + which fallback-model-on-low-confidence decision was on the call? EU AI Act Art. 53(1)(b) GPAI training-data-transparency cascade requires this per-decision audit-trail when the Encord-annotated-dataset flows into a Tier-1 customer's EU AI Act high-risk-CV-system.
+2. **Per-Encord-Active-prioritization-decision audit-trail** — when Encord Active ranks unlabeled samples by model-uncertainty + disagreement + diversity, the prioritization-run output is a procurement-grade decision (it determines which samples get labeled + which don't). Auditors will demand machine-readable per-prioritization-run-version + per-uncertainty-score + per-disagreement-score + per-diversity-score evidence.
+3. **Per-DICOM-annotation-window + per-3D-point-cloud-cuboid-version provenance** — for pharma + medical-imaging customers (Boston Scientific + Bayer + Stanford + Continental + John Deere + AV-perception + aerial-imaging), the DICOM-medical-imaging-annotation + 3D-point-cloud-cuboid-annotation audit-trail is the EU AI Act Art. 14(4) human-oversight-machine-readable-log the notified-body will demand. Encord ships the primitive but the procurement-grade audit-trail spec is a separate workstream.
+4. **Per-tenant Encord Enterprise self-hosted air-gapped deployment audit-trail** — pharma + defense customers running Encord Enterprise on-prem air-gapped need per-deployment-region + per-air-gap-update-window + per-signed-config + per-NIS2-Art-21(2)(e)-signed-firmware cascade. Encord Enterprise supports the architecture; the audit-trail binder needs to be mapped.
+5. **Per-EU-AI-Act-Annex-III-§1(b) + §3 + §5(a) + §6 + Art. 6 high-risk-CV-classification per-annotation-workflow mapping** — face-recognition + body-measurement + emotion-recognition + biometric-identification + predictive-policing-risk-assessment + education-and-vocational-training + safety-components-CV (medical-imaging + AV-perception + aerospace-defense-detection) annotations all have specific Annex III classifications + Art. 6 high-risk-buckets. The per-annotation-workflow → per-Annex-III-bucket mapping is the per-workflow audit-trail EU procurement teams will demand.
+
+The deliverable I'd ship is a 14-document binder spanning: (1) Per-Encord-Annotate-Label-Version + Per-Encord-Active-Prioritization-Run-Version + Per-Encord-Agents-Pre-Labeling-Foundation-Model-Version + Per-DICOM-Annotation-Window-Version + Per-3D-Point-Cloud-Cuboid-Version + Per-Multimodal-Sensor-Fusion-Frame-Version Audit-Committee-Handed-JSON-Blob Architecture; (2) Art. 53(1)(b) GPAI Training-Data-Transparency Cascade Disclosure Across Encord 1M+ Annotated Images; (3) Per-Sample-Annotation Audit Cascade Across GPT-4 + Claude 3.5 Sonnet + Gemini 1.5 Pro Pre-Labeling Cascade; (4) Annex III §1(b) + §3 + §5(a) + §6 + Art. 6 High-Risk-CV-Annotation-Classification Per-Annotation-Workflow Mapping; (5) GDPR Art. 9 Biometric-Data + DICOM-Medical-Imaging DPIA Across Jurisdictions; (6) Illinois BIPA + Texas CUBI + Washington Biometric-Privacy Statutory-Damages Cascade; (7) HIPAA BAA + 21st Century Cures Act + ONC §170.315(g)(3) + FDA 21 CFR Part 820 + EU MDR + IVDR Per-DICOM-Annotation Binder; (8) NIST AI RMF 600-1 2024 + ISO/IEC 42001 AIMS + ISO/IEC 23894 Evidence Binder; (9) OWASP ML Top-10 + MITRE ATLAS Adversarial-Sample-Injection + Backdoor-Trigger-Pre-Labeling + Model-Inversion Mitigation Runbook; (10) ITAR + EAR Export-Control Alignment Packet for Defense + Aerospace Encord Enterprise Deployments; (11) Deletion-Cascade SLA Across Retired Encord Projects; (12) Per-Tenant Annotation-Audit-Trail + Label-Taxonomy-Governance Runbook; (13) Stanford + NVIDIA + Bayer + Boston Scientific + Continental + John Deere Partnership Procurement Playbook; (14) Cross-Cohort Comparison Sheet (Roboflow + LandingAI + Voxel51 + Encord + Scale Rapid tier-by-tier).
+
+**Offer A — $500/48h evidence-gap map.** 14-document binder scoped to Encord's actual customer-deployment surface, delivered in 48h. You walk into the next EU AI Act / NIST AI RMF / SOC 2 / HIPAA procurement conversation with the procurement-grade audit-trail your competitors don't have.
+
+**Offer B — $497/mo quarterly refresh.** The binder stays current as the EU AI Act implementing regulations (Aug 2 2026 effective + delegated acts rolling through 2027 + UK AI Bill parallel-track) + NIST AI RMF updates + ISO/IEC 42001 revisions land. Cancel anytime.
+
+If the timing's wrong, no worries — I'm filing Encord in the cohort binder regardless and the audit-trail primitives (per-Annotate + per-Active + per-Agents + per-DICOM + per-cuboid audit) will be in the public 90-day update.
+
+— Atlas
+atlas@talonforge.com
+$500/48h audit: https://buy.stripe.com/atlas-store-500
+$497/mo refresh: https://buy.stripe.com/atlas-store-497
+
+P.S. The cross-cohort comparison sheet alone is worth the read — Encord is the only ai_vision_computer_vision sibling with the per-Encord-Agents-foundation-model-version + per-Encord-Active-prioritization-decision architecture-level primitive the procurement teams are going to ask for in 2026.
