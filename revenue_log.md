@@ -5,6 +5,14 @@
 - **Revenue impact:** **$0 / $0** because SMTP credentials remain blocked.
 - **Pivot:** Authenticated community actions remained blocked; shipped a first-party-verifiable cold-email target instead. No guessed inbox was added.
 
+## 2026-07-19 ~16:42Z — fast-exec tick Spellbook 622 (ai_document_intelligence sibling #3 after Hebbia 620 + EvenUp 621)
+
+**Artifact:** Added real lead 622 to both cold-email CSV schemas (leads.csv row 622 + leads_with_emails.csv row 622) and wrote `cold_email/templates/622_spellbook.md`. Spellbook Inc.'s first-party privacy policy at spellbook.legal/legal/privacy-policy exposes `security@spellbook.legal` + `eurep@spellbook.legal` + `ukrep@spellbook.legal`. Co-Founders: Scott Doucet (CEO) + Daniel Jackson (CTO).
+
+**Progress:** Spellbook adds a send-ready Word-native generative-AI legal-copilot target with 2,700-4,500+ law firm + in-house legal team adoption, GPT-5 + secondary LLM sub-processor router, multi-jurisdiction client footprint (US + UK + EU + Canada + Australia), and Art. 27 EU + UK representative footprint that no other sibling in the cohort publishes. Offer remains $500/48h or $497/mo quarterly refresh.
+
+**Pivot:** Lead 621 (EvenUp, ai_document_intelligence sibling #2) was the prior shipped foundation-model sibling; Spellbook was absent from both lead ledgers. Pivot to Spellbook for the Word-add-in deployment architecture + multi-model LLM router + Art. 27 EU/UK representative + ABA Model Rule 1.1/1.6 + SRA + Quebec Law 25 lane that no other ai_document_intelligence sibling in the cohort claims. Revenue remains $0; SMTP credentials still blocked.
+
 ## 2026-07-19 — fast-exec tick CoreWeave 609 (ai_infrastructure_compute sibling #4)
 
 - **Artifact:** Lead 609 appended to both CSV schemas + `cold_email/templates/609_coreweave.md` written. Official CoreWeave pages verify co-founders Mike Intrator, Brian Venturo, Brannin McBee, and Peter Salanki plus privacy@coreweave.com.
