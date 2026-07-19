@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notion AI Audit 2026: 5 Evidence Gaps for Notion AI + AI Blocks + Autofill + AI Connectors + MCP</title>
+<meta name="description" content="Notion AI vendor audit 2026: five evidence gaps for source-page-to-agent-action-to-connection-sync provenance, prompt-injection defense, workspace and teamspace isolation, deletion and version-history propagation, immutable human-approval evidence, and per-agent per-connection cost attribution. Covers Notion AI, AI blocks, autofill, AI summaries, Q&A, Notion AI Connectors, and Notion MCP.">
+<meta name="keywords" content="Notion AI audit, Notion AI Connectors evidence gap, Notion AI agent audit, Notion AI ISO 42001, Notion AI EU AI Act, Notion AI prompt injection, Notion MCP audit, ai workspace vendor due diligence, Talon Forge Atlas audit, ai work management vendor audit">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_363.html">
+</head>
+<body data-tick="2026-07-19-fast-exec-notion-575-chunk-ship">
+<h1>Notion AI Audit 2026: 5 Evidence Gaps for Notion AI + AI Blocks + Autofill + AI Connectors + MCP</h1>
+<p><strong>Vertical:</strong> ai_work_management &middot; <strong>Lead:</strong> 575 &middot; <strong>Cohort:</strong> sibling #9 after Motion 567, Akiflow 568, Sunsama 569, Routine 570, Reclaim.ai 571, ClickUp 572, monday.com 573, and Linear 574. <strong>Offer:</strong> $500 fixed-price / 48-hour evidence-gap map, or $497/mo quarterly refresh.</p>
+
+<h2>Why Notion is the high-leverage connected-AI-workspace audit target</h2>
+<p>Notion&rsquo;s live first-party product surface couples a flexible page-database workspace with a fast-growing AI capability set: Notion AI, AI blocks, autofill, AI summaries, Q&A, Notion AI Connectors, and the Notion Model Context Protocol (MCP) server. Those capabilities read and write the same workspace pages, databases, comments, automations, and connections to Slack, Google Workspace, Microsoft 365, GitHub, Jira, and Linear that teams already trust for shipping work. The advantage is that a single Notion AI action can summarize a meeting, draft a spec, update a database row, post to Slack, open a Linear ticket, and reply to a customer email without leaving the workspace. The audit question is whether one autonomous change can be reconstructed from its source page through retrieval, planning, tool use, approval, mutation, and every downstream connection sync.</p>
+<p>Notion&rsquo;s verified first-party security posture is strong on control objectives. The Security page lists SOC 2 Type II, SOC 3, ISO/IEC 27001, 27017, 27018, and 27701, ISO 42001, FedRAMP Moderate, GDPR, and HIPAA BAA coverage. The Help Center Security-and-Privacy index references encryption, SAML SSO, SCIM, audit logs, and regional data residency. The canonical privacy inbox <code>privacy@notion.so</code> is live on Google Workspace with valid SPF/DKIM/DMARC. The audit below does not claim those controls are absent. It tests whether they produce customer-verifiable evidence at the autonomous-agent action level.</p>
+
+<h2>Gap 1 - Source-page-to-agent-action-to-connection-sync provenance</h2>
+<p>A Notion AI summary, AI block generation, autofill row, Q&A retrieval, AI Connector write, or MCP-driven mutation can draw context from workspace pages, databases, comments, attachments, and connected Slack/Teams messages, Gmail/Outlook threads, Google Docs/Sheets/Slides, Microsoft 365 Word/Excel/PowerPoint, GitHub issues/PRs, Jira tickets, and Linear issues. A defensible evidence chain should join the source-object ID and version to retrieved chunks, prompt and model versions, agent plan, tool calls, approvals, the resulting page or database mutation, and every downstream sync to connected systems.</p>
+<p><strong>Audit question:</strong> for one Notion page body, database property, comment, automation, or connection write that changed because of a Notion AI, AI block, autofill, AI summary, Q&A, AI Connector, or MCP action, can an administrator reconstruct the exact source objects, retrieved context, prompt, model, plan, tool call, actor, approval, timestamp, before/after state, and the downstream sync log entries that flowed to Slack, Google Workspace, Microsoft 365, GitHub, Jira, Linear, and any customer notification?</p>
+
+<h2>Gap 2 - Prompt-injection defense across pages, databases, comments, and connected apps</h2>
+<p>Workspace content is untrusted input. A malicious instruction can arrive in a page body, sub-page, database row, comment, attachment, embedded iframe, Slack/Teams message, email body, Google/Microsoft document, GitHub issue or PR, Jira ticket, Linear issue, or connected search result. A control map should show how Notion separates content from instructions, constrains tools, detects indirect injection, redacts or escapes risky embedded payloads, and records blocked or escalated attempts.</p>
+<p><strong>Audit question:</strong> what prevents an embedded instruction in a retrieved page description, database cell, comment, file upload, Slack thread, email body, Google/Microsoft document, or connected GitHub/Jira/Linear content from causing a Notion AI answer, AI block generation, autofill, AI summary, Q&A, AI Connector, or MCP mutation that discloses data, escalates the wrong ticket, posts into a customer-facing channel, triggers an automation, or writes into a connected system?</p>
+
+<h2>Gap 3 - Workspace, teamspace, page, database, guest, and connection isolation</h2>
+<p>Notion&rsquo;s hierarchy includes workspace, teamspace, page, sub-page, database, view, row, comment, user, guest, group, permission group, and connection scopes, plus external connectors and regional residency. Agent authorization should be evaluated at every retrieval and action boundary rather than inherited once at session start.</p>
+<p><strong>Audit question:</strong> does each Notion AI retrieval, AI block generation, autofill, AI summary, Q&A, AI Connector, and MCP mutation re-check the initiating principal, current page and database permissions, guest restrictions, connection scopes, data-residency policy, and destination authorization before reading or mutating data, syncing to Slack/Google/Microsoft/GitHub/Jira/Linear, or surfacing content in a view that crosses workspace, teamspace, or customer boundaries?</p>
+
+<h2>Gap 4 - Deletion, retention, rollback, version-history, and connection-sync propagation</h2>
+<p>An agent-originated change may create derived page sections, database rows, comments, automations, exports, and downstream writes to connected Slack, Google Workspace, Microsoft 365, GitHub, Jira, and Linear surfaces. Deleting the source page or rolling back the action should propagate predictably across every derived copy, version-history snapshot, and connection sync without silently restoring stale data later.</p>
+<p><strong>Audit question:</strong> when an administrator deletes or rolls back one Notion AI, AI block, autofill, AI summary, Q&A, AI Connector, or MCP action, what evidence proves propagation through Notion page history, sub-pages, comments, database row history, automations, search index, and bounded backups, plus the downstream Slack/Google/Microsoft/GitHub/Jira/Linear sync surfaces that received the change?</p>
+
+<h2>Gap 5 - Immutable human-approval evidence and per-agent cost attribution</h2>
+<p>High-impact actions should preserve an immutable approval record containing the proposed action, risk classification, approver, policy version, final payload, and execution outcome. The same chain should attribute model, retrieval, storage, connection, and tool-call costs to the responsible agent run, workspace, teamspace, page, and connection so finance can reconcile AI spend.</p>
+<p><strong>Audit question:</strong> can Notion produce a tamper-evident approval and execution record for AI-generated page sections, database writes, comments, automations, exports, and external API/connector writes, then reconcile its cost ledger from agent run to model call, retrieved context, tool call, mutation, downstream sync, and connection?</p>
+
+<h2>Control-map starting points</h2>
+<ul>
+<li><strong>EU AI Act Articles 12 and 14:</strong> logging and human oversight for agent-driven decisions and actions across pages, databases, and connected surfaces.</li>
+<li><strong>ISO/IEC 42001:</strong> AI management-system evidence across lifecycle, risk, monitoring, and change control.</li>
+<li><strong>SOC 2 CC6 and CC7:</strong> logical access, monitoring, incident evidence, and system-operation reconstruction.</li>
+<li><strong>OWASP LLM Top 10:</strong> prompt injection, excessive agency, sensitive-information disclosure, and insecure output handling.</li>
+<li><strong>ISO 27001 and ISO 27701:</strong> access control, logging, retention, and privacy-management evidence.</li>
+<li><strong>HIPAA Security Rule &sect; 164.308 and &sect; 164.312:</strong> workforce, access, audit, and transmission security for healthcare customers that use Notion to track patient-impacting work.</li>
+<li><strong>FedRAMP Moderate:</strong> federal-customer evidence for US public-sector deployments.</li>
+</ul>
+
+<h2>Verified public-record anchors</h2>
+<ul>
+<li><strong>Notion AI product surface:</strong> the live first-party page at <code>notion.com/product/ai</code> presents Notion AI, AI blocks, autofill, AI summaries, Q&amp;A, and connected AI agents reading and writing workspace pages, databases, comments, and connected Slack/Google/Microsoft/GitHub/Jira/Linear state.</li>
+<li><strong>Notion About:</strong> the live first-party About and Story pages identify Ivan Zhao (co-founder &amp; CEO), Simon Last (co-founder &amp; CTO), and Jessica Lam (co-founder &amp; COO); Notion was founded in 2016 in San Francisco.</li>
+<li><strong>Notion Security hub:</strong> the live first-party Security page lists SOC 2 Type II, SOC 3, ISO/IEC 27001, 27017, 27018, and 27701, ISO 42001, FedRAMP Moderate, GDPR, and HIPAA BAA controls plus regional data residency.</li>
+<li><strong>Notion Help Center Security and Privacy:</strong> the live first-party Help index references encryption, SAML SSO, SCIM, audit logs, granular page-level and connection-level permissions, and regional data residency.</li>
+<li><strong>Notion integrations directory:</strong> the live first-party directory lists native and partner integrations across Slack, Google Workspace, Microsoft 365, GitHub, Jira, Linear, Asana, Trello, Figma, Loom, and dozens more, plus the public Notion MCP server.</li>
+<li><strong>Notion inboxes:</strong> <code>privacy@notion.so</code> and <code>security@notion.so</code> are the canonical privacy and security inboxes; notion.so and notion.com share Google Workspace MX with valid SPF/DKIM/DMARC.</li>
+</ul>
+
+<h2>Offer</h2>
+<p>Atlas can turn these five questions into a customer-ready evidence-gap map for <strong>$500 fixed price with 48-hour delivery</strong>. The deliverable links each requested control to the public evidence, the missing artifact, a suggested event schema, an owner, and a remediation priority. A <strong>$497/mo quarterly refresh</strong> keeps the map current as Notion adds AI capabilities, mutates the workspace in new ways, expands connections, and ships new model and MCP features.</p>
+<p>To engage, contact <code>privacy@notion.so</code> with &ldquo;Notion AI evidence map&rdquo; in the subject line, or use the Talon Forge Atlas storefront.</p>
+</body>
+</html>
