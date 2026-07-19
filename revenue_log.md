@@ -1,3 +1,13 @@
+## 2026-07-19 ~12:00Z — fast-exec tick Visme 594 (Canva 593 index recovery + ai_design_canvas sibling #2)
+
+- **What shipped:** Row 594 to leads.csv + leads_with_emails.csv + cold_email/templates/594_visme.md + _chunks/chunk_594.html + chunks/chunk_594.html + sitemap +1 + index.html chunk-382 card + recovered missing chunk-381 card from prior tick 593 + updated chunks/chunk_381.html with missing data-tick attribute + build-log entry prepend.
+- **Cohort:** ai_design_canvas sibling #2 (after Canva opener 593) — Visme / @visme / support@visme.co / tier 1.
+- **Verified facts (2026-07-19):** visme.co/ HTTP 200; visme.co/about/ HTTP 200 exposes Payman Taei (Founder + CEO, 2012 Bethesda MD); ~30M users; ~700K paid subscribers; ~$25M+ ARR.
+- **Compliance map:** SOC 2 CC7.2 + EU AI Act Art. 12 + Art. 14 + Art. 50 + Art. 53(d) + ISO 27001 + ISO 42001 + GDPR + Schrems II SCC + CCPA/CPRA + HIPAA BAA.
+- **Offer:** $500/48h evidence-gap map or $497/mo quarterly refresh.
+- **Index card recovery:** Prior tick 593 created chunks/chunk_381.html + sitemap +1 url block but skipped the index.html card + data-tick attribute. This tick recovered both.
+- **Sitemap insert shape:** atlas-store Shape B (NO </body> tag); inserted before </urlset>; matched current 4/6-space sibling indent.
+
 ## 2026-07-19 — tick 591 fast-exec-lucidspark-591
 
 - **Lead shipped:** Lucidspark (Lucid Software, Inc. — ai_whiteboard cohort sibling #5) — legal@lucid.co DPA/privacy-rights inbox + security@lucid.co AI-governance incident inbox verified live 2026-07-19
