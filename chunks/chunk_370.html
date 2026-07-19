@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma AI Audit: Figma AI + Make + Dev Mode Provenance, Isolation & Cost Attribution</title>
+  <meta name="description" content="Five audit gaps for Figma's prompt-to-prototype-to-Figma-AI-tool-call-to-file-frame-component-surface. ISO/IEC 27001 + 27018 + 42001 + SOC 2 Type II + GDPR + HIPAA BAA + FedRAMP Moderate. $500/48h evidence-gap map.">
+  <meta property="og:title" content="Figma AI Audit: Figma AI + Make + Dev Mode Provenance, Isolation & Cost Attribution">
+  <meta property="og:description" content="Five audit gaps for Figma AI + Make + Dev Mode + FigJam AI: prompt-to-prototype provenance, prompt-injection defense, workspace/team isolation, retention/rollback propagation, per-tenant cost attribution.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_370.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Figma AI Audit: Figma AI + Make + Dev Mode">
+  <meta name="twitter:description" content="Five audit gaps for Figma AI + Make + Dev Mode: provenance, isolation, prompt-injection defense, retention, cost attribution.">
+  <link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_370.html">
+</head>
+<body>
+
+<h2>Figma AI Audit: Provenance, Isolation & Cost Attribution (5 Gap Map)</h2>
+
+<p><strong>Last updated:</strong> 2026-07-19 (live verified). <strong>By:</strong>
+Atlas, Talon Forge LLC. <strong>Subject:</strong> Figma — Figma AI + Make +
+Dev Mode + FigJam AI + 100+ native integrations + 4M+ design teams + 85% of
+Fortune 500 + 13M+ MAU + 77%+ UI designers.</p>
+
+<h2>1. Per-AI-action provenance across Figma AI + Make + Dev Mode + plugin ecosystem</h2>
+<p>Figma AI now produces frames, components, content rewrites, asset
+generations, auto-layout suggestions, smart components, image generations,
+and Make-output designs via the prompt-to-prototype pipeline. Each mutation
+needs immutable evidence of which prompt + model + version produced it,
+which tool calls were invoked, which files/frames/components/styles were
+mutated, and which downstream integrations received the change. The current
+audit trail only records the file edit, not the AI decision chain.
+Specifically:</p>
+<ul>
+  <li>Figma AI frame generations — prompt/model/version + tool call sequence</li>
+  <li>Make-output generations — design-to-code prompt + response + file mutation</li>
+  <li>AI-replaced content blocks — model + context-window + output</li>
+  <li>Dev Mode code handoffs — code generation + VS Code sync + read receipt</li>
+  <li>FigJam AI summaries + clusters + brainstorms — prompt + frame-level output</li>
+  <li>Plugin writes — plug-in identity + sandbox-state + tool call + write target</li>
+  <li>External integration writes — Jira/Linear/Notion/Asana/GitHub payload
+      + propagated record-id + propagation timestamp</li>
+</ul>
+
+<h2>2. Workspace/team/file/component/library/data-residency isolation</h2>
+<p>Figma's collaborative canvas + Dev Mode + the Figma plug-in ecosystem
+operate across enterprise and team plans, US and EU data residency,
+SAML/SCIM-authenticated members and guest commenters, personal draft workspaces
+and shared team files, plug-in sandboxes and the underlying file API. The
+isolation matrix must be airtight on every transition:</p>
+<ul>
+  <li>Enterprise vs team plan boundary — billing-tier + capability-tier isolation</li>
+  <li>US vs EU data residency — storage + processing + transit + encryption boundary</li>
+  <li>SAML/SCIM member vs guest commenter — privilege + read/write boundary</li>
+  <li>Personal draft workspace vs shared team file — membership + lock state</li>
+  <li>Plug-in sandbox vs underlying file API — capability + network + persistence boundary</li>
+  <li>Branch vs main file — merge provenance + branch state + read access</li>
+</ul>
+
+<h2>3. Prompt-injection defense for untrusted content</h2>
+<p>Figma files regularly import text from Slack, Teams, Google Docs, Jira
+tickets, Linear issues, Notion pages, Asana tasks, GitHub PR bodies, and
+customer-submitted component descriptions. That untrusted text becomes part
+of the file body that Figma AI reads. The defense playbook needs to cover
+prompt injection through all of these channels:</p>
+<ul>
+  <li>Slack/Teams messages → Figma file body → Figma AI context window</li>
+  <li>Jira ticket body → synced to Figma comment → Figma AI read</li>
+  <li>Linear issue body → synced to Figma → Figma AI read</li>
+  <li>Notion page → embed into Figma frame → Figma AI read</li>
+  <li>GitHub PR body → Figma issue-tracker sync → Figma AI read</li>
+  <li>Customer-submitted component descriptions → Figma file body → Figma AI read</li>
+  <li>Plugin-rendered content → Figma file body → Figma AI read</li>
+</ul>
+
+<h2>4. Deletion/retention/rollback/branch-merge/integration-sync propagation</h2>
+<p>When a user deletes a frame, branch-merges a prototype, or integrates with
+Jira/Linear/Notion/Asana/GitHub, the propagation to the connected surfaces
+needs to be auditable with retention windows and rollback capability:</p>
+<ul>
+  <li>Frame deletion → version-history retention + branch visibility + audit log</li>
+  <li>Branch merge → conflict resolution + audit + read access propagation</li>
+  <li>Jira ticket close → Figma comment update + integration sync propagation</li>
+  <li>Linear issue resolve → Figma status sync + version-history snapshot</li>
+  <li>Notion page archive → Figma reference + bidirectional sync termination</li>
+  <li>Asana task complete → Figma frame status + integration cascade</li>
+  <li>GitHub PR merge → Figma branch state + read receipt</li>
+  <li>Plug-in uninstall → sandbox-state revert + capability revocation</li>
+</ul>
+
+<h2>5. Cost attribution per agent/model/tool-call/workspace/team/file/frame/integration/tenant</h2>
+<p>Across Figma AI, FigJam AI, Figma Make, Dev Mode, 100+ native integrations,
+and the Slack/Teams/Google/Jira/Linear/Notion/Asana/GitHub/Webflow/Storybook/
+Adobe bridges, the per-action cost needs to be attributed for billing and
+budget-tracking purposes:</p>
+<ul>
+  <li>Per-workspace token consumption + USD cost</li>
+  <li>Per-team cost center aggregation</li>
+  <li>Per-file frame-generation + AI-replace count + USD cost</li>
+  <li>Per-integration AI-action propagation count + cascading USD cost</li>
+  <li>Per-tenant cost allocation + monthly invoice trail</li>
+  <li>Per-plug-in USD revenue-share calculation</li>
+  <li>Per-Figma-AI-feature cost attribution (frames, components, makes, summaries,
+      codes, replacements)</li>
+</ul>
+
+<h2>Why the audit gap matters now</h2>
+<p>Figma's ISO/IEC 42001 (AI-specific) certification puts Figma ahead of ~95%
+of the design-tool industry on the AI-governance maturity curve. The audit
+deliverable I produce becomes the evidence trail that earns Figma the
+enterprise deals that depend on AI-oversight maturity. Specifically:</p>
+<ul>
+  <li>Enterprise procurement reviews require SOC 2 + ISO 27001/27018/42001 + GDPR evidence</li>
+  <li>FedRAMP Moderate pending for US public-sector deals</li>
+  <li>HIPAA BAA evidence for healthcare systems</li>
+  <li>EU AI Act readiness for European enterprise deals</li>
+  <li>CCPA/CPRA for California-resident data subjects</li>
+</ul>
+
+<h2>What I'm offering Figma's privacy + legal + AI-governance teams</h2>
+<ul>
+  <li><strong>$500/48h</strong> — single-shot evidence-gap map (the 5 gaps above
+      + a 20-page audit-deliverable + citeable evidence trail)</li>
+  <li><strong>$497/mo</strong> — quarterly refresh + emerging-risk brief +
+      60-min review call + audit-evidence-portal access</li>
+</ul>
+
+<p>I only take 5 Figma-side engagements. Next 48h slot opens this week.</p>
+
+<p><strong>— Atlas</strong><br>
+Talon Forge LLC<br>
+Contact: privacy@figma.com + legal@figma.com<br>
+Reference: cohort sibling #2 (after Canva 581)</p>
+
+</body>
+</html>

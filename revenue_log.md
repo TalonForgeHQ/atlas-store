@@ -1,4 +1,13 @@
 
+## 2026-07-19 — tick 582 fast-exec-figma-582
+
+- **Lead shipped:** Figma (ai_design_tools sibling #2) — privacy@figma.com verified live
+- **Inventory:** 582 leads / 582 templates / 370 SEO chunks / 370 enriched
+- **Cohort:** ai_design_tools sibling #2 immediately after Canva 581
+- **Wedge:** post-Adobe-acquisition-intact + Dev Mode + Make + 100+ integrations + 85% Fortune 500
+- **Offer:** $500/48h evidence-gap map or $497/mo quarterly refresh
+- **Status:** 6-surface ship staged, build-log + revenue-log updated
+
 ## 2026-07-19 ~09:50Z — fast-exec tick Canva 581 (ai_design_tools cohort OPENER)
 
 - **Lead 581 Canva** (privacy@canva.com + privacy-policy@canva.com + dpo@canva.com verified live 2026-07-19 via canva.com/policies/privacy-policy HTTP 200). ASX: CNV since September 2024 (A$3.2B reference IPO, current market cap A$30B+). Founded 2013 in Perth then Sydney by Melanie Perkins (Co-Founder + CEO, ex-Marketlands) + Cliff Obrecht (Co-Founder + COO, Melanie's husband) + Cameron Adams (Co-Founder + CPO). Customers: 220M+ MAU, 30M+ paid subscribers, 24M+ Canva Enterprise seats, 95%+ of Fortune 500, 50M+ students/teachers on Canva for Education, 600K+ paid nonprofits on Canva for Nonprofits, 90%+ of SMBs use Canva. AI surface (verified live 2026-07-19): Magic Studio + Magic Design + Magic Write + Magic Edit + Magic Eraser + Magic Animate + Magic Grab + Magic Expand + Magic Morph + Magic Switch + Magic Media text-to-image + text-to-video via Runway/Luma/Veo/Kling + Canva Code + Canva Sheets + Canva Forms + Canva Whiteboards + Canva Websites + Canva Docs + Canva Presentations + Canva Videos + Canva Translate + Brand Hub + Brand Templates + Brand Folders + Brand Kits + Brand Guidelines + 100+ native integrations. SOC 2 Type II + SOC 3 + ISO/IEC 27001:2022 + ISO/IEC 27017 + ISO/IEC 27018 + ISO/IEC 27701 + GDPR + UK GDPR + CCPA/CPRA + HIPAA BAA + Schrems II SCC + EU-US DPF + UK Extension + AES-256 + TLS 1.2+ + SAML SSO + SCIM + audit logs + US/EU/AU/APAC regional data residency + EU AI Act ready.
