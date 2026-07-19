@@ -1,0 +1,2581 @@
+<!doctype html>
+<html
+  lang="en"
+  class="no-js"
+  data-controller="scrollable "
+  data-action="click->scrollable#navigate DOMContentLoaded@window->scrollable#goToHash hashchange@window->scrollable#goToHash"
+>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    >
+    <meta
+      name="theme-color"
+      content="#212123"
+      media="(prefers-color-scheme: dark)"
+    >
+
+    
+    
+      <link rel="preconnect" href="https://scripts.simpleanalyticscdn.com" crossorigin>
+      <link rel="preconnect" href="https://queue.simpleanalyticscdn.com" crossorigin>
+      <link rel="dns-prefetch" href="https://scripts.simpleanalyticscdn.com">
+      <link rel="dns-prefetch" href="https://queue.simpleanalyticscdn.com">
+    
+
+    
+    <!-- Title -->
+
+
+  <title>AI for Designers — Sketch MCP Server · Sketch</title>
+
+
+<meta property='og:title' content='AI for Designers — Sketch MCP Server'>
+<meta name='twitter:title' content='AI for Designers — Sketch MCP Server'>
+
+<!-- Description --><!-- prettier-ignore -->
+<meta name='description' content="Connect the AI tools you already use to your Sketch documents. The MCP server is built in, local-only, and free to use.">
+<!-- prettier-ignore -->
+<meta property='og:description' content="Connect the AI tools you already use to your Sketch documents. The MCP server is built in, local-only, and free to use.">
+<!-- prettier-ignore -->
+<meta name='twitter:description' content="Connect the AI tools you already use to your Sketch documents. The MCP server is built in, local-only, and free to use.">
+
+<!-- Images -->
+  <meta property='og:image' content='https://www.sketch.com/images/metadata/pages/ai.jpg'>
+  <meta name='twitter:card' content='summary_large_image'>
+
+<!-- Canonical URLs -->
+
+<link rel='canonical' href='https://www.sketch.com/ai/'>
+<meta property='og:url' content='https://www.sketch.com/ai/'>
+
+<!-- Non page-specific metadata -->
+<meta property='og:type' content='website'>
+<meta property='og:locale' content='en_US'>
+<meta property='og:site_name' content='Sketch'>
+<meta name='twitter:site' content='@sketch'>
+<link rel='alternate' type='application/atom+xml' title='RSS Feed for the Sketch Blog' href='/blog/feed.xml'>
+
+<!-- Icons -->
+<link rel='icon' type='image/svg+xml' href='/images/metadata/icon-16.svg'>
+<link rel='icon' type='image/png' sizes='16x16' href='/images/metadata/icon-16.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='/images/metadata/icon-32.png'>
+<link rel='icon' type='image/png' sizes='96x96' href='/images/metadata/icon-96.png'>
+<link rel='apple-touch-icon-precomposed' type='image/png' sizes='152x152' href='/images/metadata/icon-152.png'>
+<link rel='apple-touch-icon-precomposed' type='image/png' sizes='167x167' href='/images/metadata/icon-167.png'>
+<link rel='apple-touch-icon-precomposed' type='image/png' sizes='180x180' href='/images/metadata/icon-180.png'>
+
+
+    <script defer src="/js/globals.070cd35631bc546a630c.js"></script>
+
+    <!-- prettier-ignore -->
+<link href="/css/styles.prism.b2f328115f.css" rel="stylesheet preload" as="style" />
+
+<!-- prettier-ignore -->
+<link href="/css/ai.5654b1d1b9.css" rel="stylesheet preload" as="style" />
+
+
+
+
+<script>
+  window.SENTRY_RELEASE_NAME = 'production_20260718-0836_NOxhBrEngFnG'
+</script>
+<script defer src="/js/sentry.3e3768fbe22f7c6e3745.js"></script>
+
+
+
+<script type="module">
+  import { setConfig } from "https://esm.run/@maveio/components"
+
+  if (window.location.pathname.startsWith("/app/")) {
+    setConfig({
+      metrics: { enabled: false },
+    })
+  }
+</script>
+
+<script defer src="/js/script.a0dd8f4dd8c3b47f8320.js"></script>
+
+
+
+
+
+  <script defer src="/js/analytics.41ecda5ac998563c42d9.js"></script>
+
+
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css"><link rel="preload" href="/webfonts/marfa/ABCMarfa-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/marfa/ABCMarfaMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/custom/caveat/Caveat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/webfonts/custom/caveat/Caveat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+
+    
+  </head>
+  <body
+    class="is-loading  page ai is-refreshed"
+    data-controller="referral copy-to-clipboard"
+    data-referral-iphone-class="is-referral-iphone"
+  >
+    
+    
+    
+    
+    
+      
+
+      
+        
+
+
+<div class="ribbon-large">
+  <div class="pad-viewport">
+    <div class="ribbon-large__wrapper wrapper">
+      <div class="ribbon-large__message-container below-viewport-l-none">
+        <div class="ribbon-large__message">
+          <p><strong>New in Sketch</strong> — Multi-paste, better gradients, faster Symbols, and more <a href="/changelog/edinburgh/">Learn more</a></p>
+
+        </div>
+      </div>
+      <div class="ribbon-large__video-container">
+        
+
+        
+          <a href="/changelog/edinburgh/" class="video"> 
+          <div class="video__overlay media-player__video-wrapper">
+            
+              <video class="video__preview" autoplay muted loop playsinline>
+                <source src="https://cdn.sketch.com/assets/ribbon/edinburgh.mp4" type="video/mp4">
+              </video>
+            
+
+            <div class="ribbon-large__video-overlay">
+              
+              <div class="ribbon-large__message above-viewport-l-none">
+                <p><strong>New in Sketch</strong> — Multi-paste, better gradients, faster Symbols, and more <span href="/changelog/edinburgh/">Learn more</span></p>
+
+              </div>
+            </div>
+          </div>
+         </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+<a href="#content" class="main-nav-skip"> Skip Navigation </a>
+
+
+
+<header
+  class="
+    main-nav main-nav--transparent
+    
+  "
+  data-controller="main-nav"
+  data-action="resize@window->main-nav#resized keydown@document->main-nav#keyPressed storage@window->main-nav#checkLoginState scroll@window->main-nav#scrolled"
+  data-scrollable-target="sticky"
+  data-main-nav-target="mainNav"
+  data-main-nav-is-refreshed-value="true"
+>
+  <nav class="main-nav__inner"><div class="main-nav__bar">
+      <div class="main-nav__controls" data-main-nav-target="navToggle">
+        <button
+          data-action="main-nav#toggleNav"
+          aria-expanded="false"
+          class="main-nav__toggle"
+          id="main-nav-toggle"
+          title="Toggle Menu"
+          aria-controls="main-nav-menu"
+        >
+          <!-- CSS Icon -->
+          <span class="main-nav__toggle__icon">
+            <span class="main-nav__toggle__icon__line main-nav__toggle__icon__line--top"></span>
+            <span class="main-nav__toggle__icon__line main-nav__toggle__icon__line--bottom"></span>
+          </span>
+          <span class="visuallyhidden">Menu</span>
+        </button>
+      </div>
+
+      
+        <div class="main-nav__logo">
+          <a class="main-nav__logo__link" href="/home/" title="Go to Homepage">
+            <span class="main-nav__logo__shape"></span>
+            <span class="main-nav__logo__name">Sketch</span>
+          </a>
+        </div>
+      
+
+      <div class="main-nav__persistent">
+        <div class="main-nav__persistent__profile is-hidden" data-main-nav-target="authProfile"></div>
+        <ul class="main-nav__persistent__actions">
+            <li
+              class="
+                main-nav__item
+                
+              "
+              data-main-nav-target=" hideOnLogin "
+            >
+              <a
+                href="/signin/"
+                class="main-nav__link main-nav__link--action"
+                
+              >Sign In</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div><div class="main-nav__menu" id="main-nav-menu" aria-labelledby="main-nav-toggle">
+        <ul class="main-nav__menu__pages"><li class="main-nav__item main-nav__subnav">
+                <span class="main-nav__link main-nav__subnav__toggle">
+                  Product
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" class="main-nav__link__icon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m13.5 6.5-5 5-5-5"></path></svg>
+
+                </span>
+                <ul
+                  class="main-nav__subnav__dropdown"
+                ><li class="main-nav__subnav__icon-grid-wrapper" role="presentation">
+                      <div class="main-nav__subnav__icon-grid"><div class="main-nav__subnav__item main-nav__subnav__item--with-icon">
+                          <a
+                            href="/design/"
+                            
+
+                            class="
+                              main-nav__subnav__link
+                              
+                            "
+
+                            
+                          >
+                            <div class="main-nav__subnav__link__icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14.162 3.178c.442.146.646.32 1.443 1.116l4.1 4.1c.694.694.861.882 1.03 1.228q.051.105.087.216c.142.429.146.891.011 1.323a2 2 0 0 1-.077.202c-.162.355-.327.547-1.016 1.259l-3.502 3.62c-1.215 1.254-1.525 1.534-2.099 1.786a3.57 3.57 0 0 1-2.482.147c-.292-.09-.446-.163-.957-.435-.315-.168-.394-.206-.444-.221a.66.66 0 0 0-.562.09.5.5 0 0 0-.09.09c-.104.13-.206.303-.518.877l-.043.078c-.52.952-.635 1.149-.848 1.386a3 3 0 0 1-4.35.115l-.213-.236a3 3 0 0 1 .328-4.114c.237-.213.434-.329 1.386-.848l.078-.043c.574-.312.747-.414.877-.519a.5.5 0 0 0 .09-.09.66.66 0 0 0 .09-.561c-.015-.05-.053-.13-.221-.444-.272-.51-.346-.665-.435-.957-.25-.818-.198-1.7.147-2.482q.051-.116.114-.23c.268-.48.544-.776 1.673-1.869l3.62-3.502c.809-.784 1.016-.954 1.46-1.093a2.17 2.17 0 0 1 1.323.01m-.875 1.42c-.116.037-.27.163-.866.74L8.802 8.84c-.992.96-1.242 1.228-1.406 1.522q-.03.051-.051.102c-.2.455-.23.966-.085 1.44.05.168.097.266.323.69.23.43.28.534.337.727a2.16 2.16 0 0 1-.293 1.835 2 2 0 0 1-.387.41c-.23.184-.426.3-1.098.665l-.078.043c-.794.433-.995.552-1.1.646a1.5 1.5 0 0 0-.059 2.175l.119.106a1.5 1.5 0 0 0 2.056-.164c.094-.106.213-.307.646-1.101l.043-.078c.366-.672.481-.868.666-1.098a2 2 0 0 1 .409-.387 2.16 2.16 0 0 1 1.835-.293c.193.056.297.107.727.337.424.226.522.272.69.323.474.145.985.115 1.44-.085.313-.138.582-.38 1.624-1.457l3.502-3.62c.535-.552.671-.71.728-.836l.011-.029a.66.66 0 0 0-.016-.436c-.06-.125-.2-.281-.74-.821l-.034-.033-1.865 1.038c-.229.128-.48-.096-.408-.326l.024-.058 1.036-1.867-1.574-1.574-2.9 2.01c-.24.166-.527-.093-.424-.337l.031-.056 2.008-2.903-.114-.114c-.488-.485-.627-.599-.734-.634a.66.66 0 0 0-.404-.003M10.28 10.22l3.5 3.5a.75.75 0 0 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 1.06-1.06"/></svg>
+                            </div>
+                            
+                            <div class="main-nav__subnav__link__content">
+                              <div class="main-nav__subnav__link__title">Design</div><div class="main-nav__subnav__link__caption">Create with precision</div></div></a>
+                        </div><div class="main-nav__subnav__item main-nav__subnav__item--with-icon">
+                          <a
+                            href="/collaborate/"
+                            
+
+                            class="
+                              main-nav__subnav__link
+                              
+                            "
+
+                            
+                          >
+                            <div class="main-nav__subnav__link__icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M16.5 4.9a3.6 3.6 0 0 1 1.768 6.737 7.3 7.3 0 0 1 2.121 1.054c1.466 1.07 2.308 2.625 2.308 4.5a.7.7 0 0 1-.178.466c-1.21 1.35-3.478 1.982-6.796 1.982q-.46 0-.894-.017a.697.697 0 0 1 .053-1.394q.405.016.841.016c2.766 0 4.62-.467 5.571-1.331-.076-1.288-.685-2.334-1.728-3.096-1.033-.755-2.44-1.178-3.843-1.178-1.407 0-2.823.437-3.861 1.204 1.115.906 1.75 2.163 1.75 3.657a.6.6 0 0 1-.162.413c-1.06 1.157-3.045 1.698-5.95 1.698s-4.89-.541-5.95-1.698a.6.6 0 0 1-.161-.413c0-1.614.749-2.952 2.044-3.873a6.7 6.7 0 0 1 2.258-1.015 3.6 3.6 0 1 1 3.623-.001c.451.11.887.261 1.297.452l-.082.073c1.002-.918 2.357-1.53 3.79-1.773A3.6 3.6 0 0 1 16.5 4.9m-9 8.711c-1.213 0-2.449.364-3.359 1.012-.915.651-1.452 1.54-1.521 2.629.834.738 2.46 1.137 4.88 1.137s4.046-.4 4.88-1.137c-.068-1.092-.6-1.98-1.507-2.63-.907-.648-2.142-1.01-3.373-1.01m0-6.511a2.4 2.4 0 1 0 0 4.8 2.4 2.4 0 0 0 0-4.8m9-1a2.4 2.4 0 1 0 0 4.8 2.4 2.4 0 0 0 0-4.8"/></svg>
+                            </div>
+                            
+                            <div class="main-nav__subnav__link__content">
+                              <div class="main-nav__subnav__link__title">Collaboration</div><div class="main-nav__subnav__link__caption">Work better, together</div></div></a>
+                        </div><div class="main-nav__subnav__item main-nav__subnav__item--with-icon">
+                          <a
+                            href="/prototype/"
+                            
+
+                            class="
+                              main-nav__subnav__link
+                              
+                            "
+
+                            
+                          >
+                            <div class="main-nav__subnav__link__icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="m17.156 3.12 3.5 2.25a.75.75 0 0 1 0 1.26l-3.5 2.25A.75.75 0 0 1 16 8.25V6.78c-1.845.227-2.75 1.78-2.75 4.97 0 3.77-1.287 6.007-3.827 6.428a3 3 0 1 1-.045-1.527c1.59-.386 2.372-1.937 2.372-4.901 0-3.973 1.43-6.244 4.25-6.48V3.75a.75.75 0 0 1 1.156-.63M6.5 16a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/></svg>
+                            </div>
+                            
+                            <div class="main-nav__subnav__link__content">
+                              <div class="main-nav__subnav__link__title">Prototyping</div><div class="main-nav__subnav__link__caption">Bring ideas to life</div></div></a>
+                        </div><div class="main-nav__subnav__item main-nav__subnav__item--with-icon">
+                          <a
+                            href="/handoff/"
+                            
+
+                            class="
+                              main-nav__subnav__link
+                              
+                            "
+
+                            
+                          >
+                            <div class="main-nav__subnav__link__icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="evenodd" d="M13.75 4a.75.75 0 1 1 0 1.5h-3.4c-2.3 0-2.848.045-3.348.3A2.75 2.75 0 0 0 5.8 7.002c-.255.5-.3 1.049-.3 3.348v3.3c0 2.3.045 2.848.3 3.348A2.75 2.75 0 0 0 7.002 18.2c.5.255 1.049.3 3.348.3h3.3c2.3 0 2.848-.045 3.348-.3a2.75 2.75 0 0 0 1.202-1.202c.255-.5.3-1.049.3-3.348V13a.75.75 0 1 1 1.5 0v.65c0 1.372-.007 1.835-.05 2.36-.057.694-.178 1.208-.413 1.67a4.25 4.25 0 0 1-1.858 1.857c-.461.235-.975.356-1.67.413-.524.043-.987.05-2.359.05h-3.3c-1.372 0-1.835-.007-2.36-.05-.694-.057-1.208-.178-1.67-.413a4.25 4.25 0 0 1-1.857-1.858c-.235-.461-.356-.975-.413-1.67-.043-.524-.05-.987-.05-2.359v-3.3c0-1.372.007-1.835.05-2.36.057-.694.178-1.208.413-1.67a4.25 4.25 0 0 1 1.858-1.857c.461-.235.975-.356 1.67-.413.524-.043.987-.05 2.359-.05zm4.475.002L21.79 6.92a.75.75 0 0 1 0 1.16l-3.566 2.918a.75.75 0 0 1-1.225-.58V8.75q-1.934-.175-4.361 2.367c-.47.492-1.262-.052-.974-.667q1.968-4.2 5.335-4.2V4.583a.75.75 0 0 1 1.225-.58"/></svg>
+                            </div>
+                            
+                            <div class="main-nav__subnav__link__content">
+                              <div class="main-nav__subnav__link__title">Developer Handoff</div><div class="main-nav__subnav__link__caption">From design to code</div></div></a>
+                        </div><div class="main-nav__subnav__item main-nav__subnav__item--with-icon">
+                          <a
+                            href="/ai/"
+                            
+
+                            class="
+                              main-nav__subnav__link
+                              
+                            "
+
+                            
+                          >
+                            <div class="main-nav__subnav__link__icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M19.3 3.307c.192.13.298.23.73.663.433.432.532.538.663.73.48.703.607 1.59.344 2.4q-.045.14-.11.274c-.217.448-.451.71-1.41 1.67L9.044 19.517c-1.097 1.096-1.378 1.335-1.943 1.519a2.75 2.75 0 0 1-2.4-.344c-.192-.13-.298-.23-.73-.663-.433-.432-.532-.538-.663-.73a2.75 2.75 0 0 1-.344-2.4q.045-.14.11-.274c.217-.448.451-.71 1.41-1.67L14.956 4.483c.958-.958 1.22-1.192 1.669-1.408q.135-.065.274-.111a2.75 2.75 0 0 1 2.4.344m-.008 11.235c0 1.196.97 2.166 2.166 2.166.711 0 .728 1.06.018 1.083l-.164.006a2.167 2.167 0 0 0-2.02 2.161c0 .711-1.06.728-1.083.018l-.005-.16a2.167 2.167 0 0 0-2.162-2.024c-.711 0-.728-1.06-.018-1.083l.16-.005a2.167 2.167 0 0 0 2.024-2.162c0-.723 1.084-.723 1.084 0M17.364 4.39a1 1 0 0 0-.086.034c-.226.11-.456.315-1.26 1.12L5.543 16.017c-.804.804-1.01 1.034-1.119 1.26a1 1 0 0 0-.034.086 1.25 1.25 0 0 0 .156 1.09c.054.08.137.168.484.516.348.347.436.43.515.484.32.218.723.276 1.091.156.235-.076.463-.27 1.346-1.153l7.581-7.583L14.47 9.78a.75.75 0 0 1-.073-.976l.073-.084a.75.75 0 0 1 1.06 0l1.094 1.094 1.833-1.832c.804-.804 1.01-1.034 1.119-1.26a1 1 0 0 0 .034-.086 1.25 1.25 0 0 0-.156-1.09c-.054-.08-.137-.168-.484-.516-.348-.347-.436-.43-.515-.484a1.25 1.25 0 0 0-1.091-.156M8.917 2.417c0 .92.746 1.666 1.666 1.666.547 0 .56.816.014.833l-.126.005a1.667 1.667 0 0 0-1.554 1.662c0 .547-.816.56-.833.014l-.004-.124a1.667 1.667 0 0 0-1.663-1.556c-.547 0-.56-.816-.014-.833l.124-.004a1.667 1.667 0 0 0 1.556-1.663c0-.556.834-.556.834 0"/></svg>
+                            </div>
+                            
+                            <div class="main-nav__subnav__link__content">
+                              <div class="main-nav__subnav__link__title">AI</div><div class="main-nav__subnav__link__caption">Connect your AI client</div></div></a>
+                        </div><div class="main-nav__subnav__item main-nav__subnav__item--with-icon">
+                          <a
+                            href="/features/"
+                            
+
+                            class="
+                              main-nav__subnav__link
+                              
+                            "
+
+                            
+                          >
+                            <div class="main-nav__subnav__link__icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M7.5 4.75c.698 0 1.047 0 1.33.086a2 2 0 0 1 1.334 1.333c.086.284.086.633.086 1.331s0 1.047-.086 1.33a2 2 0 0 1-1.333 1.334c-.284.086-.633.086-1.331.086s-1.047 0-1.33-.086A2 2 0 0 1 4.835 8.83c-.085-.283-.085-.632-.085-1.33s0-1.047.086-1.33A2 2 0 0 1 6.17 4.835c.284-.086.633-.086 1.331-.086Zm9 0c.698 0 1.047 0 1.33.086a2 2 0 0 1 1.334 1.333c.086.284.086.633.086 1.331s0 1.047-.086 1.33a2 2 0 0 1-1.333 1.334c-.284.086-.633.086-1.331.086s-1.047 0-1.33-.086a2 2 0 0 1-1.334-1.333c-.086-.284-.086-.633-.086-1.331s0-1.047.086-1.33a2 2 0 0 1 1.333-1.334c.284-.086.633-.086 1.331-.086Zm-9 9c.698 0 1.047 0 1.33.086a2 2 0 0 1 1.334 1.333c.086.284.086.633.086 1.331s0 1.047-.086 1.33a2 2 0 0 1-1.333 1.334c-.284.086-.633.086-1.331.086s-1.047 0-1.33-.086a2 2 0 0 1-1.334-1.333c-.086-.284-.086-.633-.086-1.331s0-1.047.086-1.33a2 2 0 0 1 1.333-1.334c.284-.086.633-.086 1.331-.086Zm9 0c.698 0 1.047 0 1.33.086a2 2 0 0 1 1.334 1.333c.086.284.086.633.086 1.331s0 1.047-.086 1.33a2 2 0 0 1-1.333 1.334c-.284.086-.633.086-1.331.086s-1.047 0-1.33-.086a2 2 0 0 1-1.334-1.333c-.086-.284-.086-.633-.086-1.331s0-1.047.086-1.33a2 2 0 0 1 1.333-1.334c.284-.086.633-.086 1.331-.086Z"/></svg>
+                            </div>
+                            
+                            <div class="main-nav__subnav__link__content">
+                              <div class="main-nav__subnav__link__title">All Features</div><div class="main-nav__subnav__link__caption">Everything in one place</div></div></a>
+                        </div></div>
+                    </li><div class="main-nav__subnav__latest-update">
+                          <a href="/changelog/web-command-bar-and-better-notifications/" class="main-nav__subnav__latest-update__link">
+                            <span class="main-nav__subnav__latest-update__badge">New</span>
+                            <span class="main-nav__subnav__latest-update__title">Web Command Bar and better notifications</span>
+                            <time class="main-nav__subnav__latest-update__date" datetime="2026-07-14 07:30:00 +0000">14 Jul</time>
+                          </a>
+                        </div></ul>
+              </li>
+            
+<li class="main-nav__item main-nav__subnav">
+                <span class="main-nav__link main-nav__subnav__toggle">
+                  Explore
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" class="main-nav__link__icon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m13.5 6.5-5 5-5-5"></path></svg>
+
+                </span>
+                <ul
+                  class="main-nav__subnav__dropdown"
+                ><li class="main-nav__subnav__column-wrapper" role="presentation">
+                      <ul class="main-nav__subnav__column" role="list"><li class="main-nav__subnav__item">
+                          <a
+                            href="/changelog/"
+                            
+data-badge-label="New"
+                              
+                                data-main-nav-target="changelogBadge"
+                              
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                                main-nav__item__badge
+                                
+                                  is-hidden
+                                
+                              
+                            "
+
+                            
+                          >
+                            Changelog
+</a>
+                        </li><li class="main-nav__subnav__item">
+                          <a
+                            href="/roadmap/"
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                            "
+
+                            
+                          >
+                            Roadmap
+</a>
+                        </li><li class="main-nav__subnav__item">
+                          <a
+                            href="/blog/"
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                            "
+
+                            
+                          >
+                            Blog
+</a>
+                        </li><li class="main-nav__subnav__item">
+                          <a
+                            href="/design-resources/"
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                            "
+
+                            
+                          >
+                            Design Resources
+</a>
+                        </li><li class="main-nav__subnav__item">
+                          <a
+                            href="/plugins/"
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                            "
+
+                            
+                          >
+                            Plugins & Integrations
+</a>
+                        </li></ul>
+                    </li></ul>
+              </li>
+            
+<li class="main-nav__item">
+                  <a
+                    href="/pricing/"
+                    class="main-nav__link"
+                    
+                  >Pricing</a>
+                </li>
+<li class="main-nav__item main-nav__subnav">
+                <span class="main-nav__link main-nav__subnav__toggle">
+                  Support
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" class="main-nav__link__icon"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m13.5 6.5-5 5-5-5"></path></svg>
+
+                </span>
+                <ul
+                  class="main-nav__subnav__dropdown"
+                ><li class="main-nav__subnav__column-wrapper" role="presentation">
+                      <ul class="main-nav__subnav__column" role="list"><li class="main-nav__subnav__item">
+                          <a
+                            href="/support/"
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                            "
+
+                            
+                          >
+                            Help Center
+</a>
+                        </li><li class="main-nav__subnav__item">
+                          <a
+                            href="/docs/"
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                            "
+
+                            
+                          >
+                            Documentation
+</a>
+                        </li><li class="main-nav__subnav__item">
+                          <a
+                            href="/feature-requests/"
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                            "
+
+                            
+                          >
+                            Request a Feature
+</a>
+                        </li><li class="main-nav__subnav__item">
+                          <a
+                            href="/support/contact/"
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                            "
+
+                            
+                          >
+                            Contact Us
+</a>
+                        </li><li class="main-nav__subnav__item">
+                          <a
+                            href="https://discord.gg/ascPpfDSSV"
+                            
+
+                            class="
+                              main-nav__subnav__link main-nav__subnav__link--simple
+                              
+                            "
+
+                            
+                              target="_blank"
+                            
+                          >
+                            Community Discord
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentcolor" class="main-nav__item__action main-nav__item__action--icon">
+  <path d="M10.5 8H16v5.5M16 8l-7.5 7.5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+</a>
+                        </li></ul>
+                    </li></ul>
+              </li>
+            
+</ul>
+      
+<div class="main-nav__menu__auth">
+        <div class="main-nav__menu__auth__profile is-hidden" data-main-nav-target="authProfile"></div>
+        <ul class="main-nav__menu__auth__actions">
+          
+            <li
+              class="
+                main-nav__item
+                
+                main-nav__item--persistent
+                
+              "
+              data-main-nav-target=" hideOnLogin "
+            >
+              <a
+                
+                  href="/signin/"
+                
+
+                class="
+                  main-nav__link main-nav__link--action
+                  
+                "
+                
+              >
+                <span class="main-nav__link__label" data-main-nav-target="loggedOffLabel">
+                  
+Sign In
+                </span>
+
+                
+
+                
+              </a>
+            </li>
+          
+            <li
+              class="
+                main-nav__item
+                main-nav__item--cta
+                
+                 main-nav__item--download 
+              "
+              data-main-nav-target=" keepOnLogin "
+            >
+              <a
+                
+                  href="/downloads/mac/"
+                
+
+                class="
+                  
+                      button-new button-new--primary
+
+                       button-new--has-icon-right 
+                    
+
+                "
+                
+              >
+                <span class="main-nav__link__label" data-main-nav-target="loggedOffLabel">
+                  
+Get started
+                </span>
+
+                
+                  <span
+                    class="main-nav__link__label is-hidden"
+                    data-main-nav-target="loggedInLabel"
+                  >Download</span>
+                
+
+                
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="main-nav__link__icon"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16 11-4 4-4-4M12 13.5v-9M4 20h16"></path></g></svg>
+
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div
+  class="mobile-nav"
+  data-main-nav-target="mobileNav"
+  data-action="scroll->main-nav#mobileNavScrolled mobile-nav-focus@window->main-nav#focusTrapActive"
+>
+  <div class="mobile-nav__wrapper">
+    <div class="mobile-nav__actions">
+      <div class="mobile-nav__nav-toggle">
+        <button class="mobile-nav__close" data-action="main-nav#toggleNav">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="mobile-nav__close-icon">
+  <title>icon-close</title>
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Assets-/-Icons-/-Close" fill="#858585">
+      <path d="M7.05025253,5.63603897 L11.9991458,10.5851458 L16.9497475,5.63603897 C17.3402718,5.24551468 17.9734367,5.24551468 18.363961,5.63603897 C18.7544853,6.02656326 18.7544853,6.65972824 18.363961,7.05025253 L13.4141458,11.9991458 L18.363961,16.9497475 C18.7544853,17.3402718 18.7544853,17.9734367 18.363961,18.363961 C17.9734367,18.7544853 17.3402718,18.7544853 16.9497475,18.363961 L11.9991458,13.4141458 L7.05025253,18.363961 C6.65972824,18.7544853 6.02656326,18.7544853 5.63603897,18.363961 C5.24551468,17.9734367 5.24551468,17.3402718 5.63603897,16.9497475 L10.5851458,11.9991458 L5.63603897,7.05025253 C5.24551468,6.65972824 5.24551468,6.02656326 5.63603897,5.63603897 C6.02656326,5.24551468 6.65972824,5.24551468 7.05025253,5.63603897 Z" id="Shape"></path>
+    </g>
+  </g>
+</svg>
+
+        </button>
+      </div>
+      
+        
+          <div class="mobile-nav__sign-up">
+            <div class="mobile-nav__menu__auth__profile is-hidden" data-main-nav-target="authProfile"></div>
+            <a
+              href="/signin/"
+              class="mobile-nav__link mobile-nav__link--action"
+              data-main-nav-target=" hideOnLogin "
+              data-action="main-nav#mobileToggleNav"
+              
+            >
+              Sign In
+            </a>
+          </div>
+        
+      
+        
+      
+    </div>
+    <div class="mobile-nav__links">
+      <ul class="main-nav__menu__pages"><li class="main-nav__item-group">
+              <ul>
+                <li class="main-nav__item main-nav__heading">
+                  Product
+                </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/design/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Design
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/collaborate/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Collaboration
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/prototype/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Prototyping
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/handoff/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Developer Handoff
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/ai/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        AI
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/features/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        All Features
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/pricing/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Pricing
+</a>
+                    </li></ul>
+            </li>
+          
+<li class="main-nav__item-group">
+              <ul>
+                <li class="main-nav__item main-nav__heading">
+                  Explore
+                </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/changelog/"
+                        data-action="main-nav#mobileToggleNav"
+                        
+data-badge-label="New"class="
+                          main-nav__subnav__link
+                          
+                            main-nav__item__badge"
+                        
+                      >
+                        Changelog
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/roadmap/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Roadmap
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/blog/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Blog
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/design-resources/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Design Resources
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/plugins/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Plugins & Integrations
+</a>
+                    </li></ul>
+            </li>
+          
+
+<li class="main-nav__item-group">
+              <ul>
+                <li class="main-nav__item main-nav__heading">
+                  Support
+                </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/support/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Help Center
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/docs/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Documentation
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/feature-requests/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Request a Feature
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="/support/contact/"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                      >
+                        Contact Us
+</a>
+                    </li><li class="main-nav__subnav__item">
+                      <a
+                        href="https://discord.gg/ascPpfDSSV"
+                        data-action="main-nav#mobileToggleNav"
+                        class="
+                          main-nav__subnav__link
+                          "
+                        
+                          target="_blank"
+                        
+                      >
+                        Community Discord
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentcolor" class="main-nav__item__action main-nav__item__action--icon">
+  <path d="M10.5 8H16v5.5M16 8l-7.5 7.5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+</a>
+                    </li></ul>
+            </li>
+          
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+</header>
+
+
+    
+
+    <main id="content">
+  
+
+
+<div class="ai-page" data-controller="ai">
+  
+    
+        <section class="ai-hero pad-viewport"><img
+    src="https://sktch.b-cdn.net/assets/pages/ai/hero%402x.png?width=1920&quality=100&token=TRTBfs5WIzhN66Ygm1FH5Nl1Plni5S00drGEQMxQgyc&expires=1784367449"
+    srcset="https://sktch.b-cdn.net/assets/pages/ai/hero%402x.png?width=1920&quality=100&token=TRTBfs5WIzhN66Ygm1FH5Nl1Plni5S00drGEQMxQgyc&expires=1784367449 1x, https://cdn.sketch.com/assets/pages/ai/hero@2x.png 2x"
+    class="ai-hero__image"
+    alt="Sketch AI hero background"
+    loading="lazy"
+  >
+  <div class="wrapper">
+    <div class="hero__wrapper">
+      <h1 class="hero__title"><p>Your designs<br />with <strong>your AI</strong></p>
+</h1>
+      <div class="hero__callout">
+        <div class="callout__column">
+          <p class="hero__blurb">Connect any MCP-compatible AI client you like to Sketch. There are no tokens to buy, no extra tiers, and no add-ons.</p>
+        </div>
+        <div class="callout__column">
+          <div class="hero__ctas">
+            <div class="button-new-glow">
+              <a href="/downloads/mac/" class="button-new button-new--primary button-new--glow">
+                <span>Get started for free</span>
+              </a>
+            </div>
+            <a href="/docs/mcp-server/" class="button-new button-new--tertiary">
+              <span>Learn more</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="hero__clients">
+        <p class="hero__clients__label">Works with your favorite AI agent</p>
+        
+
+
+
+<section id="customer-logos" class="customer-logos-section ">
+  <div class="customer-logos wrapper">
+    <div class="customer-logos__logos">
+      <ul class="customer-logos__marquee">
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="333px" height="50px" viewBox="52 0 333 50" version="1.1" class="customer-logo__asset">
+    <title>Antigravity</title>
+    <g id="logo-antigravity" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(6.1704, 8.1615)">
+            <path d="M365.438473,40.0849558 C365.357942,40.2730088 365.264136,40.4747788 365.156614,40.6893805 C365.049092,40.9309735 364.982278,41.0787611 364.955287,41.1327434 L361.410154,41.1327434 C361.571216,40.7836283 361.745995,40.3938053 361.934048,39.9641593 C362.122101,39.5615044 362.349977,39.0646018 362.618561,38.4738938 C362.780066,38.1247788 362.927411,37.8022124 363.061924,37.5070796 C363.195995,37.2115044 363.343782,36.8756637 363.504844,36.5 C363.692897,36.150885 363.907942,35.7076549 364.149535,35.170531 L366.002632,31.1421239 L357.502632,11.8864159 L361.208827,11.8864159 L367.654402,27.1540265 L367.734933,27.1540265 L373.938473,11.8864159 L377.644667,11.8864159 L367.009712,36.419469 C366.90219,36.6610619 366.727853,37.0371681 366.485818,37.5473451 C366.271216,38.0845133 366.056172,38.5946903 365.84157,39.0778761 C365.653517,39.5884956 365.519004,39.9238938 365.438473,40.0849558 Z" id="Path" fill="currentColor"></path>
+            <path d="M344.480508,14.9883186 L344.480508,11.8864602 L348.106172,11.8864602 L348.106172,6.08557522 L351.530066,6.08557522 L351.530066,11.8864602 L356.565906,11.8864602 L356.565906,14.9883186 L351.530066,14.9883186 L351.530066,26.1872566 C351.530066,27.3420354 351.758384,28.2014159 352.215021,28.7653982 C352.69865,29.3025221 353.410154,29.5711062 354.349977,29.5711062 C354.780066,29.5711062 355.18272,29.5173894 355.558827,29.4099558 C355.93449,29.2756637 356.297322,29.1011062 356.646437,28.8862389 L356.646437,32.229823 C356.216791,32.3909735 355.773428,32.5118142 355.316791,32.5923894 C354.860597,32.699823 354.363694,32.7534956 353.826526,32.7534956 C352.107499,32.7534956 350.724756,32.2432743 349.677411,31.2227434 C348.629623,30.175354 348.106172,28.7788496 348.106172,27.0331858 L348.106172,14.9883186 L344.480508,14.9883186 Z" id="Path" fill="currentColor"></path>
+            <path d="M338.357942,32.4312389 L338.357942,11.8864159 L341.782278,11.8864159 L341.782278,32.4312389 L338.357942,32.4312389 Z M340.049977,8.09973451 C339.378738,8.09973451 338.801305,7.8580531 338.317676,7.37464602 C337.83449,6.89123894 337.592897,6.31380531 337.592897,5.64243363 C337.592897,4.94415929 337.83449,4.36676991 338.317676,3.91022124 C338.801305,3.42681416 339.378738,3.1850885 340.049977,3.1850885 C340.748207,3.1850885 341.325641,3.42681416 341.782278,3.91022124 C342.265464,4.36676991 342.507499,4.94415929 342.507499,5.64243363 C342.507499,6.31380531 342.265464,6.89123894 341.782278,7.37464602 C341.325641,7.8580531 340.748207,8.09973451 340.049977,8.09973451 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="currentColor" points="324.669004 32.4311947 316.370774 11.8864159 320.03626 11.8864159 326.401305 28.4028319 326.481836 28.4028319 332.927411 11.8864159 336.512367 11.8864159 328.133605 32.4311947"></polygon>
+            <path d="M305.34865,33.0757965 C303.818119,33.0757965 302.475198,32.780354 301.320331,32.1895575 C300.165464,31.5987168 299.252632,30.7930531 298.580951,29.7725221 C297.936703,28.7251327 297.614136,27.5434513 297.614136,26.2275221 C297.614136,24.7235841 298.003959,23.4613717 298.78272,22.4408407 C299.561482,21.3934513 300.608827,20.614646 301.924756,20.1043805 C303.240685,19.5672566 304.690685,19.2986726 306.275198,19.2986726 C307.188473,19.2986726 308.03449,19.3792478 308.813251,19.5403982 C309.592013,19.6746903 310.263694,19.8492478 310.827411,20.0640708 C311.418119,20.2520796 311.861482,20.4400442 312.156614,20.6280531 L312.156614,19.3792478 C312.156614,17.8215929 311.606172,16.5862389 310.505287,15.6731416 C309.403959,14.7600442 308.061482,14.3034956 306.476968,14.3034956 C305.34865,14.3034956 304.28803,14.5586283 303.294225,15.0688938 C302.327411,15.5523009 301.562367,16.2371239 300.998207,17.1233628 L298.419889,15.1897345 C298.957057,14.3840265 299.628738,13.6857965 300.434048,13.0949558 C301.2398,12.504115 302.153074,12.0475664 303.173428,11.7253097 C304.220774,11.4030531 305.322101,11.2419027 306.476968,11.2419027 C309.269889,11.2419027 311.458384,11.9804425 313.042897,13.4575221 C314.627411,14.9346018 315.419889,16.9219469 315.419889,19.4195575 L315.419889,32.4312389 L312.156614,32.4312389 L312.156614,29.490531 L311.995552,29.490531 C311.646437,30.0813717 311.149535,30.6587611 310.505287,31.2227434 C309.860597,31.7598673 309.09511,32.2029646 308.208827,32.5520796 C307.349535,32.9012389 306.396437,33.0757965 305.34865,33.0757965 Z M305.671216,30.0545133 C306.852632,30.0545133 307.926968,29.7590708 308.893782,29.1682301 C309.887588,28.5774336 310.679623,27.785177 311.270774,26.7915044 C311.861482,25.7978319 312.156614,24.710177 312.156614,23.5284956 C311.539358,23.0988053 310.760154,22.7496903 309.820331,22.4811062 C308.907057,22.2125664 307.899977,22.0782743 306.799092,22.0782743 C304.838473,22.0782743 303.401747,22.4811062 302.488915,23.2868142 C301.575641,24.0924779 301.119004,25.0861504 301.119004,26.2677876 C301.119004,27.3957522 301.54865,28.3088496 302.407942,29.0071239 C303.267676,29.705354 304.355287,30.0545133 305.671216,30.0545133 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M285.18803,32.4311947 L285.18803,11.8864159 L288.450862,11.8864159 L288.450862,15.1896903 L288.612367,15.1896903 C288.880508,14.410885 289.323871,13.739469 289.94157,13.1754867 C290.58626,12.584646 291.311039,12.1280973 292.116791,11.8058407 C292.949535,11.4567257 293.768561,11.2821681 294.574313,11.2821681 C295.192013,11.2821681 295.675198,11.3224336 296.024313,11.4030088 C296.373428,11.4567257 296.695995,11.550708 296.991128,11.685 L296.991128,15.3911062 C296.561482,15.1762832 296.09157,15.0151327 295.581393,14.9076991 C295.097765,14.8002655 294.600862,14.7465487 294.090685,14.7465487 C293.09688,14.7465487 292.184048,15.0285398 291.351305,15.5925221 C290.519004,16.1565044 289.847322,16.9084956 289.337145,17.8484513 C288.853959,18.7884071 288.612367,19.8223451 288.612367,20.9503097 L288.612367,32.4311947 L285.18803,32.4311947 Z" id="Path" fill="currentColor"></path>
+            <path d="M271.059269,41.7769912 C269.313694,41.7769912 267.809712,41.4818584 266.547765,40.890708 C265.312367,40.3269912 264.305287,39.6017699 263.526083,38.7154867 C262.774313,37.8292035 262.237145,36.929646 261.915021,36.0165044 L265.057057,34.6871681 C265.486703,35.8150885 266.211924,36.7548673 267.232278,37.5070796 C268.279623,38.2858407 269.555287,38.6752212 271.059269,38.6752212 C273.207942,38.6752212 274.859269,38.0442478 276.014136,36.7818584 C277.169004,35.5465487 277.746437,33.8143363 277.746437,31.5852655 L277.746437,29.289115 L277.585375,29.289115 C276.940685,30.2827876 276.014136,31.1287168 274.805729,31.8269912 C273.597322,32.4984071 272.187145,32.8340708 270.576083,32.8340708 C268.803517,32.8340708 267.178738,32.3775221 265.701747,31.4644248 C264.251305,30.5513274 263.096437,29.289115 262.237145,27.6777434 C261.377853,26.0395133 260.948207,24.1596018 260.948207,22.0380088 C260.948207,19.9163717 261.377853,18.0498673 262.237145,16.4385398 C263.096437,14.8003097 264.251305,13.524646 265.701747,12.6115487 C267.178738,11.6984513 268.803517,11.2419027 270.576083,11.2419027 C272.187145,11.2419027 273.597322,11.5910177 274.805729,12.289292 C276.014136,12.9606637 276.940685,13.8066372 277.585375,14.8271681 L277.746437,14.8271681 L277.746437,11.8864602 L281.009712,11.8864602 L281.009712,31.6255752 C281.009712,33.9083186 280.566349,35.8016814 279.680066,37.3057522 C278.820774,38.8097345 277.638915,39.9238938 276.134933,40.649115 C274.657942,41.4013274 272.966349,41.7769912 271.059269,41.7769912 Z M271.059269,29.7322124 C272.267676,29.7322124 273.382278,29.4368142 274.403074,28.8459735 C275.423428,28.2282743 276.229181,27.3420354 276.819889,26.1872566 C277.437588,25.0324336 277.746437,23.6493363 277.746437,22.0380088 C277.746437,20.3729204 277.437588,18.9764159 276.819889,17.8484513 C276.229181,16.6936726 275.423428,15.8208407 274.403074,15.23 C273.382278,14.6391593 272.267676,14.3437611 271.059269,14.3437611 C269.850862,14.3437611 268.73626,14.6526106 267.715906,15.2703097 C266.69511,15.8611062 265.876083,16.7339381 265.258384,17.8887611 C264.640685,19.0166814 264.331836,20.3997788 264.331836,22.0380088 C264.331836,23.6761947 264.640685,25.0726991 265.258384,26.2275221 C265.876083,27.3554867 266.69511,28.2282743 267.715906,28.8459735 C268.73626,29.4368142 269.850862,29.7322124 271.059269,29.7322124 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M254.422544,32.4312389 L254.422544,11.8864159 L257.84688,11.8864159 L257.84688,32.4312389 L254.422544,32.4312389 Z M256.114579,8.09973451 C255.44334,8.09973451 254.865906,7.8580531 254.382278,7.37464602 C253.899092,6.89123894 253.657499,6.31380531 253.657499,5.64243363 C253.657499,4.94415929 253.899092,4.36676991 254.382278,3.91022124 C254.865906,3.42681416 255.44334,3.1850885 256.114579,3.1850885 C256.812809,3.1850885 257.390243,3.42681416 257.84688,3.91022124 C258.330508,4.36676991 258.572101,4.94415929 258.572101,5.64243363 C258.572101,6.31380531 258.330508,6.89123894 257.84688,7.37464602 C257.390243,7.8580531 256.812809,8.09973451 256.114579,8.09973451 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M239.064136,14.9883186 L239.064136,11.8864602 L242.6898,11.8864602 L242.6898,6.08557522 L246.113694,6.08557522 L246.113694,11.8864602 L251.149092,11.8864602 L251.149092,14.9883186 L246.113694,14.9883186 L246.113694,26.1872566 C246.113694,27.3420354 246.342013,28.2014159 246.79865,28.7653982 C247.281836,29.3025221 247.993782,29.5711062 248.933605,29.5711062 C249.363251,29.5711062 249.766349,29.5173894 250.142013,29.4099558 C250.518119,29.2756637 250.880951,29.1011062 251.230066,28.8862389 L251.230066,32.229823 C250.799977,32.3909735 250.357057,32.5118142 249.90042,32.5923894 C249.443782,32.699823 248.947322,32.7534956 248.410154,32.7534956 C246.691128,32.7534956 245.307942,32.2432743 244.260597,31.2227434 C243.213251,30.175354 242.6898,28.7788496 242.6898,27.0331858 L242.6898,14.9883186 L239.064136,14.9883186 Z" id="Path" fill="currentColor"></path>
+            <path d="M219.448207,32.4312389 L219.448207,11.8864602 L222.711039,11.8864602 L222.711039,14.9077434 L222.872101,14.9077434 C223.409269,13.9140708 224.282278,13.0546903 225.490685,12.3295575 C226.726083,11.604469 228.069004,11.2419027 229.519004,11.2419027 C232.043782,11.2419027 233.937145,11.9804425 235.199092,13.4575221 C236.488473,14.9077434 237.13272,16.8413717 237.13272,19.2584071 L237.13272,32.4312389 L233.708827,32.4312389 L233.708827,19.7820796 C233.708827,17.7947345 233.225198,16.3982301 232.258384,15.5925664 C231.318561,14.7600442 230.096437,14.3437611 228.592455,14.3437611 C227.464579,14.3437611 226.471216,14.6660177 225.611482,15.3105752 C224.75219,15.9282743 224.080951,16.7339381 223.597322,17.7276106 C223.114136,18.7212832 222.872101,19.7686726 222.872101,20.8697788 L222.872101,32.4312389 L219.448207,32.4312389 Z" id="Path" fill="currentColor"></path>
+            <path d="M191.373428,32.4312389 L202.330508,3.5879646 L206.197765,3.5879646 L217.155287,32.4312389 L213.408827,32.4312389 L210.468119,24.4953097 L198.060597,24.4953097 L195.119889,32.4312389 L191.373428,32.4312389 Z M209.299977,21.2726106 L205.472986,10.8793363 L204.344667,7.77747788 L204.183605,7.77747788 L203.055729,10.8793363 L199.228738,21.2726106 L209.299977,21.2726106 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M68.9367028,33.079292 C59.9513046,33.079292 52.402632,25.7580973 52.402632,16.7730531 C52.402632,7.7879646 59.9513046,0.466814159 68.9367028,0.466814159 C73.9061718,0.466814159 77.4398001,2.41530973 80.1021895,4.95933628 L76.962809,8.09884956 C75.053517,6.3079646 72.4703311,4.91557522 68.9367028,4.91557522 C62.3818355,4.91557522 57.2544019,10.205 57.2544019,16.7686726 C57.2544019,23.3323009 62.3818355,28.6173894 68.9367028,28.6173894 C73.1884727,28.6173894 75.6141364,26.9096903 77.1641364,25.3552655 C78.4340479,24.0810619 79.2703311,22.255177 79.5898001,19.7461947 L68.8225435,19.7461947 L68.8225435,15.2930531 L83.9203311,15.2930531 C84.0778532,16.0899558 84.1570568,17.0445133 84.1570568,18.0778761 C84.1570568,21.4188496 83.24157,25.5566814 80.303517,28.4991593 C77.4442249,31.4810619 73.7880302,33.070531 68.9367028,33.070531 L68.9367028,33.079292 Z" id="Path" fill="currentColor"></path>
+            <path d="M106.768561,22.5792035 C106.768561,28.6261504 102.043782,33.079292 96.2508621,33.079292 C90.4579417,33.079292 85.733163,28.6261504 85.733163,22.5792035 C85.733163,16.5322124 90.4579417,12.079115 96.2508621,12.079115 C102.043782,12.079115 106.768561,16.4928319 106.768561,22.5792035 Z M102.161924,22.5792035 C102.161924,18.8003982 99.4212161,16.2169469 96.2464373,16.2169469 C93.072101,16.2169469 90.3309506,18.8003982 90.3309506,22.5792035 C90.3309506,26.3580088 93.072101,28.9414159 96.2464373,28.9414159 C99.4212161,28.9414159 102.161924,26.3185841 102.161924,22.5792035 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M129.664579,22.5792035 C129.664579,28.6261504 124.9398,33.079292 119.14688,33.079292 C113.353959,33.079292 108.629181,28.6261504 108.629181,22.5792035 C108.629181,16.5322124 113.353959,12.079115 119.14688,12.079115 C124.9398,12.079115 129.664579,16.4928319 129.664579,22.5792035 Z M125.057942,22.5792035 C125.057942,18.8003982 122.317234,16.2169469 119.142455,16.2169469 C115.968119,16.2169469 113.226968,18.8003982 113.226968,22.5792035 C113.226968,26.3580088 115.968119,28.9414159 119.142455,28.9414159 C122.317234,28.9414159 125.057942,26.3185841 125.057942,22.5792035 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M151.566791,12.7140265 L151.566791,31.5642478 C151.566791,39.3190265 146.995552,42.5022124 141.592013,42.5022124 C136.503959,42.5022124 133.44334,39.0823009 132.29157,36.2977876 L136.307057,34.6293363 C137.020774,36.3415929 138.772101,38.3685841 141.592013,38.3685841 C145.051305,38.3685841 147.19688,36.2230088 147.19688,32.2035398 L147.19688,30.6929204 L147.039358,30.6929204 C146.005729,31.9670796 144.017676,33.079292 141.513251,33.079292 C136.267676,33.079292 131.459712,28.5079204 131.459712,22.6185841 C131.459712,16.7292478 136.267676,12.079115 141.513251,12.079115 C144.017676,12.079115 146.005729,13.1912832 147.039358,14.4260619 L147.19688,14.4260619 L147.19688,12.7140265 L151.566791,12.7140265 Z M147.511924,22.6185841 C147.511924,18.9186283 145.04688,16.2169469 141.907499,16.2169469 C138.767676,16.2169469 136.066349,18.9230088 136.066349,22.6185841 C136.066349,26.3142035 138.728296,28.9414159 141.907499,28.9414159 C145.08626,28.9414159 147.511924,26.274823 147.511924,22.6185841 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="currentColor" points="159.492013 1.57902655 159.492013 32.44 154.881393 32.44 154.881393 1.57902655"></polygon>
+            <path d="M177.361482,26.0383628 L180.938915,28.4247345 C179.787588,30.1368142 177.002632,33.079292 172.194667,33.079292 C166.235375,33.079292 161.782278,28.4641593 161.782278,22.5792035 C161.782278,16.335177 166.274756,12.079115 171.678296,12.079115 C177.081393,12.079115 179.783163,16.4139823 180.658827,18.7609735 L181.13626,19.9519912 L167.106614,25.7580973 C168.179623,27.8642478 169.847765,28.9414159 172.194667,28.9414159 C174.54157,28.9414159 176.170774,27.789823 177.361482,26.0383628 Z M166.353517,22.2595575 L175.73272,18.3625221 C175.215906,17.0488938 173.665906,16.1337611 171.840243,16.1337611 C169.497322,16.1337611 166.235375,18.2004867 166.357942,22.2595575 L166.353517,22.2595575 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
+
+          </li>
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="232px" height="50px" viewBox="0 0 232 50" version="1.1" class="customer-logo__asset">
+    <title>Claude</title>
+    <g id="logo-claude" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(0, -0.0125)">
+            <path d="M9.77173913,32.85 L19.5686957,27.4 L19.7326087,26.925 L19.5686957,26.6625 L19.0895652,26.6625 L17.4504348,26.5625 L11.8521739,26.4125 L6.99782609,26.2125 L2.29478261,25.9625 L1.10956522,25.7125 L0,24.2625 L0.113478261,23.5375 L1.10956522,22.875 L2.53434783,23 L5.68652174,23.2125 L10.4147826,23.5375 L13.8443478,23.7375 L18.9256522,24.2625 L19.7326087,24.2625 L19.846087,23.9375 L19.5686957,23.7375 L19.3543478,23.5375 L14.4621739,20.25 L9.16652174,16.775 L6.3926087,14.775 L4.89217391,13.7625 L4.13565217,12.8125 L3.80782609,10.7375 L5.16956522,9.25 L6.99782609,9.375 L7.46434783,9.5 L9.31782609,10.9125 L13.2769565,13.95 L18.4465217,17.725 L19.2030435,18.35 L19.5056522,18.1375 L19.5434783,17.9875 L19.2030435,17.425 L16.3913043,12.3875 L13.3904348,7.2625 L12.053913,5.1375 L11.7008696,3.8625 C11.5747826,3.3375 11.4865217,2.9 11.4865217,2.3625 L13.0373913,0.275 L13.8947826,0 L15.9626087,0.275 L16.8326087,1.025 L18.1186957,3.9375 L20.1991304,8.525 L23.4269565,14.7625 L24.3726087,16.6125 L24.8769565,18.325 L25.066087,18.85 L25.393913,18.85 L25.393913,18.55 L25.6586957,15.0375 L26.1504348,10.725 L26.6295652,5.175 L26.7934783,3.6125 L27.5752174,1.7375 L29.126087,0.725 L30.3365217,1.3 L31.3326087,2.7125 L31.193913,3.625 L30.6013043,7.4375 L29.4413043,13.4125 L28.6847826,17.4125 L29.126087,17.4125 L29.6304348,16.9125 L31.6730435,14.225 L35.1026087,9.975 L36.6156522,8.2875 L38.3808696,6.425 L39.5156522,5.5375 L41.6591304,5.5375 L43.2352174,7.8625 L42.5291304,10.2625 L40.3226087,13.0375 L38.4943478,15.3875 L35.8717391,18.8875 L34.2326087,21.6875 L34.383913,21.9125 L34.7747826,21.875 L40.7008696,20.625 L43.9034783,20.05 L47.723913,19.4 L49.4513043,20.2 L49.6404348,21.0125 L48.9595652,22.675 L44.8743478,23.675 L40.0830435,24.625 L32.9465217,26.3 L32.8582609,26.3625 L32.9591304,26.4875 L36.1743478,26.7875 L37.5486957,26.8625 L40.9152174,26.8625 L47.1817391,27.325 L48.8208696,28.4 L49.8043478,29.7125 L49.6404348,30.7125 L47.1186957,31.9875 L43.7143478,31.1875 L35.7708696,29.3125 L33.0473913,28.6375 L32.6691304,28.6375 L32.6691304,28.8625 L34.9386957,31.0625 L39.0995652,34.7875 L44.3069565,39.5875 L44.5717391,40.775 L43.9034783,41.7125 L43.1973913,41.6125 L38.6204348,38.2 L36.8552174,36.6625 L32.8582609,33.325 L32.5934783,33.325 L32.5934783,33.675 L33.513913,35.0125 L38.3808696,42.2625 L38.6330435,44.4875 L38.28,45.2125 L37.0191304,45.65 L35.6321739,45.4 L32.7826087,41.4375 L29.8447826,36.975 L27.4743478,32.975 L27.1843478,33.1375 L25.7847826,48.075 L25.1291304,48.8375 L23.616087,49.4125 L22.3552174,48.4625 L21.6869565,46.925 L22.3552174,43.8875 L23.1621739,39.925 L23.8178261,36.775 L24.4104348,32.8625 L24.7634783,31.5625 L24.7382609,31.475 L24.4482609,31.5125 L21.4726087,35.5625 L16.946087,41.625 L13.3652174,45.425 L12.5078261,45.7625 L11.02,45 L11.1586957,43.6375 L11.9908696,42.425 L16.946087,36.175 L19.9343478,32.3 L21.8634783,30.0625 L21.8508696,29.7375 L21.7373913,29.7375 L8.57391304,38.2125 L6.22869565,38.5125 L5.22,37.575 L5.34608696,36.0375 L5.82521739,35.5375 L9.78434783,32.8375 L9.77173913,32.85 Z" id="Path" fill="currentColor"></path>
+            <path d="M81.3008696,41.9375 C74.9713043,41.9375 70.6465217,38.4375 68.603913,33.05 C67.5372537,30.2427399 67.0112016,27.2620364 67.0530435,24.2625 C67.0530435,15.225 71.1382609,8.95 80.166087,8.95 C86.2308696,8.95 89.9756522,11.575 92.1065217,17.8375 L94.703913,17.8375 L94.3508696,9.2 C90.7195652,6.875 86.1804348,5.7 80.6578261,5.7 C72.8782609,5.7 66.2586957,9.15 62.5769565,15.375 C60.6752832,18.6621014 59.7079391,22.3987648 59.7778261,26.1875 C59.7778261,33.1 63.0686957,39.225 69.2469565,42.625 C72.6283309,44.4162589 76.4219332,45.3037104 80.2543478,45.2 C86.2813043,45.2 91.06,44.0625 95.2965217,42.075 L96.3934783,32.55 L93.7456522,32.55 C92.1569565,36.9 90.2656522,39.5125 87.126087,40.9 C85.5878261,41.5875 83.646087,41.9375 81.3008696,41.9375 L81.3008696,41.9375 Z M108.598696,8.95 L108.85087,4.7 L107.060435,4.7 L99.0917391,7.075 L99.0917391,8.3625 L102.622174,9.9875 L102.622174,39.7125 C102.622174,41.7375 101.575652,42.1875 98.8395652,42.525 L98.8395652,44.7 L112.393913,44.7 L112.393913,42.525 C109.645217,42.1875 108.611304,41.7375 108.611304,39.7125 L108.611304,8.9625 L108.598696,8.95 Z M162.50087,45.2 L163.547391,45.2 L172.713913,43.475 L172.713913,41.25 L171.427826,41.15 C169.284348,40.95 168.729565,40.5125 168.729565,38.775 L168.729565,22.925 L168.981739,17.8375 L167.531739,17.8375 L158.869565,19.075 L158.869565,21.25 L159.714348,21.4 C162.059565,21.7375 162.753043,22.3875 162.753043,24.0125 L162.753043,38.1375 C160.508696,39.8625 158.365217,40.95 155.818261,40.95 C152.993913,40.95 151.241304,39.525 151.241304,36.2 L151.241304,22.9375 L151.493478,17.85 L150.005652,17.85 L141.33087,19.0875 L141.33087,21.2625 L142.226087,21.4125 C144.571304,21.75 145.264783,22.4 145.264783,24.025 L145.264783,37.0625 C145.264783,42.5875 148.416957,45.2125 153.435217,45.2125 C157.268261,45.2125 160.407826,43.1875 162.765652,40.375 L162.513478,45.2125 L162.50087,45.2 Z M137.308696,27.6125 C137.308696,20.55 133.526087,17.8375 126.692174,17.8375 C120.665217,17.8375 116.29,20.3125 116.29,24.4125 C116.29,25.6375 116.731304,26.575 117.626522,27.225 L122.216087,26.625 C122.014348,25.25 121.913478,24.4125 121.913478,24.0625 C121.913478,21.7375 123.161739,20.5625 125.696087,20.5625 C129.44087,20.5625 131.332174,23.175 131.332174,27.375 L131.332174,28.75 L121.875652,31.5625 C118.723478,32.4125 116.933043,33.15 115.735217,34.875 C115.100378,35.9302928 114.793383,37.1476869 114.852609,38.375 C114.852609,42.375 117.626522,45.2 122.367391,45.2 C125.796957,45.2 128.835652,43.6625 131.483478,40.75 C132.42913,43.6625 133.87913,45.2 136.463913,45.2 C138.556957,45.2 140.448261,44.3625 142.137826,42.725 L141.633478,41 C140.902174,41.2 140.196087,41.3 139.452174,41.3 C138.002174,41.3 137.308696,40.1625 137.308696,37.9375 L137.308696,27.6125 L137.308696,27.6125 Z M125.204348,41.2 C122.619565,41.2 121.018261,39.7125 121.018261,37.1 C121.018261,35.325 121.863043,34.2875 123.666087,33.6875 L131.332174,31.275 L131.332174,38.575 C128.886087,40.4125 127.448696,41.2 125.204348,41.2 Z M205.017391,43.475 L205.017391,41.25 L203.718696,41.15 C201.575217,40.95 201.033043,40.5125 201.033043,38.775 L201.033043,8.95 L201.285217,4.7 L199.482174,4.7 L191.513478,7.075 L191.513478,8.3625 L195.043913,9.9875 L195.043913,19.7625 C193.056575,18.4112935 190.680665,17.7358076 188.273043,17.8375 C180.354783,17.8375 174.176522,23.8125 174.176522,32.75 C174.176522,40.1125 178.614783,45.2 185.927826,45.2 C189.710435,45.2 193.001304,43.375 195.043913,40.55 L194.791739,45.2 L195.85087,45.2 L205.017391,43.475 L205.017391,43.475 Z M188.424348,20.8 C192.206957,20.8 195.043913,22.975 195.043913,26.975 L195.043913,38.225 C193.303017,39.9456593 190.932675,40.892839 188.474783,40.85 C183.053043,40.85 180.304348,36.6 180.304348,30.925 C180.304348,24.55 183.443913,20.8 188.424348,20.8 L188.424348,20.8 Z M224.396957,26.425 C223.69087,23.125 221.648261,21.25 218.811304,21.25 C214.574783,21.25 211.636957,24.4125 211.636957,28.95 C211.636957,35.6625 215.217826,40.0125 221.005217,40.0125 C224.866149,39.9739049 228.415124,37.9028685 230.323043,34.575 L232.012609,35.025 C231.256087,40.85 225.935217,45.2 219.403913,45.2 C211.737826,45.2 206.454783,39.575 206.454783,31.575 C206.454783,23.5125 212.191739,17.8375 219.857826,17.8375 C225.582174,17.8375 229.616957,21.25 230.915652,27.175 L210.943478,33.25 L210.943478,30.575 L224.396957,26.4375 L224.396957,26.425 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
+
+          </li>
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="50px" viewBox="0 0 200 50" version="1.1" class="customer-logo__asset">
+    <title>Cursor</title>
+    <g id="logo-cursor-ai" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(2.0976, 1.376)" fill="currentColor">
+            <path d="M40.4362061,11.1995344 L21.6063839,0.263442661 C21.0017328,-0.0878142202 20.2556316,-0.0878142202 19.6509804,0.263442661 L0.822106703,11.1995344 C0.313816689,11.4947638 0,12.0407271 0,12.6321032 L0,34.6848555 C0,35.2753142 0.313816689,35.822195 0.822106703,36.1174243 L19.6518924,47.0534794 C20.2565435,47.4047638 21.0026448,47.4047638 21.6072959,47.0534794 L40.4370269,36.1174243 C40.9453716,35.822195 41.2591883,35.2761399 41.2591883,34.6848555 L41.2591883,12.6321032 C41.2591883,12.0416445 40.9453716,11.4947638 40.4370269,11.1995344 L40.4362061,11.1995344 Z M39.2534428,13.5160482 L21.075969,45.187883 C20.9531236,45.4012775 20.6287278,45.3141216 20.6287278,45.0668739 L20.6287278,24.3285252 C20.6287278,23.9141216 20.4085727,23.5308188 20.0514364,23.3227454 L2.19847697,12.9540298 C1.98632011,12.8304518 2.0729503,12.5040298 2.31869585,12.5040298 L38.6735066,12.5040298 C39.1897857,12.5040298 39.5124487,13.0669656 39.2542636,13.5169656 L39.2534428,13.5169656 L39.2534428,13.5160482 Z" id="Shape" fill-rule="nonzero"></path>
+            <path d="M63.8625627,12.2790757 L71.8749658,12.2790757 L71.8749658,16.7191674 L64.1338805,16.7191674 C59.9579571,16.7191674 56.6986776,19.1441216 56.6986776,24.2671491 C56.6986776,29.3901766 59.9579571,31.8151307 64.1338805,31.8151307 L71.8749658,31.8151307 L71.8749658,36.2552225 L63.523119,36.2552225 C56.5289558,36.2552225 51.5724578,32.1228372 51.5724578,24.2680665 C51.5724578,16.4132041 56.8683995,12.2808188 63.8625627,12.2808188 L63.8625627,12.2790757 Z" id="Path"></path>
+            <path d="M75.9490196,12.2790757 L80.9055176,12.2790757 L80.9055176,26.9304518 C80.9055176,30.5843968 82.5691746,32.2926537 86.4737802,32.2926537 C90.378477,32.2926537 92.0419517,30.5853142 92.0419517,26.9304518 L92.0419517,12.2790757 L96.998632,12.2790757 L96.998632,27.9548555 C96.998632,33.2824702 93.6379389,36.664305 86.4737802,36.664305 C79.3099863,36.664305 75.9490196,33.248617 75.9490196,27.921094 L75.9490196,12.2790757 Z" id="Path"></path>
+            <path d="M122.901961,19.0747638 C122.901961,21.7389839 121.374373,23.7877913 119.336981,24.6762317 L119.336981,24.744672 C121.475604,25.0523784 122.562699,26.5889839 122.595531,28.6725619 L122.697674,36.254305 L117.740994,36.254305 L117.639763,29.4923784 C117.606019,27.9895344 116.722298,27.0674243 114.957592,27.0674243 L106.706794,27.0674243 L106.706794,36.254305 L101.751026,36.254305 L101.751026,12.2790757 L115.432741,12.2790757 C119.915185,12.2790757 122.901961,14.5671491 122.901961,19.0756812 L122.901961,19.0747638 Z M117.910625,19.758617 C117.910625,17.7097179 116.824441,16.582195 114.787962,16.582195 L106.706794,16.582195 L106.706794,22.9341216 L114.854537,22.9341216 C116.721386,22.9341216 117.910625,21.8074243 117.910625,19.7576995 L117.910625,19.758617 Z" id="Shape" fill-rule="nonzero"></path>
+            <path d="M141.640675,29.2524702 C141.640675,27.5451307 140.554492,26.8275161 138.925673,26.691461 L133.425445,26.1792592 C128.672139,25.7354977 126.193342,23.8565069 126.193342,19.3141216 C126.193342,14.771828 129.24943,12.2783417 133.628819,12.2783417 L145.782946,12.2783417 L145.782946,16.581461 L133.96808,16.581461 C132.270862,16.581461 131.184679,17.4698096 131.184679,19.1772408 C131.184679,20.8845803 132.304606,21.7044885 134.002736,21.841461 L139.604195,22.3198096 C143.848609,22.6951307 146.632011,24.6425619 146.632011,29.2187087 C146.632011,33.7948555 143.678979,36.2544885 139.502964,36.2544885 L126.80529,36.2544885 L126.80529,31.9513693 L139.026904,31.9513693 C140.622891,31.9513693 141.640675,30.8585252 141.640675,29.2533876 L141.640675,29.2524702 Z" id="Path"></path>
+            <path d="M161.129959,11.8692592 C168.598267,11.8692592 173.318741,16.6845803 173.318741,24.2326537 C173.318741,31.7806353 168.395805,36.6643968 160.926585,36.6643968 C153.457364,36.6643968 148.737802,31.7806353 148.737802,24.2326537 C148.737802,16.6845803 153.660739,11.8692592 161.129959,11.8692592 L161.129959,11.8692592 Z M168.191518,24.2664151 C168.191518,19.211828 165.271318,16.2408188 161.026904,16.2408188 C156.783402,16.2408188 153.863201,19.211828 153.863201,24.2664151 C153.863201,29.3209106 156.783402,32.2919197 161.026904,32.2919197 C165.271318,32.2919197 168.191518,29.3209106 168.191518,24.2664151 Z" id="Shape" fill-rule="nonzero"></path>
+            <path d="M197.897857,19.0747638 C197.897857,21.7389839 196.370269,23.7877913 194.331965,24.6762317 L194.331965,24.744672 C196.4715,25.0523784 197.557684,26.5889839 197.591427,28.6725619 L197.69357,36.254305 L192.73689,36.254305 L192.634747,29.4923784 C192.601915,27.9895344 191.718194,27.0674243 189.953488,27.0674243 L181.70269,27.0674243 L181.70269,36.254305 L176.74601,36.254305 L176.74601,12.2790757 L190.428637,12.2790757 C194.910169,12.2790757 197.897857,14.5671491 197.897857,19.0756812 L197.897857,19.0747638 Z M192.906521,19.758617 C192.906521,17.7097179 191.820337,16.582195 189.782946,16.582195 L181.70269,16.582195 L181.70269,22.9341216 L189.850433,22.9341216 C191.717282,22.9341216 192.906521,21.8074243 192.906521,19.7576995 L192.906521,19.758617 Z" id="Shape" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
+
+          </li>
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" class="customer-logo__asset">
+    <title>VS Code</title>
+    <g id="logo-vscode" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(-0, 0)" fill="currentColor">
+            <path d="M0.475710754,17.435729 C0.475710754,17.435729 -0.742107996,16.5484165 0.719273254,15.363604 L4.12408367,12.2861665 C4.12408367,12.2861665 5.0983545,11.2500832 6.128417,12.1527915 L37.5481253,36.1979165 L37.5481253,47.7279165 C37.5481253,47.7279165 37.532917,49.5385415 35.234167,49.3385415 L0.475710754,17.435729 Z" id="Path"></path>
+            <path d="M8.57406284,24.8681248 L0.475569088,32.3102082 C0.475569088,32.3102082 -0.356607996,32.9360415 0.475569088,34.0541665 L4.23558367,37.5110415 C4.23558367,37.5110415 5.12864617,38.4804165 6.44795867,37.3777082 L15.0335628,30.7972915 L8.57406284,24.8681248 Z" id="Path"></path>
+            <path d="M22.791667,24.9293748 L37.6439587,13.4658748 L37.5475003,1.99718734 C37.5475003,1.99718734 36.9131253,-0.505818912 34.797292,0.796974838 L15.0331045,18.9796873 L22.791667,24.9293748 Z" id="Path"></path>
+            <path d="M35.233542,49.3541665 C36.096042,50.2464582 37.1414587,49.9541665 37.1414587,49.9541665 L48.7162503,44.1891665 C50.1981253,43.1683332 49.9900003,41.9014582 49.9900003,41.9014582 L49.9900003,7.47506234 C49.9900003,5.961979 48.4575003,5.43881234 48.4575003,5.43881234 L38.4252087,0.550785255 C36.2331253,-0.818683495 34.797292,0.796974838 34.797292,0.796974838 C34.797292,0.796974838 36.644167,-0.546841828 37.5475003,1.99718734 L37.5475003,47.5179165 C37.5475003,47.8308332 37.4814587,48.1385415 37.3495837,48.4154165 C37.0856253,48.9539582 36.512292,49.4566665 35.1370837,49.2464582 L35.233542,49.3541665 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>
+
+          </li>
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" class="customer-logo__asset">
+    <title>Codex</title>
+    <g id="logo-codex" stroke="none" fill="none" fill-rule="nonzero">
+        <path d="M19.1772404,18.1999216 L19.1772404,13.4498914 C19.1772404,13.0498439 19.3260613,12.7497301 19.6727593,12.5499669 L29.1378096,7.04996478 C30.4261793,6.29999291 31.9624116,5.95017277 33.5479067,5.95017277 C39.4942362,5.95017277 43.2606132,10.6002693 43.2606132,15.5500627 C43.2606132,15.8999871 43.2606132,16.3000346 43.2109374,16.7000821 L33.3991891,10.8999662 C32.8046284,10.5501461 32.2097579,10.5501461 31.6151973,10.8999662 L19.1772404,18.1999216 Z M41.2782279,36.7000613 L41.2782279,25.3498201 C41.2782279,24.6496588 40.9806894,24.1496776 40.3862321,23.7997532 L27.9482752,16.4997978 L32.0116743,14.1496359 C32.3584756,13.9498727 32.6559108,13.9498727 33.002712,14.1496359 L42.4676591,19.649638 C45.1933226,21.2498281 47.0265771,24.6496588 47.0265771,27.9494517 C47.0265771,31.74933 44.7968455,35.2495113 41.2782279,36.6996444 L41.2782279,36.7000613 Z M16.2535966,26.7001238 L12.1901974,24.3002555 C11.8434995,24.1004923 11.6946786,23.8002743 11.6946786,23.4002268 L11.6946786,12.4003268 C11.6946786,7.05048581 15.7580777,3.00020008 21.2586674,3.00020008 C23.3401978,3.00020008 25.2723908,3.70036139 26.9080781,4.95031449 L17.1460056,10.6504966 C16.5515482,11.0003168 16.254113,11.500298 16.254113,12.2005635 L16.254113,26.7005406 L16.2535966,26.7001238 Z M24.9999484,31.7999742 L19.1772404,28.5000771 L19.1772404,21.5003397 L24.9999484,18.2004427 L30.8222432,21.5003397 L30.8222432,28.5000771 L24.9999484,31.7999742 Z M28.7412293,47.0002167 C26.6598022,47.0002167 24.7276092,46.3000554 23.0919219,45.0502065 L32.8538911,39.3499202 C33.4484518,39.0001 33.745887,38.5001188 33.745887,37.7998533 L33.745887,23.2998762 L37.8590653,25.6997445 C38.2057632,25.8995077 38.3545841,26.1996215 38.3545841,26.5997732 L38.3545841,37.5996732 C38.3545841,42.9495142 34.2414059,46.9997999 28.7412293,46.9997999 L28.7412293,47.0002167 Z M16.9968749,35.8502599 L7.53182454,30.350362 C4.80616104,28.7500677 2.97290654,25.3503412 2.97290654,22.0504441 C2.97290654,18.2004427 5.25241718,14.7504887 8.77051838,13.3003556 L8.77051838,24.700303 C8.77051838,25.4004643 9.0680569,25.9004456 9.66251428,26.2503699 L22.0512084,33.500098 L17.9878093,35.8502599 C17.6411113,36.0500231 17.3435728,36.0500231 16.9968749,35.8502599 Z M16.4520933,44.0502441 C10.8524618,44.0502441 6.73938683,39.8001951 6.73938683,34.5501836 C6.73938683,34.1501361 6.78906265,33.7500886 6.83832536,33.3500411 L16.6003978,39.0502232 C17.1948552,39.4001476 17.789829,39.4001476 18.3842863,39.0502232 L30.8222432,31.8004952 L30.8222432,36.5505254 C30.8222432,36.9505729 30.6735256,37.2506867 30.3267243,37.45045 L20.8617773,42.950452 C19.5733044,43.7004239 18.037072,44.0502441 16.4515769,44.0502441 L16.4520933,44.0502441 Z M28.7412293,50 C34.7373378,50 39.7419956,45.7001405 40.882164,39.9999583 C46.4321197,38.5498251 50,33.2998137 50,27.9499727 C50,24.4497914 48.5135467,21.0500648 45.837559,18.5999692 C46.0853185,17.5498835 46.2340361,16.4997978 46.2340361,15.4502332 C46.2340361,8.30033471 40.485687,2.9499727 33.8453419,2.9499727 C32.5077096,2.9499727 31.2192366,3.14973594 29.9307637,3.60001084 C27.7005158,1.3999058 24.6281543,0 21.2586674,0 C15.2626622,0 10.2580044,4.29975532 9.11783599,9.99993748 C3.5678803,11.4500707 0,16.7000821 0,22.0499231 C0,25.5501044 1.48645327,28.949831 4.16244095,31.3999266 C3.91468153,32.4500123 3.76596391,33.500098 3.76596391,34.5497668 C3.76596391,41.6996653 9.51431304,47.0499231 16.1545548,47.0499231 C17.4922904,47.0499231 18.7807634,46.8501599 20.0692363,46.399885 C22.2989679,48.59999 25.3713293,50 28.7412293,50 Z" id="Shape" fill="currentColor"></path>
+    </g>
+</svg>
+
+          </li>
+        
+      </ul>
+      <ul class="customer-logos__marquee" aria-hidden="true">
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="333px" height="50px" viewBox="52 0 333 50" version="1.1" class="customer-logo__asset">
+    <title>Antigravity</title>
+    <g id="logo-antigravity" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(6.1704, 8.1615)">
+            <path d="M365.438473,40.0849558 C365.357942,40.2730088 365.264136,40.4747788 365.156614,40.6893805 C365.049092,40.9309735 364.982278,41.0787611 364.955287,41.1327434 L361.410154,41.1327434 C361.571216,40.7836283 361.745995,40.3938053 361.934048,39.9641593 C362.122101,39.5615044 362.349977,39.0646018 362.618561,38.4738938 C362.780066,38.1247788 362.927411,37.8022124 363.061924,37.5070796 C363.195995,37.2115044 363.343782,36.8756637 363.504844,36.5 C363.692897,36.150885 363.907942,35.7076549 364.149535,35.170531 L366.002632,31.1421239 L357.502632,11.8864159 L361.208827,11.8864159 L367.654402,27.1540265 L367.734933,27.1540265 L373.938473,11.8864159 L377.644667,11.8864159 L367.009712,36.419469 C366.90219,36.6610619 366.727853,37.0371681 366.485818,37.5473451 C366.271216,38.0845133 366.056172,38.5946903 365.84157,39.0778761 C365.653517,39.5884956 365.519004,39.9238938 365.438473,40.0849558 Z" id="Path" fill="currentColor"></path>
+            <path d="M344.480508,14.9883186 L344.480508,11.8864602 L348.106172,11.8864602 L348.106172,6.08557522 L351.530066,6.08557522 L351.530066,11.8864602 L356.565906,11.8864602 L356.565906,14.9883186 L351.530066,14.9883186 L351.530066,26.1872566 C351.530066,27.3420354 351.758384,28.2014159 352.215021,28.7653982 C352.69865,29.3025221 353.410154,29.5711062 354.349977,29.5711062 C354.780066,29.5711062 355.18272,29.5173894 355.558827,29.4099558 C355.93449,29.2756637 356.297322,29.1011062 356.646437,28.8862389 L356.646437,32.229823 C356.216791,32.3909735 355.773428,32.5118142 355.316791,32.5923894 C354.860597,32.699823 354.363694,32.7534956 353.826526,32.7534956 C352.107499,32.7534956 350.724756,32.2432743 349.677411,31.2227434 C348.629623,30.175354 348.106172,28.7788496 348.106172,27.0331858 L348.106172,14.9883186 L344.480508,14.9883186 Z" id="Path" fill="currentColor"></path>
+            <path d="M338.357942,32.4312389 L338.357942,11.8864159 L341.782278,11.8864159 L341.782278,32.4312389 L338.357942,32.4312389 Z M340.049977,8.09973451 C339.378738,8.09973451 338.801305,7.8580531 338.317676,7.37464602 C337.83449,6.89123894 337.592897,6.31380531 337.592897,5.64243363 C337.592897,4.94415929 337.83449,4.36676991 338.317676,3.91022124 C338.801305,3.42681416 339.378738,3.1850885 340.049977,3.1850885 C340.748207,3.1850885 341.325641,3.42681416 341.782278,3.91022124 C342.265464,4.36676991 342.507499,4.94415929 342.507499,5.64243363 C342.507499,6.31380531 342.265464,6.89123894 341.782278,7.37464602 C341.325641,7.8580531 340.748207,8.09973451 340.049977,8.09973451 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="currentColor" points="324.669004 32.4311947 316.370774 11.8864159 320.03626 11.8864159 326.401305 28.4028319 326.481836 28.4028319 332.927411 11.8864159 336.512367 11.8864159 328.133605 32.4311947"></polygon>
+            <path d="M305.34865,33.0757965 C303.818119,33.0757965 302.475198,32.780354 301.320331,32.1895575 C300.165464,31.5987168 299.252632,30.7930531 298.580951,29.7725221 C297.936703,28.7251327 297.614136,27.5434513 297.614136,26.2275221 C297.614136,24.7235841 298.003959,23.4613717 298.78272,22.4408407 C299.561482,21.3934513 300.608827,20.614646 301.924756,20.1043805 C303.240685,19.5672566 304.690685,19.2986726 306.275198,19.2986726 C307.188473,19.2986726 308.03449,19.3792478 308.813251,19.5403982 C309.592013,19.6746903 310.263694,19.8492478 310.827411,20.0640708 C311.418119,20.2520796 311.861482,20.4400442 312.156614,20.6280531 L312.156614,19.3792478 C312.156614,17.8215929 311.606172,16.5862389 310.505287,15.6731416 C309.403959,14.7600442 308.061482,14.3034956 306.476968,14.3034956 C305.34865,14.3034956 304.28803,14.5586283 303.294225,15.0688938 C302.327411,15.5523009 301.562367,16.2371239 300.998207,17.1233628 L298.419889,15.1897345 C298.957057,14.3840265 299.628738,13.6857965 300.434048,13.0949558 C301.2398,12.504115 302.153074,12.0475664 303.173428,11.7253097 C304.220774,11.4030531 305.322101,11.2419027 306.476968,11.2419027 C309.269889,11.2419027 311.458384,11.9804425 313.042897,13.4575221 C314.627411,14.9346018 315.419889,16.9219469 315.419889,19.4195575 L315.419889,32.4312389 L312.156614,32.4312389 L312.156614,29.490531 L311.995552,29.490531 C311.646437,30.0813717 311.149535,30.6587611 310.505287,31.2227434 C309.860597,31.7598673 309.09511,32.2029646 308.208827,32.5520796 C307.349535,32.9012389 306.396437,33.0757965 305.34865,33.0757965 Z M305.671216,30.0545133 C306.852632,30.0545133 307.926968,29.7590708 308.893782,29.1682301 C309.887588,28.5774336 310.679623,27.785177 311.270774,26.7915044 C311.861482,25.7978319 312.156614,24.710177 312.156614,23.5284956 C311.539358,23.0988053 310.760154,22.7496903 309.820331,22.4811062 C308.907057,22.2125664 307.899977,22.0782743 306.799092,22.0782743 C304.838473,22.0782743 303.401747,22.4811062 302.488915,23.2868142 C301.575641,24.0924779 301.119004,25.0861504 301.119004,26.2677876 C301.119004,27.3957522 301.54865,28.3088496 302.407942,29.0071239 C303.267676,29.705354 304.355287,30.0545133 305.671216,30.0545133 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M285.18803,32.4311947 L285.18803,11.8864159 L288.450862,11.8864159 L288.450862,15.1896903 L288.612367,15.1896903 C288.880508,14.410885 289.323871,13.739469 289.94157,13.1754867 C290.58626,12.584646 291.311039,12.1280973 292.116791,11.8058407 C292.949535,11.4567257 293.768561,11.2821681 294.574313,11.2821681 C295.192013,11.2821681 295.675198,11.3224336 296.024313,11.4030088 C296.373428,11.4567257 296.695995,11.550708 296.991128,11.685 L296.991128,15.3911062 C296.561482,15.1762832 296.09157,15.0151327 295.581393,14.9076991 C295.097765,14.8002655 294.600862,14.7465487 294.090685,14.7465487 C293.09688,14.7465487 292.184048,15.0285398 291.351305,15.5925221 C290.519004,16.1565044 289.847322,16.9084956 289.337145,17.8484513 C288.853959,18.7884071 288.612367,19.8223451 288.612367,20.9503097 L288.612367,32.4311947 L285.18803,32.4311947 Z" id="Path" fill="currentColor"></path>
+            <path d="M271.059269,41.7769912 C269.313694,41.7769912 267.809712,41.4818584 266.547765,40.890708 C265.312367,40.3269912 264.305287,39.6017699 263.526083,38.7154867 C262.774313,37.8292035 262.237145,36.929646 261.915021,36.0165044 L265.057057,34.6871681 C265.486703,35.8150885 266.211924,36.7548673 267.232278,37.5070796 C268.279623,38.2858407 269.555287,38.6752212 271.059269,38.6752212 C273.207942,38.6752212 274.859269,38.0442478 276.014136,36.7818584 C277.169004,35.5465487 277.746437,33.8143363 277.746437,31.5852655 L277.746437,29.289115 L277.585375,29.289115 C276.940685,30.2827876 276.014136,31.1287168 274.805729,31.8269912 C273.597322,32.4984071 272.187145,32.8340708 270.576083,32.8340708 C268.803517,32.8340708 267.178738,32.3775221 265.701747,31.4644248 C264.251305,30.5513274 263.096437,29.289115 262.237145,27.6777434 C261.377853,26.0395133 260.948207,24.1596018 260.948207,22.0380088 C260.948207,19.9163717 261.377853,18.0498673 262.237145,16.4385398 C263.096437,14.8003097 264.251305,13.524646 265.701747,12.6115487 C267.178738,11.6984513 268.803517,11.2419027 270.576083,11.2419027 C272.187145,11.2419027 273.597322,11.5910177 274.805729,12.289292 C276.014136,12.9606637 276.940685,13.8066372 277.585375,14.8271681 L277.746437,14.8271681 L277.746437,11.8864602 L281.009712,11.8864602 L281.009712,31.6255752 C281.009712,33.9083186 280.566349,35.8016814 279.680066,37.3057522 C278.820774,38.8097345 277.638915,39.9238938 276.134933,40.649115 C274.657942,41.4013274 272.966349,41.7769912 271.059269,41.7769912 Z M271.059269,29.7322124 C272.267676,29.7322124 273.382278,29.4368142 274.403074,28.8459735 C275.423428,28.2282743 276.229181,27.3420354 276.819889,26.1872566 C277.437588,25.0324336 277.746437,23.6493363 277.746437,22.0380088 C277.746437,20.3729204 277.437588,18.9764159 276.819889,17.8484513 C276.229181,16.6936726 275.423428,15.8208407 274.403074,15.23 C273.382278,14.6391593 272.267676,14.3437611 271.059269,14.3437611 C269.850862,14.3437611 268.73626,14.6526106 267.715906,15.2703097 C266.69511,15.8611062 265.876083,16.7339381 265.258384,17.8887611 C264.640685,19.0166814 264.331836,20.3997788 264.331836,22.0380088 C264.331836,23.6761947 264.640685,25.0726991 265.258384,26.2275221 C265.876083,27.3554867 266.69511,28.2282743 267.715906,28.8459735 C268.73626,29.4368142 269.850862,29.7322124 271.059269,29.7322124 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M254.422544,32.4312389 L254.422544,11.8864159 L257.84688,11.8864159 L257.84688,32.4312389 L254.422544,32.4312389 Z M256.114579,8.09973451 C255.44334,8.09973451 254.865906,7.8580531 254.382278,7.37464602 C253.899092,6.89123894 253.657499,6.31380531 253.657499,5.64243363 C253.657499,4.94415929 253.899092,4.36676991 254.382278,3.91022124 C254.865906,3.42681416 255.44334,3.1850885 256.114579,3.1850885 C256.812809,3.1850885 257.390243,3.42681416 257.84688,3.91022124 C258.330508,4.36676991 258.572101,4.94415929 258.572101,5.64243363 C258.572101,6.31380531 258.330508,6.89123894 257.84688,7.37464602 C257.390243,7.8580531 256.812809,8.09973451 256.114579,8.09973451 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M239.064136,14.9883186 L239.064136,11.8864602 L242.6898,11.8864602 L242.6898,6.08557522 L246.113694,6.08557522 L246.113694,11.8864602 L251.149092,11.8864602 L251.149092,14.9883186 L246.113694,14.9883186 L246.113694,26.1872566 C246.113694,27.3420354 246.342013,28.2014159 246.79865,28.7653982 C247.281836,29.3025221 247.993782,29.5711062 248.933605,29.5711062 C249.363251,29.5711062 249.766349,29.5173894 250.142013,29.4099558 C250.518119,29.2756637 250.880951,29.1011062 251.230066,28.8862389 L251.230066,32.229823 C250.799977,32.3909735 250.357057,32.5118142 249.90042,32.5923894 C249.443782,32.699823 248.947322,32.7534956 248.410154,32.7534956 C246.691128,32.7534956 245.307942,32.2432743 244.260597,31.2227434 C243.213251,30.175354 242.6898,28.7788496 242.6898,27.0331858 L242.6898,14.9883186 L239.064136,14.9883186 Z" id="Path" fill="currentColor"></path>
+            <path d="M219.448207,32.4312389 L219.448207,11.8864602 L222.711039,11.8864602 L222.711039,14.9077434 L222.872101,14.9077434 C223.409269,13.9140708 224.282278,13.0546903 225.490685,12.3295575 C226.726083,11.604469 228.069004,11.2419027 229.519004,11.2419027 C232.043782,11.2419027 233.937145,11.9804425 235.199092,13.4575221 C236.488473,14.9077434 237.13272,16.8413717 237.13272,19.2584071 L237.13272,32.4312389 L233.708827,32.4312389 L233.708827,19.7820796 C233.708827,17.7947345 233.225198,16.3982301 232.258384,15.5925664 C231.318561,14.7600442 230.096437,14.3437611 228.592455,14.3437611 C227.464579,14.3437611 226.471216,14.6660177 225.611482,15.3105752 C224.75219,15.9282743 224.080951,16.7339381 223.597322,17.7276106 C223.114136,18.7212832 222.872101,19.7686726 222.872101,20.8697788 L222.872101,32.4312389 L219.448207,32.4312389 Z" id="Path" fill="currentColor"></path>
+            <path d="M191.373428,32.4312389 L202.330508,3.5879646 L206.197765,3.5879646 L217.155287,32.4312389 L213.408827,32.4312389 L210.468119,24.4953097 L198.060597,24.4953097 L195.119889,32.4312389 L191.373428,32.4312389 Z M209.299977,21.2726106 L205.472986,10.8793363 L204.344667,7.77747788 L204.183605,7.77747788 L203.055729,10.8793363 L199.228738,21.2726106 L209.299977,21.2726106 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M68.9367028,33.079292 C59.9513046,33.079292 52.402632,25.7580973 52.402632,16.7730531 C52.402632,7.7879646 59.9513046,0.466814159 68.9367028,0.466814159 C73.9061718,0.466814159 77.4398001,2.41530973 80.1021895,4.95933628 L76.962809,8.09884956 C75.053517,6.3079646 72.4703311,4.91557522 68.9367028,4.91557522 C62.3818355,4.91557522 57.2544019,10.205 57.2544019,16.7686726 C57.2544019,23.3323009 62.3818355,28.6173894 68.9367028,28.6173894 C73.1884727,28.6173894 75.6141364,26.9096903 77.1641364,25.3552655 C78.4340479,24.0810619 79.2703311,22.255177 79.5898001,19.7461947 L68.8225435,19.7461947 L68.8225435,15.2930531 L83.9203311,15.2930531 C84.0778532,16.0899558 84.1570568,17.0445133 84.1570568,18.0778761 C84.1570568,21.4188496 83.24157,25.5566814 80.303517,28.4991593 C77.4442249,31.4810619 73.7880302,33.070531 68.9367028,33.070531 L68.9367028,33.079292 Z" id="Path" fill="currentColor"></path>
+            <path d="M106.768561,22.5792035 C106.768561,28.6261504 102.043782,33.079292 96.2508621,33.079292 C90.4579417,33.079292 85.733163,28.6261504 85.733163,22.5792035 C85.733163,16.5322124 90.4579417,12.079115 96.2508621,12.079115 C102.043782,12.079115 106.768561,16.4928319 106.768561,22.5792035 Z M102.161924,22.5792035 C102.161924,18.8003982 99.4212161,16.2169469 96.2464373,16.2169469 C93.072101,16.2169469 90.3309506,18.8003982 90.3309506,22.5792035 C90.3309506,26.3580088 93.072101,28.9414159 96.2464373,28.9414159 C99.4212161,28.9414159 102.161924,26.3185841 102.161924,22.5792035 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M129.664579,22.5792035 C129.664579,28.6261504 124.9398,33.079292 119.14688,33.079292 C113.353959,33.079292 108.629181,28.6261504 108.629181,22.5792035 C108.629181,16.5322124 113.353959,12.079115 119.14688,12.079115 C124.9398,12.079115 129.664579,16.4928319 129.664579,22.5792035 Z M125.057942,22.5792035 C125.057942,18.8003982 122.317234,16.2169469 119.142455,16.2169469 C115.968119,16.2169469 113.226968,18.8003982 113.226968,22.5792035 C113.226968,26.3580088 115.968119,28.9414159 119.142455,28.9414159 C122.317234,28.9414159 125.057942,26.3185841 125.057942,22.5792035 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <path d="M151.566791,12.7140265 L151.566791,31.5642478 C151.566791,39.3190265 146.995552,42.5022124 141.592013,42.5022124 C136.503959,42.5022124 133.44334,39.0823009 132.29157,36.2977876 L136.307057,34.6293363 C137.020774,36.3415929 138.772101,38.3685841 141.592013,38.3685841 C145.051305,38.3685841 147.19688,36.2230088 147.19688,32.2035398 L147.19688,30.6929204 L147.039358,30.6929204 C146.005729,31.9670796 144.017676,33.079292 141.513251,33.079292 C136.267676,33.079292 131.459712,28.5079204 131.459712,22.6185841 C131.459712,16.7292478 136.267676,12.079115 141.513251,12.079115 C144.017676,12.079115 146.005729,13.1912832 147.039358,14.4260619 L147.19688,14.4260619 L147.19688,12.7140265 L151.566791,12.7140265 Z M147.511924,22.6185841 C147.511924,18.9186283 145.04688,16.2169469 141.907499,16.2169469 C138.767676,16.2169469 136.066349,18.9230088 136.066349,22.6185841 C136.066349,26.3142035 138.728296,28.9414159 141.907499,28.9414159 C145.08626,28.9414159 147.511924,26.274823 147.511924,22.6185841 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="currentColor" points="159.492013 1.57902655 159.492013 32.44 154.881393 32.44 154.881393 1.57902655"></polygon>
+            <path d="M177.361482,26.0383628 L180.938915,28.4247345 C179.787588,30.1368142 177.002632,33.079292 172.194667,33.079292 C166.235375,33.079292 161.782278,28.4641593 161.782278,22.5792035 C161.782278,16.335177 166.274756,12.079115 171.678296,12.079115 C177.081393,12.079115 179.783163,16.4139823 180.658827,18.7609735 L181.13626,19.9519912 L167.106614,25.7580973 C168.179623,27.8642478 169.847765,28.9414159 172.194667,28.9414159 C174.54157,28.9414159 176.170774,27.789823 177.361482,26.0383628 Z M166.353517,22.2595575 L175.73272,18.3625221 C175.215906,17.0488938 173.665906,16.1337611 171.840243,16.1337611 C169.497322,16.1337611 166.235375,18.2004867 166.357942,22.2595575 L166.353517,22.2595575 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
+
+          </li>
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="232px" height="50px" viewBox="0 0 232 50" version="1.1" class="customer-logo__asset">
+    <title>Claude</title>
+    <g id="logo-claude" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(0, -0.0125)">
+            <path d="M9.77173913,32.85 L19.5686957,27.4 L19.7326087,26.925 L19.5686957,26.6625 L19.0895652,26.6625 L17.4504348,26.5625 L11.8521739,26.4125 L6.99782609,26.2125 L2.29478261,25.9625 L1.10956522,25.7125 L0,24.2625 L0.113478261,23.5375 L1.10956522,22.875 L2.53434783,23 L5.68652174,23.2125 L10.4147826,23.5375 L13.8443478,23.7375 L18.9256522,24.2625 L19.7326087,24.2625 L19.846087,23.9375 L19.5686957,23.7375 L19.3543478,23.5375 L14.4621739,20.25 L9.16652174,16.775 L6.3926087,14.775 L4.89217391,13.7625 L4.13565217,12.8125 L3.80782609,10.7375 L5.16956522,9.25 L6.99782609,9.375 L7.46434783,9.5 L9.31782609,10.9125 L13.2769565,13.95 L18.4465217,17.725 L19.2030435,18.35 L19.5056522,18.1375 L19.5434783,17.9875 L19.2030435,17.425 L16.3913043,12.3875 L13.3904348,7.2625 L12.053913,5.1375 L11.7008696,3.8625 C11.5747826,3.3375 11.4865217,2.9 11.4865217,2.3625 L13.0373913,0.275 L13.8947826,0 L15.9626087,0.275 L16.8326087,1.025 L18.1186957,3.9375 L20.1991304,8.525 L23.4269565,14.7625 L24.3726087,16.6125 L24.8769565,18.325 L25.066087,18.85 L25.393913,18.85 L25.393913,18.55 L25.6586957,15.0375 L26.1504348,10.725 L26.6295652,5.175 L26.7934783,3.6125 L27.5752174,1.7375 L29.126087,0.725 L30.3365217,1.3 L31.3326087,2.7125 L31.193913,3.625 L30.6013043,7.4375 L29.4413043,13.4125 L28.6847826,17.4125 L29.126087,17.4125 L29.6304348,16.9125 L31.6730435,14.225 L35.1026087,9.975 L36.6156522,8.2875 L38.3808696,6.425 L39.5156522,5.5375 L41.6591304,5.5375 L43.2352174,7.8625 L42.5291304,10.2625 L40.3226087,13.0375 L38.4943478,15.3875 L35.8717391,18.8875 L34.2326087,21.6875 L34.383913,21.9125 L34.7747826,21.875 L40.7008696,20.625 L43.9034783,20.05 L47.723913,19.4 L49.4513043,20.2 L49.6404348,21.0125 L48.9595652,22.675 L44.8743478,23.675 L40.0830435,24.625 L32.9465217,26.3 L32.8582609,26.3625 L32.9591304,26.4875 L36.1743478,26.7875 L37.5486957,26.8625 L40.9152174,26.8625 L47.1817391,27.325 L48.8208696,28.4 L49.8043478,29.7125 L49.6404348,30.7125 L47.1186957,31.9875 L43.7143478,31.1875 L35.7708696,29.3125 L33.0473913,28.6375 L32.6691304,28.6375 L32.6691304,28.8625 L34.9386957,31.0625 L39.0995652,34.7875 L44.3069565,39.5875 L44.5717391,40.775 L43.9034783,41.7125 L43.1973913,41.6125 L38.6204348,38.2 L36.8552174,36.6625 L32.8582609,33.325 L32.5934783,33.325 L32.5934783,33.675 L33.513913,35.0125 L38.3808696,42.2625 L38.6330435,44.4875 L38.28,45.2125 L37.0191304,45.65 L35.6321739,45.4 L32.7826087,41.4375 L29.8447826,36.975 L27.4743478,32.975 L27.1843478,33.1375 L25.7847826,48.075 L25.1291304,48.8375 L23.616087,49.4125 L22.3552174,48.4625 L21.6869565,46.925 L22.3552174,43.8875 L23.1621739,39.925 L23.8178261,36.775 L24.4104348,32.8625 L24.7634783,31.5625 L24.7382609,31.475 L24.4482609,31.5125 L21.4726087,35.5625 L16.946087,41.625 L13.3652174,45.425 L12.5078261,45.7625 L11.02,45 L11.1586957,43.6375 L11.9908696,42.425 L16.946087,36.175 L19.9343478,32.3 L21.8634783,30.0625 L21.8508696,29.7375 L21.7373913,29.7375 L8.57391304,38.2125 L6.22869565,38.5125 L5.22,37.575 L5.34608696,36.0375 L5.82521739,35.5375 L9.78434783,32.8375 L9.77173913,32.85 Z" id="Path" fill="currentColor"></path>
+            <path d="M81.3008696,41.9375 C74.9713043,41.9375 70.6465217,38.4375 68.603913,33.05 C67.5372537,30.2427399 67.0112016,27.2620364 67.0530435,24.2625 C67.0530435,15.225 71.1382609,8.95 80.166087,8.95 C86.2308696,8.95 89.9756522,11.575 92.1065217,17.8375 L94.703913,17.8375 L94.3508696,9.2 C90.7195652,6.875 86.1804348,5.7 80.6578261,5.7 C72.8782609,5.7 66.2586957,9.15 62.5769565,15.375 C60.6752832,18.6621014 59.7079391,22.3987648 59.7778261,26.1875 C59.7778261,33.1 63.0686957,39.225 69.2469565,42.625 C72.6283309,44.4162589 76.4219332,45.3037104 80.2543478,45.2 C86.2813043,45.2 91.06,44.0625 95.2965217,42.075 L96.3934783,32.55 L93.7456522,32.55 C92.1569565,36.9 90.2656522,39.5125 87.126087,40.9 C85.5878261,41.5875 83.646087,41.9375 81.3008696,41.9375 L81.3008696,41.9375 Z M108.598696,8.95 L108.85087,4.7 L107.060435,4.7 L99.0917391,7.075 L99.0917391,8.3625 L102.622174,9.9875 L102.622174,39.7125 C102.622174,41.7375 101.575652,42.1875 98.8395652,42.525 L98.8395652,44.7 L112.393913,44.7 L112.393913,42.525 C109.645217,42.1875 108.611304,41.7375 108.611304,39.7125 L108.611304,8.9625 L108.598696,8.95 Z M162.50087,45.2 L163.547391,45.2 L172.713913,43.475 L172.713913,41.25 L171.427826,41.15 C169.284348,40.95 168.729565,40.5125 168.729565,38.775 L168.729565,22.925 L168.981739,17.8375 L167.531739,17.8375 L158.869565,19.075 L158.869565,21.25 L159.714348,21.4 C162.059565,21.7375 162.753043,22.3875 162.753043,24.0125 L162.753043,38.1375 C160.508696,39.8625 158.365217,40.95 155.818261,40.95 C152.993913,40.95 151.241304,39.525 151.241304,36.2 L151.241304,22.9375 L151.493478,17.85 L150.005652,17.85 L141.33087,19.0875 L141.33087,21.2625 L142.226087,21.4125 C144.571304,21.75 145.264783,22.4 145.264783,24.025 L145.264783,37.0625 C145.264783,42.5875 148.416957,45.2125 153.435217,45.2125 C157.268261,45.2125 160.407826,43.1875 162.765652,40.375 L162.513478,45.2125 L162.50087,45.2 Z M137.308696,27.6125 C137.308696,20.55 133.526087,17.8375 126.692174,17.8375 C120.665217,17.8375 116.29,20.3125 116.29,24.4125 C116.29,25.6375 116.731304,26.575 117.626522,27.225 L122.216087,26.625 C122.014348,25.25 121.913478,24.4125 121.913478,24.0625 C121.913478,21.7375 123.161739,20.5625 125.696087,20.5625 C129.44087,20.5625 131.332174,23.175 131.332174,27.375 L131.332174,28.75 L121.875652,31.5625 C118.723478,32.4125 116.933043,33.15 115.735217,34.875 C115.100378,35.9302928 114.793383,37.1476869 114.852609,38.375 C114.852609,42.375 117.626522,45.2 122.367391,45.2 C125.796957,45.2 128.835652,43.6625 131.483478,40.75 C132.42913,43.6625 133.87913,45.2 136.463913,45.2 C138.556957,45.2 140.448261,44.3625 142.137826,42.725 L141.633478,41 C140.902174,41.2 140.196087,41.3 139.452174,41.3 C138.002174,41.3 137.308696,40.1625 137.308696,37.9375 L137.308696,27.6125 L137.308696,27.6125 Z M125.204348,41.2 C122.619565,41.2 121.018261,39.7125 121.018261,37.1 C121.018261,35.325 121.863043,34.2875 123.666087,33.6875 L131.332174,31.275 L131.332174,38.575 C128.886087,40.4125 127.448696,41.2 125.204348,41.2 Z M205.017391,43.475 L205.017391,41.25 L203.718696,41.15 C201.575217,40.95 201.033043,40.5125 201.033043,38.775 L201.033043,8.95 L201.285217,4.7 L199.482174,4.7 L191.513478,7.075 L191.513478,8.3625 L195.043913,9.9875 L195.043913,19.7625 C193.056575,18.4112935 190.680665,17.7358076 188.273043,17.8375 C180.354783,17.8375 174.176522,23.8125 174.176522,32.75 C174.176522,40.1125 178.614783,45.2 185.927826,45.2 C189.710435,45.2 193.001304,43.375 195.043913,40.55 L194.791739,45.2 L195.85087,45.2 L205.017391,43.475 L205.017391,43.475 Z M188.424348,20.8 C192.206957,20.8 195.043913,22.975 195.043913,26.975 L195.043913,38.225 C193.303017,39.9456593 190.932675,40.892839 188.474783,40.85 C183.053043,40.85 180.304348,36.6 180.304348,30.925 C180.304348,24.55 183.443913,20.8 188.424348,20.8 L188.424348,20.8 Z M224.396957,26.425 C223.69087,23.125 221.648261,21.25 218.811304,21.25 C214.574783,21.25 211.636957,24.4125 211.636957,28.95 C211.636957,35.6625 215.217826,40.0125 221.005217,40.0125 C224.866149,39.9739049 228.415124,37.9028685 230.323043,34.575 L232.012609,35.025 C231.256087,40.85 225.935217,45.2 219.403913,45.2 C211.737826,45.2 206.454783,39.575 206.454783,31.575 C206.454783,23.5125 212.191739,17.8375 219.857826,17.8375 C225.582174,17.8375 229.616957,21.25 230.915652,27.175 L210.943478,33.25 L210.943478,30.575 L224.396957,26.4375 L224.396957,26.425 Z" id="Shape" fill="currentColor" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
+
+          </li>
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="50px" viewBox="0 0 200 50" version="1.1" class="customer-logo__asset">
+    <title>Cursor</title>
+    <g id="logo-cursor-ai" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(2.0976, 1.376)" fill="currentColor">
+            <path d="M40.4362061,11.1995344 L21.6063839,0.263442661 C21.0017328,-0.0878142202 20.2556316,-0.0878142202 19.6509804,0.263442661 L0.822106703,11.1995344 C0.313816689,11.4947638 0,12.0407271 0,12.6321032 L0,34.6848555 C0,35.2753142 0.313816689,35.822195 0.822106703,36.1174243 L19.6518924,47.0534794 C20.2565435,47.4047638 21.0026448,47.4047638 21.6072959,47.0534794 L40.4370269,36.1174243 C40.9453716,35.822195 41.2591883,35.2761399 41.2591883,34.6848555 L41.2591883,12.6321032 C41.2591883,12.0416445 40.9453716,11.4947638 40.4370269,11.1995344 L40.4362061,11.1995344 Z M39.2534428,13.5160482 L21.075969,45.187883 C20.9531236,45.4012775 20.6287278,45.3141216 20.6287278,45.0668739 L20.6287278,24.3285252 C20.6287278,23.9141216 20.4085727,23.5308188 20.0514364,23.3227454 L2.19847697,12.9540298 C1.98632011,12.8304518 2.0729503,12.5040298 2.31869585,12.5040298 L38.6735066,12.5040298 C39.1897857,12.5040298 39.5124487,13.0669656 39.2542636,13.5169656 L39.2534428,13.5169656 L39.2534428,13.5160482 Z" id="Shape" fill-rule="nonzero"></path>
+            <path d="M63.8625627,12.2790757 L71.8749658,12.2790757 L71.8749658,16.7191674 L64.1338805,16.7191674 C59.9579571,16.7191674 56.6986776,19.1441216 56.6986776,24.2671491 C56.6986776,29.3901766 59.9579571,31.8151307 64.1338805,31.8151307 L71.8749658,31.8151307 L71.8749658,36.2552225 L63.523119,36.2552225 C56.5289558,36.2552225 51.5724578,32.1228372 51.5724578,24.2680665 C51.5724578,16.4132041 56.8683995,12.2808188 63.8625627,12.2808188 L63.8625627,12.2790757 Z" id="Path"></path>
+            <path d="M75.9490196,12.2790757 L80.9055176,12.2790757 L80.9055176,26.9304518 C80.9055176,30.5843968 82.5691746,32.2926537 86.4737802,32.2926537 C90.378477,32.2926537 92.0419517,30.5853142 92.0419517,26.9304518 L92.0419517,12.2790757 L96.998632,12.2790757 L96.998632,27.9548555 C96.998632,33.2824702 93.6379389,36.664305 86.4737802,36.664305 C79.3099863,36.664305 75.9490196,33.248617 75.9490196,27.921094 L75.9490196,12.2790757 Z" id="Path"></path>
+            <path d="M122.901961,19.0747638 C122.901961,21.7389839 121.374373,23.7877913 119.336981,24.6762317 L119.336981,24.744672 C121.475604,25.0523784 122.562699,26.5889839 122.595531,28.6725619 L122.697674,36.254305 L117.740994,36.254305 L117.639763,29.4923784 C117.606019,27.9895344 116.722298,27.0674243 114.957592,27.0674243 L106.706794,27.0674243 L106.706794,36.254305 L101.751026,36.254305 L101.751026,12.2790757 L115.432741,12.2790757 C119.915185,12.2790757 122.901961,14.5671491 122.901961,19.0756812 L122.901961,19.0747638 Z M117.910625,19.758617 C117.910625,17.7097179 116.824441,16.582195 114.787962,16.582195 L106.706794,16.582195 L106.706794,22.9341216 L114.854537,22.9341216 C116.721386,22.9341216 117.910625,21.8074243 117.910625,19.7576995 L117.910625,19.758617 Z" id="Shape" fill-rule="nonzero"></path>
+            <path d="M141.640675,29.2524702 C141.640675,27.5451307 140.554492,26.8275161 138.925673,26.691461 L133.425445,26.1792592 C128.672139,25.7354977 126.193342,23.8565069 126.193342,19.3141216 C126.193342,14.771828 129.24943,12.2783417 133.628819,12.2783417 L145.782946,12.2783417 L145.782946,16.581461 L133.96808,16.581461 C132.270862,16.581461 131.184679,17.4698096 131.184679,19.1772408 C131.184679,20.8845803 132.304606,21.7044885 134.002736,21.841461 L139.604195,22.3198096 C143.848609,22.6951307 146.632011,24.6425619 146.632011,29.2187087 C146.632011,33.7948555 143.678979,36.2544885 139.502964,36.2544885 L126.80529,36.2544885 L126.80529,31.9513693 L139.026904,31.9513693 C140.622891,31.9513693 141.640675,30.8585252 141.640675,29.2533876 L141.640675,29.2524702 Z" id="Path"></path>
+            <path d="M161.129959,11.8692592 C168.598267,11.8692592 173.318741,16.6845803 173.318741,24.2326537 C173.318741,31.7806353 168.395805,36.6643968 160.926585,36.6643968 C153.457364,36.6643968 148.737802,31.7806353 148.737802,24.2326537 C148.737802,16.6845803 153.660739,11.8692592 161.129959,11.8692592 L161.129959,11.8692592 Z M168.191518,24.2664151 C168.191518,19.211828 165.271318,16.2408188 161.026904,16.2408188 C156.783402,16.2408188 153.863201,19.211828 153.863201,24.2664151 C153.863201,29.3209106 156.783402,32.2919197 161.026904,32.2919197 C165.271318,32.2919197 168.191518,29.3209106 168.191518,24.2664151 Z" id="Shape" fill-rule="nonzero"></path>
+            <path d="M197.897857,19.0747638 C197.897857,21.7389839 196.370269,23.7877913 194.331965,24.6762317 L194.331965,24.744672 C196.4715,25.0523784 197.557684,26.5889839 197.591427,28.6725619 L197.69357,36.254305 L192.73689,36.254305 L192.634747,29.4923784 C192.601915,27.9895344 191.718194,27.0674243 189.953488,27.0674243 L181.70269,27.0674243 L181.70269,36.254305 L176.74601,36.254305 L176.74601,12.2790757 L190.428637,12.2790757 C194.910169,12.2790757 197.897857,14.5671491 197.897857,19.0756812 L197.897857,19.0747638 Z M192.906521,19.758617 C192.906521,17.7097179 191.820337,16.582195 189.782946,16.582195 L181.70269,16.582195 L181.70269,22.9341216 L189.850433,22.9341216 C191.717282,22.9341216 192.906521,21.8074243 192.906521,19.7576995 L192.906521,19.758617 Z" id="Shape" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
+
+          </li>
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" class="customer-logo__asset">
+    <title>VS Code</title>
+    <g id="logo-vscode" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(-0, 0)" fill="currentColor">
+            <path d="M0.475710754,17.435729 C0.475710754,17.435729 -0.742107996,16.5484165 0.719273254,15.363604 L4.12408367,12.2861665 C4.12408367,12.2861665 5.0983545,11.2500832 6.128417,12.1527915 L37.5481253,36.1979165 L37.5481253,47.7279165 C37.5481253,47.7279165 37.532917,49.5385415 35.234167,49.3385415 L0.475710754,17.435729 Z" id="Path"></path>
+            <path d="M8.57406284,24.8681248 L0.475569088,32.3102082 C0.475569088,32.3102082 -0.356607996,32.9360415 0.475569088,34.0541665 L4.23558367,37.5110415 C4.23558367,37.5110415 5.12864617,38.4804165 6.44795867,37.3777082 L15.0335628,30.7972915 L8.57406284,24.8681248 Z" id="Path"></path>
+            <path d="M22.791667,24.9293748 L37.6439587,13.4658748 L37.5475003,1.99718734 C37.5475003,1.99718734 36.9131253,-0.505818912 34.797292,0.796974838 L15.0331045,18.9796873 L22.791667,24.9293748 Z" id="Path"></path>
+            <path d="M35.233542,49.3541665 C36.096042,50.2464582 37.1414587,49.9541665 37.1414587,49.9541665 L48.7162503,44.1891665 C50.1981253,43.1683332 49.9900003,41.9014582 49.9900003,41.9014582 L49.9900003,7.47506234 C49.9900003,5.961979 48.4575003,5.43881234 48.4575003,5.43881234 L38.4252087,0.550785255 C36.2331253,-0.818683495 34.797292,0.796974838 34.797292,0.796974838 C34.797292,0.796974838 36.644167,-0.546841828 37.5475003,1.99718734 L37.5475003,47.5179165 C37.5475003,47.8308332 37.4814587,48.1385415 37.3495837,48.4154165 C37.0856253,48.9539582 36.512292,49.4566665 35.1370837,49.2464582 L35.233542,49.3541665 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>
+
+          </li>
+        
+          <li class="customer-logos__logo">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" class="customer-logo__asset">
+    <title>Codex</title>
+    <g id="logo-codex" stroke="none" fill="none" fill-rule="nonzero">
+        <path d="M19.1772404,18.1999216 L19.1772404,13.4498914 C19.1772404,13.0498439 19.3260613,12.7497301 19.6727593,12.5499669 L29.1378096,7.04996478 C30.4261793,6.29999291 31.9624116,5.95017277 33.5479067,5.95017277 C39.4942362,5.95017277 43.2606132,10.6002693 43.2606132,15.5500627 C43.2606132,15.8999871 43.2606132,16.3000346 43.2109374,16.7000821 L33.3991891,10.8999662 C32.8046284,10.5501461 32.2097579,10.5501461 31.6151973,10.8999662 L19.1772404,18.1999216 Z M41.2782279,36.7000613 L41.2782279,25.3498201 C41.2782279,24.6496588 40.9806894,24.1496776 40.3862321,23.7997532 L27.9482752,16.4997978 L32.0116743,14.1496359 C32.3584756,13.9498727 32.6559108,13.9498727 33.002712,14.1496359 L42.4676591,19.649638 C45.1933226,21.2498281 47.0265771,24.6496588 47.0265771,27.9494517 C47.0265771,31.74933 44.7968455,35.2495113 41.2782279,36.6996444 L41.2782279,36.7000613 Z M16.2535966,26.7001238 L12.1901974,24.3002555 C11.8434995,24.1004923 11.6946786,23.8002743 11.6946786,23.4002268 L11.6946786,12.4003268 C11.6946786,7.05048581 15.7580777,3.00020008 21.2586674,3.00020008 C23.3401978,3.00020008 25.2723908,3.70036139 26.9080781,4.95031449 L17.1460056,10.6504966 C16.5515482,11.0003168 16.254113,11.500298 16.254113,12.2005635 L16.254113,26.7005406 L16.2535966,26.7001238 Z M24.9999484,31.7999742 L19.1772404,28.5000771 L19.1772404,21.5003397 L24.9999484,18.2004427 L30.8222432,21.5003397 L30.8222432,28.5000771 L24.9999484,31.7999742 Z M28.7412293,47.0002167 C26.6598022,47.0002167 24.7276092,46.3000554 23.0919219,45.0502065 L32.8538911,39.3499202 C33.4484518,39.0001 33.745887,38.5001188 33.745887,37.7998533 L33.745887,23.2998762 L37.8590653,25.6997445 C38.2057632,25.8995077 38.3545841,26.1996215 38.3545841,26.5997732 L38.3545841,37.5996732 C38.3545841,42.9495142 34.2414059,46.9997999 28.7412293,46.9997999 L28.7412293,47.0002167 Z M16.9968749,35.8502599 L7.53182454,30.350362 C4.80616104,28.7500677 2.97290654,25.3503412 2.97290654,22.0504441 C2.97290654,18.2004427 5.25241718,14.7504887 8.77051838,13.3003556 L8.77051838,24.700303 C8.77051838,25.4004643 9.0680569,25.9004456 9.66251428,26.2503699 L22.0512084,33.500098 L17.9878093,35.8502599 C17.6411113,36.0500231 17.3435728,36.0500231 16.9968749,35.8502599 Z M16.4520933,44.0502441 C10.8524618,44.0502441 6.73938683,39.8001951 6.73938683,34.5501836 C6.73938683,34.1501361 6.78906265,33.7500886 6.83832536,33.3500411 L16.6003978,39.0502232 C17.1948552,39.4001476 17.789829,39.4001476 18.3842863,39.0502232 L30.8222432,31.8004952 L30.8222432,36.5505254 C30.8222432,36.9505729 30.6735256,37.2506867 30.3267243,37.45045 L20.8617773,42.950452 C19.5733044,43.7004239 18.037072,44.0502441 16.4515769,44.0502441 L16.4520933,44.0502441 Z M28.7412293,50 C34.7373378,50 39.7419956,45.7001405 40.882164,39.9999583 C46.4321197,38.5498251 50,33.2998137 50,27.9499727 C50,24.4497914 48.5135467,21.0500648 45.837559,18.5999692 C46.0853185,17.5498835 46.2340361,16.4997978 46.2340361,15.4502332 C46.2340361,8.30033471 40.485687,2.9499727 33.8453419,2.9499727 C32.5077096,2.9499727 31.2192366,3.14973594 29.9307637,3.60001084 C27.7005158,1.3999058 24.6281543,0 21.2586674,0 C15.2626622,0 10.2580044,4.29975532 9.11783599,9.99993748 C3.5678803,11.4500707 0,16.7000821 0,22.0499231 C0,25.5501044 1.48645327,28.949831 4.16244095,31.3999266 C3.91468153,32.4500123 3.76596391,33.500098 3.76596391,34.5497668 C3.76596391,41.6996653 9.51431304,47.0499231 16.1545548,47.0499231 C17.4922904,47.0499231 18.7807634,46.8501599 20.0692363,46.399885 C22.2989679,48.59999 25.3713293,50 28.7412293,50 Z" id="Shape" fill="currentColor"></path>
+    </g>
+</svg>
+
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+  
+    
+        
+
+<section class="section section--use-cases pad-viewport" id="use-cases">
+  <div class="wrapper">
+    <div class="use-cases__panel">
+      <header class="section__header">
+        <div class="section-title-icon">
+          
+          
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68px" height="68px" viewBox="0 0 68 68" version="1.1" class="section-title-icon__asset">
+    <title>Mac/Monochrome/17x17/Sketch-AI</title>
+    <g id="Mac/Monochrome/17x17/Sketch-AI" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(10.625, 10.625)" fill="#000000">
+            <path d="M24.65,-4.95833333 C35.9865858,-4.95833333 38.6839159,-4.73795275 42.0394151,-3.0282405 L43.2589672,-2.34493626 C46.0329087,-0.643490704 48.2927026,1.79505247 49.7782405,4.7105849 C51.4879528,8.06608406 51.7083333,10.7634142 51.7083333,22.1 L51.7083333,24.65 C51.7083333,26.0113481 51.7051554,27.2481158 51.6966021,28.3764028 L47.4459,28.3762002 C47.4548288,27.2591724 47.4583333,26.0230699 47.4583333,24.65 L47.4583333,22.1 C47.4583333,11.6178736 47.2540935,9.11809679 45.9914628,6.64004452 C44.701167,4.10769636 42.6423036,2.04883303 40.1099555,0.758537206 L39.6431225,0.533988452 C37.2882501,-0.528825666 34.4769935,-0.708333333 24.65,-0.708333333 L22.1,-0.708333333 C11.6178736,-0.708333333 9.11809679,-0.504093499 6.64004452,0.758537195 C4.10769636,2.04883303 2.04883303,4.10769636 0.758537195,6.64004452 C-0.504093499,9.11809679 -0.708333333,11.6178736 -0.708333333,22.1 L-0.708333333,24.65 C-0.708333333,35.1321264 -0.504093499,37.6319032 0.758537195,40.1099555 C2.04883303,42.6423036 4.10769636,44.701167 6.64004452,45.9914628 C9.11809679,47.2540935 11.6178736,47.4583333 22.1,47.4583333 L24.65,47.4583333 C26.9003815,47.4583333 28.7828508,47.4489198 30.376179,47.4216407 L30.376412,51.673605 C28.7513407,51.6999151 26.865674,51.7083333 24.65,51.7083333 L22.1,51.7083333 C10.7634142,51.7083333 8.06608406,51.4879528 4.7105849,49.7782405 C1.37854784,48.0804829 -1.33048285,45.3714522 -3.02824053,42.0394151 C-4.73795275,38.6839159 -4.95833333,35.9865858 -4.95833333,24.65 L-4.95833333,22.1 C-4.95833333,10.7634142 -4.73795275,8.06608406 -3.02824053,4.7105849 C-1.33048285,1.37854784 1.37854784,-1.33048285 4.7105849,-3.02824053 C8.06608406,-4.73795275 10.7634142,-4.95833333 22.1,-4.95833333 L24.65,-4.95833333 Z" id="Combined-Shape"></path>
+            <path d="M23.7183259,8.0128202 L32.311069,9.03356897 C32.7748333,9.08312031 33.1983975,9.32915076 33.4818663,9.71363543 L39.7208974,18.3426557 C40.1116169,18.8726105 40.0900256,19.614824 39.6692139,20.1193048 L24.5235243,38.5144208 C24.0337163,39.1016162 23.1784011,39.1651681 22.6131242,38.6563679 C22.5643789,38.6124927 22.5187132,38.5650563 22.4764757,38.5144208 L7.33078605,20.1193048 C6.90997437,19.614824 6.88838306,18.8726105 7.27910257,18.3426557 L13.5181337,9.71363543 C13.8016025,9.32915076 14.2251667,9.08312031 14.688931,9.03356897 L23.3175298,8.00898916 C23.4554947,7.99428016 23.588127,7.99909542 23.7183259,8.0128202 Z" id="Combined-Shape"></path>
+            <path d="M45.3955735,55.5137223 C43.9165331,50.3530933 39.8667418,46.303302 34.7061128,44.8242616 C34.2233361,44.6858974 34.2282664,44.0025294 34.7109979,43.8640076 C39.8692974,42.3838121 43.9169998,38.3349484 45.3955735,33.1759478 C45.5339377,32.6931711 46.2173057,32.6981014 46.3558275,33.1808329 C47.8360229,38.3391325 51.8848867,42.3868349 57.0438872,43.8654085 C57.5266639,44.0037727 57.5217336,44.6871407 57.0390021,44.8256625 C51.8823308,46.3053908 47.8355557,50.3521659 46.3558275,55.5088372 C46.2173057,55.9915687 45.5339377,55.996499 45.3955735,55.5137223 Z" id="Star"></path>
+        </g>
+    </g>
+</svg>
+
+        </div>
+        <h2
+          class="section__header__title entrance entrance--fadeDown"
+          data-controller="entrance"
+          style="--entrance-animation-delay: 0ms"
+        >
+          More design,<br/>less busywork
+        </h2>
+      </header>
+
+      
+
+      
+<div
+  class="slider swiper"
+  data-controller="slider"
+  data-slider-target="wrapper"
+  data-slider-id=""
+  data-slider-class=""
+  data-slider-has-navigation="true"
+  data-slider-wrap-navigation="true"
+  data-slider-has-pagination=""
+  data-slider-has-mousewheel=""
+  data-slider-autoplay=""
+  data-slider-has-loop=""
+  data-slider-slides-per-view="auto"
+  data-slider-space-between="16"
+  data-slider-speed=""
+  data-slider-effect=""
+  data-slider-reset-playback=""
+  data-slider-breakpoints="{&quot;768&quot;: {&quot;spaceBetween&quot;: 24}, &quot;1024&quot;: {&quot;spaceBetween&quot;: 36}, &quot;1220&quot;: {&quot;spaceBetween&quot;: 48}}"
+>
+  <div class="swiper-wrapper">
+    
+        
+          <div
+            class="feature-card feature-card--1 swiper-slide entrance entrance--fadeDown"
+            data-controller="entrance"
+            style="--entrance-animation-delay: 0ms"
+          >
+            
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/swap-themes-in-seconds-3%402x.png?width=420&token=bBZ-d79UaHes45TYN4iwD6RNnSlUFsHZ6H6-0D9enu4&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/swap-themes-in-seconds-3%402x.png?width=420&token=bBZ-d79UaHes45TYN4iwD6RNnSlUFsHZ6H6-0D9enu4&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/swap-themes-in-seconds-3%402x.png?width=840&token=13groSyrlOTK1tBjHlOfAc0IiCkp21oaCmkvBiZK3ZY&expires=1784367449 2x"
+  alt=""
+  class="feature-card__artwork"
+  
+    width="840"
+  
+  
+    height="1040"
+  
+  
+    loading="lazy"
+  
+>
+
+            
+
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Swap themes in seconds</h3>
+              <p class="feature-card__description">Switch light mode components for their dark mode counterparts — all without making a single manual swap.</p>
+              
+            </div>
+          </div>
+        
+          <div
+            class="feature-card feature-card--2 swiper-slide entrance entrance--fadeDown"
+            data-controller="entrance"
+            style="--entrance-animation-delay: 75ms"
+          >
+            
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/fill-in-the-blanks-3%402x.png?width=420&token=FLrp81J5DkDygXVkcdoAEuW8ixvv67q-mrXmVOBaJ38&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/fill-in-the-blanks-3%402x.png?width=420&token=FLrp81J5DkDygXVkcdoAEuW8ixvv67q-mrXmVOBaJ38&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/fill-in-the-blanks-3%402x.png?width=840&token=wSp2y1IbrPcV4z29Xb2en8VFx7taBAxpo1E5wARKSgk&expires=1784367449 2x"
+  alt=""
+  class="feature-card__artwork"
+  
+    width="840"
+  
+  
+    height="1040"
+  
+  
+    loading="lazy"
+  
+>
+
+            
+
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Fill in the blanks</h3>
+              <p class="feature-card__description">Replace placeholder text across every layer with true-to-life, context-aware content. No more lorem ipsum.</p>
+              
+            </div>
+          </div>
+        
+          <div
+            class="feature-card feature-card--3 swiper-slide entrance entrance--fadeDown"
+            data-controller="entrance"
+            style="--entrance-animation-delay: 150ms"
+          >
+            
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/tidy-up-documents-3%402x.png?width=420&token=HlmLGcqu3G7ohFa0yy55fYPJRGsaUyBYbh79sO-RQzQ&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/tidy-up-documents-3%402x.png?width=420&token=HlmLGcqu3G7ohFa0yy55fYPJRGsaUyBYbh79sO-RQzQ&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/tidy-up-documents-3%402x.png?width=840&token=rghMJ4TeFPBu7519QTfkW4oBjeRdg2GB2KJYRZvUOOk&expires=1784367449 2x"
+  alt=""
+  class="feature-card__artwork"
+  
+    width="840"
+  
+  
+    height="1040"
+  
+  
+    loading="lazy"
+  
+>
+
+            
+
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Tidy up documents</h3>
+              <p class="feature-card__description">Sort, rename, and align layers automatically. Wrangle icon sets, keep Libraries clean, and bring calm to chaotic files.</p>
+              
+            </div>
+          </div>
+        
+          <div
+            class="feature-card feature-card--4 swiper-slide entrance entrance--fadeDown"
+            data-controller="entrance"
+            style="--entrance-animation-delay: 225ms"
+          >
+            
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/build-a-palette-3%402x.png?width=420&token=ZzNyiTlWTpak01A-jkEQYnMoK-U273DJveaWLBv_4M0&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/build-a-palette-3%402x.png?width=420&token=ZzNyiTlWTpak01A-jkEQYnMoK-U273DJveaWLBv_4M0&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/build-a-palette-3%402x.png?width=840&token=UHlYp8CcRP35a31ZQ_5ymbaXt1vWZrSSMXDTjge__3E&expires=1784367449 2x"
+  alt=""
+  class="feature-card__artwork"
+  
+    width="840"
+  
+  
+    height="1040"
+  
+  
+    loading="lazy"
+  
+>
+
+            
+
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Build a palette</h3>
+              <p class="feature-card__description">Drop in a photo and get a full set of named color variables that compliment it. An instant color palette, ready to use in your document.</p>
+              
+            </div>
+          </div>
+        
+          <div
+            class="feature-card feature-card--5 swiper-slide entrance entrance--fadeDown"
+            data-controller="entrance"
+            style="--entrance-animation-delay: 300ms"
+          >
+            
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/build-designs-from-code-3%402x.png?width=420&token=9h45akcalWIO3U_NtDfr-MiznTTYJHrUQVFcYoB3HBo&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/build-designs-from-code-3%402x.png?width=420&token=9h45akcalWIO3U_NtDfr-MiznTTYJHrUQVFcYoB3HBo&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/build-designs-from-code-3%402x.png?width=840&token=k_O_xOtT_MC2hmnuTi3wOv6hJV_Ywt0s51hFJUTCQn8&expires=1784367449 2x"
+  alt=""
+  class="feature-card__artwork"
+  
+    width="840"
+  
+  
+    height="1040"
+  
+  
+    loading="lazy"
+  
+>
+
+            
+
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Build designs from code</h3>
+              <p class="feature-card__description">Point your AI client at a repo to recreate text styles, colors, UI components, and even entire pages inside Sketch.</p>
+              
+            </div>
+          </div>
+        
+          <div
+            class="feature-card feature-card--6 swiper-slide entrance entrance--fadeDown"
+            data-controller="entrance"
+            style="--entrance-animation-delay: 375ms"
+          >
+            
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/create-code-from-your-designs-3%402x.png?width=420&token=3BsgEOpt-R1QFpjDnBXq9mnTqi26koJYCKmWgyBrfzg&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/create-code-from-your-designs-3%402x.png?width=420&token=3BsgEOpt-R1QFpjDnBXq9mnTqi26koJYCKmWgyBrfzg&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/create-code-from-your-designs-3%402x.png?width=840&token=uKRY9JpuE2ZMMVEEGkTmtbHR9g51AiJmDEQ-Ft-hqs4&expires=1784367449 2x"
+  alt=""
+  class="feature-card__artwork"
+  
+    width="840"
+  
+  
+    height="1040"
+  
+  
+    loading="lazy"
+  
+>
+
+            
+
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Create code from your designs</h3>
+              <p class="feature-card__description">Take any frame in Sketch and build it out in code with 1:1 visual fidelity.</p>
+              
+                <a href="https://github.com/sketch-hq/agents/tree/main/skills/sketch-design-to-code" class="feature-card__cta" target="_blank" rel="noopener">
+                  Get the design-to-code skill
+                </a>
+              
+            </div>
+          </div>
+        
+      
+  </div>
+
+  
+    
+      <div class="swiper-navigation">
+        <div class="swiper-button-prev" data-slider-target="prevButton" role="button" tabindex="0" aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#000" fill-rule="nonzero" d="M15.15 4 23 12l-7.85 8-2.05-2.09 4.349-4.433H1v-2.955h16.449l-4.35-4.432L15.15 4Z"/></svg>
+        </div>
+        
+        <div class="swiper-button-next" data-slider-target="nextButton" role="button" tabindex="0" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#000" fill-rule="nonzero" d="M15.15 4 23 12l-7.85 8-2.05-2.09 4.349-4.433H1v-2.955h16.449l-4.35-4.432L15.15 4Z"/></svg>
+        </div>
+      </div>
+    
+  
+
+  
+</div>
+
+    </div>
+  </div>
+</section>
+
+    
+  
+    
+        <section class="section section--how-it-works pad-viewport" id="how-it-works">
+  <div class="wrapper">
+    <header class="section__header">
+      <div class="wrapper">
+        <div class="section-title-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68px" height="68px" viewBox="0 0 68 68" version="1.1" class="section-title-icon__asset">
+    <title>Icon</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AI-Page" transform="translate(-806, -2300)">
+            <g id="Section---Get-started-in-minutes" transform="translate(140, 2300)">
+                <g id="Details" transform="translate(374, 0)">
+                    <g id="Icon" transform="translate(292, 0)">
+                        <g id="Tint" transform="translate(6, 10)">
+                            <path d="M33.0428968,2.88165529 L51.5660532,13.4663161 C52.8739732,14.213699 53.5279332,14.5873904 53.7945103,15.1832738 C54.0269914,15.702942 54.0269914,16.297058 53.7945103,16.8167262 C53.5279332,17.4126096 52.8739732,17.786301 51.5660532,18.5336839 L33.0428968,29.1183447 C31.1202111,30.2170222 30.1588683,30.766361 29.2370153,30.9605915 C28.4212932,31.1324607 27.5787068,31.1324607 26.7629847,30.9605915 C25.8411317,30.766361 24.8797889,30.2170222 22.9571032,29.1183447 L4.43394683,18.5336839 C3.12602681,17.786301 2.4720668,17.4126096 2.2054897,16.8167262 C1.9730086,16.297058 1.9730086,15.702942 2.2054897,15.1832738 C2.4720668,14.5873904 3.12602681,14.213699 4.43394683,13.4663161 L22.9571032,2.88165529 C24.8797889,1.78297777 25.8411317,1.233639 26.7629847,1.03940852 C27.5787068,0.867539348 28.4212932,0.867539348 29.2370153,1.03940852 C30.1588683,1.233639 31.1202111,1.78297777 33.0428968,2.88165529 Z" id="Top" stroke="#000000" stroke-width="4" fill-opacity="0.2" fill="#000000" stroke-linejoin="round"></path>
+                            <g id="Hat" transform="translate(12, 23)" stroke="#000000" stroke-width="4">
+                                <path d="M0,12.1111111 C0,17.0203089 7.163444,21 16,21 C24.836556,21 32,17.0203089 32,12.1111111" id="Path"></path>
+                                <line x1="32" y1="12.2" x2="32" y2="0" id="Path-14"></line>
+                            </g>
+                            <g id="Detail" transform="translate(8, 12)">
+                                <path d="M20,8 C23.3137085,8 26,6.209139 26,4 C26,1.790861 23.3137085,0 20,0 C16.6862915,0 14,1.790861 14,4 C14,6.209139 16.6862915,8 20,8 Z" id="Oval-2" fill="#000000"></path>
+                                <polyline id="Path-15" stroke="#000000" stroke-width="4" points="20 4 4 12 4 36"></polyline>
+                                <path d="M4,42 C6.209139,42 8,40.209139 8,38 C8,35.790861 6.209139,34 4,34 C1.790861,34 0,35.790861 0,38 C0,40.209139 1.790861,42 4,42 Z" id="Oval" fill="#000000"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+
+        </div>
+        <h2
+          class="section__header__title entrance entrance--fadeDown"
+          data-controller="entrance"
+          style="--entrance-animation-delay: 0ms"
+        >
+          Get started in minutes
+        </h2>
+      </div>
+    </header>
+
+    <div class="steps ai-card-grid">
+      
+        <div
+          class="step ai-card entrance entrance--fadeDown"
+          data-controller="entrance"
+          style="--entrance-animation-delay: 0ms"
+        >
+          
+            <div class="step__media ai-card__media">
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/start-the-server%402x.png?width=446&token=1DWilYfY3GS7J8e2x6LVwvRPOUay3a1JuFKtUWfKfSE&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/start-the-server%402x.png?width=446&token=1DWilYfY3GS7J8e2x6LVwvRPOUay3a1JuFKtUWfKfSE&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/start-the-server%402x.png?width=892&token=qb3IV-JIfzKspedvueDgdrt305fpipI2sIS8kdTtV0A&expires=1784367449 2x"
+  alt=""
+  class=""
+  
+    width="892"
+  
+  
+    height="500"
+  
+  
+    loading="lazy"
+  
+>
+
+            </div>
+          
+          <div class="step__content ai-card__content">
+            <h3 class="step__title ai-card__title">Start the server</h3>
+            <p class="step__blurb ai-card__blurb">Press <kbd>⌘</kbd><kbd>K</kbd> to open the Command Bar in Sketch, type “MCP”, and hit Start. The server runs locally on your Mac.</p>
+          </div>
+        </div>
+      
+        <div
+          class="step ai-card entrance entrance--fadeDown"
+          data-controller="entrance"
+          style="--entrance-animation-delay: 100ms"
+        >
+          
+            <div class="step__media ai-card__media">
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/connect-your-ai-client%402x.png?width=446&token=9Fd6iiBL_msJeVFqXwe349MrdIgQPrw4oCFGkM8BcG8&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/connect-your-ai-client%402x.png?width=446&token=9Fd6iiBL_msJeVFqXwe349MrdIgQPrw4oCFGkM8BcG8&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/connect-your-ai-client%402x.png?width=892&token=5uAbYFabMzm_tPWXM4uvUebotUO1teQcPMFshmwwtNw&expires=1784367449 2x"
+  alt=""
+  class=""
+  
+    width="892"
+  
+  
+    height="500"
+  
+  
+    loading="lazy"
+  
+>
+
+            </div>
+          
+          <div class="step__content ai-card__content">
+            <h3 class="step__title ai-card__title">Connect your AI Client</h3>
+            <p class="step__blurb ai-card__blurb">Works with Claude Code, Claude Desktop, Cursor, VS Code, Codex, and any other MCP-compatible client.</p>
+          </div>
+        </div>
+      
+        <div
+          class="step ai-card entrance entrance--fadeDown"
+          data-controller="entrance"
+          style="--entrance-animation-delay: 200ms"
+        >
+          
+            <div class="step__media ai-card__media">
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/start-prompting%402x.png?width=446&token=pdtr5Kpu6dZRUam7K3U16L5CJLMxjkQMvqagx15ke5g&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/start-prompting%402x.png?width=446&token=pdtr5Kpu6dZRUam7K3U16L5CJLMxjkQMvqagx15ke5g&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/start-prompting%402x.png?width=892&token=B-qeAV8nqFQMxL42YZQbFGR_AtQ9JNqARy9wUVmQ-0U&expires=1784367449 2x"
+  alt=""
+  class=""
+  
+    width="892"
+  
+  
+    height="500"
+  
+  
+    loading="lazy"
+  
+>
+
+            </div>
+          
+          <div class="step__content ai-card__content">
+            <h3 class="step__title ai-card__title">Start prompting</h3>
+            <p class="step__blurb ai-card__blurb">Tell your AI client what to do. It writes and runs the code inside Sketch, checks its own work, and iterates until the job’s done.</p>
+          </div>
+        </div>
+      
+    </div>
+
+    
+      <div class="how-it-works__cta-wrapper">
+        <a href="/docs/mcp-server/" class="button-new button-new--secondary button-new--has-icon-right">
+          Full setup instructions
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" color="currentcolor">  <g stroke="currentcolor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">    <path d="M13 8l4 4-4 4M15.5 12h-9" />  </g></svg>
+        </a>
+      </div>
+    
+  </div>
+</section>
+
+    
+  
+    
+        <section class="section section--privacy pad-viewport">
+  <div class="wrapper">
+    <div
+      class="privacy__content entrance entrance--fadeDown"
+      data-controller="entrance"
+    >
+      <div class="privacy__text">
+        <h2 class="privacy__title">Your tools, your data, your Mac</h2>
+        <p class="privacy__blurb">The MCP server runs locally on your Mac and can’t be accessed remotely. It’s off by default — you decide when to switch it on and what your AI client can see. Prefer to keep everything on-device? MCP-compatible local models work too.</p>
+      </div>
+
+      <div class="privacy__visual" aria-hidden="true">
+        <div class="privacy__oval privacy__oval--outer"></div>
+        <div class="privacy__oval privacy__oval--inner"></div>
+        
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/your-tools-your-data-your-mac-shield%402x.png?width=192&token=dESVEzt-cC5-VT9HaSaOwFBEsfeUqmVYBJP2HjGzXCc&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/your-tools-your-data-your-mac-shield%402x.png?width=192&token=dESVEzt-cC5-VT9HaSaOwFBEsfeUqmVYBJP2HjGzXCc&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/your-tools-your-data-your-mac-shield%402x.png?width=384&token=cZWtG7M2PwzS2xCyak-wnsRV7Y9WGIQpGrylKPxlyIo&expires=1784367449 2x"
+  alt=""
+  class="privacy__shield"
+  
+    width="384"
+  
+  
+    height="339"
+  
+  
+    loading="lazy"
+  
+>
+
+        
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/your-tools-your-data-your-mac-mac%402x.png?width=454&token=qnOrwozgORtx5ZaoVoUvvD5qpRDbfkzUK-2wRZRRJL0&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/your-tools-your-data-your-mac-mac%402x.png?width=454&token=qnOrwozgORtx5ZaoVoUvvD5qpRDbfkzUK-2wRZRRJL0&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/your-tools-your-data-your-mac-mac%402x.png?width=908&token=xhaz3tlYNmr2wb3vDaPrJZ6x3d6uYkf4lAQ_az4Bhm0&expires=1784367449 2x"
+  alt=""
+  class="privacy__image"
+  
+    width="908"
+  
+  
+    height="702"
+  
+  
+    loading="lazy"
+  
+>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+  
+    
+        <section id="testimonials" class="vs-testimonials pad-viewport">
+  <div class="wrapper vs-testimonials__wrapper">
+    <header class="vs-testimonials__header"><div class="vs-testimonials__blurb">
+</div>
+    </header>
+    <div class="vs-testimonials__tweets">
+      
+      <a class="vs-testimonials__tweet" href="https://x.com/bepituLaz/status/2014759589590294684">
+        <header class="vs-testimonials__tweet__profile">
+          <div class="vs-testimonials__tweet__avatar">
+            
+            
+            <img class="vs-testimonials__tweet__avatar__img" draggable="false" src="https://sktch.b-cdn.net/assets/pages/ai/testimonials/bepituLaz%402x.jpg?width=96&aspect_ratio=1:1&token=f_c0f2eJLnABAR1x0F7u1VS4aZlQpQONpi_usGk4ygY&expires=1784367449" width="48" height="48" alt="Asep Bagja" loading="lazy"/>
+            
+         </div>
+          <div class="vs-testimonials__tweet__profile__name-and-handle">
+            <div class="vs-testimonials__tweet__profile__name">Asep Bagja</div>
+            <div class="vs-testimonials__tweet__profile__handle">@bepituLaz</div>
+          </div>
+        </header>
+        <div class="vs-testimonials__tweet__message styled-text-minimal"><p>Thanks to newly launched Sketch MCP. I vibe coded/designed the booking system for pet hotel with Elixir/Phoenix and Tidewave. Now, I convert all LiveView pages into a Sketch files and pass it to real UI/UX designer. And, later from Sketch, I can convert it back into LiveView.</p>
+</div>
+      </a>
+      
+      <a class="vs-testimonials__tweet" href="https://x.com/DonnyWals/status/2028424315083886810">
+        <header class="vs-testimonials__tweet__profile">
+          <div class="vs-testimonials__tweet__avatar">
+            
+            
+            <img class="vs-testimonials__tweet__avatar__img" draggable="false" src="https://sktch.b-cdn.net/assets/pages/ai/testimonials/DonnyWals%402x.jpg?width=96&aspect_ratio=1:1&token=NZC2wEMOl4XuMqc4QpojuW06ayzVN5u6P5lEjPo84aw&expires=1784367449" width="48" height="48" alt="Donny Wals" loading="lazy"/>
+            
+         </div>
+          <div class="vs-testimonials__tweet__profile__name-and-handle">
+            <div class="vs-testimonials__tweet__profile__name">Donny Wals</div>
+            <div class="vs-testimonials__tweet__profile__handle">@DonnyWals</div>
+          </div>
+        </header>
+        <div class="vs-testimonials__tweet__message styled-text-minimal"><p>11 localizations, 7 screenshots each, took me 30 minutes to update the template. 5 minutes to translate with Codex and Sketch MCP. LFG</p>
+</div>
+      </a>
+      
+      <a class="vs-testimonials__tweet" href="https://x.com/psylo_app/status/2021562700661420107">
+        <header class="vs-testimonials__tweet__profile">
+          <div class="vs-testimonials__tweet__avatar">
+            
+            
+            <img class="vs-testimonials__tweet__avatar__img" draggable="false" src="https://sktch.b-cdn.net/assets/pages/ai/testimonials/psylo_app%402x.jpg?width=96&aspect_ratio=1:1&token=XkOG6j6_rsSDEmRyz3cOZg9jQl6M-LICfi8vWydl9R0&expires=1784367449" width="48" height="48" alt="Psylo" loading="lazy"/>
+            
+         </div>
+          <div class="vs-testimonials__tweet__profile__name-and-handle">
+            <div class="vs-testimonials__tweet__profile__name">Psylo</div>
+            <div class="vs-testimonials__tweet__profile__handle">@psylo_app</div>
+          </div>
+        </header>
+        <div class="vs-testimonials__tweet__message styled-text-minimal"><p>Tried out using <span class="twitterify">@sketch</span> MCP server and Claude to automatically translate Psylo’s App Store screenshots. Works pretty well for a first pass but the text layouts will need some work. I’m going to try to have Claude do it too 🤖</p>
+</div>
+      </a>
+      
+      <a class="vs-testimonials__tweet" href="https://x.com/PaulSolt/status/2030641110091956625">
+        <header class="vs-testimonials__tweet__profile">
+          <div class="vs-testimonials__tweet__avatar">
+            
+            
+            <img class="vs-testimonials__tweet__avatar__img" draggable="false" src="https://sktch.b-cdn.net/assets/pages/ai/testimonials/PaulSolt%402x.jpg?width=96&aspect_ratio=1:1&token=_3WGkVfERtoHZYTksqUr33Ljzq7MzASswkrqnF38g_k&expires=1784367449" width="48" height="48" alt="Paul Solt" loading="lazy"/>
+            
+         </div>
+          <div class="vs-testimonials__tweet__profile__name-and-handle">
+            <div class="vs-testimonials__tweet__profile__name">Paul Solt</div>
+            <div class="vs-testimonials__tweet__profile__handle">@PaulSolt</div>
+          </div>
+        </header>
+        <div class="vs-testimonials__tweet__message styled-text-minimal"><p>I built a new Skill to interact with Sketch. Now I can riff on app designs with vectors, rather than random image generation.</p>
+</div>
+      </a>
+      
+      <a class="vs-testimonials__tweet" href="https://x.com/EgemenTheDev/status/2026364664917995997">
+        <header class="vs-testimonials__tweet__profile">
+          <div class="vs-testimonials__tweet__avatar">
+            
+            
+            <img class="vs-testimonials__tweet__avatar__img" draggable="false" src="https://sktch.b-cdn.net/assets/pages/ai/testimonials/EgemenTheDev%402x.jpg?width=96&aspect_ratio=1:1&token=NcJhmDtrm334KtedHps13fMdwAC0VrmAgFNllTHA3Jk&expires=1784367449" width="48" height="48" alt="Egemen Günel" loading="lazy"/>
+            
+         </div>
+          <div class="vs-testimonials__tweet__profile__name-and-handle">
+            <div class="vs-testimonials__tweet__profile__name">Egemen Günel</div>
+            <div class="vs-testimonials__tweet__profile__handle">@EgemenTheDev</div>
+          </div>
+        </header>
+        <div class="vs-testimonials__tweet__message styled-text-minimal"><p>OpenCode + Sketch MCP = App Store screenshot localization done in a few minutes. Absolutely loving this.</p>
+</div>
+      </a>
+      
+      <a class="vs-testimonials__tweet" href="https://x.com/raphaellopesph/status/2024520045255139603">
+        <header class="vs-testimonials__tweet__profile">
+          <div class="vs-testimonials__tweet__avatar">
+            
+            
+            <img class="vs-testimonials__tweet__avatar__img" draggable="false" src="https://sktch.b-cdn.net/assets/pages/ai/testimonials/raphaellopesph%402x.jpg?width=96&aspect_ratio=1:1&token=qZ1rlsnD9Iq4LDxqZHGPvpE_3umfRMF19yJ2JPAVDlc&expires=1784367449" width="48" height="48" alt="Rapha" loading="lazy"/>
+            
+         </div>
+          <div class="vs-testimonials__tweet__profile__name-and-handle">
+            <div class="vs-testimonials__tweet__profile__name">Rapha</div>
+            <div class="vs-testimonials__tweet__profile__handle">@raphaellopesph</div>
+          </div>
+        </header>
+        <div class="vs-testimonials__tweet__message styled-text-minimal"><p>honestly there’s a fun feeling in bringing my own stuff to life with <span class="twitterify">@sketch</span> MCP</p>
+</div>
+      </a>
+      
+      <a class="vs-testimonials__tweet" href="https://x.com/aggerbo/status/2035267560627749168">
+        <header class="vs-testimonials__tweet__profile">
+          <div class="vs-testimonials__tweet__avatar">
+            
+            
+            <img class="vs-testimonials__tweet__avatar__img" draggable="false" src="https://sktch.b-cdn.net/assets/pages/ai/testimonials/aggerbo%402x.jpg?width=96&aspect_ratio=1:1&token=f5fQLZGOIQHWEkzdmgrP6xrDy7sIG68WK2i52pK5Vl4&expires=1784367449" width="48" height="48" alt="Mikkel Aggerbo" loading="lazy"/>
+            
+         </div>
+          <div class="vs-testimonials__tweet__profile__name-and-handle">
+            <div class="vs-testimonials__tweet__profile__name">Mikkel Aggerbo</div>
+            <div class="vs-testimonials__tweet__profile__handle">@aggerbo</div>
+          </div>
+        </header>
+        <div class="vs-testimonials__tweet__message styled-text-minimal"><p>If you are still doing things manually in <span class="twitterify">@sketch</span> then you are missing out. This is the Sketch MCP creating App Store assets for <span class="twitterify">@Smartplanhq</span> across all supported languages within 5 minutes. The screenshot process is also automated. I will share that later.</p>
+</div>
+      </a>
+      
+      <a class="vs-testimonials__tweet" href="https://x.com/twannl/status/2041575033173049551">
+        <header class="vs-testimonials__tweet__profile">
+          <div class="vs-testimonials__tweet__avatar">
+            
+            
+            <img class="vs-testimonials__tweet__avatar__img" draggable="false" src="https://sktch.b-cdn.net/assets/pages/ai/testimonials/twannl%402x.jpg?width=96&aspect_ratio=1:1&token=y3nM55PVvI3EcNf3S_GQFnkT--um70xRavxML7XI3BU&expires=1784367449" width="48" height="48" alt="Antoine v.d. SwiftLee " loading="lazy"/>
+            
+         </div>
+          <div class="vs-testimonials__tweet__profile__name-and-handle">
+            <div class="vs-testimonials__tweet__profile__name">Antoine v.d. SwiftLee </div>
+            <div class="vs-testimonials__tweet__profile__handle">@twannl</div>
+          </div>
+        </header>
+        <div class="vs-testimonials__tweet__message styled-text-minimal"><p>Big shoutout to <span class="twitterify">@sketch</span>’s MCP that just saved me hours translating my App Store Screenshots</p>
+</div>
+      </a>
+      
+      <a class="vs-testimonials__tweet" href="https://x.com/duncanmcalester/status/2041547346094473713">
+        <header class="vs-testimonials__tweet__profile">
+          <div class="vs-testimonials__tweet__avatar">
+            
+            
+            <img class="vs-testimonials__tweet__avatar__img" draggable="false" src="https://sktch.b-cdn.net/assets/pages/ai/testimonials/duncanmcalester%402x.jpg?width=96&aspect_ratio=1:1&token=H9j5Gesy_XCfLhqv1arlhPlyrWvG45yuOlITYPgCaak&expires=1784367449" width="48" height="48" alt="Duncan McAlester" loading="lazy"/>
+            
+         </div>
+          <div class="vs-testimonials__tweet__profile__name-and-handle">
+            <div class="vs-testimonials__tweet__profile__name">Duncan McAlester</div>
+            <div class="vs-testimonials__tweet__profile__handle">@duncanmcalester</div>
+          </div>
+        </header>
+        <div class="vs-testimonials__tweet__message styled-text-minimal"><p>The only AI feature I need from my design tool is an API and/or an MCP that doesn’t get hamstrung to sell me a higher tier.
+Sketch nailed it.</p>
+</div>
+      </a>
+      
+    </div>
+  </div>
+
+</section>
+
+      
+  
+    
+        <section class="section section--resources pad-viewport">
+  <div class="wrapper">
+    <header class="section__header">
+      <div class="wrapper">
+        <div class="section-title-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68px" height="69px" viewBox="0 0 68 69" version="1.1" class="section-title-icon__asset">
+    <title>Icon Copy</title>
+    <g id="Icon-Copy" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Group" transform="translate(2.8632, 1)">
+            <path d="M35.0423588,2.84777005 C35.1544542,2.95986794 35.2139435,3.01967625 35.656201,3.50276158 C46.4511422,15.2942592 48.6256538,32.359525 41.6669011,46.3023761 C40.8209805,47.9972983 39.0914209,49.0708655 37.1971286,49.0708655 L24.2250433,49.0708655 C22.3307511,49.0708655 20.6011915,47.9972983 19.7552709,46.3023761 C12.7965181,32.359525 14.9710298,15.2942592 25.765971,3.50276158 C26.2353992,2.98999719 26.3444557,2.87399537 26.3720876,2.85005762 C26.4367981,2.79399814 26.494685,2.73037075 26.5564089,2.67103879 C28.9206659,0.39840317 32.6954497,0.443879204 35.0032567,2.80746689 C35.0163329,2.82085921 35.0291237,2.83453468 35.0423588,2.84777005 Z" id="Combined-Shape" stroke="#000000" stroke-width="4"></path>
+            <path d="M20.5141499,42.677325 L12.3972985,44.8718119 C11.8705009,45.0142378 11.329804,44.704346 11.1789241,44.1799072 C9.45650962,38.1930167 13.0208808,31.5921311 15.7544367,30.8546929" id="Path" stroke="#000000" stroke-width="4" transform="translate(15.6206, 37.9853) rotate(15) translate(-15.6206, -37.9853)"></path>
+            <polygon id="Path" fill-opacity="0.2" fill="#000000" points="15.0515228 33.1323132 17.4910968 43.9012023 9.37888733 43.420027 11.6170303 35.3635405"></polygon>
+            <polygon id="Path-3" fill-opacity="0.2" fill="#000000" transform="translate(48.435, 38.5168) scale(-1, 1) translate(-48.435, -38.5168)" points="50.0515228 33.1323132 52.4910968 43.9012023 44.3788873 43.420027 46.6170303 35.3635405"></polygon>
+            <path d="M50.676102,42.677325 L42.5592507,44.8718119 C42.0324531,45.0142378 41.4917562,44.704346 41.3408763,44.1799072 C39.6184618,38.1930167 43.1828329,31.5921311 45.9163889,30.8546929" id="Path-2" stroke="#000000" stroke-width="4" transform="translate(45.7825, 37.9853) scale(-1, 1) rotate(15) translate(-45.7825, -37.9853)"></path>
+            <circle id="Oval-3" fill="#000000" cx="30.711086" cy="24.1323132" r="6"></circle>
+            <line x1="20.711086" y1="11.1323132" x2="40.711086" y2="11.1323132" id="Path" stroke="#000000" stroke-width="4"></line>
+            <polygon id="Path" fill-opacity="0.2" fill="#000000" points="20.711086 10.8231571 40.711086 10.8231571 36.0537907 3.86817817 31.3039621 1 27.2138071 1.88648372"></polygon>
+            <g transform="translate(8, 55.6833)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M15.711086,1.44904759 C13.501947,1.44904759 11.711086,3.23990859 11.711086,5.44904759 C11.711086,7.65818659 13.501947,9.44904759 15.711086,9.44904759" id="Path" transform="translate(13.7111, 5.449) rotate(60) translate(-13.7111, -5.449)"></path>
+                <path d="M8,1 C5.23857625,1 3,3.23857625 3,6 C3,8.76142375 5.23857625,11 8,11" id="Path-2" transform="translate(5.5, 6) rotate(83) translate(-5.5, -6)"></path>
+                <line x1="18.1751876" y1="4.68600286" x2="18.1751876" y2="-4.45891728" id="Path"></line>
+                <path d="M0.8419426,9.0907121 C-1.26201052,6.06861024 -4.16372279,5.41083523 -7.8631942,7.11738707" id="Path-10"></path>
+            </g>
+            <g id="Group-3" transform="translate(43.8763, 60.1833) scale(-1, 1) translate(-43.8763, -60.1833)translate(34.3763, 55.6833)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                <path d="M15.711086,1.44904759 C13.501947,1.44904759 11.711086,3.23990859 11.711086,5.44904759 C11.711086,7.65818659 13.501947,9.44904759 15.711086,9.44904759" id="Path" transform="translate(13.7111, 5.449) rotate(60) translate(-13.7111, -5.449)"></path>
+                <path d="M8,1 C5.23857625,1 3,3.23857625 3,6 C3,8.76142375 5.23857625,11 8,11" id="Path-2" transform="translate(5.5, 6) rotate(83) translate(-5.5, -6)"></path>
+                <line x1="18.1751876" y1="4.68600286" x2="18.1751876" y2="-4.45891728" id="Path"></line>
+                <path d="M0.8419426,9.0907121 C-1.26201052,6.06861024 -4.16372279,5.41083523 -7.8631942,7.11738707" id="Path-10"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+
+        </div>
+        <h2
+          class="section__header__title entrance entrance--fadeDown"
+          data-controller="entrance"
+          style="--entrance-animation-delay: 0ms"
+        >
+          Take your next steps
+        </h2>
+      </div>
+    </header>
+
+    <div class="resource-cards ai-card-grid">
+      
+        <a
+          href="/docs/mcp-server/"
+          class="resource-card ai-card entrance entrance--fadeDown"
+          data-controller="entrance"
+          style="--entrance-animation-delay: 0ms"
+          
+        >
+          
+            <div class="resource-card__media ai-card__media">
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/mcp-server-docs%402x.png?width=446&token=qd9nAX3pJEMZrrekzsSkhWtxcAm-hKWh-R8XMknAnFw&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/mcp-server-docs%402x.png?width=446&token=qd9nAX3pJEMZrrekzsSkhWtxcAm-hKWh-R8XMknAnFw&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/mcp-server-docs%402x.png?width=892&token=MtbpZpKlarcqAkFCOEsPDEHAdTncXHbDqUSmckg9D2M&expires=1784367449 2x"
+  alt=""
+  class=""
+  
+    width="892"
+  
+  
+    height="500"
+  
+  
+    loading="lazy"
+  
+>
+
+            </div>
+          
+          <div class="resource-card__text ai-card__content">
+            <h3 class="resource-card__title ai-card__title">MCP server docs</h3>
+            <p class="resource-card__blurb ai-card__blurb">Everything you need to get started, including step-by-step setup guides for popular AI clients.</p>
+          </div>
+          <span class="resource-card__cta ai-card__cta">Read the docs</span>
+        </a>
+      
+        <a
+          href="/blog/mcp-server-use-cases/"
+          class="resource-card ai-card entrance entrance--fadeDown"
+          data-controller="entrance"
+          style="--entrance-animation-delay: 100ms"
+          
+        >
+          
+            <div class="resource-card__media ai-card__media">
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/five-ways-we-use-the-mcp-server%402x.png?width=446&token=IDcX_B7z4QzDpGiUnddwXeqwTRITcNLBqs6hXUaU2h4&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/five-ways-we-use-the-mcp-server%402x.png?width=446&token=IDcX_B7z4QzDpGiUnddwXeqwTRITcNLBqs6hXUaU2h4&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/five-ways-we-use-the-mcp-server%402x.png?width=892&token=_t-mJOdagU3GMUn1I-1PWSRff6HVg-_IWLs1QevA5vM&expires=1784367449 2x"
+  alt=""
+  class=""
+  
+    width="892"
+  
+  
+    height="500"
+  
+  
+    loading="lazy"
+  
+>
+
+            </div>
+          
+          <div class="resource-card__text ai-card__content">
+            <h3 class="resource-card__title ai-card__title">Five ways we use the MCP server</h3>
+            <p class="resource-card__blurb ai-card__blurb">Real-world workflows with prompts you can copy, adapt, and build on.</p>
+          </div>
+          <span class="resource-card__cta ai-card__cta">Read the post</span>
+        </a>
+      
+        <a
+          href="https://github.com/sketch-hq/agents/"
+          class="resource-card ai-card entrance entrance--fadeDown"
+          data-controller="entrance"
+          style="--entrance-animation-delay: 200ms"
+          target="_blank" rel="noopener"
+        >
+          
+            <div class="resource-card__media ai-card__media">
+              
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/sketch-skills-catalog%402x.png?width=446&token=nbE-pe4XaI29fjHU_eNSt84ZN9mbu4z0fBkUDkycCYY&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/sketch-skills-catalog%402x.png?width=446&token=nbE-pe4XaI29fjHU_eNSt84ZN9mbu4z0fBkUDkycCYY&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/sketch-skills-catalog%402x.png?width=892&token=8NOC1GsDPVxC20DyY9ElsO8hPBaq3I3mF8Q42H4lXik&expires=1784367449 2x"
+  alt=""
+  class=""
+  
+    width="892"
+  
+  
+    height="500"
+  
+  
+    loading="lazy"
+  
+>
+
+            </div>
+          
+          <div class="resource-card__text ai-card__content">
+            <h3 class="resource-card__title ai-card__title">Sketch skills catalog</h3>
+            <p class="resource-card__blurb ai-card__blurb">Explore and download agent skills, including our implement-design skill for 1:1 design-to-code.</p>
+          </div>
+          <span class="resource-card__cta ai-card__cta">Explore the agents repo</span>
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    
+  
+    
+        
+
+
+
+
+
+
+
+
+<section
+  
+  class="get-started pad-viewport get-started--with-background get-started--with-ornaments"
+>
+  
+    
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/pages/ai/cta-bg%402x.png?dpr=0.5&token=DTWJaNp33MXDxx7IYfh0o0b16xEkXPxQfvTdLFxvdkU&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/pages/ai/cta-bg%402x.png?dpr=0.5&token=DTWJaNp33MXDxx7IYfh0o0b16xEkXPxQfvTdLFxvdkU&expires=1784367449 1x, https://sktch.b-cdn.net/assets/pages/ai/cta-bg%402x.png?dpr=1&token=a1CWuUEcEmZGB4ey2j67vCcxNSfAwBLAIl3lbTy68Io&expires=1784367449 2x"
+  alt=""
+  class="get-started__background"
+  
+  
+  
+    loading="lazy"
+  
+>
+
+  
+
+  <div class="wrapper">
+    
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="ornament ornament--top-left"><defs><radialGradient id="ornament" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" gradientTransform="matrix(1 0 0 .9981 0 .001)"><stop offset="0%"></stop><stop offset="100%" stop-opacity="0"></stop></radialGradient></defs><path fill="url(#ornament)" fill-rule="evenodd" d="m8 0-.001 7H15v1H8v7H7V8H0V7h6.999L7 0h1Z"></path></svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="ornament ornament--top-right"><defs><radialGradient id="ornament" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" gradientTransform="matrix(1 0 0 .9981 0 .001)"><stop offset="0%"></stop><stop offset="100%" stop-opacity="0"></stop></radialGradient></defs><path fill="url(#ornament)" fill-rule="evenodd" d="m8 0-.001 7H15v1H8v7H7V8H0V7h6.999L7 0h1Z"></path></svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="ornament ornament--bottom-left"><defs><radialGradient id="ornament" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" gradientTransform="matrix(1 0 0 .9981 0 .001)"><stop offset="0%"></stop><stop offset="100%" stop-opacity="0"></stop></radialGradient></defs><path fill="url(#ornament)" fill-rule="evenodd" d="m8 0-.001 7H15v1H8v7H7V8H0V7h6.999L7 0h1Z"></path></svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="ornament ornament--bottom-right"><defs><radialGradient id="ornament" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" gradientTransform="matrix(1 0 0 .9981 0 .001)"><stop offset="0%"></stop><stop offset="100%" stop-opacity="0"></stop></radialGradient></defs><path fill="url(#ornament)" fill-rule="evenodd" d="m8 0-.001 7H15v1H8v7H7V8H0V7h6.999L7 0h1Z"></path></svg>
+
+
+    
+
+    
+      
+
+
+
+
+
+
+
+<img
+  src="https://sktch.b-cdn.net/assets/icons/mac-app-icon%402x.png?width=200&token=GheEdSOGvUNP3nJO4_Lbfo1dbJnZw_fqUfrzrnMtuEM&expires=1784367449"
+  srcset="https://sktch.b-cdn.net/assets/icons/mac-app-icon%402x.png?width=200&token=GheEdSOGvUNP3nJO4_Lbfo1dbJnZw_fqUfrzrnMtuEM&expires=1784367449 1x, https://sktch.b-cdn.net/assets/icons/mac-app-icon%402x.png?width=400&token=E_N8Xg5edx41Km0aj_bgPOZ7LTgO0v6UjX6uD52eh9A&expires=1784367449 2x"
+  alt="Sketch app icon"
+  class="get-started__app-icon"
+  
+    width="400"
+  
+  
+    height="400"
+  
+  
+    loading="lazy"
+  
+>
+
+    
+
+    <div class="get-started__text">
+      <h2 class="get-started__title">Lock in without the lock-in</h2>
+      <p class="get-started__description section__header__blurb">Download Sketch and connect your favorite AI tools in minutes. No add-ons. No extra costs.</p>
+
+      
+        <div class="button-new-glow">
+          <a href="/downloads/mac/" class="section__cta button-new button-new--glow button-new--primary">Get started for free</a>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+      
+  
+</div>
+
+</main>
+
+
+    
+
+<footer class="main-footer" id="footer" role="contentinfo">
+  <div class="main-footer__footer pad-viewport">
+    <div class="main-footer__inner"><section
+  class="main-footer__nl"
+>
+  <div class="main-footer__nl__text">
+    <h2 class="main-footer__nl__heading">Never miss an update</h2>
+    <p class="main-footer__nl__blurb">
+      Get all the latest news, blog posts and product updates from Sketch, delivered directly to your inbox. We’ll
+      rarely send more than one email a month.
+    </p>
+  </div>
+  <form
+    action="/.netlify/functions/marketing-communications"
+    data-controller="newsletter"
+    data-action="newsletter#process"
+    data-newsletter-remote="true"
+    data-newsletter-success-value="You’re signed up! Check your inbox for a confirmation."
+    class="main-footer__nl__form"
+    method="POST"
+  >
+    <div class="input-group input-group--gap main-footer__nl__form__input-group">
+      <!-- For screenreader purposes only -->
+      <label class="visuallyhidden" for="main-footer-nl-email">Email</label>
+      <input
+        type="email"
+        name="email"
+        required
+        autocomplete="email"
+        placeholder="Email address"
+        aria-invalid="false"
+        aria-errormessage="main-footer-nl-error"
+        class="form-input form-input--wide"
+        id="main-footer-nl-email"
+        data-newsletter-target="email"
+      >
+      <button
+        data-newsletter-target="button"
+        type="submit"
+        class="
+          
+            button-new button-new--primary
+          
+          main-footer__nl__form__button
+        "
+        disabled="true"
+      >
+        Sign up
+      </button>
+    </div>
+    <div class="form-option main-footer__nl__confirm" data-newsletter-target="gdprConfirm">
+      <input
+        class="form-checkbox"
+        type="checkbox"
+        name="gdpr"
+        id="main-footer-nl-gdpr"
+        data-action="change->newsletter#enable"
+      >
+      <label for="main-footer-nl-gdpr" class="form-option-label form-option-label--small"
+        >I agree to receive marketing emails from Sketch.</label
+      >
+    </div>
+  </form>
+</section>
+
+<section class="main-footer__content"><nav class="main-footer__nav">
+            
+              
+<div class="main-footer__nav__group">
+  <h3 class="main-footer__nav__heading">
+    Product
+    
+  </h3>
+  <ul class="main-footer__nav__items"><li><a
+            class="main-footer__nav__item main-footer__nav__item--changelog"
+            href="/changelog/"
+            
+>Changelog
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--design"
+            href="/design/"
+            
+>Design
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--collaboration"
+            href="/collaborate/"
+            
+>Collaboration
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--prototyping"
+            href="/prototype/"
+            
+>Prototyping
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--developer-handoff"
+            href="/handoff/"
+            
+>Developer Handoff
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--ai"
+            href="/ai/"
+            
+>AI
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--all-features"
+            href="/features/"
+            
+>All Features
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--view-mirror-on-ios"
+            href="https://apps.apple.com/app/sketch-view-and-mirror/id1609224699"
+            
+target="_blank">View & Mirror on iOS
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentcolor" class="main-footer__nav__item__action main-footer__nav__item__action--icon">
+  <path d="M10.5 8H16v5.5M16 8l-7.5 7.5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--beta"
+            href="/beta/"
+            
+>Beta
+</a></li></ul>
+</div>
+
+            
+              
+<div class="main-footer__nav__group">
+  <h3 class="main-footer__nav__heading">
+    Explore
+    
+  </h3>
+  <ul class="main-footer__nav__items"><li><a
+            class="main-footer__nav__item main-footer__nav__item--pricing"
+            href="/pricing/"
+            
+>Pricing
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--roadmap"
+            href="/roadmap/"
+            
+>Roadmap
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--blog"
+            href="/blog/"
+            
+>Blog
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--design-resources"
+            href="/design-resources/"
+            
+>Design Resources
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--plugins-integrations"
+            href="/plugins/"
+            
+>Plugins & Integrations
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--figma-to-sketch"
+            href="/vs/figma/"
+            
+>Figma to Sketch
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--free-for-education"
+            href="/education/"
+            
+>Free for Education
+</a></li></ul>
+</div>
+
+            
+              
+<div class="main-footer__nav__group">
+  <h3 class="main-footer__nav__heading">
+    Support
+    
+  </h3>
+  <ul class="main-footer__nav__items"><li><a
+            class="main-footer__nav__item main-footer__nav__item--help-center"
+            href="/support/"
+            
+>Help Center
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--documentation"
+            href="/docs/"
+            
+>Documentation
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--request-a-feature"
+            href="/feature-requests/"
+            
+>Request a Feature
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--community-discord"
+            href="https://discord.gg/ascPpfDSSV"
+            
+target="_blank">Community Discord
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentcolor" class="main-footer__nav__item__action main-footer__nav__item__action--icon">
+  <path d="M10.5 8H16v5.5M16 8l-7.5 7.5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--developer-platform"
+            href="https://developer.sketch.com"
+            
+target="_blank">Developer Platform
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentcolor" class="main-footer__nav__item__action main-footer__nav__item__action--icon">
+  <path d="M10.5 8H16v5.5M16 8l-7.5 7.5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--service-status"
+            href="https://status.sketch.com"
+            
+target="_blank">Service Status
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentcolor" class="main-footer__nav__item__action main-footer__nav__item__action--icon">
+  <path d="M10.5 8H16v5.5M16 8l-7.5 7.5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--manage-license"
+            href="/license/"
+            
+>Manage License
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--contact-us"
+            href="/support/contact/"
+            
+>Contact Us
+</a></li></ul>
+</div>
+
+            
+              
+<div class="main-footer__nav__group">
+  <h3 class="main-footer__nav__heading">
+    Company
+    
+  </h3>
+  <ul class="main-footer__nav__items"><li><a
+            class="main-footer__nav__item main-footer__nav__item--about-us"
+            href="/about-us/"
+            
+>About Us
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--careers"
+            href="/careers/"
+            
+>Careers
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--partners"
+            href="/partners/"
+            
+>Partners
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--security"
+            href="/security/"
+            
+>Security
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--privacy-policy"
+            href="/privacy/"
+            
+>Privacy Policy
+</a></li><li><a
+            class="main-footer__nav__item main-footer__nav__item--terms-policies"
+            href="/legal/"
+            
+>Terms & Policies
+</a></li></ul>
+</div>
+
+            
+          </nav><div class="main-footer__sketch">
+          <div class="main-footer__logo">
+            <a href="/home/" class="main-footer__logo__link"><span class="visuallyhidden">Home</span></a>
+          </div>
+          <p class="main-footer__notice">&copy; 2026 Sketch B.V.</p>
+          <ul class="main-footer__social">
+            
+              
+              <li class="main-footer__social__item">
+                <a
+                  href="https://x.com/sketch"
+                  class="main-footer__social__link main-footer__social__link--x"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  aria-label="Sketch X link"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor" class="main-footer__social__icon"><path d="M12.117 8.622L18.446 1h-1.5l-5.495 6.618L7.062 1H2l6.637 10.007L2 19h1.5l5.803-6.989L13.938 19H19L12.117 8.622zm-2.054 2.474l-.672-.997-5.35-7.93h2.303l4.318 6.4.672.996 5.613 8.318h-2.304l-4.58-6.787z"></path></svg>
+
+                </a>
+              </li>
+            
+              
+              <li class="main-footer__social__item">
+                <a
+                  href="https://bsky.app/profile/sketch.com"
+                  class="main-footer__social__link main-footer__social__link--bluesky"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  aria-label="Sketch Bluesky link"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor" class="main-footer__social__icon"><path d="M4.335 2.212C6.628 3.972 9.095 7.539 10 9.453c.906-1.914 3.372-5.482 5.665-7.241C17.319.942 20-.04 20 3.086c0 .624-.35 5.244-.556 5.994-.713 2.608-3.315 3.273-5.629 2.87 4.045.704 5.074 3.035 2.852 5.366-4.22 4.426-6.066-1.111-6.54-2.53-.086-.26-.126-.382-.127-.278 0-.104-.041.018-.128.278-.473 1.419-2.318 6.956-6.539 2.53-2.222-2.331-1.193-4.662 2.852-5.366-2.314.403-4.916-.262-5.63-2.87C.35 8.33 0 3.71 0 3.086 0-.04 2.68.942 4.335 2.212Z" fill-rule="nonzero"></path></svg>
+
+                </a>
+              </li>
+            
+              
+              <li class="main-footer__social__item">
+                <a
+                  href="https://www.instagram.com/madewithsketch/"
+                  class="main-footer__social__link main-footer__social__link--instagram"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  aria-label="Sketch Instagram link"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor" class="main-footer__social__icon"><path d="M10 1c-2.445 0-2.75.011-3.71.054-.959.045-1.611.196-2.185.418A4.407 4.407 0 002.51 2.511c-.5.5-.809 1.002-1.037 1.594-.223.574-.375 1.226-.419 2.185C1.009 7.25 1 7.555 1 10c0 2.445.011 2.75.054 3.71.045.958.196 1.611.419 2.185a4.405 4.405 0 001.038 1.595c.5.499 1.002.809 1.594 1.038.575.222 1.227.374 2.185.418.96.045 1.265.054 3.71.054 2.445 0 2.75-.011 3.71-.054.958-.045 1.611-.197 2.185-.419a4.424 4.424 0 001.595-1.038c.499-.5.809-1 1.038-1.594.222-.574.374-1.227.418-2.185.045-.96.054-1.265.054-3.71 0-2.445-.011-2.75-.054-3.71-.045-.958-.197-1.612-.419-2.185A4.417 4.417 0 0017.49 2.51c-.5-.5-1-.809-1.594-1.037-.574-.223-1.227-.375-2.185-.419C12.75 1.009 12.445 1 10 1zm3.637 1.673c.878.041 1.354.187 1.67.311.422.163.72.358 1.037.672.315.315.51.615.672 1.036.123.317.27.793.31 1.67.043.95.052 1.235.052 3.638 0 2.403-.01 2.689-.055 3.637-.046.878-.192 1.354-.316 1.67-.168.422-.359.72-.674 1.037-.314.315-.618.51-1.035.672-.315.123-.799.27-1.676.31-.956.043-1.237.052-3.645.052s-2.689-.01-3.644-.055c-.878-.046-1.362-.192-1.677-.316a2.787 2.787 0 01-1.034-.674 2.733 2.733 0 01-.675-1.035c-.124-.315-.27-.799-.315-1.676-.034-.945-.046-1.237-.046-3.633 0-2.397.012-2.69.046-3.646.046-.878.191-1.36.315-1.676.157-.427.36-.72.675-1.035a2.662 2.662 0 011.034-.674c.315-.124.788-.27 1.666-.316.956-.033 1.237-.045 3.644-.045L10 2.62c2.402 0 2.689.012 3.637.053zM10 5.378a4.621 4.621 0 100 9.243 4.621 4.621 0 000-9.243zM10 13a3 3 0 110-6 3 3 0 110 6zm5.884-7.804a1.08 1.08 0 01-2.16 0 1.08 1.08 0 012.16 0z"></path></svg>
+
+                </a>
+              </li>
+            
+              
+              <li class="main-footer__social__item">
+                <a
+                  href="https://www.youtube.com/c/SketchDesign/"
+                  class="main-footer__social__link main-footer__social__link--youtube"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  aria-label="Sketch YouTube link"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="currentcolor" class="main-footer__social__icon">
+  <path d="M19.582 5.162a2.509 2.509 0 00-1.74-1.744C16.282 3 10.009 3 10.009 3s-6.258-.008-7.833.418a2.509 2.509 0 00-1.74 1.744A26.147 26.147 0 000 10.009c-.005 1.62.141 3.236.436 4.828a2.509 2.509 0 001.74 1.744C3.733 17 10.01 17 10.01 17s6.257 0 7.833-.42a2.509 2.509 0 001.74-1.743c.289-1.593.428-3.21.417-4.828a26.131 26.131 0 00-.417-4.847zM8.007 13.007V7.001l5.221 3.008z" fill-rule="evenodd"></path>
+</svg>
+
+                </a>
+              </li>
+            
+              
+              <li class="main-footer__social__item">
+                <a
+                  href="https://mastodon.design/@Sketch"
+                  class="main-footer__social__link main-footer__social__link--mastodon"
+                  target="_blank"
+                  rel="me nofollow noreferrer"
+                  aria-label="Sketch Mastodon link"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor" class="main-footer__social__icon"><path d="M10.53 1c2.33.019 4.574.268 5.88.86 0 0 2.59 1.145 2.59 5.05v.296c-.003.787-.043 2.972-.36 4.586-.251 1.27-2.24 2.658-4.523 2.927-1.19.141-2.363.27-3.614.213a21.382 21.382 0 01-3.658-.482c0 .197.013.384.038.559.264 1.993 2 2.113 3.644 2.168 1.658.056 3.136-.404 3.136-.404l.068 1.482-.022.01c-.17.084-1.304.614-3.206.717-1.14.063-2.555-.028-4.203-.458-3.575-.935-4.19-4.7-4.284-8.517-.028-1.134-.01-2.203-.01-3.097 0-3.905 2.59-5.05 2.59-5.05 1.306-.592 3.547-.841 5.878-.86h.057zm2.635 3.05c-.971 0-1.706.37-2.191 1.106l-.474.783-.472-.783c-.486-.737-1.221-1.104-2.191-1.104-.84 0-1.515.29-2.03.859-.501.568-.75 1.336-.75 2.302v4.727h1.896V7.351c0-.966.412-1.458 1.237-1.458.91 0 1.368.583 1.368 1.734v2.512h1.885V7.628c0-1.152.457-1.734 1.369-1.734.824 0 1.236.49 1.236 1.457v4.59h1.897V7.212c0-.966-.25-1.734-.75-2.302-.516-.569-1.191-.86-2.03-.86z"></path></svg>
+
+                </a>
+              </li>
+            
+              
+              <li class="main-footer__social__item">
+                <a
+                  href="https://discord.gg/ascPpfDSSV"
+                  class="main-footer__social__link main-footer__social__link--discord"
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  aria-label="Sketch Discord link"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor" class="main-footer__social__icon"><path d="M16.93 3.598A15.249 15.249 0 0013.17 2.5a.057.057 0 00-.06.028c-.163.29-.343.668-.469.965a14.093 14.093 0 00-4.231 0 9.775 9.775 0 00-.476-.965.06.06 0 00-.06-.028c-1.312.225-2.574.61-3.76 1.098a.053.053 0 00-.025.021C1.404 7.34.703 10.967 1.05 14.549a.063.063 0 00.024.043 15.412 15.412 0 004.635 2.34.06.06 0 00.065-.021c.357-.487.675-1 .948-1.54a.058.058 0 00-.032-.082 10.147 10.147 0 01-1.449-.69.059.059 0 01-.006-.098c.097-.073.195-.148.288-.225a.057.057 0 01.06-.008c3.04 1.386 6.33 1.386 9.335 0a.057.057 0 01.06.007c.093.076.19.153.29.226a.059.059 0 01-.005.098c-.463.27-.948.498-1.45.69a.058.058 0 00-.031.082c.279.54.596 1.053.947 1.54a.059.059 0 00.065.022 15.361 15.361 0 004.642-2.34.059.059 0 00.024-.043c.415-4.291-.695-8.019-2.943-11.33a.047.047 0 00-.024-.022zM6.98 12.463c-.981 0-1.79-.9-1.79-2.006s.793-2.006 1.79-2.006c1.005 0 1.806.908 1.79 2.006 0 1.106-.793 2.006-1.79 2.006zm6.62 0c-.981 0-1.79-.9-1.79-2.006s.793-2.006 1.79-2.006c1.005 0 1.806.908 1.79 2.006 0 1.106-.785 2.006-1.79 2.006z"></path></svg>
+
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+    
+
+    
+
+    
+    
+<script>
+        function overwriter({ path }) {
+          if (path.startsWith('/home')) path = '/'
+          return path
+        }
+      </script>
+      <script
+        async
+        crossorigin="anonymous"
+        data-hostname="sketch.com"
+        data-ignore-pages="/analytics/*,/license,/license/*"
+        data-non-unique-hostnames="sketchapp.com"
+        data-path-overwriter="overwriter"
+        src="https://scripts.simpleanalyticscdn.com/latest.js"
+      ></script>
+      <noscript
+        ><img
+          src="https://queue.simpleanalyticscdn.com/noscript.gif?hostname=sketch.com"
+          alt=""
+          referrerpolicy="no-referrer-when-downgrade"
+      ></noscript>
+    
+  </body>
+</html>
