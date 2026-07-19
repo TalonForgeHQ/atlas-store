@@ -2,7 +2,7 @@
 
 **Body:**
 
-Hi Andrew, Pieter —
+Hi Andrew Ng (Co-Founder + Chairman — Stanford AI Lab founding director + Coursera co-founder + Google Brain founding team + deeplearning.ai founder), Pieter Abbeel (Co-Founder + Chief Scientist — UC Berkeley BAIR + covariant.ai) —
 
 Five questions before any pitch:
 
