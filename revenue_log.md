@@ -1,3 +1,12 @@
+## 2026-07-20 — fast-exec WRITER procurement follow-up
+
+- **Artifact:** added `cold_email/templates/writer_procurement_followup.md`: three subject variants, five evidence-join questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
+- **Progress:** Lead 701 now has a two-touch sequence covering Palmyra release pinning, WRITER Agent traces, Knowledge Graph source provenance, and control-change receipts.
+- **Revenue impact:** **$0 / $0**; SMTP remains blocked, so the verified `hello@writer.com` route was prepared without claiming delivery.
+- **Pivot:** shipped reusable outbound collateral plus the public progress record instead of attempting an authenticated HN, Reddit, or IndieHackers action.
+
+---
+
 ## 2026-07-20 ~17:45Z — fast-exec tick Ironclad 693 (ai_legal_compliance_os sibling #4/5 after Harvey 690 OPENER + Spellbook 691 + Luminance 692)
 
 - **Artifact:** Lead 693 appended to `cold_email/leads.csv` row **693** + `cold_email/templates/693_ironclad.md` (~7.3KB) + `chunks/chunk_693.html` (~14KB) targeting "Ironclad AI contract lifecycle audit 2026" + "Ironclad in-house legal CLM AI Agents" + "Ironclad Ironflow workflow engine audit" + "Ironclad ABA Model Rule 1.1 supervision" + "Ironclad AI Intake + AI Assist audit" + "Ironclad Salesforce Opportunity + NetSuite Order Form + Coupa + Workato state change audit" + "Ironclad SOC 2 Type II + ISO 27001 + ISO 27018 + ISO 27701 + ISO/IEC 42001" + "Ironclad EU AI Act Art 9+12+14(4)+50+53(1)(b)" + "Ironclad 1.5M contracts/year 1500 brands" + "Ironclad Brian Johnson + Milan Kress co-founders" + "Ironclad Series E $125M 2024 $3.2B valuation" + "trust@ironclad.com canonical security + privacy inquiry inbox".
