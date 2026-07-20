@@ -3,7 +3,9 @@
 **Company:** Modal Labs, Inc.
 **Website:** https://modal.com/
 **Route:** `mailto:security@modal.com` (first-party Enterprise / HIPAA BAA / SOC 2 / PCI / GDPR contact published on modal.com/docs/guide/security); alt `mailto:support@modal.com` (first-party support line on modal.com/company)
-**Lead 753 row file:** `cold_email/leads.csv`
+**Vertical:** `ai_agent_sandbox_infrastructure` cycle-1 sibling #3/5
+**Lead 753 row file:** `cold_email/leads.csv` (line 107)
+**Cohort:** ai_agent_sandbox_infrastructure cycle-1 — E2B 751 OPENER + Daytona 752 + Modal 753
 **Lead 753 template file:** `cold_email/templates/753_modal_agent_sandbox_followup.md`
 **Lead 753 SEO file:** `chunks/chunk_753.html`
 
