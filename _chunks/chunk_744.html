@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monica Multi-Model AI Assistant Audit Checklist — Model Routing, Human Review, Retention and Deletion Evidence</title>
+<meta name="description" content="A buyer-facing Monica multi-model AI assistant audit checklist covering request provenance, model and provider routing, browser and app permissions, human review, downstream use, retention, deletion, and model-catalog change evidence.">
+<meta name="keywords" content="Monica multi-model AI assistant audit, Monica model routing audit, Monica browser extension compliance, Monica human oversight evidence, Monica retention deletion audit, Monica AI provider change log, Monica procurement checklist">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_744.html">
+</head>
+<body>
+<article>
+<h1>Monica Multi-Model AI Assistant Audit Checklist</h1>
+<p class="byline">By Atlas (Talon Forge) &middot; Lead 744 &middot; Updated 2026-07-20</p>
+
+<p><strong>Long-tail target:</strong> <em>Monica multi-model AI assistant audit</em>, with supporting searches for Monica model routing audit, Monica browser extension compliance, Monica human-oversight evidence, and Monica retention/deletion audit.</p>
+
+<p>Monica's current first-party homepage describes an all-in-one assistant powered by GPT-5.5, Claude 4.7 Opus, Gemini 3.1 Pro, GPT Image 2, Sora 2, Nano Banana 2, and other models. The product spans chat, search, writing, document summaries, translation, code generation, image creation, and video generation. That breadth makes a static privacy-policy review insufficient: a buyer needs an event-level chain that shows which workflow, model, provider, human decision, and data policy applied to each output.</p>
+
+<h2>Gap 1 — Request-to-model provenance</h2>
+<p>For each request, preserve the source context, account or tenant, product surface, selected model/provider, model version, prompt or system-policy version, output hash, timestamp, and region. If routing is automatic, record the routing rule and reason rather than only the model name.</p>
+<ul>
+<li>Request ID and source-context hash</li>
+<li>Selected provider, model, and version</li>
+<li>Routing rule or user selection</li>
+<li>Prompt/system-policy version</li>
+<li>Generated-output hash and timestamp</li>
+</ul>
+
+<h2>Gap 2 — Browser and app data-use evidence</h2>
+<p>A multi-surface assistant should connect each browser or app action to the permission used, data category accessed, stated purpose, retention window, and downstream provider. The evidence should distinguish user-selected text, page context, uploaded files, account history, and generated media rather than grouping everything as generic usage data.</p>
+<ul>
+<li>Surface and permission used</li>
+<li>Data category and purpose</li>
+<li>Tenant, role, locale, and region</li>
+<li>Downstream provider and transfer path</li>
+<li>Retention and training-use setting</li>
+</ul>
+
+<h2>Gap 3 — Human review and downstream use</h2>
+<p>Generated replies, summaries, code, images, and video need a reconstruction path from draft to human decision. A buyer should be able to determine whether the user accepted, edited, rejected, copied, downloaded, or sent the result, including the destination where the product controls that action.</p>
+<ul>
+<li>Draft output and model/provider lineage</li>
+<li>Accept, edit, reject, copy, download, or send event</li>
+<li>Final-output hash after user edits</li>
+<li>Destination surface or export type</li>
+<li>Override, warning, or escalation event</li>
+</ul>
+
+<h2>Gap 4 — Model-catalog and provider change management</h2>
+<p>When Monica adds, removes, renames, or changes a model or provider, the audit record should identify affected workflows, policy changes, customer notice, rollback criteria, and remediation. This turns a changing homepage model catalog into an operational control rather than an undocumented dependency.</p>
+<ul>
+<li>Old and new catalog versions</li>
+<li>Affected features and tenants</li>
+<li>Provider and policy deltas</li>
+<li>Customer notice and effective date</li>
+<li>Rollback, exception, and remediation receipt</li>
+</ul>
+
+<h2>Gap 5 — Access, retention, and deletion cascade</h2>
+<p>Monica's first-party privacy policy provides <code>contact@monica.im</code> for rights requests. A procurement-grade pack should go further by showing how a request travels from Monica-controlled stores to provider-held data, caches, logs, generated media, backups, and legally retained exceptions.</p>
+<ul>
+<li>Request identity and scope</li>
+<li>Monica-controlled store inventory</li>
+<li>Provider cascade and completion status</li>
+<li>Backup or legal-retention exception</li>
+<li>Completion timestamp and customer receipt</li>
+</ul>
+
+<h2>Minimum export schema</h2>
+<p>A compact export can join: <code>request_id</code>, <code>tenant_id</code>, <code>surface</code>, <code>source_context_hash</code>, <code>provider</code>, <code>model_version</code>, <code>routing_rule_version</code>, <code>prompt_policy_version</code>, <code>output_hash</code>, <code>human_decision</code>, <code>final_output_hash</code>, <code>destination</code>, <code>region</code>, <code>retention_policy_version</code>, <code>deletion_request_id</code>, and <code>completion_receipt</code>.</p>
+
+<h2>How buyers use this checklist</h2>
+<p>Security, privacy, legal, and procurement teams can map these five joins to GDPR and UK GDPR accountability, SOC 2 change-management and access controls, NIST AI RMF governance, ISO/IEC 42001 AI-management controls, and applicable EU AI Act transparency and human-oversight obligations. The checklist does not assume Monica's legal parent, registered jurisdiction, certifications, representative appointments, or product-risk classification; those remain evidence requests until verified.</p>
+
+<h2>Engagement model</h2>
+<p><strong>$500 / 48-hour fixed scope:</strong> one representative Monica workflow mapped to the five joins above, with source index, evidence owner, missing receipt, buyer impact, and remediation.</p>
+<p><strong>$497/month refresh:</strong> update the map after material model, provider, permission, policy, retention, or workflow changes.</p>
+
+<h2>Verified source</h2>
+<ul>
+<li><a href="https://monica.im/">Monica first-party homepage</a> — current multi-model and multi-workflow positioning checked 2026-07-20</li>
+<li><a href="https://monica.im/privacy">Monica Privacy Policy</a> — last updated June 14, 2024; effective February 28, 2023; publishes <code>contact@monica.im</code></li>
+</ul>
+
+<p class="footer">Atlas @ Talon Forge LLC &middot; Lead 744 Monica &middot; <a href="https://talonforgehq.github.io/atlas-store/chunks/chunk_744.html">canonical audit checklist</a></p>
+</article>
+</body>
+</html>
