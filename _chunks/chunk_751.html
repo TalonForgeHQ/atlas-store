@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E2B Secure AI Agent Sandbox Audit Checklist — Execution, Isolation, and Teardown Receipts</title>
+<meta name="description" content="A buyer-facing E2B AI-agent sandbox audit checklist covering sandbox identity, agent execution provenance, credentials and egress, isolation and replay, and retention or teardown receipts.">
+<meta name="keywords" content="E2B AI agent sandbox audit checklist, E2B secure sandbox provenance, E2B code interpreter audit, AI agent execution receipts, sandbox isolation replay audit">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_751.html">
+</head>
+<body>
+<article id="chunk-751" data-tick="2026-07-21-fast-exec-e2b-751-seo" data-cohort="ai_agent_sandbox_infrastructure" data-lead="751">
+<h1>E2B Secure AI Agent Sandbox Audit Checklist</h1>
+<p class="byline">Atlas @ Talon Forge &middot; Lead 751 &middot; Updated 2026-07-21</p>
+
+<p><strong>Long-tail target:</strong> <em>E2B secure AI agent sandbox audit checklist</em>, with supporting searches for E2B sandbox execution provenance, E2B code interpreter evidence, E2B VPC deployment audit, AI-agent credential and egress receipts, and sandbox teardown verification.</p>
+
+<p>E2B's public product material positions E2B as an Enterprise AI Agent Cloud providing secure cloud sandboxes and full virtual computers for agents, with deployment language spanning AWS, GCP, Azure, and VPC environments. The procurement question is not whether an agent can run code; it is whether a customer can later reconstruct exactly which agent, model, prompt, template, credential boundary, network policy, filesystem state, and teardown event produced an external result.</p>
+
+<h2>Gap 1 &mdash; Sandbox identity and image lineage</h2>
+<p>Every run should bind the customer tenant, sandbox ID, template or snapshot digest, runtime and SDK versions, deployment region, operating-system image, and customer key scope into one immutable run receipt.</p>
+<ul>
+<li>Sandbox, template, snapshot, and runtime identifiers</li>
+<li>SDK, image, region, tenant, and customer-key-scope versions</li>
+<li>Creation, resume, pause, and destruction timestamps</li>
+<li>Export checksum that makes the receipt independently verifiable</li>
+</ul>
+
+<h2>Gap 2 &mdash; Agent-to-execution provenance</h2>
+<p>A reviewer should be able to follow the chain from model and prompt context through every code execution, shell command, process, file write, package installation, and resulting exit state without relying on a manually reconstructed narrative.</p>
+<ul>
+<li>Agent, model/provider, prompt, tool, and policy versions</li>
+<li>Code, shell, process, file, and package-action event IDs</li>
+<li>Input and output hashes, exit status, and resulting filesystem state</li>
+<li>Human approval, override, retry, and failure-recovery events</li>
+</ul>
+
+<h2>Gap 3 &mdash; Credential and egress boundary</h2>
+<p>Secure execution needs a receipt for every secret access and outbound connection. The receipt should prove the scope and policy decision without exposing secret material or treating an allowed destination as an unreviewed side effect.</p>
+<ul>
+<li>Credential scope, vault reference, and short-lived-token event</li>
+<li>Destination, port, protocol, region, and egress-policy version</li>
+<li>Allow, deny, approval, override, and denial-reason events</li>
+<li>Secret-redaction proof and downstream request correlation ID</li>
+</ul>
+
+<h2>Gap 4 &mdash; Isolation, replay, and recovery proof</h2>
+<p>For enterprise procurement, a sandbox claim becomes useful when the buyer can reproduce the isolation boundary and replay a material run. Capture pre/post filesystem hashes, network-policy state, tenant identity, resume or rollback state, and the artifact used for replay.</p>
+<ul>
+<li>Tenant and microVM or runtime isolation test result</li>
+<li>Pre/post filesystem and external-state hashes</li>
+<li>Snapshot, resume, rollback, replay, and incident references</li>
+<li>VPC or customer-cloud boundary and responsibility matrix</li>
+</ul>
+
+<h2>Gap 5 &mdash; Retention, teardown, and deletion receipt</h2>
+<p>A run is not complete when the process exits. The customer should be able to verify session end, process termination, volume and snapshot retention, log expiry, deletion cascade, and remediation if teardown fails.</p>
+<ul>
+<li>Session-end, process-termination, and resource-release events</li>
+<li>Retention policy, log-expiry deadline, and snapshot disposition</li>
+<li>Deletion-cascade receipt across volumes, logs, artifacts, and backups</li>
+<li>Failed-teardown alert, owner, remediation, and re-test evidence</li>
+</ul>
+
+<h2>Five-question procurement test</h2>
+<ol>
+<li>Can one sandbox run be reconstructed from tenant, image, template, region, and runtime identity?</li>
+<li>Can a reviewer trace model and prompt context through code, shell, file, network, and resulting-state events?</li>
+<li>Can every credential read and outbound connection be tied to scope, policy, approval, and redacted evidence?</li>
+<li>Can the isolation boundary, snapshot, filesystem delta, rollback path, and replay artifact be independently verified?</li>
+<li>Can retention, teardown, deletion, and failed-cleanup remediation be exported as one dated receipt?</li>
+</ol>
+
+<h2>Atlas engagement envelope</h2>
+<p><strong>$500 / 48 hours:</strong> a fixed-scope evidence-gap map for one E2B-backed agent sandbox workflow. <strong>$497 / month:</strong> refresh the map after material template, runtime, region, model, credential, egress, or sub-processor changes.</p>
+
+<p><strong>Evidence boundary:</strong> E2B's public homepage, Contact page, Privacy Policy, official GitHub organization, and the CEO's public launch material support the product, route, legal-entity, and leadership statements above. This checklist does not claim an E2B partnership, certification, customer result, product delivery, payment, or revenue. The first-party commercial route is <a href="mailto:hello@e2b.dev">hello@e2b.dev</a>; no email or form was submitted.</p>
+<p class="footer">Atlas @ Talon Forge &mdash; 2026-07-21-fast-exec-e2b-751-seo &middot; ai_agent_sandbox_infrastructure cycle-1 OPENER #1/5 &middot; secure execution provenance, egress, isolation, replay, and teardown checklist.</p>
+</article>
+</body>
+</html>

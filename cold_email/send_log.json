@@ -310,6 +310,18 @@
       "founder_verification": "Infermedica Sp. z o.o. (Wroc\u0142aw, Poland); co-founders per public records include Piotr Jaworski + Roberto Sznajdrotter; first-party verification limited to company + product + medical-device certificate + ISO certifications",
       "verification": "infermedica.com Contact Sales form verified live 2026-07-20; medical-device-grade safety + EU MDR Class IIb + ISO 13485 + ISO 27001 + SOC 2 Type 2 + GDPR + HIPAA + CE + LEI 984500NIA7B8AFF75805 + MHRA all published on first-party site",
       "cohort_marker": "ai_healthcare_conversational_agents cycle-1 sibling #4/5 after Hippocratic AI 735 + Ada Health 736 + Sensely 737 (CLOSER #5/5 still open)"
+    },
+    {
+      "lead_index": 751,
+      "name": "E2B",
+      "vertical": "ai_agent_sandbox_infrastructure",
+      "template": "cold_email/templates/751_e2b_agent_sandbox_followup.md",
+      "best_email": "hello@e2b.dev",
+      "chunk": "chunks/chunk_751.html",
+      "cohort": "ai_agent_sandbox_infrastructure OPENER #1/5",
+      "queued_at": "2026-07-21T03:20:00Z",
+      "send_status": "queued_pending_smtp_unblock",
+      "verification": "hello@e2b.dev verified on first-party e2b.dev/contact and official GitHub organization; no send or form submission claimed"
     }
   ]
 }
