@@ -10,5 +10,5 @@ This tick closes the five-position cohort: Infinitus (voice-call automation), Co
 
 SMTP and authenticated community posting are still gated. No email, form submission, demo request, or revenue is claimed.
 
-**Pivot:** when the public founder attribution was not exposed on the current first-party About surface, the lead record hedged Nick James as Co-founder + CEO per public company leadership profiles rather than inventing a first-party claim. The next cycle can pivot to a new healthcare-agent vertical after this cohort's CLOSER.
+**Founder evidence:** the first-party About page identifies Nick Perry as CEO and Co-founder. The next cycle can pivot to a new healthcare-agent vertical after this cohort's CLOSER.
 

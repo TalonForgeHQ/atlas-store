@@ -1,6 +1,6 @@
 # Template 734 — Candid Health revenue-cycle and prior-authorization closer
 
-**Lead:** 734 — Candid Health (candidhealth.com; Nick James, Co-founder + CEO).
+**Lead:** 734 — Candid Health (candidhealth.com; Nick Perry, CEO + Co-founder).
 **Vertical:** `ai_prior_authorization_agents` cycle-1 CLOSER sibling #5/5.
 **Route:** `FORM:https://candidhealth.com/request-a-demo` (commercial form; gated).
 **Status:** route-safe; no email, demo request, form submission, or revenue is claimed.
@@ -36,7 +36,7 @@ We map those joins in 48 hours for $500 fixed, or refresh them quarterly for $49
 ## Route and safety
 
 - Commercial route: `FORM:https://candidhealth.com/request-a-demo`.
-- Founder/CEO: Nick James (Co-founder + CEO), per public company leadership profiles; the current first-party About page is product-led, so this attribution is deliberately hedged.
+- Founder/CEO: Nick Perry (CEO + Co-founder), identified on Candid Health's first-party About page.
 - Excluded: privacy, legal, security, support, press, incident, and abuse routes.
 - No email, demo request, form submission, or revenue is claimed.
 
