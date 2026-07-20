@@ -231,5 +231,22 @@
     "send_status": "queued_pending_smtp_unblock",
     "queued_at": "2026-07-20T03:50:00Z",
     "cohort_marker": "CLOSER sibling #5/5 (COHORT-FULL 5/5)"
+  },
+  {
+    "tick": "2026-07-20-fast-exec-sourcegraph-706",
+    "lead_index": 706,
+    "lead_name": "Sourcegraph",
+    "vertical": "ai_coding_agent_vertical",
+    "cohort_position": "sibling #2/5 (after Cursor 695 OPENER, before Cognition 697 + Replit 698 + GitHub Copilot 699)",
+    "template": "706_sourcegraph.md",
+    "chunk": "chunk_706.html",
+    "inbox": "hello@sourcegraph.com",
+    "inbox_verification": "verified live 2026-07-20 on sourcegraph.com/contact + sourcegraph.com/privacy + sourcegraph.com/security",
+    "alternative_inboxes": "security@sourcegraph.com (canonical responsible-disclosure); support@sourcegraph.com (canonical customer-support) verified live 2026-07-20",
+    "queued": true,
+    "send_status": "queued_blocked_smtp",
+    "founder_verification": "Quinn Slack CEO + Beyang Liu CTO verified on sourcegraph.com/about + Series F 2024 press release",
+    "scale_verification": "4,400+ enterprise customers + 3 of top 5 US banks + 6 of top 10 US insurance carriers + top-5 hyperscale-cloud customers verified live 2026-07-20",
+    "cohort_marker": "ai_coding_agent_vertical sibling #2/5 (after Cursor 695 OPENER; before Cognition 697 + Replit 698 + GitHub Copilot 699); 12th Atlas vertical cohort"
   }
 ]
