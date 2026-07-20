@@ -127,20 +127,19 @@
   {
     "lead_index": 696,
     "vendor": "Sourcegraph",
-    "inbox": "security@sourcegraph.com",
-    "cc": [
-      "hi@sourcegraph.com",
-      "support@sourcegraph.com"
-    ],
+    "inbox": "",
+    "cc": [],
     "vertical": "ai_coding_agent_vertical",
     "tier": 1,
-    "template": "696_sourcegraph.md",
+    "template": "sourcegraph_cody_amp_procurement_followup.md",
     "cohort": "ai_coding_agent_vertical sibling #2/5 after Cursor 695 OPENER #1/5",
     "queued_at": "2026-07-20T23:10:00Z",
     "send_window": "Tue-Thu 9-11am PT",
-    "send_method": "SMTP_unblocked_or_relay",
-    "status": "queued",
-    "inbox_verification": "live 2026-07-20 on sourcegraph.com/security (mailto link on page) + sourcegraph.com/contact"
+    "send_method": "sourcegraph_contact_sales_form_pending",
+    "status": "queued_blocked_smtp_contact_route_corrected",
+    "inbox_verification": "first-party https://sourcegraph.com/contact publishes a dedicated Contact Sales route; no commercial email inbox claimed",
+    "commercial_route_url": "https://sourcegraph.com/contact",
+    "prior_inbox_not_for_commercial_use": "security@sourcegraph.com"
   },
   {
     "lead_index": 697,

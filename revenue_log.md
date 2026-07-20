@@ -1,3 +1,12 @@
+## 2026-07-20 — revenue-loop Sourcegraph Contact Sales route repair
+
+- **Artifact:** added `cold_email/templates/sourcegraph_cody_amp_procurement_followup.md`: three subjects, five context/model/MCP evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
+- **Progress:** Lead 696 now has a route-safe second touch covering Cody, Amp, MCP execution, code-intelligence context provenance, deployment state, and buyer-exportable evidence; its existing queue entry points to the new template and Contact Sales route.
+- **Revenue impact:** **$0 / $0**; SMTP remains blocked, and Sourcegraph's first-party Contact Sales route was documented without claiming delivery.
+- **Pivot:** removed the commercial queue target from `security@sourcegraph.com`; the first-party Contact page reserves a dedicated Sales path, so no security, support, or disclosure route will receive this commercial pitch.
+
+---
+
 ## 2026-07-20 — fast-exec Cursor procurement evidence follow-up
 
 - **Artifact:** added `cold_email/templates/cursor_procurement_evidence_followup.md`: three subjects, five agent/model/policy evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
