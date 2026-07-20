@@ -227,5 +227,29 @@
           "revenue_log.csv row 726"
         ],
         "note": "Lead 726 sibling #2/5 staged; SMTP remains gated; no send, contact-form submission, or revenue claimed. KLAS Spotlight 90.9 + A+ executive involvement + A+ likely-to-recommend + NEJM AI Trial + $70M Series C; first-party contact@nabla.com verified live on every page footer + copilot-contact + press + connect + legal-documents."
-      }
-    ]
+      },
+    {
+      "lead_index": 740,
+      "vendor": "Textio",
+      "inbox": "sales@textio.com",
+      "vertical": "ai_hr_workflow_agents",
+      "tier": 1,
+      "template": "740_textio_workplace_language_followup.md",
+      "chunk": "chunks/chunk_740.html",
+      "cohort": "ai_hr_workflow_agents OPENER #1/5",
+      "queued_at": "2026-07-20T20:10:00Z",
+      "send_window": "Tue-Thu 9-11am PT",
+      "send_method": "SMTP_unblocked_or_relay",
+      "status": "queued",
+      "artifacts": [
+        "cold_email/740_textio.md",
+        "cold_email/templates/740_textio_workplace_language_followup.md",
+        "chunks/chunk_740.html",
+        "sitemap.xml +1",
+        "index.html chunk_740 card",
+        "build-log.html tick 740 entry",
+        "revenue_log.csv row 740"
+      ],
+      "note": "Lead 740 sibling #1/5 OPENER staged; SMTP remains gated; no send, contact-form submission, or revenue claimed. Kieran Snyder Founder Emeritus + Jensen Harris Co-Founder &amp; CTO verified live on textio.com/about; sales@textio.com is first-party commercial route."
+    }
+  ]
