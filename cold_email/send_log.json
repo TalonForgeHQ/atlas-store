@@ -261,6 +261,28 @@
       "status": "ready_to_send",
       "blocker": "SMTP credentials not provided",
       "ts": "2026-07-20T03:42:18.672717Z"
+    },
+    {
+      "timestamp": "2026-07-20T11:46:00Z",
+      "lead_index": 714,
+      "name": "Secureframe",
+      "handle": "@secureframe",
+      "vertical": "ai_compliance_automation",
+      "tier": 1,
+      "template_file": "714_secureframe_closer.md",
+      "seo_chunk": "chunk_714.html",
+      "subject_variant_A": "Secureframe: five joins from continuous evidence to AI-native trust-agent procurement answers",
+      "subject_variant_B": "Can a Secureframe export reconstruct every control, AI prompt-output, framework overlap rule, and auditor-access event across 25+ frameworks?",
+      "subject_variant_C": "Secureframe vs Drata + Thoropass + Hyperproof + AuditBoard: where the AI Trust Agent + SMB-PMF + framework-inheritance rule closes the cohort",
+      "offer": "$500/48h evidence-gap map or $497/mo quarterly refresh retainer; YanXbt 5-client pattern $497/mo x 5 = $2,485 MRR per operator",
+      "inbox": "NONE - route-safe through first-party Get-a-Demo form at secureframe.com; hello@secureframe.com recorded as evidence but excluded from commercial sending",
+      "inbox_verification": "hello@secureframe.com from secureframe.com/contact + secureframe.com/privacy + secureframe.com/security verified live 2026-07-20; first-party Get-a-Demo form at https://www.secureframe.com/ is the route-safe commercial channel",
+      "alternative_inboxes": "support@secureframe.com (canonical customer-support); security@secureframe.com (canonical responsible-disclosure); no guessed sales inbox",
+      "queued": true,
+      "send_status": "queued_blocked_smtp",
+      "founder_verification": "Shrav Mehta Co-Founder + CEO + Amish Patel Co-Founder + CTO verified on secureframe.com About page",
+      "scale_verification": "4,000+ customers; 25+ frameworks; YC W20 alumni; $56M Series B 2022; $100M+ total raised; 100+ employees; San Francisco CA HQ",
+      "cohort_marker": "ai_compliance_automation cycle-2 COHORT-FULL CLOSER sibling #5/5 after Drata 710 + Thoropass 711 + Hyperproof 712 + AuditBoard 713 (cycle-2 FULL 5/5 CLOSED)"
     }
   ]
 }

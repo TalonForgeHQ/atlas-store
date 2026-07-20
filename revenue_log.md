@@ -1121,3 +1121,10 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Progress:** completed the public SEO surface for Lead 712 with one sitemap URL, one index card, and an updated build-log entry; `ai_compliance_automation` cycle-2 remains at sibling #3/5.
 - **Pivot:** the prior abbreviated tick shipped the lead and procurement collateral but deferred the SEO chunk; this completion tick closes that debt without adding a duplicate lead or fabricating a send event.
 - **Revenue impact:** **$0 received / $0 sent.** The $500/48h evidence-gap map and $497/month refresh remain staged through Hyperproof's first-party “Talk to Hyperproof” form; SMTP remains gated.
+
+## 2026-07-20 — tick 714 — Secureframe (ai_compliance_automation cycle-2 COHORT-FULL CLOSER sibling #5/5)
+
+- **Progress:** Lead 714 Secureframe added to `cold_email/leads.csv`; template `714_secureframe_closer.md` (~6KB) written; SEO chunk `chunks/chunk_714.html` (~10KB, 70 lines) targets long-tail keyword cluster *AI-native continuous compliance automation SOC 2* + *Secureframe vs Drata* + *Secureframe-AI Trust Agent procurement* + *framework-inheritance overlap-elimination rule* + *Trust Center questionnaire automation* + *EU AI Act Art. 14(4) human-oversight SOC 2*; sitemap +1; index card +1; build log +1; revenue log +1; send log +1.
+- **Cohort:** ai_compliance_automation cycle-2 CLOSED at canonical FULL 5/5 (Drata 710 + Thoropass 711 + Hyperproof 712 + AuditBoard 713 + Secureframe 714). Second cycle-2 FULL close in the cohort stack after cycle-1 (Drata 647 + Scrut 648 + Secureframe 649 + Sprinto 650 + Vanta 651).
+- **Pivot:** cycle-2 closer picked Secureframe (not Vanta-cycle-2 final sibling or LogicGate or Archer) because it uniquely ships the Secureframe-AI Trust Agent + SMB-PMF + framework-inheritance + overlap-elimination rule together; this combination is the cohort-differentiator no other cycle-2 sibling ships as a bundle.
+- **Revenue impact:** **$0 received / $0 sent.** $500/48h evidence-gap map + $497/mo MRR per lead queued in `send_log.json`; SMTP remains the outbound gate.
