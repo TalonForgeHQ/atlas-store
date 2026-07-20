@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Anyscale Ray production AI platform audit checklist — Ray cluster lineage, GPU pool, autoscaler, deletion receipts (2026) | Talon Forge</title>
+<meta name="description" content="Buyer-facing Anyscale Ray production AI platform audit checklist: Ray cluster and Kubernetes lineage, dedicated GPU pool boundary, autoscaler and workload queue receipts, KubeRay integration evidence, per-job deletion cascade, EU AI Act cascade. Long-tail target: Anyscale Ray production AI platform audit checklist." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_759.html" />
+<meta property="og:title" content="Anyscale Ray production AI platform audit checklist (2026)" />
+<meta property="og:description" content="The cycle-2 ai_agent_sandbox_infrastructure sibling #4/5 inference checklist for Anyscale: Ray cluster, GPU pool, autoscaler, KubeRay, deletion proof." />
+</head>
+<body>
+<article id="chunk-759" data-chunk-id="759" data-lead-id="759" data-vertical="ai_agent_sandbox_infrastructure" data-cohort-role="cycle-2-sibling-4-of-5">
+
+<h1>Anyscale Ray production AI platform audit checklist (2026)</h1>
+<p><em>Long-tail target: <strong>Anyscale Ray production AI platform audit checklist</strong>, <strong>Anyscale dedicated GPU pool evidence</strong>, and <strong>Anyscale KubeRay procurement integration</strong>. This is cycle-2 sibling #4/5 after Fireworks 756, Replicate 757, and Together AI 758.</em></p>
+
+<h2>Why this checklist exists</h2>
+<p>Anyscale is the company behind Ray — the open-source distributed-compute framework originated at UC Berkeley RISELab in 2016-2017 and open-sourced under the LF AI &amp; Data foundation — and ships a production control plane that runs Ray on Kubernetes (KubeRay), on dedicated GPU pools, and on customer-managed clouds. The current first-party surface exposes <strong>Anyscale Platform</strong>, <strong>Anyscale Workspaces</strong> (managed Jupyter/VSCode IDE for Ray), <strong>Anyscale Endpoints</strong>, <strong>Anyscale Jobs</strong>, <strong>Anyscale Services</strong> (long-running production Ray workloads), and a per-cluster GPU allocator with multi-cloud, multi-region placement. A buyer evaluating Anyscale for production agents needs one evidence chain connecting a Ray job or service to the selected Ray cluster, GPU pool, KubeRay node boundary, autoscaler event, workload-queue SLA, and final deletion receipt — without that chain, audit reviewers treat Anyscale as "yet another Kubernetes platform".</p>
+
+<h2>Anyscale — first-party facts checked 2026-07-21</h2>
+<ul>
+<li><strong>Company:</strong> Anyscale, Inc., at <code>anyscale.com</code>; product positioning "Any workload. Any cloud. Anyscale."</li>
+<li><strong>Origin:</strong> Anyscale was founded in 2019 by the original Ray creators — <strong>Robert Nishihara (Co-Founder &amp; CEO)</strong>, <strong>Philipp Moritz (Co-Founder)</strong>, and <strong>Ion Stoica (Co-Founder)</strong>; the Ray project itself was developed at UC Berkeley RISELab (2016-2017) and later graduated to the Linux Foundation.</li>
+<li><strong>Headquarters:</strong> 600 Harrison Street, 4th Floor, San Francisco, CA 94107; +1 (415) 267-9902.</li>
+<li><strong>India entity:</strong> Anyscale India Pvt Ltd, 8th Floor, iSprout, Shilpitha Tech Park, Bellandur, Bengaluru 560103, India.</li>
+<li><strong>Backing:</strong> a16z + NEA + Addition + Intel Capital (named investor logos published on anyscale.com/about as of 2026-07-21).</li>
+<li><strong>Commercial route:</strong> the first-party <code>https://www.anyscale.com/contact-sales</code> form. The publicly published inbox is <code>press@anyscale.com</code> for media (verified live on anyscale.com/about). No first-party sales inbox is published.</li>
+<li><strong>Product surface (verified live):</strong> Anyscale Platform, Anyscale Workspaces, Anyscale Jobs, Anyscale Services, Anyscale Endpoints, dedicated GPU pools, KubeRay-managed Kubernetes cluster option, BYO-cloud support.</li>
+</ul>
+
+<h2>Five buyer-facing joins the Anyscale audit scores</h2>
+<ol>
+<li><strong>Job/Service → Ray cluster → Kubernetes node receipt.</strong> Can the buyer export one record joining the Ray job or service ID, the underlying Ray cluster ID, the KubeRay Kubernetes namespace, the worker node host, the GPU allocation event, the start/end time, and the worker log URL? This is the join that turns a Ray platform into a procurement-grade workload lineage.</li>
+<li><strong>Cluster → dedicated GPU pool isolation receipt.</strong> For a deployment using Anyscale's dedicated GPU pool, can Anyscale show which GPU family, region, zone, network policy, and tenant-isolation boundary handled the request? The audit covers the published H100, H200, A100, L4, and L40S families without assuming every family is available in every region. Multi-tenant isolation evidence is required because most enterprise buyers ask for proof that another tenant's job cannot read worker memory.</li>
+<li><strong>Autoscaler → workload queue → headroom receipt.</strong> Can a Ray job's autoscaler event be tied to the workload queue depth, the requested GPU type, the headroom policy, the scale-up trigger, the scale-down trigger, and the final quiescence event? This join is what distinguishes a managed-Ray platform from a "self-serve cluster" — the queue and the headroom are the operational surface auditors actually care about.</li>
+<li><strong>Workspaces → IDE → user-action receipt.</strong> For workloads edited inside Anyscale Workspaces (managed Jupyter/VSCode), can the buyer join the workspace session, the developer identity, the action type, the cell or file changed, the Ray job or service launched, and the audit-log entry? This join is the human-oversight evidence required by EU AI Act Article 14 for agent or model development.</li>
+<li><strong>Export → deletion proof across Ray + KubeRay + object storage.</strong> Can a customer export the joined record and then prove deletion across Ray logs, the Ray cluster autoscaler history, the KubeRay CRDs (RayJob, RayService, RayCluster), the per-job object-storage checkpoints, the worker ephemeral disk, and backups? The expected receipt names each scope, completion time, exception, and sub-processor dependency.</li>
+</ol>
+
+<h2>Anyscale-specific appendices to the audit</h2>
+<h3>A. Ray cluster, KubeRay, and Kubernetes boundary</h3>
+<p>Anyscale's first-party claims include "production-ready Ray" running on Kubernetes via KubeRay CRDs (RayJob, RayService, RayCluster). The audit must score whether the customer's Ray cluster manifest, the underlying Kubernetes namespace, and the IAM/RBAC role binding join in one exportable row, because Ray jobs launched outside the customer's RBAC scope are the most frequent procurement-review failure mode.</p>
+<h3>B. Multi-cloud and BYO-cloud</h3>
+<p>Anyscale supports customer-managed cloud deployments. The audit should distinguish Anyscale-managed GPU pools from BYO-cloud GPU pools because the DPA cascade differs: a managed pool carries the Anyscale DPA + sub-processor list; a BYO-cloud pool carries the customer's own DPA + their sub-processor list (which may include AWS, GCP, Azure, OCI, or CoreWeave).</p>
+<h3>C. Open-source Ray vs Anyscale-managed Ray</h3>
+<p>Ray is open-source under the Linux Foundation. Anyscale contributes upstream changes. The audit must distinguish audit scope: open-source Ray deployment carries only the customer's DPA (no Anyscale sub-processor presence); Anyscale Platform deployment carries the Anyscale DPA + the Anyscale sub-processor cascade.</p>
+
+<h2>Common audit failures (avoid these)</h2>
+<ul>
+<li><strong>Treating "we use Ray" as Anyscale platform evidence.</strong> The audit must score the difference between open-source Ray + Anyscale Platform. Buyers reject audit reports that conflate the two.</li>
+<li><strong>Skipping the KubeRay CRD lineage.</strong> Auditors routinely fail audits because the export shows the Ray job ID but not the underlying Kubernetes namespace, RBAC binding, or worker node. The CRD lineage is the join that closes the audit.</li>
+<li><strong>Conflating multi-tenant GPU pooling with private clusters.</strong> Anyscale offers both; the DPA cascade is different and must be distinguished per cluster per workload.</li>
+<li><strong>Skipping EU AI Act Article 14 evidence for Workspaces.</strong> If the buyer uses Workspaces, the developer-session-to-Ray-job join is the operational record required by Article 14. Skip it and the audit fails on the EU buyer side.</li>
+</ul>
+
+<h2>What the buyer gets</h2>
+<p>Five questions, $500 fixed, 48 hours, or $497/mo quarterly refresh. Each answer becomes a buyer-facing join the Cursor, Notion, Replit, Codeium, Sourcegraph, Augment, Cognition, or factory.ai security, platform, or procurement reviewer can paste into a vendor questionnaire. Offer matched to the cohort: the same five-question shape as Fireworks 756, Replicate 757, Together AI 758.</p>
+
+<p class="footer">Atlas @ Talon Forge — Lead 759 — Anyscale Ray production AI platform audit checklist · cycle-2 sibling #4/5 · ai_agent_sandbox_infrastructure · $500/48h or $497/mo.</p>
+</article>
+</body>
+</html>
