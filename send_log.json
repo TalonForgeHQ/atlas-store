@@ -152,7 +152,7 @@
       "name": "AuditBoard (Optro)",
       "handle": "@auditboard",
       "route": "first-party Request-a-Demo form at https://www.auditboard.com/request-a-demo/",
-      "inbox": "NONE \u2014 route-safe through first-party Request-a-Demo form; Optro AI platform form is the parallel commercial route after 2025-2026 rebrand",
+      "inbox": "NONE — route-safe through first-party Request-a-Demo form; Optro AI platform form is the parallel commercial route after 2025-2026 rebrand",
       "inbox_verification": "auditboard.com 301-redirects to optro.ai verified live 2026-07-20 via curl -I; both URLs route to the same parent; first-party Request-a-Demo form at https://www.auditboard.com/request-a-demo/ is the route-safe commercial channel",
       "alternative_inboxes": "Optro AI platform demo form at optro.ai/contact or equivalent; no guessed inbox used",
       "queued": true,
@@ -196,60 +196,78 @@
     "evidence": "cold_email/724_floqast.md",
     "seo_chunk": "chunks/chunk_724.html",
     "sent": false,
-        "revenue": 0,
-        "note": "Lead 724 sibling #5/5 cohort closer staged; SMTP remains gated; no send, contact-form submission, or revenue claimed."
-      },
-      {
-        "tick": "2026-07-20-fast-exec-nabla-726",
-        "lead_index": 726,
-        "company": "Nabla",
-        "vertical": "ai_clinical_documentation",
-        "cohort_position": "cycle-1 sibling #2/5 after Abridge 725 OPENER",
-        "route": "contact@nabla.com",
-        "template": "cold_email/templates/726_nabla_copilot_followup.md",
-        "evidence": "cold_email/726_nabla.md",
-        "seo_chunk": "chunks/chunk_726.html",
-        "sent": false,
-        "revenue": 0,
-        "excluded_inboxes": [
-          "support@nabla.com (product-help route per nabla.com/press)",
-          "privacy@/legal@/security@/press@/media@ (privacy/legal/security/press routes)",
-          "incident@/abuse@ (incident/abuse routes)"
-        ],
-        "artifact": [
-          "cold_email/leads.csv row 726",
-          "cold_email/leads_with_emails.csv row 726",
-          "cold_email/templates/726_nabla_copilot_followup.md",
-          "chunks/chunk_726.html",
-          "sitemap.xml +1",
-          "index.html chunk_726 card",
-          "build-log.html tick 726 entry",
-          "revenue_log.csv row 726"
-        ],
-        "note": "Lead 726 sibling #2/5 staged; SMTP remains gated; no send, contact-form submission, or revenue claimed. KLAS Spotlight 90.9 + A+ executive involvement + A+ likely-to-recommend + NEJM AI Trial + $70M Series C; first-party contact@nabla.com verified live on every page footer + copilot-contact + press + connect + legal-documents."
-      },
-    {
-      "lead_index": 740,
-      "vendor": "Textio",
-      "inbox": "sales@textio.com",
-      "vertical": "ai_hr_workflow_agents",
-      "tier": 1,
-      "template": "740_textio_workplace_language_followup.md",
-      "chunk": "chunks/chunk_740.html",
-      "cohort": "ai_hr_workflow_agents OPENER #1/5",
-      "queued_at": "2026-07-20T20:10:00Z",
-      "send_window": "Tue-Thu 9-11am PT",
-      "send_method": "SMTP_unblocked_or_relay",
-      "status": "queued",
-      "artifacts": [
-        "cold_email/740_textio.md",
-        "cold_email/templates/740_textio_workplace_language_followup.md",
-        "chunks/chunk_740.html",
-        "sitemap.xml +1",
-        "index.html chunk_740 card",
-        "build-log.html tick 740 entry",
-        "revenue_log.csv row 740"
-      ],
-      "note": "Lead 740 sibling #1/5 OPENER staged; SMTP remains gated; no send, contact-form submission, or revenue claimed. Kieran Snyder Founder Emeritus + Jensen Harris Co-Founder &amp; CTO verified live on textio.com/about; sales@textio.com is first-party commercial route."
-    }
-  ]
+    "revenue": 0,
+    "note": "Lead 724 sibling #5/5 cohort closer staged; SMTP remains gated; no send, contact-form submission, or revenue claimed."
+  },
+  {
+    "tick": "2026-07-20-fast-exec-nabla-726",
+    "lead_index": 726,
+    "company": "Nabla",
+    "vertical": "ai_clinical_documentation",
+    "cohort_position": "cycle-1 sibling #2/5 after Abridge 725 OPENER",
+    "route": "contact@nabla.com",
+    "template": "cold_email/templates/726_nabla_copilot_followup.md",
+    "evidence": "cold_email/726_nabla.md",
+    "seo_chunk": "chunks/chunk_726.html",
+    "sent": false,
+    "revenue": 0,
+    "excluded_inboxes": [
+      "support@nabla.com (product-help route per nabla.com/press)",
+      "privacy@/legal@/security@/press@/media@ (privacy/legal/security/press routes)",
+      "incident@/abuse@ (incident/abuse routes)"
+    ],
+    "artifact": [
+      "cold_email/leads.csv row 726",
+      "cold_email/leads_with_emails.csv row 726",
+      "cold_email/templates/726_nabla_copilot_followup.md",
+      "chunks/chunk_726.html",
+      "sitemap.xml +1",
+      "index.html chunk_726 card",
+      "build-log.html tick 726 entry",
+      "revenue_log.csv row 726"
+    ],
+    "note": "Lead 726 sibling #2/5 staged; SMTP remains gated; no send, contact-form submission, or revenue claimed. KLAS Spotlight 90.9 + A+ executive involvement + A+ likely-to-recommend + NEJM AI Trial + $70M Series C; first-party contact@nabla.com verified live on every page footer + copilot-contact + press + connect + legal-documents."
+  },
+  {
+    "lead_index": 740,
+    "vendor": "Textio",
+    "inbox": "sales@textio.com",
+    "vertical": "ai_hr_workflow_agents",
+    "tier": 1,
+    "template": "740_textio_workplace_language_followup.md",
+    "chunk": "chunks/chunk_740.html",
+    "cohort": "ai_hr_workflow_agents OPENER #1/5",
+    "queued_at": "2026-07-20T20:10:00Z",
+    "send_window": "Tue-Thu 9-11am PT",
+    "send_method": "SMTP_unblocked_or_relay",
+    "status": "queued",
+    "artifacts": [
+      "cold_email/740_textio.md",
+      "cold_email/templates/740_textio_workplace_language_followup.md",
+      "chunks/chunk_740.html",
+      "sitemap.xml +1",
+      "index.html chunk_740 card",
+      "build-log.html tick 740 entry",
+      "revenue_log.csv row 740"
+    ],
+    "note": "Lead 740 sibling #1/5 OPENER staged; SMTP remains gated; no send, contact-form submission, or revenue claimed. Kieran Snyder Founder Emeritus + Jensen Harris Co-Founder &amp; CTO verified live on textio.com/about; sales@textio.com is first-party commercial route."
+  },
+  {
+    "tick": "2026-07-20-revenue-loop-eightfold-741-seo",
+    "lead_index": 741,
+    "vendor": "Eightfold AI",
+    "route": "FORM:https://eightfold.ai/request-demo/",
+    "vertical": "ai_hr_workflow_agents",
+    "tier": 1,
+    "template": "cold_email/templates/741_eightfold_talent_acquisition_followup.md",
+    "chunk": "chunks/chunk_741.html",
+    "cohort": "ai_hr_workflow_agents sibling #2/5 after Textio 740 OPENER",
+    "recorded_at": "2026-07-20T20:40:00Z",
+    "status": "form_route_not_submitted",
+    "smtp_eligible": false,
+    "queued": false,
+    "sent": false,
+    "revenue": 0,
+    "note": "First-party Request a live demo form retained as a route-safe commercial option. It was not submitted. SMTP must skip FORM: sentinels. No email, delivery, payment, or revenue claimed."
+  }
+]
