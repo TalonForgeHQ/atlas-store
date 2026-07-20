@@ -193,5 +193,17 @@
     "send_status": "queued_blocked_smtp_contact_corrected",
     "inbox_verification": "live 2026-07-20 on Mistral's first-party contact page",
     "contact_correction": "removed unverified compliance@mistral.ai before outbound"
+  },
+  {
+    "tick": "2026-07-20-fast-exec-writer-701",
+    "lead_index": "701",
+    "lead_name": "WRITER",
+    "vertical": "ai_evidence_pack_automation",
+    "template": "701_writer.md",
+    "inbox": "hello@writer.com",
+    "queued": true,
+    "send_status": "queued_blocked_smtp",
+    "inbox_verification": "first-party WRITER page markup checked 2026-07-20",
+    "founder_verification": "writer.com/company/about checked 2026-07-20"
   }
 ]
