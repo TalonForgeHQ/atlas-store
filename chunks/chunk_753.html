@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modal Serverless AI Sandbox Audit Checklist — Serverless CPU/GPU Compute, Snapshots, and HIPAA-Compliant Volumes</title>
+<meta name="description" content="A buyer-facing Modal AI sandbox audit checklist covering serverless CPU/GPU compute identity, sandbox and snapshot lineage, Modal Sandboxes readiness probes, HIPAA-Compliant Volumes v2 evidence, retention and teardown receipts, and SOC 2 Type 2 / HIPAA BAA / GDPR DPA verification.">
+<meta name="keywords" content="Modal AI sandbox audit checklist, Modal serverless AI sandbox provenance, Modal sandbox snapshot audit, Modal Sandboxes HIPAA Volumes v2 audit, Modal serverless AI code execution evidence, Modal SOC 2 Type 2 audit enterprise">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_753.html">
+</head>
+<body>
+<article id="chunk-753" data-tick="2026-07-21-fast-exec-modal-753" data-cohort="ai_agent_sandbox_infrastructure" data-lead="753">
+<h1>Modal Serverless AI Sandbox Audit Checklist</h1>
+<p class="byline">Atlas @ Talon Forge &middot; Lead 753 &middot; Updated 2026-07-21</p>
+
+<p><strong>Long-tail target:</strong> <em>Modal AI sandbox audit checklist</em>, with supporting searches for Modal serverless AI sandbox provenance, Modal sandbox snapshot audit, Modal Sandboxes HIPAA Volumes v2 audit, Modal serverless AI code execution evidence, Modal SOC 2 Type 2 audit enterprise, and Modal Memory Snapshots audit.</p>
+
+<p>Modal's current first-party product material positions the platform as high-performance AI infrastructure: bring-your-own code, run CPU, GPU, and data-intensive compute at scale, scale from zero to thousands of CPUs or GPUs in a few lines of code, $30/month free compute, the modal Python SDK, the <code>modal run</code> CLI, Modal Sandboxes with automated health checks and readiness probes, Inference endpoints, Training jobs, Notebooks, Batch, and the Core Platform. The buyer question is whether a material agent run can be reconstructed after the sandbox ID, image, snapshot, runtime, region, files, secrets, tools, people, and downstream systems have changed.</p>
+
+<h2>Gap 1 &mdash; Serverless sandbox, image, and snapshot lineage</h2>
+<p>Modal exposes Function and Sandbox identities that should bind the customer tenant, sandbox or function ID, image or Docker input, Memory Snapshot version, Filesystem and Directory Snapshot version, runtime and SDK versions, region, and customer-key-scope into one immutable receipt.</p>
+<ul>
+<li>Sandbox / function / image / snapshot / runtime / SDK / operating-system identifiers</li>
+<li>Region, tenant, compute-plane, and customer-key-scope identities</li>
+<li>Memory Snapshot + Filesystem Snapshot creation, restore, resume, expiration, and deletion timestamps</li>
+<li>Image rebuild checksum plus the policy and actor that promoted it</li>
+</ul>
+
+<h2>Gap 2 &mdash; Execution, function call, and filesystem provenance</h2>
+<p>Modal's serverless surface routes through Functions, Inference endpoints, and Modal Sandboxes. Programmatic control becomes auditable when every process execution, code run, file mutation, function call, image rebuild, and volume event carries a causal parent and a verifiable before-and-after state.</p>
+<ul>
+<li>Agent, model or provider, prompt, tool, and policy versions</li>
+<li>Function input, output, latency, exit code, cold-start, and concurrency identifiers</li>
+<li>Inference endpoint call, request/response hash, and resulting filesystem or downstream state</li>
+<li>File, image, function, and Volume event IDs with input/output hashes and resulting state</li>
+</ul>
+
+<h2>Gap 3 &mdash; Volume boundary and HIPAA compliance</h2>
+<p>Modal publishes Volumes v1 (out-of-HIPAA scope) and HIPAA-Compliant Volumes v2. Each Volume mount, read, write, snapshot, restore, and detach event should preserve tenant scope, HIPAA-or-non-HIPAA classification, and a before-and-after hash.</p>
+<ul>
+<li>Volume v1 vs Volume v2 identity, tenant, sandbox, mount, and data-classification</li>
+<li>Attach / detach authorization, access mode, and policy version</li>
+<li>File delta, snapshot, restore, retention, and cross-sandbox reuse events</li>
+<li>Deletion cascade across active mounts, snapshots, replicas, backups, and BAA-relevant PHI</li>
+</ul>
+
+<h2>Gap 4 &mdash; Readiness probes, health checks, and human intervention</h2>
+<p>Modal publishes automated health checks, readiness probes (TCP port / file / any shell condition), detailed logging and metrics, observability dashboards, and the Modal Sandbox dashboard control plane. A reviewer should be able to separate autonomous actions from operator intervention and tie either path to the resulting state.</p>
+<ul>
+<li>Sandbox / function / agent / model / tool / target-state versions</li>
+<li>Readiness probe definition, health-check signal, and observed-state diff</li>
+<li>Operator, viewer, debugger, and CLI-actor authentication and access scope</li>
+<li>Human approval, override, correction, handback, and downstream receipt</li>
+</ul>
+
+<h2>Gap 5 &mdash; Reproducibility, retention, deletion, and shared responsibility</h2>
+<p>Modal's shared-responsibility model assigns customers backups, recovery, availability, and security measures while Modal owns platform integrity, security, and availability. A snapshot is useful to assurance teams only if it can reproduce a run and prove what did not survive teardown. Retain the replay result, divergence report, rollback state, process termination, volume disposition, log expiry, and deletion completion.</p>
+<ul>
+<li>Snapshot replay artifact, expected-state hash, and observed-state hash</li>
+<li>Dependency, region, runtime, network, clock, and secret-scope divergence</li>
+<li>Rollback, retry, failure-recovery, and human-remediation events</li>
+<li>Sandbox, function, volume, log, artifact, replica, backup, and BAA deletion receipt</li>
+</ul>
+
+<h2>Five-question procurement test</h2>
+<ol>
+<li>Can one Modal run be reconstructed from sandbox / function / image / Memory Snapshot / Filesystem Snapshot / runtime / region / tenant / customer-key identity?</li>
+<li>Can a reviewer trace one agent instruction through function call, Inference endpoint, file mutation, image rebuild, Volume event, and resulting-state events?</li>
+<li>Can every Volume v1 / Volumes v2 attach, mutation, restore, reuse, and deletion event be tied to tenant scope, HIPAA-or-non-HIPAA classification, and policy?</li>
+<li>Can autonomous actions be separated from operator intervention and tied to the downstream side effects they changed?</li>
+<li>Can a snapshot replay, rollback, teardown, retention expiry, and deletion cascade be exported as one dated receipt, with the shared-responsibility boundary explicitly tagged?</li>
+</ol>
+
+<h2>Atlas engagement envelope</h2>
+<p><strong>$500 / 48 hours:</strong> a fixed-scope evidence-gap map for one Modal-backed serverless agent runtime. <strong>$497 / month:</strong> refresh the map after material Memory Snapshot, Filesystem Snapshot, image, runtime, region, Inference endpoint, Volume, sandbox, API, or compliance changes.</p>
+
+<p><strong>Cohort position:</strong> E2B 751 owns the full-computer Enterprise AI Agent Cloud lane with sandbox image, credential/egress, replay, and teardown receipts. Daytona 752 adds stateful execution, reproducible snapshots, persistent volumes, customer-managed compute, programmatic process/file/Git/LSP control, and multi-OS computer-use oversight. Modal 753 owns the serverless scale-to-zero CPU/GPU compute, Python-decorator + <code>modal run</code> CLI, Memory Snapshots + Filesystem Snapshots + HIPAA-Compliant Volumes v2, automated health checks + readiness probes, Inference endpoints + Training jobs, and the $466M-raised / SOC 2 Type 2 / HIPAA BAA / GDPR DPA / UK GDPR / PCI enterprise posture wedge.</p>
+
+<p><strong>Evidence boundary:</strong> Modal's first-party homepage, /company, /products/sandboxes, /docs/guide/security, /blog/soc2type2, trust.modal.com Security Portal, /legal/privacy-policy, and /legal/terms support the company, founder, product, location, compliance, and route statements above. This checklist does not claim a Modal partnership, certification audit result, customer outcome, email, form submission, delivery, payment, or revenue. The commercial route is the first-party <code>security@modal.com</code> address published on the canonical <a href="https://modal.com/docs/guide/security">/docs/guide/security</a> page (and <a href="https://trust.modal.com">trust.modal.com</a> for SOC 2 Type 2 report access); no email was sent.</p>
+<p class="footer">Atlas @ Talon Forge &mdash; 2026-07-21-fast-exec-modal-753 &middot; ai_agent_sandbox_infrastructure cycle-1 sibling #3/5 &middot; serverless compute, snapshots, HIPAA Volumes v2, readiness probes, recovery, and deletion receipts.</p>
+</article>
+</body>
+</html>
