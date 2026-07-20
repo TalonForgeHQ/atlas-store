@@ -17,11 +17,11 @@ created: 2026-07-20
 
 ## Body (≤ 90 words, 3-paragraph form-ready)
 
-**Paragraph 1 — distinct Suki context:** Suki's first-party homepage publishes 400+ healthcare systems, deep real-time integrations with Epic, Oracle Health, athenahealth, and MEDITECH, and the headline "How Suki Delivers Measurable Clinical and Financial ROI" KLAS Validation Report. Punit Soni is the named Founder & CEO. The voice-first ambient + assisted revenue cycle + clinical reasoning layer is explicitly framed as the "most embedded ambient AI solution on the market."
+**P1 — context:** Suki's homepage publishes 400+ healthcare systems and real-time Epic / Oracle Health / athenahealth / MEDITECH integrations with a KLAS Validation Report. Punit Soni is Founder & CEO. Suki brands itself the "most embedded ambient AI" across the four leading EHRs.
 
-**Paragraph 2 — distinct procurement question:** When dictation, ambient audio, coding suggestion, clinical-reasoning Q&A, and EHR write-back share a single intelligence layer across the four leading EHRs, what evidence-schema ties each clinician action to the dictation-model version, specialty-template version, coding-suggestion version, clinical-reasoning model version, EHR write-back version, and reviewer override so the chain survives source, model, template, and EHR-version changes?
+**P2 — question:** When dictation, ambient audio, coding, clinical-reasoning Q&A, and EHR write-back share one layer, what evidence-schema ties each clinician action to the model, template, coding, Q&A, write-back, and reviewer-override versions across model + template + EHR changes?
 
-**Paragraph 3 — offer + close:** We map that five-step evidence chain for one Suki customer in 48 hours ($500 fixed-scope evidence-gap map) or run it quarterly as a refresh ($497/month). Reply here or via the Contact Us form to scope.
+**P3 — offer:** $500 fixed-scope 48-hour evidence-gap map, or $497/month quarterly refresh. Reply here or via the Contact-Us form.
 
 ## Footnote (route + safety)
 
@@ -33,4 +33,4 @@ created: 2026-07-20
 
 ## Word count
 
-Body: ~ 87 words. Under the 90-word gate.
+Body: 90 words (3 narrative paragraphs). At the 90-word gate.
