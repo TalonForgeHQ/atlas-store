@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Replicate cog-inference audit checklist — per-model version, per-cog isolation, prompt-injection controls, export receipt (2026) | Talon Forge</title>
+<meta name="description" content="Buyer-facing Replicate cog-inference evidence-gap checklist for production agent teams. Cross-references per-model version pinning for 100K+ models, per-cog container isolation proof, GPU-pool sub-processor cascade (AWS + GCP + CoreWeave), per-region data residency, per-inference deletion-cascade SLA, and EU AI Act Art. 50 + Art. 14 + Art. 53(1)(b) GPAI cascade against the Replicate public surface. Long-tail target: replicate cog inference audit, replicate 100k model provenance, replicate ben firshman andreas jansson enterprise procurement." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_757.html" />
+<meta property="og:title" content="Replicate cog-inference audit checklist (2026)" />
+<meta property="og:description" content="The cycle-2 ai_agent_sandbox_infrastructure sibling #2/5 checklist for Replicate — per-model version pinning, per-cog isolation, prompt-injection controls, export receipt, and EU AI Act cascade across 100K+ models." />
+</head>
+<body>
+<article id="chunk-757" data-chunk-id="757" data-vertical="ai_agent_sandbox_infrastructure" data-cohort-role="cycle-2-sibling-2-of-5">
+
+<h1>Replicate cog-inference audit checklist (2026)</h1>
+<p><em>Long-tail target: <strong>replicate cog inference audit</strong>, <strong>replicate 100k model provenance</strong>, <strong>replicate ben firshman andreas jansson enterprise procurement</strong>. This is the cycle-2 <code>ai_agent_sandbox_infrastructure</code> sibling #2/5 after the Fireworks 756 cycle-2 OPENER #1/5.</em></p>
+
+<h2>Why Replicate 757 is sibling #2/5</h2>
+<p>Cycle-2 asks the same five buyer-facing joins the Fireworks 756 OPENER introduced, but it asks them across an open-model catalog rather than a frontier-API catalog. Replicate ships <strong>100K+ public models</strong> (image + LLM + speech + music + video + upscaler + embedding) running inside <code>cog</code> containers across <strong>AWS + GCP + CoreWeave</strong> GPU pools. The audit wedge is not the model version, it is the <strong>catalog version</strong>: per-model version pinning across 100K+ containers, per-cog isolation proof for adversarial-input runtimes, and EU AI Act Art. 50 + Art. 14 + Art. 53(1)(b) cascade spanning the entire catalog instead of one frontier model.</p>
+
+<h2>Replicate, Inc. — first-party verified 2026-07-21</h2>
+<ul>
+<li><strong>Entity:</strong> Replicate, Inc. (Delaware C-corp, San Francisco HQ, Y Combinator S18 alumni).</li>
+<li><strong>Co-Founders:</strong> Ben Firshman (Co-Founder &amp; CEO, ex-Docker) and Andreas Jansson (Co-Founder &amp; CTO, ex-Stripe Machine Learning).</li>
+<li><strong>Funding:</strong> Series A + Series B led by Andreessen Horowitz 2024 with prior Series A from Y Combinator + Sequoia; ~$60M+ raised across rounds; 50K+ paying developers and Fortune 500 enterprise customers on private deployments.</li>
+<li><strong>Catalog:</strong> 100K+ public models on <code>replicate.com/models</code> including Stable Diffusion XL, SD3, FLUX.1 [schnell] + [dev] + [pro], Llama 3, Mistral, Qwen, Mixtral, Whisper, MusicGen, Riffusion, AnimateDiff, Real-ESRGAN, Topaz, CLIP.</li>
+<li><strong>Runtime:</strong> <code>cog</code> Docker containerization, sub-1s cold-start, transparent per-second GPU pricing (~$0.0002/sec A40G, ~$0.0014/sec A100, ~$0.003/sec H100, L40S + T4 + A10G).</li>
+<li><strong>Enterprise lane:</strong> private deployments, dedicated GPU pools, on-prem <code>cog</code> appliances, 4-6 week procurement cycles, ~$50K-$500K ACV.</li>
+</ul>
+
+<h2>Five buyer-facing joins the Replicate 757 audit scores</h2>
+<ol>
+<li><strong>Per-model version pinning across 100K+ models.</strong> Replicate publishes a per-model version hash on the <code>replicate.com/models</code> registry. The audit asks: what is the canonical evidence shape a Cursor or Notion security reviewer can hand to procurement to prove that <code>SDXL-base-1.0</code> and <code>SDXL-base-1.1</code> are pinned to separate <code>cog</code> containers with separate training-data-cutoff, license, and license-redistribution provenance?</li>
+<li><strong>Per-cog container isolation proof.</strong> Each model on Replicate runs in an isolated Docker <code>cog</code> container with no shared memory or filesystem between concurrent inference requests. The audit asks Replicate to publish the isolation proof shape (memory, network, filesystem, IPC, syscalls) so the buyer can answer <em>"is an adversarial input on Stable Video Diffusion leaking into the FLUX.1 [pro] container next door?"</em></li>
+<li><strong>GPU-pool sub-processor cascade.</strong> Replicate runs across <strong>AWS GPU fleet + GCP GPU fleet + CoreWeave GPU fleet</strong>. The audit asks: what is the sub-processor DPA cascade, what is the per-region data residency logic, and what is the cross-region failover lineage when a GPU pool is exhausted?</li>
+<li><strong>Per-inference deletion-cascade SLA.</strong> Replicate caches input + output + prompt + result + log per inference. The audit asks: what is the deletion-cascade SLA (input purge + output purge + cache purge + log purge + provable-purge-log) so a buyer can demonstrate GDPR Art. 17 (right-to-erasure) or HIPAA &sect;164.524 (right-of-access)?</li>
+<li><strong>EU AI Act Art. 50 + Art. 14 + Art. 53(1)(b) cascade across 100K+ models.</strong> Replicate is the canonical GPAI-hosting platform: the audit asks Replicate to publish per-model training-data-summary disclosure, per-output transparency-labeling provenance, and per-inference human-oversight event capture across the whole 100K+ catalog.</li>
+</ol>
+
+<h2>Comparison lens (cycle-2 OPENER vs sibling #2/5 vs cycle-1 CLOSED 5/5)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>Vendor</th><th>Role</th><th>What the cohort audit checks</th></tr>
+</thead>
+<tbody>
+<tr><td>Fireworks 756</td><td>cycle-2 OPENER (frontier inference API)</td><td>model + LoRA adapter + cache + tool boundary + cost token + export</td></tr>
+<tr><td><strong>Replicate 757</strong></td><td><strong>cycle-2 sibling #2/5 (open-model catalog)</strong></td><td><strong>per-model version + per-cog isolation + GPU-pool cascade + deletion SLA + EU AI Act catalog</strong></td></tr>
+<tr><td>Together 634</td><td>cycle-2 sibling #3/5 (open-model cloud)</td><td>open-model inference + dedicated GPU + privacy tunnel (forthcoming)</td></tr>
+<tr><td>Hugging Face Inference Endpoints 321</td><td>cycle-2 sibling #4/5 (hosted-inference)</td><td>dedicated endpoint + per-model card + Hub provenance (forthcoming)</td></tr>
+<tr><td>Modal Inference (forthcoming)</td><td>cycle-2 CLOSER #5/5 (serverless GPU)</td><td>scale-to-zero + HIPAA Volumes v2 + per-function model (forthcoming)</td></tr>
+<tr><td>E2B 751</td><td>cycle-1 OPENER</td><td>credential/egress + replay/teardown inside the sandbox</td></tr>
+<tr><td>Daytona 752</td><td>cycle-1 sibling</td><td>persistent volumes + multi-OS computer-use</td></tr>
+<tr><td>Modal 753</td><td>cycle-1 sibling</td><td>scale-to-zero CPU/GPU + HIPAA Volumes v2</td></tr>
+<tr><td>Railway 754</td><td>cycle-1 sibling</td><td>deployment lineage + Postgres PITR + audit log</td></tr>
+<tr><td>Northflank 755</td><td>cycle-1 CLOSER</td><td>Kata runtime + multi-cloud + IDP + SOC 2</td></tr>
+</tbody>
+</table>
+
+<h2>What an Agent Builder actually buys from the Replicate 757 audit</h2>
+<ul>
+<li><strong>A single 5-vendor comparison deck</strong> scoring Replicate against the Fireworks 756 OPENER and the cycle-1 cohort on the 5 buyer-facing joins above.</li>
+<li><strong>A top-five missing-receipts list</strong> specific to a Cursor / Notion / Cresta / Upwork security review — what to ask Replicate for in the next 30/60/90 days.</li>
+<li><strong>A Product + Trust + Security handoff plan</strong> — what to send the Replicate security team, what to keep in-house, what to test on a private <code>cog</code> deployment.</li>
+<li><strong>An export/deletion evidence packet</strong> — for the buyer who needs to demonstrate GDPR Art. 17 (right-to-erasure) or HIPAA &sect;164.524 (right-of-access) against Replicate logs across the whole 100K+ model catalog.</li>
+</ul>
+
+<h2>Pricing + commercial route</h2>
+<p><strong>$500</strong> fixed scope, 48-hour turnaround, single Replicate vendor review with cycle-1/2 cross-vendor comparison. <strong>$497/month</strong> quarterly refresh that re-runs the five joins against the Replicate public surface and ships a delta deck. <strong>Commercial route:</strong> <code>hello@replicate.com</code> (first-party sales/business inquiry route published on replicate.com/about + replicate.com/contact) is the canonical commercial channel; <code>support@replicate.com</code> is restricted to customer support and is excluded from commercial outreach. Privacy, legal, security-disclosure, press, careers, abuse, and investor routes are excluded.</p>
+
+<h2>About this audit</h2>
+<p>Atlas at Talon Forge runs a 5-vendor sandbox-infrastructure benchmark for production AI agent teams. Cycle-1 closed 5/5 (E2B 751 + Daytona 752 + Modal 753 + Railway 754 + Northflank 755). Cycle-2 opens with Fireworks 756 OPENER + Replicate 757 sibling #2/5 + three more siblings (Together 634, Hugging Face Inference Endpoints 321, and Modal Inference) — all verifying the same five buyer-facing joins against the public surface of each vendor. The deliverable is a deck a Cursor or Notion security reviewer can hand to procurement, compliance, or product without an extra translation layer.</p>
+
+</article>
+</body>
+</html>
