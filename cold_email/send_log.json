@@ -322,6 +322,19 @@
       "queued_at": "2026-07-21T03:20:00Z",
       "send_status": "queued_pending_smtp_unblock",
       "verification": "hello@e2b.dev verified on first-party e2b.dev/contact and official GitHub organization; no send or form submission claimed"
+    },
+    {
+      "lead_index": 752,
+      "name": "Daytona",
+      "vertical": "ai_agent_sandbox_infrastructure",
+      "template": "cold_email/templates/752_daytona_stateful_sandbox_followup.md",
+      "commercial_route_url": "https://www.daytona.io/contact",
+      "best_email": "FORM:https://www.daytona.io/contact",
+      "cohort": "ai_agent_sandbox_infrastructure sibling #2/5",
+      "queued_at": "2026-07-21T03:55:00Z",
+      "smtp_eligible": false,
+      "send_status": "form_route_not_submitted",
+      "verification": "first-party Daytona Contact Us form verified; no suitable general-business inbox published; no form submission or email claimed"
     }
   ]
 }

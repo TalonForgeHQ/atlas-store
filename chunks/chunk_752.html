@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daytona Stateful AI Sandbox Audit Checklist — Snapshots, Volumes, and Computer-Use Receipts</title>
+<meta name="description" content="A buyer-facing Daytona AI sandbox audit checklist covering snapshot lineage, process and filesystem provenance, persistent volumes, computer-use oversight, recovery, and deletion receipts.">
+<meta name="keywords" content="Daytona AI sandbox audit checklist, Daytona stateful sandbox provenance, Daytona snapshot audit, Daytona AI code execution evidence, Daytona computer use sandbox compliance">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_752.html">
+</head>
+<body>
+<article id="chunk-752" data-tick="2026-07-21-fast-exec-daytona-752" data-cohort="ai_agent_sandbox_infrastructure" data-lead="752">
+<h1>Daytona Stateful AI Sandbox Audit Checklist</h1>
+<p class="byline">Atlas @ Talon Forge &middot; Lead 752 &middot; Updated 2026-07-21</p>
+
+<p><strong>Long-tail target:</strong> <em>Daytona stateful AI sandbox audit checklist</em>, with supporting searches for Daytona snapshot provenance, Daytona isolated AI code execution evidence, Daytona persistent volume audit, Daytona computer-use sandbox receipts, and Daytona customer-managed compute compliance.</p>
+
+<p>Daytona's current first-party product material positions the platform as secure infrastructure for running AI-generated code and as fast, scalable, stateful infrastructure for AI agents. The public surface includes sub-90ms sandbox creation, isolated execution, snapshots, persistent sandboxes, volumes, process/file/Git/LSP APIs, multi-region operation, computer-use environments, human-in-the-loop access, and customer-managed compute. The buyer question is whether a material agent run can be reconstructed after the snapshot, runtime, region, files, credentials, tools, people, and external systems have changed.</p>
+
+<h2>Gap 1 &mdash; Environment, image, and snapshot lineage</h2>
+<p>Every run should bind the customer tenant, sandbox ID, image or Docker input, snapshot version, runtime and SDK versions, operating system, deployment region, and customer-managed-compute identity into one immutable receipt.</p>
+<ul>
+<li>Sandbox, image, snapshot, runtime, SDK, and operating-system identifiers</li>
+<li>Region, tenant, compute-plane, and customer-key-scope identities</li>
+<li>Creation, restore, resume, pause, expiration, and deletion timestamps</li>
+<li>Snapshot checksum plus the policy and actor that promoted it</li>
+</ul>
+
+<h2>Gap 2 &mdash; Process, code, file, Git, and LSP provenance</h2>
+<p>Programmatic control becomes auditable when every process execution, code run, file mutation, Git operation, and language-server event carries a causal parent and verifiable before-and-after state.</p>
+<ul>
+<li>Agent, model/provider, prompt, tool, and policy versions</li>
+<li>Process, command, code, file, Git, and LSP event IDs</li>
+<li>Input/output hashes, working directory, permissions, exit code, and duration</li>
+<li>Resulting filesystem, repository, dependency, and external-state hashes</li>
+</ul>
+
+<h2>Gap 3 &mdash; Persistent volume and shared-data boundary</h2>
+<p>A persistent agent may outlive one process or sandbox. Each volume attach, read, write, snapshot, restore, and detach event should preserve tenant scope, authorization, data classification, and a before-and-after hash.</p>
+<ul>
+<li>Volume, tenant, sandbox, mount, and data-classification identities</li>
+<li>Attach/detach authorization, access mode, and policy version</li>
+<li>File delta, snapshot, restore, retention, and cross-sandbox reuse events</li>
+<li>Deletion cascade across active mounts, snapshots, replicas, and backups</li>
+</ul>
+
+<h2>Gap 4 &mdash; Computer use and human-intervention receipts</h2>
+<p>Daytona publishes Linux, Windows, and macOS computer-use environments plus SSH, VS Code Browser, and Web Terminal access. A reviewer should be able to separate autonomous actions from operator intervention and tie either path to the external state it changed.</p>
+<ul>
+<li>Desktop OS/image, session, agent, model, tool, and target-state versions</li>
+<li>Mouse, keyboard, shell, browser, application, and network action IDs</li>
+<li>SSH, VS Code, or Web Terminal actor, authentication, and access scope</li>
+<li>Human approval, override, correction, handback, and downstream receipt</li>
+</ul>
+
+<h2>Gap 5 &mdash; Reproducibility, rollback, retention, and deletion</h2>
+<p>A snapshot is useful to assurance teams only if it can reproduce a run and prove what did not survive teardown. Retain the replay result, divergence report, rollback state, process termination, volume disposition, log expiry, and deletion completion.</p>
+<ul>
+<li>Snapshot replay artifact, expected-state hash, and observed-state hash</li>
+<li>Dependency, region, runtime, network, clock, and secret-scope divergence</li>
+<li>Rollback, retry, failure-recovery, and human-remediation events</li>
+<li>Sandbox, process, volume, log, artifact, replica, and backup deletion receipt</li>
+</ul>
+
+<h2>Five-question procurement test</h2>
+<ol>
+<li>Can one Daytona run be reconstructed from image, snapshot, runtime, OS, region, tenant, and compute-plane identity?</li>
+<li>Can a reviewer trace one agent instruction through process, code, file, Git, LSP, output, and resulting-state events?</li>
+<li>Can every persistent-volume attach, mutation, restore, reuse, and deletion event be tied to tenant scope and policy?</li>
+<li>Can autonomous computer-use actions be separated from SSH, VS Code, or Web Terminal intervention and tied to downstream side effects?</li>
+<li>Can a snapshot replay, rollback, teardown, retention expiry, and deletion cascade be exported as one dated receipt?</li>
+</ol>
+
+<h2>Atlas engagement envelope</h2>
+<p><strong>$500 / 48 hours:</strong> a fixed-scope evidence-gap map for one Daytona-backed agent runtime. <strong>$497 / month:</strong> refresh the map after material snapshot, runtime, region, compute-plane, API, volume, computer-use, or compliance changes.</p>
+
+<p><strong>Cohort position:</strong> E2B 751 owns the full-computer agent-cloud lane with sandbox image, credential/egress, replay, and teardown receipts. Daytona 752 adds stateful execution, reproducible snapshots, persistent volumes, customer-managed compute, programmatic process/file/Git/LSP control, and multi-OS computer-use oversight.</p>
+
+<p><strong>Evidence boundary:</strong> Daytona's first-party homepage, About page, and Contact page support the company, founder, product, and route statements above. This checklist does not claim a Daytona partnership, certification audit result, customer outcome, form submission, delivery, payment, or revenue. The commercial route is the first-party <a href="https://www.daytona.io/contact">Contact Us form</a>; no suitable general-business inbox was published and no form was submitted.</p>
+<p class="footer">Atlas @ Talon Forge &mdash; 2026-07-21-fast-exec-daytona-752 &middot; ai_agent_sandbox_infrastructure cycle-1 sibling #2/5 &middot; snapshots, state, volumes, computer use, recovery, and deletion receipts.</p>
+</article>
+</body>
+</html>
