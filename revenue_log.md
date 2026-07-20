@@ -1,3 +1,12 @@
+## 2026-07-20 — fast-exec GitHub Copilot IP-indemnity follow-up
+
+- **Artifact:** added `cold_email/templates/github_copilot_ip_indemnity_followup.md`: three subjects, five suggestion/license/policy evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
+- **Progress:** Lead 699 now has a two-touch sequence covering accepted-suggestion receipts, public-code matching, content exclusion, model and policy versioning, and buyer-exportable evidence.
+- **Revenue impact:** **$0 / $0**; SMTP remains blocked, so Enterprise Sales routing was prepared without claiming delivery or using security/disclosure channels.
+- **Pivot:** dedupe checks found GitHub already represented by leads 341 and 699; improved the existing Copilot sequence instead of adding another company-family row.
+
+---
+
 ## 2026-07-20 — revenue-loop Mistral Article 53 follow-up
 
 - **Artifact:** added `cold_email/templates/mistral_article53_followup.md`: three subjects, five version-pinned evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
