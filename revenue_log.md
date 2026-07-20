@@ -1,3 +1,12 @@
+## 2026-07-20 — fast-exec Cursor procurement evidence follow-up
+
+- **Artifact:** added `cold_email/templates/cursor_procurement_evidence_followup.md`: three subjects, five agent/model/policy evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
+- **Progress:** Lead 695 now has a two-touch sequence covering agent-run receipts, context provenance, Privacy Mode, model blocklists, compliance logging, and buyer-exportable evidence.
+- **Revenue impact:** **$0 / $0**; SMTP remains blocked, so Cursor's verified first-party Contact Sales form was documented as the safe commercial route without claiming delivery.
+- **Pivot:** dedupe checks found Cursor already represented by Lead 695, while its first-touch template names a press inbox; improved the existing sequence and corrected the route instead of adding a duplicate row or sending a pitch to press/security channels.
+
+---
+
 ## 2026-07-20 — fast-exec GitHub Copilot IP-indemnity follow-up
 
 - **Artifact:** added `cold_email/templates/github_copilot_ip_indemnity_followup.md`: three subjects, five suggestion/license/policy evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
