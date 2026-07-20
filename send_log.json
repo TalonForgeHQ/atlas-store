@@ -145,5 +145,19 @@
     "founder_verification": "Quinn Slack CEO + Beyang Liu CTO verified on sourcegraph.com/about + Series F 2024 press release",
     "scale_verification": "4,400+ enterprise customers + 3 of top 5 US banks + 6 of top 10 US insurance carriers + top-5 hyperscale-cloud customers verified live 2026-07-20",
     "cohort_marker": "ai_coding_agent_vertical sibling #2/5 (after Cursor 695 OPENER; before Cognition 697 + Replit 698 + GitHub Copilot 699); 12th Atlas vertical cohort"
+  },
+  {
+    "lead_index": 713,
+    "name": "AuditBoard (Optro)",
+    "handle": "@auditboard",
+    "route": "first-party Request-a-Demo form at https://www.auditboard.com/request-a-demo/",
+    "inbox": "NONE \u2014 route-safe through first-party Request-a-Demo form; Optro AI platform form is the parallel commercial route after 2025-2026 rebrand",
+    "inbox_verification": "auditboard.com 301-redirects to optro.ai verified live 2026-07-20 via curl -I; both URLs route to the same parent; first-party Request-a-Demo form at https://www.auditboard.com/request-a-demo/ is the route-safe commercial channel",
+    "alternative_inboxes": "Optro AI platform demo form at optro.ai/contact or equivalent; no guessed inbox used",
+    "queued": true,
+    "send_status": "queued_blocked_smtp",
+    "founder_verification": "Scott Arnold Co-Founder + CEO verified on auditboard.com / optro.ai About page; CrossPoint Technology LLC now doing business as Optro as of 2025-2026 rebrand",
+    "scale_verification": "~4,000 customers including SOX-404 + SOC-1 + SOC-2 + ISO-27001 + ISO-27701 + HIPAA + PCI-DSS + CMMC + NIST-CSF + FFIEC + AS/NZS + CMMI; public-company-floor 2014-2024; ~$100M+ raised; SOXHUB + AuditBoard AIdA + Cross-Product-Linking + CrossBeam",
+    "cohort_marker": "ai_compliance_automation cycle-2 sibling #4/5 after Drata 710 + Thoropass 711 + Hyperproof 712"
   }
 ]
