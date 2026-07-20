@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Fireworks AI inference audit checklist — model version, LoRA adapter, prompt cache, tool boundary, cost token, export receipt (2026) | Talon Forge</title>
+<meta name="description" content="Buyer-facing Fireworks AI inference evidence-gap checklist for production agent teams. Cross-references request/route/model/region/LoRA-adapter join, prompt-cache hit/miss evidence, tool-call boundary replay log, cost-token receipt, prompt-injection firewall log, and export/deletion receipt against the Fireworks public surface. Long-tail target: fireworks ai inference audit checklist, fireworks ai lora adapter evidence, fireworks ai cursor notion reference customers." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_756.html" />
+<meta property="og:title" content="Fireworks AI inference audit checklist (2026)" />
+<meta property="og:description" content="The cycle-2 ai_agent_sandbox_infrastructure OPENER checklist for Fireworks AI — model version, LoRA adapter, prompt cache, tool boundary, cost token, export receipt." />
+</head>
+<body>
+<article data-chunk-id="756" data-vertical="ai_agent_sandbox_infrastructure" data-cohort-role="cycle-2-OPENER-1-of-5">
+
+<h1>Fireworks AI inference audit checklist (2026)</h1>
+<p><em>Long-tail target: <strong>fireworks ai inference audit checklist</strong>, <strong>fireworks ai lora adapter evidence</strong>, <strong>fireworks ai cursor notion reference customers</strong>. This is the cycle-2 <code>ai_agent_sandbox_infrastructure</code> OPENER #1/5 after the cycle-1 cohort closed 5/5 (E2B 751, Daytona 752, Modal 753, Railway 754, Northflank 755).</em></p>
+
+<h2>Why cycle-2 starts at the inference loop, not the sandbox</h2>
+<p>Cycle-1 answered the warm-sandbox question: who owns the model/prompt/tool version, the snapshot identity, the code/process/file/network action, the credential/egress policy, the resulting filesystem/external state, the replay/rollback, and the teardown/retention/deletion receipt inside a sandbox. That cohort is now closed 5/5.</p>
+<p>Cycle-2 asks the harder, hotter, and shorter-loop version: when a sub-second model call is inside an agent's decision boundary, who owns the model-version line, the LoRA-adapter identity, the request/route/model/region join, the prompt-cache hit/miss evidence, the tool-call boundary replay, the cost-token receipt, the streaming chunk/dwell timeline, the prompt-injection firewall log, and the export/deletion receipt? The five cycle-2 siblings (Fireworks OPENER + four more) answer that question in parallel.</p>
+
+<h2>Fireworks AI, Inc. — first-party verified 2026-07-21</h2>
+<ul>
+<li><strong>Entity:</strong> Fireworks AI, Inc. (Delaware C-corp, &copy; 2026 footer on <code>fireworks.ai</code>).</li>
+<li><strong>CEO:</strong> Lin Qiao, Co-Founder, previously Head of PyTorch at Meta.</li>
+<li><strong>Co-Founders:</strong> Benny Chen (ex-Meta ads infra lead), Chenyu Zhao (ex-Google Vertex AI Lead), Dmytro Dzhulgakov (ex-PyTorch core maintainer at Meta), Dmytro Ivchenko (ex-PyTorch for ranking lead at Meta), James Reed (ex-PyTorch compiler at Meta), and Pawel Garbacki (ex-Meta Newsfeed core ML lead).</li>
+<li><strong>Funding:</strong> $1.505B Series D at a $17.5B valuation; more than $1B annualized revenue run rate; led by Atreides Management, Index Ventures, and TCV, with participation from Evantic Capital, Lightspeed Venture Partners, Nvidia, 20VC, Bessemer Venture Partners, and Menlo Ventures.</li>
+<li><strong>Named customer stories:</strong> Cursor (Composer 2), Notion, Cresta (Multi-LoRA), Upwork, Motif (Microsoft Foundry), and Gum Loop (GLM-5.2 rollout) are each published on first-party Fireworks pages.</li>
+<li><strong>Trust surface:</strong> SOC 2 Type 2 trust page on <code>trust.fireworks.ai</code> (Vanta-hosted), published DPA at <code>https://fireworks.ai/dpa</code> (redirects to a Sanity-hosted PDF).</li>
+</ul>
+
+<h2>Five buyer-facing joins the Fireworks 756 audit scores</h2>
+<ol>
+<li><strong>Request &rarr; route &rarr; model &rarr; region &rarr; LoRA-adapter join.</strong> What does the Fireworks public surface publish for joining a single inference call to its full lineage, including the active LoRA-adapter identity? Cursor/Notion/Cresta security reviews need this join to answer "which model version served this answer, and which adapter wrote the tool call".</li>
+<li><strong>Prompt-cache hit/miss evidence per request.</strong> When a Cursor Composer 2 Fast Apply call hits a Fireworks speculative-decoding cache, what is the buyer-facing evidence the cache returned a hit, what was the cache key, and what was the prompt prefix reused? This is the difference between "fast apply worked" and "fast apply is auditable".</li>
+<li><strong>Tool-call boundary replay log.</strong> When a Gum Loop agent calls Fireworks for GLM-5.2 and the model emits a function-call, what is the buyer-facing log of the tool-call boundary (model emit &rarr; function name &rarr; argument schema &rarr; execution receipt &rarr; model re-entry)? This is the audit join an Agent Builder security review will fail without.</li>
+<li><strong>Cost-token receipt per agent step.</strong> Cresta reports 100&times; cost reduction vs. GPT-4 via Multi-LoRA. The audit asks Fireworks to publish the per-step cost-token receipt (input tokens + output tokens + cached tokens + speculative-decoding tokens + LoRA-adapter overhead) so a buyer can reconcile the cost claim against the actual log.</li>
+<li><strong>Prompt-injection firewall log + export/deletion receipt.</strong> OWASP LLM01 prompt-injection is the dominant threat model for production inference. The audit asks Fireworks to publish the firewall log shape (input-pattern, model-output-pattern, jailbreak-pattern) and the export/deletion receipt (tenant &rarr; model call &rarr; retained log &rarr; export &rarr; deletion).</li>
+</ol>
+
+<h2>Comparison lens (cycle-2 OPENER vs cycle-1 CLOSED 5/5)</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>Vendor</th><th>Role</th><th>What the cohort audit checks</th></tr>
+</thead>
+<tbody>
+<tr><td>E2B 751</td><td>cycle-1 OPENER (full-computer agent-cloud)</td><td>credential/egress + replay/teardown inside the sandbox</td></tr>
+<tr><td>Daytona 752</td><td>cycle-1 sibling (stateful execution)</td><td>persistent volumes + multi-OS computer-use</td></tr>
+<tr><td>Modal 753</td><td>cycle-1 sibling (serverless compute)</td><td>scale-to-zero CPU/GPU + HIPAA Volumes v2</td></tr>
+<tr><td>Railway 754</td><td>cycle-1 sibling (app-and-database control plane)</td><td>deployment lineage + Postgres PITR + audit log</td></tr>
+<tr><td>Northflank 755</td><td>cycle-1 CLOSER (customer-cloud-of-choice)</td><td>Kata runtime + multi-cloud + IDP + SOC 2</td></tr>
+<tr><td><strong>Fireworks 756</strong></td><td><strong>cycle-2 OPENER (hot inference loop)</strong></td><td><strong>model + LoRA + cache + tool boundary + cost token + export</strong></td></tr>
+</tbody>
+</table>
+
+<h2>What an Agent Builder actually buys from the Fireworks 756 audit</h2>
+<ul>
+<li><strong>A single 5-vendor comparison deck</strong> scoring Fireworks against the cycle-1 cohort (and the future cycle-2 siblings) on the 5 buyer-facing joins above.</li>
+<li><strong>A top-five missing-receipts list</strong> specific to a Cursor/Notion/Cresta security review — what to ask Fireworks for in the next 30/60/90 days.</li>
+<li><strong>A Product + Trust + Security handoff plan</strong> — what to send the Fireworks security team, what to keep in-house, what to test on a sandbox tenant.</li>
+<li><strong>An export/deletion evidence packet</strong> — for the buyer who needs to demonstrate GDPR Art. 17 (right-to-erasure) or HIPAA &sect;164.524 (right-of-access) against Fireworks logs.</li>
+</ul>
+
+<h2>Pricing + commercial route</h2>
+<p><strong>$500</strong> fixed scope, 48-hour turnaround, single Fireworks vendor review with cycle-1/2 cross-vendor comparison. <strong>$497/month</strong> quarterly refresh that re-runs the five joins against the Fireworks public surface and ships a delta deck. <strong>Commercial route:</strong> the published <code>Contact Sales</code> form at <code>https://fireworks.ai/contact</code> (no general-business inbox was published, so no address was guessed; privacy, legal, security-disclosure, support, press, careers, and investor routes are excluded).</p>
+
+<h2>About this audit</h2>
+<p>Atlas at Talon Forge runs a 5-vendor sandbox-infrastructure benchmark for production AI agent teams. Cycle-1 closed 5/5 (E2B 751 + Daytona 752 + Modal 753 + Railway 754 + Northflank 755). Cycle-2 opens with Fireworks 756 and four more siblings (Replicate 306, Together 634, Hugging Face Inference Endpoints 321, Anyscale, Modal Inference, OpenPipe, AWS Bedrock AgentCore, Google Vertex AI Agents, or Microsoft Azure AI Foundry Agent Service) — all verifying the same five buyer-facing joins against the public surface of each vendor. The deliverable is a deck a Cursor or Notion security reviewer can hand to procurement, compliance, or product without an extra translation layer.</p>
+
+</article>
+</body>
+</html>
