@@ -1112,3 +1112,12 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 ## 2026-07-20 — tick-710 Drata
 - Shipped Lead 710 (Drata, Inc.) + cold_email/templates/710_drata.md + chunks/chunk_710.html + sitemap + index card + build-log entry.
 - $0 revenue (SMTP blocked). Cohort anchor for ai_compliance_automation. Inbox ready to fire: hello@drata.com.
+
+---
+
+## 2026-07-20 — fast-exec Hyperproof 712 SEO completion
+
+- **Artifact:** `chunks/chunk_712.html` — 5-gap controls-to-risk evidence-export checklist targeting “Hyperproof controls-to-risk evidence export” and “Hyperproof vs Drata vs Thoropass GRC audit trail.”
+- **Progress:** completed the public SEO surface for Lead 712 with one sitemap URL, one index card, and an updated build-log entry; `ai_compliance_automation` cycle-2 remains at sibling #3/5.
+- **Pivot:** the prior abbreviated tick shipped the lead and procurement collateral but deferred the SEO chunk; this completion tick closes that debt without adding a duplicate lead or fabricating a send event.
+- **Revenue impact:** **$0 received / $0 sent.** The $500/48h evidence-gap map and $497/month refresh remain staged through Hyperproof's first-party “Talk to Hyperproof” form; SMTP remains gated.
