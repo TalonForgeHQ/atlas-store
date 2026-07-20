@@ -1,3 +1,12 @@
+## 2026-07-20 — revenue-loop Mistral Article 53 follow-up
+
+- **Artifact:** added `cold_email/templates/mistral_article53_followup.md`: three subjects, five version-pinned evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
+- **Progress:** Lead 700 now has a two-touch sequence tied to Mistral model releases, La Plateforme region and retention state, fine-tuning provenance, and the 2 August 2026 GPAI deadline.
+- **Revenue impact:** **$0 / $0**; SMTP remains blocked, so the verified `press@mistral.ai` route was prepared as a routing request without claiming delivery.
+- **Pivot:** dedupe checks found Cohere already shipped as leads 140, 544, and 600; improved Mistral's send-ready sequence instead of adding a fourth duplicate company-family row.
+
+---
+
 ## 2026-07-20 — fast-exec WRITER procurement follow-up
 
 - **Artifact:** added `cold_email/templates/writer_procurement_followup.md`: three subject variants, five evidence-join questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
