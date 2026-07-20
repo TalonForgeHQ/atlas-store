@@ -76,6 +76,9 @@ for path, index_field, repaired_row in repairs:
     rows = cleaned_rows
     matches = [position for position, row in enumerate(rows) if row.get(index_field) == INDEX]
     assert set(repaired_row) == set(fieldnames), f"{path.name}: schema mismatch"
+    if len(matches) == 1 and not repaired_overflow and rows[matches[0]] == repaired_row:
+        print(f"NO-OP {path.name}: row {INDEX} already complete")
+        continue
     if not matches and not repaired_overflow:
         needs_newline = path.stat().st_size > 0 and path.read_bytes()[-1:] not in (b"\n", b"\r")
         with path.open("a", encoding="utf-8", newline="") as handle:
