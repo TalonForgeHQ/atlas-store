@@ -24,9 +24,9 @@
       "vendor": "Defined.ai",
       "cohort": "ai_data_labeling",
       "sibling": "4/5",
-      "subject_a": "Daniela — 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
-      "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail — 14-col provenance we can deliver this week",
-      "subject_c": "your AI-data marketplace vendor-DD inquiry — reply 'send' and I'll forward the 5-gap map",
+      "subject_a": "Daniela \u2014 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
+      "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail \u2014 14-col provenance we can deliver this week",
+      "subject_c": "your AI-data marketplace vendor-DD inquiry \u2014 reply 'send' and I'll forward the 5-gap map",
       "status": "queued",
       "send_window": "Tue-Thu 9-11am PT",
       "queued_at": "2026-07-19T19:05:29.731960+00:00",
@@ -296,6 +296,20 @@
       "queued_at": "2026-07-20T18:00:00Z",
       "founder_verification": "Shiv Rao, MD identified as Founder + CEO on abridge.com/about",
       "verification": "privacy@abridge.com published on abridge.com/privacy; contact form verified on abridge.com/contact"
+    },
+    {
+      "lead_index": 738,
+      "name": "Infermedica",
+      "vertical": "ai_healthcare_conversational_agents",
+      "template": "cold_email/templates/738_infermedica_clinical_triage_followup.md",
+      "commercial_route_url": "https://infermedica.com/contact-sales",
+      "best_email": "FORM:https://infermedica.com/contact-sales",
+      "prior_inbox_not_for_commercial_use": "N/A",
+      "send_status": "queued_blocked_form_smtp",
+      "queued_at": "2026-07-20T18:14:00Z",
+      "founder_verification": "Infermedica Sp. z o.o. (Wroc\u0142aw, Poland); co-founders per public records include Piotr Jaworski + Roberto Sznajdrotter; first-party verification limited to company + product + medical-device certificate + ISO certifications",
+      "verification": "infermedica.com Contact Sales form verified live 2026-07-20; medical-device-grade safety + EU MDR Class IIb + ISO 13485 + ISO 27001 + SOC 2 Type 2 + GDPR + HIPAA + CE + LEI 984500NIA7B8AFF75805 + MHRA all published on first-party site",
+      "cohort_marker": "ai_healthcare_conversational_agents cycle-1 sibling #4/5 after Hippocratic AI 735 + Ada Health 736 + Sensely 737 (CLOSER #5/5 still open)"
     }
   ]
 }
