@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Together AI dedicated model inference audit checklist — endpoint, GPU, storage, evaluation, and deletion receipts (2026) | Talon Forge</title>
+<meta name="description" content="Buyer-facing Together AI dedicated model inference audit checklist for production agent teams: endpoint and model lineage, dedicated GPU isolation, managed-storage boundaries, fine-tune and evaluation receipts, human approval, and deletion proof. Long-tail target: Together AI dedicated model inference audit checklist." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_758.html" />
+<meta property="og:title" content="Together AI dedicated model inference audit checklist (2026)" />
+<meta property="og:description" content="The cycle-2 ai_agent_sandbox_infrastructure sibling #3/5 checklist for Together AI: endpoint, model, GPU, storage, evaluation, approval, and deletion evidence." />
+</head>
+<body>
+<article id="chunk-758" data-chunk-id="758" data-lead-id="634" data-vertical="ai_agent_sandbox_infrastructure" data-cohort-role="cycle-2-sibling-3-of-5">
+
+<h1>Together AI dedicated model inference audit checklist (2026)</h1>
+<p><em>Long-tail target: <strong>Together AI dedicated model inference audit checklist</strong>, <strong>Together AI GPU cluster evidence</strong>, and <strong>Together AI production inference procurement</strong>. This is cycle-2 sibling #3/5 after Fireworks 756 and Replicate 757.</em></p>
+
+<h2>Why this checklist exists</h2>
+<p>Together AI's current first-party surface describes an <strong>AI Native Cloud</strong> spanning Serverless Inference, Batch Inference, Provisioned Throughput, Dedicated Model Inference, Dedicated Container Inference, GPU Clusters, AI Factory, Sandbox developer environments, Managed Storage, Fine-Tuning, and Evaluations. That breadth creates a procurement join problem: a buyer needs one evidence chain connecting the API request to the selected endpoint, model, compute, stored artifacts, evaluation result, human decision, and final deletion receipt.</p>
+<p>The dedicated-inference page markets custom hardware, production deployments that can scale to thousands of GPUs, and continuous rollout of systems-research improvements. The audit does not treat those marketing statements as control evidence. It converts them into five bounded questions that a security, platform, or procurement reviewer can verify.</p>
+
+<h2>Together AI — first-party facts checked 2026-07-21</h2>
+<ul>
+<li><strong>Company:</strong> Together AI, at <code>together.ai</code>, describes itself as the AI Native Cloud.</li>
+<li><strong>Founders shown on the current About page:</strong> Vipul Ved Prakash (Founder &amp; CEO), Ce Zhang (Founder &amp; CTO), Chris Ré (Founder), Tri Dao (Founder &amp; Chief Scientist), and Percy Liang (Founder).</li>
+<li><strong>Inference products:</strong> Serverless Inference, Batch Inference, Provisioned Throughput, Dedicated Model Inference, and Dedicated Container Inference.</li>
+<li><strong>Compute and state products:</strong> GPU Clusters, AI Factory, Sandbox developer environments, and Managed Storage.</li>
+<li><strong>Model-shaping products:</strong> Fine-Tuning and Evaluations.</li>
+<li><strong>GPU families displayed in current navigation:</strong> GB300, GB200, B200, H200, and H100.</li>
+<li><strong>Commercial route:</strong> the first-party <code>https://www.together.ai/contact-sales</code> form. No inbox is inferred from this form.</li>
+</ul>
+
+<h2>Five buyer-facing joins the Together AI audit scores</h2>
+<ol>
+<li><strong>Request → endpoint → model receipt.</strong> Can the buyer export one record that joins request ID, tenant, endpoint type, model ID and version, container or deployment revision, region, start/end time, token count, and cost? Serverless, provisioned-throughput, dedicated-model, and dedicated-container routes should remain distinguishable after export.</li>
+<li><strong>Endpoint → GPU isolation receipt.</strong> For a dedicated deployment, can Together AI show which GPU family, cluster, tenant boundary, network policy, autoscaling event, and failover event handled the request without exposing another customer's identifiers? The evidence request covers GB300, GB200, B200, H200, and H100 without assuming that every family is available in every region or product tier.</li>
+<li><strong>Model → storage → fine-tune lineage.</strong> Can the buyer join base-model version, training dataset hash, managed-storage object version, fine-tune configuration, resulting artifact, access policy, and retention window? This is the boundary between an inference receipt and a reproducible model-shaping receipt.</li>
+<li><strong>Evaluation → release → human decision.</strong> Can an evaluation result be tied to the exact candidate model, benchmark version, threshold, reviewer, accept/reject decision, release revision, and rollback event? The checklist asks for evidence of the decision; it does not assume a specific Together AI approval workflow exists.</li>
+<li><strong>Export → deletion proof.</strong> Can a customer export the joined record and then prove deletion across prompts, outputs, logs, caches, stored datasets, fine-tuned artifacts, evaluation data, and backups? The expected receipt names each scope, completion time, exception, and sub-processor dependency.</li>
+</ol>
+
+<h2>Cycle-2 comparison lens</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>Vendor</th><th>Cycle-2 role</th><th>Primary audit boundary</th></tr>
+</thead>
+<tbody>
+<tr><td>Fireworks 756</td><td>OPENER #1/5</td><td>model + LoRA adapter + prompt cache + tool boundary + token/cost receipt</td></tr>
+<tr><td>Replicate 757</td><td>sibling #2/5</td><td>catalog version + cog container + GPU-pool cascade + per-inference deletion</td></tr>
+<tr><td><strong>Together AI 634 / chunk 758</strong></td><td><strong>sibling #3/5</strong></td><td><strong>endpoint + dedicated GPU + managed storage + fine-tune + evaluation + approval</strong></td></tr>
+<tr><td>Hugging Face Inference Endpoints 321</td><td>planned sibling #4/5</td><td>endpoint + Hub model card + repository revision + dedicated deployment</td></tr>
+<tr><td>Modal Inference</td><td>planned CLOSER #5/5</td><td>function + image + GPU + volume + scale-to-zero execution</td></tr>
+</tbody>
+</table>
+
+<h2>What the $500 review delivers</h2>
+<ul>
+<li>A five-gap evidence map using only customer-supplied and public Together AI materials.</li>
+<li>A request-to-deletion schema with required fields, owners, and missing-receipt flags.</li>
+<li>A cross-vendor comparison against Fireworks 756 and Replicate 757 on the same five buyer-facing joins.</li>
+<li>A 30/60/90-day handoff for Product, Platform, Security, Privacy, and Procurement owners.</li>
+</ul>
+<p><strong>Offer:</strong> $500 fixed scope with a 48-hour turnaround, or $497/month for a quarterly public-surface refresh and delta report. <strong>Commercial route:</strong> Together AI's first-party Contact Sales form. No form submission, email, delivery, payment, or revenue is claimed.</p>
+
+<h2>Verification sources</h2>
+<ul>
+<li><a href="https://www.together.ai/">Together AI homepage</a> — AI Native Cloud and current product navigation.</li>
+<li><a href="https://www.together.ai/about-us">Together AI About Us</a> — current founder and leadership roster.</li>
+<li><a href="https://www.together.ai/serverless-inference">Serverless Inference</a> — open-source models on-demand product surface.</li>
+<li><a href="https://www.together.ai/dedicated-model-inference">Dedicated Model Inference</a> — custom-hardware production inference surface.</li>
+<li><a href="https://www.together.ai/contact-sales">Contact Sales</a> — first-party commercial form route.</li>
+</ul>
+
+</article>
+</body>
+</html>
