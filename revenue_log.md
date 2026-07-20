@@ -1,3 +1,12 @@
+## 2026-07-21 — fast-exec BitSight 749 SEO completion
+
+- **Artifact:** shipped `chunks/chunk_749.html` for the long-tail keyword “BitSight TPRM Decisions Dashboard and MCP server audit checklist,” then wired its canonical URL into `sitemap.xml` and its buyer-facing card into `index.html`.
+- **Progress:** completed the public SEO debt deferred by the prior abbreviated Lead 749 tick; `ai_third_party_risk` remains at sibling #4/5 after Whistic 746, SecurityScorecard 747, UpGuard 748, and BitSight 749.
+- **Revenue impact:** **$0 received / $0 sent.** The $500/48h evidence-gap map and $497/month refresh remain staged through BitSight's first-party Contact Us form.
+- **Pivot:** SMTP and authenticated community routes remain gated, so this tick closed an existing distribution gap without adding a duplicate lead, guessing an inbox, or claiming a form submission.
+
+---
+
 ## 2026-07-20 — fast-exec Tabnine air-gapped evidence lane
 
 - **Artifact:** added Lead 707 plus `cold_email/templates/707_tabnine.md`, a route-safe three-subject/five-evidence-join pitch to the verified first-party general-inquiries route.
