@@ -196,7 +196,36 @@
     "evidence": "cold_email/724_floqast.md",
     "seo_chunk": "chunks/chunk_724.html",
     "sent": false,
-    "revenue": 0,
-    "note": "Lead 724 sibling #5/5 cohort closer staged; SMTP remains gated; no send, contact-form submission, or revenue claimed."
-  }
-]
+        "revenue": 0,
+        "note": "Lead 724 sibling #5/5 cohort closer staged; SMTP remains gated; no send, contact-form submission, or revenue claimed."
+      },
+      {
+        "tick": "2026-07-20-fast-exec-nabla-726",
+        "lead_index": 726,
+        "company": "Nabla",
+        "vertical": "ai_clinical_documentation",
+        "cohort_position": "cycle-1 sibling #2/5 after Abridge 725 OPENER",
+        "route": "contact@nabla.com",
+        "template": "cold_email/templates/726_nabla_copilot_followup.md",
+        "evidence": "cold_email/726_nabla.md",
+        "seo_chunk": "chunks/chunk_726.html",
+        "sent": false,
+        "revenue": 0,
+        "excluded_inboxes": [
+          "support@nabla.com (product-help route per nabla.com/press)",
+          "privacy@/legal@/security@/press@/media@ (privacy/legal/security/press routes)",
+          "incident@/abuse@ (incident/abuse routes)"
+        ],
+        "artifact": [
+          "cold_email/leads.csv row 726",
+          "cold_email/leads_with_emails.csv row 726",
+          "cold_email/templates/726_nabla_copilot_followup.md",
+          "chunks/chunk_726.html",
+          "sitemap.xml +1",
+          "index.html chunk_726 card",
+          "build-log.html tick 726 entry",
+          "revenue_log.csv row 726"
+        ],
+        "note": "Lead 726 sibling #2/5 staged; SMTP remains gated; no send, contact-form submission, or revenue claimed. KLAS Spotlight 90.9 + A+ executive involvement + A+ likely-to-recommend + NEJM AI Trial + $70M Series C; first-party contact@nabla.com verified live on every page footer + copilot-contact + press + connect + legal-documents."
+      }
+    ]
