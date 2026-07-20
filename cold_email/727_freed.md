@@ -33,4 +33,4 @@ Abridge 725 owns EHR-native Best-in-KLAS ambient documentation across enterprise
 4. EHR Push transfer → destination EHR record/version → failed-transfer retry → rollback/deletion receipt.
 5. Front Desk call/message → AI action → human escalation → patient communication and audit receipt.
 
-**Commercial safety:** privacy, legal, security, support, press, incident, and abuse routes are excluded. No email, form submission, demo request, or revenue is claimed.
+**Commercial safety:** Privacy, legal, security, support, press, incident, and abuse routes are excluded. No email, form submission, demo request, or revenue is claimed.
