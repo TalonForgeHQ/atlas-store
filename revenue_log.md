@@ -1108,3 +1108,7 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 ## 2026-07-20 — tick-708 Windsurf
 - Shipped Lead 708 + cold_email template + chunks/chunk_708.html.
 - $0 revenue (SMTP blocked). Inbox ready to fire: hello@windsurf.com.
+
+## 2026-07-20 — tick-710 Drata
+- Shipped Lead 710 (Drata, Inc.) + cold_email/templates/710_drata.md + chunks/chunk_710.html + sitemap + index card + build-log entry.
+- $0 revenue (SMTP blocked). Cohort anchor for ai_compliance_automation. Inbox ready to fire: hello@drata.com.
