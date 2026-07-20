@@ -1,3 +1,12 @@
+## 2026-07-20 — fast-exec AIPRM verified-prompt route repair
+
+- **Artifact:** added `cold_email/templates/aiprm_verified_prompt_followup.md`: three subjects, five prompt-review/version/access evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
+- **Progress:** Lead 705 now uses AIPRM, Corp. + founder Christoph C. Cemper + the first-party `hello@aiprm.com` general-contact route, with current 2M+ user and 4,000+ prompt-library claims.
+- **Revenue impact:** **$0 / $0**; SMTP remains blocked, so the commercial route was prepared without claiming delivery.
+- **Pivot:** corrected unsupported role-inbox, legal-entity, scale, co-founder, and pricing claims instead of adding a duplicate lead or using security/privacy/legal/support/press channels.
+
+---
+
 ## 2026-07-20 — revenue-loop Sourcegraph Contact Sales route repair
 
 - **Artifact:** added `cold_email/templates/sourcegraph_cody_amp_procurement_followup.md`: three subjects, five context/model/MCP evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
