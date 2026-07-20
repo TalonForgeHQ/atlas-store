@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>One moment, please…</title>
+    <style>
+      :root {
+        --bg-color: #f9f9f9;
+        --text-color: #333;
+        --small-text-color: #666;
+        --border-color: #666;
+        --link-color: #146aff;
+      }
+
+      /* Override for dark mode */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: #121212;
+          --text-color: #e0e0e0;
+          --small-text-color: #888;
+          --border-color: #888;
+          --link-color: #146aff;
+        }
+      }
+
+      body {
+        margin: 0;
+        padding: 2rem;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .wrapper,
+      .footer {
+        width: 100%;
+        max-width: 800px;
+      }
+
+      .wrapper {
+        flex: 1 0 auto;
+        display: flex;
+        align-items: center;
+      }
+
+      .footer {
+        flex: 0 0 auto;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .logo svg {
+        max-height: 2em;
+        max-width: calc(100vw - 4rem);
+        fill: var(--link-color);
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin: 0.75rem 0;
+        line-height: 1.4;
+      }
+
+      .small {
+        font-size: 0.85rem;
+        color: var(--small-text-color);
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+      }
+    </style>
+    <script>
+      (function() {
+        const origRef = document.referrer || '';
+        if (origRef) {
+          sessionStorage.setItem('cf_original_referrer', origRef);
+        }
+      })();
+    </script>
+  <meta http-equiv="refresh" content="360"></head>
+  <body>
+	  <div class="wrapper">
+	    <div class="contents">
+	      <div class="logo">
+	        <svg viewBox="0 0 370 52.8"><path d="M27 38.7c-2.4 5.1-8.4 7.3-13.5 4.9S6.2 35.1 8.6 30s8.4-7.3 13.5-4.9c2.2 1.1 4 2.9 5 5.1H35c-2.3-9.5-11.9-15.4-21.4-13S-1.8 29.1.6 38.6 12.5 54 22 51.6c6.4-1.6 11.5-6.6 13-13h-8z"></path><path d="M63 18.2c-2.2-1-4.6-1.6-7.1-1.5-2.5 0-5 .8-7.1 2.2v-1h-7.2v32.9h7.3V35c-.1-2.1 0-4.3.5-6.4v-.2c.4-1.4 1.4-2.6 2.7-3.3 2.4-1.5 5.5-1.5 7.9 0l3-6.9z"></path><path d="M90.6 17.9v15.8c.1 2.1 0 4.3-.5 6.4v.2c-.4 1.4-1.4 2.6-2.7 3.3C85 45 82 45 79.5 43.5c-1.3-.7-2.3-1.9-2.7-3.3V40c-.4-2.1-.6-4.3-.5-6.4V17.9H69v17.9c-.2 2.9.3 5.9 1.2 8.6 1.1 2.7 3.2 4.8 5.9 5.9 2.2 1 4.6 1.6 7.1 1.5 2.5 0 5-.8 7.1-2.2v1.1h7.2V17.9h-6.9z"></path><path d="M114 50.8V35c-.1-2.2.1-4.3.5-6.4v-.2c.4-1.4 1.4-2.6 2.7-3.3 2.4-1.5 5.5-1.5 7.9 0 1.3.7 2.3 1.9 2.7 3.3v.2c.4 2.1.5 4.3.4 6.4v15.8h7.2v-18c.2-2.9-.2-5.9-1.2-8.6-1.1-2.7-3.2-4.8-5.9-5.9-2.2-1-4.6-1.6-7.1-1.5-2.5 0-5 .8-7.1 2.2v-1h-7.3v32.8h7.2z"></path><path d="M168.9 38.7c-2.4 5.1-8.4 7.3-13.5 4.9-5.1-2.4-7.3-8.4-4.9-13.5 2.4-5.1 8.4-7.3 13.5-4.9 2.2 1.1 4 2.9 5 5.1h7.9c-2.3-9.5-11.9-15.4-21.4-13s-15.4 11.9-13 21.4 11.9 15.4 21.4 13c6.4-1.6 11.5-6.6 13-13h-8z"></path><path d="M190.8 50.8V35c-.1-2.1 0-4.3.5-6.4v-.2c.4-1.4 1.4-2.6 2.7-3.3 2.4-1.5 5.5-1.5 7.9 0 1.3.7 2.3 1.9 2.7 3.3v.2c.4 2.1.6 4.3.5 6.4v15.8h7.2v-18c.2-2.9-.3-5.9-1.2-8.6-1.1-2.7-3.2-4.8-5.9-5.9-2.2-1-4.6-1.6-7.1-1.5-2.5 0-5 .8-7.1 2.2V0h-7.3v50.8h7.1z"></path><path d="M238.3 16.7H237c-3.1.2-6.1 1.3-8.7 3.1V0h-7.2v50.8h7.2v-1.9c8 5.6 19.1 3.7 24.7-4.3 5.6-8 3.7-19.1-4.3-24.7-3-2.1-6.7-3.3-10.4-3.2zm10.1 19v.3l-.3 1.2c-.1.4-.3.9-.5 1.3v.2c-1.4 2.9-4 4.9-7.1 5.6l-1 .2h-1.3c-.5 0-.9 0-1.4-.1h-.3c-.9-.1-1.8-.4-2.6-.8h-.2c-.8-.4-1.6-.9-2.3-1.5-.7-.6-1.3-1.4-1.8-2.1-.2-.4-.5-.8-.7-1.3-1.2-2.7-1.1-5.7.1-8.4 1.5-3.2 4.6-5.4 8.2-5.8h1c5.5.1 9.9 4.4 10 9.9.3.4.3.8.2 1.3z"></path><path d="M261.8 34.3c.1 9.8 8.1 17.7 17.9 17.6 3.5 0 6.8-1.1 9.7-3v1.9h7.2V17.9h-7.2v2c-2.6-1.8-5.6-2.8-8.7-3.1h-1.3c-9.6 0-17.5 7.8-17.6 17.5zm7.5 0c0-5.6 4.6-10.2 10.2-10.2h1c3.5.4 6.6 2.6 8.2 5.8 1.2 2.6 1.3 5.7.1 8.4-.2.4-.4.9-.7 1.3-.5.8-1.1 1.5-1.8 2.1-.7.6-1.5 1.1-2.3 1.5h-.2c-.8.4-1.7.6-2.6.8h-.2c-.5.1-.9.1-1.4.1H278.4l-1-.2c-3-.7-5.6-2.7-7-5.5v-.2c-.2-.4-.4-.8-.5-1.3l-.3-1.2v-.3c-.1-.3-.2-.7-.3-1.1z"></path><path d="M329.9 27.7v-.2c0-5.4-4.1-10.8-13.3-10.9-9.2-.1-13.2 5.4-13.3 10.7v.4c.2 3.1 2 7 8.8 8.6l6.1 1.4c1.6.4 4.3 1.2 4.5 3.3 0 2.8-3.6 4.2-6.1 4.2-3 0-6.1-1.6-6.1-4.3v-.2h-7.2v.1c0 5.4 4.1 10.8 13.3 10.9 9.2.1 13.3-5.5 13.3-10.9v-.1c-.2-3.1-1.9-7.1-8.8-8.7l-6.1-1.4c-1.3-.3-4.5-1.2-4.5-3.2 0-3.1 3.2-4.2 6.1-4.2 3 0 6.1 1.6 6.1 4.3v.2h7.2z"></path><path d="M370.1 33.6c0-10.7-7.3-17-16.9-17-9.3-.3-17.1 6.9-17.4 16.2v1.3c-.4 9.4 6.9 17.3 16.3 17.7h1.1c3.5 0 7-.8 10.1-2.6 3.2-1.8 5.6-4.9 6.5-8.5h-7.1c-1.7 3.1-4.8 4.6-9.2 4.6-5.9 0-10.3-4.6-10.3-9H370c.1-1.1.1-1.8.1-2.7zm-27-3.3c1-4.5 5.1-7.6 9.7-7.3 5.1 0 9.2 3 9.9 7.3h-19.6z"></path></svg>
+	      </div>
+	
+	      <p>We must verify your session before you can proceed</p>
+	      
+	      <div><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cFPWv: 'b',cH: '5wuiMCVKizLccrWXle3MnSjmTOCoAoANUzBao5CMVYg-1784548619-1.2.1.1-ftSq2K68WVcgwzRklXt0gyfF1tT0mziKMjc4Z4mVipKVIQNCWKMgL3ZzeC99Ghsa',cITimeS: '1784548619',cRay: 'a1e1c9286e08f879',cTplB: '0',cTplC:1,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/organization/memora-health?__cf_chl_tk=H7OfUqFUo9e7u4e9xmBfgtNI1a9FXi_6ycG_BwYK45I-1784548619-1.0.1.1-qBPhe8vL2iFt.c3Qz4nMWRi9XXywKlZ2z136iqCTFQw",cvId: '3',cZone: 'www.crunchbase.com',fa:"/organization/memora-health?__cf_chl_f_tk=H7OfUqFUo9e7u4e9xmBfgtNI1a9FXi_6ycG_BwYK45I-1784548619-1.0.1.1-qBPhe8vL2iFt.c3Qz4nMWRi9XXywKlZ2z136iqCTFQw",md: 'dPwakDIhQ0z.03eDtaoBnTUoz0r6rli4p0eaSyRu0LM-1784548619-1.2.1.1-Oj1EewuL5RcaPr6D9Ii.M7SYFhRBipPTfAr4QUbr_Mct9CKoa1JtWRMGlFMNvJnrTmGEAYYpXSt5ZNrWCobfBiabcrMBlGqX5Ulwzs_9TxE9RDMRVASZvv7OtkA7aYWjZK7wc8Uk5Cl65pDyxsOAZchklcts549VRXYlDK8QvJxiPYJMppQjYzt30wYq0tuVx9ZtHdjQXXnbtHaY5APKTk4bS2Im8f5gTVnqiDoMkNuDkz6yCZ_CZBsYWT.M9FDhD_s0xM6eyw1_jTO6rSSTwyj0wFOlYWqY1lGtTLv4F5SmE..S4vQSeN8HbF.OgxlbijYvQoJj8mGPZR.W.J0oJup69aZ_dqmQ8MS1kq5v3J37E5hVwElWn4opAGP_nh4sY4NXeDuWx0IczDeZCsx.JlEfXheB35VuGL9a4GUPRx_uCxUO8HIYhJeS2a5FwDzwzjg88Xk1xQSL6uDBV39ja2.ZQSJ.HA2gX1XkhmMlvQtwyG67Q1HJQ7sXdxxNCMxsv17dhkR9vDFDYPtYnRW.Qf3shciMPGmue2mHYcL4O0zuUCcPHvq1v6gTBPFR4Cfh0NvZ1v61l.SV8BMzC9i4YmJP4342JZOJJJw346Z10cMRgCMUxBW_taBU0o_MJfbsnlRCMwSZ7CUckK06uDktTG2iHiiq5McEJueWGFInt6_jq5iX8ci_VvHXCXJv1Rrn7egBu84r9f1CxTfmQKUowUlYFmOtRXGL75sk7Gbh2xz0XKVluAAvPA1dL3hRIaeVJoDuPsAvU8qEDK.5DMOcuphjub8fR3hvurQgFWlHXHDYPOyRNNBBiZZB2xWz4Iaj37SEDUTsH29HjoVw_IHYVRCrYreLecd.L95ptFl503sYav9J14eV791Ryu4gtdmaKjeF774CHb.ET3lguMwzkTNBuOoxazdPq8TMisRPGlD1SqRmGu5_TqSj3.5R3mlYiM1j.fLvBqXz5l_FWmMKQHQ2kupb5pToYFPVexe3efmLbgkKlKM9uz3Ute_M7nc8DJMZN_w.IN0OgeAokJD4ktIlvWhRuBJz3ogPezWX9FYV3XKduOHaZ3qgqHbSaGiAgCW5kw2uHQ0l0qh0nLKVVbsLH2SYBA2MJw22IRyPYye0K3VudKcxbv_23D_Izse6Z9fIVvk2dkc7Gt5waBC7fvkeFElmeCMfnLYqOyFvU.7KnKrXicF4n3M90CvkgJveWq5AK_fualGgzTJVdcmzIQ',mdrd: 'keoA0Q63CNtbfjNNYoQ.l.zR.1lU82GT9YY.4rSnzNI-1784548619-1.2.1.1-nWBQs571fg1Zn31YFlPjttlpR7Wz0M36TaclZn2r4aUln5WZbaN7u8GLSzf_X043ZpL8Eq_6K6vDlL6hGDYyW0PuSoAjLUn1FivMbI_CJFHGNxNwQ.yyWMvDj7wmfmVqYxv7o1spFtfwkfFbVQWNxhctZn8bSbPQScCH_hxunKIN8DRpIYsEIo7TRR4PekZ1zGsZYD_gouLNlTUB.gE16Nb4z.YCilDnqowl92kKvUI8YdMiszhS6.m9.sKXdh6KZdfJq7smTiaeIIs2KxRmG.hASnvK2GP7p8BR1wn1cuo',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a1e1c9286e08f879';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/organization/memora-health?__cf_chl_rt_tk=H7OfUqFUo9e7u4e9xmBfgtNI1a9FXi_6ycG_BwYK45I-1784548619-1.0.1.1-qBPhe8vL2iFt.c3Qz4nMWRi9XXywKlZ2z136iqCTFQw"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></div>
+	    </div>
+    </div>
+      
+    <div class="footer">
+      <p class="small">
+        Need help? <a href="mailto:support@crunchbase.com">Contact our support team</a>.
+      </p>
+
+      <p class="small">
+        Ray ID: <code>a1e1c9286e08f879</code><br>
+      </p>
+    </div>
+  </body>
+</html>
