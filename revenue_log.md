@@ -1,3 +1,12 @@
+## 2026-07-20 — fast-exec Tabnine air-gapped evidence lane
+
+- **Artifact:** added Lead 707 plus `cold_email/templates/707_tabnine.md`, a route-safe three-subject/five-evidence-join pitch to the verified first-party general-inquiries route.
+- **Progress:** published and wired `chunks/chunk_707.html` for the long-tail keyword “Tabnine air-gapped AI coding assistant audit checklist.”
+- **Revenue impact:** **$0 / $0**; positioned a $500/48h audit and $497/mo refresh without claiming delivery while SMTP remains blocked.
+- **Pivot:** used Tabnine’s live first-party Contact Us and Code Privacy pages instead of blocked authenticated community channels; verified Dror Weiss + Eran Yahav, `info@tabnine.com`, secure SaaS/VPC/on-prem/air-gapped deployment, proprietary models, zero retention, and no customer-code training.
+
+---
+
 ## 2026-07-20 — fast-exec AIPRM verified-prompt route repair
 
 - **Artifact:** added `cold_email/templates/aiprm_verified_prompt_followup.md`: three subjects, five prompt-review/version/access evidence questions, a concise 48-hour scope, and $500 / $497-mo / five-vendor options.
