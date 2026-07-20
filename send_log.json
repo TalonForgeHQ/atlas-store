@@ -160,4 +160,4 @@
     "scale_verification": "~4,000 customers including SOX-404 + SOC-1 + SOC-2 + ISO-27001 + ISO-27701 + HIPAA + PCI-DSS + CMMC + NIST-CSF + FFIEC + AS/NZS + CMMI; public-company-floor 2014-2024; ~$100M+ raised; SOXHUB + AuditBoard AIdA + Cross-Product-Linking + CrossBeam",
     "cohort_marker": "ai_compliance_automation cycle-2 sibling #4/5 after Drata 710 + Thoropass 711 + Hyperproof 712"
   }
-]
+]{"ts": "2026-07-20T13:09:00Z", "tick": "2026-07-20-fast-exec-numeric-722", "lead": 722, "vendor": "Numeric", "cohort": "ai_financial_workflow_agents", "cohort_marker": "ai_financial_workflow_agents cycle-1 sibling #3/5 after Rogo 720 OPENER + Daloopa 721", "route": "first-party Schedule-a-Demo form on numeric.io", "excluded_inboxes": ["privacy@numeric.io (verified live 2026-07-20 on numeric.io/legal/privacy-policy)"], "artifact": ["cold_email/leads.csv row 722", "cold_email/leads_with_emails.csv row 722", "cold_email/templates/722_numeric_close_automation_followup.md", "chunks/chunk_722.html", "sitemap.xml +1", "index.html chunk_722 card"], "sent": false, "revenue": 0, "note": "Lead 722 sibling #3/5 staged; SMTP remains gated; no send or revenue claimed."}
