@@ -24,9 +24,9 @@
       "vendor": "Defined.ai",
       "cohort": "ai_data_labeling",
       "sibling": "4/5",
-      "subject_a": "Daniela \u2014 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
-      "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail \u2014 14-col provenance we can deliver this week",
-      "subject_c": "your AI-data marketplace vendor-DD inquiry \u2014 reply 'send' and I'll forward the 5-gap map",
+      "subject_a": "Daniela — 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
+      "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail — 14-col provenance we can deliver this week",
+      "subject_c": "your AI-data marketplace vendor-DD inquiry — reply 'send' and I'll forward the 5-gap map",
       "status": "queued",
       "send_window": "Tue-Thu 9-11am PT",
       "queued_at": "2026-07-19T19:05:29.731960+00:00",
@@ -283,6 +283,19 @@
       "founder_verification": "Shrav Mehta Co-Founder + CEO + Amish Patel Co-Founder + CTO verified on secureframe.com About page",
       "scale_verification": "4,000+ customers; 25+ frameworks; YC W20 alumni; $56M Series B 2022; $100M+ total raised; 100+ employees; San Francisco CA HQ",
       "cohort_marker": "ai_compliance_automation cycle-2 COHORT-FULL CLOSER sibling #5/5 after Drata 710 + Thoropass 711 + Hyperproof 712 + AuditBoard 713 (cycle-2 FULL 5/5 CLOSED)"
+    },
+    {
+      "lead_index": 725,
+      "name": "Abridge",
+      "vertical": "ai_clinical_documentation",
+      "template": "cold_email/templates/725_abridge_clinical_ai.md",
+      "commercial_route_url": "https://www.abridge.com/contact",
+      "best_email": "privacy@abridge.com",
+      "prior_inbox_not_for_commercial_use": "privacy@abridge.com",
+      "send_status": "queued_pending_smtp_unblock",
+      "queued_at": "2026-07-20T18:00:00Z",
+      "founder_verification": "Shiv Rao, MD identified as Founder + CEO on abridge.com/about",
+      "verification": "privacy@abridge.com published on abridge.com/privacy; contact form verified on abridge.com/contact"
     }
   ]
 }
