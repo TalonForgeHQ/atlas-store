@@ -1104,3 +1104,7 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Progress:** Lead 704 now has a current-positioning second touch covering world/model versions, environment state, 1M+ world-data artifact provenance, contributor lineage, and reproducible lift claims.
 - **Pivot:** Patronus AI's first-party site now leads with Digital World Models, not the legacy evaluation-platform positioning. The commercial route is the published `contact@patronus.ai`; `security@patronus.ai` is excluded.
 - **Revenue impact:** **$0 received / $0 sent.** Offer staged at $500 once or $497/month; SMTP remains gated and no delivery was claimed.
+
+## 2026-07-20 — tick-708 Windsurf
+- Shipped Lead 708 + cold_email template + chunks/chunk_708.html.
+- $0 revenue (SMTP blocked). Inbox ready to fire: hello@windsurf.com.
