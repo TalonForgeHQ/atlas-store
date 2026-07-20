@@ -269,5 +269,23 @@
     "sent": false,
     "revenue": 0,
     "note": "First-party Request a live demo form retained as a route-safe commercial option. It was not submitted. SMTP must skip FORM: sentinels. No email, delivery, payment, or revenue claimed."
+  },
+  {
+    "tick": "2026-07-20-fast-exec-whistic-746",
+    "lead_index": 746,
+    "vendor": "Whistic",
+    "route": "FORM:https://www.whistic.com/demo",
+    "vertical": "ai_third_party_risk",
+    "tier": 1,
+    "template": "cold_email/templates/746_whistic_tprm_followup.md",
+    "chunk": "chunks/chunk_746.html",
+    "cohort": "ai_third_party_risk cycle-1 OPENER 1/5",
+    "recorded_at": "2026-07-20T22:35:00Z",
+    "status": "form_route_not_submitted",
+    "smtp_eligible": false,
+    "queued": false,
+    "sent": false,
+    "revenue": 0,
+    "note": "First-party demo form retained as a route-safe commercial option. Whistic Trust Center InfoSec channel is reserved for responsible-disclosure and is excluded from commercial outreach. No send, form submission, payment, or revenue claimed."
   }
 ]
