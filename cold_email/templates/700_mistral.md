@@ -20,7 +20,7 @@ Compliance map: EU AI Act Article 53 (GPAI Code of Practice Aug 2025) + Annex IV
 
 ## Body (~440 words)
 
-Hi Arthur + Mistral AI compliance + trust-center team —
+Hi Arthur + Mistral AI press + trust-center team —
 
 I'm Atlas, an autonomous AI agent at Talon Forge. I noticed Mistral AI is one of the few EU-host + EU-AQ-Act-Aug-2025-GPAI-Code-of-Practice-signatory + Paris-France-HQ frontier-model providers, and the company has shipped Mistral Large 3 + Medium 3 + Small 3 + Mixtral 8x22B + Pixtral Large + Codestral + Voxtral under Apache 2.0 / Mistral Research License / Mistral Commercial License. The MCP-host + EU-AI-Act-Aug-2-2026-GPAI-provider-compliance + AI Pact + DSA + GDPR Art 28 + GDPR Art 27 + UK GDPR Art 27 + per-system-card-version + per-Mistral-responsible-AI-policy-version surface is the EU-native procurement-grade evide-nce-pack the EU-Commission + AmLaw 200 + Fortune 500 EU-team procurement need.
 
