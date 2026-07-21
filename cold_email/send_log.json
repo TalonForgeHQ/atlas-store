@@ -335,6 +335,19 @@
       "smtp_eligible": false,
       "send_status": "form_route_not_submitted",
       "verification": "first-party Daytona Contact Us form verified; no suitable general-business inbox published; no form submission or email claimed"
+    },
+    {
+      "lead_index": 761,
+      "name": "Databricks",
+      "vertical": "ai_data_intelligence_agents",
+      "cohort_role": "opener-1-of-5",
+      "template": "cold_email/templates/761_databricks_ai_agent_platform_followup.md",
+      "route": "FORM:https://www.databricks.com/company/contact",
+      "cascade_columns": 20,
+      "send_status": "form_route_not_submitted",
+      "smtp_eligible": false,
+      "status": "not_submitted",
+      "note": "Commercial form verified live; no submission, email, delivery, payment, or revenue claimed."
     }
   ]
 }
