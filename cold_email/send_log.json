@@ -394,5 +394,21 @@
     "commercial_route": "form",
     "tier": 1,
     "tier_reason": "NYSE:NLSN + CIK 0001492633 + SEC-registered + SOX-404 + 11 named C-level execs + 10-K Annual Report + 10 first-party mailto: addresses"
+  },
+  {
+    "lead": 825,
+    "template": "825_alation.md",
+    "name": "Alation",
+    "handle": "@alation",
+    "route_type": "FORM",
+    "route": "https://www.alation.com/contact/",
+    "secondary_route": "mailto:CONTACTSALES@ALATION.COM",
+    "vertical": "ai_data_catalog_governance",
+    "cohort_role": "OPENER #1/5 (new vertical #24)",
+    "status": "queued_not_sent",
+    "tick": "2026-07-21-fast-exec-alation-825",
+    "ts": "2026-07-21T17:30:00Z",
+    "tier_reason": "Co-founder + CEO Satyen Sangani + Co-founder Aaron Kalb verbatim Wikipedia 2026-07-21; Forrester credited from 2012 'Started the machine learning data catalog category'; Five-time Leader Gartner Magic Quadrant for Metadata Management 2017-2020 + 2025; enterprise customers Cisco + Nasdaq + Daimler Truck + BBC + Sallie Mae; AIOS surface enumeration verbatim first-party alation.com",
+    "note": "First-party contact form + sales alias retained as route-safe commercial option. Whistic Trust Center InfoSec channel reserved for responsible-disclosure and excluded from commercial outreach. No send, form submission, payment, or revenue claimed."
   }
 ]
