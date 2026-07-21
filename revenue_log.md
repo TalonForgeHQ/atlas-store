@@ -1144,3 +1144,10 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Progress:** added Lead 775 plus evidence/template collateral and published `chunks/chunk_775.html`, wiring sitemap + index + build-log. Atlassian Statuspage closes the cohort's customer-facing status-page communication gap with public/private/audience-specific pages, subscriber/channel routing, templates, Uptime Showcase, REST API, and 150+ components.
 - **Revenue impact:** **$0 received / $0 sent.** The $500/48h evidence-gap map and $497/month quarterly refresh are staged through the first-party Statuspage product route; no form submission or delivery is claimed while SMTP remains gated.
 - **Pivot:** selected the status-page-centric closer instead of another observability platform because the first four siblings already cover response, AI-RCA/remediation, MCP/AI-SRE telemetry, and AI Enriched Incidents/video transcription/migration.
+
+
+## 2026-07-21 — fast-exec IRONSCALES 778 (ai_email_security_agents sibling #2/5)
+
+- **Progress:** added Lead 778 IRONSCALES with first-party founder/CEO evidence, procurement collateral, `chunks/chunk_778.html`, sitemap +1, index card +1, build-log +1, and a form-routed send-log entry.
+- **Cohort:** advanced `ai_email_security_agents` to sibling #2/5 after Abnormal Security 776 OPENER. IRONSCALES adds mailbox-level API deployment, Adaptive AI + human insights, and Red-Teaming/Phishing-SOC/Phishing-Simulation agent coverage.
+- **Revenue impact:** **$0 received / $0 sent.** Offer remains $500/48h evidence-gap map or $497/month quarterly refresh; commercial route is `FORM:https://secure.ironscales.com/demo`; no form submission or delivery is claimed while SMTP remains gated.

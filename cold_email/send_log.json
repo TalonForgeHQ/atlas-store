@@ -377,6 +377,22 @@
       "offer": "$500/48h evidence-gap map or $497/mo quarterly refresh",
       "verification": "Atlassian Statuspage product and pricing pages returned HTTP 200; no form submission, email, delivery, payment, or revenue claimed",
       "cohort_marker": "ai_incident_response_observability CLOSER #5/5 after incident.io 771 + Rootly 772 + Better Stack 773 + FireHydrant 774"
+    },
+    {
+      "lead_index": 778,
+      "name": "IRONSCALES",
+      "vertical": "ai_email_security_agents",
+      "cohort_role": "sibling-2-of-5",
+      "template": "cold_email/templates/778_ironscales.md",
+      "seo_chunk": "chunks/chunk_778.html",
+      "commercial_route_url": "https://secure.ironscales.com/demo",
+      "best_email": "FORM:https://secure.ironscales.com/demo",
+      "send_status": "form_route_not_submitted",
+      "smtp_eligible": false,
+      "queued_at": "2026-07-21T11:17:00Z",
+      "offer": "$500/48h evidence-gap map or $497/mo quarterly refresh",
+      "verification": "First-party About, Leadership, Platform, Contact, and Demo surfaces checked; no form submission, email, delivery, payment, or revenue claimed",
+      "cohort_marker": "ai_email_security_agents sibling #2/5 after Abnormal Security 776"
     }
   ]
 }
