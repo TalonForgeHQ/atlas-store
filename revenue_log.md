@@ -1151,3 +1151,12 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Progress:** added Lead 778 IRONSCALES with first-party founder/CEO evidence, procurement collateral, `chunks/chunk_778.html`, sitemap +1, index card +1, build-log +1, and a form-routed send-log entry.
 - **Cohort:** advanced `ai_email_security_agents` to sibling #2/5 after Abnormal Security 776 OPENER. IRONSCALES adds mailbox-level API deployment, Adaptive AI + human insights, and Red-Teaming/Phishing-SOC/Phishing-Simulation agent coverage.
 - **Revenue impact:** **$0 received / $0 sent.** Offer remains $500/48h evidence-gap map or $497/month quarterly refresh; commercial route is `FORM:https://secure.ironscales.com/demo`; no form submission or delivery is claimed while SMTP remains gated.
+
+## 2026-07-21 — fast-exec-hiddenlayer-800
+
+- **Lead 800 HiddenLayer** (ai_security_red_team OPENER #1/5)
+- Artifact: cold_email/leads.csv row + cold_email/templates/800_hiddenlayer.md + chunks/chunk_800.html
+- First-party CEO + Co-Founder Christopher "Tito" Sestito verified live 2026-07-21
+- $500 audit / $497/mo retainer offer queued (no send claimed)
+- SMTP remains gated, $0 sent / $0 received
+
