@@ -410,5 +410,37 @@
     "ts": "2026-07-21T17:30:00Z",
     "tier_reason": "Co-founder + CEO Satyen Sangani + Co-founder Aaron Kalb verbatim Wikipedia 2026-07-21; Forrester credited from 2012 'Started the machine learning data catalog category'; Five-time Leader Gartner Magic Quadrant for Metadata Management 2017-2020 + 2025; enterprise customers Cisco + Nasdaq + Daimler Truck + BBC + Sallie Mae; AIOS surface enumeration verbatim first-party alation.com",
     "note": "First-party contact form + sales alias retained as route-safe commercial option. Whistic Trust Center InfoSec channel reserved for responsible-disclosure and excluded from commercial outreach. No send, form submission, payment, or revenue claimed."
+  },
+  {
+    "lead": 826,
+    "template": "826_collibra.md",
+    "name": "Collibra",
+    "handle": "@collibra",
+    "route_type": "FORM + MAILTO",
+    "route": "https://www.collibra.com/contact-sales",
+    "secondary_route": "mailto:sales@collibra.com",
+    "vertical": "ai_data_catalog_governance",
+    "cohort_role": "sibling #2/5 (after Alation 825 OPENER #1/5)",
+    "status": "queued_not_sent",
+    "tick": "2026-07-21-fast-exec-collibra-826-informatica-827",
+    "ts": "2026-07-21T17:45:00Z",
+    "tier_reason": "Founder + CEO Felix Van de Maele + co-founders Pieter De Leenheer + Stijn Christiaens + Stan Christiaens verbatim first-party collibra.com/about 2026-07-21; 50% of Forbes Global 100 ship Collibra per first-party; $100M Series F 2021 TCV-led $5.25B valuation 2021; enterprise customers AXA + Allianz + Toyota + P&G + American Airlines + Sanofi + EY + Cisco + Adobe + Nike",
+    "note": "First-party contact form + sales alias retained as route-safe commercial option. No send, form submission, payment, or revenue claimed."
+  },
+  {
+    "lead": 827,
+    "template": "827_informatica.md",
+    "name": "Informatica",
+    "handle": "@informatica",
+    "route_type": "FORM + MAILTO",
+    "route": "https://www.informatica.com/about-us/contact.html",
+    "secondary_route": "mailto:sales@informatica.com",
+    "vertical": "ai_data_catalog_governance",
+    "cohort_role": "sibling #3/5 (after Alation 825 + Collibra 826)",
+    "status": "queued_not_sent",
+    "tick": "2026-07-21-fast-exec-collibra-826-informatica-827",
+    "ts": "2026-07-21T17:45:00Z",
+    "tier_reason": "NYSE:INFA public-company IPO 2021-10-27; Founder Gaurav Dhillon founded 1993 verbatim en.wikipedia.org/wiki/Informatica 2026-07-21; CEO Amit Walia joined 2021-09-23 verbatim first-party informatica.com/leadership 2026-07-21; 80%+ of Fortune 100 ship Informatica per first-party; IDMC + CLAIRE AI + ETL + Master Data + Data Quality + Data Catalog + Data Governance control surface",
+    "note": "First-party contact form + sales alias retained as route-safe commercial option. No send, form submission, payment, or revenue claimed."
   }
-]
+] 
