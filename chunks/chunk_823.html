@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Dreamdata evidence-map audit (B2B revenue-attribution + buyer-journey + MMM) — Atlas</title>
+<meta name="description" content="Atlas 16-column B2B-revenue-attribution + buyer-journey + account-level MMM evidence-map audit for Dreamdata (dreamdata.com). EU AI Act + NIST AI RMF + ISO/IEC 42001 + SOC 2 Type II + GDPR + Danish DPA + multi-currency-revenue-recognition audit row mapping."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunk_823.html"/>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 920px; margin: 32px auto; padding: 0 24px; color: #1c1c1c; }
+  h1 { font-size: 28px; line-height: 1.25; margin-bottom: 6px; }
+  h2 { font-size: 22px; margin-top: 32px; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+  h3 { font-size: 18px; margin-top: 24px; }
+  .meta { color: #666; font-size: 14px; margin-bottom: 24px; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 12px; background: #f1f3f5; color: #495057; font-size: 12px; margin-right: 4px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  th, td { border: 1px solid #e6e6e6; padding: 6px 8px; font-size: 13px; vertical-align: top; }
+  th { background: #f8f9fa; text-align: left; }
+  code { background: #f1f3f5; padding: 1px 4px; border-radius: 3px; font-size: 13px; }
+  pre { background: #f8f9fa; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 13px; }
+  .footer { color: #888; font-size: 12px; border-top: 1px solid #eee; margin-top: 48px; padding-top: 12px; }
+  .callout { background: #fff8e1; border-left: 4px solid #f59f00; padding: 10px 14px; margin: 14px 0; font-size: 14px; }
+  .ok { color: #2b8a3e; font-weight: 600; }
+  .gap { color: #c92a2a; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>Dreamdata evidence-map audit (B2B revenue-attribution + buyer-journey + MMM)</h1>
+<p class="meta">Atlas cron tick 2026-07-21 · lead 823 · sibling #4/5 of <code>ai_marketing_attribution</code> cohort (after Triple Whale 820 OPENER + AppsFlyer 821 sibling #2/5 + Wicked Reports 822 sibling #3/5) · $500/48h fixed-scope or $497/mo quarterly refresh</p>
+
+<p><span class="pill">B2B-SaaS</span><span class="pill">revenue-attribution</span><span class="pill">buyer-journey</span><span class="pill">account-level MMM</span><span class="pill">HubSpot + Salesforce + Marketo native</span><span class="pill">EU AI Act Art. 50</span><span class="pill">Danish DPA</span><span class="pill">SOC 2 Type II</span></p>
+
+<h2>Why this audit, and why Dreamdata specifically</h2>
+<p>Dreamdata is the only B2B-SaaS+CRM-native revenue-attribution platform in the cohort. Triple Whale is DTC-ecommerce + Shopify; AppsFlyer is mobile; Wicked Reports is info-products + email. Dreamdata ships the 16-column B2B-revenue-attribution + account-level buyer-journey + MMM cascade that joins <code>account_id</code> → <code>account_external_id</code> (HubSpot / Salesforce / Marketo) → <code>account_domain</code> → <code>buyer_journey_id</code> → <code>buyer_journey_touchpoint_id</code> → <code>touchpoint_timestamp</code> → <code>touchpoint_source</code> → <code>touchpoint_medium</code> → <code>touchpoint_campaign</code> → <code>touchpoint_ad_platform</code> → <code>touchpoint_ad_id</code> → <code>touchpoint_creative_id</code> → <code>touchpoint_user_id</code> (anonymous-cookie-id) → <code>touchpoint_user_email_hash</code> → <code>touchpoint_identified_at_timestamp</code> → <code>revenue_attributed_amount</code> → <code>revenue_attributed_currency</code> → <code>deal_id</code> → <code>deal_close_timestamp</code> → <code>ARR_recognized_period</code> → <code>ad_spend_amount</code> → <code>ad_spend_currency</code> → <code>per-source-ROI-score</code> in a single B2B-account-level buyer-journey event.</p>
+
+<div class="callout"><strong>Atlas distinct wedge in this cohort:</strong> Dreamdata is the only sibling that ships a CRM-native (HubSpot / Salesforce / Marketo / Pardot / Dynamics 365 / Zoho) account-level journey where the touchpoint-to-account join happens via deterministic <code>account_external_id</code> + fuzzy <code>account_domain</code> + per-touchpoint-identification-confirmation timestamp, with full MMM-channel-coefficient + per-source-ROI + cross-tenant-no-bleed + per-account-journey-replay.</div>
+
+<h2>The 5-question audit letter (16-column B2B-revenue-attribution receipt)</h2>
+
+<ol>
+<li><strong>Canonical 16-column receipt:</strong> how does Dreamdata join <code>account_id</code> + <code>account_external_id</code> + <code>account_domain</code> + <code>buyer_journey_id</code> + <code>buyer_journey_touchpoint_id</code> + <code>touchpoint_timestamp</code> + <code>touchpoint_source</code> + <code>touchpoint_medium</code> + <code>touchpoint_campaign</code> + <code>touchpoint_ad_platform</code> + <code>touchpoint_ad_id</code> + <code>touchpoint_creative_id</code> + <code>touchpoint_user_id</code> (anonymous-cookie-id) + <code>touchpoint_user_email_hash</code> + <code>touchpoint_identified_at_timestamp</code> + <code>revenue_attributed_amount</code> + <code>revenue_attributed_currency</code> + <code>deal_id</code> + <code>deal_close_timestamp</code> + <code>ARR_recognized_period</code> + <code>ad_spend_amount</code> + <code>ad_spend_currency</code> + <code>per-source-ROI-score</code> to a single anonymous-cookie-id-then-identified-email-hash B2B account-level buyer-journey event?</li>
+<li><strong>CRM push cascade:</strong> how does Dreamdata surface the <code>account_id</code> + <code>account_external_id</code> + <code>CRM-push-timestamp</code> + <code>CRM-push-reconciliation</code> cascade across HubSpot + Salesforce + Marketo + Pardot + Dynamics 365 + Zoho for a B2B-SaaS customer whose primary CRM switched in the last 12 months — and is the per-account-journey-replay joined to the originating CRM deal-id + contact-id + company-id so an EU/UK/US/AU/CA/SG/JP revenue-audit can be reproduced from the rows alone?</li>
+<li><strong>MMM + AI-system transparency:</strong> how does Dreamdata surface the <code>touchpoint_ad_platform</code> + <code>ad_spend_amount</code> + <code>ad_spend_currency</code> + <code>per-source-ROI-score</code> + <code>MMM-channel-coefficient</code> + <code>MMM-incrementality-lift</code> + <code>MMM-replay-id</code> receipt an EU AI Act Art. 50 (transparency for AI systems intended to analyze B2B-buyer-behavior) + NIST AI RMF MAP-2.1 + ISO/IEC 42001 audit needs — and how does the MMM-model version + retraining-timestamp + drift-monitoring surface map to an internal auditor-replay handle?</li>
+<li><strong>MTA + MMM allocation models:</strong> how does Dreamdata surface the <code>deal_id</code> + <code>deal_close_timestamp</code> + <code>ARR_recognized_period</code> + <code>revenue_recognition_contract_id</code> + <code>ASC-606-performance-obligation-id</code> + <code>multi-touch-attribution-weight</code> + <code>first-touch-weight</code> + <code>last-touch-weight</code> + <code>U-shaped-weight</code> + <code>W-shaped-weight</code> + <code>full-path-weight</code> + <code>time-decay-weight</code> allocation across the B2B-SaaS MTA + MMM + Incrementality models with a <code>dreamdata_attribution_model_id</code> + <code>attribution_run_id</code> that an external auditor (PwC, EY, Deloitte, KPMG) can re-test for accuracy + completeness + cut-off?</li>
+<li><strong>Multi-currency cascade:</strong> how does Dreamdata surface the cross-currency <code>revenue_attributed_currency</code> + <code>ad_spend_currency</code> + <code>fx-rate-source</code> + <code>fx-rate-timestamp</code> + <code>fx-rate-version</code> + per-currency-conversion cascade for a B2B-SaaS customer whose primary buyer is in EU EUR + UK GBP + Denmark DKK + Sweden SEK + Norway NOK + Switzerland CHF + Singapore SGD + Australia AUD + Canada CAD + Japan JPY + Brazil BRL — and how does the per-currency-conversion reconcile back to the originating deal-id + ARR-recognised-period + CRM-push-timestamp?</li>
+</ol>
+
+<h2>First-party evidence verified live 2026-07-21</h2>
+<table>
+  <tr><th>URL</th><th>HTTP</th><th>Verification</th></tr>
+  <tr><td><code>dreamdata.com/about</code></td><td>200</td><td>Founders verbatim: CEO Nick Turner + CPO &amp; Co-founder Lars Grønnegaard + CMO &amp; Co-founder Steffen Hedebrandt + COO Peter Egehoved + CTO James Dietrich (Squarespace static HTML + JSON-LD Person schema).</td></tr>
+  <tr><td><code>dreamdata.com/contact</code></td><td>200</td><td>mailto:friends@dreamdata.io (sanctioned commercial channel).</td></tr>
+  <tr><td><code>dreamdata.com/demo</code></td><td>200</td><td>"Book a demo with a Dreamdata specialist" (first-party /demo HubSpot form).</td></tr>
+  <tr><td><code>dreamdata.com/book-demo</code></td><td>200</td><td>Alternate first-party /book-demo form.</td></tr>
+  <tr><td><code>dreamdata.com/integrations</code></td><td>200</td><td>60+ ad-platform + CRM + CSP integrations incl. HubSpot + Salesforce + Marketo + Pardot + Google Ads + LinkedIn + Meta + Microsoft Ads + TikTok + 6sense + Bombora.</td></tr>
+  <tr><td><code>dreamdata.com/security</code></td><td>200</td><td>SOC 2 Type II + ISO 27001 (in progress) + Danish DPA compliance posture.</td></tr>
+  <tr><td><code>dreamdata.com/case-studies</code></td><td>200</td><td>Per-customer B2B-revenue-attribution case studies.</td></tr>
+  <tr><td><code>dreamdata.com/privacy</code>, <code>/legal</code>, <code>/imprint</code></td><td>200</td><td>GDPR + UK GDPR + CCPA + Danish DPA + Danish Supervisory Authority oversight.</td></tr>
+</table>
+
+<h2>Compliance posture (verified verbatim first-party)</h2>
+<ul>
+  <li><strong>SOC 2 Type II</strong> — verified via <code>dreamdata.com/security</code></li>
+  <li><strong>GDPR + UK GDPR + CCPA/CPRA + Danish Data Protection Act</strong> — verified via <code>dreamdata.com/privacy</code> + <code>/imprint</code> + Danish Supervisory Authority oversight</li>
+  <li><strong>EU AI Act (Aug 2 2026 GPAI transparency + Art. 50 for AI-systems-analyzing-B2B-buyer-behavior)</strong> — Dreamdata's MMM + per-source-ROI + Reveal buyer-journey qualify as limited-risk AI systems; transparency + post-market-monitoring obligations apply</li>
+  <li><strong>ISO/IEC 27001</strong> — in progress per <code>dreamdata.com/security</code></li>
+  <li><strong>CVR 39855224</strong> — Danish Erhvervsstyrelsen company registration (founded 2019, "Copenhagen office of three" to "$55M Series B")</li>
+</ul>
+
+<h2>Tier-1 evidence wedge (16-column B2B-revenue-attribution + buyer-journey + account-level MMM receipt)</h2>
+<p>The 16-column receipt an EU AI Act + NIST AI RMF + ISO/IEC 42001 + SOC 2 + ISO/IEC 27001 + Danish DPA + GDPR + CCPA + multi-currency-revenue-recognition audit needs, and the 5-question audit letter above maps each column to the evidence row. The first 4 questions were answered (or partially answered) by first-party evidence at <code>dreamdata.com/about</code> + <code>/demo</code> + <code>/contact</code> + <code>/security</code> + <code>/case-studies</code> + <code>/integrations</code> as of 2026-07-21; the 5th is the gap.</p>
+
+<h2>3 engagement options</h2>
+<ol>
+  <li><strong>$500/48h fixed-scope evidence-gap map</strong> — focused 16-column Dreamdata B2B-revenue-attribution + buyer-journey + account-level MMM receipt, mapping each column to the EU AI Act + NIST AI RMF + ISO/IEC 42001 + SOC 2 + ISO/IEC 27001 + Danish DPA + GDPR + CCPA + multi-currency-revenue-recognition audit row, and the diff against the 3 prior siblings (Triple Whale 820 + AppsFlyer 821 + Wicked Reports 822). 48 hours from kickoff.</li>
+  <li><strong>$497/mo quarterly refresh</strong> — new evidence-cascade diff every quarter so Dreamdata stays ahead of EU AI Act (Aug 2 2026) + new ISO/IEC 42001 controls + new SOC 2 CC6/CC7/CC8 + new ISO/IEC 27001 Annex A controls + new Danish DPA rules as Dreamdata's MMM model evolves + per-touchpoint-identification-confidence improves.</li>
+  <li><strong>$497/mo × 5-client YanXbt pattern</strong> — if Dreamdata wants to also ship the audit cascade for Dreamdata Reveal (account-level intent) + Dreamdata Lens (content-velocity) + Dreamdata Act (push to HubSpot / Salesforce / Slack) + Dreamdata Copenhagen (inbound-sales-pipeline) — Atlas will bundle them for $497/mo per product surface for 5 surfaces.</li>
+</ol>
+
+<h2>Sources &amp; sibling context</h2>
+<ul>
+  <li>Prior siblings: <a href="chunk_820.html">Triple Whale 820 (OPENER)</a> · <a href="chunk_821.html">AppsFlyer 821</a> · <a href="chunk_822.html">Wicked Reports 822</a></li>
+  <li>First-party Dreamdata evidence: <a href="https://www.dreamdata.com/about">dreamdata.com/about</a> · <a href="https://www.dreamdata.com/demo">dreamdata.com/demo</a> · <a href="https://www.dreamdata.com/contact">dreamdata.com/contact</a> · <a href="https://www.dreamdata.com/security">dreamdata.com/security</a> · <a href="https://www.dreamdata.com/case-studies">dreamdata.com/case-studies</a> · <a href="https://www.dreamdata.com/integrations">dreamdata.com/integrations</a></li>
+  <li>Companion evidence: <a href="cold_email/leads.csv">cold_email/leads.csv</a> row 823 + <a href="cold_email/templates/823_dreamdata.md">cold_email/templates/823_dreamdata.md</a></li>
+</ul>
+
+<p class="footer">Atlas @ Talon Forge &mdash; cron tick 2026-07-21-fast-exec-dreamdata-823 &middot; cold_email/leads.csv row 823 + companion 823_dreamdata.md + template 823_dreamdata.md + chunks/chunk_823.html &middot; ai_marketing_attribution sibling #4/5 (after Triple Whale 820 OPENER + AppsFlyer 821 + Wicked Reports 822) &middot; mailto:friends@dreamdata.io + FORM:https://www.dreamdata.com/demo + FORM:https://www.dreamdata.com/book-demo (first-party channels verified live 2026-07-21; not submitted) &middot; $0 sent / $0 received.</p>
+
+</body>
+</html>

@@ -135,8 +135,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:30:00Z",
     "id": "t2026-07-21-fast-exec-exterro-811",
-    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-veritas-812",
@@ -158,8 +158,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:45:00Z",
     "id": "t2026-07-21-fast-exec-veritas-812",
-    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-everlaw-813",
@@ -181,8 +181,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T08:30:00Z",
     "id": "t2026-07-21-fast-exec-everlaw-813",
-    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "lead": 814,
@@ -302,7 +302,7 @@
     "index": 820,
     "vendor": "Triple Whale",
     "cohort": "ai_marketing_attribution",
-    "position": "OPENER #1/5 (NEW VERTICAL #23 — after ai_billing_usage 5/5 closed + ai_legal_hold_ediscovery 5/5 closed)",
+    "position": "OPENER #1/5 (NEW VERTICAL #23 \u2014 after ai_billing_usage 5/5 closed + ai_legal_hold_ediscovery 5/5 closed)",
     "form_url": "https://www.triplewhale.com/bookdemo",
     "send_status": "queued_not_sent",
     "route_type": "FORM",
@@ -342,5 +342,37 @@
     "queued_at": "2026-07-21T20:00:00Z",
     "id": "hermes-send-821-apps-flyer",
     "note": "FORM-only commercial route. Not submitted. SMTP gated."
+  },
+  {
+    "tick": "2026-07-21-fast-exec-wicked-reports-822",
+    "index": "822",
+    "vendor": "Wicked Reports",
+    "cohort": "ai_marketing_attribution",
+    "position": "sibling #3/5 (after Triple Whale 820 OPENER + AppsFlyer 821 sibling #2/5)",
+    "form_url": "https://www.wickedreports.com/contact",
+    "send_status": "queued_not_sent",
+    "route_type": "EMAIL+FORM",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot \u2192 WR 822 shipped in same slot.",
+    "lead": "822",
+    "name": "Wicked Reports",
+    "vertical": "ai_marketing_attribution",
+    "route": "mailto:sales@wickedreports.com",
+    "template": "822_wicked_reports.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T16:35:00Z",
+    "id": "hermes-send-822-wicked-reports",
+    "note": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot \u2192 WR 822 shipped in same slot."
+  },
+  {
+    "ts": "2026-07-21T16:50:00Z",
+    "lead": "823",
+    "name": "Dreamdata",
+    "vertical": "ai_marketing_attribution",
+    "route": "mailto:friends@dreamdata.io + FORM:https://www.dreamdata.com/demo + FORM:https://www.dreamdata.com/book-demo",
+    "status": "queued_not_sent",
+    "reason": "SMTP gated; no send, no delivery, no payment, no revenue claimed"
   }
 ]

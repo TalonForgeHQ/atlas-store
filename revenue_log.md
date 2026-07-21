@@ -1297,3 +1297,13 @@ Compliance: SOC 2 Type II + ISO/IEC 27001:2022 + ISO/IEC 27018:2019 + ISO/IEC 27
 
 $500/48h + $497/mo + $497/mo x 5-client YanXbt. FORM:https://www.appsflyer.com/start/demo/ (first-party canonical Demo form verified live 2026-07-21). Not submitted. SMTP remains gated. $0 sent / $0 received.
 
+
+---
+## 2026-07-21 ~16:35 UTC — fast-exec tick Wicked Reports 822 (ai_marketing_attribution sibling #3/5)
+
+- **Lead 822:** Wicked Reports — wickedreports.com cross-channel-attribution + MTA + MMM + Incrementality + Halo + Time Machine + 5 Forces AI + Signal Action + Analyst MCP
+- **Founder:** Mark Murrell verbatim first-party wickedreports.com/our-story 2026-07-21
+- **Route:** sales@wickedreports.com verified first-party + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d
+- **Pivot:** Rockerbox 822 was the planned sibling #3/5 but JS-hydration blocked founder extraction; Wicked Reports 822 shipped in same slot
+- **Revenue:** $0 queued_not_sent (SMTP gated)
+- **Send_log:** entry 822 appended (dual-schema per pitfall #22)
