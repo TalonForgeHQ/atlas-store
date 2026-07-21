@@ -503,5 +503,16 @@
     "ts": "2026-07-21T18:20:00Z",
     "template": "834_bombora.md",
     "note": "First-party general-inquiries@bombora.com verified on bombora.com/contact 2026-07-21 HTTP 200. Cohort CLOSER #5/5 — ai_intent_data_enrichment COMPLETE 5/5. SMTP remains gated. $0 sent / $0 received."
+  },
+  {
+    "index": 835,
+    "template": "835_arize.md",
+    "name": "Arize AI",
+    "vendor": "arize.com",
+    "tier": 1,
+    "route": "FORM:https://arize.com/request-a-demo",
+    "template_full": "cold_email/templates/835_arize_procurement_followup.md",
+    "tier_reason": "OPENER ai_observability_eval #1/5 - new vertical post ai_intent_data_enrichment 830-834 closed 5/5 - Arize AI arize.com - AI Observability + LLM Eval Platform - Arize AX + Phoenix OSS - founders Jason Lopatecki (CEO; ex-TubeMogul co-founder+CIO scaled to $800M+ Adobe acquisition 2016) + Aparna Dhinakaran (CPO; ex-Uber Michelangelo ML) - Series B 2023 TCV + Battery + Foundation Capital - HubSpot form /request-a-demo - 19-col LLM-observability receipt - SOC 2 + ISO 27001 + GDPR + EU AI Act Art. 6/9/10/13/14/15/50 - $500/48h + $497/mo + YanXbt 5-client",
+    "note": "First-party HubSpot form only on /request-a-demo; form not submitted. SMTP remains gated. $0 sent / $0 received. OPENER of new vertical ai_observability_eval."
   }
 ]
