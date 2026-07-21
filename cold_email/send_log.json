@@ -64,5 +64,16 @@
     "queued_at": "2026-07-21T13:25:00.000000Z",
     "id": "a8060000-0000-4000-8000-000000000806",
     "note": "First-party demo form + canonical privacy route; form not submitted; privacy@credo.ai excluded as privacy-only. SMTP remains gated. $0 sent / $0 received."
+  },
+  {
+    "lead": 807,
+    "name": "Monitaur",
+    "vertical": "ai_governance_risk_compliance",
+    "route": "FORM:https://www.monitaur.ai/contact",
+    "template": "807_monitaur.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T13:45:00.000000Z",
+    "id": "a8070000-0000-4000-8000-000000000807",
+    "note": "First-party contact form only; form not submitted. SMTP remains gated. $0 sent / $0 received."
   }
-]
+] 
