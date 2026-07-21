@@ -135,8 +135,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:30:00Z",
     "id": "t2026-07-21-fast-exec-exterro-811",
-    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-veritas-812",
@@ -158,8 +158,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:45:00Z",
     "id": "t2026-07-21-fast-exec-veritas-812",
-    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-everlaw-813",
@@ -181,8 +181,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T08:30:00Z",
     "id": "t2026-07-21-fast-exec-everlaw-813",
-    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "lead": 814,
@@ -302,7 +302,7 @@
     "index": 820,
     "vendor": "Triple Whale",
     "cohort": "ai_marketing_attribution",
-    "position": "OPENER #1/5 (NEW VERTICAL #23 — after ai_billing_usage 5/5 closed + ai_legal_hold_ediscovery 5/5 closed)",
+    "position": "OPENER #1/5 (NEW VERTICAL #23 \u2014 after ai_billing_usage 5/5 closed + ai_legal_hold_ediscovery 5/5 closed)",
     "form_url": "https://www.triplewhale.com/bookdemo",
     "send_status": "queued_not_sent",
     "route_type": "FORM",
@@ -355,7 +355,7 @@
     "smtp_gated": true,
     "submitted": false,
     "submitted_at": null,
-    "notes": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot → WR 822 shipped in same slot.",
+    "notes": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot \u2192 WR 822 shipped in same slot.",
     "lead": "822",
     "name": "Wicked Reports",
     "vertical": "ai_marketing_attribution",
@@ -364,7 +364,7 @@
     "status": "queued_not_sent",
     "queued_at": "2026-07-21T16:35:00Z",
     "id": "hermes-send-822-wicked-reports",
-    "note": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot → WR 822 shipped in same slot."
+    "note": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot \u2192 WR 822 shipped in same slot."
   },
   {
     "ts": "2026-07-21T16:50:00Z",
@@ -457,5 +457,27 @@
     "ts": "2026-07-21T17:55:00Z",
     "tier_reason": "modern AI-native Context Layer + Context Lakehouse (Iceberg-native + Graph+file architecture + vector-native AI search) + Context Engineering Studio + Context Agents + 2024 $105M Series C GIC + Meritech Capital total funding over $200M + 2x Leader Forrester Wave + 2x Leader Gartner Magic Quadrant + Customer Favourite G2 + named enterprise customers Mastercard + Workday + GM + Nasdaq + Autodesk + Dropbox + Fox + Marriott + GitLab + Virgin Media O2 + Unilever + Elastic + NHS + Affirm + EasyJet + Medtronic + New York Life + Grainger + 8 Billion Reads in the Last 90 Days + 5x improvement in AI accuracy for Workday + Fox AI teams verbatim first-party atlan.com/about/ + atlan.com/ai-governance/ 2026-07-21",
     "note": "First-party talk-to-sales form only; form not submitted. SMTP remains gated. $0 sent / $0 received. sibling #4/5."
+  },
+  {
+    "ts": "2026-07-21T18:12:00Z",
+    "index": 830,
+    "name": "Apollo.io",
+    "vendor": "apollo.io",
+    "tier": 1,
+    "route": "FORM:https://apollo.io/contact-us",
+    "template": "cold_email/templates/ai_intent_data_enrichment_cohort_intro.md",
+    "tier_reason": "OPENER ai_intent_data_enrichment #1/5 \u2014 Apollo Data 275M+ verified contacts + 65M+ companies + Apollo MCP server per-invocation policy + per-decision audit-log replay retention + Apollo AI Assistant + Apollo Workflow Engine + Chrome Extension + Integrations \u2014 first-party /we-are-apollo + /product/mcp + /llm-info verified 2026-07-21",
+    "note": "First-party contact-us form only; form not submitted. SMTP remains gated. $0 sent / $0 received."
+  },
+  {
+    "ts": "2026-07-21T18:12:00Z",
+    "index": 831,
+    "name": "ZoomInfo",
+    "vendor": "zoominfo.com",
+    "tier": 1,
+    "route": "sales@zoominfo.com + FORM:https://www.zoominfo.com/contact",
+    "template": "cold_email/templates/ai_intent_data_enrichment_cohort_intro.md",
+    "tier_reason": "sibling #2/5 ai_intent_data_enrichment (after Apollo 830 OPENER) \u2014 Nasdaq:GTM public company + ZoomInfo founded 2007 + CEO Henry Schuck first-party /about FAQ JSON-LD schema + 35K buying-intent topics + 300+ intent signals + GTM-1 hybrid-AI foundation model + Copilot + ZoomInfo Chat autonomous agent + direct sales@ sales@zoominfo.com",
+    "note": "First-party sales@ + Contact Sales form. Form not submitted. SMTP remains gated. $0 sent / $0 received. Direct email route unlocked \u2014 first sibling with verified sales@ vs FORM-only siblings above."
   }
 ]
