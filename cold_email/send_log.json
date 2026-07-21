@@ -160,5 +160,28 @@
     "id": "t2026-07-21-fast-exec-veritas-812",
     "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
     "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+  },
+  {
+    "tick": "2026-07-21-fast-exec-everlaw-813",
+    "lead": 813,
+    "index": 813,
+    "name": "Everlaw",
+    "vendor": "Everlaw",
+    "vertical": "ai_legal_hold_ediscovery",
+    "cohort": "ai_legal_hold_ediscovery",
+    "position": "sibling #4/5 (after Relativity 810 OPENER + Exterro 811 + Veritas 812)",
+    "route": "FORM:https://www.everlaw.com/contact-sales/",
+    "form_url": "FORM:https://www.everlaw.com/contact-sales/",
+    "template": "813_everlaw.md",
+    "status": "queued_not_sent",
+    "send_status": "queued_not_sent",
+    "route_type": "form",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "queued_at": "2026-07-21T08:30:00Z",
+    "id": "t2026-07-21-fast-exec-everlaw-813",
+    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
+    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
   }
 ]
