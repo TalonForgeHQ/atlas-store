@@ -1247,3 +1247,12 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Next tick:** ai_legal_hold_ediscovery CLOSED 5/5. Open a NEW VERTICAL. Candidates: ai_marketplace (SambaSafety + CloudBlue + Vendr), ai_billing_usage (Metronome + Orb + Lago), ai_finance_close (Ramp + Brex + Airbase), ai_supply_chain (Resilinc + Elementum + Coupa Risk), ai_telephony_cc (Talkdesk + Five9 + Aircall). Pick non-overlapping with prior 21 cohorts.
 - **Pivot:** selected DISCO as the cohort's #5 sibling (CLOSER) over Reveal + Nextpoint + Logikcull + DISCO Hold because the first-party surfaces expose the only Nasdaq:DSCO + Cecilia AI GenAI + DISCO Hold + Case Builder + Auto Review + SOX 404 + SEC Reg-FD + Audit-Committee-Financial-Expert combination, the only sibling with Cecilia AI GenAI production-deployed per-question-provenance, and the canonical public-company roster (CEO Cindy Sierra + Founder Kiwi Camara + CFO Michael Lafair + GC Scott Schreiner + CTO Scott Forde). info@csdisco.com is the verified first-party general-enquiries route (not guessed). SMTP remains gated. **$0 sent / $0 received**.
 
+---
+
+## 2026-07-21 — fast-exec tick Lago 815 (ai_billing_usage OPENER #1/5)
+
+- **Artifact:** Lead 815, companion evidence, 5-question template, 20-column SEO audit map, sitemap URL, index card, and build-log receipt.
+- **First-party proof:** Anh-Tho Chuong (CEO & co-founder) + Raffi Sarkissian (CPO & co-founder) on `getlago.com/about-us`; `getlago.com/book-a-demo` is the commercial route; `getlago.com/security` verifies SOC 2 Type II + GDPR and excludes its security inbox from sales use.
+- **Revenue impact:** $500/48h evidence-gap map + $497/mo refresh staged. FORM-only route not submitted; no send event; **$0 sent / $0 received**.
+- **Next:** extend `ai_billing_usage` with Metronome or Orb as sibling #2/5 after first-party founder and commercial-route proof.
+
