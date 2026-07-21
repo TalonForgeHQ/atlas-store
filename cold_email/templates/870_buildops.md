@@ -9,19 +9,19 @@
 Three variants (one per recipient profile). All under P28 70-char spam-filter ceiling.
 
 ### Subject A — U.S. Army-vet + 2018-LA-framing
-**Length: 56 chars.**
+**Length: 58 chars.**
 `Alok — BuildOps's 2018 LA spark + OpsAI per-tenant receipt`
 
 Best for: Alok Chanani (CEO + Co-Founder). The frame is **acknowledgment-of-origin + OpsAI surface** — verbatim first-party `/about/` "CEO Alok Chanani, a U.S. Army veteran, saw contractors running multimillion-dollar ops on spreadsheets and WhatsApp, and co-founded BuildOps with Steve Chew in Los Angeles." We position the audit letter as additive to the 2018-LA origin story and pin it on the per-OpsAI-session receipt.
 
 ### Subject B — $1B-valuation + 1500-contractors procurement-evidence framing
-**Length: 60 chars.**
+**Length: 56 chars.**
 `BuildOps + 1,500 contractors at $1B: a $500 audit letter`
 
 Best for: VP Product / Director of Trust / Compliance Officer. The frame is **the audit letter as procurement-evidence for the $1B-valuation, 1,500-contractor commercial-trades wedge**. BuildOps is the only cohort member that publishes a verbatim `<p data-number="64">` customer count + a verbatim "$1B" valuation stat + an external Trust Center at `trust.buildops.com/`. The audit letter we offer monetizes that transparency for the procurement-burdened enterprise buyers BuildOps serves.
 
 ### Subject C — OpsAI per-session + per-visit-recap sub-processor inheritance framing
-**Length: 60 chars.**
+**Length: 54 chars.**
 `BuildOps OpsAI recaps+scans+flags: a per-session audit`
 
 Best for: BuildOps Product Manager of AI / Head of Trust Engineering. The frame is **the audit letter as a way to monetize the OpsAI product surface** — every OpsAI recap / scan / risk-flag / next-step creates a per-session thread, and the per-tenant-scoping receipt we offer makes that thread enumerable + auditable + GDPR/PIPEDA/CCPA-defensible. Verbatim `/platform/opsai/`: "OpsAI recaps visits, scans POs, flags risks, and gives every role a clear next step."
