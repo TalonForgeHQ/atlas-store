@@ -1160,3 +1160,11 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - $500 audit / $497/mo retainer offer queued (no send claimed)
 - SMTP remains gated, $0 sent / $0 received
 
+
+
+## 2026-07-21 — fast-exec onetrust-808 (ai_governance_risk_compliance sibling #4/5)
+
+- **Progress:** added Lead 808 OneTrust to `cold_email/leads.csv` (now 72 data rows + header), wrote `cold_email/templates/808_onetrust.md` (5-question audit letter, ~4.9 KB), and published `chunks/chunk_808.html` (~11.4 KB SEO chunk, 37 lines). Wired the canonical card into `index.html` (`data-cohort-role="sibling-4-of-5"`) and added the chunk URL to `sitemap.xml` (now 489 URLs). Queued a `cold_email/send_log.json` queued_not_sent entry (8th sibling entry covering 800–808).
+- **Cohort:** advanced `ai_governance_risk_compliance` to sibling #4/5 after Holistic AI 805 OPENER #1/5 + Credo AI 806 sibling #2/5 + Monitaur 807 sibling #3/5. OneTrust adds the privacy-cloud + vendor-risk-cloud + ethics-cloud parent-inheritance + EU AI Act readiness module lane, with Co-founder + CEO Kabir Barday + Co-founder + COO Blake Brannon, $930M Series C 2020 (Coatue + Insight + TPG + Goldman Sachs + Advent + Softbank Vision Fund), HQ Atlanta GA, AI Use-case Inventory + AI Program Management + Responsible AI + Model Risk + EU AI Act readiness module mapped to NIST AI RMF + ISO/IEC 42001:2023.
+- **Revenue impact:** **$0 received / $0 sent.** Offer remains $500/48h evidence-gap map or $497/month quarterly refresh; commercial route is `FORM:https://www.onetrust.com/contact/`; no form submission or delivery is claimed while SMTP remains gated.
+- **Pivot:** selected OneTrust as the cohort's #4 sibling over TrustArc AI Governance + IBM watsonx.governance + Microsoft Purview AI Hub because the first-party surfaces expose the privacy-cloud + vendor-risk-cloud + ethics-cloud parent-inheritance posture, a current first-party Co-founder + CEO + Co-founder + COO roster (Kabir Barday + Blake Brannon verbatim on the `/leadership` page), and the cross-Cloud sub-processor cascade that closes the AI-GRC + TPRM-evidence-audit seam. One sibling remains: TrustArc AI Governance (privacy-platform-extension).
