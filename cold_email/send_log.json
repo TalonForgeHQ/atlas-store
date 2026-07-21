@@ -100,5 +100,19 @@
     "submitted": false,
     "submitted_at": null,
     "notes": "IBM watsonx.governance CLOSER sibling #5/5 for ai_governance_risk_compliance cohort. Cohort CEILING FULL 5/5. No form submission attempted; SMTP gated; $0 sent / $0 received."
+  },
+  {
+    "tick": "2026-07-21-fast-exec-relativity-810",
+    "index": "810",
+    "vendor": "Relativity",
+    "cohort": "ai_legal_hold_ediscovery",
+    "position": "OPENER #1/5 (NEW VERTICAL #21)",
+    "form_url": "https://www.relativity.com/contact-us/",
+    "send_status": "queued_not_sent",
+    "route_type": "form",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "First-party /contact-us/ form verified HTTP 200 live 2026-07-21. Phil Saunders CEO + Andrew Sieja founder verified. SMTP remains gated pending SMTP credential hand-off."
   }
 ]
