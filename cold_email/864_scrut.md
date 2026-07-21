@@ -25,7 +25,7 @@
 - Founder's prior experience at Zluri (SaaS management) — go-to-market playbook alignment
 - ISO 42001 + SOC 2 + HIPAA + PCI DSS 4.0 + ITGC + TPRM strong suits
 
-**Commercial route:** FORM:https://scrut.io/contact (HubSpot form, HTTP 301 → scrut.io/contact-sales verified)
+**Commercial route:** FORM:https://scrut.io/contact-sales (HubSpot form, HTTP 301 → scrut.io/contact verified)
 - Canonical email: hello@scrut.io (per first-party support page)
 - NO guessed general-business inbox added
 
