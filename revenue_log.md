@@ -1256,3 +1256,17 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Revenue impact:** $500/48h evidence-gap map + $497/mo refresh staged. FORM-only route not submitted; no send event; **$0 sent / $0 received**.
 - **Next:** extend `ai_billing_usage` with Metronome or Orb as sibling #2/5 after first-party founder and commercial-route proof.
 
+
+
+---
+
+## 2026-07-21 ~16:30 UTC — fast-exec tick Recurly 818 (ai_billing_usage)
+
+- **Cohort position:** `ai_billing_usage` sibling #4/5 (after Lago 815 OPENER + Chargebee 816 sibling #2/5 + Maxio 817 sibling #3/5).
+- **Mode:** ABBREVIATED (3 surfaces) — lead row + companion evidence + template; SEO chunk + sitemap + index card deferred to follow-up full-ship tick.
+- **Artifact:** Lead 818 row, companion evidence `cold_email/818_recurly.md`, 5-question template `cold_email/templates/818_recurly.md`, build-log entry, revenue-log entry, send_log queued_not_sent entry.
+- **First-party proof:** Ram Chambers CEO + Tina Thowsen CPTO + Ginny Mroz Head of CS + Joe Milliken VP Sales + Amy Wendel VP Marketing verified verbatim first-party `recurly.com/about` + `recurly.com/team` 2026-07-21; `https://recurly.com/request-demo/` is the commercial route; founder Pasquale DeMaio (eBay + PayPal subscription heritage).
+- **Tier-1 evidence wedge:** 18-column recurring-billing + churn-orchestration receipt (subscription_id → ASC_606_performance_obligation_id).
+- **Compliance:** SOC 2 Type II + ISO/IEC 27001 + PCI-DSS Level 1 + GDPR + UK GDPR + CCPA/CPRA + ASC 606 / IFRS 15 + EU AI Act (Art. 50).
+- **Revenue impact:** $500/48h evidence-gap map + $497/mo quarterly refresh + $497/mo × 5-product YanXbt pattern staged. FORM-only route not submitted; no send event; **$0 sent / $0 received**.
+- **Next:** tick 819 ships Stripe Billing CLOSER for the ai_billing_usage cohort (5/5 cohort close) + Recurly 818 SEO surface in same atomic commit if budget allows; otherwise Recurly SEO surface in tick 820.

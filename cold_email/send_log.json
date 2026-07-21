@@ -252,5 +252,27 @@
     "queued_at": "2026-07-21T17:30:00Z",
     "id": "hermes-send-817-maxio",
     "note": "FORM-only commercial route. Not submitted. SMTP gated."
+  },
+  {
+    "tick": "2026-07-21-fast-exec-recurly-818",
+    "index": 818,
+    "vendor": "Recurly",
+    "cohort": "ai_billing_usage",
+    "position": "sibling #4/5",
+    "form_url": "https://recurly.com/request-demo/",
+    "send_status": "queued_not_sent",
+    "route_type": "FORM",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "Form route only (no public sales inbox). SMTP remains gated. $0 sent / $0 received. ABBREVIATED mode (3 surfaces).",
+    "lead": 818,
+    "name": "Recurly",
+    "vertical": "ai_billing_usage",
+    "route": "FORM:https://recurly.com/request-demo/",
+    "template": "818_recurly.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T16:30:00.000000Z",
+    "id": "818-recurly-ai-billing-usage-sibling-4-5"
   }
 ]
