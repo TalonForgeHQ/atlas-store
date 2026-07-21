@@ -9,5 +9,16 @@
     "queued_at": "2026-07-21T04:52:18.737670Z",
     "id": "74a9831a-667f-4de8-b5fe-90eac58ee9ab",
     "note": "Form route only (no public sales inbox). SMTP remains gated. $0 sent / $0 received."
+  },
+  {
+    "lead": 801,
+    "name": "Protect AI (Prisma AIRS)",
+    "vertical": "ai_security_red_team",
+    "route": "FORM:https://protectai.com/request-a-demo + CC:trust@protectai.com",
+    "template": "801_protectai.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T11:55:30.000000Z",
+    "id": "8b75ac3d-9112-4e8a-9f01-c8d6e7890a01",
+    "note": "Form-only route; Trust Center CC. SMTP remains gated. No form submitted. $0 sent / $0 received."
   }
 ]
