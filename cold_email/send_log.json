@@ -374,5 +374,25 @@
     "route": "mailto:friends@dreamdata.io + FORM:https://www.dreamdata.com/demo + FORM:https://www.dreamdata.com/book-demo",
     "status": "queued_not_sent",
     "reason": "SMTP gated; no send, no delivery, no payment, no revenue claimed"
+  },
+  {
+    "cohort": "ai_marketing_attribution",
+    "status": "queued_not_sent",
+    "reason": "SMTP gated; no send, no delivery, no payment, no revenue claimed",
+    "created_at": "2026-07-21T17:05:00Z",
+    "lead_id": 824,
+    "lead_name": "Nielsen Holdings",
+    "lead_email": "ben.gold@nielsen.com,carole.robinson@nielsen.com,dan.chapman@nielsen.com,david.schwarz@nielsen.com,emily.scoble@nielsen.com,jake.urbanski@nielsen.com,lauren.pabst@nielsen.com,lisset.vega@nielsen.com,mark.yamada@nielsen.com,samuel.hellinger@nielsen.com",
+    "template_used": "ai_marketing_attribution_cohort_intro",
+    "subject_variant": "audit-letter",
+    "compliance_check": "EU_AI_Act_Art_50 + NIST_AI_RMF + MITRE_ATLAS + SOX_404 + GDPR + CCPA + COPPA",
+    "tick_id": "2026-07-21-fast-exec-nielsen-824",
+    "cohort_role": "closer-5-of-5",
+    "evidence_path": "cold_email/824_nielsen.md",
+    "chunk_path": "chunks/chunk_824.html",
+    "form_path": "FORM:https://www.nielsen.com/about-us/contact/",
+    "commercial_route": "form",
+    "tier": 1,
+    "tier_reason": "NYSE:NLSN + CIK 0001492633 + SEC-registered + SOX-404 + 11 named C-level execs + 10-K Annual Report + 10 first-party mailto: addresses"
   }
 ]
