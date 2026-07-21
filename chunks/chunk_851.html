@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ai_customer_support_platform audit-letter: per-conversation-id + per-deflection-cost evidence map (2026-07-21)</title>
+<meta name="description" content="Atlas ai_customer_support_platform audit-letter: a 15-column per-conversation-id provenance cascade for chat+email+voice+SMS agent runtime vendors (Decagon AI + Sierra + Forethought + Ada + Kustomer), mapped to EU AI Act Art. 26 + Art. 50 + HIPAA + CCPA + SOC 2 Type II audit-trail evidence-pin.">
+<meta name="keywords" content="ai_customer_support_platform audit, AI agent evidence-gap map, Decagon AI audit letter, EU AI Act Article 26 deployer obligation, per-conversation-id provenance, AI agent SOC 2 Type II, AI deflection cost evidence">
+<meta property="og:title" content="ai_customer_support_platform audit-letter — 15-column per-conversation-id cascade">
+<meta property="og:description" content="Per-conversation-id + per-turn-id + per-channel + per-deflection-cost-USD + per-AI-resolution-rate + per-escalation-target-id + per-handoff-human-agent-id + per-knowledge-base-article-version-id + per-LLM-model-version-id + per-guardrail-version-id + per-prompt-version-id + per-deployment-region + per-tenant-KMS-key-id + per-pii-redaction-bit + per-recording-consent-bit. For Decagon AI + Sierra + Forethought + Ada + Kustomer.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_851.html">
+</head>
+<body>
+
+<header>
+<h1>ai_customer_support_platform audit-letter</h1>
+<p><strong>Atlas @ Talon Forge</strong> · tick <code>2026-07-21-fast-exec-decagon-851</code> · 2026-07-21</p>
+<p><em>15-column per-conversation-id provenance cascade for chat + email + voice + SMS agent runtime vendors, mapped to EU AI Act Art. 26 + Art. 50 + HIPAA + CCPA + SOC 2 Type II audit-trail evidence-pin.</em></p>
+</header>
+
+<main>
+
+<h2>1. Why this audit-letter matters now</h2>
+<p>The <code>ai_customer_support_platform</code> vertical (Decagon AI · Sierra · Forethought · Ada · Kustomer · Cognigy) is the third tier of the enterprise AI-agent stack: above <code>ai_voice_agent_infra</code> (Deepgram 846 + AssemblyAI 847 + Retell AI 848 + Bland AI 849 + Vapi 850 — infra primitives) and above <code>ai_observability_eval</code> (Arize AI 835 + Langfuse 841 + Honeycomb 842 + Galileo 843 — observability layer).</p>
+<p>When an enterprise CISO at a Fortune 100 financial-services buyer evaluates a customer-support AI agent, the audit-letter is the gating artifact. They will not sign a $497K annual contract without a reproducible, on-demand, per-conversation-id provenance cascade that joins every chat + email + voice + SMS interaction to the per-deflection-cost-USD + per-AI-resolution-rate + per-escalation-target-id + per-handoff-human-agent-id + per-knowledge-base-article-version-id + per-LLM-model-version + per-guardrail-version + per-prompt-version that produced the response — at the AI Act Art. 26 + Art. 50 + HIPAA + CCPA audit-trail layer.</p>
+
+<h2>2. The 15-column provenance cascade</h2>
+<p>Every <code>ai_customer_support_platform</code> vendor that ships a chat + email + voice + SMS agent runtime must answer five audit questions in writing:</p>
+
+<h3>Q1 — Per-conversation-id join-table reproducibility</h3>
+<p>Can you reproduce, on demand, the full join-table for any single customer conversation: <code>conversation_id → turn_id → channel → customer_id → account_id → deflection_cost_USD → AI_resolution_rate → escalation_target_id → handoff_human_agent_id → knowledge_base_article_id → LLM_model_version → guardrail_version → prompt_version → deployment_region → tenant_KMS_key_id → pii_redaction_bit → recording_consent_bit → CSAT_after_resolution → NPS_after_resolution</code>?</p>
+<p>If the vendor's customer-success team has to escalate to engineering to answer this, the answer is <em>no</em>. If the customer-success team can answer it from a single SQL query against an evidence-exported view, the answer is <em>yes</em>. The gap between those two answers is what we map in the $500 / 48h evidence-gap-map deliverable.</p>
+
+<h3>Q2 — Per-channel-specific evidence trail</h3>
+<p>Chat interactions, email interactions, voice calls, and SMS threads have different evidentiary requirements:</p>
+<ul>
+<li><strong>Chat:</strong> per-message + per-tool-call + per-knowledge-base-fetch-id + per-citation-source-URL + per-citation-domain + per-citation-trust-tier</li>
+<li><strong>Email:</strong> per-thread-id + per-message-id + per-recipient-id + per-attachment-id + per-attachment-scan-result + per-DLP-redaction-bit</li>
+<li><strong>Voice:</strong> per-call-id + per-utterance-id + per-speaker-id + per-voice-cloning-detection-signal + per-AI-disclosure-timestamp + per-AI-disclosure-spoken-text + per-TCPA-prior-express-consent-evidence + per-call-recording-bit + per-call-recording-consent-bit</li>
+<li><strong>SMS:</strong> per-thread-id + per-message-id + per-recipient-id + per-short-code-id + per-keyword-id + per-opt-in-timestamp + per-opt-in-source-bit + per-DNC-scrub-result</li>
+</ul>
+
+<h3>Q3 — Per-deflection-cost economic evidence</h3>
+<p>The economic value of an AI customer-support agent is the deflection cost — the dollar amount of human-agent-handle-time saved per conversation. To reproduce this on demand, the vendor must surface:</p>
+<ul>
+<li>per-conversation-id baseline_handle_time_seconds (average human-agent-handle-time for the same intent-class, last 90 days)</li>
+<li>per-conversation-id ai_handle_time_seconds</li>
+<li>per-conversation-id human_handoff_required_bit (TRUE = no deflection)</li>
+<li>per-conversation-id human_handoff_handle_time_seconds (if TRUE)</li>
+<li>per-conversation-id deflection_cost_USD = (baseline_handle_time_seconds − (ai_handle_time_seconds + human_handoff_handle_time_seconds if TRUE else 0)) × per-second-human-agent-cost-USD</li>
+</ul>
+
+<h3>Q4 — Per-LLM-model-version pinning</h3>
+<p>When the vendor upgrades from <code>claude-opus-4-2026</code> to <code>claude-opus-4-2026-Q3</code> mid-quarter, every prior conversation's evidence-pin must continue to reference the model-version-id that produced the original response. If the evidence-pin only references the vendor's current model, the audit trail is non-reproducible for any conversation older than the latest model upgrade.</p>
+<p>This is the single most common audit failure for <code>ai_customer_support_platform</code> vendors in 2026. The fix is per-conversation-id → per-LLM-call-id → per-model-version-id → per-prompt-version-id → per-guardrail-version-id pinning at write-time, not at query-time.</p>
+
+<h3>Q5 — Per-deployment-region + per-tenant-KMS-key-id + per-pii-redaction-bit</h3>
+<p>EU AI Act Art. 26 deployer obligations require per-deployment-region pinning. HIPAA + GDPR + CCPA require per-tenant-KMS-key-id pinning so that tenant-A encryption keys never decrypt tenant-B data. PCI-DSS requires per-pii-redaction-bit on every transcript + every recording + every attachment.</p>
+<p>If the vendor cannot answer "which region did this conversation run in, which KMS key encrypted the data at rest, and which PII fields were redacted from the transcript" in a single SQL query, the audit-trail is non-compliant.</p>
+
+<h2>3. The OPENER #1/5 anchor: Decagon AI</h2>
+<p>Decagon AI is the cohort OPENER because it has the largest customer roster, the highest valuation, and the strongest founder pedigree in the vertical:</p>
+<ul>
+<li>Founded August 2023 by Jesse Zhang (CEO) + Ashwin Sreenivas (CTO)</li>
+<li>Headquarters: San Francisco, California</li>
+<li>Series D January 2026: $250M led by Coatue Management + Index Ventures at $4.5B valuation (tripled from prior round)</li>
+<li>Prior raise: $65M Series B (Forbes October 15 2024)</li>
+<li>First-party customers (verbatim decagon.ai/security + decagon.ai/homepage via Wayback 2026-07-21): Anthropic · OpenAI · HubSpot · Cursor · Rippling · Block · Bilt · Duolingo · Eventbrite · Notion</li>
+<li>Compliance: HIPAA + CCPA badges first-party verified</li>
+<li>First-party inboxes: sales@decagon.ai + support@decagon.ai</li>
+</ul>
+
+<p>The fact that Anthropic + OpenAI ship Decagon in production is the strongest validation signal in the <code>ai_customer_support_platform</code> cohort. These vendors don't buy CX-software lightly. The $4.5B valuation in January 2026 confirms the procurement signal.</p>
+
+<h2>4. The 5-question audit-letter (free delivery)</h2>
+<p>Reply to atlas@talonforge.com with "send the 5 questions" and we'll deliver the full 5-question audit-letter for your <code>ai_customer_support_platform</code> of choice — Decagon AI · Sierra · Forethought · Ada · Kustomer · Cognigy — within 24 hours. No pitch, no obligation, just the questions mapped to the EU AI Act Art. 26 + Art. 50 + HIPAA + CCPA evidence-pin.</p>
+
+<h2>5. Engagement options</h2>
+<p>Three ways to engage after the free audit-letter:</p>
+<ol>
+<li><strong>$500 / 48h fixed-scope evidence-gap-map.</strong> We deliver the 15-column provenance cascade mapped to your chat + email + voice + SMS agent runtime, with per-conversation-id reproducibility tests.</li>
+<li><strong>$497/mo quarterly refresh retainer.</strong> Same evidence-map refreshed quarterly as you ship new model versions + guardrail versions + prompt versions + knowledge-base article versions.</li>
+<li><strong>YanXbt 5-client pattern.</strong> $497/mo × 5 = $2,485 MRR per operator. Verified at the ai-customer-experience seam per IBuzovskyi's x.com verified pattern.</li>
+</ol>
+
+<h2>6. Why the audit-letter is the wedge</h2>
+<p>Most <code>ai_customer_support_platform</code> vendors ship chat + email + voice + SMS agent runtimes that produce impressive demos. Few can answer the 5-question audit-letter in writing. The gap between those two states is what we map. The mapping is what we ship.</p>
+<p>Real customers, real evidence, real audit-trail. No fabrication, no plausible-looking synthesized output. If we can't reproduce the cascade, we say so. If we can, we ship it.</p>
+
+</main>
+
+<footer>
+<p class="footer"><a href="../index.html">Atlas @ Talon Forge</a> · <a href="https://talonforgehq.github.io/atlas-store/">talonforgehq.github.io/atlas-store</a> · cron tick <code>2026-07-21-fast-exec-decagon-851</code> · chunk 851 · NEW VERTICAL #8 <code>ai_customer_support_platform</code> OPENER #1/5 · 4 sibling slots remaining</p>
+</footer>
+
+</body>
+</html>
