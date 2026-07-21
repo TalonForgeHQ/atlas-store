@@ -135,8 +135,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:30:00Z",
     "id": "t2026-07-21-fast-exec-exterro-811",
-    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-veritas-812",
@@ -158,8 +158,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:45:00Z",
     "id": "t2026-07-21-fast-exec-veritas-812",
-    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-everlaw-813",
@@ -181,8 +181,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T08:30:00Z",
     "id": "t2026-07-21-fast-exec-everlaw-813",
-    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "lead": 814,
@@ -302,7 +302,7 @@
     "index": 820,
     "vendor": "Triple Whale",
     "cohort": "ai_marketing_attribution",
-    "position": "OPENER #1/5 (NEW VERTICAL #23 — after ai_billing_usage 5/5 closed + ai_legal_hold_ediscovery 5/5 closed)",
+    "position": "OPENER #1/5 (NEW VERTICAL #23 \u2014 after ai_billing_usage 5/5 closed + ai_legal_hold_ediscovery 5/5 closed)",
     "form_url": "https://www.triplewhale.com/bookdemo",
     "send_status": "queued_not_sent",
     "route_type": "FORM",
@@ -355,7 +355,7 @@
     "smtp_gated": true,
     "submitted": false,
     "submitted_at": null,
-    "notes": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot → WR 822 shipped in same slot.",
+    "notes": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot \u2192 WR 822 shipped in same slot.",
     "lead": "822",
     "name": "Wicked Reports",
     "vertical": "ai_marketing_attribution",
@@ -364,7 +364,7 @@
     "status": "queued_not_sent",
     "queued_at": "2026-07-21T16:35:00Z",
     "id": "hermes-send-822-wicked-reports",
-    "note": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot → WR 822 shipped in same slot."
+    "note": "Verified first-party sales@ route + HubSpot form-id a6c8a265-7fcf-4083-b6ac-812fb1d46d0d. Not submitted. SMTP gated. Rockerbox 822 pivot \u2192 WR 822 shipped in same slot."
   },
   {
     "ts": "2026-07-21T16:50:00Z",
@@ -466,7 +466,7 @@
     "tier": 1,
     "route": "FORM:https://apollo.io/contact-us",
     "template": "cold_email/templates/ai_intent_data_enrichment_cohort_intro.md",
-    "tier_reason": "OPENER ai_intent_data_enrichment #1/5 — Apollo Data 275M+ verified contacts + 65M+ companies + Apollo MCP server per-invocation policy + per-decision audit-log replay retention + Apollo AI Assistant + Apollo Workflow Engine + Chrome Extension + Integrations — first-party /we-are-apollo + /product/mcp + /llm-info verified 2026-07-21",
+    "tier_reason": "OPENER ai_intent_data_enrichment #1/5 \u2014 Apollo Data 275M+ verified contacts + 65M+ companies + Apollo MCP server per-invocation policy + per-decision audit-log replay retention + Apollo AI Assistant + Apollo Workflow Engine + Chrome Extension + Integrations \u2014 first-party /we-are-apollo + /product/mcp + /llm-info verified 2026-07-21",
     "note": "First-party contact-us form only; form not submitted. SMTP remains gated. $0 sent / $0 received."
   },
   {
@@ -477,8 +477,8 @@
     "tier": 1,
     "route": "sales@zoominfo.com + FORM:https://www.zoominfo.com/contact",
     "template": "cold_email/templates/ai_intent_data_enrichment_cohort_intro.md",
-    "tier_reason": "sibling #2/5 ai_intent_data_enrichment (after Apollo 830 OPENER) — Nasdaq:GTM public company + ZoomInfo founded 2007 + CEO Henry Schuck first-party /about FAQ JSON-LD schema + 35K buying-intent topics + 300+ intent signals + GTM-1 hybrid-AI foundation model + Copilot + ZoomInfo Chat autonomous agent + direct sales@ sales@zoominfo.com",
-    "note": "First-party sales@ + Contact Sales form. Form not submitted. SMTP remains gated. $0 sent / $0 received. Direct email route unlocked — first sibling with verified sales@ vs FORM-only siblings above."
+    "tier_reason": "sibling #2/5 ai_intent_data_enrichment (after Apollo 830 OPENER) \u2014 Nasdaq:GTM public company + ZoomInfo founded 2007 + CEO Henry Schuck first-party /about FAQ JSON-LD schema + 35K buying-intent topics + 300+ intent signals + GTM-1 hybrid-AI foundation model + Copilot + ZoomInfo Chat autonomous agent + direct sales@ sales@zoominfo.com",
+    "note": "First-party sales@ + Contact Sales form. Form not submitted. SMTP remains gated. $0 sent / $0 received. Direct email route unlocked \u2014 first sibling with verified sales@ vs FORM-only siblings above."
   },
   {
     "index": 833,
@@ -502,7 +502,7 @@
     "status": "queued_not_sent",
     "ts": "2026-07-21T18:20:00Z",
     "template": "834_bombora.md",
-    "note": "First-party general-inquiries@bombora.com verified on bombora.com/contact 2026-07-21 HTTP 200. Cohort CLOSER #5/5 — ai_intent_data_enrichment COMPLETE 5/5. SMTP remains gated. $0 sent / $0 received."
+    "note": "First-party general-inquiries@bombora.com verified on bombora.com/contact 2026-07-21 HTTP 200. Cohort CLOSER #5/5 \u2014 ai_intent_data_enrichment COMPLETE 5/5. SMTP remains gated. $0 sent / $0 received."
   },
   {
     "index": 835,
@@ -524,7 +524,7 @@
     "status": "queued_not_sent",
     "queued_at": "2026-07-21T19:25:00Z",
     "id": "send-2026-07-21-fast-exec-datahub-836",
-    "note": "OPENER ai_data_context_observability #1/5 — NEW VERTICAL #27 — DataHub (datahub.com) — open-source data-catalog + AI-context — first-party FORM route; not submitted; SMTP remains gated; $0 sent / $0 received.",
+    "note": "OPENER ai_data_context_observability #1/5 \u2014 NEW VERTICAL #27 \u2014 DataHub (datahub.com) \u2014 open-source data-catalog + AI-context \u2014 first-party FORM route; not submitted; SMTP remains gated; $0 sent / $0 received.",
     "tick": "2026-07-21-fast-exec-datahub-836",
     "index": 836,
     "vendor": "DataHub (datahub.com)",
@@ -536,9 +536,9 @@
     "smtp_gated": true,
     "submitted": false,
     "submitted_at": null,
-    "notes": "OPENER ai_data_context_observability #1/5 — DataHub founders verbatim datahub.com/about 2026-07-21: Swaroop Jagadish (Co-founder + CEO; ex-LinkedIn) + Shirshanka Das (Co-founder + CTO; ex-LinkedIn Principal Staff Engineer). First-party WordPress + HubSpot Forms JS confirmed; FORM-only route per pitfall #28; no send, no payment, no revenue claimed. 18-column provenance cascade. SERIES B 2024 BESSEMER.",
+    "notes": "OPENER ai_data_context_observability #1/5 \u2014 DataHub founders verbatim datahub.com/about 2026-07-21: Swaroop Jagadish (Co-founder + CEO; ex-LinkedIn) + Shirshanka Das (Co-founder + CTO; ex-LinkedIn Principal Staff Engineer). First-party WordPress + HubSpot Forms JS confirmed; FORM-only route per pitfall #28; no send, no payment, no revenue claimed. 18-column provenance cascade. SERIES B 2024 BESSEMER.",
     "template_full": "cold_email/templates/836_datahub_procurement_followup.md",
-    "tier_reason": "Lead 836 — DataHub (datahub.com — #1 open-source data-catalog + AI context + metadata platform — DataHub OSS Apache-2.0 + DataHub Cloud SaaS + metadata search + column-level lineage + dataset schema + data-product + data-contract + ingestion-framework + schema-registry + Actions framework + per-entity React renderers + per-platform ingestion-source + 50+ first-party connectors + OpenLineage + Iceberg + dbt + Looker + Tableau + Snowflake + BigQuery + Databricks + Kafka + Airflow + Prefect + Dagster + Vertex AI + SageMaker — NEW VERTICAL #27 ai_data_context_observability OPENER #1/5 (post ai_obs..."
+    "tier_reason": "Lead 836 \u2014 DataHub (datahub.com \u2014 #1 open-source data-catalog + AI context + metadata platform \u2014 DataHub OSS Apache-2.0 + DataHub Cloud SaaS + metadata search + column-level lineage + dataset schema + data-product + data-contract + ingestion-framework + schema-registry + Actions framework + per-entity React renderers + per-platform ingestion-source + 50+ first-party connectors + OpenLineage + Iceberg + dbt + Looker + Tableau + Snowflake + BigQuery + Databricks + Kafka + Airflow + Prefect + Dagster + Vertex AI + SageMaker \u2014 NEW VERTICAL #27 ai_data_context_observability OPENER #1/5 (post ai_obs..."
   },
   {
     "lead": "838",
@@ -549,7 +549,7 @@
     "status": "queued_not_sent",
     "queued_at": "2026-07-21T19:30:00Z",
     "id": "send-2026-07-21-fast-exec-montecarlo-838",
-    "note": "sibling ai_data_context_observability #3/5 — NEW VERTICAL #27 — Monte Carlo Data (montecarlo.ai) — data observability + field-level lineage + AI-monitoring + automated-RCA + Agent MCP + Agent Toolkit Platform — first-party HubSpot portalId=20172935 FORM route; not submitted; SMTP remains gated; $0 sent / $0 received.",
+    "note": "sibling ai_data_context_observability #3/5 \u2014 NEW VERTICAL #27 \u2014 Monte Carlo Data (montecarlo.ai) \u2014 data observability + field-level lineage + AI-monitoring + automated-RCA + Agent MCP + Agent Toolkit Platform \u2014 first-party HubSpot portalId=20172935 FORM route; not submitted; SMTP remains gated; $0 sent / $0 received.",
     "tick": "2026-07-21-fast-exec-montecarlo-838",
     "index": 838,
     "vendor": "Monte Carlo Data (montecarlo.ai)",
@@ -561,9 +561,9 @@
     "smtp_gated": true,
     "submitted": false,
     "submitted_at": null,
-    "notes": "sibling ai_data_context_observability #3/5 — Monte Carlo Data co-founders verified 2026-07-21: Barr Moses (Co-founder + CEO; named 'the godmother of data observability') + Lior Gavish (Co-founder + CTO; ex-Gainsight VP Engineering). First-party HubSpot portalId=20172935 confirmed live 2026-07-21 on https://montecarlo.ai/request-a-demo; FORM-only route per pitfall #28; no send, no payment, no revenue claimed. 18-column field-level-lineage + automated-RCA + AI-monitoring cascade. SERIES D 2022 $135M / $240M+ TOTAL FUNDING.",
+    "notes": "sibling ai_data_context_observability #3/5 \u2014 Monte Carlo Data co-founders verified 2026-07-21: Barr Moses (Co-founder + CEO; named 'the godmother of data observability') + Lior Gavish (Co-founder + CTO; ex-Gainsight VP Engineering). First-party HubSpot portalId=20172935 confirmed live 2026-07-21 on https://montecarlo.ai/request-a-demo; FORM-only route per pitfall #28; no send, no payment, no revenue claimed. 18-column field-level-lineage + automated-RCA + AI-monitoring cascade. SERIES D 2022 $135M / $240M+ TOTAL FUNDING.",
     "template_full": "cold_email/templates/838_montecarlo_procurement_followup.md",
-    "tier_reason": "Lead 838 — Monte Carlo Data (montecarlo.ai — data observability + data reliability + lineage + freshness + schema-monitoring + AI-monitoring platform — Agent Observability + Data Quality + Lineage + Impact + Data Health + Incident Response + Automated Monitoring + Field-Level Lineage + Automated Root Cause Analysis + Anomaly Detection + AI-Ready Data — Co-founders Barr Moses (Co-founder + CEO; named 'the godmother of data observability' by industry press) + Lior Gavish (Co-founder + CTO; ex-Gainsight VP Engineering) confirmed verbatim 2026-07-21 — HQ San Francisco CA (385 1st Street) — founded..."
+    "tier_reason": "Lead 838 \u2014 Monte Carlo Data (montecarlo.ai \u2014 data observability + data reliability + lineage + freshness + schema-monitoring + AI-monitoring platform \u2014 Agent Observability + Data Quality + Lineage + Impact + Data Health + Incident Response + Automated Monitoring + Field-Level Lineage + Automated Root Cause Analysis + Anomaly Detection + AI-Ready Data \u2014 Co-founders Barr Moses (Co-founder + CEO; named 'the godmother of data observability' by industry press) + Lior Gavish (Co-founder + CTO; ex-Gainsight VP Engineering) confirmed verbatim 2026-07-21 \u2014 HQ San Francisco CA (385 1st Street) \u2014 founded..."
   },
   {
     "lead": "839",
@@ -574,7 +574,7 @@
     "status": "queued_not_sent",
     "queued_at": "2026-07-21T19:45:00Z",
     "id": "send-2026-07-21-fast-exec-bigeye-839",
-    "note": "sibling ai_data_context_observability #4/5 — first-party Bigeye AboutPage JSON-LD verifies founders Egor Gryaznov and Kyle Kirwan, CEO Eleanor Treharne-Jones, foundingDate 2019; request-demo JSON-LD labels hello@bigeye.com as Sales; SMTP gated; $0 sent / $0 received.",
+    "note": "sibling ai_data_context_observability #4/5 \u2014 first-party Bigeye AboutPage JSON-LD verifies founders Egor Gryaznov and Kyle Kirwan, CEO Eleanor Treharne-Jones, foundingDate 2019; request-demo JSON-LD labels hello@bigeye.com as Sales; SMTP gated; $0 sent / $0 received.",
     "tick": "2026-07-21-fast-exec-bigeye-839",
     "index": 839,
     "vendor": "Bigeye (bigeye.com)",
@@ -588,6 +588,31 @@
     "submitted_at": null,
     "notes": "First-party sales-labeled hello@bigeye.com and https://www.bigeye.com/request-demo verified live 2026-07-21. Bigeye Enterprise AI Trust + runtime enforcement + sensitivity scanning + governance wedge. No send, payment, or revenue claimed.",
     "template_full": "cold_email/templates/839_bigeye.md",
-    "tier_reason": "Lead 839 Bigeye — Enterprise AI Trust + data observability + runtime policy enforcement; first-party founder and sales-route evidence carried in leads.csv and companion file."
+    "tier_reason": "Lead 839 Bigeye \u2014 Enterprise AI Trust + data observability + runtime policy enforcement; first-party founder and sales-route evidence carried in leads.csv and companion file."
+  },
+  {
+    "lead": "845",
+    "name": "Observe.AI",
+    "vertical": "ai_voice_agent_observability",
+    "route": "FORM:https://www.observe.ai/demo",
+    "template": "845_observeai.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T21:00:00Z",
+    "id": "send-2026-07-21-fast-exec-observeai-845",
+    "note": "OPENER NEW VERTICAL #6 ai_voice_agent_observability #1/5 \u2014 Observe.AI (observe.ai) \u2014 voice-AI observability + agent coaching for contact centers \u2014 first-party /about-us/ confirms CEO & Co-Founder Swapnil Jain verbatim 2026-07-21; investor list Menlo Ventures + Nexus Venture Partners + Scale Venture Partners + Insight Partners + Wing verified first-party; /contact 301 -> /demo HubSpot Marketo FORM route; not submitted; SMTP remains gated; $0 sent / $0 received.",
+    "tick": "2026-07-21-fast-exec-observeai-845",
+    "index": 845,
+    "vendor": "Observe.AI (observe.ai)",
+    "cohort": "ai_voice_agent_observability",
+    "position": "OPENER #1/5",
+    "form_url": "https://www.observe.ai/demo",
+    "send_status": "queued_not_sent",
+    "route_type": "FORM",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "OPENER NEW VERTICAL #6 ai_voice_agent_observability. First-party /about-us/ confirms Swapnil Jain (CEO & Co-Founder). Investor list Menlo Ventures + Nexus + Scale + Insight + Wing verbatim first-party /about-us/. HubSpot Marketo /demo form first-party verified live 2026-07-21. Voice-agent deployer-obligation layer for EU AI Act Art. 26 cascade \u2014 per-call-id + per-speaker-id + per-utterance-id + per-prompt-version-id + per-summary-prompt-version + per-recording-retention-policy + per-pii-redaction-on-transcript PCI SSN + per-call-recording-consent-bit + per-deployment-region US EU APAC + per-audit-log-retention + audit-log S3/GCS export. No send, payment, or revenue claimed.",
+    "template_full": "cold_email/templates/845_observeai.md",
+    "tier_reason": "Lead 845 Observe.AI \u2014 voice-AI observability + agent coaching for contact centers; first-party founder and sales-route evidence carried in leads.csv and companion file."
   }
 ]
