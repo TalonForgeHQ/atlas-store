@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Tettra AI knowledge base Slack + Teams Q&A bot audit checklist — expert-verification, write-back provenance, sub-processor cascade, and EU AI Act readiness (2026) | Talon Forge</title>
+<meta name="description" content="Buyer-facing Tettra AI knowledge-base audit checklist covering per-question provenance, expert-verification audit trail, per-source ACL, Slack/Teams bot data-handling, sub-processor cascade, and EU AI Act Art. 14 human-oversight readiness." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_767.html" />
+<meta property="og:title" content="Tettra AI knowledge-base audit checklist (2026)" />
+<meta property="og:description" content="A five-gap buyer checklist for Tettra AI Q&A bot: expert-verification, Slack/Teams bot scope, per-source ACL, sub-processor cascade, and EU AI Act Art. 14 human-oversight." />
+</head>
+<body>
+<article id="chunk-767" data-chunk-id="767" data-lead-id="767" data-vertical="ai_enterprise_knowledge_agents" data-tick="2026-07-21-fast-exec-tettra-767" data-cohort-role="sibling-2-of-5">
+<h1>Tettra AI knowledge-base audit checklist (2026)</h1>
+<p><em>Long-tail target: <strong>Tettra AI assistant audit</strong>, <strong>Tettra Slack Teams Q&A bot evidence map</strong>, <strong>Tettra expert-verification audit</strong>, <strong>Tettra SOC 2 procurement checklist</strong>, and <strong>Tettra EU AI Act Art. 14 human-oversight</strong>. This is the <code>ai_enterprise_knowledge_agents</code> vertical sibling #2/5 after the Guru 766 OPENER.</em></p>
+<h2>Why Tettra is the Slack/Teams-native Q&A bot sibling</h2>
+<p>Guru 766 covered the verified-knowledge control plane delivered via web + browser + Slack + Teams. Tettra adds a distinct <em>Slack-and-Teams-native Q&A bot with expert-verification escalation and structured wiki write-back</em> surface: the bot lives inside chat, escalates unverified questions to subject-matter experts, and writes the verified answers back to a structured wiki. The audit trail runs from chat user to question to retrieved source to bot answer to LLM sub-processor to expert-verification event to wiki write-back to downstream re-retrieval to export and deletion.</p>
+<p>This page treats Tettra's published homepage, About page, Contact page, Privacy page, and Security page as product evidence and every control below as a bounded question. It does not assume a control exists merely because a feature is named.</p>
+<h2>Tettra first-party facts checked 2026-07-21</h2>
+<ul>
+<li><strong>Company:</strong> KinHR Inc. d/b/a Tettra (tettra.com) — internal knowledge base + Q&A bot.</li>
+<li><strong>Founders:</strong> the first-party About page identifies Karthik Suresh as Co-Founder &amp; CEO and Jake Lumetta as Co-Founder &amp; CTO.</li>
+<li><strong>AI surface:</strong> the homepage and product page describe Tettra as an AI-powered internal knowledge base with a Slack + MS Teams Q&A bot that answers questions in chat and escalates unverified questions to subject-matter experts.</li>
+<li><strong>Verification layer:</strong> Tettra's product positioning centres on expert-verified knowledge articles with categories + subpages + permissions + Strict-vs-Loose verification modes, which means an editor-of-record, a verification timestamp, a revision history, and a re-retrieval flag must all be joinable to the answer served in chat.</li>
+<li><strong>Delivery surfaces:</strong> Slack and MS Teams bots, web app, and structured wiki. Each chat-surface delivery introduces a per-workspace channel scope, a per-channel role, and an ephemeral-content boundary that the audit must enumerate.</li>
+<li><strong>Integration surface:</strong> Google Drive, GitHub, Figma, Notion, and Confluence — five first-party integration sub-processors, each with its own OAuth credential + ACL scope + rotation cadence.</li>
+<li><strong>Security surface:</strong> SOC 2 Type II + SAML SSO + SCIM + audit logs + IP allowlist (Enterprise tier).</li>
+<li><strong>Commercial route:</strong> the Contact page publishes support@tettra.com as the canonical support/business contact channel.</li>
+</ul>
+<h2>Five buyer-facing joins</h2>
+<ol>
+<li><strong>Chat user → question → retrieved source → bot answer:</strong> Slack/Teams user, question text, channel scope, retrieved source (Drive + GitHub + Figma + Notion + Confluence + Tettra wiki), source ACL snapshot, bot answer, LLM sub-processor invoked (OpenAI vs. Anthropic vs. self-hosted), retention window, region routing, and tenant.</li>
+<li><strong>Expert-verification escalation and write-back:</strong> unverified-question event, subject-matter expert identity, verification timestamp, revision history, Strict-vs-Loose verification mode, downstream re-retrieval flag, Tettra wiki category and subpage written-back to, and the next-aswer effect.</li>
+<li><strong>Per-source ACL + integration-credential scope:</strong> Drive folder + GitHub repo + Figma file + Notion page + Confluence space mapped per Tettra category + per role + per integration OAuth credential / GitHub App installation; rotation/revocation cascade window; stale-credential-serving-answers detection.</li>
+<li><strong>Slack + MS Teams bot data-handling disclosure:</strong> per-workspace admin-set scope vs. installing-user-can-read-everything scope; private channel read access; DM read access; threaded conversation read access; ephemeral message read access; EU AI Act Art. 50 transparency-labeling (bot answer watermarked, but the prompt-from-DM is not labeled).</li>
+<li><strong>Sub-processor cascade DPA + 14-day change-notification SLA:</strong> five first-party integration sub-processors (Google + GitHub + Figma + Notion + Confluence), two LLM sub-processors (OpenAI + Anthropic), two delivery sub-processors (Slack + Teams) — totaling nine sub-processors in the per-answer cascade; flow-down DPA + 14-day change-notification SLA per GDPR Art. 28(2).</li>
+</ol>
+<h2>Twenty-column provenance cascade</h2>
+<p><code>account_id</code> → <code>tenant_id</code> → <code>slack_or_teams_user_id</code> → <code>channel_or_chat_scope</code> → <code>question_event_id</code> → <code>retrieved_source_id</code> → <code>source_acl_snapshot</code> → <code>bot_answer_id</code> → <code>llm_subprocessor_version</code> → <code>verification_state</code> → <code>strict_or_loose_mode</code> → <code>expert_verifier_id</code> → <code>wiki_writeback_target</code> → <code>reretrieval_flag</code> → <code>policy_decision</code> → <code>downstream_state_hash</code> → <code>reviewer_decision</code> → <code>rollback_target</code> → <code>export_or_deletion_receipt_id</code> → <code>region_subprocessor</code>.</p>
+<h2>Common evidence failures</h2>
+<ul>
+<li>Showing a Tettra bot answer in Slack or Teams without the question text, the channel scope, the channel-scoped role, the retrieved source, the LLM sub-processor invoked, and the verification state at answer time.</li>
+<li>Logging an expert-verification write-back without the verifier identity, the verification timestamp, the revision history, the Strict-vs-Loose mode, and the downstream re-retrieval flag.</li>
+<li>Recording a per-source ACL mapping without the integration credential backing it (which OAuth credential + which GitHub App installation + which scope), and without the rotation/revocation cascade window.</li>
+<li>Allowing a Slack or Teams bot to read private channels or DMs without enumerating the scope, the admin-set boundaries, and the ephemeral-content handling, and without mapping the prompt-from-DM to EU AI Act Art. 50 transparency-labeling.</li>
+<li>Deleting a Tettra article or revoking a bot-installation while omitting connected-source copies, embeddings, search caches, chat answers, expert-verification events, action traces, replicas, or backups.</li>
+</ul>
+<h2>What the $500 review delivers</h2>
+<p>A five-gap evidence map using customer-supplied and public Tettra materials, an identity-to-deletion schema with owners and missing-receipt flags, and a 30/60/90-day handoff for Knowledge Ops, IT/Security/Privacy, AI Governance, and Procurement. Fixed scope is $500 with a 48-hour turnaround, or $497/month for a quarterly public-surface refresh.</p>
+<h2>Route and verification sources</h2>
+<ul>
+<li><a href="https://tettra.com/">Tettra homepage</a> — AI-powered internal knowledge base + Slack/Teams Q&A bot positioning, founders, expert-verified knowledge emphasis, and delivery surfaces.</li>
+<li><a href="https://tettra.com/about">Tettra About</a> — Karthik Suresh (Co-Founder &amp; CEO) and Jake Lumetta (Co-Founder &amp; CTO) identification, YC S14 batch, and bootstrapped-to-profitable funding history.</li>
+<li><a href="https://tettra.com/contact">Tettra Contact</a> — support@tettra.com canonical support/business contact channel verified 2026-07-21.</li>
+<li><a href="https://tettra.com/privacy">Tettra Privacy</a> — GDPR + CCPA + SOC 2 Type II compliance claims and sub-processor disclosure scope.</li>
+<li><a href="https://tettra.com/security">Tettra Security</a> — SAML SSO + SCIM + audit logs + IP allowlist Enterprise-tier security posture.</li>
+</ul>
+<h2>Cohort position</h2>
+<p>Lead 767 is the <code>ai_enterprise_knowledge_agents</code> sibling #2/5 after Guru OPENER (Lead 766). Three siblings remain to close the cohort: candidates include Slab, Document360, Confluence-with-Avoma, Slite, Sana AI, Trovata, and Stack Overflow for Teams with OverflowAI. Next sibling ships in the next tick.</p>
+<p style="font-size:0.9em;color:#666">Offer: $500 fixed-scope 48-hour evidence-gap map or $497/month quarterly refresh. No form submission, email, delivery, payment, or revenue claimed. Commercial route support@tettra.com; privacy/legal/security/press/careers/investor/founder routes excluded.</p>
+</article>
+</body>
+</html>
