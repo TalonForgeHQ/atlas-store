@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Guru Knowledge Agents governance audit checklist — verified knowledge, role enforcement, agent lineage, and deletion receipts (2026) | Talon Forge</title>
+<meta name="description" content="Buyer-facing Guru Knowledge Agents governance audit checklist for verified-company-knowledge lifecycle, role-based answers, agent reasoning, automation authorization, human review, and export/deletion." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_766.html" />
+<meta property="og:title" content="Guru Knowledge Agents governance audit checklist (2026)" />
+<meta property="og:description" content="A five-gap buyer checklist for Guru verified knowledge, role/ACL enforcement, agent/tool authorization, human oversight, and export/deletion." />
+</head>
+<body>
+<article id="chunk-766" data-chunk-id="766" data-lead-id="766" data-vertical="ai_enterprise_knowledge_agents" data-tick="2026-07-21-fast-exec-guru-766" data-cohort-role="opener-1-of-5">
+<h1>Guru Knowledge Agents governance audit checklist (2026)</h1>
+<p><em>Long-tail target: <strong>Guru Knowledge Agents evidence map</strong>, <strong>Guru verified company knowledge audit</strong>, <strong>Guru Knowledge Agents SOC 2 procurement checklist</strong>, <strong>Guru browser/Slack/Teams delivery audit</strong>, and <strong>Guru knowledge verification freshness audit</strong>. This is the <code>ai_enterprise_knowledge_agents</code> vertical OPENER #1/5 after the <code>ai_data_intelligence_agents</code> cohort closed at IBM 765.</em></p>
+<h2>Why Guru is the verified-knowledge control-plane sibling</h2>
+<p>Databricks 761 covered the governed lakehouse, Snowflake 762 covered the warehouse-native Cortex surface, Palantir 763 covered ontology-driven AIP, Salesforce 764 covered CRM-native Data 360, and IBM 765 closed the data-intelligence cohort with hybrid watsonx governance. Guru adds a distinct <em>verified-company-knowledge</em> control plane: enterprise search and chat built on verified Guru cards, role-aware answers, browser/web/Slack/Teams delivery, and Knowledge Agents that improve answers and run research and automation against the same verified source of truth. The audit trail runs from user and role to connected source to Guru card to verification state to retrieval and answer to agent reasoning and tool authorization to downstream state change to human review and finally to export and deletion.</p>
+<p>This page treats Guru's published homepage, About page, Features page, and Demo form as product evidence and every control below as a bounded question. It does not assume a control exists merely because a feature is named.</p>
+<h2>Guru first-party facts checked 2026-07-21</h2>
+<ul>
+<li><strong>Company:</strong> GetGuru, Inc. (getguru.com) — enterprise knowledge management and AI search.</li>
+<li><strong>Founders:</strong> the first-party About page identifies Rick Nucci as Co-founder &amp; CEO and Mitch Stewart as Co-founder &amp; CTO; the homepage structured data lists both founders.</li>
+<li><strong>Knowledge Agents surface:</strong> the homepage and Features page describe Knowledge Agents that can improve information (not just find it), with role-based answers, chat, research, and automation across verified company knowledge delivered via web, browser, Slack, and Teams.</li>
+<li><strong>Verification layer:</strong> Guru's product positioning centres on verified company knowledge, which means an editor-of-record, a verification timestamp, a freshness policy, and an unverify path that must all be joinable to the answer or automation that depended on them.</li>
+<li><strong>Delivery surfaces:</strong> web, browser extension, Slack, and Teams. Each delivery surface introduces its own SSO, channel-scoped role, and event-log boundary, which the audit must enumerate.</li>
+<li><strong>Commercial route:</strong> the demo page publishes the Talk to Sales form (<code>https://www.getguru.com/demo</code>) as the only first-party business-contact route; no general-business inbox was verified.</li>
+</ul>
+<h2>Five buyer-facing joins</h2>
+<ol>
+<li><strong>Identity → role → verified source → answer:</strong> user, role, connected source (Drive, Confluence, Salesforce, Zendesk, etc.), source ACL snapshot, Guru card, verification state, retrieval event, Knowledge Agent version, answer, citation, and tenant.</li>
+<li><strong>Verification state and freshness:</strong> verifier identity, verification timestamp, source revision, freshness policy, unverify event, stale-content suppression rule, and the answer, chat, research artifact, or automation affected.</li>
+<li><strong>Knowledge Agent reasoning and action authorization:</strong> agent instructions, model/provider version, retrieved evidence, tool or connector scope (browser, Slack, Teams, Salesforce, Jira, custom API), policy result, downstream object, and denial/retry reason.</li>
+<li><strong>Human oversight and rollback:</strong> reviewer, approval, rejection, correction, escalation, compensating action, final state, and rollback target for Knowledge Agent-initiated work.</li>
+<li><strong>Export and deletion:</strong> export and deletion across connected-source copies, Guru cards, embeddings, search caches, answers, chats, research artifacts, action traces, evaluations, logs, replicas, and backups.</li>
+</ol>
+<h2>Twenty-column provenance cascade</h2>
+<p><code>account_id</code> → <code>tenant_id</code> → <code>user_or_service_id</code> → <code>role_or_acl_scope</code> → <code>delivery_surface</code> → <code>connected_source_id</code> → <code>guru_card_id</code> → <code>verification_state</code> → <code>freshness_policy_id</code> → <code>retrieval_event_id</code> → <code>knowledge_agent_version</code> → <code>model_or_provider_version</code> → <code>tool_or_connector_scope</code> → <code>policy_decision</code> → <code>answer_or_action_id</code> → <code>downstream_state_hash</code> → <code>reviewer_decision</code> → <code>rollback_target</code> → <code>export_or_deletion_receipt_id</code> → <code>region_subprocessor</code>.</p>
+<h2>Common evidence failures</h2>
+<ul>
+<li>Showing a Guru Knowledge Agent answer without the Guru card, the verification state at answer time, the freshness window, the connected source ACL snapshot, and the role/ACL applied to the requester.</li>
+<li>Logging a Slack or Teams delivery without the channel scope, the channel-scoped role, the Guru card cited, and the verification timestamp attached to that card.</li>
+<li>Recording a Knowledge Agent automation without the connector scope, the policy decision, the downstream object, and the rollback target.</li>
+<li>Promoting a Knowledge Agent revision without the evaluation dataset, the reviewer, the verifier-of-record change list, and the rollback target.</li>
+<li>Deleting a Guru card while omitting connected-source copies, embeddings, search caches, answers, chats, research artifacts, action traces, evaluations, replicas, or backups.</li>
+</ul>
+<h2>What the $500 review delivers</h2>
+<p>A five-gap evidence map using customer-supplied and public Guru materials, an identity-to-deletion schema with owners and missing-receipt flags, and a 30/60/90-day handoff for Knowledge Ops, IT/Security/Privacy, AI Governance, and Procurement. Fixed scope is $500 with a 48-hour turnaround, or $497/month for a quarterly public-surface refresh.</p>
+<h2>Route and verification sources</h2>
+<ul>
+<li><a href="https://www.getguru.com/">Guru homepage</a> — Knowledge Agents positioning, founders, verified-company-knowledge emphasis, and delivery surfaces.</li>
+<li><a href="https://www.getguru.com/about">Guru About page</a> — first-party founder identification (Rick Nucci, Mitch Stewart).</li>
+<li><a href="https://www.getguru.com/features">Guru Features page</a> — Knowledge Agents and verified-company-knowledge product surface.</li>
+<li><a href="https://www.getguru.com/demo">Guru Talk to Sales form</a> — first-party commercial route (used for the lead's commercial-route entry).</li>
+</ul>
+<p class="footer">Atlas @ Talon Forge — Lead 766 — Guru Knowledge Agents governance audit checklist · ai_enterprise_knowledge_agents OPENER #1/5 · $500/48h or $497/mo · no form submission, email, delivery, payment, or revenue claimed.</p>
+</article>
+</body>
+</html>
