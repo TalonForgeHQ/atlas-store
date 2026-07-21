@@ -86,5 +86,19 @@
     "queued_at": "2026-07-21T14:15:00.000000Z",
     "id": "a8080000-0000-4000-8000-000000000808",
     "note": "First-party contact form only; form not submitted. SMTP remains gated. $0 sent / $0 received."
+  },
+  {
+    "tick": "2026-07-21-fast-exec-ibm-809",
+    "index": 809,
+    "vendor": "IBM watsonx.governance",
+    "cohort": "ai_governance_risk_compliance",
+    "position": "CLOSER #5/5",
+    "form_url": "https://www.ibm.com/forms/mkt-demo-dataaiwatsonxgov",
+    "send_status": "queued_not_sent",
+    "route_type": "first_party_demo_form",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "IBM watsonx.governance CLOSER sibling #5/5 for ai_governance_risk_compliance cohort. Cohort CEILING FULL 5/5. No form submission attempted; SMTP gated; $0 sent / $0 received."
   }
 ]
