@@ -564,5 +564,30 @@
     "notes": "sibling ai_data_context_observability #3/5 — Monte Carlo Data co-founders verified 2026-07-21: Barr Moses (Co-founder + CEO; named 'the godmother of data observability') + Lior Gavish (Co-founder + CTO; ex-Gainsight VP Engineering). First-party HubSpot portalId=20172935 confirmed live 2026-07-21 on https://montecarlo.ai/request-a-demo; FORM-only route per pitfall #28; no send, no payment, no revenue claimed. 18-column field-level-lineage + automated-RCA + AI-monitoring cascade. SERIES D 2022 $135M / $240M+ TOTAL FUNDING.",
     "template_full": "cold_email/templates/838_montecarlo_procurement_followup.md",
     "tier_reason": "Lead 838 — Monte Carlo Data (montecarlo.ai — data observability + data reliability + lineage + freshness + schema-monitoring + AI-monitoring platform — Agent Observability + Data Quality + Lineage + Impact + Data Health + Incident Response + Automated Monitoring + Field-Level Lineage + Automated Root Cause Analysis + Anomaly Detection + AI-Ready Data — Co-founders Barr Moses (Co-founder + CEO; named 'the godmother of data observability' by industry press) + Lior Gavish (Co-founder + CTO; ex-Gainsight VP Engineering) confirmed verbatim 2026-07-21 — HQ San Francisco CA (385 1st Street) — founded..."
+  },
+  {
+    "lead": "839",
+    "name": "Bigeye",
+    "vertical": "ai_data_context_observability",
+    "route": "mailto:hello@bigeye.com",
+    "template": "839_bigeye.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T19:45:00Z",
+    "id": "send-2026-07-21-fast-exec-bigeye-839",
+    "note": "sibling ai_data_context_observability #4/5 — first-party Bigeye AboutPage JSON-LD verifies founders Egor Gryaznov and Kyle Kirwan, CEO Eleanor Treharne-Jones, foundingDate 2019; request-demo JSON-LD labels hello@bigeye.com as Sales; SMTP gated; $0 sent / $0 received.",
+    "tick": "2026-07-21-fast-exec-bigeye-839",
+    "index": 839,
+    "vendor": "Bigeye (bigeye.com)",
+    "cohort": "ai_data_context_observability",
+    "position": "sibling #4/5",
+    "form_url": "https://www.bigeye.com/request-demo",
+    "send_status": "queued_not_sent",
+    "route_type": "EMAIL",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "First-party sales-labeled hello@bigeye.com and https://www.bigeye.com/request-demo verified live 2026-07-21. Bigeye Enterprise AI Trust + runtime enforcement + sensitivity scanning + governance wedge. No send, payment, or revenue claimed.",
+    "template_full": "cold_email/templates/839_bigeye.md",
+    "tier_reason": "Lead 839 Bigeye — Enterprise AI Trust + data observability + runtime policy enforcement; first-party founder and sales-route evidence carried in leads.csv and companion file."
   }
 ]
