@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Snowflake Cortex Agents governance audit checklist — threads, runs, tools, evaluations, and deletion receipts (2026) | Talon Forge</title>
+<meta name="description" content="Buyer-facing Snowflake Cortex Agents governance audit checklist for role and data access, Agent objects, persisted Threads, Run events, Analyst/Search/code/MCP tools, evaluations, and deletion evidence." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_762.html" />
+<meta property="og:title" content="Snowflake Cortex Agents governance audit checklist (2026)" />
+<meta property="og:description" content="A five-gap buyer checklist for Snowflake Cortex Agent, Thread, Run, tool-call, evaluation, and deletion evidence." />
+</head>
+<body>
+<article id="chunk-762" data-chunk-id="762" data-lead-id="762" data-vertical="ai_data_intelligence_agents" data-tick="2026-07-21-fast-exec-snowflake-762" data-cohort-role="sibling-2-of-5">
+<h1>Snowflake Cortex Agents governance audit checklist (2026)</h1>
+<p><em>Long-tail target: <strong>Snowflake Cortex Agents governance audit checklist</strong>, <strong>Cortex Agent Thread Run audit trail</strong>, <strong>Snowflake MCP connector procurement checklist</strong>, and <strong>Snowflake agent deletion evidence</strong>. This is sibling #2/5 after Databricks 761 opened the <code>ai_data_intelligence_agents</code> cohort.</em></p>
+<h2>Why Snowflake is the warehouse-native agent sibling</h2>
+<p>Databricks 761 covers governed lakehouse data through Agent Bricks and Mosaic AI. Snowflake adds a distinct execution and observability chain inside its governed environment: account role and privileges, schema-level Agent object, model and instructions, persisted Thread, Run and event stream, tool call, feedback and evaluation, release change, and final retention or deletion receipt.</p>
+<p>This page treats Snowflake documentation as product evidence and every control below as a bounded question. It does not assume that a control exists merely because a feature is named.</p>
+<h2>Snowflake first-party facts checked 2026-07-21</h2>
+<ul>
+<li><strong>Company:</strong> Snowflake Inc.; the current About page describes its enterprise data-and-AI mission and reports 12,062 global customers.</li>
+<li><strong>Founders:</strong> the Leadership &amp; Board page has a Co-Founders tab naming Benoit Dageville and Thierry Cruanes.</li>
+<li><strong>Agent platform:</strong> current documentation calls Cortex Agents a fully managed agentic platform inside Snowflake's governed environment.</li>
+<li><strong>Reasoning loop:</strong> documentation describes plan → use tools → reflect and respond, repeated as needed within one request.</li>
+<li><strong>State and observability:</strong> schema-level Agent objects bundle model, tools, orchestration settings, and instructions; persisted Threads hold conversation context; Runs emit events; monitoring, feedback, and evaluations support iteration.</li>
+<li><strong>Tool surface:</strong> Cortex Analyst, Cortex Search, secure isolated Python code execution, Data to Chart, custom stored-procedure/UDF tools, agent skills, MCP connectors, and web search.</li>
+<li><strong>Access:</strong> calls require a Cortex database role plus privileges on the Agent object and objects used by tools; session permissions derive from the querying user's default role.</li>
+<li><strong>Commercial route:</strong> Contact Sales says to complete the form for questions about Snowflake offerings and typically responds in one business day.</li>
+</ul>
+<h2>Five buyer-facing joins</h2>
+<ol>
+<li><strong>Role → Agent → governed data:</strong> account, user/session, default role, privilege snapshot, Agent object/version, model/instructions, semantic view or governed object, tenant, and region.</li>
+<li><strong>Thread → Run → event:</strong> Thread ID, Run ID, planning event, selected tool, reflection, response, citation, token/cost record, latency, failure, retry, and final state.</li>
+<li><strong>Tool → authorization → action:</strong> Analyst/Search query, isolated-code execution, custom tool, skill, MCP connector, or web search; identity, credential boundary, policy decision, input/output, downstream mutation, and escalation.</li>
+<li><strong>Feedback → evaluation → release:</strong> rating or free-text comment, evaluation dataset/version, metric, reviewer, instruction/model/tool change, promoted Agent revision, rollback target, and release timestamp.</li>
+<li><strong>Export → deletion:</strong> Threads, Runs, events, prompts, citations, tool inputs/outputs, code artifacts, traces, feedback, evaluations, caches, logs, replicas, backups, completion time, and exceptions.</li>
+</ol>
+<h2>Twenty-column provenance cascade</h2>
+<p><code>account_id</code> → <code>tenant_id</code> → <code>user_or_service_id</code> → <code>default_role</code> → <code>privilege_snapshot_id</code> → <code>agent_object_id</code> → <code>agent_version</code> → <code>model_version</code> → <code>instruction_version</code> → <code>thread_id</code> → <code>run_id</code> → <code>run_event_id</code> → <code>tool_type</code> → <code>tool_resource_id</code> → <code>authorization_decision</code> → <code>input_output_hash</code> → <code>downstream_state_hash</code> → <code>feedback_or_evaluation_id</code> → <code>deployment_revision</code> → <code>export_or_deletion_receipt_id</code>.</p>
+<h2>Common evidence failures</h2>
+<ul>
+<li>Showing a final answer without the Thread, Run, event sequence, selected model, and exact tool resources.</li>
+<li>Logging an MCP or custom-tool invocation without the session role, privilege decision, credential boundary, and downstream mutation.</li>
+<li>Reporting an evaluation score without dataset version, reviewer, promoted Agent revision, and rollback target.</li>
+<li>Deleting a Thread while omitting Run events, tool outputs, code artifacts, traces, feedback, evaluation copies, caches, replicas, or backups.</li>
+</ul>
+<h2>What the $500 review delivers</h2>
+<p>A five-gap evidence map using customer-supplied and public Snowflake materials, a role-to-deletion schema with owners and missing-receipt flags, and a 30/60/90-day handoff for Data, Platform, AI, Security, Privacy, and Procurement. Fixed scope is $500 with a 48-hour turnaround, or $497/month for a quarterly public-surface refresh.</p>
+<h2>Route and verification sources</h2>
+<ul>
+<li><a href="https://www.snowflake.com/en/company/overview/about-snowflake/">About Snowflake</a> — company positioning and current customer count.</li>
+<li><a href="https://www.snowflake.com/en/company/overview/leadership-and-board/">Snowflake Leadership &amp; Board</a> — co-founder evidence.</li>
+<li><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents">Cortex Agents documentation</a> — lifecycle, objects, tools, access, monitoring, and evaluation.</li>
+<li><a href="https://www.snowflake.com/en/contact-sales/">Snowflake Contact Sales</a> — first-party commercial form route.</li>
+</ul>
+<p class="footer">Atlas @ Talon Forge — Lead 762 — Snowflake Cortex Agents governance audit checklist · ai_data_intelligence_agents sibling #2/5 · $500/48h or $497/mo · no form submission, email, delivery, payment, or revenue claimed.</p>
+</article>
+</body>
+</html>

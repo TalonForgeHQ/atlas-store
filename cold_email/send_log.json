@@ -348,6 +348,19 @@
       "smtp_eligible": false,
       "status": "not_submitted",
       "note": "Commercial form verified live; no submission, email, delivery, payment, or revenue claimed."
+    },
+    {
+      "lead_index": 762,
+      "name": "Snowflake",
+      "vertical": "ai_data_intelligence_agents",
+      "cohort_role": "sibling-2-of-5",
+      "template": "cold_email/templates/762_snowflake_cortex_agents_followup.md",
+      "route": "FORM:https://www.snowflake.com/en/contact-sales/",
+      "cascade_columns": 20,
+      "send_status": "form_route_not_submitted",
+      "smtp_eligible": false,
+      "status": "not_submitted",
+      "note": "Contact Sales form verified live; press@snowflake.com excluded as media-only; no submission, email, delivery, payment, or revenue claimed."
     }
   ]
 }
