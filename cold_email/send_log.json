@@ -135,8 +135,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:30:00Z",
     "id": "t2026-07-21-fast-exec-exterro-811",
-    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
-    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
+    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
+    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-veritas-812",
@@ -158,8 +158,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:45:00Z",
     "id": "t2026-07-21-fast-exec-veritas-812",
-    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
-    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
+    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
+    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-everlaw-813",
@@ -181,8 +181,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T08:30:00Z",
     "id": "t2026-07-21-fast-exec-everlaw-813",
-    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
-    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
+    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
+    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
   },
   {
     "lead": 814,
@@ -296,5 +296,28 @@
     "status": "queued_not_sent",
     "queued_at": "2026-07-21T08:56:21.241358+00:00",
     "id": "819-stripe-billing-ai-billing-usage-closer-5-5"
+  },
+  {
+    "tick": "2026-07-21-fast-exec-triplewhale-820",
+    "index": 820,
+    "vendor": "Triple Whale",
+    "cohort": "ai_marketing_attribution",
+    "position": "OPENER #1/5 (NEW VERTICAL #23 — after ai_billing_usage 5/5 closed + ai_legal_hold_ediscovery 5/5 closed)",
+    "form_url": "https://www.triplewhale.com/bookdemo",
+    "send_status": "queued_not_sent",
+    "route_type": "FORM",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "FORM-only commercial route. Not submitted. SMTP gated. $0 sent / $0 received. FULL SHIP mode (8 surfaces: lead row + companion + template + SEO chunk + sitemap + index card + build-log + revenue log). ai_marketing_attribution cohort OPENED at 1/5.",
+    "lead": 820,
+    "name": "Triple Whale",
+    "vertical": "ai_marketing_attribution",
+    "route": "https://www.triplewhale.com/bookdemo",
+    "template": "820_triplewhale.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T18:30:00Z",
+    "id": "hermes-send-820-triple-whale",
+    "note": "FORM-only commercial route. Not submitted. SMTP gated."
   }
 ]

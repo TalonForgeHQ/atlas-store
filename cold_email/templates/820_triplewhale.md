@@ -1,0 +1,42 @@
+# Template 820 — Triple Whale (ai_marketing_attribution OPENER #1/5)
+
+**Commercial route:** `FORM:https://www.triplewhale.com/bookdemo` (first-party Book a Demo HubSpot form `hsForm_5283a7a7-54ab-4215-9414-0b715ef89c98` on triplewhale.com verified HTTP 200 + linked "Book Demo" CTA on 2026-07-21; not submitted).
+**Founders:** Triple Whale founded 2021 by **Maxx Blank + AJ Orbach + Ivan Chernykh** (verbatim first-party triplewhale.com/about "Meet Our Founders Triple Whale was founded in 2021 by Maxx Blank, AJ Orbach, and Ivan Chernykh, former ecommerce operators who built the tools they wished they had" 2026-07-21).
+**HQ:** Columbus OH 43215.
+**Restricted route excluded:** no security@, privacy@, support@, or press@ inbox was used as the commercial route.
+
+## Three subject-line A/B/C variants
+
+**Subject A — audit-letter opener:** Maxx / AJ / Ivan — 5 evidence gaps between Triple Whale pixel events, Sonar AI-search visibility, Moby AI prompts, Compass MMM/MTA runs, and cross-device attribution for DTC ecommerce + Shopify brands
+
+**Subject B — regulation-anchored:** Triple Whale's 18-column AI-marketing-attribution + MMM/MTA/Incrementality + LLM-search-visibility + Moby-AI receipt for SOC 2 Type II + GDPR + CCPA + EU AI Act Art. 50 + iOS 14 post-IDFA evidence support
+
+**Subject C — peer-pressure:** Triple Whale + Northbeam + Rockerbox + Measured + AppsFlyer: which AI-native marketing-measurement platform can replay one pixel event into the exact Compass MMM run, Moby AI prompt, Sonar AI-search query, and incrementality test?
+
+## 5-question audit-letter opener
+
+Maxx / AJ / Ivan — Talon Forge is opening a new `ai_marketing_attribution` audit cohort and needs the AI-native DTC-ecommerce-marketing-measurement + MMM/MTA/Incrementality + LLM-search-visibility + Moby-AI half of the audit surface from Triple Whale. The buyer-side procurement question: can a buyer replay any pixel event from raw cookie_ios_post_idfa_id, cross_device_match_id, ad_platform_id, campaign_id, ad_set_id, creative_id, Sonar AI-search query, Moby AI prompt, Compass MMM run, and incrementality test into a single 18-column provenance row without a spreadsheet?
+
+1. **What is the pixel + cross-device + iOS-14-post-IDFA event chain?** For every DTC ecommerce pixel event (page-view + add-to-cart + checkout-start + purchase + subscription-start + post-purchase-upsell), what is the immutable receipt joining `customer_id` + `pixel_event_id` + `cross_device_match_id` + `cookie_ios_post_idfa_id` + `ad_platform_id` + `campaign_id` + `ad_set_id` + `creative_id` + currency + order_id + order_line_id across the cookieless + cross-device + post-IDFA identity-resolution cascade?
+2. **What is the Sonar AI-search-visibility evidence chain?** When a DTC ecommerce buyer asks ChatGPT, Claude, Perplexity, Gemini, or Google AI Overviews "what's the best [product category] brand?", what is the per-prompt lineage joining Sonar's `ai_search_query_id` + `ai_search_response_id` + per-LLM-source-of-truth + per-cited-URL + per-brand-mention-position + per-competitor-overlap that an EU AI Act Art. 50 (transparency for AI systems intended to interact with natural persons) + FTC Section 5 + EU UCPD + state-AG consumer-protection audit needs?
+3. **What is the Moby AI + LLM-sub-processor evidence chain?** When Moby 2 generates a creative recommendation + a customer-segmentation prediction + a forecast + a post-sale-retention message for a specific store + customer cohort, what is the per-prompt lineage joining `moby_ai_prompt_id` + `moby_ai_response_id` + `moby_ai_subprocessor` (Claude + ChatGPT + Gemini) + per-LLM-model-version + per-prompt-input-features + per-response-retrieved-dataset-ids + per-confidence-score + per-store-acceptance-rejection-rationale that an EU AI Act Art. 50 + NIST AI RMF MAP-2.1 + ISO/IEC 42001 audit needs?
+4. **What is the Compass MMM + MTA + Incrementality evidence chain?** How does Triple Whale Compass surface the unified-measurement `compass_mmm_run_id` + `compass_mta_run_id` + `compass_incrementality_test_id` + per-channel-spend-allocation + per-channel-attribution-weight + per-incrementality-lift + per-confidence-interval across Meta + Google + TikTok + organic + email + SMS + affiliate + influencer + podcast + organic-social that an external marketing-mix-model auditor (analyst at a major brand or audit firm) can re-run for accuracy + completeness + lift-decomposition?
+5. **What is the iOS-14-post-IDFA + GDPR-consent + CCPA-opt-out evidence chain?** How does Triple Whale Pixel surface the per-event consent-state (GDPR opt-in + CCPA opt-out + iOS 14+ ATT prompt result + per-cookie_ios_post_idfa_id consent timestamp + per-region-data-residency) + per-event-late-binding-attribution-window + per-event-cross-device-merge that an EU DPA + California AG + FTC Section 5 audit needs — and is the consent-state row joined to the attribution-weight + MMM run + Moby AI prompt + Sonar AI-search response so a complete pixel-to-AI-search-lineage is reproducible from a single consented event?
+
+## Body (~440 words)
+
+Triple Whale's public product surface is the AI-native DTC-ecommerce-marketing-measurement + attribution + MMM/MTA/Incrementality + LLM-search-visibility + Moby-AI end of the marketing-analytics market: Triple Whale Pixel (advanced identity-resolution capturing data others miss), Triple Whale Compass (unified measurement: MMM + MTA + Incrementality working together), Triple Whale Attribution (best-in-class multi-touch models), Triple Whale Sonar (AI-search-visibility monitoring across ChatGPT + Claude + Perplexity + Gemini + Google AI Overviews), Triple Whale Moby AI + Moby 2 (AI teammate for ecommerce — per-store-trained, harnesses Claude + ChatGPT + Gemini, forecasting + creative + segmentation + post-sale retention), Triple Whale Self-Serve Analytics (75+ ready-to-use dashboards), and Triple Whale Custom BI (Snowflake + BigQuery export) with 60+ one-click integrations (Meta + Google Ads + TikTok + Shopify + Amazon + Klaviyo + Postscript + Attentive + Recharge + Gorgias + Yotpo + Okendo + Northbeam + AppsFlyer + GA4 + Segment + Snowflake + BigQuery). The buyer-side risk is not feature coverage. It is proving that every pixel event, cross-device match, ad-platform spend record, Sonar AI-search query, Moby AI prompt, Compass MMM run, and incrementality test is reproducible after a cookie-consent change + iOS-14-post-IDFA event + cross-device-merge + ad-platform-API version change.
+
+We package that proof as a fixed-scope **18-column AI-marketing-attribution + DTC-identity-resolution + LLM-search-visibility + MMM/MTA + Moby-AI receipt**: customer id, pixel event id, cross-device match id, cookie iOS post-IDFA id, ad-platform id, campaign id, ad set id, creative id, Sonar AI-search query id, Sonar AI-search response id, Moby AI prompt id, Moby AI response id, Moby AI sub-processor (Claude + ChatGPT + Gemini), Compass MMM run id, Compass MTA run id, Compass incrementality test id, integration webhook id, and BI export run id, with a per-prompt LLM-model-version pin and a per-MMM-run per-channel-spend-allocation reconciliation across Meta + Google + TikTok + organic + email + SMS + affiliate + influencer.
+
+## Three engagement options
+
+- **$500 / 48 hours** — fixed-scope evidence-gap map: replay one Triple Whale pixel event, Sonar AI-search query, Moby AI prompt, Compass MMM run, and incrementality test across the 18-column receipt and surface the 5 most expensive gaps with first-party remediation.
+- **$497 / month** — quarterly AI-marketing-attribution refresh: re-run the 18-column receipt per Triple Whale release cycle + per-LLM-model-version change + per-MMM-model-retrain + per-iOS-ATT-prompt-version change.
+- **$497 / month × 5-client YanXbt pattern** — Atlas-as-analyst for 5 concurrent AI-marketing-attribution + DTC-identity-resolution engagements (per `IBuzovskyi` pattern: x.com/IBuzovskyi verified 3,258 followers + substack.com/@yanxbt).
+
+## PS
+
+If you want a 90-second walkthrough of the 18-column receipt and how it composes with the next 4 siblings (Northbeam + Rockerbox + Measured + AppsFlyer), reply to this note and I'll send the live Atlas page.
+
+Atlas @ Talon Forge — Lead 820 Triple Whale + template + companion evidence + SEO chunk + sitemap + index card + build-log + commit + push · ai_marketing_attribution OPENER #1/5 (NEW VERTICAL #23) · FORM:https://www.triplewhale.com/bookdemo (first-party canonical Book a Demo HubSpot form verified live 2026-07-21; not submitted) · $0 sent / $0 received.
