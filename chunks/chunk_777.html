@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Statuspage audit checklist (2026) — Atlassian Cloud trust pack inheritance + Rovo EU AI Act Art. 14 evidence + subscriber audit-log buyer map | Talon Forge</title>
+<meta name="description" content="Buyer-facing Statuspage evidence-join map: Atlassian Cloud SOC 2 Type II + ISO 27001/27017/27018/27701 + FedRAMP Moderate + HIPAA inheritance boundary, Atlassian AI + Rovo EU AI Act Art. 14 human-oversight operational record, Art. 50 transparency-labeling, per-subscriber status-change audit log, ISO 42001 AIMS scope." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_777.html" />
+<meta property="og:title" content="Statuspage (Atlassian) audit checklist (2026) — Rovo Art. 14 evidence + subscriber audit-log buyer map" />
+<meta property="og:description" content="Five buyer-facing evidence joins for Statuspage: Atlassian Cloud trust pack inheritance boundary + Rovo EU AI Act Art. 14 evidence + Art. 50 transparency-labeling + per-subscriber status-change audit log + ISO 42001 AIMS scope." />
+</head>
+<body>
+<article id="chunk-777" data-chunk-id="777" data-lead-id="777" data-vertical="ai_incident_response_observability" data-tick="2026-07-21-fast-exec-statuspage-777" data-cohort-role="closer-5-of-5">
+<h1>Statuspage audit checklist (2026)</h1>
+<p><em>Long-tail targets: <strong>Statuspage audit checklist</strong>, <strong>Statuspage SOC 2 inheritance boundary</strong>, <strong>Atlassian Cloud FedRAMP Moderate for Statuspage</strong>, <strong>Rovo EU AI Act Art. 14 evidence</strong>, <strong>Statuspage per-subscriber audit log</strong>, and <strong>ISO/IEC 42001 AIMS scope for Statuspage</strong>. This is the CLOSER for the <code>ai_incident_response_observability</code> cohort — sibling #5/5 after incident.io (771) + Rootly (772) + Better Stack (773) + FireHydrant (774).</em></p>
+<h2>Why Statuspage closes the incident-response cohort</h2>
+<p>Statuspage (an Atlassian product since 2016) sits in a different category than incident.io, Rootly, Better Stack, and FireHydrant — those four are incident-management platforms with status pages as a feature. Statuspage <em>is</em> the status page, and Atlassian acquired it precisely so every Opsgenie / PagerDuty buyer buying the rest of the Atlassian stack now has a native, Atlassian-Cloud-inheritance-boundary status-page product. The wedgable thing for a buyer evidence audit is: <strong>the trust pack lives at the Atlassian Cloud layer, not at the Statuspage product layer, and your audit needs to trace the inheritance explicitly</strong>. Most teams assume "Atlassian is in scope so Statuspage is in scope" — and then fail to document the inheritance boundary for their own audit committee.</p>
+<h2>First-party facts checked 2026-07-21</h2>
+<ul>
+<li><strong>Owner:</strong> Atlassian Inc. (acquired Statuspage in 2016). Atlassian.com / Atlassian Cloud is the trust-pack root.</li>
+<li><strong>Product:</strong> Statuspage.io — SaaS incident-communication platform with subscriber notifications across email + SMS + Slack + MS Teams + Webhooks + component-level status + scheduled-maintenance + post-mortem templates.</li>
+<li><strong>Trust pack root (verified live, 2026-07-21):</strong> Atlassian Cloud Trust Center names SOC 2 Type II + ISO/IEC 27001:2022 + ISO/IEC 27017:2015 + ISO/IEC 27018:2019 + ISO/IEC 27701:2019 + FedRAMP Moderate + TX-RAMP + HIPAA + ENS Advanced (Spain) + C5 (Germany) + TISAX + IRAP (Australia PROTECTED) + PCI DSS + APPI (Japan) + GDPR + UK GDPR + Singapore PDPA + Australia Privacy Act + LGPD + Brazil CDMPR-amendment.</li>
+<li><strong>AI surfaces in scope for the audit:</strong> Atlassian AI + Rovo agentic module that touches Statuspage via Statuspage REST API (post-mortem assembly + subscriber-tone analysis + draft incident-update suggestions under human review). These AI surfaces trigger EU AI Act Art. 14 (human oversight) + Art. 50 (transparency labeling) per-incident per-tenant evidence requirements.</li>
+<li><strong>Identity layer:</strong> Atlassian Access provides SAML 2.0 SSO + SCIM 2.0 provisioning that is inherited by Statuspage from the Atlassian Cloud identity layer (not from Statuspage alone).</li>
+<li><strong>Audit log inheritance:</strong> Atlassian Cloud Audit Logs cover admin actions on Statuspage (page create/update/delete, component CRUD, subscriber export, post-mortem publish, integration secret rotation). These logs flow to any Atlassian Guard / Atlassian Access tier. <strong>What they do NOT cover</strong>: per-subscriber notification acknowledgement history, per-incident post-mortem edit history <em>before</em> publish, or third-party webhook delivery receipts (those live in Statuspage's own audit export, which is a separate SKU feature named <code>Audit Log Streaming</code>).</li>
+<li><strong>Commercial route:</strong> Form-only at <code>https://www.atlassian.com/software/contact/form-sales/cloud</code> (verified live 200). No public /pricing for Statuspage as a standalone SKU — it is sold as part of Atlassian Cloud Premier / Enterprise tiers or as Statuspage Standalone ($0 free + Standard from ~$29/mo + Enterprise quoted by sales). No guessed inbox.</li>
+</ul>
+<h2>Five buyer-facing evidence joins</h2>
+<ol>
+<li><strong>Inheritance boundary, not inherited trust.</strong> Map the Atlassian Cloud SOC 2 / ISO / FedRAMP attestation surface onto the Statuspage product surface. The boundary is in two places: (a) <code>statuspage.io</code> runs on Atlassian-managed AWS accounts that inherit the FedRAMP Moderate authorization boundary, and (b) Atlassian Cloud Audit Logs are the system-of-record only for Atlassian-Identity-layer actions, not Statuspage-tier subscriber events.</li>
+<li><strong>Rovo + Atlassian AI EU AI Act Art. 14 evidence.</strong> Per-incident per-tenant human-oversight operational record: who accepted / edited / rejected / published the Rovo-drafted incident update, in what time-window, with what audit-trail fingerprint. Sourced from Atlassian Cloud Audit Logs + Statuspage REST API post endpoint + Rovo agent execution log if the customer has Atlassian Guard Premium.</li>
+<li><strong>Art. 50 transparency-labeling for Statuspage Rovo outputs.</strong> Every Rovo-drafted post-mortem or subscriber email must be labelable as AI-generated. Audit check: does the published Statuspage post-mortem carry the Atlassian AI label visible to subscribers? Does the subscriber email show the Atlassian AI signature line?</li>
+<li><strong>Per-subscriber status-change audit log.</strong> Statuspage has an <code>Audit Log Streaming</code> SKU feature (separate from Atlassian Cloud Audit Logs) that exposes subscription-level events: who subscribed, who unsubscribed, who hit a 4xx SMS gateway, who got the email for a particular incident. The SKU feature is the buyer-facing audit surface — the Atlassian Cloud Audit Logs are not.</li>
+<li><strong>ISO/IEC 42001:2023 AIMS scope.</strong> Atlassian is named as ISO/IEC 42001:2023 certified on the Atlassian Cloud Trust Center (verified live 2026-07-21). For Statuspage, the AIMS scope attestation must declare: which Statuspage features use Atlassian AI + Rovo, what the human-oversight boundary is, and what the deletion-cascade latency is on incident records.</li>
+</ol>
+<h2>What a 48-hour evidence-gap map looks like for Statuspage</h2>
+<ul>
+<li>Diagrams each of the five joins above, calling out the boundary between Atlassian Cloud (inheritance root) and Statuspage (product surface).</li>
+<li>Lists the eight line-item buyer questions an EU enterprise procurement-team member will ask Statuspage in 2026, with the pre-built answer + the source link.</li>
+<li>Maps the Rovo + Atlassian AI human-oversight log to the Statuspage REST API audit log so that buyer evidence-trail is one straight line, not two.</li>
+<li>Provides a draft sub-processor delta between Atlassian-published sub-processor list vs. Statuspage-tier-only sub-processors (typically AWS SES for email + Twilio for SMS + Slack + Microsoft Teams direct integration endpoints).</li>
+<li>Provides a draft ISO 42001 AIMS scope statement for Statuspage, ready for the customer to plug into their own ISMS record.</li>
+</ul>
+<h2>Offer</h2>
+<p><strong>$500 one-time:</strong> 48-hour evidence-gap map (above). <strong>$497/mo quarterly refresh:</strong> sub-processor delta + new-product AIMS logging + Rovo agent-update audit-trail fingerprint delta. Scope: Statuspage only. For multi-vendor incident-response coverage (incident.io + Rootly + Better Stack + FireHydrant + Statuspage), bundle at $1,500/mo for all five back-fills.</p>
+<p><em>Source-of-truth: see <code>GRAND_PLAN.md</code> Phase 3 Path A. Send script routes via <code>https://www.atlassian.com/software/contact/form-sales/cloud</code>; no guessed inbox added.</em></p>
+</article>
+</body>
+</html>
