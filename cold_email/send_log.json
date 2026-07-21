@@ -24,9 +24,9 @@
       "vendor": "Defined.ai",
       "cohort": "ai_data_labeling",
       "sibling": "4/5",
-      "subject_a": "Daniela \u2014 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
-      "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail \u2014 14-col provenance we can deliver this week",
-      "subject_c": "your AI-data marketplace vendor-DD inquiry \u2014 reply 'send' and I'll forward the 5-gap map",
+      "subject_a": "Daniela — 5 evidence gaps in Defined.ai Marketplace procurement that Fortune-500 buyers will demand by Aug 2 2026",
+      "subject_b": "Defined.ai Marketplace + Diana + ModelOps audit-trail — 14-col provenance we can deliver this week",
+      "subject_c": "your AI-data marketplace vendor-DD inquiry — reply 'send' and I'll forward the 5-gap map",
       "status": "queued",
       "send_window": "Tue-Thu 9-11am PT",
       "queued_at": "2026-07-19T19:05:29.731960+00:00",
@@ -307,7 +307,7 @@
       "prior_inbox_not_for_commercial_use": "N/A",
       "send_status": "queued_blocked_form_smtp",
       "queued_at": "2026-07-20T18:14:00Z",
-      "founder_verification": "Infermedica Sp. z o.o. (Wroc\u0142aw, Poland); co-founders per public records include Piotr Jaworski + Roberto Sznajdrotter; first-party verification limited to company + product + medical-device certificate + ISO certifications",
+      "founder_verification": "Infermedica Sp. z o.o. (Wrocław, Poland); co-founders per public records include Piotr Jaworski + Roberto Sznajdrotter; first-party verification limited to company + product + medical-device certificate + ISO certifications",
       "verification": "infermedica.com Contact Sales form verified live 2026-07-20; medical-device-grade safety + EU MDR Class IIb + ISO 13485 + ISO 27001 + SOC 2 Type 2 + GDPR + HIPAA + CE + LEI 984500NIA7B8AFF75805 + MHRA all published on first-party site",
       "cohort_marker": "ai_healthcare_conversational_agents cycle-1 sibling #4/5 after Hippocratic AI 735 + Ada Health 736 + Sensely 737 (CLOSER #5/5 still open)"
     },
@@ -361,6 +361,22 @@
       "smtp_eligible": false,
       "status": "not_submitted",
       "note": "Contact Sales form verified live; press@snowflake.com excluded as media-only; no submission, email, delivery, payment, or revenue claimed."
+    },
+    {
+      "lead_index": 775,
+      "name": "Atlassian Statuspage",
+      "vertical": "ai_incident_response_observability",
+      "cohort_role": "closer-5-of-5",
+      "template": "cold_email/templates/775_statuspage.md",
+      "seo_chunk": "chunks/chunk_775.html",
+      "commercial_route_url": "https://www.atlassian.com/software/statuspage",
+      "best_email": "FORM:https://www.atlassian.com/software/statuspage",
+      "send_status": "form_route_not_submitted",
+      "smtp_eligible": false,
+      "queued_at": "2026-07-21T03:50:22Z",
+      "offer": "$500/48h evidence-gap map or $497/mo quarterly refresh",
+      "verification": "Atlassian Statuspage product and pricing pages returned HTTP 200; no form submission, email, delivery, payment, or revenue claimed",
+      "cohort_marker": "ai_incident_response_observability CLOSER #5/5 after incident.io 771 + Rootly 772 + Better Stack 773 + FireHydrant 774"
     }
   ]
 }
