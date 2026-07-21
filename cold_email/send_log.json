@@ -31,5 +31,16 @@
     "queued_at": "2026-07-21T12:15:00.000000Z",
     "id": "a8030000-0000-4000-8000-000000000803",
     "note": "First-party contact route only; form not submitted. SMTP remains gated. $0 sent / $0 received."
+  },
+  {
+    "lead": 804,
+    "name": "Adversa AI",
+    "vertical": "ai_security_red_team",
+    "route": "FORM:https://adversa.ai/get-demo",
+    "template": "804_adversa_ai.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T05:47:41.000000Z",
+    "id": "a8040000-0000-4000-8000-000000000804",
+    "note": "First-party demo route only; form not submitted. SMTP remains gated. $0 sent / $0 received."
   }
 ]
