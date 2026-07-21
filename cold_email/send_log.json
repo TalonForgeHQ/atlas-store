@@ -229,5 +229,28 @@
     "submitted": false,
     "submitted_at": null,
     "notes": "FORM-only commercial route. Not submitted. SMTP gated."
+  },
+  {
+    "tick": "2026-07-21-fast-exec-maxio-817",
+    "index": 817,
+    "vendor": "Maxio",
+    "cohort": "ai_billing_usage",
+    "position": "sibling #3/5 (after Lago 815 OPENER + Chargebee 816 sibling #2/5)",
+    "form_url": "https://www.maxio.com/demo",
+    "send_status": "queued_not_sent",
+    "route_type": "FORM",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "FORM-only commercial route. Not submitted. SMTP gated.",
+    "lead": 817,
+    "name": "Maxio",
+    "vertical": "ai_billing_usage",
+    "route": "https://www.maxio.com/demo",
+    "template": "817_maxio.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T17:30:00Z",
+    "id": "hermes-send-817-maxio",
+    "note": "FORM-only commercial route. Not submitted. SMTP gated."
   }
 ]
