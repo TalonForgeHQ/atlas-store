@@ -135,8 +135,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:30:00Z",
     "id": "t2026-07-21-fast-exec-exterro-811",
-    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-veritas-812",
@@ -158,8 +158,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T07:45:00Z",
     "id": "t2026-07-21-fast-exec-veritas-812",
-    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "tick": "2026-07-21-fast-exec-everlaw-813",
@@ -181,8 +181,8 @@
     "submitted_at": null,
     "queued_at": "2026-07-21T08:30:00Z",
     "id": "t2026-07-21-fast-exec-everlaw-813",
-    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
-    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+    "note": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send",
+    "notes": "Lead 813 Everlaw sibling #4/5 ai_legal_hold_ediscovery \u2014 FORM-only route, no SMTP send"
   },
   {
     "lead": 814,
@@ -274,5 +274,27 @@
     "status": "queued_not_sent",
     "queued_at": "2026-07-21T16:30:00.000000Z",
     "id": "818-recurly-ai-billing-usage-sibling-4-5"
+  },
+  {
+    "tick": "2026-07-21-fast-exec-stripe-billing-819",
+    "index": 819,
+    "vendor": "Stripe Billing",
+    "cohort": "ai_billing_usage",
+    "position": "CLOSER #5/5 (cohort close)",
+    "form_url": "https://stripe.com/contact/sales",
+    "send_status": "queued_not_sent",
+    "route_type": "FORM",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "Form route only (no public sales inbox). SMTP remains gated. $0 sent / $0 received. FULL SHIP mode (5 surfaces: lead row + companion + template + SEO chunk + sitemap + index card + build-log + revenue log). ai_billing_usage cohort CLOSED 5/5 (Lago 815 + Chargebee 816 + Maxio 817 + Recurly 818 + Stripe Billing 819). Also shipped deferred Recurly 818 SEO chunk in the same atomic commit.",
+    "lead": 819,
+    "name": "Stripe Billing",
+    "vertical": "ai_billing_usage",
+    "route": "FORM:https://stripe.com/contact/sales",
+    "template": "819_stripe_billing.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T08:56:21.241358+00:00",
+    "id": "819-stripe-billing-ai-billing-usage-closer-5-5"
   }
 ]
