@@ -10,9 +10,9 @@
 
 ## Subject line variants (A/B/C — pick one)
 
-**A (Pedigree-led):** Ara — I ran the same dispatch + pricebook + invoice paper-shuffle you did
-**B (Substance-led):** ServiceTitan AI Suite → one receipt per AI-booking + AI-dispatch + AI-invoice-follow-up
-**C (Cohort-led):** Field-service AI buyers 2026 → 1 shared evidence-gap map for plumbing + HVAC + electrical trades
+**A (Pedigree-led):** Ara — same paper-shuffle, different decade
+**B (Substance-led):** ServiceTitan AI Suite → 1 receipt per use-case
+**C (Cohort-led):** FSM-AI buyers 2026 → 1 shared evidence-gap map
 
 ---
 
