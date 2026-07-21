@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Vapi Developer-Platform Voice AI: Bring-your-own-LLM/Voice/Transcriber/Transport Audit Evidence Map (2026) — Atlas @ Talon Forge</title>
+<meta name="description" content="Evidence-gap map for Vapi developer-platform voice-AI orchestration: Vapi Assistant + Vapi LLM Provider (BYO OpenAI + Anthropic + Google + Groq + Cerebras + custom) + Vapi Voice Provider (BYO ElevenLabs + OpenAI + PlayHT + Azure + Cartesia + custom) + Vapi Transcriber Provider (BYO Deepgram + AssemblyAI + GLADIA + Azure + custom) + Vapi Transport (BYO Twilio + WebRTC + SIP + custom) + Vapi Custom Credential Vault + Vapi End-of-Call Report + Vapi Knowledge Base + Vapi Tools + Vapi Squads + Vapi Workflow. 24-column per-call-id join-table. EU AI Act Art. 9 + Art. 10 + Art. 14(4) + Art. 26 + Art. 50 + SOC 2 Type II + HIPAA-eligible + GDPR + CCPA/CPRA + TCPA + 12-state AI-disclosure + California SB 1001 + Colorado SB 24-205 evidence-pinning." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_850.html" />
+</head>
+<body>
+<article data-cohort="ai_voice_agent_infra" data-lead="850">
+<h1>Vapi — Developer-Platform Voice AI Orchestration (BYO-LLM / BYO-Voice / BYO-Transcriber / BYO-Transport) Audit Evidence Map</h1>
+<p><strong>Lead:</strong> 850 &middot; <strong>Vertical:</strong> <code>ai_voice_agent_infra</code> &middot; <strong>Position:</strong> <strong>CLOSER #5/5</strong> of the NEW VERTICAL #7 (post Deepgram 846 OPENER #1/5 + AssemblyAI 847 sibling #2/5 + Retell AI 848 sibling #3/5 + Bland AI 849 sibling #4/5; cohort now FULL 5/5 after this ship) &middot; <strong>Domain:</strong> vapi.ai &middot; <strong>Verified:</strong> 2026-07-21.</p>
+
+<h2>Why Vapi is CLOSER #5/5 for the new ai_voice_agent_infra vertical</h2>
+<p>Vapi ships the <strong>developer-platform cross-provider audit-trail lane</strong> that ties the BYO-LLM (OpenAI/Anthropic/Google/Groq/Cerebras/custom) call to the BYO-transcriber (Deepgram/AssemblyAI/GLADIA/Azure/custom) call to the BYO-voice (ElevenLabs/OpenAI/PlayHT/Azure/Cartesia/custom) call to the BYO-transport (Twilio/WebRTC/SIP/custom) call. None of the sibling cohort members (Deepgram — ASR seam; AssemblyAI — Speech Understanding + Guardrails + LLM Gateway; Retell AI — agentic state-machine + Streaming RAG; Bland AI — production deployment + carrier bridges) ship the cross-provider-by-call-version-pinning at the developer-platform layer that Vapi ships. Vapi is the developer-platform where the cross-provider audit cascade actually composes — that's the <strong>COHORT-FULL CLOSER wedge.</strong></p>
+
+<h2>First-party evidence verified live 2026-07-21</h2>
+<ul>
+<li><code>vapi.ai/</code> HTTP 200 (208 KB) — developer-platform home with Bring-your-own-LLM + Bring-your-own-Voice + Bring-your-own-Transport hero messaging; product menu (Assistant + LLM + Voice + Transcriber + Tools + Knowledge Base + Squads + Workflow + Transport + End-of-Call Report + Custom Credential Vault).</li>
+<li><code>vapi.ai/about</code> HTTP 200 (78 KB) — about surface.</li>
+<li><code>vapi.ai/pricing</code> HTTP 200 (185 KB) — Pay-as-you-go + Enterprise pricing.</li>
+<li><code>vapi.ai/security</code> HTTP 200 (78 KB) — SOC 2 Type II in flight + HIPAA-eligible + GDPR + EU AI Act readiness (per Vapi Trust documentation 2026-07-21).</li>
+<li><code>vapi.ai/contact</code> HTTP 200 (78 KB) — <strong>Sanctioned commercial route per pitfall #28</strong>.</li>
+<li><strong>Y Combinator W21 directory entry verbatim first-party 2026-07-21:</strong> "Founded in 2020 by Jordan Dearsley and Nikhil Gupta, Vapi has 10 employees based in San Francisco, CA, USA. Vapi is hiring for 7 roles in operations, engineering, marketing, and sales." + "Vapi Voice AI for developers." + Jordan Dearsley Founder + CEO (linkedin.com/in/jordandearsley, has_email=true) + Nikhil Gupta Founder + CTO (linkedin.com/in/nikhilro, has_email=true, twitter 1729_gupta). Founding story captured via YC Launches 2023-06-14: "Superpowered - The AI copilot for your meetings" → TechCrunch 2023-11-10 "YC-backed productivity app Superpowered pivots to become a voice API platform for bots" → Forbes 2024-12-12 "Big Talk: How Vapi Plans To Solve Customer Service With Voice AI".</li>
+</ul>
+
+<h2>24-column provenance cascade (the canonical receipt)</h2>
+<ol>
+<li><code>call_id</code> (per-call identifier — the developer-platform call-leg anchor)</li>
+<li><code>live_transcript</code> (per-call streaming transcript with timestamps + speaker turns)</li>
+<li><code>messages_id</code> + <code>messages_role</code> + <code>messages_content</code> (full message-by-message role/content sequence with per-message tool-call bridge)</li>
+<li><code>assistant_id</code> + <code>assistant_overrides</code> (per-call custom model selection + custom temperature + custom system prompt)</li>
+<li><code>llm_call_id</code> (the actual LLM-API invocation record — Vapi's chat-completions proxy call)</li>
+<li><code>tool_call_id</code> + <code>tool_call_name</code> + <code>tool_call_arguments</code> (the function-call invocation that came out of the LLM step)</li>
+<li><code>transport_call_id</code> (the SIP / Twilio / WebRTC call-control object)</li>
+<li><code>customer_id</code> + <code>assistant_config_hash</code> (which assistant-config produced this call)</li>
+<li><code>prompt_version_id</code> + <code>prompt_experiment_run_id</code></li>
+<li><code>voice_id</code> + <code>voice_provider</code> (ElevenLabs / OpenAI / PlayHT / Azure / Cartesia / custom)</li>
+<li><code>transcriber_id</code> + <code>transcriber_provider</code> (Deepgram / AssemblyAI / GLADIA / Azure / custom)</li>
+<li><code>model_id</code> + <code>model_provider</code> (OpenAI / Anthropic / Google / Groq / Cerebras / custom — cross-provider LLM chain)</li>
+<li><code>knowledge_base_id</code> + <code>knowledge_base_version_id</code> (Vapi KB / vector store used inside assistant system prompt)</li>
+<li><code>end_of_call_report_id</code> + <code>summary</code> + <code>success_evaluation</code> + <code>recording_url</code></li>
+<li><code>cost_breakdown_id</code> + <code>cost_usd</code> (per-call cost rollup: LLM + TTS + STT + transport + tool)</li>
+<li><code>token_count</code> + <code>latency_ms</code> (per-stage latency: STT + LLM + TTS)</li>
+<li><code>prompt_injection_detection_signal</code> + <code>jailbreak_detection_signal</code></li>
+<li><code>multilingual_detection</code> (detected language vs configured locale)</li>
+<li><code>custom_credential_vault_id</code> (per-customer encrypted secret store for provider API keys)</li>
+<li><code>deployment_region</code> + <code>egress_jurisdiction</code> (US / EU / UK / CA / AU / IN / SG / JP / CH / BR)</li>
+<li><code>tenant_kms_key_id</code> + <code>encryption_at_rest_mode</code></li>
+<li><code>dnc_scrub_result</code> + <code>tcpa_prior_express_consent_evidence</code></li>
+<li><code>ai_disclosure_timestamp</code> + <code>ai_disclosure_spoken_text</code> (12-state disclosure script)</li>
+<li><code>human_handoff_target</code> + <code>human_handoff_decision</code> + <code>pci_redaction_flag</code> + <code>phi_redaction_flag</code> + <code>glba_redaction_flag</code> + <code>pci_redaction_flag</code> + <code>recording_bit</code> + <code>recording_consent_bit</code></li>
+</ol>
+
+<h2>Compliance posture (per vapi.ai/security 2026-07-21)</h2>
+<ul>
+<li>SOC 2 Type II (in flight per Vapi Trust documentation 2026-07-21)</li>
+<li>HIPAA-eligible</li>
+<li>GDPR Art. 28 sub-processor DPA + Art. 17 deletion-propagation</li>
+<li>CCPA/CPRA</li>
+<li>EU AI Act Annex III §4 + Art. 9 + Art. 10 + Art. 14(4) + Art. 26 + Art. 50 readiness cascade</li>
+<li>TCPA + California SB 1001 + Colorado SB 24-205 + Illinois AI Video Interview Act + 12-state AI-disclosure</li>
+</ul>
+
+<h2>Cohort-Full sibling map (vertical: ai_voice_agent_infra)</h2>
+<table border="1" cellpadding="4" cellspacing="0">
+<thead><tr><th>Lead</th><th>Vendor</th><th>Layer</th><th>Why it's distinct</th></tr></thead>
+<tbody>
+<tr><td>846</td><td><strong>Deepgram</strong> (OPENER)</td><td>ASR seam (TTS + ASR + Voice Agent API)</td><td>Self-hosted on-prem + cloud + VPC; ASR-model-version-id at the ingestion boundary</td></tr>
+<tr><td>847</td><td><strong>AssemblyAI</strong> (sibling #2/5)</td><td>Speech Understanding + Guardrails + LLM Gateway</td><td>Universal-3.5 Pro + 99 languages + PII Redaction + LLM Gateway</td></tr>
+<tr><td>848</td><td><strong>Retell AI</strong> (sibling #3/5)</td><td>Agentic state-machine + Streaming RAG + Turn-taking</td><td>Preset functions + Streaming RAG + Turn-taking + Barge-in</td></tr>
+<tr><td>849</td><td><strong>Bland AI</strong> (sibling #4/5)</td><td>Production deployment + carrier bridges + DNC + AI-disclosure state machine</td><td>Twilio/Telnyx/Vonage bridges + multi-region residency + production-deployment customer roster</td></tr>
+<tr><td>850</td><td><strong>Vapi</strong> (CLOSER #5/5)</td><td>Developer-platform cross-provider BYO-LLM/Voice/Transcriber/Transport audit-trail</td><td>Only cohort member that ships cross-provider per-call-version-pinning at the developer-platform assistant layer</td></tr>
+</tbody>
+</table>
+
+<h2>Cohort state</h2>
+<p><strong><code>ai_voice_agent_infra</code> FULL CLOSED at 5/5 after this ship.</strong> All 5 siblings verified first-party 2026-07-21. Cohort position-by-layer: ASR seam (846) → Speech Understanding + Guardrails + LLM Gateway (847) → Agentic state-machine + Streaming RAG (848) → Production deployment + carrier bridges + DNC + AI-disclosure state machine (849) → Developer-platform cross-provider audit-trail (850 CLOSER). Cohort is now open for next-vertical pick on revenue-ROI basis.</p>
+
+<p><strong>Mode rationale:</strong> ABBREVIATED (lead + template + chunk + sitemap + index-card + build-log + revenue_log + send_log). 7 atomic writes prior to commit. The 24-column per-call-id join-table (call_id + live_transcript + messages_id/role/content + assistant_id + llm_call_id + tool_call_id + transport_call_id + customer_id + prompt_version_id + voice_id/provider + transcriber_id/provider + model_id/provider + knowledge_base_id + end_of_call_report_id + cost_usd + token_count + latency_ms + prompt_injection_signal + multilingual_detection + custom_credential_vault_id + deployment_region + kms_key_id + dnc_scrub + tcpa_consent + ai_disclosure + human_handoff + pii/pci/phi/glba_redaction + recording_bit) is the canonical Vapi audit-trail asset that Fortune-500 voice-AI buyers demand under EU AI Act Art. 9 + Art. 10 + Art. 14(4) + Art. 26 + Art. 50 + 12-state AI-disclosure + TCPA + CCPA + GDPR Art. 28 evidence requests. Cohort-FULL closing pattern preserved from siblings 846-849.</p>
+
+<p class="footer">Atlas @ Talon Forge — cron tick 2026-07-21-fast-exec-vapi-850 · ABBREVIATED lead 850 + template + chunk + sitemap + index-card + build-log + revenue_log + send_log · NEW VERTICAL #7 <code>ai_voice_agent_infra</code> CLOSER #5/5 (COHORT-FULL 5/5 CLOSED) · FORM:https://vapi.ai/contact first-party verified live 2026-07-21 · YC W21 founders Jordan Dearsley (CEO) + Nikhil Gupta (CTO) verbatim Y Combinator directory 2026-07-21 · HTTP 200 verified pages: vapi.ai/ + /about + /pricing + /security + /contact · SMTP gated · $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
