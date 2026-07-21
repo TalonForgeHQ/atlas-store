@@ -1307,3 +1307,19 @@ $500/48h + $497/mo + $497/mo x 5-client YanXbt. FORM:https://www.appsflyer.com/s
 - **Pivot:** Rockerbox 822 was the planned sibling #3/5 but JS-hydration blocked founder extraction; Wicked Reports 822 shipped in same slot
 - **Revenue:** $0 queued_not_sent (SMTP gated)
 - **Send_log:** entry 822 appended (dual-schema per pitfall #22)
+
+---
+
+## 2026-07-22 ~02:55 UTC — fast-exec tick BuildOps 870 (ai_field_service_management sibling #3/5)
+
+BuildOps ships as sibling #3/5 of the ai_field_service_management cohort after ServiceTitan 868 OPENER #1/5 + Jobber 869 sibling #2/5. Real company + real website + real Co-Founder + CEO **Alok Chanani** (U.S. Army veteran) verbatim first-party buildops.com/about 2026-07-22 + Co-Founder **Steve Chew** verbatim first-party /about/ timeline-slider. HQ Los Angeles CA. 1,500+ commercial contractors across North America. $1B valuation (verbatim first-party /about/ hero-stat). Series C from Meritech Capital Partners (verbatim first-party /about/). Founded 2018.
+
+Non-overlapping wedge vs ServiceTitan 868 + Jobber 869: BuildOps owns the **commercial-mechanical + specialty-contractor** x-axis (HVAC-Mechanical + Electrical + Plumbing + Fire-Life-Safety + Refrigeration per verbatim first-party footer nav) that the other two cohort members do not ship. ServiceTitan 868 = enterprise-contractors (8,000+, NASDAQ:TTN, 7-feature AI Suite). Jobber 869 = residential + small-commercial SMB (400,000+, PE-backed Summit Partners, AI Receptionist only). BuildOps 870 = commercial-mechanical + specialty-trade (1,500+, Series C Meritech, **OpsAI** = AI-Powered Field Service Management). The three cohort members split the FSM market along a 3-axis progression.
+
+**OpsAI is the AI surface** — verbatim first-party /platform/opsai/ title-tag: "OpsAI: AI-Powered Field Service Management Software"; verbatim meta-description: "OpsAI recaps visits, scans POs, flags risks, and gives every role a clear next step, right where the work happens." OpsAI is the only cohort member that ships a named AI product family with a **four-action surface** (recaps + scans + flags + next-step). ServiceTitan AI Suite = 7 features; Jobber AI Receptionist = 1 feature; BuildOps OpsAI = 4-action trades-aware surface.
+
+Tier-1 evidence wedge: **16-column per-OpsAI-session receipt** joining tenant_id + opsai_session_id + opsai_role + opsai_recap_visit_id + visit_id + po_scan_id + po_id + risk_flag_id + risk_category + next_step_id + llm_model_version (upstream LLM pinned) + prompt_template_version (OpsAI prompt pinned) + tenant_scoping_boundary_id + pii_redaction_marker_id + cross_tenant_no_bleed_proof + audit_log_replay_id.
+
+**Compliance posture:** Trust-Center-inferred (external https://trust.buildops.com/ verbatim first-party footer link) — NOT verbatim first-party /about/ marketing-page. Baseline: SOC 2 Type II + ISO/IEC 27001:2022 + ISO/IEC 27018:2019 + GDPR + UK GDPR + CCPA/CPRA + PIPEDA + Australia Privacy Act + Singapore PDPA + PCI DSS 4.0. The audit letter routes through the external Trust Center for SOC 2 + ISO 27001 evidence (per pitfall #41: cite Trust-Center-inferred not first-party-verbatim).
+
+$500/48h + $497/mo + $497/mo x 5-client YanXbt. FORM:https://www.buildops.com/book-demo (HubSpot hs-form markup confirmed live 2026-07-22). Not submitted. SMTP remains gated. $0 sent / $0 received.
