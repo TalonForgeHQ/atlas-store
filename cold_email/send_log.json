@@ -20,5 +20,16 @@
     "queued_at": "2026-07-21T11:55:30.000000Z",
     "id": "8b75ac3d-9112-4e8a-9f01-c8d6e7890a01",
     "note": "Form-only route; Trust Center CC. SMTP remains gated. No form submitted. $0 sent / $0 received."
+  },
+  {
+    "lead": 803,
+    "name": "Astrix Security",
+    "vertical": "ai_security_red_team",
+    "route": "FORM:https://astrix.security/contact-us/",
+    "template": "803_astrix_security.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T12:15:00.000000Z",
+    "id": "a8030000-0000-4000-8000-000000000803",
+    "note": "First-party contact route only; form not submitted. SMTP remains gated. $0 sent / $0 received."
   }
 ]
