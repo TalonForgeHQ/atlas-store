@@ -114,5 +114,28 @@
     "submitted": false,
     "submitted_at": null,
     "notes": "First-party /contact-us/ form verified HTTP 200 live 2026-07-21. Phil Saunders CEO + Andrew Sieja founder verified. SMTP remains gated pending SMTP credential hand-off."
+  },
+  {
+    "tick": "2026-07-21-fast-exec-exterro-811",
+    "lead": 811,
+    "index": 811,
+    "name": "Exterro",
+    "vendor": "Exterro",
+    "vertical": "ai_legal_hold_ediscovery",
+    "cohort": "ai_legal_hold_ediscovery",
+    "position": "sibling-2/5",
+    "route": "FORM:https://www.exterro.com/about/contact-us",
+    "form_url": "FORM:https://www.exterro.com/about/contact-us",
+    "template": "811_exterro.md",
+    "status": "queued_not_sent",
+    "send_status": "queued_not_sent",
+    "route_type": "form",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "queued_at": "2026-07-21T07:30:00Z",
+    "id": "t2026-07-21-fast-exec-exterro-811",
+    "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
+    "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
   }
 ]
