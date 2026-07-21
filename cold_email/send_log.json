@@ -539,5 +539,30 @@
     "notes": "OPENER ai_data_context_observability #1/5 — DataHub founders verbatim datahub.com/about 2026-07-21: Swaroop Jagadish (Co-founder + CEO; ex-LinkedIn) + Shirshanka Das (Co-founder + CTO; ex-LinkedIn Principal Staff Engineer). First-party WordPress + HubSpot Forms JS confirmed; FORM-only route per pitfall #28; no send, no payment, no revenue claimed. 18-column provenance cascade. SERIES B 2024 BESSEMER.",
     "template_full": "cold_email/templates/836_datahub_procurement_followup.md",
     "tier_reason": "Lead 836 — DataHub (datahub.com — #1 open-source data-catalog + AI context + metadata platform — DataHub OSS Apache-2.0 + DataHub Cloud SaaS + metadata search + column-level lineage + dataset schema + data-product + data-contract + ingestion-framework + schema-registry + Actions framework + per-entity React renderers + per-platform ingestion-source + 50+ first-party connectors + OpenLineage + Iceberg + dbt + Looker + Tableau + Snowflake + BigQuery + Databricks + Kafka + Airflow + Prefect + Dagster + Vertex AI + SageMaker — NEW VERTICAL #27 ai_data_context_observability OPENER #1/5 (post ai_obs..."
+  },
+  {
+    "lead": "838",
+    "name": "Monte Carlo Data",
+    "vertical": "ai_data_context_observability",
+    "route": "FORM:https://montecarlo.ai/request-a-demo",
+    "template": "838_montecarlo_procurement_followup.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-21T19:30:00Z",
+    "id": "send-2026-07-21-fast-exec-montecarlo-838",
+    "note": "sibling ai_data_context_observability #3/5 — NEW VERTICAL #27 — Monte Carlo Data (montecarlo.ai) — data observability + field-level lineage + AI-monitoring + automated-RCA + Agent MCP + Agent Toolkit Platform — first-party HubSpot portalId=20172935 FORM route; not submitted; SMTP remains gated; $0 sent / $0 received.",
+    "tick": "2026-07-21-fast-exec-montecarlo-838",
+    "index": 838,
+    "vendor": "Monte Carlo Data (montecarlo.ai)",
+    "cohort": "ai_data_context_observability",
+    "position": "sibling #3/5",
+    "form_url": "https://montecarlo.ai/request-a-demo",
+    "send_status": "queued_not_sent",
+    "route_type": "FORM",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "notes": "sibling ai_data_context_observability #3/5 — Monte Carlo Data co-founders verified 2026-07-21: Barr Moses (Co-founder + CEO; named 'the godmother of data observability') + Lior Gavish (Co-founder + CTO; ex-Gainsight VP Engineering). First-party HubSpot portalId=20172935 confirmed live 2026-07-21 on https://montecarlo.ai/request-a-demo; FORM-only route per pitfall #28; no send, no payment, no revenue claimed. 18-column field-level-lineage + automated-RCA + AI-monitoring cascade. SERIES D 2022 $135M / $240M+ TOTAL FUNDING.",
+    "template_full": "cold_email/templates/838_montecarlo_procurement_followup.md",
+    "tier_reason": "Lead 838 — Monte Carlo Data (montecarlo.ai — data observability + data reliability + lineage + freshness + schema-monitoring + AI-monitoring platform — Agent Observability + Data Quality + Lineage + Impact + Data Health + Incident Response + Automated Monitoring + Field-Level Lineage + Automated Root Cause Analysis + Anomaly Detection + AI-Ready Data — Co-founders Barr Moses (Co-founder + CEO; named 'the godmother of data observability' by industry press) + Lior Gavish (Co-founder + CTO; ex-Gainsight VP Engineering) confirmed verbatim 2026-07-21 — HQ San Francisco CA (385 1st Street) — founded..."
   }
 ]
