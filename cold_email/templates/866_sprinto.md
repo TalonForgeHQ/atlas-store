@@ -113,6 +113,9 @@ Talon Forge
 - Rotate B + C on follow-up ticks
 - Cadence: $500 first-pack, $497/mo opt-in, $497/mo x 5 opt-in for the
   parallel SOC 2 + ISO 27001 lane
+- YanXbt pattern: per-control-uid + per-framework-version + per-evidence-
+  collection-timestamp + per-auditor-acknowledgment-id + per-policy-
+  version-id cross-tenant-no-bleed receipt delivered async within 48h
 
 ## Hard-rules reasserted
 

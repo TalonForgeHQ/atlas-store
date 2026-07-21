@@ -17,6 +17,7 @@
 - sprinto.com/soc-2/ → 301→/lp-new-soc-2/ → 200
 - sprinto.com/iso-27001/ → 200
 - sprinto.com/lp-new-soc-2/ → 200
+- Funding (per first-party /about/ + publicly cited): Accel-led Series B with Bessemer Venture Partners, GrowthStage, Elevation Capital, Susa Ventures. Total raised $50M+ across seed + Series A + Series B. HQ Bangalore + US sales hub. YanXbt pattern offer wired into cohort offer continuity: $500 first pack / $497/mo rolling / $497/mo x 5 parallel lanes.
 
 ## Cohort role
 
