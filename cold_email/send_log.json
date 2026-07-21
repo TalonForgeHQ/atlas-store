@@ -137,5 +137,28 @@
     "id": "t2026-07-21-fast-exec-exterro-811",
     "note": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
     "notes": "Lead 811 Exterro sibling #2/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
+  },
+  {
+    "tick": "2026-07-21-fast-exec-veritas-812",
+    "lead": 812,
+    "index": 812,
+    "name": "Veritas",
+    "vendor": "Veritas",
+    "vertical": "ai_legal_hold_ediscovery",
+    "cohort": "ai_legal_hold_ediscovery",
+    "position": "sibling #3/5 (after Relativity 810 OPENER + Exterro 811)",
+    "route": "FORM:https://www.veritas.com/contact",
+    "form_url": "FORM:https://www.veritas.com/contact",
+    "template": "812_veritas.md",
+    "status": "queued_not_sent",
+    "send_status": "queued_not_sent",
+    "route_type": "form",
+    "smtp_gated": true,
+    "submitted": false,
+    "submitted_at": null,
+    "queued_at": "2026-07-21T07:45:00Z",
+    "id": "t2026-07-21-fast-exec-veritas-812",
+    "note": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send",
+    "notes": "Lead 812 Veritas sibling #3/5 ai_legal_hold_ediscovery — FORM-only route, no SMTP send"
   }
 ]

@@ -1203,3 +1203,20 @@ Lead 665 (Voxel51 — voxel51.com CV-data-curation + data-centric-AI platform + 
 - **Cumulative sent this run:** $0
 - **Cumulative received this run:** $0
 - **Next tick:** OPEN sibling #2/5 Everlaw OR move to next vertical cohort
+
+
+---
+
+## Tick 812 — Veritas (ai_legal_hold_ediscovery sibling #3/5)
+
+- **Date:** 2026-07-21
+- **Lead:** 812 — Veritas (veritas.com — Cohesity-Veritas combined entity — CEO Greg Hughes)
+- **Vertical:** ai_legal_hold_ediscovery
+- **Position:** sibling #3/5 (after Relativity 810 OPENER + Exterro 811 sibling #2/5)
+- **Commercial route:** FORM:https://www.veritas.com/contact (canonical first-party contact form, queued — not submitted)
+- **Companion artifacts:** cold_email/812_veritas.md + cold_email/templates/812_veritas.md + chunks/chunk_812.html + index.html card + sitemap.xml url
+- **Status:** queued_not_sent (SMTP gated, no form submission)
+- **Revenue impact:** $0 sent / $0 received
+- **Cumulative sent this run:** $0
+- **Cumulative received this run:** $0
+- **Next tick:** OPEN sibling #4/5 Nextpoint OR move to next vertical cohort
