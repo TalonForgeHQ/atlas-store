@@ -307,5 +307,19 @@
     "sent": false,
     "revenue": 0,
     "note": "First-party demo form retained as a route-safe commercial option. Whistic Trust Center InfoSec channel is reserved for responsible-disclosure and is excluded from commercial outreach. No send, form submission, payment, or revenue claimed."
+  },
+  {
+    "ts": "2026-07-22T07:50:00Z",
+    "lead": 892,
+    "company": "Applitools",
+    "cohort": "ai_visual_test_automation",
+    "role": "OPENER-1-of-5",
+    "route": "FORM:https://applitools.com/contact/demo-request-next/",
+    "status": "queued-not-sent",
+    "smtp": "gated",
+    "sent": 0,
+    "received": 0,
+    "deliverable_offer": "500/48h + 497/mo",
+    "notes": "first-party demo-request form is sanctioned commercial channel; first-party inbox hidden under Cloudflare email-obfuscation per pitfall #28"
   }
 ]
