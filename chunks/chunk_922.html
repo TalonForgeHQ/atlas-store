@@ -1,0 +1,66 @@
+<section id="chunk-922" class="chunk-card" data-tick="2026-07-22-fast-exec-lindy-922" data-cohort="ai_agent_operations" data-lead="922" data-cohort-role="sibling-2-of-5">
+  <h2>Lindy AI 922 — SIBLING #2/5 ai_agent_operations</h2>
+  <p class="lead-line"><strong>Cohort:</strong> ai_agent_operations (SIBLING #2/5 after Glean 902 OPENER #1/5). <strong>Company:</strong> Lindy AI (lindy.ai). <strong>HQ:</strong> San Francisco CA verbatim first-party /careers 2026-07-22. <strong>Compliance:</strong> SOC 2 Type II (Johanson Group) + HIPAA Eligible + GDPR + PIPEDA verbatim first-party /security 2026-07-22.</p>
+
+  <h3>1. Five evidence gaps that matter for a Lindy procurement review</h3>
+  <ol>
+    <li><strong>Per-action provenance across 100+ integrations</strong> — every Lindy action (email draft, reply, meeting prep, scheduled event, outbound voice call, iMessage/SMS) carries a model-version + prompt-hash + response-hash + user-approval-step so a reviewer can replay a single agent run end-to-end.</li>
+    <li><strong>Per-integration consent and retention</strong> — Gmail, Outlook, iMessage, SMS, Zoom, Meet, Teams each have a per-tenant consent ledger entry (EU AI Act Art. 6(2) Annex III + Reg BI + NAIC + CFPB Reg Z + NYC LL 144).</li>
+    <li><strong>Cross-system join-tables</strong> — Lindy actions join to underlying CRM, calendar, ticket, or document records so a single audit replay shows the full chain from trigger → action → downstream system state.</li>
+    <li><strong>Tenant isolation and no-train posture</strong> — Lindy explicitly states verbatim first-party "Lindy does not sell your data. Lindy and our providers do not use your data to train AI models" — a transparency lane most agent-vendors do not publish verbatim.</li>
+    <li><strong>Reproducible review receipts</strong> — "Every action Lindy takes is logged. You can see exactly what happened, when, and why" verbatim first-party /security 2026-07-22.</li>
+  </ol>
+
+  <h3>2. Per-Lindy-action audit receipt (16-column cross-tenant-no-bleed)</h3>
+  <table>
+    <thead><tr><th>#</th><th>Field</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>lindy_action_id</td><td>unique action identifier</td></tr>
+      <tr><td>2</td><td>lindy_action_type</td><td>email_draft / email_reply / meeting_prep / scheduled_event / voice_call / sms / imessage</td></tr>
+      <tr><td>3</td><td>lindy_action_target_id</td><td>target resource id (message_id, event_id, call_id)</td></tr>
+      <tr><td>4</td><td>integration_source_id</td><td>Gmail / Outlook / Zoom / Meet / Teams / iMessage / SMS / Google Calendar</td></tr>
+      <tr><td>5</td><td>integration_target_id</td><td>downstream system if applicable (CRM, ticket, doc)</td></tr>
+      <tr><td>6</td><td>per_integration_consent_ledger_entry_id</td><td>EU AI Act Art. 6(2) Annex III + Reg BI + NAIC + CFPB Reg Z + NYC LL 144</td></tr>
+      <tr><td>7</td><td>per_action_model_name</td><td>which LLM produced the draft/reply/action</td></tr>
+      <tr><td>8</td><td>per_action_model_version</td><td>exact model version hash</td></tr>
+      <tr><td>9</td><td>per_action_prompt_hash</td><td>prompt snapshot for reproducibility</td></tr>
+      <tr><td>10</td><td>per_action_response_hash</td><td>response snapshot</td></tr>
+      <tr><td>11</td><td>per_human_in_loop_acknowledgment_id</td><td>user approval step that authorized the action</td></tr>
+      <tr><td>12</td><td>per_action_audit_log_replay_id</td><td>audit-log replay drill anchor</td></tr>
+      <tr><td>13</td><td>per_tenant_credential_scope</td><td>OAuth scope per integration</td></tr>
+      <tr><td>14</td><td>per_recipient_consent</td><td>per-message per-recipient consent (especially for SMS/iMessage/voice)</td></tr>
+      <tr><td>15</td><td>cross_tenant_no_bleed_proof</td><td>tenant-isolation invariant</td></tr>
+      <tr><td>16</td><td>no_train_data_posture</td><td>verbatim first-party "Lindy does not sell your data. Lindy and our providers do not use your data to train AI models"</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3. Cohort position: SIBLING #2/5 vs Glean 902 OPENER</h3>
+  <table>
+    <thead><tr><th>Wedge</th><th>Glean 902 OPENER</th><th>Lindy AI 922 SIBLING #2/5</th></tr></thead>
+    <tbody>
+      <tr><td>UX substrate</td><td>Federated enterprise search + write-back agents</td><td>AI executive assistant that runs inbox/calendar/voice autonomously</td></tr>
+      <tr><td>Audit surface</td><td>Per-query ACL snapshot + per-agent write receipt</td><td>Per-action audit log verbatim "Every action Lindy takes is logged"</td></tr>
+      <tr><td>Tenant isolation</td><td>Federated retrieval pool — chunks join-table at identity layer</td><td>Verbatim first-party "Your data doesn't mingle with anyone else's"</td></tr>
+      <tr><td>Data training posture</td><td>Sub-processor-layer training-data isolation gate</td><td>Verbatim first-party no-train-on-customer-data posture</td></tr>
+      <tr><td>Pricing tier</td><td>Enterprise-only go-to-market</td><td>Plus $49.99/mo + Pro $59.99/mo + Enterprise custom (consumer-tier wedge)</td></tr>
+      <tr><td>Compliance</td><td>SOC 2 Type II + ISO 27001 + ISO 27701 + HIPAA + GDPR</td><td>SOC 2 Type II (Johanson Group) + HIPAA Eligible + GDPR + PIPEDA</td></tr>
+      <tr><td>Outbound channel coverage</td><td>Read-heavy (search) + write-back via Agents</td><td>Write-heavy (email draft/reply + meeting prep + voice + SMS + iMessage)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>4. Three non-overlapping wedges Lindy brings to the cohort</h3>
+  <ul>
+    <li><strong>AI executive-assistant agent with NAMED first-party iMessage/SMS + Voice sub-products</strong> — different UX substrate from Glean's federated-retrieval-pool; changes the SOC 2 Type II CC6.1 + GDPR Art. 6 lawful-basis + HIPAA 164.502(b) min-necessary + EU AI Act Art. 10 data-governance audit-trail surface to one focused on outbound-agent actions rather than retrieval-pool joins.</li>
+    <li><strong>NAMED first-party per-action audit log</strong> — verbatim first-party "Every action Lindy takes is logged. You can see exactly what happened, when, and why" gives a different ASC 606-10-32 + Material Cybersecurity Incident 8-K Reg-FD + ASU 2023-07 + ASC 805-50 customer-list asset-recovery diligence lane than Glean's per-query ACL-snapshot log row.</li>
+    <li><strong>Consumer-tier pricing wedge</strong> — Plus $49.99/mo + Pro $59.99/mo published verbatim first-party JSON-LD SoftwareApplication schema, vs Glean Enterprise-only GTM. Cohort-unique for SMB / mid-market procurement-list portals that want self-serve agent procurement without enterprise-sales cycles.</li>
+  </ul>
+
+  <h3>5. Pitfalls reinforced</h3>
+  <ul>
+    <li>P28 — FORM-only correct for Lindy: no first-party general-business mailto published on rendered first-party surfaces; canonical commercial route is the Talk to Sales form + /contact form. No guessed inbox added.</li>
+    <li>P42 — founder Flo Crivello is public-record (Wikipedia, LinkedIn, public interviews) but not published verbatim on a first-party /team or /about page; the tier_reason column cites public-record as background context rather than first-party verbatim to avoid fabrication.</li>
+    <li>P44 — CSV append via csv.writer + QUOTE_ALL to safely quote the long tier_reason column with embedded punctuation.</li>
+  </ul>
+
+  <p class="footer">Atlas @ Talon Forge — cron tick 2026-07-22-fast-exec-lindy-922 — 3 artifacts in this tick (template 922_lindy_ai.md + leads.csv row 922 + chunk_922.html + sitemap chunk_922 entry + index.html chunk-922 card + build-log entry) — ai_agent_operations cohort now 2/5 (Glean 902 OPENER #1/5 + Lindy AI 922 SIBLING #2/5; 3 OPEN slots for siblings #3-5/5) — FORM:https://www.lindy.ai/talk-to-sales NOT submitted — mailto:NONE first-party per pitfall #28 — HQ San Francisco CA verbatim first-party /careers 2026-07-22 — SOC 2 Type II (Johanson Group) + HIPAA Eligible + GDPR + PIPEDA verbatim first-party /security 2026-07-22 — Plus $49.99/mo + Pro $59.99/mo verbatim JSON-LD — no-train-on-customer-data verbatim first-party — SMTP/form gated, $0 sent / $0 received.</p>
+</section>
