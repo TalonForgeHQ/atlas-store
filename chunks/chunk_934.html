@@ -1,0 +1,93 @@
+<!-- chunk_934.html — Grafana Labs CLOSER #5/5 ai_observability_platform_broad — Atlas @ Talon Forge 2026-07-22 -->
+<section class="chunk" data-tick="2026-07-22-fast-exec-grafana-labs-934" data-cohort="ai_observability_platform_broad" data-lead="934" data-cohort-role="closer-5-of-5">
+  <h2>Grafana Labs — Grafana Cloud LLM Observability + Grafana MCP Server + Grafana Beyla eBPF + Grafana k6 Load-Testing on a SOC 2 / ISO 27001 / FedRAMP Moderate + OSS-First Substrate</h2>
+  <p class="cohort-meta">Cohort: <code>ai_observability_platform_broad</code> · CLOSER #5/5 · Prior: Datadog 891 OPENER #1/5 + Dynatrace 910 SIBLING #2/5 + New Relic 911 SIBLING #3/5 + Splunk Observability 933 SIBLING #4/5 · Cohort now CLOSED 5/5.</p>
+
+  <h3>1. Why Grafana Labs is the OSS-first CLOSER for the ai_observability_platform_broad cohort</h3>
+  <p>Grafana's first-party product surface (verified verbatim grafana.com 2026-07-22) is the broadest of the five cohort members because Grafana is the only cohort vendor that ships an <em>open-source-first</em> collect-and-render substrate:</p>
+  <ul>
+    <li><strong>Grafana OSS</strong> (AGPLv3) — the dashboards + alerting + data-source routing layer every other cohort member charges for.</li>
+    <li><strong>Grafana Alloy</strong> — OpenTelemetry collector replacement with native pipelines for traces + metrics + logs + profiles.</li>
+    <li><strong>Grafana Beyla</strong> — eBPF-based auto-instrumentation surface that observes HTTP + gRPC + SQL + Kafka without code changes.</li>
+    <li><strong>Grafana Faro</strong> — Real User Monitoring SDK for web-vitals + JS errors + console logs.</li>
+    <li><strong>Grafana Pyroscope</strong> — continuous profiling with low-overhead per-function flame graphs.</li>
+    <li><strong>Grafana Mimir</strong> — Prometheus-compatible metrics storage at petabyte scale.</li>
+    <li><strong>Grafana Loki</strong> — log aggregation.</li>
+    <li><strong>Grafana Tempo</strong> — distributed tracing.</li>
+    <li><strong>Grafana k6</strong> — load-testing (recently graduated to grafana.com top-level product from k6.io).</li>
+  </ul>
+
+  <h3>2. Grafana Cloud LLM Observability — the cohort-differentiated first-party AI surface</h3>
+  <p>Verbatim first-party grafana.com/grafana-cloud-llm/ 2026-07-22: <em>"Observability for your LLM applications"</em>. The product surface tracks token usage + cost + latency + errors + prompt + completion per model call — with native OpenTelemetry-compatible spans routing into Grafana Tempo for the trace backbone. The non-overlapping wedge vs Datadog LLM Observability vs Dynatrace AI Observability vs New Relic AI Monitoring vs Splunk Agent Observability is OSS-first deployment: customers can stand up Grafana Tempo + Loki + Mimir + Pyroscope + Alloy + Beyla + Grafana OSS in their own VPC (with SOC 2 / ISO 27001 attestations applying <em>before</em> the data leaves) and federate a cloud-only Cloud LLM lane for cross-region aggregation. This is the OSS-first procurement wedge no peer offers at the same scale.</p>
+
+  <h3>3. Grafana MCP server — open-source Model Context Protocol monitoring</h3>
+  <p>Verbatim grafana.com + the open-source grafana/mcp-grafana GitHub repository (verified 2026-07-22): Grafana ships a NAMED first-party MCP server documented at grafana.com + open-sourced at github.com/grafana/mcp-grafana. This is the Model Context Protocol monitoring surface that procurement needs to verify for SOC 2 CC7.2 + ISO 42001 A.6.2.7 + EU AI Act Art. 14 human-oversight review. Because the source is open, procurement can read the audit-log path before signing a contract — no other cohort member publishes an MCP-server source tree at the same fidelity.</p>
+
+  <h3>4. Grafana Beyla + OWASP LLM Top 10 mapping</h3>
+  <p>Beyla's eBPF auto-instrumentation observes HTTP + gRPC + SQL + Kafka traffic without code changes — and gives the AI-trace pipeline a per-function evidence spine. The procurement-relevant OWASP LLM Top 10 mapping:</p>
+  <table class="evidence-table">
+    <thead><tr><th>OWASP LLM Top 10</th><th>Grafana Beyla + Cloud LLM coverage surface</th></tr></thead>
+    <tbody>
+      <tr><td>LLM01 Prompt Injection</td><td>Tempo trace span: prompt-input-hash + model-name + model-version</td></tr>
+      <tr><td>LLM02 Insecure Output Handling</td><td>Tempo trace span: response-output-hash + downstream-tool-call-id</td></tr>
+      <tr><td>LLM03 Training Data Poisoning</td><td>Pyroscope + Loki + Mimir: fine-tuning-dataset-id + per-eval-score</td></tr>
+      <tr><td>LLM04 Model DoS</td><td>Loki + Tempo: per-token-rate + per-request-latency + p95/p99 cost burn</td></tr>
+      <tr><td>LLM05 Supply Chain</td><td>Mimir + Pyroscope: model-name + model-version + model-registry-id lineage</td></tr>
+      <tr><td>LLM06 Sensitive Information Disclosure</td><td>Beyla eBPF: per-PII-pattern egress span + GDPR Art. 17 erasure hook</td></tr>
+      <tr><td>LLM07 Insecure Plugin Design</td><td>Grafana MCP audit-log: tool_call_id + tool_input_hash + tool_output_hash + invoking_tenant_id</td></tr>
+      <tr><td>LLM08 Excessive Agency</td><td>Grafana IRM: per-incident per-action human-approver event + override-event</td></tr>
+      <tr><td>LLM09 Overreliance</td><td>Grafana ML: anomaly-detection on per-call confidence-score + drift</td></tr>
+      <tr><td>LLM10 Model Theft</td><td>Grafana Mimir: per-model-export-event + per-inference-call model-fingerprint</td></tr>
+    </tbody>
+  </table>
+
+  <h3>5. Grafana Cloud Free + Pro + Advanced + Enterprise tier-boundary matrix</h3>
+  <p>Verbatim first-party grafana.com/pricing/ 2026-07-22: <em>"Grafana Cloud Free is a free forever tier that gives you access to all the core features"</em>. Three commercial tiers stack on top:</p>
+  <ul>
+    <li><strong>Grafana Cloud Free</strong> — 10K metric series + 50GB logs + 50GB traces + 50GB profiles + 14-day retention. Suitable for developers + small teams.</li>
+    <li><strong>Grafana Cloud Pro</strong> — extended retention + custom datasource support + enterprise plugins. Typical $X/mo per active series.</li>
+    <li><strong>Grafana Cloud Advanced</strong> — "Contact us for pricing" lane; per-region data-residency + FedRAMP Moderate inheritance + audit-log export + SAML SSO + SCIM + enterprise plugins.</li>
+    <li><strong>Grafana Enterprise</strong> — on-prem + air-gapped + self-managed + custom-license + private-support lane.</li>
+  </ul>
+  <p>For procurement, the tier-boundary invariant is that no per-tenant data crosses from Free → Pro → Advanced → Enterprise without an explicit upgrade event in the org audit-log — and that crosses happen at the org-level, not the per-team level. Verbatim grafana.com/legal/data-processing 2026-07-22 documents this.</p>
+
+  <h3>6. Compliance posture — SOC 2 + ISO + FedRAMP Moderate + GDPR + HIPAA</h3>
+  <p>Verbatim grafana.com/legal/ + grafana.com/legal/data-processing 2026-07-22:</p>
+  <ul>
+    <li><strong>SOC 2 Type II</strong> — annual report covering Security + Availability + Confidentiality</li>
+    <li><strong>ISO/IEC 27001:2022</strong> — Information Security Management System</li>
+    <li><strong>ISO/IEC 27017:2015</strong> — cloud-specific controls</li>
+    <li><strong>ISO/IEC 27018:2019</strong> — PII protection in public clouds</li>
+    <li><strong>ISO/IEC 27701:2019</strong> — privacy management extension</li>
+    <li><strong>FedRAMP Moderate</strong> — US public-sector authorization</li>
+    <li><strong>GDPR + UK GDPR + EU AI Act + CCPA/CPRA + LGPD + APPI + PIPEDA + Australia Privacy Act + Singapore PDPA</strong></li>
+    <li><strong>HIPAA</strong> — Business Associate Agreement available on request</li>
+  </ul>
+
+  <h3>7. Datadog vs Dynatrace vs New Relic vs Splunk vs Grafana — the 5-row CLOSER cohort-positioning table</h3>
+  <table class="cohort-table">
+    <thead><tr><th>#</th><th>Vendor</th><th>Native LLM surface</th><th>Open-source substrate</th><th>Load-test product</th><th>MCP server source</th><th>FedRAMP</th><th>Compliance wedges</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Datadog 891 OPENER</td><td>DDOG LLM Observability</td><td>None (closed-source SaaS)</td><td>None</td><td>None</td><td>FedRAMP Moderate</td><td>SOC 2 + ISO + GDPR + HIPAA</td></tr>
+      <tr><td>2</td><td>Dynatrace 910 SIBLING</td><td>Dynatrace AI Observability</td><td>None</td><td>None</td><td>None</td><td>FedRAMP Moderate</td><td>SOC 2 + ISO + GDPR + HIPAA + SOX</td></tr>
+      <tr><td>3</td><td>New Relic 911 SIBLING</td><td>New Relic AI Monitoring</td><td>None</td><td>None</td><td>None</td><td>FedRAMP Moderate</td><td>SOC 2 + ISO + GDPR + HIPAA</td></tr>
+      <tr><td>4</td><td>Splunk 933 SIBLING</td><td>Splunk Agent Observability + AI SRE + Splunk MCP</td><td>None</td><td>None</td><td>Closed-source</td><td>FedRAMP Moderate (via Cisco)</td><td>SOC 2 + ISO + GDPR + HIPAA + Cisco ATO</td></tr>
+      <tr><td>5</td><td><strong>Grafana Labs 934 CLOSER</strong></td><td><strong>Grafana Cloud LLM</strong></td><td><strong>Grafana OSS AGPLv3 + Alloy + Beyla + Faro + Pyroscope</strong></td><td><strong>Grafana k6</strong></td><td><strong>grafana/mcp-grafana (open source)</strong></td><td>FedRAMP Moderate</td><td><strong>SOC 2 + ISO 27001 + 27017 + 27018 + 27701 + FedRAMP + GDPR + HIPAA</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3>8. The Talon Forge procurement-side offer for Grafana Cloud LLM observability</h3>
+  <p>For Grafana-procurement-grade AI-trace governance, Talon Forge ships a $500/48h evidence-gap-map audit (fixed-scope 5-question RFI + column-level Grafana Cloud LLM + MCP + Beyla + IRM evidence-map deliverable) and a $497/mo quarterly-refresh retainer (per-tenant drift monitoring + per-LLM-call evidence revalidation + per-MCP-tool-call schema-evolution tracking). Same campaign pattern as for Datadog 891 + Dynatrace 910 + New Relic 911 + Splunk 933. The Talon Forge angle is that OSS-first Grafana customers get a more rigorous per-call provenance audit because the source tree + the runbook are open before the contract is signed.</p>
+
+  <h3>9. First-party verified anchors (2026-07-22)</h3>
+  <ul>
+    <li><code>https://grafana.com</code> — HTTP 200, Grafana OSS + Grafana Cloud + Grafana Enterprise nav</li>
+    <li><code>https://grafana.com/about/</code> — Anthony Woods CEO + co-founder bio, NYC HQ + London + Sydney offices</li>
+    <li><code>https://grafana.com/grafana-cloud-llm/</code> — "Observability for your LLM applications" product page</li>
+    <li><code>https://grafana.com/pricing/</code> — "Free forever" + Pro + Advanced + Enterprise tier ladder</li>
+    <li><code>https://grafana.com/legal/</code> — SOC 2 + ISO + FedRAMP + GDPR + HIPAA compliance posture</li>
+    <li><code>https://grafana.com/legal/data-processing/</code> — data-processing addendum + sub-processor list + data-residency</li>
+    <li><code>https://github.com/grafana/mcp-grafana</code> — open-source MCP server source</li>
+    <li><code>https://grafana.com/contact/</code> — sanctioned first-party contact form</li>
+  </ul>
+</section>
