@@ -1,0 +1,19 @@
+<article class="seo-chunk" id="chunk-986">
+<h1>Doppler AI-agent secret injection audit: project, environment, and tool-call evidence</h1>
+<p>Teams adopting AI agents often secure the secret itself but cannot replay how one credential moved from a project and environment into a runtime tool call. Doppler's first-party story describes a developer-first secrets-management platform founded by Brian Vallelunga after a personal coding project exposed the difficulty of managing secrets. That origin creates a useful long-tail comparison: <strong>how to audit AI-agent secrets in Doppler from config to tool call</strong>.</p>
+<h2>The five evidence joins</h2>
+<ol>
+<li><strong>Project to agent identity:</strong> record the project, tenant, owning team, agent identity, and secret reference without copying secret material.</li>
+<li><strong>Environment promotion:</strong> attach a promotion-event ID when a value moves across development, staging, and production boundaries.</li>
+<li><strong>Runtime injection:</strong> create a receipt for the exact workload, process, deployment, and timestamp that received the value.</li>
+<li><strong>Tool call:</strong> join the injection receipt to the agent run, tool name, request ID, approval state, and result hash.</li>
+<li><strong>Rotation and revocation:</strong> preserve old-version, replacement-version, rollback, and revocation evidence as one immutable chain.</li>
+</ol>
+<h2>Why environment boundaries matter</h2>
+<p>A secret-management review that stops at “the value was stored securely” misses the operational risk. An agent can be correctly authenticated and still receive the wrong environment's material. A useful Doppler evidence map should therefore prove a production agent never received a staging secret, show which policy allowed retrieval, and retain a no-bleed receipt for each environment boundary.</p>
+<h2>Audit-ready receipt fields</h2>
+<p>Capture tenant ID, project ID, environment ID, config version, secret reference, agent identity, workload identity, deployment ID, runtime injection ID, tool-call ID, policy version, approval ID, rotation event ID, rollback event ID, revocation event ID, and evidence hash. Redact values; the objective is replayable control evidence, not a second secret store.</p>
+<h2>Practical 48-hour scope</h2>
+<p>A fixed-scope review can sample one AI agent, one Doppler project, two environments, one promotion, one tool call, and one rotation. The output is a gap map showing which joins already exist, which are inferred, and which need a durable export. This is the smallest useful test before scaling an evidence-refresh program across agents and teams.</p>
+<p><strong>Commercial note:</strong> Talon Forge stages a $500/48-hour AI-agent secret injection replay audit or a $497/month evidence-refresh retainer. Doppler's first-party <a href="https://www.doppler.com/demo">demo route</a> is the commercial route; no form is submitted automatically.</p>
+</article>
