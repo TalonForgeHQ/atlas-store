@@ -1,0 +1,112 @@
+<!-- chunk_981.html — HashiCorp Boundary identity-aware proxy + agentic AI security -->
+<section class="vendor-benchmark" id="hashicorp-boundary-agentic-infrastructure-identity-981">
+  <header>
+    <p class="eyebrow">AI infrastructure identity vendor benchmark · 2026</p>
+    <h2>HashiCorp Boundary Agentic AI Security Audit: 5 Identity-Aware-Proxy Evidence Gaps</h2>
+    <p>
+      Lead 981 · SIBLING #3/5 in <code>ai_infrastructure_identity_pam</code>,
+      after Teleport 979 OPENER #1/5 and Delinea 980 SIBLING #2/5.
+    </p>
+  </header>
+
+  <h3>Long-tail question this benchmark answers</h3>
+  <p>
+    How do you audit HashiCorp Boundary's identity-aware-proxy model for AI
+    agents across OpenID Connect, just-in-time network access, Vault credential
+    brokering, native static credential store, session controls, multi-protocol
+    support (SSH + RDP + HTTP + HTTPS + K8s), and final revocation, especially
+    in the post-IBM-acquisition continuity window?
+  </p>
+
+  <h3>Verified vendor substrate</h3>
+  <ul>
+    <li>HashiCorp, Inc. was founded in 2012 by Mitchell Hashimoto and Armon Dadgar, two University of Washington Paul G. Allen School of Computer Science classmates.</li>
+    <li>HashiCorp HQ is 101 Second Street, San Francisco; the company reported $583M in 2024 revenue.</li>
+    <li>The current key person listed on the Wikipedia corporate box is David McJannet (CEO).</li>
+    <li>Mitchell Hashimoto resigned from the company in December 2023.</li>
+    <li>On April 24, 2024, HashiCorp announced an agreement to be acquired by IBM for $6.4 billion.</li>
+    <li>HashiCorp Boundary was first released in October 2020 as an identity-aware proxy for dynamic infrastructure.</li>
+    <li>The first-party Boundary README on github.com/hashicorp/boundary states Boundary "integrates with your IdP of choice using OpenID Connect," "provides just-in-time network access to network resources," "manages session credentials via a native static credential store, or dynamically generate unique per-session credentials by integrating with HashiCorp Vault," "manages privileged sessions using Boundary's session controls," and runs "in clouds, on-prem, secure enclaves" without requiring an agent on every end host.</li>
+    <li>Boundary ships an open-source Community Edition plus a managed HCP Boundary plus HCP Vault credential-brokering tutorials.</li>
+    <li>Boundary's domain model treats every user, host, target, and credential as a first-class resource with role-based policy.</li>
+    <li>First-party security contact security@hashicorp.com is published in the Boundary GitHub README.</li>
+  </ul>
+
+  <h3>Why Boundary is not a duplicate of Teleport or Delinea</h3>
+  <p>
+    Teleport 979 starts with certificate-based infrastructure identity and a
+    cryptographic governed access path. Delinea 980 starts with the PAM control
+    plane: vaulting, privileged remote access, access governance,
+    identity-threat analysis, and runtime authorization. Boundary 981 starts
+    with an identity-aware proxy that brokers Vault credentials: the
+    OpenID-Connect claim is the trust root, the Vault dynamic secret is the
+    per-session credential, the Boundary session is the audit surface, and
+    the credential lease and rotation cadence are the continuity guarantee.
+    The cohort needs all three to test the handoff from identity issuance
+    into PAM control into proxy-mediated credential brokering.
+  </p>
+
+  <h3>Five audit gaps for AI-agent sessions</h3>
+  <ol>
+    <li><strong>Agent-to-credential lineage.</strong> The OIDC claim, the Vault lease, the Boundary session, and the AI-agent prompt-version still need a single replayable join.</li>
+    <li><strong>Identity-aware-proxy authorization decision.</strong> The session-id, scope, host-set, target, time-bound, approval, and final state must each be retained with the same fidelity.</li>
+    <li><strong>Vault credential brokering.</strong> The Vault-issued dynamic credential, the requesting Boundary session, the rotation cadence, the lease, and the revocation must join without a manual correlation step.</li>
+    <li><strong>Failure paths.</strong> Denied, expired, retried, cancelled, orphaned, session-recording-failed, and rolled-back sessions must be retained with the same fidelity as successful sessions.</li>
+    <li><strong>Regulatory export.</strong> SOC 2, ISO 27001, PCI DSS, GDPR, ISO 42001, NIS2, and EU AI Act human-oversight review must be supportable without reconstructing the story from separate consoles.</li>
+  </ol>
+
+  <h3>Five non-overlapping wedge vs Teleport 979 and Delinea 980 (PITFALL #99)</h3>
+  <ol>
+    <li>OpenID-Connect IdP-claim-trust-root plane (Boundary is the only sibling that names IdP integration as the trust root).</li>
+    <li>Vault-credentialed dynamic-secret per-session brokering (the only cohort member that publishes Vault as the first-party credential broker).</li>
+    <li>Agent-less identity-aware-proxy model (no agent required on every end host — distinct from Teleport's per-host certificate model).</li>
+    <li>Multi-protocol support in one proxy surface (SSH + RDP + HTTP + HTTPS + K8s — distinct from Delinea's PAM focus and Teleport's certificate focus).</li>
+    <li>Post-IBM-acquisition continuity window (Boundary is the only sibling carrying an active $6.4B acquisition continuity obligation in 2025-2026).</li>
+  </ol>
+
+  <h3>Sample 16-column AI-agent → Boundary → Vault → target host receipt</h3>
+  <ol>
+    <li>agent_id</li>
+    <li>model_id</li>
+    <li>model_version</li>
+    <li>prompt_version</li>
+    <li>boundary_session_id</li>
+    <li>oidc_claim_set</li>
+    <li>vault_credential_id</li>
+    <li>vault_lease_id</li>
+    <li>vault_rotation_cadence</li>
+    <li>target_host_id</li>
+    <li>target_protocol (SSH | RDP | HTTP | HTTPS | K8s)</li>
+    <li>policy_version</li>
+    <li>approval_record</li>
+    <li>session_recording_id</li>
+    <li>revocation_event_id</li>
+    <li>cross_tenant_no_bleed_invariant</li>
+  </ol>
+
+  <h3>Single-platform engagement</h3>
+  <p>
+    $500 / 48 hours for one red/amber/green evidence-gap map + the five
+    missing joins with highest procurement impact + the sample AI-agent →
+    OIDC claim → Boundary session → Vault credential → target host →
+    revocation receipt + a Boundary-specific Trust Center publication
+    checklist + a 30-minute handoff for Platform Security, Infrastructure
+    Identity, Trust, or Compliance.
+  </p>
+
+  <h3>Cohort context</h3>
+  <p>
+    Boundary 981 is SIBLING #3/5 of the <code>ai_infrastructure_identity_pam</code>
+    cohort after Teleport 979 OPENER #1/5 and Delinea 980 SIBLING #2/5.
+    Two OPEN slots remain (BeyondTrust + One Identity candidates). The
+    five-vendor cohort benchmark will be **$2,000** once the cohort closes.
+  </p>
+
+  <h3>Receipts</h3>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/HashiCorp">HashiCorp on Wikipedia (founding, leadership, acquisition)</a></li>
+    <li><a href="https://github.com/hashicorp/boundary">github.com/hashicorp/boundary</a> — first-party Boundary README</li>
+    <li><a href="https://www.boundaryproject.io/">boundaryproject.io</a> — first-party Boundary landing</li>
+    <li><a href="https://developer.hashicorp.com/boundary/docs/concepts">developer.hashicorp.com/boundary/docs/concepts</a> — first-party Boundary domain model</li>
+  </ul>
+</section>
