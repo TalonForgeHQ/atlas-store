@@ -321,5 +321,19 @@
     "received": 0,
     "deliverable_offer": "500/48h + 497/mo",
     "notes": "first-party demo-request form is sanctioned commercial channel; first-party inbox hidden under Cloudflare email-obfuscation per pitfall #28"
+  },
+  {
+    "lead_id": 912,
+    "name": "Cisco AI Defense",
+    "vertical": "ai_agent_security_red_teaming",
+    "role": "CLOSER-5-of-5",
+    "route": "FORM:https://www.cisco.com/c/en/us/contact/contact-us.html",
+    "alt_route": "sales@cisco.com (Cisco-internal global enterprise-sales route)",
+    "status": "queued-not-sent",
+    "smtp": "gated",
+    "sent": 0,
+    "received": 0,
+    "deliverable_offer": "500/48h + 497/mo",
+    "notes": "cisco.com returned HTTP 200 directly via curl probe; no Wayback needed; sales@cisco.com first-party /contact not a public general-business inbox"
   }
 ]
