@@ -1,0 +1,30 @@
+<article class="seo-chunk" id="chunk-987">
+<h1>GitGuardian AI-agent secrets and NHI governance audit: discovery to revocation evidence</h1>
+<p>Teams can detect a leaked credential and still fail to replay what happened next. GitGuardian's first-party About page says Eric and Jérémy founded the company in 2017 after collecting public GitHub commits and discovering the scale of secrets sprawl.</p>
+<p>Its current first-party positioning names Secrets Security, Non-Human Identity Governance, and AI Agents security. That creates a long-tail buyer question: <strong>how to audit GitGuardian AI-agent secrets from discovery to revocation</strong>.</p>
+<h2>The five evidence joins</h2>
+<ol>
+<li><strong>Discovery to ownership:</strong> record repository, commit, detector version, secret reference, tenant, owner, and agent identity without copying secret material.</li>
+<li><strong>Finding to remediation:</strong> attach the ticket, approval, remediation timestamp, replacement credential reference, and policy version.</li>
+<li><strong>Runtime use:</strong> join the approved credential to workload, deployment, agent run, tool name, request ID, and result hash.</li>
+<li><strong>Rotation to revocation:</strong> preserve old version, replacement version, rollback, and revocation events as one immutable chain.</li>
+<li><strong>Tenant boundary to export:</strong> prove staging findings and production evidence cannot cross customer or environment boundaries.</li>
+</ol>
+<h2>What the review should replay</h2>
+<p>Sample one agent, one discovered secret reference, one source commit, one remediation ticket, one replacement, and one tool call. Redact values. The deliverable is a control-evidence graph showing which links are durable, which are inferred, and which need a new export or identifier.</p>
+<h3>Discovery receipt</h3>
+<p>Capture the repository, commit, detector version, finding ID, secret fingerprint, tenant, owning team, agent identity, and first-seen timestamp. A fingerprint proves continuity without duplicating the credential.</p>
+<h3>Remediation receipt</h3>
+<p>Join the finding to its ticket, reviewer, approval policy, replacement reference, completion time, and verification scan. Preserve failure paths when a remediation is rejected or incomplete.</p>
+<h3>Agent runtime receipt</h3>
+<p>Record workload identity, deployment, agent run, tool-call ID, request ID, policy version, and result hash. This makes a credential's approved use reviewable without exposing its value.</p>
+<h3>Rotation receipt</h3>
+<p>Link the retired version to the replacement, rollback decision, revocation event, and downstream deployment. A timestamp alone is not enough for an audit replay.</p>
+<h3>Cross-tenant receipt</h3>
+<p>Keep tenant, environment, and export identifiers in every join. The control should demonstrate that a staging finding cannot appear in a production or another customer's evidence package.</p>
+<h2>Practical 48-hour scope</h2>
+<p>Start with one agent, one finding, one repository commit, one remediation ticket, one replacement credential, and one tool call. Mark every join as durable, inferred, or absent.</p>
+<p>The fixed-scope output is a five-gap map, a redacted evidence table, and prioritized remediation work. It should identify the minimum new identifiers or exports needed for replay.</p>
+<p>Talon Forge stages a $500 fixed-scope AI-agent secret and NHI evidence replay audit or a $497/month evidence-refresh retainer.</p>
+<p>GitGuardian's first-party <a href="https://www.gitguardian.com/book-a-demo">Book a Demo</a> route is the commercial path; no form is submitted automatically.</p>
+</article>
