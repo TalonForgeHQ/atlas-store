@@ -14,5 +14,7 @@ __pycache__/
 cold_email/.env
 cold_email/.send_state.json
 cold_email/send_log*.json
+_tmp/send_log_clean.json
+_tmp/send_log_prev.json
 cold_email/.hermes/.hermes/reel-Da5uIuoxgV3/
 used_car_monitor/data/
