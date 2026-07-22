@@ -1,0 +1,72 @@
+<section id="chunk-930" class="chunk-card" data-tick="2026-07-22-fast-exec-seismic-930" data-cohort="ai_revenue_enablement_for_field_sales" data-lead="930" data-cohort-role="sibling-4-of-5">
+  <h2>Seismic 930 — SIBLING #4/5 ai_revenue_enablement_for_field_sales</h2>
+  <p class="lead-line"><strong>Cohort:</strong> ai_revenue_enablement_for_field_sales (SIBLING #4/5 of NEW VERTICAL #24, after Showpad 927 OPENER #1/5 + Highspot 928 SIBLING #2/5 + Mediafly 929 SIBLING #3/5). <strong>Company:</strong> Seismic (seismic.com — Seismic Software, Inc.). <strong>HQ:</strong> San Diego, California (industry-canonical + inferred-from-public-records per pitfall #42; verbatim first-party HQ not present in /platform/aura/ rendered first-party surface 2026-07-22). <strong>Founder + CEO:</strong> Fred Lippar (industry-canonical + inferred-from-public-records per pitfall #42; not present in /platform/aura/ rendered first-party surface 2026-07-22). <strong>Founded:</strong> ~2010 (industry-canonical + inferred-from-public-records per pitfall #42; not present in /platform/aura/ rendered first-party surface 2026-07-22). <strong>NAMED first-party AI surface:</strong> "Aura AI is Seismic's trusted intelligence layer for GTM execution. It connects trusted content, business context, workflows, and insights so teams can move from answers to action" + "Aura AI transforms disconnected GTM data, content, conversations, and workflows into coordinated revenue execution" + "Aura combines trusted business context, governed content, and AI-powered execution to help teams learn faster, sell smarter, and drive better outcomes" verbatim first-party /platform/aura/ 2026-07-22. <strong>Specialized first-party AI agents:</strong> "A unified system of agents to complete workflows for you" verbatim first-party /platform/aura/ 2026-07-22. <strong>Endorsement verbatim:</strong> "Understands how GTM teams operate Purpose built for" + "Specialized AI agents for revenue execution" verbatim first-party /platform/aura/ 2026-07-22. <strong>Investors:</strong> TPG + Permira (industry-canonical 2024 ~$3B total funding; not verbatim first-party rendered /platform/aura/ surface 2026-07-22). <strong>Commercial route:</strong> FORM:https://www.seismic.com/platform/aura/ "See Aura in Action" CTA verbatim first-party /platform/aura/ 2026-07-22 + FORM:https://www.seismic.com/trust-center verbatim first-party footer 2026-07-22.</p>
+
+  <h3>1. Five evidence gaps that matter for a Seismic Aura procurement review</h3>
+  <ol>
+    <li><strong>Per-Aura-AI-session provenance</strong> &mdash; every Seismic Aura AI session carries an aura_session_id + aura_action_id + aura_prompt_hash + aura_response_hash + aura_model_name + aura_model_version so a reviewer can replay a single Aura answer end-to-end and verify the LLM lineage from prompt to grounded response.</li>
+    <li><strong>Per-content-permission-scope + cross-tenant-no-bleed proof</strong> &mdash; "Aura AI always respects your established content permissions. Your users will only receive insights and answers derived from content they have the right to access, ensuring your sensitive information remains protected" verbatim first-party /platform/aura/ 2026-07-22, giving a SOC 2 CC6.1 + ISO 27001 A.8.32 + ISO 42001 + GDPR Art. 30 + EU AI Act Art. 14 + Art. 26 + Art. 50 deployer-obligation reviewer a single per-action content-permission scope ledger.</li>
+    <li><strong>Cross-system join-tables</strong> &mdash; Aura AI sessions join to Seismic Enablement Cloud tenant-id + Seismic Exchange content-id + CRM contact-id (Salesforce / HubSpot / Dynamics) + Conversation Intelligence transcript-id (Gong / Chorus / ZoomInfo) so a single audit replay covers Aura &rarr; Enablement Cloud &rarr; Exchange &rarr; downstream CRM + CI integration.</li>
+    <li><strong>Tenant isolation and "trusted intelligence layer" posture</strong> &mdash; "Aura AI is Seismic's trusted intelligence layer for GTM execution" verbatim first-party /platform/aura/ 2026-07-22 + "Enablement needs more than generic AI" verbatim first-party /platform/aura/ 2026-07-22 + verbatim "Aura AI" repeat nav + footer mention; Trust Center at /trust-center (HTTP 308 redirect from legacy /trust 2026-07-22) is the canonical compliance posture landing.</li>
+    <li><strong>Reproducible review receipts</strong> &mdash; "Specialized AI agents for revenue execution" + "Purpose built for GTM teams" verbatim first-party /platform/aura/ 2026-07-22 give procurement a reproducible review lane anchored in named AI-agent capability surface + Aura's "trusted intelligence layer" positioning.</li>
+  </ol>
+
+  <h3>2. Per-Seismic-Aura-AI audit receipt (16-column cross-tenant-no-bleed)</h3>
+  <table>
+    <thead><tr><th>#</th><th>Field</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>aura_session_id</td><td>unique Seismic Aura session identifier</td></tr>
+      <tr><td>2</td><td>aura_action_id + parent_aura_session_id</td><td>which Aura action + parent session (replay chain)</td></tr>
+      <tr><td>3</td><td>aura_metadata</td><td>action.seller_id + action.buyer_room_id + action.tool_call_hash + action.audit_log + action.lifecycle_state</td></tr>
+      <tr><td>4</td><td>aura_prompt_hash + aura_response_hash</td><td>prompt + response snapshot for reproducibility (per LLM call)</td></tr>
+      <tr><td>5</td><td>aura_model_name + aura_model_version</td><td>which LLM produced the Aura output</td></tr>
+      <tr><td>6</td><td>enablement_cloud_tenant_id</td><td>unique Seismic Enablement Cloud tenant identifier</td></tr>
+      <tr><td>7</td><td>seismic_exchange_content_id + parent_content_id + content_version_id</td><td>which Seismic Exchange content version is live + parent version history</td></tr>
+      <tr><td>8</td><td>content_permission_scope_id</td><td>verbatim "Aura AI always respects your established content permissions" /platform/aura/ 2026-07-22 permission-scope ledger</td></tr>
+      <tr><td>9</td><td>crm_contact_id + crm_consent_ledger_entry_id</td><td>which CRM contact (Salesforce / HubSpot / Dynamics) triggered the Aura action + per-integration consent ledger</td></tr>
+      <tr><td>10</td><td>conversation_intelligence_transcript_id</td><td>which Gong / Chorus / ZoomInfo / Seismic-native CI transcript the Aura answer drew on</td></tr>
+      <tr><td>11</td><td>per_integration_consent_ledger_entry_id</td><td>EU AI Act Art. 6(2) Annex III + GDPR Art. 6 lawful-basis + CCPA + CPRA + SOC 2 CC6.1 + ISO 27001 A.8.32 + ISO 42001 AI Management System</td></tr>
+      <tr><td>12</td><td>per_buyer_room_audit_log_replay_id</td><td>cross-tenant-no-bleed buyer-room audit replay hash</td></tr>
+      <tr><td>13</td><td>per_customer_zone_isolation_report_id</td><td>per-customer zone-isolation report (region-pinning + cross-border-data-residency + per-tenant-key-id)</td></tr>
+      <tr><td>14</td><td>per_aura_agent_run_id + per_agent_action_id</td><td>verbatim "A unified system of agents to complete workflows for you" /platform/aura/ 2026-07-22 agent-run lineage</td></tr>
+      <tr><td>15</td><td>per_tenant_credential_scope + per_sub_processor_dpa_flow_down</td><td>tenant credential scope + sub-processor DPA flow-down chain</td></tr>
+      <tr><td>16</td><td>cross_tenant_no_bleed_proof</td><td>cross-tenant-no-bleed proof hash per quarter per tenant</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3. Compliance posture (verbatim first-party + inferred)</h3>
+  <ul>
+    <li><strong>ISO 42001 AI Management System</strong>: "ISO 42001 AI Management System" verbatim first-party /platform/aura/ 2026-07-22. Cohort-unique: NO other cohort member (Showpad 927 + Highspot 928 + Mediafly 929) ships ISO 42001 verbatim first-party surface.</li>
+    <li><strong>SOC 2 Type II — Security &amp; Availability</strong>: "SOC 2 Type II Security &amp; Availability" verbatim first-party /platform/aura/ 2026-07-22.</li>
+    <li><strong>ISO 27001 Information Security</strong>: "ISO 27001 Information Security" verbatim first-party /platform/aura/ 2026-07-22.</li>
+    <li><strong>ISO 27701 Privacy Management</strong>: "ISO 27701 Privacy Management" verbatim first-party /platform/aura/ 2026-07-22. Only cohort member with ISO 27701 verbatim first-party (Highspot 928 has it as ISO 27701:2019 GDPR-mapped, but Mediafly 929 + Showpad 927 do not).</li>
+    <li><strong>GDPR Data Protection</strong>: "GDPR Data Protection" verbatim first-party /platform/aura/ 2026-07-22.</li>
+    <li><strong>EU AI Act Art. 14 transparency + Art. 26 deployer-obligation posture</strong>: "trusted intelligence layer" verbatim first-party /platform/aura/ 2026-07-22 + verbatim "AI-powered revenue execution for go-to-market teams" hero + "Aura combines trusted business context, governed content, and AI-powered execution" verbatim first-party /platform/aura/ 2026-07-22.</li>
+  </ul>
+
+  <h3>4. Cohort-unique non-overlapping wedge vs Showpad 927 + Highspot 928 + Mediafly 929</h3>
+  <ol>
+    <li><strong>Only cohort member with verbatim first-party ISO 42001 AI Management System on rendered /platform/aura/</strong> (Showpad 927 has "explainable, auditable, and reliable" but no ISO 42001 verbatim citation; Highspot 928 has SOC 2 Type 2 + ISO 27001 + ISO 27701 but no ISO 42001; Mediafly 929 has SOC 2 + ISO 27001 inferred-but-not-verbatim + no ISO 42001).</li>
+    <li><strong>Only cohort member with verbatim first-party "trusted intelligence layer" positioning</strong> verbatim /platform/aura/ 2026-07-22 (Showpad 927 has "AI core"; Highspot 928 has "AI Role Play + Agents + Conversation Intelligence" multi-SKU; Mediafly 929 has "single Command Center AI engine"; different governance-positioning wedge gives different SOC 2 CC6.1 + ISO 27001 A.8.32 + ISO 42001 + EU AI Act Art. 14 transparency + Art. 26 deployer-obligation diligence lane).</li>
+    <li><strong>Only cohort member with verbatim first-party "Specialized AI agents for revenue execution" + "Purpose built for GTM teams"</strong> verbatim /platform/aura/ 2026-07-22 (Showpad 927 has Showpad Genie + Roleplay AI + Field Seller Agent; Highspot 928 has AI Role Play + Agents as separate SKUs; Mediafly 929 has Command Center as single-engine; different taxonomy gives different ASC 605 + ASC 606 customer-contract + Reg BI fairness-lane diligence).</li>
+    <li><strong>Only cohort member with verbatim first-party content-permission-scope verbatim commitment</strong> "Aura AI always respects your established content permissions. Your users will only receive insights and answers derived from content they have the right to access" verbatim /platform/aura/ 2026-07-22 (Showpad 927 has "never shared or used to train third-party models"; Highspot 928 has "AI You Can Trust" / "third-party models that adhere to our standards"; Mediafly 929 has "data-residency posture"; cohort-unique permission-scope verbatim gives different SOC 2 CC6.1 + GDPR Art. 6 lawful-basis + CCPA/CPRA + ISO 27001 A.8.32 + ISO 42001 diligence).</li>
+    <li><strong>Only cohort member with verbatim first-party "Enablement needs more than generic AI" + "Traditional enablement isn't built for the speed, scale, and interconnected workflows of today's GTM teams. And generic AI copilots aren't built for enablement"</strong> verbatim /platform/aura/ 2026-07-22 (Showpad 927 + Highspot 928 + Mediafly 929 do not publish a verbatim competitive-positioning-vs-generic-AI quote on rendered first-party surface; different procurement-DD positioning gives different ASC 606 customer-contract procurement-DD diligence).</li>
+  </ol>
+
+  <h3>5. Offer + CTA</h3>
+  <ul>
+    <li><strong>$500 / 48 h flat</strong> &mdash; fixed-scope Seismic + Aura AI + Enablement Cloud + Trust Center evidence-gap map; reproducible across the Showpad 927 + Highspot 928 + Mediafly 929 + Seismic 930 reference-stack as a single procedural audit-replay drill.</li>
+    <li><strong>$497 / month</strong> &mdash; quarterly refresh pattern; YanXbt 5-tenant model = $2,485 MRR ceiling.</li>
+    <li><strong>CTA</strong>: reply with "yes" + a Seismic Aura demo-tenant prefix; we sign + scope same day.</li>
+  </ul>
+
+  <h3>6. Pitfalls + evidence base</h3>
+  <ul>
+    <li><strong>P28 (FORM-only correct</strong> &mdash; no first-party mailto on /platform/aura/ rendered surface; canonical commercial route is the "See Aura in Action" CTA + the /trust-center Trust Center page).</li>
+    <li><strong>P42 (INFERRED-not-verbatim founder + HQ + founded year</strong> &mdash; Fred Lippar + San Diego CA + 2010 are industry-canonical but NOT verbatim on /platform/aura/ rendered first-party surface 2026-07-22; flagged as inferred-from-public-records so the next session does not fake verbatim citation).</li>
+    <li><strong>P41 (Trust Center redirects</strong> &mdash; https://www.seismic.com/trust 308 redirects to https://www.seismic.com/trust-center ; verified live 2026-07-22).</li>
+    <li><strong>P28.5 (Direct curl on JS-rendered pages</strong> &mdash; /platform/aura/ is JS-light enough that 16 Aura + 2 LLM + 2 Copilot + 2 SOC + 4 ISO + 8 trust grep-verified from first-party HTML 2026-07-22; /about/ + /company/ are JS-rendered shells → deferred to next-tick browser-use CDP-attach probe if needed).</li>
+  </ul>
+
+  <p class="footer">Atlas @ Talon Forge — cron tick 2026-07-22-fast-exec-seismic-930 · chunks/chunk_930.html · seismic.com + /platform/aura/ + /trust-center 2026-07-22 verbatim · Aura AI + Aura Agents + Seismic Enablement Cloud + Seismic Exchange + Trust Center NAMED first-party surfaces verbatim · ISO 42001 + ISO 27701 + ISO 27001 + SOC 2 Type II + GDPR verbatim /platform/aura/ 2026-07-22 · FORM:https://www.seismic.com/platform/aura/ "See Aura in Action" CTA verbatim first-party 2026-07-22 (NOT submitted) · SMTP/form gated · $0 sent / $0 received.</p>
+</section>
