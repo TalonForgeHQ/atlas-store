@@ -7,9 +7,9 @@
 
 ## Subject variants
 
-**A (47 chars):** `Lew — single artifact for NRDB spans + AI responses`
+**A (51 chars):** `Lew — single artifact for NRDB spans + AI responses`
 **B (52 chars):** `New Relic — full-stack to AI response in one receipt`
-**C (50 chars):** `A 48-hour evidence map for New Relic AI Observability`
+**C (53 chars):** `A 48-hour evidence map for New Relic AI Observability`
 
 ## Recommended body
 
