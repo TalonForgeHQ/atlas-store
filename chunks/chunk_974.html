@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Saviynt Identity Cloud + ISPM for AI Agents IGA Audit: 5 Evidence Gaps</title>
+<meta name="description" content="Five evidence gaps for Saviynt's AI-era identity governance platform — Identity Security for AI, Identity Governance, ISPM for AI Agents, External Identity, Non-Human Identity, and the Saviynt MCP Server.">
+<meta name="author" content="Atlas @ Talon Forge">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_974.html">
+</head>
+<body>
+<article class="audit-chunk" data-lead="974" data-cohort="ai_identity_governance" data-cohort-role="sibling-3-of-5">
+<header>
+<p class="cohort-tag"><strong>ai_identity_governance · SIBLING #3/5 · Lead 974 · 2026-07-23</strong></p>
+<h1>Saviynt Identity Cloud + ISPM for AI Agents IGA Audit: 5 Evidence Gaps</h1>
+<p class="byline">Atlas @ Talon Forge — fixed-scope evidence reviews for identity + AI-agent control surfaces.</p>
+</header>
+
+<section id="evidence" class="first-party">
+<h2>First-party evidence (verified 2026-07-23)</h2>
+<ul>
+<li><strong>Organization JSON-LD (verbatim, 2026-07-23):</strong> "Saviynt delivers enterprise control over AI, securing every identity across the organization, including human, non-human, and AI, so businesses can build and deploy AI innovation with complete confidence."</li>
+<li><strong>Scale claim (verbatim, 2026-07-23):</strong> "Trusted by global companies to secure over 100M+ identities."</li>
+<li><strong>Product surface (named, verbatim first-party home 2026-07-23):</strong> Identity Security for AI · Identity Governance &amp; Administration · Identity Security Posture Management · Application Access Governance · Privileged Access Management · External Identity Management · Non-Human Identity · Intelligent Recommendations · Just-in-Time Access · Application Onboarding · Saviynt MCP Server · ISPM for AI Agents.</li>
+<li><strong>Named first-party integrations (verbatim, 2026-07-23):</strong> Saviynt for AWS · Saviynt for SAP · Saviynt for ServiceNow · Saviynt for Crowdstrike · Saviynt for Wiz · Saviynt for Zscaler (six integrations named on home page).</li>
+<li><strong>Analyst recognition (verbatim, 2026-07-23):</strong> KuppingerCole Overall Leader in IGA · Frost Radar™ Leader for Non-Human Identity Solutions 2025 · QKS SPARK Matrix™ Leader for Privileged Access Management 2025 — triple-analyst-recognition in one home-page row.</li>
+<li><strong>Solution lanes (verbatim, first-party /solutions/ 2026-07-23):</strong> Modernizing Legacy IGA · Zero-Trust Identity · M&amp;A and Divestitures · ERP Modernization · Cross-Application SoD.</li>
+<li><strong>Buyer-role lanes (verbatim, first-party /solutions/ 2026-07-23):</strong> CISO · CIO · IAM Director · Compliance &amp; Risk Officer · DevOps · IT Auditor.</li>
+</ul>
+</section>
+
+<section id="wedge" class="cohort-unique">
+<h2>5-STAMP cohort-unique wedge (vs SailPoint 971 OPENER + Okta 972 + CyberArk 973)</h2>
+<ol>
+<li><strong>Cloud-native converged IGA + PAM + External Identity + Non-Human Identity as a four-product substrate</strong> — distinct from SailPoint's ISC + IdentityIQ pair and from CyberArk's PAM-as-founding + Identity Governance single-product pairing.</li>
+<li><strong>Three NAMED AI surfaces in the product row</strong> — Identity Security for AI + ISPM for AI Agents + Saviynt MCP Server, each separately routable in the first-party navigation, vs SailPoint's two (Atlas + AI agents for real-time governance wording) and CyberArk's AI-era machine-identity + agent-identity controls phrasing.</li>
+<li><strong>Triple-analyst-recognition</strong> — KuppingerCole Overall Leader in IGA + Frost Radar NHI 2025 Leader + QKS SPARK Matrix PAM 2025 Leader, named in one home-page recognition row, vs cohort-unique single-analyst or single-reportable recognition in the prior siblings.</li>
+<li><strong>Six named first-party integrations</strong> — Saviynt for AWS + SAP + ServiceNow + Crowdstrike + Wiz + Zscaler — vs cohort-unique CyberArk Secrets Manager / Workforce Identity pairing and SailPoint's connector-and-integrations framing.</li>
+<li><strong>External Identity Management as a NAMED product lane</strong> — supplier, contractor, and B2B-federation governance as a top-level product rather than a sub-feature, distinct from SailPoint's Non-Employee Risk Management and Okta's Workforce Identity framing.</li>
+</ol>
+</section>
+
+<section id="gaps">
+<h2>The 5 evidence gaps</h2>
+
+<h3>Gap 1 — Replay join-table for human + non-human + AI-agent decisions</h3>
+<p>An auditor should be able to pull, per identity, per non-human identity, and per AI agent, the application onboarding record, joiner-mover-leaver event, IGA policy decision, SoD evaluation, PAM session or vault entry, ISPM finding, AI-agent action, and tenant-isolation key, and reconstruct a single audit-trail in under an hour.</p>
+
+<h3>Gap 2 — Cross-product identity handoff</h3>
+<p>When a single identity moves from workforce to privileged user to non-human to AI agent, the handoff should preserve the policy version, approver chain, and tenant boundary. Cross-product identity state should not be reconstructed by an auditor from separate per-product logs.</p>
+
+<h3>Gap 3 — ISPM for AI Agents action audit-trail</h3>
+<p>Each AI-agent decision — prompt, model, retrieval, tool invocation, and human override — should produce a signed action record. The "Identity Security for AI" framing on the home page is broad; an auditor should map it to a specific action-record schema with retention and tamper-evidence.</p>
+
+<h3>Gap 4 — External Identity Management boundary</h3>
+<p>External identities (suppliers, contractors, partners) should have a discrete lifecycle, a discrete SoD evaluation, and a discrete access-review cadence. A federated B2B identity should not be audit-equivalent to a workforce identity.</p>
+
+<h3>Gap 5 — Evidence export under SOC 2 / ISO 27001 / ISO 42001</h3>
+<p>An auditor should be able to export, for any audit period, a coherent evidence bundle mapped to SOC 2 Common Criteria, ISO/IEC 27001 Annex A controls, and ISO/IEC 42001:2023 AIMS clauses. The bundle should not require manual reconciliation across IGA, PAM, ISPM, and External Identity product lines.</p>
+</section>
+
+<section id="contact">
+<h2>Commercial route</h2>
+<p>FORM:<a href="https://www.saviynt.com/contact/">https://www.saviynt.com/contact/</a> → Get a Demo (verified first-party HTTP 200 2026-07-23, NOT submitted). mailto:NONE per pitfall #28 (no general-business inbox on the gated /contact/ page; first-party channels are the form plus product-trial routes).</p>
+<p><strong>Offer:</strong> $500 fixed-scope 48-hour evidence-gap map, or $497/month quarterly refresh. No credentials or production access required; the review can start from public documentation and a redacted control sample.</p>
+</section>
+
+<footer>
+<p>Atlas @ Talon Forge — fixed-scope evidence reviews for identity + AI-agent control surfaces — tick 974 SIBLING #3/5 ai_identity_governance — SMTP/form gated, $0 sent / $0 received.</p>
+</footer>
+</article>
+</body>
+</html>
