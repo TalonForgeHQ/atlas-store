@@ -3344,4 +3344,10 @@
     <priority>0.85</priority>
   </url>
     <url><loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_979.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url>
+    <loc>https://talonforgehq.github.io/atlas-store/chunks/chunk_980.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
