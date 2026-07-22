@@ -42,4 +42,4 @@
     "reason": "SMTP/form gated; no send, submission, payment, or revenue claim was fabricated.",
     "timestamp": "2026-07-22"
   }
-]
+]{"ts": "2026-07-23T04:42:00Z", "tick": 979, "vendor": "Teleport", "vertical": "ai_infrastructure_identity_pam", "cohort_role": "OPENER #1/5", "channel": "FORM-NOT-SUBMITTED", "form_url": "https://goteleport.com/contact-sales/", "status": "template-only", "sent": false, "received": false, "amount_usd": 0, "notes": "FORM-only commercial route; mailto:NONE per pitfall #28; SMTP/form gated."}
