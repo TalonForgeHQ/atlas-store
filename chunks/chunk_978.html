@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Identity Governance Vendor Benchmark: 5 Access Evidence Gaps</title>
+<meta name="description" content="A five-vendor AI identity governance benchmark for SailPoint, Okta, CyberArk, Saviynt, and Microsoft Entra ID Governance covering agent access lineage, approval, privilege, revocation, and audit export.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_978.html">
+<style>
+body{font-family:Arial,sans-serif;max-width:940px;margin:auto;padding:32px;line-height:1.65;color:#172033;background:#f8fafc}
+main{background:#fff;padding:32px;border-radius:14px}
+h1,h2{color:#123b65}.proof{background:#eff6ff;padding:16px;border-left:4px solid #2563eb}.cta{background:#0f172a;color:#fff;padding:20px;border-radius:10px}.cta a{color:#93c5fd}table{border-collapse:collapse;width:100%}th,td{border:1px solid #cbd5e1;padding:9px;text-align:left}th{background:#e2e8f0}
+</style>
+</head>
+<body>
+<main data-tick="2026-07-23-fast-exec-identity-governance-vendor-benchmark-978" data-cohort="ai_identity_governance">
+<h1>AI Identity Governance Vendor Benchmark: 5 Access Evidence Gaps</h1>
+<p><small>Published July 23, 2026 · Atlas Audit Prep · long-tail keyword: AI identity governance vendor benchmark</small></p>
+<p>SailPoint, Okta, CyberArk, Saviynt, and Microsoft Entra ID Governance approach identity security from different foundations. A useful comparison tests whether each platform can replay a human, workload, non-human, privileged, or AI-agent access decision—not whether five feature lists use the same labels.</p>
+<div class="proof"><strong>Research basis:</strong> this benchmark consolidates five completed vendor-specific evidence maps in the <code>ai_identity_governance</code> cohort. It uses public product and trust surfaces, does not claim access to private controls, and does not assert that any vendor fails a control.</div>
+<h2>Five-platform comparison</h2>
+<table>
+<thead><tr><th>Vendor</th><th>Named substrate</th><th>Replay focus</th></tr></thead>
+<tbody>
+<tr><td>SailPoint</td><td>Atlas, Identity Security Cloud, IdentityIQ, CIEM, AI agents</td><td>Lifecycle and recommendation lineage</td></tr>
+<tr><td>Okta</td><td>Workforce Identity, Customer Identity, Identity Governance, Privileged Access</td><td>Authentication-to-entitlement joins</td></tr>
+<tr><td>CyberArk</td><td>Privileged Access, Workforce Identity, Machine Identity, Secrets Management</td><td>Eligible-to-active privilege and secrets use</td></tr>
+<tr><td>Saviynt</td><td>Identity Security for AI, IGA, PAM, NHI, ISPM for AI Agents, MCP Server</td><td>Converged human, machine, and agent governance</td></tr>
+<tr><td>Microsoft Entra</td><td>Access Reviews, Access Packages, Lifecycle Workflows, PIM, agent governance preview</td><td>Hybrid-directory governance and evidence export</td></tr>
+</tbody>
+</table>
+<h2>Gap 1: identity-to-owner lineage</h2>
+<p>Can an auditor trace one identity from source, sponsor, credential, workload, or agent registration through lifecycle state, requested resource, policy version, entitlement, and final revocation using stable identifiers?</p>
+<h2>Gap 2: decision and approval chain</h2>
+<p>Does each request preserve the recommendation, policy and model version, segregation-of-duties result, approver, justification, ticket, conditional-access result, and final grant or denial without requiring screenshot reconstruction?</p>
+<h2>Gap 3: privileged and agent action boundary</h2>
+<p>Can the export distinguish eligible privilege, just-in-time activation, AI-generated recommendation, autonomous agent action, human approval, emergency override, rollback, and post-action review?</p>
+<h2>Gap 4: failure-path and revocation retention</h2>
+<p>Denied, expired, retried, cancelled, orphaned, dormant, overridden, and rolled-back access states should retain the same actor, reason, timestamp, tenant, region, and policy lineage as successful decisions.</p>
+<h2>Gap 5: regulatory evidence export</h2>
+<p>Can the record support SOC 2, ISO/IEC 27001, ISO/IEC 42001, NIST AI RMF, EU AI Act Article 14 human oversight, NIS2 incident reconstruction, and SEC cyber disclosure evidence requests in a reproducible export?</p>
+<h2>Minimum replay schema</h2>
+<ul>
+<li><code>tenant_id</code>, <code>identity_id</code>, identity type, sponsor, source system, and regional boundary;</li>
+<li>credential or token ID, requested resource, entitlement, policy ID/version, and model version;</li>
+<li>recommendation, SoD result, approver, justification, ticket, activation, and action IDs;</li>
+<li>override, rollback, expiry, revocation, reviewer, failure reason, and final-state timestamps;</li>
+<li>control ID/version, evidence SHA-256, exporter identity, retention state, and export hash.</li>
+</ul>
+<h2>How to run the benchmark</h2>
+<ol>
+<li>Select one representative human, workload, privileged, or AI-agent access journey per platform.</li>
+<li>Request the complete replay package, including denied, expired, overridden, and revoked states.</li>
+<li>Normalize all five packages into the minimum schema above.</li>
+<li>Score each required join red, amber, or green.</li>
+<li>Document which missing joins still require screenshots, support tickets, or manual testimony.</li>
+</ol>
+<h2>What identity and compliance teams should receive</h2>
+<p>The output should be a five-row comparison, the highest-priority missing receipts, one sample identity-to-decision-to-action replay, and a Trust Center or procurement publication checklist. The goal is a reproducible evidence map rather than a generic vendor ranking.</p>
+<div class="cta"><strong>Fixed-scope option:</strong><br>$2,000 five-vendor benchmark, $500 single-platform evidence-gap map delivered in 48 hours, or $497/month quarterly refresh.<br><a href="https://talonforgehq.github.io/atlas-store/">View Atlas Audit Prep</a></div>
+<p><small>Staging-only research artifact. No email or form was submitted. SMTP/form gated; $0 sent / $0 received.</small></p>
+</main>
+</body>
+</html>
