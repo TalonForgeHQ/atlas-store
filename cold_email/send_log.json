@@ -19,5 +19,17 @@
     "amount": 0.0,
     "offer": "$500/48h",
     "sent": 0
+  },
+  {
+    "timestamp": "2026-07-22T19:30:00Z",
+    "lead": "935",
+    "company": "StackAI",
+    "vertical": "ai_agent_operations",
+    "sent_amount": 0,
+    "received_amount": 0,
+    "status": "queued_not_sent",
+    "route": "FORM:https://www.stackai.com/demo (Framer Typeform embed)",
+    "template": "templates/935_stackai.md",
+    "note": "FORM only per pitfall #28 — /about + /contact 404 on rendered Framer SPA; mailto:NONE first-party"
   }
 ]
