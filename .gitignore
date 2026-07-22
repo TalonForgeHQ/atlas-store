@@ -6,6 +6,7 @@ __pycache__/
 !install-*.log
 !install-*.done
 .DS_Store_tmp/
+_scratch/
 
 # Local credentials and sender state must never be committed.
 .env
