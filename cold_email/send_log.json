@@ -650,4 +650,16 @@
     "status": "noop",
     "note": "SMTP/form gated; no submission performed in this tick"
   }
-]
+],
+  {
+    "lead": 928,
+    "name": "Highspot",
+    "vertical": "ai_revenue_enablement_for_field_sales",
+    "route": "FORM:https://www.highspot.com/request-a-demo/",
+    "template": "928_highspot.md",
+    "status": "queued_not_sent",
+    "queued_at": "2026-07-22T17:50:00.000000Z",
+    "id": "928-highspot-fast-exec",
+    "cohort_role": "sibling-2-of-5",
+    "notes": "Highspot 928 ships SIBLING #2/5 of ai_revenue_enablement_for_field_sales after Showpad 927 OPENER #1/5. Robert Wahbe CEO + Dr Oliver Sharp SVP AI + David Wortendyke CTO founders verbatim first-party /leadership/ + Tier-1 investors ICONIQ + Salesforce Ventures + OpenView + Shasta + Madrona + Sapphire + Tiger Global + 20M-user installed base + Aetna/FedEx/HSBC/Nvidia/Siemens customer roster + 'first and only patent for AI in enablement' + SOC 2 Type 2 + ISO 27001:2022 + ISO 27701:2019 verbatim /trust/ + AI Role Play + Agents + Conversation Intelligence product taxonomy. $0 sent / $0 received."
+  }
