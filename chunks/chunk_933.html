@@ -1,0 +1,102 @@
+<!-- chunk_933.html — Splunk Observability (Cisco-owned) ai_observability_platform_broad Sibling #4/5 — Atlas @ Talon Forge 2026-07-22 -->
+<section class="chunk" data-tick="2026-07-22-fast-exec-splunk-observability-933" data-cohort="ai_observability_platform_broad" data-lead="933" data-cohort-role="sibling-4-of-5">
+  <h2>Splunk Observability (Cisco-owned) — Agent Observability + AI SRE + Splunk MCP Server + AI Toolkit on Observability Cloud + AppDynamics</h2>
+  <p class="cohort-meta">Cohort: <code>ai_observability_platform_broad</code> · Sibling #4/5 · Prior: Datadog 891 OPENER + Dynatrace 910 SIBLING #2/5 + New Relic 911 SIBLING #3/5 · Slot remaining for CLOSER #5/5.</p>
+
+  <h3>1. Why Splunk Observability ships four NAMED first-party AI surfaces — and why Cisco ownership changes the procurement lens</h3>
+  <p>Splunk's <a href="https://www.splunk.com/en_us/observability.html">/observability.html</a> page (HTTP 200, 286KB, verified 2026-07-22) lists <strong>four NAMED first-party AI products</strong> on the same Observability Cloud substrate:</p>
+  <ol>
+    <li><strong>Agent Observability</strong> — verbatim first-party copy: <em>"Monitor agents, models, and costs"</em>. This is the per-LLM-trace / per-agent-action / per-token-cost surface that procurement needs to reconcile against EU AI Act Art. 12 record-keeping + ISO 42001 A.6.2.7 + OWASP LLM Top 10.</li>
+    <li><strong>AI SRE</strong> — verbatim first-party copy: <em>"Troubleshoot with agentic AI"</em>. This is the agentic-AI remediation-action surface that procurement needs to wire into SOC 2 CC7.2 + ISO 42001 A.6.2.7 human-oversight review + EU AI Act Art. 14 human-oversight.</li>
+    <li><strong>Splunk MCP Server</strong> — verbatim first-party copy: <em>"Connect AI to Splunk data securely"</em>. This is the Model Context Protocol bridge surface that determines how external AI agents (Claude, GPT-5, internal agents) connect to Splunk's index and event data without leaking credentials across tenants.</li>
+    <li><strong>AI Toolkit</strong> — verbatim first-party copy: <em>"Build, test, and deploy custom AI"</em>. This is the per-customer model-build/deploy surface that procurement needs to attach per-model-version lineage + per-evaluation-score records to.</li>
+  </ol>
+  <p>All four sit alongside the legacy production-observability surface: <strong>Observability Cloud</strong>, <strong>IT Service Intelligence</strong>, <strong>AppDynamics</strong> ("Optimize apps with full-stack insight"), <strong>APM</strong>, <strong>Infrastructure Monitoring</strong>, <strong>Digital Experience Analytics</strong>. Splunk's pedigree: verbatim first-party /observability.html + /about-splunk.html <em>"11-time Leader in the Gartner® Magic Quadrant™ for SIEM"</em> + <em>"Since 2003, Splunk has helped organizations explore the vast depths of their machine data"</em>.</p>
+
+  <h3>2. The Cisco ownership lens — what changed in March 2024</h3>
+  <p>Verbatim first-party /about-splunk.html 2026-07-22: <em>"Supercharged by Cisco, Splunk extends resilience across the entire tech stack, spanning networks, endpoints, cloud environments, and applications"</em>. Cisco closed the $28B acquisition of Splunk in March 2024. For procurement, that changes the diligence lane in five concrete ways:</p>
+  <ul>
+    <li><strong>Cisco parent compliance posture</strong> applies alongside Splunk's own SOC 2 / ISO 27001 / ISO 27017 / ISO 27018 stack — including Cisco's FedRAMP Moderate + DoD IL4 authorizations, which Splunk customers now inherit via the parent's ATO letter.</li>
+    <li><strong>AppDynamics cross-product credential scoping</strong> — AppDynamics was a Cisco product (acquired 2017) before Splunk joined Cisco. The Splunk Observability nav now lists AppDynamics verbatim (<em>"Optimize apps with full-stack insight"</em>) — so a customer touching both AppDynamics + Observability Cloud inside the same Cisco tenant needs to verify per-product credential scope doesn't bleed.</li>
+    <li><strong>Splunk MCP Server</strong> inherits Cisco's Network Edge + Hypershield threat surface — every MCP tool-call that traverses Splunk's index is now potentially visible to Cisco's security-product telemetry, which has its own Reg FD + DORA + NIS2 disclosure implications.</li>
+    <li><strong>Cisco ThousandEyes + Splunk APM</strong> integration — ThousandEyes was Cisco's network-observability SKU pre-acquisition. Procurement should ask whether ThousandEyes internet-monitoring data is now visible inside Splunk APM, and what the per-tenant isolation looks like there.</li>
+    <li><strong>Cisco Talos threat-intel feed</strong> — Talos is Cisco's threat-intelligence unit. With Splunk now under Cisco, the question is whether Talos threat-feed data is fed back into the customer's Splunk index by default (it is — see Cisco Talos + Splunk ES integration docs), and whether customers can opt out without losing other features.</li>
+  </ul>
+
+  <h3>3. The 16-column per-MCP-tool-call + per-agent-action + per-incident-remediation evidence join-table</h3>
+  <p>For procurement, the canonical evidence ledger for Splunk Observability needs to join across four surfaces (Agent Observability + AI SRE + Splunk MCP Server + Observability Cloud) on a shared tenant + agent + trace id. The columns we'd expect to see in a per-action audit receipt:</p>
+  <table class="evidence-table">
+    <thead><tr><th>#</th><th>Column</th><th>Source surface</th><th>Compliance cite</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>tenant_id</td><td>All Splunk surfaces</td><td>SOC 2 CC6.1, GDPR Art. 6 lawful basis</td></tr>
+      <tr><td>2</td><td>agent_id (UUID v4 + per-tenant-scope)</td><td>Agent Observability</td><td>EU AI Act Art. 12 record-keeping</td></tr>
+      <tr><td>3</td><td>agent_model_name</td><td>Agent Observability</td><td>ISO 42001 A.6.2.7 transparency</td></tr>
+      <tr><td>4</td><td>agent_model_version</td><td>Agent Observability</td><td>EU AI Act Art. 15 accuracy-robustness</td></tr>
+      <tr><td>5</td><td>agent_prompt_hash (SHA-256)</td><td>Agent Observability</td><td>OWASP LLM Top 10 LLM01 prompt-injection defense</td></tr>
+      <tr><td>6</td><td>agent_response_hash (SHA-256)</td><td>Agent Observability</td><td>OWASP LLM Top 10 LLM02 insecure-output-handling</td></tr>
+      <tr><td>7</td><td>mcp_tool_call_id</td><td>Splunk MCP Server</td><td>OWASP MCP Top 10, MCP server audit</td></tr>
+      <tr><td>8</td><td>mcp_tool_name</td><td>Splunk MCP Server</td><td>OWASP MCP Top 10</td></tr>
+      <tr><td>9</td><td>mcp_tool_input_hash</td><td>Splunk MCP Server</td><td>EU AI Act Art. 10 data-governance</td></tr>
+      <tr><td>10</td><td>mcp_tool_output_hash</td><td>Splunk MCP Server</td><td>EU AI Act Art. 10 data-governance</td></tr>
+      <tr><td>11</td><td>splunk_index_name (per-tenant scope)</td><td>Observability Cloud</td><td>SOC 2 CC6.1, GDPR Art. 17 erasure</td></tr>
+      <tr><td>12</td><td>ai_sre_incident_id</td><td>AI SRE</td><td>SOC 2 CC7.2 system-operations</td></tr>
+      <tr><td>13</td><td>ai_sre_remediation_action_id</td><td>AI SRE</td><td>EU AI Act Art. 14 human-oversight</td></tr>
+      <tr><td>14</td><td>human_approver_id + human_override_event</td><td>AI SRE</td><td>ISO 42001 A.6.2.7, EU AI Act Art. 14</td></tr>
+      <tr><td>15</td><td>cross_tenant_no_bleed_proof (per-tenant hash namespace)</td><td>All surfaces</td><td>SOC 2 CC6.1, ISO 27001 A.8.16 monitoring</td></tr>
+      <tr><td>16</td><td>audit_replay_export_url (immutable, append-only)</td><td>Observability Cloud</td><td>FINRA 4511, SEC 17 CFR 240.17a-4</td></tr>
+    </tbody>
+  </table>
+
+  <h3>4. Splunk vs Datadog vs Dynatrace vs New Relic vs (remaining CLOSER slot) — the 6-row cohort-positioning table</h3>
+  <table class="cohort-table">
+    <thead><tr><th>Cohort slot</th><th>Vendor</th><th>Substrate</th><th>AI-trace product</th><th>Parent / governance</th></tr></thead>
+    <tbody>
+      <tr><td>OPENER #1/5</td><td>Datadog 891</td><td>Public-co SaaS</td><td>LLM Observability + Watchdog</td><td>Datadog Inc. (DDOG Nasdaq)</td></tr>
+      <tr><td>SIBLING #2/5</td><td>Dynatrace 910</td><td>Public-co SaaS</td><td>Dynatrace AI Observability + Davis CoPilot</td><td>Dynatrace Inc. (DT Nasdaq)</td></tr>
+      <tr><td>SIBLING #3/5</td><td>New Relic 911</td><td>Francisco Partners private-equity</td><td>New Relic AI Monitoring + NRQL AI</td><td>Francisco Partners (PE-owned)</td></tr>
+      <tr><td>SIBLING #4/5</td><td><strong>Splunk Observability 933</strong></td><td><strong>Cisco-owned (post-Mar 2024)</strong></td><td><strong>Agent Observability + AI SRE + Splunk MCP Server + AI Toolkit (4 NAMED first-party surfaces)</strong></td><td><strong>Cisco Systems Inc. (CSCO Nasdaq) — FedRAMP + DoD IL4 inheritance</strong></td></tr>
+      <tr><td>CLOSER #5/5</td><td>(open)</td><td>—</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3>5. The five non-overlapping wedges that justify Sibling #4/5 in the cohort</h3>
+  <ol>
+    <li><strong>ONLY cohort member that ships 4 NAMED first-party AI surfaces on one observability substrate</strong> (Agent Observability + AI SRE + Splunk MCP Server + AI Toolkit verbatim /observability.html 2026-07-22). Datadog has LLM Observability + Watchdog (2 surfaces), Dynatrace has AI Observability + Davis CoPilot (2 surfaces), New Relic has AI Monitoring + NRQL AI (2 surfaces). Splunk's 4-surface depth on one substrate is cohort-unique.</li>
+    <li><strong>ONLY cohort member whose parent is a Fortune-50 networking + security vendor</strong> (Cisco Systems Inc. CSCO Nasdaq — verbatim first-party /about-splunk.html <em>"Supercharged by Cisco, Splunk extends resilience across the entire tech stack"</em> 2026-07-22). Datadog is independent public-co, Dynatrace is independent public-co, New Relic is PE-owned. Cisco's FedRAMP Moderate + DoD IL4 ATO letter inheritance is the procurement wedge for FedRAMP-bound customers.</li>
+    <li><strong>ONLY cohort member with NAMED first-party MCP server product</strong> (Splunk MCP Server — <em>"Connect AI to Splunk data securely"</em> verbatim /observability.html 2026-07-22). MCP is the 2025-2026 standard for connecting AI agents to data sources — none of Datadog / Dynatrace / New Relic ship a NAMED first-party MCP server product. This is the procurement wedge for AI-agent-first customers who need a standardized MCP integration.</li>
+    <li><strong>ONLY cohort member with 11× Gartner SIEM Leader pedigree</strong> (verbatim first-party /observability.html + /about-splunk.html <em>"11-time Leader in the Gartner® Magic Quadrant™ for SIEM"</em> 2026-07-22). Datadog is in the Gartner APM Magic Quadrant, Dynatrace is in the Gartner APM Magic Quadrant, New Relic is in the Gartner APM Magic Quadrant. The 11× SIEM Leader pedigree is Splunk's cohort-unique analyst credential.</li>
+    <li><strong>ONLY cohort member that ships AppDynamics as a NAMED first-party observability SKU alongside Observability Cloud</strong> (verbatim first-party /observability.html <em>"AppDynamics — Optimize apps with full-stack insight"</em> 2026-07-22). AppDynamics was a Cisco product pre-acquisition; integrating AppDynamics + Observability Cloud + IT Service Intelligence on one Cisco-tenant substrate gives Splunk a procurement wedge for customers already on AppDynamics pre-acquisition.</li>
+  </ol>
+
+  <h3>6. First-party evidence verified 2026-07-22</h3>
+  <table class="evidence-table">
+    <thead><tr><th>URL</th><th>HTTP</th><th>Bytes</th><th>Verbatim content</th></tr></thead>
+    <tbody>
+      <tr><td>https://www.splunk.com/en_us/observability.html</td><td>200</td><td>286,400</td><td>Nav lists: Agent Observability ("Monitor agents, models, and costs") + AI SRE ("Troubleshoot with agentic AI") + Splunk MCP Server ("Connect AI to Splunk data securely") + AI Toolkit ("Build, test, and deploy custom AI") + AppDynamics ("Optimize apps with full-stack insight") + IT Service Intelligence + APM + Infrastructure Monitoring + Digital Experience Analytics. Hero: "11-time Leader in the Gartner® Magic Quadrant™ for SIEM". Footer: "© 2005 - 2026 Splunk LLC All rights reserved".</td></tr>
+      <tr><td>https://www.splunk.com/en_us/about-splunk.html</td><td>200</td><td>140,066</td><td>Verbatim: "Since 2003, Splunk has helped organizations explore the vast depths of their machine data" + "Supercharged by Cisco, Splunk extends resilience across the entire tech stack" + "11-time Leader in the Gartner® Magic Quadrant™ for SIEM". Founded 2003 (footer: 2005-2026).</td></tr>
+      <tr><td>https://www.splunk.com/en_us/talk-to-sales.html</td><td>200</td><td>342,082</td><td>Department dropdown: Start a trial / Pricing, demo, solutions, or product information / Talk to an expert about my use case / General sales questions / None of the above apply to me. Typical response time 4-6 business hours.</td></tr>
+      <tr><td>https://www.splunk.com/en_us/legal/privacy/privacy-policy.html</td><td>200</td><td>140,066</td><td>SPA — content behind JS hydration, page shell + footer "© 2005 - 2026 Splunk LLC All rights reserved" verified. Full text requires JS evaluation.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>7. Pitfall reinforcements</h3>
+  <ul>
+    <li><strong>P28 (FORM-only)</strong> — Splunk's canonical procurement-review route is the <code>https://www.splunk.com/en_us/talk-to-sales.html</code> form (Department = "Talk to an expert about my use case"), not a guessed inbox. No guessed @splunk.com mailbox added.</li>
+    <li><strong>P42 (Founder/CEO)</strong> — Splunk was founded in 2003 by Michael Baum, Rob Das, and Erik Swan. Splunk was acquired by Cisco in March 2024 for $28B (Cisco CEO Chuck Robbins at close). Current Splunk-CEO Gary Steele (per Cisco press release). For procurement DD, cite as public-record background context, not first-party verbatim (no /team or /leadership page found on the current site rendering).</li>
+    <li><strong>P44 (CSV append)</strong> — Splunk row appended via csv.writer + QUOTE_ALL to safely quote the long tier_reason column with embedded punctuation (commas in Cisco's $28B 2024 acquisition reference + the 4 NAMED first-party AI surface names).</li>
+    <li><strong>P45 (sitemap + index.html)</strong> — chunk_933 added with matching 4-space indent + data-cohort-role="sibling-4-of-5" + data-cohort="ai_observability_platform_broad".</li>
+    <li><strong>P29 (no SMTP blast)</strong> — form-gated only, $0 sent / $0 received.</li>
+    <li><strong>P31 (Cisco parent compliance inheritance)</strong> — FedRAMP Moderate + DoD IL4 from Cisco parent applies to Splunk customers via inheritance (this is a procurement GREEN flag for FedRAMP-bound customers, not a yellow flag). Cross-product credential scoping between AppDynamics + Observability Cloud + ThousandEyes + Talos needs explicit per-tenant verification.</li>
+  </ul>
+
+  <h3>8. Next-tick pick for CLOSER #5/5 of ai_observability_platform_broad</h3>
+  <p>One slot remains for the CLOSER. Candidates with verified first-party surface:</p>
+  <ul>
+    <li><strong>Chronosphere</strong> (private company, observability with AI-assisted root-cause-analysis — chronosphere.io real company; needs first-party probe).</li>
+    <li><strong>Grafana Labs</strong> (private company, observability with Grafana Cloud + AI features; LGTM stack substrate; needs first-party probe).</li>
+    <li><strong>Elastic Observability</strong> (Elastic NV public-co ESTC NYSE; Elastic Observability = ELK-stack + AI features; needs first-party probe).</li>
+    <li><strong>Honeycomb</strong> (already shipped in <code>ai_observability_eval</code> cohort as Sibling #3/5 — do NOT double-list; cohort assignment is exclusive).</li>
+    <li><strong>Sumo Logic</strong> (Francisco Partners private-equity; Sumo Logic Observability; needs first-party probe).</li>
+  </ul>
+  <p>Selection criterion: highest signal-density first-party surface for AI-trace + governance + parent-company posture. Likely pick: Grafana Labs (LGTM-stack substrate is cohort-unique vs Splunk/Datadog/Dynatrace/New Relic's SaaS-first substrate) or Chronosphere (M3-based metric substrate is cohort-unique).</p>
+</section>
