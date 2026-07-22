@@ -33,7 +33,9 @@ I'm asking because I'm about to publish a 5-vendor cohort on this exact stack (T
 
 **Offer:** $500/48h audit OR $497/mo retainer. Deliverable: 30-column evidence-pinning matrix (per-tenant) + ISO/IEC 42001:2023 AIMS coverage + EU AI Act + NIS2 + SEC cyber 8-K + GDPR + HIPAA-aligned posture for Tines + Story Builder + Tines AI + AI Agents cross-tenant lineage. Ireland HQ + EU data-residency + Free tier + public-list-pricing substrate in same frame.
 
-**Cohort context (sibling links):** NEW VERTICAL #26 ai_security_automation. Tines 943 OPENER #1/5. 4 OPEN slots remaining for SIBLINGS #2-5/5 (Torq + Swimlane + Palo Alto XSOAR + Splunk SOAR + Rapid7 InsightConnect + IBM Resilient future candidates). Real companies + real websites + real founders verified live 2026-07-22. SOAR cohort ceiling: $5,000 audit / $5,467/mo MRR across 5-vendor-deep saturation.
+**Cohort context (sibling links):** NEW VERTICAL #26 ai_security_automation. Tines 943 OPENER #1/5. 4 OPEN slots remaining for SIBLINGS #2-5/5 (Torq + Swimlane + Palo Alto XSOAR + Splunk SOAR + Rapid7 InsightConnect + IBM Resilient + ServiceNow Security Operations future candidates). Real companies + real websites + real founders verified live 2026-07-22. SOAR cohort ceiling: $5,000 audit / $5,467/mo MRR across 5-vendor-deep saturation.
+
+**Commercial route (FORM-only, P28):** FORM:https://www.tines.com/contact is the canonical commercial channel — no guessed general-business inbox per pitfall #28.
 
 **Why public:** This is the Tines audit-frame. Eoin Hinchy / Thomas Kinsella get to read it once before anyone else. The audit-frame is honest about gaps + offers a paid delivery window. Standard Atlas cohort practice.
 
