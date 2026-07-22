@@ -7,11 +7,11 @@
 
 ## 3 subject-line A/B/C
 
-**A (audit-letter, role-specific):** "Cisco AI Defense (post-Robust-Intelligence) AI-Firewall evidence-gap map for Cisco-stack vendor DD — 48h, $500"
+**A (52 chars):** `Chuck — AI Defense evidence map for Cisco stack, 48h`
 
-**B (regulation-anchored):** "EU AI Act Art. 53(1)(b) GPAI cascade + NIST AI 600-1 + NIST AI 600-2 GENAI map for Cisco AI Defense + XDR + AppD + ThousandEyes integration"
+**B (65 chars):** `Cisco AI Defense + XDR + Splunk — full AI-Firewall evidence chain`
 
-**C (peer-pressure):** "Cisco AI Defense vs Mindgard vs HiddenLayer vs Pillar Security vs Protect AI — third-party evidence map for Cisco-native procurement-grade review"
+**C (64 chars):** `Cisco AI Defense vs Mindgard + HiddenLayer + Pillar + Protect AI`
 
 ---
 
