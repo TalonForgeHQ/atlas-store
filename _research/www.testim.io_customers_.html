@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta name="google-site-verification" content="27-kusNedGNcuSCWnoSlsfWW7p9TkwG4i7yiJKj1wuk" />
+	<meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="google-site-verification" content="36u-SYbWJ8msHShuN22RumI-JegrwuqJsxrGFqfylts" />
+		<link rel="shortcut icon" type="image/png" href="https://www.testim.io/wp-content/themes/testim/images/favicon.png">
+
+	<!-- optimizely -->
+    <script type="text/rocketlazyloadscript" data-rocket-src="https://cdn.optimizely.com/js/27170140048.js"></script>
+
+    <script type="text/rocketlazyloadscript">
+        function initOptimizely() {
+            console.log('initOptimizely');
+        }
+
+        const optanonCookieValue = document.cookie.split('&').find(row => row.startsWith('groups='));
+        const optanonCookieAccepted = optanonCookieValue && optanonCookieValue.includes('C0002%3A1');
+
+        if (optanonCookieAccepted) {
+            initOptimizely();
+            console.log('Optimizely loaded');
+        } else {
+            console.log('Optimizely not loaded');
+        }
+    </script>
+    <!-- end optimizely -->
+
+	<!-- Google Tag Manager -->
+	<script type="text/rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-T9F9JFF');</script>
+	<!-- End Google Tag Manager -->
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.4 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Customers - AI-driven E2E automation with code-like flexibility for your most resilient tests</title><link rel="preload" href="https://www.testim.io/wp-content/themes/testim/fonts/fontfabric_-_mont_regular-webfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://www.testim.io/wp-content/themes/testim/fonts/fontfabric_-_mont_light-webfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://www.testim.io/wp-content/themes/testim/fonts/fontfabric_-_mont_book-webfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://www.testim.io/wp-content/themes/testim/fonts/fontfabric_-_mont_semibold-webfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://www.testim.io/wp-content/themes/testim/fonts/fontfabric_-_mont_bold-webfont.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://www.testim.io/wp-content/themes/testim/fonts/SourceCodePro-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+<link data-rocket-prefetch href="https://fonts.googleapis.com" rel="dns-prefetch">
+<link crossorigin data-rocket-preload as="font" href="https://www.testim.io/wp-content/themes/testim/fonts/fontfabric_-_mont_semibold-webfont.woff2" rel="preload">
+<link crossorigin data-rocket-preload as="font" href="https://www.testim.io/wp-content/themes/testim/fonts/fontfabric_-_mont_bold-webfont.woff2" rel="preload">
+	<meta name="description" content="Customers trust Testim to ensure quality of their web applications, keep releases on time, and maximize testing ROI." />
+	<link rel="canonical" href="https://www.testim.io/customers/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Customers - AI-driven E2E automation with code-like flexibility for your most resilient tests" />
+	<meta property="og:description" content="Customers trust Testim to ensure quality of their web applications, keep releases on time, and maximize testing ROI." />
+	<meta property="og:url" content="https://www.testim.io/customers/" />
+	<meta property="og:site_name" content="AI-driven E2E automation with code-like flexibility for your most resilient tests" />
+	<meta property="article:modified_time" content="2023-03-21T18:39:35+00:00" />
+	<meta property="og:image" content="https://www.testim.io/wp-content/uploads/2024/04/experience_tricentis_testim.png" />
+	<meta property="og:image:width" content="2400" />
+	<meta property="og:image:height" content="1256" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="AI-driven E2E automation with code-like flexibility for your most resilient tests &raquo; Feed" href="https://www.testim.io/feed/" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left: auto !important;margin-right: auto !important;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='am_includes-js-fancybox-jquery-fancybox-min-css-css' href='https://www.testim.io/wp-content/themes/testim/includes/js/fancybox/jquery.fancybox.min.css?ver=1741200860' media='all' />
+<link rel='stylesheet' id='am_new-styles-css-css' href='https://www.testim.io/wp-content/themes/testim/new-styles.css?ver=1741200860' media='all' />
+<link rel='stylesheet' id='am_style-wp-css-css' href='https://www.testim.io/wp-content/themes/testim/style-wp.css?ver=1741200861' media='all' />
+<link rel='stylesheet' id='am_public-style-css-css' href='https://www.testim.io/wp-content/themes/testim/public/style.css?ver=1746786165' media='all' />
+<link rel='stylesheet' id='am_https-fonts-googleapis-com-cssfamilylibrebaskerville400700font-displayswap-css' href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&#038;font-display=swap&#038;ver=7.0.2' media='all' />
+<link rel='stylesheet' id='am_https-fonts-googleapis-com-cssfamilymontserrat300300i400400i700font-displayswap-css' href='https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700&#038;font-display=swap&#038;ver=7.0.2' media='all' />
+<link rel='stylesheet' id='am_https-fonts-googleapis-com-cssfamilyspacemono700font-displayswap-css' href='https://fonts.googleapis.com/css?family=Space+Mono:700&#038;font-display=swap&#038;ver=7.0.2' media='all' />
+<script type="text/rocketlazyloadscript" id="jquery-core-js" data-rocket-src="https://www.testim.io/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script type="text/rocketlazyloadscript" id="jquery-migrate-js" data-rocket-src="https://www.testim.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script type="text/rocketlazyloadscript" id="js.cookie-js" data-rocket-src="https://www.testim.io/wp-content/plugins/handl-utm-grabber/js/js.cookie.js?ver=7.0.2-b-modified-1741199624"></script>
+<script id="handl-utm-grabber-js-extra">
+var handl_utm = [];
+//# sourceURL=handl-utm-grabber-js-extra
+</script>
+<script type="text/rocketlazyloadscript" id="handl-utm-grabber-js" data-rocket-src="https://www.testim.io/wp-content/plugins/handl-utm-grabber/js/handl-utm-grabber.js?ver=7.0.2-b-modified-1776787077"></script>
+<link rel="https://api.w.org/" href="https://www.testim.io/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.testim.io/wp-json/wp/v2/pages/3634" /><link rel='shortlink' href='https://www.testim.io/?p=3634' />
+
+
+<!-- This site is optimized with the Schema plugin v1.7.9.6 - https://schema.press -->
+<script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.testim.io\/customers\/"},"url":"https:\/\/www.testim.io\/customers\/","headline":"Customers","datePublished":"2020-09-30T11:05:40-07:00","dateModified":"2023-03-21T11:39:35-07:00","publisher":{"@type":"Organization","@id":"https:\/\/www.testim.io\/#organization","name":"AI-driven E2E automation with code-like flexibility for your most resilient tests","logo":{"@type":"ImageObject","url":"","width":600,"height":60}},"author":{"@type":"Person","name":"Testim","url":"https:\/\/www.testim.io\/blog\/author\/testimio19\/","image":{"@type":"ImageObject","url":"https:\/\/www.testim.io\/wp-content\/uploads\/2019\/11\/social_logo@2x-96x96.png","height":96,"width":96},"sameAs":["http:\/\/blog.testim.io"]}}</script>
+
+
+	<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://cdn.bizible.com/scripts/bizible.js" async=""></script>
+
+<style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta name="generator" content="WP Rocket 3.21.1" data-wpr-features="wpr_delay_js wpr_preconnect_external_domains wpr_auto_preload_fonts wpr_automatic_lazy_rendering wpr_image_dimensions wpr_cdn wpr_desktop" /></head>
+
+<body class="wp-singular page-template page-template-page-templates page-template-customers page-template-page-templatescustomers-php page page-id-3634 wp-embed-responsive wp-theme-testim  windows chrome ch133">
+	<div  id="body">
+		<div  id="wrapper" class="page-wrapper">
+
+		
+						<div  class="upper-h-bar pink-bg">
+				<div class="inner-frame">
+					<p><span class="tag"></span> Our premier event for enterprise software quality is back |													<span class="link-handler"><a href="https://events.tricentis.com/transform/?utm_source=wwww.testim.io&utm_medium=referral&utm_campaign=mp_na_transform2026_global_en_2026-03&utm_content=main-nav">Register now</a></span>
+											</p>
+				</div>
+			</div>
+			
+			<header  id="header" class="page-header ">
+				<div class="container">
+					<div class="page-header-f">
+												<a href="https://www.testim.io" class="h-logo">
+															<img width="364" height="162" src="https://www.testim.io/wp-content/uploads/2023/03/Tricentis-Testim_Secondary.jpg" alt="Testim Logo" class="alt"/>
+															
+													</a>
+
+						<div class="nav-frame">
+														<ul class="h-nav">
+								<li class="has-drop col-title">
+<a href="#">Products</a>
+<div class="drop multi-dropdown " data-width="375">
+                                    <ul class="drop-nav">
+<li>
+                                        <a href="https://www.testim.io/ai/" class="i-link ">
+                                            <i class="i">
+                                                <img width="64" height="64" src="https://www.testim.io/wp-content/uploads/2024/04/icon-1-accelerate-app-dev.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">AI-Transformed</span>
+                                                <span class="t-p">Accelerated testing with AI</span>
+                                            </span>
+                                        </a>
+                                    </li>
+<li>
+                                        <a href="https://www.testim.io/test-automation-tool/" class="i-link bg-black">
+                                            <i class="i">
+                                                <img width="26" height="20" src="https://www.testim.io/wp-content/uploads/2021/11/testim@3x.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Testim</span>
+                                                <span class="t-p">Web and mobile app testing</span>
+                                            </span>
+                                        </a>
+                                    </li>
+<li>
+                                        <a href="https://www.testim.io/salesforce-testing/" class="i-link ">
+                                            <i class="i">
+                                                <img width="50" height="50" src="https://www.testim.io/wp-content/uploads/2024/06/testim_salesforce.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Testim Salesforce</span>
+                                                <span class="t-p">Codeless, intuitive, fast</span>
+                                            </span>
+                                        </a>
+                                    </li>
+<li>
+                                        <a href="https://www.testim.io/testim-mobile/" class="i-link ">
+                                            <i class="i">
+                                                <img width="34" height="31" src="https://www.testim.io/wp-content/uploads/2021/02/icon1.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Testim Mobile</span>
+                                                <span class="t-p">iOS and Android testing</span>
+                                            </span>
+                                        </a>
+                                    </li>
+</ul></div>
+</li>
+<li class="has-drop ">
+<a href="#">Solutions</a>
+<div class="drop multi-dropdown multi-cols multi-cols-v2" data-width="630">
+                                    <ul class="drop-nav">
+<li class="side-menu-inner"><div class="side-menu-items"><ul><li><a href="https://www.testim.io/developers/" class="i-link "><span class="t"><span class="t-t">Users</span><span class="t-p"></span></span></a><ul><li><a href="https://www.testim.io/developers/" class="i-link "><i class="i"><img width="20" height="16" src="https://www.testim.io/wp-content/uploads/2021/06/enginnering@3x.svg" alt="" /></i><span class="t"><span class="t-t">Engineers</span><span class="t-p"></span></span></a></li><li><a href="https://www.testim.io/agile-teams/" class="i-link "><i class="i"><img width="22" height="16" src="https://www.testim.io/wp-content/uploads/2021/07/agile@3x.svg" alt="" /></i><span class="t"><span class="t-t">Agile Teams</span><span class="t-p"></span></span></a></li><li><a href="https://www.testim.io/salesforce-testing/" class="i-link "><i class="i"><img width="26" height="20" src="https://www.testim.io/wp-content/uploads/2021/11/salesforce@3x.svg" alt="" /></i><span class="t"><span class="t-t">Salesforce</span><span class="t-p"></span></span></a></li></ul></li></ul></div></li><li class="side-menu-inner"><div class="side-menu-items"><ul><li><a href="https://www.testim.io/fast-authoring/" class="i-link "><span class="t"><span class="t-t">Capabilities</span><span class="t-p"></span></span></a><ul><li><a href="https://www.testim.io/fast-authoring/" class="i-link "><i class="i"><img width="20" height="21" src="https://www.testim.io/wp-content/uploads/2020/03/icon04.svg" alt="" /></i><span class="t"><span class="t-t">Fast Authoring</span><span class="t-p">Speed with flexibility</span></span></a></li><li><a href="https://www.testim.io/test-stability/" class="i-link "><i class="i"><img width="22" height="25" src="https://www.testim.io/wp-content/uploads/2019/11/shield2-ico.svg" alt="" /></i><span class="t"><span class="t-t">Test Stability</span><span class="t-p">Reduce maintenance</span></span></a></li><li><a href="https://www.testim.io/root-cause-analysis/" class="i-link "><i class="i"><img width="20" height="19" src="https://www.testim.io/wp-content/uploads/2020/03/icon05.svg" alt="" /></i><span class="t"><span class="t-t">Root Cause Analysis</span><span class="t-p">Precise troubleshooting</span></span></a></li><li><a href="https://www.testim.io/testops/" class="i-link "><i class="i"><img width="22" height="22" src="https://www.testim.io/wp-content/uploads/2020/03/icon03.svg" alt="" /></i><span class="t"><span class="t-t">TestOps</span><span class="t-p">Scale efficiently</span></span></a></li></ul></li></ul></div></li></ul></div>
+</li>
+<li class="has-drop ">
+<a href="#">Developers</a>
+<div class="drop multi-dropdown " data-width="375">
+                                    <ul class="drop-nav">
+<li class="has-sub-nav">
+                                        <a href="https://help.testim.io/docs/testim-overview" class="i-link ">
+                                            <i class="i">
+                                                <img width="26" height="18" src="https://www.testim.io/wp-content/uploads/2019/11/docs-ico.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Documentation</span>
+                                                <span class="t-p">Start using Testim</span>
+                                            </span>
+                                        </a>
+                                        <div class="two-col-f">
+<ul class="drop-nav-sub">
+<li class=""><a href="https://help.testim.io/docs/creating-your-first-codeless-test">Record test</a></li>
+<li class=""><a href="https://help.testim.io/docs/run-multiple-tests-locally">Run test</a></li>
+<li class=""><a href="https://help.testim.io/docs/integrate-testim-to-your-ci">Connect CI</a></li>
+</ul>
+<ul class="drop-nav-sub">
+<li class=""><a href="https://help.testim.io/docs/api-access">API library</a></li>
+<li class=""><a href="https://help.testim.io/docs/api-testing">API testing</a></li>
+</ul>
+</div>
+                                            </li>
+<li>
+                                        <a href="https://docs.tricentis.com/testim/content/overview/changelog.htm" class="i-link ">
+                                            <i class="i">
+                                                <img width="20" height="20" src="https://www.testim.io/wp-content/uploads/2020/01/overview.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Changelog</span>
+                                                <span class="t-p">See what's new</span>
+                                            </span>
+                                        </a>
+                                    </li>
+</ul></div>
+</li>
+<li class="has-drop ">
+<a href="#">Company</a>
+<div class="drop multi-dropdown " data-width="375">
+                                    <ul class="drop-nav">
+<li>
+                                        <a href="https://www.testim.io/about/" class="i-link ">
+                                            <i class="i">
+                                                <img width="24" height="24" src="https://www.testim.io/wp-content/uploads/2019/11/about-ico.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">About</span>
+                                                <span class="t-p">Our story</span>
+                                            </span>
+                                        </a>
+                                    </li>
+<li>
+                                        <a href="https://www.testim.io/customers/" class="i-link ">
+                                            <i class="i">
+                                                <img width="26" height="24" src="https://www.testim.io/wp-content/uploads/2020/11/Heart@3x.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Customers</span>
+                                                <span class="t-p">Their stories</span>
+                                            </span>
+                                        </a>
+                                    </li>
+<li>
+                                        <a href="https://www.tricentis.com/company/careers" class="i-link ">
+                                            <i class="i">
+                                                <img width="20" height="25" src="https://www.testim.io/wp-content/uploads/2019/11/careers-ico.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Careers</span>
+                                                <span class="t-p">Join us</span>
+                                            </span>
+                                        </a>
+                                    </li>
+<li>
+                                        <a href="https://www.testim.io/partners/" class="i-link ">
+                                            <i class="i">
+                                                <img width="28" height="25" src="https://www.testim.io/wp-content/uploads/2021/01/partners@3x.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Testim Partners</span>
+                                                <span class="t-p">Team up</span>
+                                            </span>
+                                        </a>
+                                    </li>
+</ul></div>
+</li>
+<li class="has-drop ">
+<a href="#">Resources</a>
+<div class="drop multi-dropdown multi-cols multi-cols-v2" data-width="630">
+                                    <ul class="drop-nav">
+<li class="has-sub-nav">
+                                        <a href="https://www.testim.io/resources/" class="i-link ">
+                                            <i class="i">
+                                                <img width="16" height="20" src="https://www.testim.io/wp-content/uploads/2020/06/icon-resources.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Resources</span>
+                                                <span class="t-p">Explore and learn</span>
+                                            </span>
+                                        </a>
+                                        <div class="two-col-f">
+<ul class="drop-nav-sub">
+<li class=""><a href="https://www.testim.io/resources/?type=success-stories">Success Stories</a></li>
+<li class=""><a href="https://www.testim.io/upcoming-events/">Upcoming Events</a></li>
+</ul>
+<ul class="drop-nav-sub">
+<li class=""><a href="https://www.testim.io/webinars/">Webinars</a></li>
+<li class=""><a href="https://www.testim.io/blog/">Blog</a></li>
+</ul>
+</div>
+                                            </li>
+<li>
+                                        <a href="https://www.testim.io/education/" class="i-link ">
+                                            <i class="i">
+                                                <img width="24" height="24" src="https://www.testim.io/wp-content/uploads/2020/05/education-icon-latest.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Education</span>
+                                                <span class="t-p">Certification and training</span>
+                                            </span>
+                                        </a>
+                                    </li>
+<li>
+                                        <a href="https://shiftsync.tricentis.com/#new_tab" class="i-link ">
+                                            <i class="i">
+                                                <img width="25" height="24" src="https://www.testim.io/wp-content/uploads/2020/07/community.svg" alt="" />
+                                            </i>
+                                            <span class="t">
+                                                <span class="t-t">Community</span>
+                                                <span class="t-p">Build connections</span>
+                                            </span>
+                                        </a>
+                                    </li>
+</ul></div>
+</li>
+<li class="">
+<a href="https://www.testim.io/pricing/">Pricing</a>
+							</ul>
+																												<div class="btn-set">
+																								<a href="https://app.testim.io/#/signin" class="btn-link">Login</a>
+																
+																	<a href="https://app.testim.io/#/signup" class="btn btn-sm">Try Testim for Free</a>
+															</div>
+													</div>
+                    <!-- Nav Opener for mobile menu -->
+						<span class="nav-opener">
+							<span></span>
+						</span>
+					</div>
+				</div>
+			</header>
+
+		
+<main  id="main">
+		
+		<div class="cc-hero">
+				<h3 class="section-heading">You’re in good company.</h3>
+				<div class="section-icons">
+						<div class="icons-wrapper">
+				<div class="icons">
+																																								<div class="icon icon-1">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon1.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon1@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-2">
+						<img width="117" height="117" src="https://www.testim.io/wp-content/uploads/2020/10/icon2.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon2@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-3">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon3.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon3@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-4">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/walkme@1x.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/walkme@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-5">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon5.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon5@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-6">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon6.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon6@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-7">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon7.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon7@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-8">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/openweb.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/openweb@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-9">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon9.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon9@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-10">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon10.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon10@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-11">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon11.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon11@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-12">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon12.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon12@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-13">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/fathom@1x.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/fathom@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-14">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon14.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon14@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-15">
+						<img width="59" height="59" src="https://www.testim.io/wp-content/uploads/2020/10/icon15.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon15@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-16">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon16.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon16@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-17">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon17.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon17@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-18">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon18.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon18@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-19">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon19.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon19@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-20">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon20.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon20@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-21">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon23.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon23@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-22">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon24.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon24@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-23">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41.png" srcset="https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41@2x.png 2x" alt="">
+					</div>
+																			</div>
+			</div>
+						<div class="icons-wrapper">
+				<div class="icons">
+																																								<div class="icon icon-1">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon1.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon1@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-2">
+						<img width="117" height="117" src="https://www.testim.io/wp-content/uploads/2020/10/icon2.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon2@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-3">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon3.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon3@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-4">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/walkme@1x.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/walkme@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-5">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon5.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon5@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-6">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon6.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon6@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-7">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon7.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon7@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-8">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/openweb.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/openweb@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-9">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon9.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon9@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-10">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon10.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon10@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-11">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon11.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon11@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-12">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon12.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon12@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-13">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/fathom@1x.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/fathom@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-14">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon14.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon14@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-15">
+						<img width="59" height="59" src="https://www.testim.io/wp-content/uploads/2020/10/icon15.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon15@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-16">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon16.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon16@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-17">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon17.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon17@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-18">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon18.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon18@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-19">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon19.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon19@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-20">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon20.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon20@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-21">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon23.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon23@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-22">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon24.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon24@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-23">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41.png" srcset="https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41@2x.png 2x" alt="">
+					</div>
+																			</div>
+			</div>
+						<div class="icons-wrapper">
+				<div class="icons">
+																																								<div class="icon icon-1">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon1.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon1@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-2">
+						<img width="117" height="117" src="https://www.testim.io/wp-content/uploads/2020/10/icon2.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon2@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-3">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon3.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon3@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-4">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/walkme@1x.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/walkme@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-5">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon5.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon5@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-6">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon6.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon6@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-7">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon7.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon7@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-8">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/openweb.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/openweb@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-9">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon9.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon9@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-10">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon10.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon10@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-11">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon11.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon11@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-12">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon12.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon12@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-13">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/fathom@1x.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/fathom@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-14">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon14.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon14@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-15">
+						<img width="59" height="59" src="https://www.testim.io/wp-content/uploads/2020/10/icon15.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon15@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-16">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon16.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon16@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-17">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon17.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon17@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-18">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon18.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon18@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-19">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon19.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon19@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-20">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon20.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon20@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-21">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon23.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon23@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-22">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon24.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon24@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-23">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41.png" srcset="https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41@2x.png 2x" alt="">
+					</div>
+																			</div>
+			</div>
+						<div class="icons-wrapper">
+				<div class="icons">
+																																								<div class="icon icon-1">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon1.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon1@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-2">
+						<img width="117" height="117" src="https://www.testim.io/wp-content/uploads/2020/10/icon2.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon2@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-3">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon3.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon3@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-4">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/walkme@1x.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/walkme@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-5">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon5.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon5@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-6">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon6.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon6@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-7">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon7.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon7@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-8">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/openweb.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/openweb@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-9">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon9.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon9@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-10">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon10.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon10@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-11">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon11.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon11@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-12">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon12.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon12@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-13">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/fathom@1x.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/fathom@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-14">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon14.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon14@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-15">
+						<img width="59" height="59" src="https://www.testim.io/wp-content/uploads/2020/10/icon15.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon15@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-16">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon16.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon16@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-17">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon17.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon17@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-18">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2020/10/icon18.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon18@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-19">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon19.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon19@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-20">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon20.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon20@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-21">
+						<img width="90" height="90" src="https://www.testim.io/wp-content/uploads/2020/10/icon23.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon23@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-22">
+						<img width="118" height="118" src="https://www.testim.io/wp-content/uploads/2020/10/icon24.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon24@2x.png 2x" alt="">
+					</div>
+																																													<div class="icon icon-23">
+						<img width="153" height="153" src="https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41.png" srcset="https://www.testim.io/wp-content/uploads/2021/12/Rectangle-Copy-41@2x.png 2x" alt="">
+					</div>
+																			</div>
+			</div>
+					</div>
+	</div>
+		
+		
+	
+    	
+		
+		
+		
+		
+		<div class="cc-case">
+		<div class="container">
+						<h3 class="section-heading">Teams ship faster with Testim</h3>
+						<div class="section-items">
+								<div class="item">
+										<div class="item-image">
+						<img width="1100" height="600" src="https://www.testim.io/wp-content/uploads/2020/10/image1.jpg" alt="" />
+					</div>
+																									<div class="item-logo">
+						<img width="128" height="28" src="https://www.testim.io/wp-content/uploads/2020/10/icon1-2.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon1@2x-1.png 2x" alt="" />
+					</div>
+															<div class="item-content">
+						<p>Microsoft’s cybersecurity engineering team started with zero end-to-end tests. They quickly ramped-up Testim, creating 80 stable tests in a six-hour session. They’ve integrated Testim into their DevOps flows and transformed to a quality-driven culture.</p>
+					</div>
+																				<div class="item-link">
+						<a href="https://www.testim.io/resources/microsoft-cyber-defense-shores-up-quality-with-end-to-end-testing/">Read Microsoft’s case study</a>
+					</div>
+									</div>
+								<div class="item">
+										<div class="item-image">
+						<img width="1100" height="600" src="https://www.testim.io/wp-content/uploads/2020/10/image2.jpg" alt="" />
+					</div>
+																									<div class="item-logo">
+						<img width="91" height="26" src="https://www.testim.io/wp-content/uploads/2020/10/icon2-2.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon2@2x-1.png 2x" alt="" />
+					</div>
+															<div class="item-content">
+						<p>JFrog needed faster authoring of stable end-to-end tests to keep up with their rapid feature growth and UI changes. When JFrog had a new platform release in 2020, they built 150 new Testim tests in two weeks, ensuring they met their release deadlines.</p>
+					</div>
+																				<div class="item-link">
+						<a href="https://www.testim.io/resources/jfrog-scales-ui-functional-testing-with-testim-to-release-fast-or-die/">Read jfrog’s case study</a>
+					</div>
+									</div>
+								<div class="item">
+										<div class="item-image">
+						<img width="1100" height="600" src="https://www.testim.io/wp-content/uploads/2020/10/image3.jpg" alt="" />
+					</div>
+																									<div class="item-logo">
+						<img width="129" height="24" src="https://www.testim.io/wp-content/uploads/2020/10/icon3-2.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon3@2x-1.png 2x" alt="" />
+					</div>
+															<div class="item-content">
+						<p>Outbrain was spending nearly a full day to create a Selenium test. This wouldn’t scale. With Testim, they decreased their UI test authoring time by 95% to 20 minutes. They reduced time spent on test automation, including maintenance, by approximately 66%.</p>
+					</div>
+																				<div class="item-link">
+						<a href="https://www.testim.io/resources/outbrain-reduced-test-authoring-time-by-95/">Read Outbrains’s case study</a>
+					</div>
+									</div>
+								<div class="item">
+										<div class="item-image">
+						<img width="1098" height="600" src="https://www.testim.io/wp-content/uploads/2020/10/image4.jpg" alt="" />
+					</div>
+																									<div class="item-logo">
+						<img width="158" height="28" src="https://www.testim.io/wp-content/uploads/2020/10/icon4-2.png" srcset="https://www.testim.io/wp-content/uploads/2020/10/icon4@2x-1.png 2x" alt="" />
+					</div>
+															<div class="item-content">
+						<p>NewsCred needed to increase their release velocity, expand test coverage and minimize maintenance. Now, Testim tests run on every pull request, catching 2-3 bugs each month before they hit production, and developer confidence is soaring.</p>
+					</div>
+																				<div class="item-link">
+						<a href="https://www.testim.io/resources/newscred-grows-developer-confidence-through-test-automation/">Watch NewsCred’s case study</a>
+					</div>
+									</div>
+							</div>
+												<div class="section-button">
+				<a class="btn btn-sm" href="https://www.testim.io/resources/?type=success-stories">See all customer stories</a>
+			</div>
+								</div>
+	</div>
+		
+	
+    	
+		
+		
+		
+		
+		
+		<div class="cc-stats">
+		<div class="container">
+			<div class="section-items">
+								<div class="item">
+										<div class="item-value">20 min</div>
+															<div class="item-text">Microsoft average to create a stable E2E test in Testim</div>
+									</div>
+								<div class="item">
+										<div class="item-value">30%</div>
+															<div class="item-text">Globality increased test coverage 30% in first 30 days</div>
+									</div>
+								<div class="item">
+										<div class="item-value">66%</div>
+															<div class="item-text">Outbrain reduced engineering time spent on test automation </div>
+									</div>
+							</div>
+		</div>
+	</div>
+	
+    	
+		
+		
+		
+		
+		
+	
+    	
+		<div class="cc-testimonials">
+		<div class="container">
+			<div class="section-items">
+								<h3 class="section-heading">What people are saying</h3>
+												<div class="item-wrapper">
+					<div class="item">
+						<div class="item-head">
+							<div class="item-person">
+																<div class="item-avatar">
+									<img width="84" height="84" src="https://www.testim.io/wp-content/uploads/2020/10/Bitmap@2x-1.png" alt="" />
+								</div>
+																<div class="item-info">
+																		<div class="item-name">Maor F</div>
+																											<div class="item-position">Senior Software Engineer</div>
+																	</div>
+							</div>
+														<div class="item-logo">
+								<img width="29" height="30" src="https://www.testim.io/wp-content/uploads/2020/10/G2.png" alt="" />
+							</div>
+													</div>
+												<div class="item-body">
+							<p>“Testim.io is a game changer for anyone who relies on automated tests”</p>
+						</div>
+												<div class="item-foot">
+							<div class="item-stars">
+																								<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 0" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 1" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 2" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 3" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 4" />
+															</div>
+																					<div class="item-link">
+								<a href="https://www.g2.com/products/testim-io/reviews/testim-io-review-3257498">View the full review</a>
+							</div>
+													</div>
+					</div>
+				</div>
+								<div class="item-wrapper">
+					<div class="item">
+						<div class="item-head">
+							<div class="item-person">
+																<div class="item-avatar">
+									<img width="84" height="84" src="https://www.testim.io/wp-content/uploads/2020/10/Bitmap@2x.png" alt="" />
+								</div>
+																<div class="item-info">
+																		<div class="item-name">Anibal C</div>
+																											<div class="item-position">Quality Assurance Analyst</div>
+																	</div>
+							</div>
+														<div class="item-logo">
+								<img width="29" height="30" src="https://www.testim.io/wp-content/uploads/2020/10/G2.png" alt="" />
+							</div>
+													</div>
+												<div class="item-body">
+							<p>“Testim.io is an amazing Automation tool, easy to use and saves a ton of time and steps”</p>
+						</div>
+												<div class="item-foot">
+							<div class="item-stars">
+																								<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 0" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 1" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 2" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 3" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 4" />
+															</div>
+																					<div class="item-link">
+								<a href="https://www.g2.com/products/testim-io/reviews/testim-io-review-3034212">View the full review</a>
+							</div>
+													</div>
+					</div>
+				</div>
+								<div class="item-wrapper">
+					<div class="item">
+						<div class="item-head">
+							<div class="item-person">
+																<div class="item-avatar">
+									<img width="84" height="84" src="https://www.testim.io/wp-content/uploads/2020/10/Bitmap@2x-2.png" alt="" />
+								</div>
+																<div class="item-info">
+																		<div class="item-name">Micah L</div>
+																											<div class="item-position">Co-Founder, Full Stack Developer & Designer</div>
+																	</div>
+							</div>
+														<div class="item-logo">
+								<img width="42" height="42" src="https://www.testim.io/wp-content/uploads/2020/10/Capterra.png" alt="" />
+							</div>
+													</div>
+												<div class="item-body">
+							<p>“Great Product! Best on the market.”</p>
+						</div>
+												<div class="item-foot">
+							<div class="item-stars">
+																								<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 0" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 1" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 2" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 3" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 4" />
+															</div>
+																					<div class="item-link">
+								<a href="https://www.capterra.com/p/165430/Testim/reviews/">View the full review</a>
+							</div>
+													</div>
+					</div>
+				</div>
+								<div class="item-wrapper">
+					<div class="item">
+						<div class="item-head">
+							<div class="item-person">
+																<div class="item-avatar">
+									<img width="84" height="84" src="https://www.testim.io/wp-content/uploads/2020/10/Bitmap@2x-3.png" alt="" />
+								</div>
+																<div class="item-info">
+																		<div class="item-name">Noam R</div>
+																											<div class="item-position">QA Manager</div>
+																	</div>
+							</div>
+														<div class="item-logo">
+								<img width="42" height="42" src="https://www.testim.io/wp-content/uploads/2020/10/Capterra.png" alt="" />
+							</div>
+													</div>
+												<div class="item-body">
+							<p>“It&#8217;s an amazing product. Stable tests created in minutes &amp; results are easily analyzed.”</p>
+						</div>
+												<div class="item-foot">
+							<div class="item-stars">
+																								<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 0" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 1" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 2" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 3" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 4" />
+															</div>
+																					<div class="item-link">
+								<a href="https://www.capterra.com/p/165430/Testim/reviews/">View the full review</a>
+							</div>
+													</div>
+					</div>
+				</div>
+								<div class="item-wrapper">
+					<div class="item">
+						<div class="item-head">
+							<div class="item-person">
+																<div class="item-avatar">
+									<img width="84" height="84" src="https://www.testim.io/wp-content/uploads/2020/10/Bitmap@2x-4.png" alt="" />
+								</div>
+																<div class="item-info">
+																		<div class="item-name">Ran M</div>
+																											<div class="item-position">Senior Software Engineering Lead</div>
+																	</div>
+							</div>
+														<div class="item-logo">
+								<img width="29" height="30" src="https://www.testim.io/wp-content/uploads/2020/10/G2.png" alt="" />
+							</div>
+													</div>
+												<div class="item-body">
+							<p>“Testim.io &#8211; saved us time and money.”</p>
+						</div>
+												<div class="item-foot">
+							<div class="item-stars">
+																								<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 0" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 1" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 2" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 3" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 4" />
+															</div>
+																					<div class="item-link">
+								<a href="https://www.g2.com/products/testim-io/reviews/testim-io-review-3039217">View the full review</a>
+							</div>
+													</div>
+					</div>
+				</div>
+								<div class="item-wrapper">
+					<div class="item">
+						<div class="item-head">
+							<div class="item-person">
+																<div class="item-avatar">
+									<img width="92" height="92" src="https://www.testim.io/wp-content/uploads/2020/11/gilad_f.png" alt="" />
+								</div>
+																<div class="item-info">
+																		<div class="item-name">Gilad F</div>
+																											<div class="item-position">Software Engineer</div>
+																	</div>
+							</div>
+														<div class="item-logo">
+								<img width="42" height="42" src="https://www.testim.io/wp-content/uploads/2020/10/Capterra.png" alt="" />
+							</div>
+													</div>
+												<div class="item-body">
+							<p>“Great!”</p>
+						</div>
+												<div class="item-foot">
+							<div class="item-stars">
+																								<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 0" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 1" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 2" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 3" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 4" />
+															</div>
+																					<div class="item-link">
+								<a href="https://www.capterra.com/p/165430/Testim/reviews/">View the full review</a>
+							</div>
+													</div>
+					</div>
+				</div>
+								<div class="item-wrapper">
+					<div class="item">
+						<div class="item-head">
+							<div class="item-person">
+																<div class="item-avatar">
+									<img width="84" height="84" src="https://www.testim.io/wp-content/uploads/2020/10/Bitmap@2x-6.png" alt="" />
+								</div>
+																<div class="item-info">
+																		<div class="item-name">Francois J</div>
+																											<div class="item-position">Solutions Architect</div>
+																	</div>
+							</div>
+														<div class="item-logo">
+								<img width="29" height="30" src="https://www.testim.io/wp-content/uploads/2020/10/G2.png" alt="" />
+							</div>
+													</div>
+												<div class="item-body">
+							<p>“QA testing in Salesforce made easy!”</p>
+						</div>
+												<div class="item-foot">
+							<div class="item-stars">
+																								<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 0" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 1" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 2" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 3" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 4" />
+															</div>
+																					<div class="item-link">
+								<a href="https://www.g2.com/products/testim-io/reviews/testim-io-review-3036786">View the full review</a>
+							</div>
+													</div>
+					</div>
+				</div>
+								<div class="item-wrapper">
+					<div class="item">
+						<div class="item-head">
+							<div class="item-person">
+																<div class="item-avatar">
+									<img width="92" height="92" src="https://www.testim.io/wp-content/uploads/2020/10/katya@2x.png" alt="" />
+								</div>
+																<div class="item-info">
+																		<div class="item-name">Katya A</div>
+																											<div class="item-position">Automation Engineer</div>
+																	</div>
+							</div>
+														<div class="item-logo">
+								<img width="29" height="30" src="https://www.testim.io/wp-content/uploads/2020/10/G2.png" alt="" />
+							</div>
+													</div>
+												<div class="item-body">
+							<p class="m-0 l2">&#8220;I believe that Testim.io is present and future of automation&#8221;</p>
+						</div>
+												<div class="item-foot">
+							<div class="item-stars">
+																								<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 0" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 1" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 2" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 3" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 4" />
+															</div>
+																					<div class="item-link">
+								<a href="https://www.g2.com/products/testim-io/reviews/testim-io-review-4365587">View the full review</a>
+							</div>
+													</div>
+					</div>
+				</div>
+								<div class="item-wrapper">
+					<div class="item">
+						<div class="item-head">
+							<div class="item-person">
+																<div class="item-avatar">
+									<img width="84" height="84" src="https://www.testim.io/wp-content/uploads/2020/10/Bitmap@2x-8.png" alt="" />
+								</div>
+																<div class="item-info">
+																		<div class="item-name">Vadim D</div>
+																											<div class="item-position">Senior Full Stack Software Developer</div>
+																	</div>
+							</div>
+														<div class="item-logo">
+								<img width="42" height="42" src="https://www.testim.io/wp-content/uploads/2020/10/Capterra.png" alt="" />
+							</div>
+													</div>
+												<div class="item-body">
+							<p>“Testim IO &#8211; Total Positive experience”</p>
+						</div>
+												<div class="item-foot">
+							<div class="item-stars">
+																								<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 0" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 1" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 2" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 3" />
+																<img width="18" height="18" src="https://www.testim.io/wp-content/themes/testim/images/blue-star.svg" alt="Star 4" />
+															</div>
+																					<div class="item-link">
+								<a href="https://www.capterra.com/p/165430/Testim/reviews/">View the full review</a>
+							</div>
+													</div>
+					</div>
+				</div>
+							</div>
+		</div>
+	</div>
+		
+		
+		
+		
+		
+	
+            	
+		
+		
+		
+		
+		
+	
+    	
+		
+		<section class="so-testimonials">
+		<div class="container">
+			<div class="box">
+				<div class="box-items">
+										<div class="box-item">
+												<div class="box-item-image">
+							<img width="162" height="60" src="https://www.testim.io/wp-content/uploads/2020/10/Bitmap@2x-9.png" alt="">
+						</div>
+																		<div class="box-item-content">
+							<p>“We had a change in our login flow across all our applications&#8230; your smart locators were still able to find all elements and none of the tests failed!!! I thought there would be low maintenance required, in fact, zero maintenance was involved! Astonishing!!!”</p>
+						</div>
+																		<div class="box-item-name">Katya Aronov</div>
+																		<div class="box-item-position">Automation Engineer</div>
+											</div>
+										<div class="box-item">
+												<div class="box-item-image">
+							<img width="288" height="62" src="https://www.testim.io/wp-content/uploads/2020/10/Bitmap@2x-1-1.png" alt="">
+						</div>
+																		<div class="box-item-content">
+							<p>“Testim’s simple user interface makes it easy for our developers to add tests without a steep learning curve. We grew coverage by 30% in three months and found that very little maintenance is required so we can keep increasing coverage.”</p>
+						</div>
+																								<div class="box-item-position">Automation Engineer</div>
+											</div>
+									</div>
+			</div>
+		</div>
+	</section>
+		
+		
+	
+		<section class="promo-links-s">
+		<div class="container">
+			<ul class="promo-links ">
+																												<li>
+					<a class="box" target="_blank" href="https://www.testim.io/resources/evaluate-automated-testing-solutions/">
+						<span class="heading">
+														<i class="i">
+								<img width="24" height="27" src="https://www.testim.io/wp-content/uploads/2020/08/bell-ico.svg" alt="">
+							</i>
+														<span class="t-wrap">
+																<span class="sub-ttl">Learn more</span>
+																								<span class="ttl">Buyer’s Guide </span>
+															</span>
+						</span>
+												<span>Evaluate UI and E2E test automation solutions</span>
+											</a>
+				</li>
+																												<li>
+					<a class="box" target="_blank" href="https://www.tricentis.com/resources/testim-product-tour-video">
+						<span class="heading">
+														<i class="i">
+								<img width="32" height="25" src="https://www.testim.io/wp-content/uploads/2020/08/docs2-ico.svg" alt="">
+							</i>
+														<span class="t-wrap">
+																<span class="sub-ttl">Watch now</span>
+																								<span class="ttl">Video tour</span>
+															</span>
+						</span>
+												<span>Testim's features and benefits in less than 5 minutes</span>
+											</a>
+				</li>
+							</ul>
+		</div>
+	</section>
+	
+		<section class="cta-s">
+		<div class="container">
+						<h2 class="s-ttl">See the Tricentis portfolio</h2>
+						<div class="cta-handler-c">
+																								<a href="https://www.tricentis.com/products" class="btn btn-important">Learn more</a>
+																																<a href="https://www.testim.io/schedule-demo/" class="btn btn-outline">Schedule a demo</a>
+															</div>
+		</div>
+	</section>
+		
+	
+</main>
+
+	</div>
+				<footer data-wpr-lazyrender="1" id="footer">
+		
+			
+			<div  class="p-footer-frame">
+				<div class="container">
+										
+										
+					<div class="f-links">
+						<div class="col">
+														<a href="https://www.testim.io" class="f-logo">
+								<img width="130" height="60" src="https://www.testim.io/wp-content/uploads/2022/12/testim-footer-logo.png" alt="testim footer logo" />
+							</a>
+						</div>
+						<div class="col">
+<h3 class="col-ttl">Product</h3>
+<ul class="l-list">
+<li><a href="https://www.testim.io/test-automation-tool/">Testim</a></li>
+<li><a href="https://www.testim.io/fast-authoring/">Fast Authoring</a></li>
+<li><a href="https://www.testim.io/testops/">TestOps</a></li>
+<li><a href="https://www.testim.io/test-stability/">Test Stability</a></li>
+<li><a href="https://www.testim.io/root-cause-analysis/">Root Cause Analysis</a></li>
+<li><a href="https://www.testim.io/pricing/">Pricing</a></li>
+</ul>
+</div>
+<div class="col">
+<h3 class="col-ttl">Developers</h3>
+<ul class="l-list">
+<li><a href="https://help.testim.io/docs/testim-overview">Overview</a></li>
+<li><a href="https://help.testim.io/docs/testim-overview">Documentation</a></li>
+<li><a href="https://help.testim.io/changelog">Changelog</a></li>
+</ul>
+</div>
+<div class="col">
+<h3 class="col-ttl">Company</h3>
+<ul class="l-list">
+<li><a href="https://www.testim.io/about/">About</a></li>
+<li><a href="https://www.tricentis.com/company/careers">Careers</a></li>
+<li><a href="https://www.testim.io/contact-us/">Contact Us</a></li>
+</ul>
+</div>
+<div class="col">
+<h3 class="col-ttl">Resources</h3>
+<ul class="l-list">
+<li><a href="https://www.testim.io/webinars/">Upcoming Events</a></li>
+<li><a href="https://www.testim.io/resources/?type=success-stories">Success Stories</a></li>
+<li><a href="https://www.testim.io/blog/">Blog</a></li>
+<li><a href="https://www.testim.io/education/">Education</a></li>
+<li><a href="https://www.testim.io/resources/?type=webinar">Webinars</a></li>
+<li><a href="https://www.testim.io/resources/">All Resources</a></li>
+<li><a href="https://shiftsync.tricentis.com/#new_tab">Community</a></li>
+						
+						</div>
+						
+					</div>
+					<div class="f-icons">
+																		<div class="icon">
+							<img width="42" height="42" src="https://www.testim.io/wp-content/uploads/2020/01/logo_aicpa-1-42x42.png" srcset="https://www.testim.io/wp-content/uploads/2020/01/logo_aicpa-1-84x84.png 2x" alt="" title="logo_aicpa" />
+						</div>
+																								<div class="icon">
+							<img width="40" height="42" src="https://www.testim.io/wp-content/uploads/2020/01/logo-sdtimes-40x42.png" srcset="https://www.testim.io/wp-content/uploads/2020/01/logo-sdtimes.png 2x" alt="" title="logo-sdtimes" />
+						</div>
+																								<div class="icon">
+							<img width="43" height="42" src="https://www.testim.io/wp-content/uploads/2020/01/logo-finalist-43x42.png" srcset="https://www.testim.io/wp-content/uploads/2020/01/logo-finalist-86x84.png 2x" alt="" title="logo-finalist" />
+						</div>
+																								<div class="icon">
+							<img width="46" height="46" src="https://www.testim.io/wp-content/uploads/2020/12/finalist2020.svg" srcset="https://www.testim.io/wp-content/uploads/2020/12/finalist2020.svg 2x" alt="" title="finalist2020" />
+						</div>
+																								<div class="icon">
+							<img width="46" height="45" src="https://www.testim.io/wp-content/uploads/2020/12/devops.svg" srcset="https://www.testim.io/wp-content/uploads/2020/12/devops.svg 2x" alt="" title="devops" />
+						</div>
+																								<div class="icon">
+							<img width="49" height="45" src="https://www.testim.io/wp-content/uploads/2020/12/best_qa.svg" srcset="https://www.testim.io/wp-content/uploads/2020/12/best_qa.svg 2x" alt="" title="best_qa" />
+						</div>
+																								<div class="icon">
+							<img width="94" height="42" src="https://www.testim.io/wp-content/uploads/2021/06/intellyx@2x-94x42.png" srcset="https://www.testim.io/wp-content/uploads/2021/06/intellyx@2x-188x84.png 2x" alt="" title="intellyx@2x" />
+						</div>
+																	</div>
+					<div class="f-bottom">
+						<div class="col-socials">
+							<ul class="socials">
+																	<li>
+										<a href="https://www.youtube.com/channel/UCHgWDEXtFqMfWk9k5ttmoaw" target="_blank" class="icon-youtube" rel="noopener"></a>
+									</li>
+								
+																<li>
+									<a href="https://twitter.com/testim_io" target="_blank" class="icon-twitter" rel="noopener"></a>
+								</li>
+								
+																<li>
+									<a href="https://www.linkedin.com/company/testim-io" target="_blank" class="icon-linkedin" rel="noopener"></a>
+								</li>
+								
+																<li>
+									<a href="https://www.facebook.com/testimdotio" target="_blank" class="icon-facebook" rel="noopener"></a>
+								</li>
+															</ul>
+						</div>
+						<div class="col-terms">
+							<ul class="l-list">
+								<li><a href="https://www.tricentis.com/legal-information/general-terms-of-use/">Terms of Service</a></li>
+</li>
+<li><a href="https://www.tricentis.com/legal-information/privacy-policy">Privacy Policy</a></li>
+</li>
+<li><a href="https://www.tricentis.com/legal-information/privacy-policy">Cookie Policy</a></li>
+</li>
+<li><a href="https://be.tricentis.com/media-assets/pdf/Legal-Tricentis-Professional-Services-Terms-V08-22-EN.pdf">Professional Service Terms</a></li>
+																	<li>&copy; testim 2026</li>
+															</ul>
+						</div>
+					</div>
+									</div>
+			</div>
+		</footer>
+		</div>
+	
+	<div data-wpr-lazyrender="1" class="for-popup"></div>
+
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/testim/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-polls-js-extra">
+var pollsL10n = {"ajax_url":"https://www.testim.io/wp-admin/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+//# sourceURL=wp-polls-js-extra
+</script>
+<script id="am_includes-js-fancybox-jquery-fancybox-min-js-js-extra">
+var AM_Ajax = {"ajax_url":"https://www.testim.io/wp-admin/admin-ajax.php"};
+//# sourceURL=am_includes-js-fancybox-jquery-fancybox-min-js-js-extra
+</script>
+<script type="text/rocketlazyloadscript" id="am_includes-js-fancybox-jquery-fancybox-min-js-js" data-rocket-src="https://www.testim.io/wp-content/themes/testim/includes/js/fancybox/jquery.fancybox.min.js?ver=7.0.2-b-modified-1741200860"></script>
+<script type="text/rocketlazyloadscript" id="am_includes-js-fluidvids-min-js-js" data-rocket-src="https://www.testim.io/wp-content/themes/testim/includes/js/fluidvids.min.js?ver=7.0.2-b-modified-1741200860"></script>
+<script type="text/rocketlazyloadscript" id="am_includes-js-slick-min-js-js" data-rocket-src="https://www.testim.io/wp-content/themes/testim/includes/js/slick.min.js?ver=7.0.2-b-modified-1741200860"></script>
+<script type="text/rocketlazyloadscript" id="am_includes-js-jquery-main-js-js" data-rocket-src="https://www.testim.io/wp-content/themes/testim/includes/js/jquery.main.js?ver=7.0.2-b-modified-1741200860"></script>
+<script type="text/rocketlazyloadscript" id="am_includes-js-general-js-js" data-rocket-src="https://www.testim.io/wp-content/themes/testim/includes/js/general.js?ver=7.0.2-b-modified-1741200860"></script>
+<script type="text/rocketlazyloadscript" id="am_includes-js-timeme-min-js-js" data-rocket-src="https://www.testim.io/wp-content/themes/testim/includes/js/timeme.min.js?ver=7.0.2-b-modified-1741200860"></script>
+<script type="text/rocketlazyloadscript" id="page-links-to-js" data-rocket-src="https://www.testim.io/wp-content/plugins/page-links-to/dist/new-tab.js?ver=3.3.7-b-modified-1741156135"></script>
+	
+				<script type="text/rocketlazyloadscript">
+		    var intercomLoader = function(){
+		    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/zlji8uj7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+		        window.Intercom('boot', {
+		          app_id: "zlji8uj7"
+		        })
+		        
+		        window.removeEventListener('scroll', intercomLoader)
+		    }
+		  window.addEventListener('scroll', intercomLoader)
+		</script>
+	<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1eec24e7ba2fd81',t:'MTc4NDY4NDY1Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
