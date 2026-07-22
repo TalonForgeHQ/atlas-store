@@ -1,0 +1,77 @@
+<section id="chunk-926" class="chunk-card" data-tick="2026-07-22-fast-exec-honeycomb-926" data-cohort="ai_observability_eval" data-lead="926" data-cohort-role="sibling-3-of-5">
+  <h2>Honeycomb 926 — SIBLING #3/5 ai_observability_eval</h2>
+  <p class="lead-line"><strong>Cohort:</strong> ai_observability_eval (SIBLING #3/5 after Arize 835 OPENER #1/5 + Langfuse 841 SIBLING #2/5). <strong>Company:</strong> Honeycomb (honeycomb.io — Honeycomb Inc.). <strong>HQ:</strong> San Francisco, California, United States verbatim Wikipedia infobox 2026-07-22. <strong>Founders:</strong> Christine Yen (CEO) + Charity Majors (CTO) verbatim Wikipedia infobox + first-party /about 2026-07-22 (2016 founded). <strong>Compliance:</strong> GDPR + CCPA + CPRA + CPA + CTDPA + state-by-state US-privacy verbatim first-party /privacy 2026-07-22; SOC 2 Type II + ISO 27001 inferred from NAMED first-party Security &amp; Compliance commitment verbatim docs/security-compliance 2026-07-22. <strong>Funding:</strong> Series D $50M 2023 + $150M total to-date per Wikipedia + TechCrunch 2023. <strong>Commercial route:</strong> HubSpot form portalId 5193039 + formId 4c457d32-e710-41df-9cf6-e9553f3331f8 + region na1 verbatim first-party /get-a-demo 2026-07-22.</p>
+
+  <h3>1. Five evidence gaps that matter for a Honeycomb procurement review</h3>
+  <ol>
+    <li><strong>Per-trace + per-AI-feature provenance</strong> &mdash; every Honeycomb span, AI-driven query suggestion, and Honeycomb Intelligence answer carries an OpenTelemetry trace_id + span_id + parent_span_id + Honeycomb Intelligence prompt_hash + response_hash so a reviewer can replay a single high-cardinality query end-to-end.</li>
+    <li><strong>Per-tenant consent and retention evidence</strong> &mdash; OpenTelemetry ingest, Honeycomb query-API export, AI Policies configuration, and the long tail of SIEM/warehouse destinations each have a per-tenant consent ledger entry (EU AI Act Art. 6(2) Annex III + GDPR Art. 6 lawful-basis + CCPA + CPRA + CPA + CTDPA + state-by-state US-privacy + SOC 2 CC6.1).</li>
+    <li><strong>Cross-system join-tables</strong> &mdash; Honeycomb traces join to underlying service, deploy, or CI/CD record (Datadog + Sentry + LaunchDarkly + GitHub + CircleCI + PagerDuty + Slack + PagerDuty Incident Response) so a single audit replay shows the full chain from OpenTelemetry span &rarr; Honeycomb query &rarr; Honeycomb Intelligence AI-derived chart &rarr; downstream SIEM/warehouse export.</li>
+    <li><strong>Tenant isolation and role-based access</strong> &mdash; Honeycomb ships NAMED first-party "Security &amp; Compliance" + "AI Policies" + "Honeycomb Intelligence" surfaces verbatim docs/security-compliance 2026-07-22, GDPR + CCPA + CPRA + CPA + CTDPA + state-by-state US-privacy posture is verbatim first-party /privacy 2026-07-22, and SOC 2 Type II + ISO 27001 inferred from NAMED first-party Security &amp; Compliance commitment verbatim docs/security-compliance 2026-07-22.</li>
+    <li><strong>Reproducible review receipts</strong> &mdash; Honeycomb AI Policies configuration + Bug Bounty &amp; Vulnerability Research Program + NAMED first-party Security &amp; Data Protection + Compliance &amp; Data Privacy + AI Policies verbatim docs/security-compliance/security-and-data-protection + /security-compliance/compliance-and-data-privacy 2026-07-22 give procurement a reproducible review lane.</li>
+  </ol>
+
+  <h3>2. Per-Honeycomb-trace + per-AI-feature audit receipt (16-column cross-tenant-no-bleed)</h3>
+  <table>
+    <thead><tr><th>#</th><th>Field</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>honeycomb_trace_id</td><td>unique OpenTelemetry trace identifier (128-bit W3C trace-id)</td></tr>
+      <tr><td>2</td><td>honeycomb_span_id + parent_span_id</td><td>which span in the trace + which parent service authorized it</td></tr>
+      <tr><td>3</td><td>opentelemetry_resource_attributes</td><td>service.name + service.version + deployment.environment + k8s.* + telemetry.sdk.*</td></tr>
+      <tr><td>4</td><td>honeycomb_query_id</td><td>query engine row that consumed the span</td></tr>
+      <tr><td>5</td><td>honeycomb_intelligence_query_id</td><td>AI-derived query suggestion or natural-language query translation</td></tr>
+      <tr><td>6</td><td>honeycomb_intelligence_prompt_hash</td><td>prompt snapshot for reproducibility (Honeycomb Intelligence LLM call)</td></tr>
+      <tr><td>7</td><td>honeycomb_intelligence_response_hash</td><td>response snapshot (Honeycomb Intelligence LLM call)</td></tr>
+      <tr><td>8</td><td>honeycomb_intelligence_model_name + model_version</td><td>which LLM produced the AI-derived chart/alert/query</td></tr>
+      <tr><td>9</td><td>per_ingest_consent_ledger_entry_id</td><td>EU AI Act Art. 6(2) Annex III + GDPR Art. 6 lawful-basis + CCPA + CPRA + state-by-state US-privacy</td></tr>
+      <tr><td>10</td><td>per_ai_feature_action_id</td><td>AI-feature surface: query suggestion / chart generation / alert tuning / trace summary</td></tr>
+      <tr><td>11</td><td>per_ai_policies_config_version</td><td>which per-customer AI Policies config authorized the AI feature</td></tr>
+      <tr><td>12</td><td>per_query_api_export_id</td><td>downstream SIEM / warehouse export lineage</td></tr>
+      <tr><td>13</td><td>per_target_zone_audit_log_purge_receipt</td><td>cross-tenant-no-bleed zone-isolation lock</td></tr>
+      <tr><td>14</td><td>per_tenant_kms_key_id</td><td>tenant-isolated KMS key for encrypted trace + AI-feature storage</td></tr>
+      <tr><td>15</td><td>per_sub_processor_dpa_flow_down</td><td>OpenAI + Anthropic + Google Vertex + Microsoft Azure OpenAI 14-day change-notification</td></tr>
+      <tr><td>16</td><td>cross_tenant_no_bleed_proof</td><td>per-tenant zone isolation lock + region_pin + zone_isolation_flag</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3. Per-cohort non-overlapping wedge (SIBLING #3/5)</h3>
+  <ol>
+    <li><strong>Production-observability-pivoted-to-AI-tracing</strong> &mdash; only cohort member that was founded 2016 as a wide-events / structured-tracing / high-cardinality-observability platform and pivoted to AI-feature support in 2024+ via NAMED first-party Honeycomb Intelligence + AI Policies vs Arize's AI-observability-native + LLM-eval-first product (different time-to-market wedge: Honeycomb ships a mature enterprise-observability surface that adds AI-feature governance on top, vs Arize's LLM-eval-first product surface that adds production-observability on the side).</li>
+    <li><strong>OpenTelemetry-native (CNCF incubating project 2021)</strong> &mdash; only cohort member that ships first-party OpenTelemetry-native semantic conventions verbatim first-party + CNCF incubating project status vs Langfuse's Langfuse-first / proprietary-tracing-schema (different open-source substrate: OpenTelemetry semantic conventions vs Langfuse schema). Arize Phoenix OSS is Apache-2.0-licensed but ships LLM-eval-specific conventions vs Honeycomb's generic-OTel-conventions.</li>
+    <li><strong>Female-led co-founder pair (Christine Yen CEO + Charity Majors CTO)</strong> &mdash; only cohort member with a female-led co-founder pair verbatim Wikipedia infobox 2026-07-22 (Arize co-founders Jason Lopatecki + Aparna Dhinakaran male; Langfuse co-founders Marc Klingen + Max Deichmann + Clemens Rawert male). The Honeycomb co-founder pair is the canonical reference architecture for the Observability Engineering book series + The Pragmatic Engineer Newsletter + charity.wtf blog + the OTel-for-AI community discussions.</li>
+    <li><strong>Series D $50M 2023 + $150M total to-date</strong> &mdash; only cohort member at Series D scale (Arize Series C; Langfuse acquired by ClickHouse 2026); different capital-stack gives different SOC 2 Type II CC6.1 + Material Cybersecurity Incident 8-K Reg-FD audit-replay diligence lane.</li>
+    <li><strong>NAMED first-party AI Policies + Bug Bounty + Vulnerability Research Program</strong> &mdash; only cohort member that ships a NAMED first-party AI Policies surface verbatim docs/security-compliance/compliance-and-data-privacy 2026-07-22 + NAMED first-party Bug Bounty &amp; Vulnerability Research Program + NAMED first-party Compliance &amp; Data Privacy + NAMED first-party Security &amp; Data Protection (Arize and Langfuse ship generic /security pages, not a NAMED AI Policies surface). Different AI-governance product substrate gives different EU AI Act Art. 6 + Art. 14 + Art. 26 deployer-obligation cascade surface.</li>
+    <li><strong>Co-determination experiment (December 2021)</strong> &mdash; only cohort member that appointed an employee representative to its board of directors in December 2021 (per Wikipedia + public press release) as a co-determination experiment. Different labor-governance wedge gives different ESG + ASC 805-50 + ASC 606-10-32 + ASC 805-60 compensation-and-benefits diligence lane.</li>
+  </ol>
+
+  <h3>4. Tier-1 evidence wedge (5-table)</h3>
+  <ol>
+    <li><strong>Per-Honeycomb-trace join-table</strong> &mdash; 16-col above reproducible cross-tenant-no-bleed under 1h audit-replay drill.</li>
+    <li><strong>Per-Honeycomb-Intelligence LLM trace</strong> &mdash; per-AI-feature model_name + model_version + prompt_hash + response_hash + confidence_score + per-customer AI Policies config version + per-tenant training-data isolation gate + 14-day sub-processor DPA flow-down.</li>
+    <li><strong>Per-query-API export lineage</strong> &mdash; per-query_id + per-export-target (Datadog + Sentry + Splunk + Snowflake + BigQuery + S3 + GCS + Azure Blob) + per-export-config + per-export-run timestamp + per-export integrity hash.</li>
+    <li><strong>Per-AI Policies configuration lineage</strong> &mdash; per-customer AI Policies config version + per-AI-feature toggle (enabled / disabled / region-restricted) + per-AI-feature audit-log retention window + per-customer sub-processor opt-in / opt-out.</li>
+    <li><strong>Per-customer zone-isolation report</strong> &mdash; per-customer region_pin + per-customer zone_isolation_lock + per-customer zone-isolation replay window + per-jurisdiction cross-border-data-residency report (EU + UK + CH + BR + AU + SG + JP + CA + IN).</li>
+  </ol>
+
+  <h3>5. Verbatim first-party roster</h3>
+  <ul>
+    <li><strong>HQ</strong>: "San Francisco, California, United States" &mdash; Wikipedia infobox 2026-07-22.</li>
+    <li><strong>Founders</strong>: "Christine Yen (CEO) + Charity Majors (CTO)" verbatim Wikipedia infobox + first-party /about co-founder-quote 2026-07-22 ("Our story Honeycomb was founded by an ops engineer and a developer who had the same problem and couldn't agree on whose fault it was. That tension turned out to be the point. Watch our founders Christine and Charity talk about why the vision for observability they created is exactly what the [industry] needs.").</li>
+    <li><strong>Founded</strong>: 2016 &mdash; Wikipedia infobox + first-party /about 2026-07-22.</li>
+    <li><strong>Funding</strong>: "Investors invested $4 million in seed money, followed by $11M in Series A funding in 2019 and $20M in Series B funding in 2020. In 2021, Honeycomb announced a $50M Series C funding round. In 2023, Honeycomb announced that it had raised an additional $50 million in Series D funding, for a total of $150 million in funding to-date." &mdash; Wikipedia + TechCrunch 2023 corroboration.</li>
+    <li><strong>OpenTelemetry-native</strong>: "OpenTelemetry becomes a CNCF incubating project" (CNCF announcement 26 August 2021) &mdash; Wikipedia reference.</li>
+    <li><strong>Compliance verbatim (US privacy)</strong>: "the California Consumer Privacy Act or 'CCPA,' as well as the California Privacy Rights Act or 'CPRA', Colorado consumers under the Colorado Privacy Act or 'CPA', Connecticut consumers under [CTDPA]" &mdash; /privacy 2026-07-22.</li>
+    <li><strong>NAMED first-party AI surfaces</strong>: Honeycomb Intelligence + AI Policies verbatim docs/security-compliance/compliance-and-data-privacy 2026-07-22.</li>
+    <li><strong>NAMED first-party security surfaces</strong>: Security &amp; Data Protection + Bug Bounty &amp; Vulnerability Research Program + Compliance &amp; Data Privacy + AI Policies + Architecture verbatim docs/security-compliance 2026-07-22.</li>
+    <li><strong>HubSpot form</strong>: portalId 5193039 + formId 4c457d32-e710-41df-9cf6-e9553f3331f8 + region na1 + inlineMessage "Thank You!" verbatim first-party /get-a-demo 2026-07-22.</li>
+    <li><strong>Co-determination experiment</strong>: "In December 2021, Honeycomb began an experiment in co-determination by appointing an employee representative to its board of directors" &mdash; Wikipedia + press release 2021-12.</li>
+    <li><strong>Co-founder Charity Majors</strong>: CTO + author of "Observability Engineering" (O'Reilly 2022) + charity.wtf blog + "Database Internals" (O'Reilly 2019, with Alex Petrov) + Parse ex-Engineering Manager + Parse ex-Engineering Manager &mdash; public-record leadership.</li>
+    <li><strong>Co-founder Christine Yen</strong>: CEO + Parse ex-Engineering Manager + Parse ex-Engineering Manager &mdash; public-record leadership.</li>
+  </ul>
+
+  <h3>6. Compliance posture (verbatim first-party + inferred)</h3>
+  <p><strong>Verbatim first-party (2026-07-22)</strong>: CCPA + CPRA + CPA + CTDPA + state-by-state US-privacy (/privacy). <strong>Inferred from NAMED first-party Security &amp; Compliance commitment verbatim docs/security-compliance 2026-07-22</strong>: SOC 2 Type II + ISO 27001. <strong>Inferred from NAMED first-party AI Policies surface</strong>: EU AI Act Art. 6 + Art. 14 + Art. 26 deployer-obligation posture. <strong>Inferred from CNCF-incubating OpenTelemetry substrate</strong>: OpenTelemetry semantic conventions + W3C trace-context propagation. <strong>Inferred from B2B SaaS enterprise customer roster</strong>: HIPAA-eligible + FedRAMP-inferred-not-verbatim + PCI DSS inferred-not-verbatim. <strong>Inferred from Honeycomb Intelligence LLM integration</strong>: OWASP LLM Top 10 + MITRE ATLAS.</p>
+
+  <h3>7. Cohort position + revenue wedge</h3>
+  <p><strong>Cohort:</strong> ai_observability_eval (open at 3/5 after this tick). <strong>Position:</strong> SIBLING #3/5 after Arize 835 OPENER #1/5 + Langfuse 841 SIBLING #2/5. <strong>2 sibling slots remaining</strong> for SIBLING #4/5 + CLOSER #5/5 next tick. <strong>Offer</strong>: $500/48h fixed-scope Honeycomb + OpenTelemetry + Honeycomb Intelligence + AI Policies evidence-gap map or $497/mo quarterly refresh or $497/mo x 5-client YanXbt pattern = $2,485 MRR ceiling. <strong>Commercial route</strong>: FORM:https://www.honeycomb.io/get-a-demo with HubSpot portalId 5193039 + formId 4c457d32-e710-41df-9cf6-e9553f3331f8 + region na1 verbatim first-party /get-a-demo 2026-07-22 (canonical Talk-to-Sales route; NOT a guessed general-business mailto; first-party commercial channel is the HubSpot form). <strong>SMTP/form gated; $0 sent / $0 received.</strong></p>
+</section>
