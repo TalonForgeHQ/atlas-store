@@ -31,5 +31,15 @@
     "route": "FORM:https://www.stackai.com/demo (Framer Typeform embed)",
     "template": "templates/935_stackai.md",
     "note": "FORM only per pitfall #28 — /about + /contact 404 on rendered Framer SPA; mailto:NONE first-party"
+  },
+  {
+    "tick": "938",
+    "lead_index": "938",
+    "company": "Ironclad",
+    "status": "queued_not_sent",
+    "commercial_route": "FORM:https://ironclad.com/contact",
+    "submitted": false,
+    "reason": "SMTP/form gated; no send, submission, payment, or revenue claim was fabricated.",
+    "timestamp": "2026-07-22"
   }
 ]
