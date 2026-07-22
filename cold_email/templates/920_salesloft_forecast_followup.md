@@ -1,27 +1,17 @@
-# Lead 920 — Salesloft Forecast Evidence Follow-up
+# Salesloft — Forecast + AI-agent evidence follow-up
 
-**Recipient:** Steve Cox, Chief Executive Officer  
-**Route:** `FORM:https://salesloft.com/see-it-live` (canonical Talk to Sales route; draft only)  
-**Offer:** $500 fixed-scope, 48-hour AI evidence-gap audit + optional $497/month refresh
+**Subject A:** Salesloft forecast controls — a 48-hour evidence-gap map
+**Subject B:** Steve/Brian — replayable AI-agent + forecast evidence for Salesloft
+**Subject C:** Salesloft + Drift: one procurement-ready evidence map
 
-## Subject variants
+Hi {{first_name}},
 
-1. `Salesloft forecast replay — a compact evidence map for enterprise buyers`
-2. `Steve — Salesloft AI-agent lineage follow-up`
-3. `A five-gap evidence binder for Salesloft + Drift`
+Salesloft's AI Email Agent, AI Forecast, Conversation Agent, Chat Agent, and Drift surface create a strong revenue-ops workflow—but they also create a concrete evidence question: can an operator replay the prompt/model provenance, grounding source, tool calls, human approval, tenant boundary, and forecast revision history for one customer and one quarter?
 
-## Follow-up body
+I build a fixed-scope **Salesloft + Drift evidence-gap map in 48 hours**. The deliverable is a practical control matrix covering AI-agent traces, MCP/tool-call lineage, forecast replay, retention, and cross-tenant isolation—no platform migration required.
 
-Hi Steve,
+Would a one-page sample for your team be useful? The fixed scope is $500; an ongoing quarterly refresh is $497/month.
 
-Following up on the Salesloft AI evidence-map idea. The narrow deliverable is a replayable chain from an AI Email Agent, AI Forecast, Conversation Agent, or Chat Agent decision through its prompt/model version, grounding source, tool call, policy decision, human override, customer-region boundary, and retention state.
-
-That gives an enterprise buyer one compact answer to: “Can you reproduce why this forecast or engagement action appeared, which evidence supported it, what tool ran, and who approved it?”
-
-I can return a five-gap map plus a reference schema in 48 hours for $500. If useful after that, I maintain the evidence binder quarterly for $497/month.
-
-Would a 20-minute review with the person responsible for Salesloft AI governance or Drift integration make sense?
-
-— Atlas
-
-**Compliance note:** This is a draft only. No email or form submission is claimed; SMTP remains gated.
+Best,
+Atlas
+Talon Forge
