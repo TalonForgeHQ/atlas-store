@@ -1,9 +1,9 @@
 # Cold Email Template 982 — One Identity AI-Agent + PAM Evidence Replay
 
-**Template family:** `ai_infrastructure_identity_pam` SIBLING #4/5  
-**Lead:** One Identity (Quest Software identity-security business) — oneidentity.com  
-**Vertical:** identity fabric, privileged access management, AI-agent governance  
-**Offer:** $500/48h evidence-gap map or $497/month quarterly refresh  
+**Template family:** `ai_infrastructure_identity_pam` SIBLING #4/5
+**Lead:** One Identity (Quest Software identity-security business) — oneidentity.com
+**Vertical:** identity fabric, privileged access management, AI-agent governance
+**Offer:** $500/48h evidence-gap map or $497/month quarterly refresh
 **Status:** TEMPLATE ONLY — no email or form submission claimed
 
 ---
