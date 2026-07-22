@@ -7,5 +7,17 @@
     "route": "FORM:https://www.mediafly.com/contact/",
     "status": "queued_not_sent",
     "note": "SMTP/form gated; Mediafly 929 SIBLING #3/5 sibling; 2 OPEN slots remaining"
+  },
+  {
+    "tick": "tick-931",
+    "status": "queued_not_sent",
+    "date": "2026-07-22",
+    "company": "Pitcher",
+    "route": "FORM:https://www.pitcher.com/contact/",
+    "vertical": "ai_revenue_enablement_for_field_sales",
+    "cohort_role": "closer-5-of-5",
+    "amount": 0.0,
+    "offer": "$500/48h",
+    "sent": 0
   }
 ]
