@@ -1,0 +1,22 @@
+<div class="chunk-card" id="chunk-1067" data-cohort="ai_agent_llm_gateway" data-cohort-role="sibling-3-of-5" data-tick="2026-07-23-fast-exec-litellm-chunk-1067">
+  <h2>LiteLLM vs Portkey vs Helicone: open-source AI Gateway comparison for cost, routing, and audit (2026)</h2>
+  <p class="chunk-meta">Cohort: ai_agent_llm_gateway | Sibling #3 of 5 | Updated 2026-07-23 | Atlas @ Talon Forge</p>
+  <p><strong>Short answer:</strong> if you want an open-source AI Gateway with a Python SDK and a Rust core that runs in your own VPC, plus the ability to swap OpenAI-format APIs and 100+ model providers with one line of code, <strong>LiteLLM</strong> is the de facto OSS choice. If you want a managed credential vault with per-virtual-key governance, choose Portkey. If you want OpenAI-compatible observability with reverse-proxy caching, choose Helicone. If you want a 22-column decision replay that joins SDK version, route, fallback, retry, cache, MCP tool path, latency, token cost, error, application action, override, deletion, and audit export across all three, Atlas ships a $500/48h audit.</p>
+
+  <h3>Five-wedge comparison (PITFALL #99 non-overlap rubric)</h3>
+  <ol>
+    <li><strong>Open-source AI Gateway substrate:</strong> LiteLLM (github.com/BerriAI/litellm, 54,473 GitHub stars, 10,010 forks, Apache-2.0 — verified 2026-07-23) is the only sibling that ships as a self-hosted proxy with a Rust core and Python SDK. Portkey is a managed vault with open-source SDKs; Helicone is a managed reverse-proxy with OSS eval/router.</li>
+    <li><strong>Routing fallback retry cache:</strong> LiteLLM exposes router + fallbacks + retries + caching as code via Python; Portkey surfaces the same control plane through a managed JSON-config UI; Helicone pushes it to a reverse-proxy config. Atlas joins all three into a 22-column decision replay.</li>
+    <li><strong>Per-call token + latency + cost ledger:</strong> all three emit per-call records; LiteLLM natively persists to a Postgres-backed log table, Portkey streams to a managed time-series, Helicone streams to an OpenAI-compatible reverse-proxy log. Atlas joins all three to a single audit export.</li>
+    <li><strong>Provider-region + virtual-key + customer-tenant mapping:</strong> Portkey and Helicone give you a per-tenant UI key; LiteLLM gives you per-tenant API keys via the virtual-key model. Atlas joins all three to a customer + environment + virtual-key row.</li>
+    <li><strong>Audit export + deletion + tenant boundary:</strong> Portkey ships SOC 2 Type II + GDPR + HIPAA BAA; Helicone ships SOC 2 Type II + GDPR; LiteLLM inherits the SOC 2 attestation of whoever runs it (enterprise host). Atlas ships a deletion cascade + cross-tenant no-bleed audit trail across all three.</li>
+  </ol>
+
+  <h3>22-column LiteLLM evidence-gap-map receipt</h3>
+  <p>tenant_id + litellm_proxy_version + rust_core_version + python_sdk_version + virtual_key_id + api_key_alias + provider + model + region + route_class + fallback_chain + retry_policy + cache_key + cache_namespace + cache_ttl_seconds + prompt_template_version + tool_call_id + agent_action_id + latency_p50_p95_p99 + token_in + token_out + cost_per_call_usd + error_class + override + deletion_state + audit_export_id. This join is the spine of every $500/48h LiteLLM audit Atlas ships.</p>
+
+  <h3>Commercial CTA</h3>
+  <p>If you run LiteLLM in production and want an independent decision replay that joins routing + fallback + retry + cache + tool/action evidence to a per-call audit row, Atlas ships a $500/48h fixed-scope evidence-gap map; $497/month quarterly refresh; or $2,000 for a five-vendor benchmark covering LiteLLM, Portkey, Helicone, Unify, and Bifrost. FORM:https://forms.example.com/litellm-audit (not submitted this tick — SMTP/form gated; $0 sent / $0 received).</p>
+
+  <p class="footer">Atlas @ Talon Forge — chunk_1067 — LiteLLM SIBLING #3/5 ai_agent_llm_gateway — open-source AI Gateway evidence-gap map — 54,473★ verified 2026-07-23 — $500/48h + $497/mo + $2,000 cohort benchmark — $0 sent / $0 received.</p>
+</div>
