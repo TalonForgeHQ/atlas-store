@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keeper AI-agent secrets audit: JIT credentials to recorded sessions</title>
+<meta name="description" content="A five-gap Keeper Security audit checklist for AI identity, just-in-time secrets, ephemeral tunnels, recorded sessions, rotation and compliance export.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_988.html">
+</head>
+<body>
+<article class="seo-chunk" id="chunk-988">
+<header>
+<p>Lead 988 · CLOSER #5/5 · ai_agent_secrets_security</p>
+<h1>Keeper AI-agent secrets audit: JIT credentials to recorded sessions</h1>
+<p>Keeper's first-party AI-agent page says it secures AI agents with zero-trust access, ephemeral credentials and full visibility. It says there are no hardcoded secrets or standing privileges and that every action is policy-enforced, encrypted and auditable.</p>
+<p>Keeper Secrets Manager adds zero-knowledge secret delivery, automated credential rotation and protection for Non-Human Identities. The long-tail buyer question is: <strong>how do you audit Keeper AI-agent access from JIT secret to recorded session?</strong></p>
+</header>
+<section>
+<h2>Five first-party evidence wedges</h2>
+<ol>
+<li><strong>AI-agent-native access:</strong> the named Secure AI Agents surface covers time-limited privileges, specific roles and access scopes.</li>
+<li><strong>Ephemeral credential delivery:</strong> Keeper says JIT secrets are never written to disk, logs or prompts.</li>
+<li><strong>Ephemeral remote access:</strong> encrypted tunnels grant access without VPNs, open ports or standing privileges.</li>
+<li><strong>Session and command visibility:</strong> agent-initiated sessions, commands and secret usage can be logged, recorded and linked to a specific AI identity.</li>
+<li><strong>Government-grade posture:</strong> Keeper's security page attests FedRAMP High, GovRAMP High, SOC 2 Type 2, ISO 27001/27017/27018, HIPAA, PCI DSS, GDPR and CCPA coverage.</li>
+</ol>
+</section>
+<section>
+<h2>The five audit gaps</h2>
+<h3>Gap 1 — AI identity to JIT credential</h3>
+<p>Capture tenant, environment, AI identity, role, access scope, credential reference, approval policy, grant timestamp and expiry in one replayable receipt.</p>
+<h3>Gap 2 — Secret delivery to agent action</h3>
+<p>Join Keeper Secrets Manager delivery to the exact agent run, command or system interaction without copying the secret into logs, prompts or evidence exports.</p>
+<h3>Gap 3 — Ephemeral tunnel to recorded session</h3>
+<p>Preserve tunnel ID, target resource, authentication event, session ID, command stream, recording ID, close reason and result hash.</p>
+<h3>Gap 4 — Rotation to revocation</h3>
+<p>Link old credential reference, time- or event-driven rotation trigger, replacement reference, rollback decision, deployment result and revocation event.</p>
+<h3>Gap 5 — Tenant boundary to compliance export</h3>
+<p>Prove that tenant, environment and AI-identity boundaries survive incident-response, SOC 2, ISO and FedRAMP evidence exports.</p>
+</section>
+<section>
+<h2>Suggested replay receipt</h2>
+<p><code>tenant_id · environment_id · ai_identity_id · policy_version · access_scope · credential_reference · jit_grant_id · secret_delivery_id · agent_run_id · command_id · target_resource_id · ephemeral_tunnel_id · privileged_session_id · recording_id · rotation_event_id · revocation_event_id · export_id · cross_tenant_no_bleed_proof</code></p>
+</section>
+<section>
+<h2>Practical 48-hour scope</h2>
+<p>Sample one AI identity, one policy, one JIT credential, one agent action, one ephemeral tunnel, one recorded session, one rotation and one revocation. Mark each join durable, inferred or absent.</p>
+<p>The output is a redacted five-gap map, an evidence table and a prioritized export/identifier backlog. Talon Forge stages this as a <strong>$500 fixed-scope review</strong> or a <strong>$497/month evidence-refresh retainer</strong>.</p>
+<p>The completed five-vendor cohort also supports a <strong>$2,000 Infisical + Akeyless + Doppler + GitGuardian + Keeper benchmark</strong>.</p>
+</section>
+<footer>
+<p>Keeper's first-party <a href="https://www.keepersecurity.com/contact.html?t=b&amp;r=sales">Contact our sales team</a> route is the commercial path; no form is submitted automatically.</p>
+<p>Founders verified first-party: Darren Guccione, CEO &amp; Co-Founder, and Craig Lurey, CTO &amp; Co-Founder.</p>
+</footer>
+</article>
+</body>
+</html>
