@@ -1,0 +1,46 @@
+<section class="chunk-card" id="chunk-1052" data-cohort="ai_agent_vector_memory" data-cohort-role="sibling-3-of-5" data-vendor="Qdrant" data-lead="1052" data-tick="2026-07-23-fast-exec-qdrant-1052">
+  <h2>Qdrant vs Pinecone vs Weaviate — Rust-native open-source vector search for AI-agent retrieval</h2>
+  <p class="subtitle">ai_agent_vector_memory cohort · SIBLING #3/5 after Pinecone 1050 OPENER + Weaviate 1051 SIBLING #2 · vendor: Qdrant (qdrant.tech) · evidence captured 2026-07-23</p>
+
+  <h3>What Qdrant is (first-party verbatim, 2026-07-23)</h3>
+  <ul>
+    <li><strong>Homepage title:</strong> verbatim <code>"Qdrant - Vector Search Engine"</code>.</li>
+    <li><strong>og:description:</strong> verbatim <code>"Qdrant is an Open-Source Vector Search Engine written in Rust. It provides fast and scalable vector similarity search service with convenient API."</code></li>
+    <li><strong>Organization JSON-LD:</strong> <code>"name":"Qdrant Vector Database"</code> with HQ <code>"address":{"@type":"PostalAddress","addressCountry":"DE","addressLocality":"Berlin","addressRegion":"Berlin","postalCode":"10115","streetAddress":"Chausseestraße 86"}</code>.</li>
+    <li><strong>Person JSON-LD founders:</strong> Andrey Vasnetsov (CEO) + Andre Zayarni (CTO), <code>"foundingDate":"2021"</code>.</li>
+    <li><strong>Flagship GitHub repo <code>qdrant/qdrant</code>:</strong> 33,519 stars + 2,516 forks, written in Rust, licensed Apache-2.0, created 2020-05-30, last commit 2026-07-23.</li>
+    <li><strong>Pricing JSON-LD:</strong> <code>"price":"free"</code> + <code>"price":"from 25$"</code> + <code>"price":"on request"</code> (USD).</li>
+  </ul>
+
+  <h3>Why Qdrant is SIBLING #3/5 (5-WEDGE non-overlap vs Pinecone + Weaviate)</h3>
+  <ol>
+    <li><strong>Rust-native + Apache-2.0 open-source substrate.</strong> The flagship repo is written in Rust and licensed Apache-2.0. Pinecone has no comparable flagship OSS server. Weaviate's <code>weaviate/weaviate</code> is Go + BSD-3. The Rust + Apache-2.0 substrate is cohort-unique.</li>
+    <li><strong>Berlin DE HQ + 2-founder 2021 founding pair.</strong> Andrey Vasnetsov + Andre Zayarni, founded 2021, Berlin DE Chausseestraße 86. Pinecone is NYC + 1-founder (Edo Liberty, 2019). Weaviate is Amsterdam NL + 1-founder (Bob van Luijt, 2016). The Berlin-DE + Rust-team + 2-founder pedigree is cohort-unique.</li>
+    <li><strong>HNSW + scalar / product / matryoshka quantization + payload filter default.</strong> First-party homepage features (counted 2026-07-23): hybrid search 18×, Rust 8×, quantization 8×, filtering 7×, RAG 6×, HNSW 2×, recommender 3×, sharding 1×. The HNSW-as-default + Rust-implemented filter + matryoshka combination is cohort-unique.</li>
+    <li><strong>Free + from-$25 + Enterprise-on-request three-tier ladder.</strong> Pinecone's published ladder is serverless-pod-based (Starter / Standard / Enterprise / Premier). Weaviate's is Free Sandbox / Serverless Cloud / Enterprise / BYOC / Hybrid Cloud. The "free + from-$25 + on-request" three-tier ladder is cohort-unique.</li>
+    <li><strong>33,519 GitHub stars + 2,516 forks Rust OSS scale signal.</strong> Qdrant's flagship repo is larger than Weaviate's (~16,300 stars per the Weaviate /about-us page 2026-07-23) and materially larger than Pinecone's OSS footprint. The OSS scale signal + Rust-engineer onboarding flow is cohort-unique.</li>
+  </ol>
+
+  <h3>When to pick Qdrant over Pinecone or Weaviate</h3>
+  <ul>
+    <li><strong>Pick Qdrant when</strong> you need an open-source, Rust-native vector engine with HNSW-as-default, matryoshka + scalar/product quantization, and a payload-filter substrate that scales horizontally via sharding + replication. Strong fit for on-prem / air-gapped / cost-sensitive production AI-agent retrieval where Pinecone's serverless-only model is a procurement blocker.</li>
+    <li><strong>Pick Pinecone when</strong> you want zero-ops serverless managed retrieval with built-in re-ranking + sparse-dense hybrid and you do not need to run the database yourself. Strong fit for teams that already pay a hyperscaler and want a parallel managed vector lane.</li>
+    <li><strong>Pick Weaviate when</strong> you want an AI-native vector DB with a modular backup / GraphQL / named-vector / multi-tenant substrate and a Go-runtime engine. Strong fit for AI-native workloads that benefit from Weaviate's modules + backup story.</li>
+  </ul>
+
+  <h3>22-column per-Qdrant evidence-gap map receipt</h3>
+  <p>The receipt joins <code>tenant_id + qdrant_collection_id + qdrant_collection_version + vector_id + vector_payload_id + named_vector_id + payload_index_id + hnsw_index_id + hnsw_ef_construction + hnsw_m + quantization_config_id + scalar_quantization_id + product_quantization_id + matryoshka_embedding_id + sparse_vector_id + dense_vector_id + filter_condition_id + hybrid_search_query_id + retrieval_score_id + shard_id + replication_id + audit_export_id + cross_tenant_no_bleed_audit_trail</code>.</p>
+  <p>The Qdrant-unique join set is the <strong>HNSW + named-vector + payload-filter + scalar/product/matryoshka-quantization + shard/replication</strong> triplet — no other cohort sibling ships this combination as the default retrieval substrate.</p>
+
+  <h3>Offer (fixed-scope, single-vendor)</h3>
+  <ul>
+    <li><strong>$500/48h</strong> — single-vendor Qdrant evidence-gap map for one production agent-retrieval use case. 22-column CSV keyed to your collection + named-vector + payload-filter schema, ready for security/compliance review.</li>
+    <li><strong>$497/month</strong> — quarterly refresh of the same map across HNSW + quantization + filter + shard changes.</li>
+    <li><strong>$2,000</strong> — four-vendor benchmark (Pinecone + Weaviate + Qdrant + one more).</li>
+    <li><strong>$2,485 MRR ceiling</strong> — $497/mo × 5-client YanXbt pattern per operator.</li>
+  </ul>
+
+  <p><strong>Outreach channel:</strong> FORM (qdrant.tech/contact) — FORM ONLY. No public mailto: for founders on the rendered surface (pitfall #28 honored). No email or form submitted; SMTP/form gated per global hard rule; $0 sent / $0 received.</p>
+
+  <p class="footer">Atlas @ Talon Forge — cron tick 2026-07-23-fast-exec-qdrant-1052 — 9-surface ship (leads.csv row 1052 + companion + 3-subject template + chunks/chunk_1052.html + sitemap + index + send_log + revenue_log + build-log) — ai_agent_vector_memory cohort 3/5 (Pinecone 1050 + Weaviate 1051 + Qdrant 1052; 2 OPEN for SIBLINGS #4-5/5) — 11 first-party verbatim surfaces captured 2026-07-23 from qdrant.tech/ + qdrant.tech/about-us/ + qdrant.tech/pricing/ + GitHub qdrant/qdrant — FORM:https://qdrant.tech/contact verified first-party HTTP 200 NOT submitted — mailto:NONE per pitfall #28 — SMTP/form gated, $0 sent / $0 received.</p>
+</section>
