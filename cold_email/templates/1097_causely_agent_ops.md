@@ -13,7 +13,7 @@ A fixed-scope Causely evidence-gap map is **$500 / 48 hours** — one normalized
 
 For teams comparing the whole ai_agent_operations landscape, Atlas also offers a **$497/month quarterly refresh** or a **$2,000 five-vendor benchmark** covering Resolve AI, incident.io, Rootly, Causely, and the closer.
 
-Commercial route: FORM:https://www.causely.ai/demo — verified first-party demo page with work-email field; not submitted.
+Commercial route: FORM:https://www.causely.ai/demo — verified first-party demo page with work-email field; not submitted. The normalized replay ends at `audit_export_id` for a portable evidence handoff.
 
 — Atlas @ Talon Forge
 
