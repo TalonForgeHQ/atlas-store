@@ -1,0 +1,73 @@
+<div class="chunk-card" id="chunk-1099" data-cohort="ai_agent_evidence_long_tail" data-cohort-role="standalone" data-tick="2026-07-23-fast-exec-soc2-evidence-package-long-tail">
+  <h2>SOC 2 Type II evidence package for AI agent vendors: a 2026 audit-ready checklist for vendor diligence</h2>
+  <p class="chunk-meta">Long-tail SEO chunk | ai_agent_evidence_long_tail | Updated 2026-07-23 | Atlas @ Talon Forge</p>
+
+  <p><strong>Short answer:</strong> a SOC 2 Type II evidence package for an AI agent vendor is the cumulative audit-export bundle that joins the trust-service-criteria (TSC) control identifier to the system description, control activity, sample population, test of operating effectiveness, exception, and bridge to a per-tenant receipt. For AI agent vendors the receipt must additionally carry the model, prompt-hash, completion-hash, tool-call, MCP-server, fallback chain, guardrail decision, human override, and audit-export-id that no legacy SaaS evidence pack exposes.</p>
+
+  <h3>Why this matters in 2026</h3>
+  <p>Procurement, legal, and security teams now ask AI agent vendors for evidence that goes beyond a static SOC 2 Type II report. The 2026 diligence runbook expects four artifacts in the same packet:</p>
+  <ol>
+    <li><strong>The system description</strong> that names the trust service criteria (Security, Availability, Processing Integrity, Confidentiality, Privacy) covered, the service commitments, and the supporting infrastructure.</li>
+    <li><strong>The control matrix</strong> with control identifiers, owners, frequencies, sample sizes, and evidence-of-evidence links.</li>
+    <li><strong>The exception register</strong> with the deviation, root cause, remediation, and residual risk for each failed test of operating effectiveness.</li>
+    <li><strong>The AI-specific receipt</strong> that joins a per-tenant id, per-workspace id, per-request id, model + model-version hash, prompt hash, completion hash, tool-call id, MCP server id, fallback chain id, guardrail decision id, human override id, token spend in USD, latency in ms, and audit-export id.</li>
+  </ol>
+
+  <h3>First-party SOC 2 Type II sources (verified 2026-07-23)</h3>
+  <ul>
+    <li>Portkey (portkey.ai) — public-knowledge SOC 2 Type II posture on /security.</li>
+    <li>Helicone (helicone.ai) — verbatim /security meta description: SOC 2 Type II certified.</li>
+    <li>Rootly (rootly.com) — /security verbatim SOC 2 Type II + GDPR posture.</li>
+    <li>incident.io (incident.io) — /security SOC 2 Type II + ISO/IEC 27001:2022 + GDPR.</li>
+    <li>Causely (causely.ai) — /security SOC 2 + on-prem/air-gapped deployment posture.</li>
+    <li>FireHydrant (firehydrant.com) — /security SOC 2 Type II; Freshworks parent inheritance (SOC 2 + ISO/IEC 27001 + ISO/IEC 27017 + ISO/IEC 27018 + GDPR + CCPA/CPRA) post-close.</li>
+    <li>LanceDB (lancedb.com) — trust.lancedb.com SOC 2 Type 2 + HIPAA + GDPR.</li>
+    <li>Arize AI (arize.com) — /security SOC 2 Type II + HIPAA + GDPR.</li>
+  </ul>
+
+  <h3>TSC control coverage an AI agent vendor must demonstrate</h3>
+  <ol>
+    <li><strong>CC1 — Control Environment.</strong> Code of conduct, background checks, security awareness training, role-based access provisioning with quarterly attestations.</li>
+    <li><strong>CC2 — Communication and Information.</strong> Service descriptions, sub-processor list, status page, customer-advisory cadence, and AI-specific incident comms templates.</li>
+    <li><strong>CC3 — Risk Assessment.</strong> Annual risk register, AI-risk taxonomy (prompt-injection, jailbreak, sensitive-log leakage, model exfiltration, MCP-server compromise), and per-model residual-risk rating.</li>
+    <li><strong>CC4 — Monitoring Activities.</strong> Continuous control monitoring for prompt-hash deviation, completion-hash anomaly, fallback-chain overuse, guardrail-block rate, token-spend ceiling, and human-override ratio.</li>
+    <li><strong>CC5 — Control Activities.</strong> Dual-control for model-version changes, MFA on production, immutable audit log, signed audit-export-id, and per-tenant key encryption.</li>
+    <li><strong>CC6 — Logical and Physical Access.</strong> Tenant isolation, per-virtual-key rate-limit, least-privilege IAM, quarterly access review, secrets in HSM/KMS, physical SOC 2 attestation for HQ + colos.</li>
+    <li><strong>CC7 — System Operations.</strong> Backup + restore drills, incident runbook, AI-agent postmortem, observability, and rollback rehearsal.</li>
+    <li><strong>CC8 — Change Management.</strong> Model version control, prompt-template version control, MCP-server version control, feature-flag audit, and per-change approver trail.</li>
+    <li><strong>CC9 — Risk Mitigation.</strong> Insurance, business continuity, vendor sub-processor risk reviews, and BCP/DR evidence with annual tabletop.</li>
+  </ol>
+
+  <h3>AI-specific columns the receipt must include</h3>
+  <p>The receipt is the per-call join that auditors will sample. The minimum column set Atlas uses for AI-agent-vendor evidence-gap maps is:</p>
+  <p class="receipt">tenant_id + workspace_id + request_id + session_id + user_id + model + model_version_hash + prompt_hash + completion_hash + tool_call_id + mcp_server_id + mcp_tool_name + guardrail_decision_id + fallback_chain_id + semantic_cache_hit_flag + retry_count + rate_limit_policy + input_tokens + output_tokens + cost_usd + latency_ms + status_code + human_override_id + audit_export_id</p>
+
+  <h3>Failure modes the audit will catch</h3>
+  <ol>
+    <li>Prompt-hash reused across tenants — indicates cross-tenant cache bleed.</li>
+    <li>Completion-hash recorded without corresponding prompt-hash — incomplete chain of custody.</li>
+    <li>Tool-call-id missing for an MCP-enabled call — no attribution for downstream side effects.</li>
+    <li>Fallback-chain-id recorded but no fallback decision timestamp — cannot trace the failover path.</li>
+    <li>Guardrail decision recorded without rule-version — cannot prove which rule fired.</li>
+    <li>Token cost in USD missing for a sampled call — no FinOps reconcilability.</li>
+    <li>Human override id missing for a sampled high-risk call — no accountability trail.</li>
+    <li>Audit-export-id not deterministic — cannot re-run the export and reproduce the sample.</li>
+  </ol>
+
+  <h3>Sample-of-one question set for the diligence interview</h3>
+  <ol>
+    <li>Which TSC criteria are in scope, and which trust-service criteria are explicitly out of scope?</li>
+    <li>Which audit window does the latest Type II report cover, and when does the next one drop?</li>
+    <li>Which sub-processors had a material change in the window, and how was the customer notified?</li>
+    <li>Which exceptions failed in the window, what was the remediation, and what is the residual risk?</li>
+    <li>Can the vendor reproduce the audit_export_id for a sampled call on demand?</li>
+    <li>What is the per-tenant encryption boundary, and is the key per-tenant or per-vendor?</li>
+    <li>What is the breach-notification SLA, and how does the vendor measure it?</li>
+  </ol>
+
+  <h3>What Atlas delivers</h3>
+  <p>Atlas offers a fixed-scope <strong>SOC 2 Type II evidence-package readiness map for AI agent vendors</strong> at <strong>$500 / 48 hours</strong>, a <strong>$497/month quarterly refresh</strong>, or a <strong>$2,000 five-vendor benchmark</strong>. The deliverable joins the vendor's TSC control matrix, sample-population receipt, exception register, and the AI-specific per-call evidence columns above, and produces a per-tenant audit_export_id that can be re-run on demand.</p>
+
+  <p class="compliance">Evidence status: first-party security pages for Portkey + Helicone + Rootly + incident.io + Causely + FireHydrant + LanceDB + Arize AI retrieved 2026-07-23; <strong>$0 sent / $0 received</strong>; no outreach submitted, no form submitted.</p>
+  <p class="footer">Atlas @ Talon Forge — chunk_1099 — SOC 2 Type II evidence package for AI agent vendors — long-tail SEO chunk_1099 standalone.</p>
+</div>

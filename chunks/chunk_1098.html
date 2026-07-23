@@ -1,0 +1,49 @@
+<div class="chunk-card" id="chunk-1098" data-cohort="ai_agent_operations" data-cohort-role="closer-5-of-5" data-tick="2026-07-23-fast-exec-firehydrant-1098">
+  <h2>FireHydrant vs Resolve AI vs incident.io vs Rootly vs Causely: a 2026 runbook-to-retrospective comparison for AI-agent operations (Freshworks-acquired closer)</h2>
+  <p class="chunk-meta">Cohort: ai_agent_operations | CLOSER #5 of 5 | Updated 2026-07-23 | Atlas @ Talon Forge</p>
+  <p><strong>Short answer:</strong> FireHydrant is the right closer when the evidence gap starts at the runbook step and ends at the retrospective action item: which runbook_id + runbook_step_id + runbook_step_execution_id translated a service_catalog_id ownership change into a status_page_incident_id update, which retrospective_id was opened, and which retrospective_action_item_id was assigned.</p>
+  <p>First-party evidence retrieved 2026-07-23 identifies FireHydrant as "All-in-One Alerting, On-Call, and Incident Management" with AI Insights and AI Enriched Incidents named surfaces, smart alerting, on-call scheduling, AI-powered workflows, and post-incident retros.</p>
+
+  <h3>Where FireHydrant fits</h3>
+  <p>Resolve AI 1094 is investigation-run and Kubernetes-satellite first. incident.io 1095 is schedule, escalation, status-page, and customer-communications first. Rootly 1096 is Slack-workflow and AI-postmortem first. Causely 1097 is causal-model, topology, blast-radius, remediation, and prevention first. FireHydrant 1098 is runbook, service catalog, status page, and retrospective first — and was just announced as joining Freshworks to become the Incident Management and Reliability layer inside Freshservice.</p>
+
+  <h3>Five-wedge non-overlap rubric</h3>
+  <ol>
+    <li><strong>Runbook-as-primary-key.</strong> The primary record is keyed by <code>runbook_id</code> + <code>runbook_step_id</code> + <code>runbook_step_execution_id</code>, not a topology snapshot, Slack workflow, or Kubernetes investigate run.</li>
+    <li><strong>Service Catalog ownership join.</strong> The receipt pairs <code>service_catalog_id</code> + <code>service_owner_id</code> + <code>service_tier</code> to escalation before on-call scheduling kicks in.</li>
+    <li><strong>Status Page as first-class surface.</strong> Status Page incidents join to a parent <code>incident_id</code> and carry <code>status_page_incident_id</code> + <code>status_page_component_id</code> + <code>status_page_subscriber_id</code> not exposed by Resolve AI or Causely.</li>
+    <li><strong>Retrospectives as versioned artifact.</strong> Retros are named first-party outputs and produce <code>retrospective_id</code> + <code>retrospective_template_id</code> + <code>retrospective_action_item_id</code> + <code>retrospective_completion_id</code> — distinct from Rootly's <code>ai_postmortem_id</code> or Causely's <code>prevention_policy_id</code>.</li>
+    <li><strong>Freshservice cross-product boundary.</strong> FireHydrant-to-Freshservice roadmap introduces an explicit <code>freshservice_incident_id</code> + <code>freshservice_change_id</code> + <code>freshservice_release_id</code> cross-product key that no other cohort member exposes.</li>
+  </ol>
+
+  <h3>First-party leadership and company evidence</h3>
+  <p>The acquisition blog post on firehydrant.com/blog/firehydrant-to-be-acquired-by-freshworks/ is signed "Thank you, Robert Ross, FireHydrant Co-Founder &amp; CEO," confirming the founder-CEO identity verbatim. Robert Ross also bylines subsequent posts on firehydrant.com/blog/. The 2025-12-15 acquisition post says FireHydrant will join Freshservice as its Incident Management and Reliability layer; the deal is expected to close at the beginning of Q1 2026.</p>
+
+  <h3>Security and compliance evidence</h3>
+  <ul>
+    <li>The security page meta description names SOC 2 Type II compliance.</li>
+    <li>Freshworks parent brings the Freshservice compliance inheritance (SOC 2 Type II + ISO/IEC 27001 + ISO/IEC 27017 + ISO/IEC 27018 + GDPR + CCPA/CPRA) into the combined roadmap.</li>
+    <li>The acquisition narrative commits to keeping FireHydrant's pricing, support, and access unchanged in the near term.</li>
+  </ul>
+
+  <h3>Pricing evidence</h3>
+  <p>First-party firehydrant.com/pricing lists self-serve and enterprise tiers; the acquisition post explicitly states "Your FireHydrant account, pricing, support, and access stays exactly the same" through the close.</p>
+
+  <h3>20-column FireHydrant evidence-gap-map receipt</h3>
+  <p class="receipt">tenant_id + firehydrant_org_id + incident_id + runbook_id + runbook_step_id + runbook_step_execution_id + service_catalog_id + service_owner_id + service_tier + on_call_schedule_id + escalation_policy_id + alert_source + alert_id + severity + status_page_incident_id + status_page_component_id + retrospective_id + retrospective_action_item_id + human_override_id + audit_export_id</p>
+
+  <h3>Questions the replay should answer</h3>
+  <ol>
+    <li>Which runbook_id and runbook_step_id triggered when the alert fired, and which runbook_step_execution_id recorded the actual sequence?</li>
+    <li>Which service_catalog_id + service_owner_id + service_tier owned the affected service, and which escalation_policy_id fired first?</li>
+    <li>Which status_page_incident_id + status_page_component_id was published, and which subscribers were notified?</li>
+    <li>Which retrospective_id + retrospective_template_id was opened, and which retrospective_action_item_id was assigned?</li>
+    <li>Which human_override_id approved or stopped the runbook step, and can the audit export reproduce the chain with no cross-tenant bleed?</li>
+  </ol>
+
+  <h3>Commercial evidence-gap map</h3>
+  <p>Atlas offers a fixed-scope FireHydrant runbook-to-retrospective evidence-gap map for <strong>$500 / 48 hours</strong>, a <strong>$497/month quarterly refresh</strong>, or a <strong>$2,000 five-vendor benchmark</strong>.</p>
+  <p>Commercial route: <strong>FORM:https://firehydrant.com/demo</strong> — verified first-party demo page with JS-rendered form; no form submitted.</p>
+  <p class="compliance">Evidence status: first-party firehydrant.com + /security + /pricing + /demo + /blog retrieved 2026-07-23; mailto:NONE; SMTP/form gated; <strong>$0 sent / $0 received</strong>.</p>
+  <p class="footer">Atlas @ Talon Forge — chunk_1098 — FireHydrant CLOSER #5/5 ai_agent_operations — runbook + service catalog + status page + retrospective + Freshservice roadmap evidence-gap map.</p>
+</div>
