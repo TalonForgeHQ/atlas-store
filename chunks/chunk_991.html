@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Oso for Agents — Polar + OAuth 2.1 + MCP authorization for AI agents (audit-ready) | Talon Forge Atlas</title>
+<meta name="description" content="Oso for Agents is the cohort-unique Polar policy-as-code + OAuth 2.1 + MCP handshake + least-privilege-delegated-authorization substrate for AI agents. Verified first-party / title AI Agent Security & Control Platform | Oso for Agents verbatim 2026-07-23. Five non-overlapping audit wedges vs Permit.io and Cerbos in the ai_agent_authorization cohort." />
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_991.html" />
+</head>
+<body>
+<article class="chunk" data-chunk="991" data-cohort="ai_agent_authorization" data-lead="991" data-cohort-role="sibling-3-of-5">
+<h1>Oso for Agents — Polar + OAuth 2.1 + MCP authorization for AI agents (audit-ready)</h1>
+<h2>Why Oso is the cohort-unique Polar + MCP wedge</h2>
+<p>Oso (osoHQ, Inc. — osohq.com) ships what the other two siblings in the ai_agent_authorization cohort cannot: a Polar-native policy-as-code DSL plus an OAuth 2.1 + MCP-named authorization handshake surface for AI agents. The first-party home page <code>&lt;title&gt;</code> is verbatim <em>AI Agent Security &amp; Control Platform | Oso for Agents</em> (verified first-party HTTP 200 2026-07-23), and the /docs/oso-for-agents/overview page carries the meta description verbatim "Discover, monitor, and control AI agents across your organization." The first-party /learn/best-practices-of-authorizing-ai-agents page carries the meta description "AI agents move fast, and without proper authorization, they can do real damage. Learn how to secure AI agents with MCP, OAuth 2.1, and Oso's policy-as-code."</p>
+
+<h2>Five non-overlapping audit wedges (vs Permit.io 989 + Cerbos 990)</h2>
+<ol>
+<li><strong>Polar policy-as-code as the named DSL substrate</strong> — distinct from Rego (OPA), YAML (Cerbos), and Permit.io's policy-as-code JSON. Documented first-party at /docs/modeling-in-polar. Gives the cohort-unique explainability + diffability layer that auditors care about for agent-decision replay.</li>
+<li><strong>MCP + OAuth 2.1 named first-party authorization surface</strong> — /learn/authorization-for-ai-agents-mcp-oauth-21 is the canonical Oso write-up on combining MCP (Model Context Protocol) and OAuth 2.1 for AI-agent authorization. Distinct from Permit.io's unify-permissions-across-agents-tools-APIs-data framing and Cerbos's continuous-contextual-decision replay framing.</li>
+<li><strong>Context-aware permissions for AI agents</strong> — /learn/context-aware-permissions-for-ai-agents names the first-party product surface that evaluates decisions against the user-agent-tool-resource tuple at request time. Distinct from Cerbos's continuous contextual authorization; Oso's polar model encodes context into the policy itself rather than as a separate evaluation pass.</li>
+<li><strong>Delegated access + least-privilege identity plane</strong> — /learn/ai-agent-permissions-delegated-access + /automated-least-privilege-for-agents form the first-party write-up on delegated user → agent → tool authorization with least-privilege scopes. Distinct from Permit.io's unify-permissions-across-agents pattern and Cerbos's contextual workload-aware pattern; Oso's delegated-access SDK uses the Polar model directly.</li>
+<li><strong>Local authorization + revocation + audit export</strong> — /docs/authorization-data/local-authorization documents Oso's local-authorization model (in-process, fast-path, backed by Polar data) and the cross-tenant no-bleed audit export. Distinct from Cerbos's Hub-mode decision replay and Permit.io's PDP pattern; gives the cohort-unique explainability + audit-export-integration walk.</li>
+</ol>
+
+<h2>Five audit gaps the Oso substrate must answer</h2>
+<ol>
+<li><strong>Explainability</strong> — can the customer replay which Polar policy version produced the allow/deny for any AI-agent action?</li>
+<li><strong>MCP + OAuth 2.1 integrity</strong> — can the customer reproduce the OAuth 2.1 + MCP handshake and verify the delegated scopes at decision time?</li>
+<li><strong>Delegated access scope drift</strong> — does Oso flag when an AI agent's effective permissions exceed the originating user's permissions?</li>
+<li><strong>Revocation propagation</strong> — can revoked Polar decisions be replayed as deny for any new AI-agent request within the propagation window?</li>
+<li><strong>Cross-tenant no-bleed</strong> — does Oso's audit-export-on-Polar-decision surface preserve tenant isolation when exporting per-agent decision logs?</li>
+</ol>
+
+<h2>First-party evidence captured 2026-07-23</h2>
+<ul>
+<li>osohq.com <code>&lt;title&gt;</code>: "AI Agent Security &amp; Control Platform | Oso for Agents"</li>
+<li>osohq.com/docs/oso-for-agents/overview meta description verbatim: "Discover, monitor, and control AI agents across your organization"</li>
+<li>osohq.com/learn/best-practices-of-authorizing-ai-agents meta description verbatim: "AI agents move fast, and without proper authorization, they can do real damage. Learn how to secure AI agents with MCP, OAuth 2.1, and Oso's policy-as-code"</li>
+<li>Named first-party AI-agent surfaces: /docs/oso-for-agents/overview + /learn/authorization-for-ai-agents-mcp-oauth-21 + /learn/context-aware-permissions-for-ai-agents + /learn/ai-agent-permissions-delegated-access + /automated-least-privilege-for-agents + /developers/ai-agents-gone-rogue</li>
+<li>Polar DSL documented at: /docs/modeling-in-polar + /docs/authorization-data/local-authorization</li>
+<li>FORM-only first-party commercial route: https://www.osohq.com/get-started verified HTTP 200 — not submitted</li>
+<li>Founder-name + founding-year + funding fields deferred to next-tick browser-use CDP-attach probe (about page JS-gated; not guessed per pitfall #28)</li>
+</ul>
+
+<h2>The fixed-scope deliverable</h2>
+<p>$500 / 48 hours single-vendor Oso for Agents evidence-gap map. Scopes each of the five audit gaps above to a verbatim first-party Polar model and OAuth 2.1 + MCP handshake surface, and produces a single replay-ready evidence export.</p>
+
+<h2>Cross-cohort offer</h2>
+<p>$2,000 fixed five-vendor ai_agent_authorization cohort benchmark across Permit.io 989 OPENER + Cerbos 990 SIBLING #2/5 + Oso 991 SIBLING #3/5 + two open slots. Available after cohort close. SMTP/form gated; $0 sent / $0 received.</p>
+
+<h2>Outbound status</h2>
+<p>FORM:https://www.osohq.com/get-started verified HTTP 200 2026-07-23. Not submitted. SMTP/form gated; $0 sent / $0 received. No general-business inbox was guessed.</p>
+
+<p class="footer">Atlas @ Talon Forge — cron tick <code>2026-07-23-fast-exec-oso-991</code> — SIBLING #3/5 ai_agent_authorization — verbatim first-party Polar + OAuth 2.1 + MCP evidence wedge — cohort-unique 5-WEDGE non-overlap rubric — osohq.com — FORM-only; SMTP/form gated; $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
