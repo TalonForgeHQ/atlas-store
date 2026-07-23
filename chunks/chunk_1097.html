@@ -1,0 +1,51 @@
+<div class="chunk-card" id="chunk-1097" data-cohort="ai_agent_operations" data-cohort-role="sibling-4-of-5" data-tick="2026-07-23-fast-exec-causely-1097">
+  <h2>Causely vs Resolve AI vs incident.io vs Rootly: a 2026 causal-intelligence comparison for AI-agent operations</h2>
+  <p class="chunk-meta">Cohort: ai_agent_operations | SIBLING #4 of 5 | Updated 2026-07-23 | Atlas @ Talon Forge</p>
+  <p><strong>Short answer:</strong> Causely is the right sibling when the evidence gap starts before the postmortem: which topology snapshot and causal-model version connected symptoms to root cause, how blast radius was assessed, what remediation ran, and what prevention policy was created.</p>
+  <p>First-party evidence retrieved 2026-07-23 identifies the product as “Causely: Causal Intelligence for AI Agents.” Its description says Causely gives AI agents a live causal model so they can identify root cause, assess blast radius, and resolve incidents without human intervention.</p>
+
+  <h3>Where Causely fits</h3>
+  <p>Resolve AI 1094 is investigation-run and Kubernetes-satellite first. incident.io 1095 is schedule, escalation, status-page, and customer-communications first. Rootly 1096 is Slack-workflow and AI-postmortem first. Causely 1097 is causal-model, topology, blast-radius, remediation, and prevention first.</p>
+
+  <h3>Five-wedge non-overlap rubric</h3>
+  <ol>
+    <li><strong>Live causal model substrate.</strong> The primary record is keyed by <code>topology_snapshot_id</code> and <code>causal_model_version</code>, not a Slack workflow, on-call schedule, or Kubernetes investigate run.</li>
+    <li><strong>Deterministic causal inference.</strong> The receipt preserves <code>causal_graph_edge_set_hash</code>, <code>root_cause_id</code>, and <code>root_cause_confidence</code>.</li>
+    <li><strong>Root cause plus blast radius.</strong> Causely’s public product description explicitly pairs root-cause identification with blast-radius assessment before resolution.</li>
+    <li><strong>Remediation plus recurrence prevention.</strong> The row links a remediation execution to a versioned prevention policy, extending the audit beyond the incident itself.</li>
+    <li><strong>Hybrid/on-prem/air-gapped deployment.</strong> The first-party security page says its mediation layer keeps sensitive data in the customer environment and supports on-premise or air-gapped deployment.</li>
+  </ol>
+
+  <h3>First-party leadership and company evidence</h3>
+  <p>The company page names Shmuel Kliger, Ph.D. as Founder; Christine Miller, Endre Sara, Ph.D., and Enlin Xu as co-founders and engineering leaders; and Yotam Yemini as CEO and Board Director. It says Causely was incorporated in 2022 after the founding team’s experience building Turbonomic, acquired by IBM.</p>
+
+  <h3>Security and deployment evidence</h3>
+  <ul>
+    <li>No sensitive data or Personally Identifiable Information is stored or processed.</li>
+    <li>Symptom data transferred is encrypted in transit and at rest.</li>
+    <li>The security page names SOC 2 compliance.</li>
+    <li>The mediation layer performs local processing and symptom detection with minimal privileges.</li>
+    <li>Enterprise deployment can keep all data and processing behind the customer network boundary, including air-gapped environments.</li>
+  </ul>
+
+  <h3>Pricing evidence</h3>
+  <p>The first-party pricing page offers a free 30-day trial, a Professional Edition at <strong>$2,000/month</strong>, and Enterprise custom plans with on-prem and air-gapped deployment.</p>
+
+  <h3>20-column Causely evidence-gap-map receipt</h3>
+  <p class="receipt">tenant_id + causely_workspace_id + incident_id + topology_snapshot_id + causal_model_version + symptom_id + anomaly_id + service_id + causal_graph_edge_set_hash + root_cause_id + root_cause_confidence + blast_radius_assessment_id + remediation_action_id + remediation_execution_id + prevention_policy_id + human_override_id + deployment_mode + token_spend_usd + latency_ms + audit_export_id</p>
+
+  <h3>Questions the replay should answer</h3>
+  <ol>
+    <li>Which topology snapshot and causal-model version were active when the symptom and anomaly appeared?</li>
+    <li>Which causal-graph edges support the root-cause decision and confidence score?</li>
+    <li>Which blast-radius assessment identified affected services before remediation?</li>
+    <li>Which remediation action and execution occurred, and did a human override approve or stop it?</li>
+    <li>Which prevention policy closes the loop, and can the audit export reproduce it without cross-tenant bleed?</li>
+  </ol>
+
+  <h3>Commercial evidence-gap map</h3>
+  <p>Atlas offers a fixed-scope Causely causal-model-to-remediation evidence-gap map for <strong>$500 / 48 hours</strong>, a <strong>$497/month quarterly refresh</strong>, or a <strong>$2,000 five-vendor benchmark</strong>.</p>
+  <p>Commercial route: <strong>FORM:https://www.causely.ai/demo</strong> — verified first-party demo page with work-email field; no form submitted.</p>
+  <p class="compliance">Evidence status: first-party causely.ai, /company, /security, /pricing, and /demo retrieved 2026-07-23; mailto:NONE; SMTP/form gated; <strong>$0 sent / $0 received</strong>.</p>
+  <p class="footer">Atlas @ Talon Forge — chunk_1097 — Causely SIBLING #4/5 ai_agent_operations — causal model + blast radius + remediation + prevention evidence-gap map.</p>
+</div>
