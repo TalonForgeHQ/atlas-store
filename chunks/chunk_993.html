@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Agent Identity Governance vs Authorization: What Buyers Should Compare</title>
+<meta name="description" content="Compare AI agent identity governance with runtime authorization using C1, Permit.io, Cerbos, and Oso surfaces, with five evidence questions for procurement teams.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_993.html">
+<style>
+body{font-family:Arial,sans-serif;max-width:940px;margin:auto;padding:32px;line-height:1.65;color:#172033;background:#f8fafc}
+main{background:#fff;padding:32px;border-radius:14px}h1,h2{color:#123b65}.proof{background:#eff6ff;padding:16px;border-left:4px solid #2563eb}.cta{background:#0f172a;color:#fff;padding:20px;border-radius:10px}.cta a{color:#93c5fd}
+</style>
+</head>
+<body>
+<main data-tick="2026-07-23-fast-exec-ai-agent-identity-governance-vs-authorization-993" data-cohort="ai_agent_identity_governance">
+<h1>AI Agent Identity Governance vs Authorization: What Buyers Should Compare</h1>
+<p><small>Published July 23, 2026 · Atlas Audit Prep · long-tail keyword: AI agent identity governance vs authorization</small></p>
+<p>Identity governance and runtime authorization are related, but they answer different buyer questions. Governance asks <em>who or what is this agent, who owns it, what access should it have, and how does that access change over its lifecycle?</em> Authorization asks <em>may this actor perform this action on this resource right now, given context and policy?</em></p>
+<div class="proof"><strong>Research basis:</strong> this comparison uses public first-party product and documentation surfaces already verified for the C1, Permit.io, Cerbos, and Oso research set. It is a procurement evidence framework, not a claim that any vendor fails a control.</div>
+<h2>Identity governance is the lifecycle layer</h2>
+<p>C1's first-party positioning names a universal identity graph across users, services, agents, and API keys, plus AI Access Management, Intelligent Access Reviews, Dynamic Access Controls, Just-in-Time Access, AI-Native Governance, and Identity Lifecycle Management. Those surfaces point to ownership, registration, review, approval, provisioning, and revocation.</p>
+<ul>
+<li>Register the agent, sponsor, business purpose, environment, and deployment region.</li>
+<li>Connect the agent to the human, service account, API key, workload, or team that owns it.</li>
+<li>Review entitlements and recommendations on a recurring campaign or risk trigger.</li>
+<li>Provision time-bounded access and retain the approval, exception, and revocation history.</li>
+</ul>
+<h2>Authorization is the action-time layer</h2>
+<p>Permit.io, Cerbos, and Oso are useful comparison points for policy and decision replay. Their public surfaces emphasize permissions, contextual authorization, policy-as-code, and AI-agent workflows. The audit question is not only whether a request was allowed or denied; it is whether the decision can be reconstructed later.</p>
+<ul>
+<li>Capture the actor and delegated identity that made the request.</li>
+<li>Pin the policy, rule, tenant, resource, and context versions used in the decision.</li>
+<li>Record the tool call, API operation, resource result, and human override separately.</li>
+<li>Preserve deny, retry, expiry, rollback, and revocation paths, not only successful calls.</li>
+</ul>
+<h2>Five evidence joins buyers should request</h2>
+<ol>
+<li><strong>Identity-to-owner:</strong> agent ID → sponsor → source system → credential or workload → tenant and region.</li>
+<li><strong>Lifecycle-to-entitlement:</strong> registration → approval → provision → review → expiry or revocation, with stable IDs.</li>
+<li><strong>Policy-to-decision:</strong> request → policy version → model or recommendation version → allow/deny → reason.</li>
+<li><strong>Decision-to-action:</strong> authorization decision → tool call → downstream resource change → human override or rollback.</li>
+<li><strong>Failure-to-export:</strong> denied, expired, retried, orphaned, and revoked states → retention record → auditor-readable export.</li>
+</ol>
+<h2>Comparison table</h2>
+<table>
+<tr><th>Buyer concern</th><th>Identity governance emphasis</th><th>Authorization emphasis</th></tr>
+<tr><td>Ownership</td><td>Agent sponsor, purpose, lifecycle status</td><td>Actor, delegation, tenant context</td></tr>
+<tr><td>Access change</td><td>Reviews, provisioning, JIT, revocation</td><td>Policy decision at request time</td></tr>
+<tr><td>Agent action</td><td>Approved capability and entitlement scope</td><td>Specific tool, API, or resource operation</td></tr>
+<tr><td>Evidence</td><td>Lifecycle and approval export</td><td>Decision, reason, result, and rollback replay</td></tr>
+</table>
+<h2>Minimum replay schema</h2>
+<p>Request <code>tenant_id</code>, <code>agent_id</code>, identity type, sponsor, source system, credential or token ID, resource, action, policy ID/version, context snapshot, model or recommendation version, decision ID, reason, tool-call ID, downstream result, approver, override, expiry, revocation, failure reason, region, retention state, evidence hash, and exporter identity.</p>
+<p>This schema prevents a common gap: an identity-governance export may prove that an agent was approved, while an authorization export may prove that an individual tool call was allowed. The buyer needs the join between both records.</p>
+<h2>Procurement questions</h2>
+<ul>
+<li>Can one agent be traced from registration through its final tool-call and revocation?</li>
+<li>Can policy changes be compared against decisions made before and after deployment?</li>
+<li>Are delegated human approvals distinguishable from autonomous agent actions?</li>
+<li>Can a customer export evidence without losing tenant, region, or sub-processor boundaries?</li>
+<li>Are denied and rolled-back actions retained under the same audit policy as successful actions?</li>
+</ul>
+<div class="cta"><strong>Fixed-scope option:</strong><br>$500 single-platform evidence-gap map delivered in 48 hours, $2,000 four-vendor identity-versus-authorization benchmark, or $497/month quarterly refresh.<br><a href="https://talonforgehq.github.io/atlas-store/">View Atlas Audit Prep</a></div>
+<p><small>Staging-only research artifact. No email or form was submitted. SMTP/form gated; $0 sent / $0 received.</small></p>
+</main>
+</body>
+</html>
