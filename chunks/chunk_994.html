@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veza Access Graph vs C1 Universal Identity Graph: AI Agent Identity Governance Evidence Surfaces</title>
+<meta name="description" content="Compare the Veza Access Graph and the C1 universal identity graph for AI agent identity governance, with five evidence-surface wedges, 22 audit fields, and a fixed-scope $500 48-hour evidence-gap map.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_994.html">
+<style>
+body{font-family:Arial,sans-serif;max-width:940px;margin:auto;padding:32px;line-height:1.65;color:#172033;background:#f8fafc}
+main{background:#fff;padding:32px;border-radius:14px}h1,h2{color:#123b65}.proof{background:#eff6ff;padding:16px;border-left:4px solid #2563eb}.cta{background:#0f172a;color:#fff;padding:20px;border-radius:10px}.cta a{color:#93c5fd}
+</style>
+</head>
+<body>
+<main data-tick="2026-07-23-fast-exec-veza-vs-c1-access-graph-994" data-cohort="ai_agent_identity_governance" data-cohort-role="sibling-2-of-5">
+<h1>Veza Access Graph vs C1 Universal Identity Graph: AI Agent Identity Governance Evidence Surfaces</h1>
+<p><small>Published July 23, 2026 · Atlas Audit Prep · long-tail keyword: Veza Access Graph vs C1 universal identity graph</small></p>
+<p>The ai_agent_identity_governance cohort has two distinct identity-plane products: Veza, which publishes a named <em>Access Graph</em> that connects identities to data; and C1 (formerly ConductorOne), which publishes a named <em>universal identity graph</em> that connects users, services, agents, and API keys. The two planes answer overlapping but non-identical buyer questions.</p>
+<div class="proof"><strong>Research basis:</strong> first-party product pages for Veza (veza.com homepage, /product, /company) and C1 (c1.ai /about-us, /platform) were verified on 2026-07-23. This is an evidence-surface framework, not a claim that either vendor fails a control.</div>
+<h2>Where the two planes overlap</h2>
+<p>Both vendors publish a graph product. Both publish an AI-agent-security product surface. Both publish an NHI (non-human identity) governance surface. Both integrate with Okta, AWS, and the major SaaS identity providers. Both target identity-governance and security teams, and both aim to be evidence-exportable for SOC 2 Type II and ISO 27001 audits.</p>
+<h2>Where the two planes differ</h2>
+<ol>
+<li><strong>Graph subject:</strong> C1's universal identity graph is subject-centric (every user, service, agent, and API key is a node). Veza's Access Graph is authorization-centric (every subject → permission → resource → action → data_record edge is a first-class node).</li>
+<li><strong>Agent-action product surface:</strong> C1 publishes an Identity-Aware Gateway + C1 Autonomous Worker + Headless Identity Infrastructure stack for AI-agent request paths. Veza publishes a separately-named Access Agents + Access AI + Access Hub product surface for the same job, with the agent-to-data authorization edge as the primary node.</li>
+<li><strong>Governance flow plane:</strong> C1 emphasizes lifecycle (registration, approval, review, JIT, revocation) plus policy-as-code guardrails. Veza emphasizes Access Reviews + Lifecycle Management + Access Requests + Access AuthZ + Separation of Duties, with the Access Graph as the substrate that all five flows read from.</li>
+<li><strong>Integration breadth vs depth:</strong> Veza publishes 325+ integrations with named top-14 (AWS, Crowdstrike, Google Cloud, Microsoft Azure, Open Authorization API, Okta, Snowflake, Active Directory, Databricks, GitHub, Google Drive, OpenAI, Oracle, Salesforce). C1 emphasizes the identity-graph + MCP-aware governance plane, with named customers Ramp + DigitalOcean + Brex + Instacart + Qualtrics + Zscaler + PriceSmart + DailyPay.</li>
+<li><strong>Origin story wedge:</strong> C1's two co-founders (Alex Bovee and Paul Querna) met on Okta security products per the first-party Founded-in-Security copy. Veza's three co-founders (Tarun Thakur, Maohua Lu, Rob Whitcher) started the company in early 2020 with a cloud-data-authorization origin story — "the world's data was rapidly, irreversibly transitioning to the cloud" — per the first-party /company page.</li>
+</ol>
+<h2>The 22-surface evidence-gap map</h2>
+<p>For a buyer comparing the two on a single agent-identity-governance procurement, the audit fields that matter are:</p>
+<ol>
+<li><strong>access_graph_node_id</strong> — stable Veza node identifier per (subject, permission, resource, action, data_record).</li>
+<li><strong>access_graph_edge_id</strong> — stable Veza edge identifier per (subject → permission → resource).</li>
+<li><strong>subject_identity_id</strong> + <strong>permission_id</strong> + <strong>resource_id</strong> + <strong>action_id</strong> + <strong>data_record_id</strong> — five-field join.</li>
+<li><strong>tenant_id</strong> + <strong>cross_tenant_no_bleed_audit_trail</strong> — proves one tenant's evidence is not retrievable from another tenant's export.</li>
+<li><strong>edge_freshness_timestamp</strong> — last time the Access Graph edge was re-evaluated, not last time it was queried.</li>
+<li><strong>credential_rotation_event_id</strong> — every rotation produces a retrievable event with prior + new credential hash.</li>
+<li><strong>agent_identity_id</strong> + <strong>tool_call_id</strong> + <strong>access_decision</strong> — per-agent-action trail with allow/deny + reason.</li>
+<li><strong>veza_policy_id</strong> + <strong>veza_policy_version</strong> — per-decision evidence-pinning.</li>
+<li><strong>downstream_resource_action</strong> — what happened to the resource after the allow decision.</li>
+<li><strong>revocation_event_id</strong> + <strong>change_request_id</strong> + <strong>audit_export_id</strong> — the join between Access Graph state change and the audit-log export that proves it.</li>
+<li><strong>downstream_system_state_change</strong> — proof the revocation propagated.</li>
+<li><strong>integration_id</strong> + <strong>per-integration-evidence-export-retrieval</strong> — per-integration (AWS, Okta, Snowflake, Databricks, GitHub, OpenAI, Salesforce) evidence.</li>
+</ol>
+<h2>Comparison table</h2>
+<table>
+<tr><th>Buyer concern</th><th>Veza Access Graph wedge</th><th>C1 universal identity graph wedge</th></tr>
+<tr><td>Graph substrate</td><td>Authorization-graph (subject → permission → resource → data_record)</td><td>Identity-graph (user, service, agent, API key as nodes)</td></tr>
+<tr><td>Agent product surface</td><td>Access Agents + Access AI + Access Hub (NAMED)</td><td>C1 Autonomous Worker + Identity-Aware Gateway + Headless Identity Infrastructure</td></tr>
+<tr><td>Lifecycle plane</td><td>Access Reviews + Lifecycle Management + Access Requests + Access AuthZ + Separation of Duties</td><td>Identity Lifecycle Management + Intelligent Access Reviews + Dynamic Access Controls + Just-in-Time Access</td></tr>
+<tr><td>Integration breadth</td><td>325+ named integrations, top-14 listed verbatim</td><td>Identity-graph-first + MCP-aware governance plane, named customer logos</td></tr>
+<tr><td>Origin / founders</td><td>2020 cloud-data-authorization origin, 3 founders (Tarun Thakur CEO, Maohua Lu CTO, Rob Whitcher CA)</td><td>Okta-security-products origin, 2 co-founders (Alex Bovee, Paul Querna)</td></tr>
+<tr><td>Audit export join</td><td>access_graph_node_id + edge_id + integration_id</td><td>identity-graph node + tenant_id + JIT grant + cross-system export</td></tr>
+</table>
+<h2>Procurement questions</h2>
+<ul>
+<li>Can the Access Graph export prove a single (subject → permission → resource → action → data_record) join with a stable edge_id, not just a query result?</li>
+<li>Are agent actions traceable from Access Agents through tool_call_id to the downstream resource change?</li>
+<li>Does the integration coverage export 325+ integrations with per-integration per-tenant evidence, or only a count?</li>
+<li>Are revoked edges still retrievable, with prior-state hash and rotation_event_id?</li>
+<li>Can the same export prove cross-tenant-no-bleed plus per-policy-version evidence-pinning plus per-credential rotation?</li>
+</ul>
+<div class="cta"><strong>Fixed-scope option:</strong><br>$500 single-platform Veza Access Graph evidence-gap map delivered in 48 hours, $2,000 five-vendor ai_agent_identity_governance cohort benchmark (when the cohort closes 5/5), or $497/month quarterly refresh.<br><a href="https://talonforgehq.github.io/atlas-store/">View Atlas Audit Prep</a></div>
+<p><small>Staging-only research artifact. No email or form was submitted. SMTP/form gated; $0 sent / $0 received.</small></p>
+</main>
+</body>
+</html>
