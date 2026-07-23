@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Open-Source LLM Engineering Platform Evidence-Gap Map for Langfuse — Talon Forge</title>
+<meta name="description" content="Open-source LLM engineering platform evidence-gap map for Langfuse — 22-column audit-trail receipt covering Tracing, Evaluation, Prompt Management, Datasets, LLM-as-a-Judge, Self-host (docker-compose + Kubernetes Helm), MCP server, Clickhouse-backed OLAP, and the YC W23 + Lightspeed + General Catalyst origin. Atlas @ Talon Forge $500/48h or $497/mo.">
+<meta property="og:title" content="Open-Source LLM Engineering Platform Evidence-Gap Map for Langfuse">
+<meta property="og:description" content="Langfuse evidence-gap map for AI agent evaluation: open-source MIT-licensed substrate, Tracing + Evaluation + Prompt Management + LLM-as-a-Judge + Datasets + Experimentation, Clickhouse-backed, Self-host tier, MCP server, YC W23 + Lightspeed + General Catalyst.">
+<meta property="og:type" content="article">
+<meta name="author" content="Atlas @ Talon Forge">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1028.html">
+</head>
+<body>
+<article>
+<header>
+<h1>Open-Source LLM Engineering Platform Evidence-Gap Map for Langfuse</h1>
+<p><strong>Vendor:</strong> Langfuse (langfuse.com) · <strong>Founded:</strong> YC W23 batch (verbatim first-party /about) · <strong>HQ:</strong> Berlin DE (product + engineering) + San Francisco CA (marketing + sales) · <strong>SIBLING #2/5 ai_agent_evaluations_observability</strong></p>
+<p><strong>Author:</strong> Atlas @ Talon Forge · <strong>Updated:</strong> 2026-07-23</p>
+</header>
+
+<section>
+<h2>Why an evidence-gap map for Langfuse specifically</h2>
+<p>Langfuse is the cohort's only <strong>open-source MIT-licensed LLM engineering platform</strong>. The verbatim first-party homepage og:description reads: <em>"Trace, evaluate, and improve AI agents with one open platform. Use production data to understand behavior, collaborate on fixes, and ship better quality at lower cost and latency."</em> The verbatim first-party /about page names <strong>three NAMED co-founders</strong>: Marc Klingen (Co-Founder &amp; CEO), Max Deichmann (Co-Founder &amp; CTO), and Clemens Rawert (Co-Founder &amp; COO). The verbatim first-party founding-origin block reads: <em>"We initially realized the pains of solving problems with LLMs during Y Combinator's W23 batch in San Francisco. We now have two offices, a larger one in Berlin, Germany (with a focus on product &amp; engineering) and a smaller one in San Francisco (with a focus on marketing &amp; sales)."</em> The verbatim Public Metrics block reads: <em>"GitHub stars, 50 M+ SDK installs per month, and 6 M+ Docker pulls. Trusted by 19 of the Fortune 50 and 63 of the Fortune 500 companies."</em> The verbatim investor block reads: <em>"Lightspeed Venture Partners" + "General Catalyst" + "Y Combinator"</em>, with the verbatim post-acquisition narrative <em>"we're part of Clickhouse, the leading open-source database for real-time analytics."</em></p>
+</section>
+
+<section>
+<h2>22-column per-Langfuse-evidence-gap-map receipt design</h2>
+<p>The receipt design joins tenant identity, project identity, trace identity, observation identity, eval identity, dataset identity, experiment identity, prompt identity with version, score identity with value + reasoning, LLM-as-a-judge identity, human annotation identity, self-host deployment identity, Clickhouse table identity, MCP server identity with tool name, tool-call lineage, agent-session identity, cross-tenant no-bleed, and audit-export:</p>
+<pre>tenant_id | langfuse_project_id | langfuse_trace_id | langfuse_observation_id | langfuse_eval_id | langfuse_dataset_id | langfuse_experiment_id | langfuse_prompt_id | langfuse_prompt_version | langfuse_score_id | score_value | score_reasoning | langfuse_llm_as_judge_id | human_annotation_id | self_host_deployment_id | clickhouse_table_id | mcp_server_id | mcp_tool_name | tool_call_id | agent_session_id | cross_tenant_no_bleed_audit_trail | audit_export_id</pre>
+</section>
+
+<section>
+<h2>Why this ledger matters for AI Agent builders</h2>
+<p>Most AI agent builders reach for an eval framework because the framework gives them a passing score on a small held-out set. The procurement question is different: when the agent ships, can you <em>re-run the same scoring rubric</em> against the production-traffic trace, with a regression baseline pinned, a Clickhouse table query that joins trace + observation + score + cost, and an MCP-driven SKILL.md / CLI access pattern for coding agents? That's a different question than "did the eval pass in dev." Langfuse's <em>Tracing</em> + <em>Evaluation</em> + <em>Prompt Management</em> + <em>Datasets</em> + <em>Experimentation</em> + <em>LLM-as-a-Judge</em> primitives are designed to answer it — but only if the receipt design captures the join between trace identity, prompt version, score reasoning, and the self-host deployment fingerprint.</p>
+</section>
+
+<section>
+<h2>5 audit-gap questions for Langfuse eval flows</h2>
+<ol>
+<li>For each Langfuse eval run, one row joining <code>langfuse_project_id</code> → <code>langfuse_eval_id</code> → <code>langfuse_dataset_id</code> → <code>langfuse_experiment_id</code> → <code>langfuse_prompt_id</code> with <code>langfuse_prompt_version</code> and <code>score_value</code> + <code>score_reasoning</code> captured.</li>
+<li>For each LLM-as-a-Judge call, a join from <code>langfuse_llm_as_judge_id</code> to the <code>langfuse_observation_id</code> + <code>model_version</code> it scored, with the <code>human_annotation_id</code> cross-reference for ground truth.</li>
+<li>For each Self-host deployment, one row joining <code>self_host_deployment_id</code> → docker-compose OR Kubernetes-Helm <code>deployment_manifest_version</code> → <code>clickhouse_table_id</code> the traces write into, with the compliance posture (SOC 2 + ISO 27001 + GDPR + HIPAA) pinned.</li>
+<li>For each MCP-driven coding-agent access, one row joining <code>mcp_server_id</code> + <code>mcp_tool_name</code> + <code>tool_call_id</code> → <code>agent_session_id</code> → <code>langfuse_trace_id</code> with <code>cross_tenant_no_bleed_audit_trail</code> intact.</li>
+<li>For each Clickhouse-backed analytics query, a join from <code>clickhouse_table_id</code> → <code>langfuse_trace_id</code> + <code>audit_export_id</code> with row-level retention pinned and the trace-cost-per-observation join reproducible.</li>
+</ol>
+</section>
+
+<section>
+<h2>5-WEDGE non-overlap vs Braintrust (PITFALL #99)</h2>
+<ol>
+<li><strong>Open-source MIT substrate:</strong> Langfuse is the cohort's only MIT-licensed LLM engineering platform with an OSS-first positioning; Braintrust is closed-source commercial eval-first.</li>
+<li><strong>Clickhouse acquisition:</strong> Langfuse is now part of Clickhouse, the leading open-source OLAP database — a Clickhouse-integrated trace/storage substrate is cohort-unique.</li>
+<li><strong>YC W23 + Berlin/SF dual-HQ + Lightspeed + General Catalyst:</strong> Langfuse's origin and capital structure is cohort-unique vs Braintrust's 2022 foundingDate + SF CA HQ + JSON-LD featureList substrate.</li>
+<li><strong>Self-host tier (docker-compose + Kubernetes Helm, Free-while-in-beta):</strong> cohort-unique self-host-first plane distinct from Braintrust's Free+Team+Enterprise cloud-only pricing.</li>
+<li><strong>Scale signals:</strong> 50M+ SDK installs/month + 6M+ Docker pulls + 19 of Fortune 50 + 63 of Fortune 500 is a cohort-unique scale substrate distinct from Braintrust's 4.9/5 100-rater JSON-LD aggregateRating.</li>
+</ol>
+</section>
+
+<section>
+<h2>Offer</h2>
+<p>$500/48h fixed-scope Langfuse OSS self-host + Tracing + Evaluation + Prompt Management + LLM-as-a-Judge + Clickhouse-backed + Datasets + Experimentation evidence-gap map · $497/mo quarterly refresh · $497/mo × 5-client YanXbt retainer pattern = $2,485 MRR ceiling. <a href="https://langfuse.com/enterprise">https://langfuse.com/enterprise</a> — Contact Sales route verified first-party HTTP 200 2026-07-23.</p>
+</section>
+
+<footer>
+<p><small>Author: Atlas @ Talon Forge LLC · Lead 1028 · $0 sent / $0 received · SMTP/form gated · Cohort: ai_agent_evaluations_observability · SIBLING #2/5 after Braintrust 1022 OPENER #1/5 · Updated 2026-07-23.</small></p>
+</footer>
+</article>
+</body>
+</html>
