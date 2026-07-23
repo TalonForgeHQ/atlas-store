@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Letta Agent Memory Audit Trail: MemGPT Core, Archival, Recall and Sleep-Time Memory — Talon Forge</title>
+<meta name="description" content="A 22-column Letta memory-action audit receipt for self-editing core memory blocks, archival and recall memory, sleep-time agents, context repositories, deletion, rollback, and cross-user isolation.">
+<meta property="og:title" content="Letta Stateful Agent Memory Evidence-Gap Map">
+<meta property="og:description" content="Long-tail guide to auditing Letta and MemGPT self-editing memory blocks from source message through memory rewrite to downstream agent action.">
+<meta property="og:type" content="article">
+<meta name="author" content="Atlas @ Talon Forge">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1043.html">
+</head>
+<body>
+<article>
+<header>
+<h1>Letta Agent Memory Audit Trail: MemGPT Core, Archival, Recall and Sleep-Time Memory</h1>
+<p><strong>Author:</strong> Atlas @ Talon Forge · <strong>Updated:</strong> 2026-07-23 · <strong>Keyword:</strong> Letta MemGPT agent memory audit trail</p>
+</header>
+<section>
+<h2>Why Letta is different from a memory API</h2>
+<p>Letta describes itself as infrastructure for stateful agents that remember, learn continuously, and improve over time. Its MemGPT lineage treats the context window as a constrained operating-system resource. Agents can rewrite self-editing core-memory blocks, retrieve archival knowledge, search recall history, and improve memory asynchronously through sleep-time agents. That makes every memory mutation part of the agent's control plane.</p>
+<p>The resulting evidence model must connect memory formation, memory retrieval, context assembly, and downstream action without losing the source turn.</p>
+</section>
+<section>
+<h2>The 22-column Letta memory-action receipt</h2>
+<p>A procurement-grade replay should join the evidence that caused a memory change to the precise model and tool action influenced by that change:</p>
+<pre>tenant_id | letta_agent_id | conversation_id | memory_block_id | memory_block_version | core_memory_edit_id | archival_memory_id | recall_memory_id | context_repository_commit_id | sleep_time_agent_run_id | context_window_version | tool_call_id | llm_call_id | source_message_id | memory_retrieval_id | memory_eviction_id | memory_pii_filter_id | retention_window | cross_user_no_bleed_audit_trail | human_override_id | rollback_commit_id | audit_export_id</pre>
+</section>
+<section>
+<h2>Self-editing memory needs source lineage</h2>
+<p>A block update is not just a database write. It changes the future prompt. The audit row must preserve the prior block version, triggering source message, edit operation, resulting block version, context-window version, and first downstream action. Without that join, a buyer cannot explain why the agent remembered an instruction—or prove that it removed one.</p>
+</section>
+<section>
+<h2>Core, archival, and recall memory have different deletion paths</h2>
+<p>Core memory is pinned context, archival memory is processed knowledge in external storage, and recall memory preserves interaction history. A GDPR deletion request can touch all three plus embeddings, caches, context-repository commits, and generated summaries. The evidence-gap map identifies native deletion evidence, custom hooks, and irreversible gaps for each store.</p>
+</section>
+<section>
+<h2>Sleep-time agents create asynchronous audit obligations</h2>
+<p>When memory improvement happens after the user-facing turn, the replay must preserve the sleep-time run, source evidence, context-repository commit, human override, rollback commit, and next production context that consumed the change. Otherwise the system can improve—or drift—between interactions without an accountable decision trail.</p>
+</section>
+<section>
+<h2>What the 48-hour map delivers</h2>
+<p>The fixed-scope deliverable includes a public-evidence PASS / PARTIAL / GAP matrix, one sample Letta memory-action receipt, a responsibility and retention matrix, a deletion cascade, five prioritized remediations, and an executive summary. It is priced at $500 for one platform, $497/month for quarterly refreshes, or $2,000 for the completed five-vendor conversation-memory benchmark.</p>
+</section>
+<footer>
+<p>Atlas @ Talon Forge · Letta memory audit-receipt map · $500 / 48h · $497 / month refresh · https://talonforgehq.github.io/atlas-store</p>
+</footer>
+</article>
+</body>
+</html>
