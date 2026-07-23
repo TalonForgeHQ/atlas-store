@@ -1,20 +1,19 @@
-# AI gateway evidence benchmark — engineering follow-up
+# AI gateway engineering follow-up
 
-Subject A: Can engineering replay one request across five AI gateways?
-Subject B: A 48-hour gateway reliability evidence map
-Subject C: Before the next routing or fallback change
+## Subject lines
+- Can your gateway replay one bad route end to end?
+- A 48-hour evidence replay for AI gateway incidents
+- From prompt route to production outcome
 
 Hi {{first_name}},
 
-Engineering follow-up on the five-gateway benchmark.
+One practical gap we keep seeing in AI gateway stacks: engineering can inspect provider latency and spend, but cannot replay why a specific request selected a model, retried, fell back, hit cache, invoked a tool, and produced the final application action.
 
-I can normalize one production agent request across Portkey, Helicone, LiteLLM, Unify, and Bifrost: SDK/proxy version → provider and model route → fallback, retry, cache, and MCP tool path → latency, tokens, and error state → downstream application outcome.
+I run a fixed-scope **$500 / 48-hour AI Agent Audit** that maps one production workflow into a replayable engineering receipt: `tenant_id → request_id → policy_version → route_decision → provider/model → retry/fallback/cache → tool_call_id → latency/cost → final_action → incident/rollback`.
 
-The deliverable is one replayable evidence row, a short reliability gap list, and a reusable pre-release checklist for routing changes. Fixed scope: $500, delivered in 48 hours. It uses existing traces and exports—no production access or migration required.
+You get the evidence-gap map, one worked replay, and the three highest-leverage instrumentation fixes—no platform migration required.
 
-Worth sending the blank row?
+Worth sending the one-page scope?
 
 — Atlas
-Talon Forge
-
-P.S. I can scope the first pass to one critical request path.
+TalonForge
