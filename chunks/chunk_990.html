@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cerbos AI-agent authorization audit: policy to action</title>
+<meta name="description" content="A Cerbos AI-agent authorization audit checklist for identity, contextual policy, decisions, downstream actions and revocation evidence.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_990.html">
+</head>
+<body>
+<article class="seo-chunk" id="chunk-990">
+<header>
+<p>Lead 990 · SIBLING #2/5 · ai_agent_authorization</p>
+<h1>Cerbos AI-agent authorization audit: policy to action</h1>
+<p>Cerbos's first-party About page describes an authorization management platform for every identity and decision, with fine-grained, contextual and continuous authorization across applications, gateways, workloads and <strong>AI agents</strong>.</p>
+<p>The long-tail buyer question is: <strong>how do you audit Cerbos AI-agent authorization from identity and policy to downstream action?</strong></p>
+</header>
+<section>
+<h2>Why Cerbos belongs in an AI-agent authorization comparison</h2>
+<p>Cerbos names AI agents alongside applications, gateways and workloads as authorization subjects. That makes the key evidence seam the decision boundary: what identity asked for access, what context was evaluated, and what the authorized system did next.</p>
+<p>The first-party About page names Emre Baran as CEO and co-founder and says Cerbos was founded in 2021 by Emre Baran, Alex Olivier and Charith Ellawala.</p>
+</section>
+<section>
+<h2>Five first-party evidence wedges</h2>
+<ol>
+<li><strong>Identity-aware decisions:</strong> record the agent, workload, tenant and human-on-behalf-of identity.</li>
+<li><strong>Contextual authorization:</strong> capture environment, purpose, risk and approval state at decision time.</li>
+<li><strong>Policy provenance:</strong> preserve policy, condition and version identifiers for every allow or deny.</li>
+<li><strong>Continuous control:</strong> show how changed policy and revocation affect the next action.</li>
+<li><strong>Exportable replay:</strong> produce a redacted, tenant-safe evidence record for incident and compliance review.</li>
+</ol>
+</section>
+<section>
+<h2>The five audit gaps</h2>
+<h3>Gap 1 — Agent identity to decision</h3>
+<p>Join tenant, agent identity, workload, user-on-behalf-of, tool, resource, requested action and decision ID.</p>
+<h3>Gap 2 — Context and policy version</h3>
+<p>Record the exact policy, condition, policy version and contextual attributes that produced the result.</p>
+<h3>Gap 3 — Approval and human override</h3>
+<p>Preserve approval state, reviewer identity and override reason as durable evidence rather than prompt text.</p>
+<h3>Gap 4 — Decision to downstream action</h3>
+<p>Connect the authorization result to the API, service, database, file or workflow action and its outcome.</p>
+<h3>Gap 5 — Revocation to export</h3>
+<p>Prove that revocation, changed relationships and cross-tenant boundaries survive replay and redacted export.</p>
+</section>
+<section>
+<h2>Suggested replay receipt</h2>
+<p><code>tenant_id · agent_identity_id · workload_identity_id · user_on_behalf_of · tool_id · resource_id · requested_action · policy_id · policy_version · condition_version · context_hash · decision_id · approval_id · downstream_action_id · downstream_result_hash · revocation_event_id · export_id · cross_tenant_no_bleed_proof</code></p>
+</section>
+<section>
+<h2>Practical 48-hour scope</h2>
+<p>Sample one AI agent, one allowed call, one denied call, one policy change and one revoked relationship. Mark each join durable, inferred or absent.</p>
+<p>The output is a redacted five-gap map, evidence table and prioritized identifier backlog. Talon Forge stages this as a <strong>$500 fixed-scope review</strong> or a <strong>$497/month evidence-refresh retainer</strong>.</p>
+</section>
+<footer>
+<p>Cerbos's first-party <a href="https://www.cerbos.dev/contact">contact</a> page is the commercial expert route; no form is submitted automatically.</p>
+<p>Founder verified first-party: Emre Baran, CEO and co-founder, on <a href="https://www.cerbos.dev/about">Cerbos/About</a>.</p>
+</footer>
+</article>
+</body>
+</html>
