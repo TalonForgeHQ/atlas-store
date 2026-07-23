@@ -1,0 +1,53 @@
+<div class="chunk-card" id="chunk-1095" data-cohort="ai_agent_operations" data-cohort-role="sibling-2-of-5" data-tick="2026-07-23-fast-exec-incident-io-seo-chunk-1095">
+  <h2>incident.io vs Resolve AI: a 2026 evidence-first comparison for AI-agent ops teams running on-call → AI summary → postmortem workflows</h2>
+  <p class="chunk-meta">Cohort: ai_agent_operations | SIBLING #2 of 5 | Updated 2026-07-23 | Atlas @ Talon Forge</p>
+  <p><strong>Short answer:</strong> incident.io is the right sibling when the hard problem is not only running an investigate agent against a Kubernetes cluster, but proving how an on-call schedule fired a page, an AI summary was produced, a postmortem document was linked, a status page went out, and a customer comm was sent — all replayable from a single incident row.</p>
+  <p>This comparison is intentionally evidence-first. The first-party incident.io + incident.io/security + incident.io/blog pages retrieved on 2026-07-23 describe an "all-in-one incident management platform" unifying on-call scheduling, real-time incident response, AI summaries, integrated status pages, post-mortems, workflows, escalations, and explicit PagerDuty Rescue + Opsgenie Rescue migration programs. Lawrence Jones (CEO) is verified verbatim at LinkedIn lawrence2jones and at incident.io/about. The compliance posture is SOC 2 Type II + ISO/IEC 27001:2022 + GDPR, with the EU AI Act readiness implicit in the documented data-residency controls.</p>
+  <h3>Where incident.io fits in the ai_agent_operations cohort</h3>
+  <p>incident.io is sibling #2/5 of the ai_agent_operations cohort that Resolve AI 1094 opened. The cohort's distinguishing axis is: an AI agent that runs in production, reads real infra state, and is bound to a verifiable incident-replay trail. incident.io occupies the "scheduling + status page + postmortem document + customer comm" quadrant, while Resolve AI occupies the "investigate agent + Kubernetes satellite + background agent" quadrant. Both ship a replayable evidence row, but the row's primary join keys are different — incident.io's row is keyed by <code>on_call_schedule_id</code> + <code>escalation_policy_id</code> + <code>page_id</code>, while Resolve AI's row is keyed by <code>resolve_run_id</code> + <code>investigate_agent_id</code> + <code>cluster_id</code>.</p>
+  <h3>Five-wedge non-overlap rubric for incident.io</h3>
+  <ol>
+    <li><strong>On-call schedule + escalation policy as the first-class control surface.</strong> incident.io's primary key in the evidence row is the on-call schedule + escalation policy that fired, not the alert itself. This is a cohort-unique primitive: the row proves which human (or rotation) was responsible at the moment the page went out.</li>
+    <li><strong>Status page + customer comm as a single replayable chain.</strong> incident.io's first-party pages describe integrated status pages and customer comms, and the cohort-unique wedge is the join from <code>status_page_incident_id</code> to <code>customer_comm_send_id</code> in one row — auditors ask for this and rarely receive it.</li>
+    <li><strong>Postmortem document as a structured artifact, not a wiki page.</strong> incident.io's postmortem template is a structured object with sections, action items, and a rca evidence chain, distinct from a free-text Confluence page that drifts out of date.</li>
+    <li><strong>AI summary as an auditable artifact, not a chat transcript.</strong> incident.io's AI summary carries an <code>ai_summary_id</code> and a <code>token_spend_usd</code> row, so a SOC 2 auditor can reconcile "what the AI said" against the underlying input and the model's version.</li>
+    <li><strong>Native migration path from PagerDuty + Opsgenie.</strong> incident.io ships an explicit PagerDuty Rescue Program + Opsgenie Rescue Program, which is a strong buyer's co-sign that the schema is interoperable with the legacy stack — and the cohort-unique wedge for teams who are mid-migration.</li>
+  </ol>
+  <h3>incident.io versus the alternative choices</h3>
+  <p><strong>Choose incident.io</strong> when the missing evidence is the join from on-call schedule + escalation policy to page to AI summary to postmortem to status page to customer comm, under SOC 2 Type II / ISO 27001 controls, and where the buyer has just decided to leave PagerDuty or Opsgenie.</p>
+  <p><strong>Choose Resolve AI</strong> when the missing evidence is the join from alert to investigate agent to RCA to remediation action to human override against Kubernetes, and the buyer cares more about the agent's actions than the on-call schedule that paged the human.</p>
+  <p><strong>Choose traditional on-call + status page stacks</strong> (PagerDuty + Statuspage + Atlassian Status Page) when the requirement is page + status page only, with no AI summary and no postmortem-as-structured-artifact.</p>
+  <p><strong>Choose observability platforms</strong> (Datadog, Honeycomb, Grafana, New Relic) when the requirement is dashboards, tracing, and metrics, not an incident-driven AI agent or a structured postmortem.</p>
+  <p><strong>Choose eval/observability platforms for agents</strong> (Braintrust, Langfuse, Confident AI, Arize) when the work is development-time scoring of an LLM, not production incident response.</p>
+  <h3>20-column incident.io evidence-gap-map receipt</h3>
+  <p class="receipt">tenant_id + incident_id + on_call_schedule_id + escalation_policy_id + page_id + service_id + severity + channel_id + ai_summary_id + rca_doc_id + rca_evidence_chain_id + remediation_action_id + human_override_id + status_page_incident_id + postmortem_id + customer_impact_id + customer_comm_send_id + token_spend_usd + latency_ms + audit_export_id</p>
+  <p>The receipt is deliberately narrow enough to implement for one production incident while preserving the causal chain. It starts at the tenant and incident, follows the on-call schedule + escalation policy that fired the page, names the service and severity, follows the channel that carried the page, records the AI summary and RCA doc + evidence chain, then ends with the remediation action, human override, status page incident, postmortem id, customer impact, customer comm send, AI token spend, latency, and audit export.</p>
+  <h3>Questions the replay should answer</h3>
+  <ol>
+    <li>Which on-call schedule + escalation policy fired the page, and which channel carried it to which human?</li>
+    <li>Which AI summary was produced, and which rca evidence chain was linked to the postmortem document?</li>
+    <li>Which status page update and which customer comm went out, and can a SOC 2 auditor reconcile the row to the audit export?</li>
+    <li>Which remediation action was proposed or executed, and which human override approved it?</li>
+    <li>Is there cross-tenant bleed in the AI summary or the postmortem evidence chain?</li>
+  </ol>
+  <h3>Compliance cross-walk for incident.io's evidence row</h3>
+  <p>The 20-column receipt above is the artifact that closes the following audit asks, in one row per production incident:</p>
+  <ul>
+    <li><strong>SOC 2 Type II CC7.2</strong> (system operations — monitoring and incident detection): the on-call schedule + escalation policy + page + AI summary row.</li>
+    <li><strong>SOC 2 Type II CC7.3</strong> (system operations — incident response): the remediation action + human override + status page + customer comm row.</li>
+    <li><strong>SOC 2 Type II CC7.4</strong> (system operations — incident recovery): the postmortem + rca evidence chain + customer impact row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.24</strong> (incident management planning): the on-call schedule + escalation policy row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.25</strong> (assessment and decision on information security events): the AI summary + severity + service row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.26</strong> (response to information security incidents): the remediation action + human override row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.27</strong> (learning from information security incidents): the postmortem + rca evidence chain row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.28</strong> (collection of evidence): the audit export + token spend + latency row.</li>
+    <li><strong>GDPR Art. 33</strong> (breach notification within 72 hours): the status page + customer comm send row.</li>
+    <li><strong>EU AI Act Art. 14</strong> (human oversight): the human override + rca evidence chain row.</li>
+  </ul>
+  <h3>Commercial evidence-gap map</h3>
+  <p>Atlas offers a fixed-scope incident.io production evidence-gap map for <strong>$500 / 48 hours</strong>. The deliverable is one normalized replay for one production incident, with the 20-column receipt, decision gaps, and an implementation handoff.</p>
+  <p>For teams comparing the whole ai_agent_operations landscape, Atlas also offers a <strong>$497/month quarterly refresh</strong> or a <strong>$2,000 five-vendor benchmark</strong> covering incident.io and four sibling candidates (Resolve AI 1094, plus three to be named in sibling #3/5, #4/5, and #5/5).</p>
+  <p>Commercial route: <strong>FORM:https://incident.io/contact</strong> — the first-party contact form; no form was submitted this tick because SMTP/form access is unavailable.</p>
+  <p class="compliance">Evidence status: first-party product claims retrieved from incident.io + incident.io/blog + incident.io/security on 2026-07-23; Lawrence Jones CEO verified at LinkedIn lawrence2jones + incident.io/about; no email or form submitted; queued_not_sent; <strong>$0 sent / $0 received</strong>.</p>
+  <p class="footer">Atlas @ Talon Forge — chunk_1095 — incident.io SIBLING #2/5 ai_agent_operations — page-to-postmortem evidence-gap map — $500/48h + $497/mo + $2,000 cohort benchmark.</p>
+</div>

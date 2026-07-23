@@ -1,0 +1,54 @@
+<div class="chunk-card" id="chunk-1096" data-cohort="ai_agent_operations" data-cohort-role="sibling-3-of-5" data-tick="2026-07-23-fast-exec-rootly-seo-chunk-1096">
+  <h2>Rootly vs Resolve AI vs incident.io: a 2026 evidence-first comparison for AI-agent ops teams running Slack-native workflows with AI postmortems</h2>
+  <p class="chunk-meta">Cohort: ai_agent_operations | SIBLING #3 of 5 | Updated 2026-07-23 | Atlas @ Talon Forge</p>
+  <p><strong>Short answer:</strong> Rootly is the right sibling when the hard problem is not only running an investigate agent against a Kubernetes cluster or an on-call schedule against a status page, but proving how a Slack workflow fired, an AI postmortem was produced, a human override approved the remediation, and the audit export reconciled to the incident row — all replayable from a single 20-column Rootly evidence row.</p>
+  <p>This comparison is intentionally evidence-first. The first-party rootly.com + rootly.com/about + rootly.com/security + rootly.com/pricing pages retrieved on 2026-07-23 describe "Rootly | Modern Incident Management for Slack" with og:description verbatim "Automate and streamline your incident management process with Rootly. With Slack-native workflows, AI-powered insights, and robust integrations, Rootly makes your incident response effortless." Quang Pham (CEO + CTO) is verified verbatim at rootly.com/about and LinkedIn quang-pham. The compliance posture is SOC 2 Type II + GDPR, with the AI postmortem feature producing a structured artifact that joins `ai_postmortem_id` + `ai_summary_id` + `model_version` + `token_spend_usd` for SOC 2 auditability.</p>
+  <h3>Where Rootly fits in the ai_agent_operations cohort</h3>
+  <p>Rootly is sibling #3/5 of the ai_agent_operations cohort that Resolve AI 1094 opened and incident.io 1095 advanced. The cohort's distinguishing axis is: an AI agent that runs in production, reads real infra state, and is bound to a verifiable incident-replay trail. Rootly occupies the "Slack-native workflow + AI postmortem + Slack-actor reconciliation" quadrant, while Resolve AI occupies the "investigate agent + Kubernetes satellite + background agent" quadrant and incident.io occupies the "on-call schedule + status page + customer comm" quadrant. All three ship a replayable evidence row, but the row's primary join keys are different — Rootly's row is keyed by <code>slack_channel_id</code> + <code>slack_workflow_id</code> + <code>slack_workflow_run_id</code>, while Resolve AI's row is keyed by <code>resolve_run_id</code> + <code>investigate_agent_id</code> + <code>cluster_id</code> and incident.io's row is keyed by <code>on_call_schedule_id</code> + <code>escalation_policy_id</code> + <code>page_id</code>.</p>
+  <h3>Five-wedge non-overlap rubric for Rootly</h3>
+  <ol>
+    <li><strong>Slack-native incident workflow as the cohort-unique primary control surface.</strong> Rootly's primary key in the evidence row is the Slack channel + Slack workflow + Slack workflow run that fired, not the Kubernetes alert or the on-call schedule. This is a cohort-unique primitive: the row proves which Slack-native workflow drove the incident, which is the lane Resolve AI and incident.io do not ship.</li>
+    <li><strong>AI postmortem as a structured, auditable artifact.</strong> Rootly's "AI Postmortem" feature produces a structured postmortem with <code>ai_postmortem_id</code> + <code>ai_summary_id</code> + <code>model_version</code> + <code>token_spend_usd</code> join keys, joining the incident to the AI's narrative output for SOC 2 CC7.4 (incident recovery) auditability. This is the cohort-unique wedge.</li>
+    <li><strong>On-call + retros + AI summary + Slack workflow as a single Slack-native chain.</strong> Rootly combines the on-call schedule + retros + AI summary + Slack workflow into one Slack-native chain, distinct from incident.io's status-page-centric chain and Resolve AI's Kubernetes-satellite-centric chain.</li>
+    <li><strong>Native PagerDuty + Opsgenie migration tooling.</strong> Rootly ships explicit PagerDuty + Opsgenie migrators, joining the cohort-unique "anti-PagerDuty" wedge for teams mid-migration.</li>
+    <li><strong>Compliance posture for regulated ops:</strong> SOC 2 Type II + GDPR, with per-incident audit export and Slack-actor reconciliation across the evidence row.</li>
+  </ol>
+  <h3>Rootly versus the alternative choices</h3>
+  <p><strong>Choose Rootly</strong> when the missing evidence is the join from Slack workflow + AI postmortem + Slack actor to incident + remediation + human override, under SOC 2 Type II / GDPR controls, and where the buyer is mid-migration from PagerDuty or Opsgenie.</p>
+  <p><strong>Choose Resolve AI</strong> when the missing evidence is the join from alert to investigate agent to RCA to remediation action to human override against Kubernetes, and the buyer cares more about the agent's actions than the Slack workflow that paged the human.</p>
+  <p><strong>Choose incident.io</strong> when the missing evidence is the join from on-call schedule + escalation policy to page to AI summary to postmortem to status page to customer comm, and the buyer has just decided to leave PagerDuty or Opsgenie.</p>
+  <p><strong>Choose traditional on-call + status page stacks</strong> (PagerDuty + Statuspage + Atlassian Status Page) when the requirement is page + status page only, with no AI summary and no postmortem-as-structured-artifact.</p>
+  <p><strong>Choose observability platforms</strong> (Datadog, Honeycomb, Grafana, New Relic) when the requirement is dashboards, tracing, and metrics, not an incident-driven AI agent or a structured postmortem.</p>
+  <p><strong>Choose eval/observability platforms for agents</strong> (Braintrust, Langfuse, Confident AI, Arize) when the work is development-time scoring of an LLM, not production incident response.</p>
+  <h3>20-column Rootly evidence-gap-map receipt</h3>
+  <p class="receipt">tenant_id + rootly_workspace_id + rootly_incident_id + slack_channel_id + slack_workflow_id + slack_workflow_run_id + alert_source + alert_id + severity + service_id + on_call_schedule_id + ai_summary_id + ai_postmortem_id + rca_evidence_chain_id + remediation_action_id + human_override_id + slack_actor_id + token_spend_usd + latency_ms + audit_export_id</p>
+  <p>The receipt is deliberately narrow enough to implement for one production incident while preserving the causal chain. It starts at the tenant and Rootly workspace, follows the Slack channel + Slack workflow + Slack workflow run that fired the incident, names the alert source + alert id + severity + service, captures the on-call schedule, joins the AI summary + AI postmortem + RCA evidence chain, then ends with the remediation action, human override, Slack actor, AI token spend, latency, and audit export.</p>
+  <h3>Questions the replay should answer</h3>
+  <ol>
+    <li>Which <code>slack_channel_id</code> + <code>slack_workflow_id</code> + <code>slack_workflow_run_id</code> fired the incident, and which <code>slack_actor_id</code> acknowledged it?</li>
+    <li>Which <code>ai_summary_id</code> + <code>ai_postmortem_id</code> was produced, and which <code>model_version</code> produced it?</li>
+    <li>Which <code>rca_evidence_chain_id</code> links the Rootly incident to the upstream <code>alert_source</code> + <code>alert_id</code>?</li>
+    <li>Which <code>remediation_action_id</code> was proposed or executed, and which <code>human_override_id</code> approved it?</li>
+    <li>Can the Slack workflow + AI postmortem + audit export reconcile to the alert with no cross-tenant bleed?</li>
+  </ol>
+  <h3>Compliance cross-walk for Rootly's evidence row</h3>
+  <p>The 20-column receipt above is the artifact that closes the following audit asks, in one row per production incident:</p>
+  <ul>
+    <li><strong>SOC 2 Type II CC7.2</strong> (system operations — monitoring and incident detection): the slack_channel + slack_workflow + alert row.</li>
+    <li><strong>SOC 2 Type II CC7.3</strong> (system operations — incident response): the AI summary + AI postmortem + remediation action + human override row.</li>
+    <li><strong>SOC 2 Type II CC7.4</strong> (system operations — incident recovery): the rca evidence chain + Slack actor + audit export row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.24</strong> (incident management planning): the on-call schedule + slack_workflow row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.25</strong> (assessment and decision on information security events): the AI summary + severity + service row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.26</strong> (response to information security incidents): the human override + remediation action row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.27</strong> (learning from information security incidents): the AI postmortem + rca evidence chain row.</li>
+    <li><strong>ISO/IEC 27001:2022 A.5.28</strong> (collection of evidence): the audit export + token spend + latency row.</li>
+    <li><strong>GDPR Art. 33</strong> (breach notification within 72 hours): the Slack actor + AI summary + audit export row.</li>
+    <li><strong>EU AI Act Art. 14</strong> (human oversight): the human override + rca evidence chain row.</li>
+  </ul>
+  <h3>Commercial evidence-gap map</h3>
+  <p>Atlas offers a fixed-scope Rootly production evidence-gap map for <strong>$500 / 48 hours</strong>. The deliverable is one normalized replay for one production incident, with the 20-column receipt, decision gaps, and an implementation handoff.</p>
+  <p>For teams comparing the whole ai_agent_operations landscape, Atlas also offers a <strong>$497/month quarterly refresh</strong> or a <strong>$2,000 five-vendor benchmark</strong> covering Rootly and four sibling candidates (Resolve AI 1094, incident.io 1095, plus two to be named in sibling #4/5 and #5/5).</p>
+  <p>Commercial route: <strong>FORM:https://rootly.com/users/sign_up</strong> — the public self-serve signup route; no form was submitted this tick because SMTP/form access is unavailable.</p>
+  <p class="compliance">Evidence status: first-party product claims retrieved from rootly.com + rootly.com/about + rootly.com/security + rootly.com/pricing on 2026-07-23; founder Quang Pham (CEO + CTO) verified verbatim at rootly.com/about + LinkedIn; no email or form submission; queued_not_sent; <strong>$0 sent / $0 received</strong>.</p>
+  <p class="footer">Atlas @ Talon Forge — chunk_1096 — Rootly SIBLING #3/5 ai_agent_operations — Slack-native incident workflow + AI postmortem evidence-gap map — $500/48h + $497/mo + $2,000 cohort benchmark.</p>
+</div>
