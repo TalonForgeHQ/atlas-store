@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Permit.io AI-agent authorization audit: policy to tool decision</title>
+<meta name="description" content="A five-gap Permit.io AI-agent authorization audit checklist for agent identity, policy versions, action-time decisions, downstream tools and revocation evidence.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_989.html">
+</head>
+<body>
+<article class="seo-chunk" id="chunk-989">
+<header>
+<p>Lead 989 · OPENER #1/5 · ai_agent_authorization</p>
+<h1>Permit.io AI-agent authorization audit: policy to tool decision</h1>
+<p>Permit.io's first-party site positions its product as a full-stack authorization framework and names an AI-agent workflow surface: <strong>“Add authorization to your AI agents today”</strong> and <strong>“Unify permissions across agents, tools, APIs, and data.”</strong></p>
+<p>The long-tail buyer question is: <strong>how do you audit Permit.io AI-agent authorization from policy decision to downstream tool action?</strong></p>
+</header>
+<section>
+<h2>Five first-party evidence wedges</h2>
+<ol>
+<li><strong>Agent-aware authorization:</strong> Permit.io names agents as a first-class subject alongside tools, APIs and data.</li>
+<li><strong>Action-time decisioning:</strong> authorization must be captured at the moment the agent requests an action, not reconstructed from a prompt afterward.</li>
+<li><strong>Fine-grained policy:</strong> preserve the role, relationship tuple, condition and policy version that produced each allow or deny.</li>
+<li><strong>Cross-system control:</strong> connect the authorization decision to the downstream API, database, file or workflow action.</li>
+<li><strong>Revocation evidence:</strong> show that changed permissions and tenant boundaries propagate through replay and export.</li>
+</ol>
+</section>
+<section>
+<h2>The five audit gaps</h2>
+<h3>Gap 1 — Agent identity to decision</h3>
+<p>Capture tenant, agent identity, user-on-behalf-of, tool, resource, requested action and decision in one replayable receipt.</p>
+<h3>Gap 2 — Policy-version provenance</h3>
+<p>Record the exact policy, role, relationship tuple, condition and policy version evaluated at action time.</p>
+<h3>Gap 3 — Context and human override</h3>
+<p>Preserve environment, purpose, risk signal, approval state and human-override evidence without treating prompt text as the source of truth.</p>
+<h3>Gap 4 — Decision to downstream result</h3>
+<p>Join the Permit.io decision to the API, database, file or workflow action and its result, including denied and partially completed actions.</p>
+<h3>Gap 5 — Revocation to compliance export</h3>
+<p>Prove that changed permissions, revoked relationships and cross-tenant boundaries survive incident replay and redacted compliance export.</p>
+</section>
+<section>
+<h2>Suggested replay receipt</h2>
+<p><code>tenant_id · agent_identity_id · user_on_behalf_of · tool_id · resource_id · requested_action · policy_id · policy_version · relationship_tuple_hash · condition_version · decision_id · risk_context_id · approval_id · downstream_action_id · downstream_result_hash · revocation_event_id · export_id · cross_tenant_no_bleed_proof</code></p>
+</section>
+<section>
+<h2>Practical 48-hour scope</h2>
+<p>Sample one AI agent, one policy, one allowed tool call, one denied call, one downstream resource action and one permission revocation. Mark each join durable, inferred or absent.</p>
+<p>The output is a redacted five-gap map, an evidence table and a prioritized identifier backlog. Talon Forge stages this as a <strong>$500 fixed-scope review</strong> or a <strong>$497/month evidence-refresh retainer</strong>.</p>
+</section>
+<footer>
+<p>Permit.io's first-party <a href="https://www.permit.io/contact-sales">contact-sales</a> route is the commercial path; no form is submitted automatically.</p>
+<p>Founder verified first-party: Or Weis, Co-Founder / CEO, on <a href="https://www.permit.io/about">Permit.io/about</a>.</p>
+</footer>
+</article>
+</body>
+</html>
