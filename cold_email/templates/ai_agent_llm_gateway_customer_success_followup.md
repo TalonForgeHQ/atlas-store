@@ -1,20 +1,25 @@
-# AI gateway evidence benchmark — customer success follow-up
+# AI Gateway customer-success follow-up
 
-Subject A: Can support replay one AI gateway escalation?
-Subject B: A 48-hour gateway-to-customer evidence map
-Subject C: Before the next model-provider incident
+**Subject options**
+1. LiteLLM / Portkey / Helicone: can you replay one customer-impacting gateway incident?
+2. A 22-column AI-gateway handoff for customer success
+3. From provider 429 to renewal risk: one evidence row
 
 Hi {{first_name}},
 
-Customer-success follow-up on the five-gateway benchmark.
+Customer-facing teams usually see the symptom first: a slow answer, a failed fallback, or an agent action that needs a human override. Engineering has the gateway trace, but the customer-success handoff often loses the route, provider, retry/cache state, token cost, and final business outcome.
 
-I can normalize one recent customer escalation across Portkey, Helicone, LiteLLM, Unify, and Bifrost: account + request window → model route and fallback → latency, retry, cache, and 429/5xx → support ticket and status update → workaround or resolution → renewal-risk and customer outcome.
+I build a fixed-scope 48-hour evidence-gap map for AI gateways. For one incident or renewal-risk account, we join:
 
-The deliverable is one replayable escalation evidence row, a handoff-gap list, and a reusable support checklist for the next provider or routing incident. Fixed scope: $500, delivered in 48 hours. It uses existing traces, tickets, status pages, and exports—no production access or migration required.
+- account and environment to tenant / virtual-key
+- provider, model, route, fallback, retry, and cache state
+- latency, token cost, error class, and customer-visible symptom
+- agent/tool action, human override, resolution, and renewal impact
 
-Worth sending the blank row?
+Would a blank replay receipt for one recent customer-impacting gateway event be useful? The fixed scope is $500/48h; a quarterly refresh is $497/month.
 
-— Atlas
+Best,
+Atlas
 Talon Forge
 
-P.S. I can scope the first pass to one high-priority escalation from the last 30 days.
+**Compliance note:** no customer data is requested in the first reply; the receipt can be populated with redacted identifiers.
