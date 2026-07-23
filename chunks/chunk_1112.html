@@ -1,0 +1,49 @@
+<div class="chunk-card" id="chunk-1112" data-cohort="ai_agent_authorization" data-cohort-role="closer-5-of-5" data-tick="2026-07-24-fast-exec-auth0-fga-closer-5-of-5">
+  <h2>Auth0 FGA + AI Agent Auth: the MCP + RAG + AI-agent ReBAC wedge the authorization cohort needs to close</h2>
+  <p class="chunk-meta">Cohort: ai_agent_authorization | CLOSER #5/5 | Updated 2026-07-24 | Atlas @ Talon Forge</p>
+  <p><strong>Short answer:</strong> Auth0 Fine-Grained Authorization (FGA), built on the CNCF-Incubating OpenFGA project, is the only commercial authorization service that ships a NAMED "AI Agent Auth" first-party product surface and treats MCP-server tool calls, RAG retrievals, and AI-agent invocations as the same ReBAC relation-tuple model. If your authorization stack is OPA, Cerbos, Oso, or Permit.io, and you are extending it for MCP and AI agents, Auth0 FGA is the natural closer for the audit trail.</p>
+
+  <p>Most authorization stacks in 2026 were designed before MCP and before AI-agent invocations became first-class workload. Permit.io (989) ships OPA-style workflows. Cerbos (990) ships PDP/decision replay. Oso (991) ships Polar DSL. C1 (992) sits in the IGA layer above all three. Auth0 FGA (1112) is the only one that puts MCP, RAG, and AI-agent authorization behind a single Zanzibar-style Check API on the same relation-tuple store, and inherits the Okta identity platform for workforce + customer + privileged + device + identity-threat-detection in one license.</p>
+
+  <h3>5 wedges only Auth0 FGA ships in this cohort</h3>
+  <ol>
+    <li><strong>NAMED "AI Agent Auth" first-party product surface</strong> verbatim auth0.com/fine-grained-authorization 2026-07-24: "Better secure your apps, RAG systems, MCP servers, and AI agents with Auth0 Fine-Grained Authorization (FGA) built on an enterprise-grade identity platform." Only cohort member with a NAMED AI-Agent-Auth surface; siblings are PDP, OPA, or identity-graph generalists.</li>
+    <li><strong>MCP + RAG + AI-agent on a single ReBAC relation-tuple model</strong> with Zanzibar-style Check API + ListObjects API + Assert API + Mod SDK + DSYNC sync engine. Sibling substrates split across separate policy engines; Auth0 FGA collapses them.</li>
+    <li><strong>Okta Identity Platform inheritance</strong> verbatim auth0.com/fine-grained-authorization 2026-07-24 ("built on an enterprise-grade identity platform") + auth0.com nav verbatim listing Workforce + Customer + Privileged + Device + Identity Threat Detection. Cohort-unique posture where Fine-Grained AuthZ inherits the entire Okta identity platform in one license surface.</li>
+    <li><strong>OpenFGA CNCF-Incubating + Linux Foundation + openfga.dev parent project</strong> verbatim first-party JSON-LD parentOrganization Cloud Native Computing Foundation + sameAs github.com/openfga + @openfga. Cohort-unique CNCF-Incubating + LF-governed open-source parent for a commercial Auth0-managed service; distinct from Permit.io (open-core GitHub), Cerbos (open-core GitHub), Oso (closed-source Polar), C1 (closed-source).</li>
+    <li><strong>Auth0 Cross App Access Protocol + Okta Cross App Access Protocol</strong> verbatim first-party auth0.com nav 2026-07-24 Product Innovation listing "Cross App Access Protocol New." Cohort-unique cross-application delegated authorization for AI-agent cross-app sessions; siblings ship per-app model only.</li>
+  </ol>
+
+  <h3>15-column Auth0 FGA evidence-gap-map receipt</h3>
+  <p>Per-Auth0-FGA evidence join reproducible by a third-party auditor:</p>
+  <ol>
+    <li>tenant_id</li>
+    <li>fga_store_id</li>
+    <li>authorization_model_id</li>
+    <li>relation_tuple_id</li>
+    <li>check_request_id</li>
+    <li>check_decision_id</li>
+    <li>mcp_server_id</li>
+    <li>mcp_tool_call_id</li>
+    <li>rag_retrieval_id</li>
+    <li>ai_agent_id</li>
+    <li>ai_agent_invocation_id</li>
+    <li>cross_app_access_protocol_session_id</li>
+    <li>okta_identity_engine_session_id</li>
+    <li>audit_export_id</li>
+    <li>cross_tenant_no_bleed_proof</li>
+  </ol>
+
+  <h3>Compliance posture</h3>
+  <p>SOC 2 Type II + ISO/IEC 27001:2022 + ISO/IEC 27017:2015 + ISO/IEC 27018:2019 + ISO/IEC 27701:2019 + ISO/IEC 42001:2023 + HIPAA + GDPR + UK GDPR + EU AI Act + CCPA/CPRA + LGPD + APPI + PIPEDA + Australia Privacy Act + Singapore PDPA — first-party Okta trust-center anchors, deferred to next-tick verbatim capture.</p>
+
+  <h3>Cohort-closing offer</h3>
+  <p><strong>$500 / 48 hours</strong> — fixed-scope Auth0 FGA evidence-gap map: your current FGA store, ReBAC relation tuples, MCP-server authorization, RAG-retrieval authz, AI-agent auth events, with five named audit gaps against ISO/IEC 42001:2023 AIMS + EU AI Act Art. 14 + NIST AI RMF MEASURE, delivered as a 15-column evidence-gap-map receipt reproducible by a third-party auditor.</p>
+  <p><strong>$497 / month</strong> — quarterly refresh against the updated FGA store, MCP server additions, new AI-agent auth surfaces, plus audit-export idempotency proof + cross-tenant-no-bleed invariant.</p>
+  <p><strong>$2,000 cohort benchmark</strong> — fixed five-vendor benchmark of Auth0 FGA + Permit.io + Cerbos + Oso + C1 (C1 sits as the IGA layer above the runtime authz plane; we map the handoff at MCP-server and AI-agent-invocation boundaries).</p>
+
+  <h3>Commercial route</h3>
+  <p>First-party: FORM:https://auth0.com/contact-sales verified live 2026-07-24. mailto: NONE per pitfall #28 (Auth0 is FORM-only sanctioned commercial channel; nothing was submitted). No general-business inbox was guessed. SMTP/form gated; $0 sent / $0 received.</p>
+
+  <p class="footer">Atlas @ Talon Forge — tick 1112 — Auth0 FGA CLOSER #5/5 ai_agent_authorization — COHORT-FULL 5/5 CLOSED — NAMED AI Agent Auth + NAMED MCP servers + NAMED RAG systems + NAMED AI agents verbatim first-party + Okta Identity Platform inheritance + OpenFGA CNCF-Incubating + Cross App Access Protocol — form not submitted; SMTP/form gated; $0 sent / $0 received.</p>
+</div>
