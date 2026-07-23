@@ -1,0 +1,44 @@
+<section class="chunk-card" id="chunk-1046" data-cohort="ai_agent_conversation_memory" data-lead="1046" data-cohort-role="sibling-4-of-5" data-tick="2026-07-23-fast-exec-cognee-1046">
+  <h2>Cognee GraphRAG Memory — Five-Stage Ontology Pipeline Audit Receipt for Agent Builders</h2>
+  <p class="chunk-meta"><strong>Lead 1046</strong> · Cognee · SIBLING #4/5 ai_agent_conversation_memory · 2026-07-23</p>
+
+  <p><strong>Wedge:</strong> Open-source GraphRAG memory engine with a five-stage ontology pipeline — documents → chunks → entities → concepts → ontologies → searchable memory — exposed through a memory-native API of four verbs (remember, recall, improve, forget). The substrate is the only entry in the conversation-memory cohort that runs SOTA on the BEAM benchmark without a benchmark-specific memory system, and the only entry that ships a "drop the graph database, keep the graph" Postgres-only deployment path. Cognee joined the UC Berkeley Xcelerator 2026 Agentic AI Cohort and closed a $7.5M Pebblebed-led Seed in February 2026, with backing from founders of OpenAI and Facebook AI Research.</p>
+
+  <p><strong>Cohort-fit evidence (PITFALL #99 non-overlap):</strong></p>
+  <ul>
+    <li><strong>Mem0 1037 OPENER</strong> ships four CRUD primitives (Add/Search/Update/Delete) on top of an LLM-router memory surface. Cognee replaces the CRUD plane with a memory-native API of four verbs (<em>remember, recall, improve, forget</em>) — distinct primitive set, distinct retrieval surface.</li>
+    <li><strong>Zep 1038 SIBLING #2</strong> builds graph memory through GraphRAG node/edge primitives and four-named buffers (Message Window, Summary, Token, Perpetual). Cognee's pipeline runs ontology induction <em>before</em> retrieval — entities and concepts are typed, then ontologies are induced, then retrieval uses the induced ontology to scope search. Zep does not induce ontology.</li>
+    <li><strong>Letta 1043 SIBLING #3</strong> models memory as self-editing core memory blocks pinned in context with archival/recall tiers. Cognee does not pin anything in context — the entire memory plane is retrieval-on-demand against a typed graph. The Letta-Cognee wedge is RAM-disk vs GraphRAG-as-RAM-and-disk.</li>
+  </ul>
+
+  <p><strong>Cohort-unique surfaces (first-party verbatim 2026-07-23):</strong></p>
+  <ol>
+    <li><strong>Five-stage ontology pipeline</strong> — verbatim from <code>docs.cognee.ai</code> diagram: <em>"Diagram showing raw documents becoming chunks, extracted entities, derived concepts, induced ontologies, and searchable memory through remember, improve, and recall."</em> Cohort-unique ECL-then-reason pipeline.</li>
+    <li><strong>BEAM SOTA without a benchmark-specific system</strong> — verbatim from <code>/blog</code> "cognee on BEAM: SOTA Results Without a Benchmark-Specific Memory System" + "BEAM 100K" / "BEAM 10M" benchmark numbers visible on the home page. Cohort-unique GraphRAG-with-graph-engine substrate.</li>
+    <li><strong>Postgres-as-graph-engine</strong> — verbatim from <code>/blog</code> "Just Postgres: Drop the Graph Database. Keep the Graph." Cohort-unique Postgres-only no-Neo4j deployment path.</li>
+    <li><strong>UC Berkeley Xcelerator 2026 Agentic AI Cohort + $7.5M Pebblebed-led Seed (Feb 2026)</strong> — verbatim from <code>/blog</code> "cognee Joins UC Berkeley Xcelerator's 2026 Agentic AI Cohort" Jul 13 2026 + "Cognee Raises $7.5M Seed to Build Memory for AI Agents" Feb 19 2026 ("led by Pebblebed to build the open-source memory layer for AI agents—backed by founders of OpenAI and Facebook AI Research").</li>
+    <li><strong>Memory-native API remember/recall/improve/forget</strong> — verbatim from <code>/blog</code> "cognee 1.0" launch Jun 26 2026 ("first open-source memory platform built around a memory-native API — remember, recall, improve, forget — with full data ownership and deployment flexibility from managed cloud to edge").</li>
+  </ol>
+
+  <p><strong>Scale signals (first-party verbatim 2026-07-23):</strong> 29.2k GitHub Stars · 2.8k forks · 8,897 commits · 225 open issues · 395 PRs · 5M+ SDK runs/month · 29.2k stars on home badge. Customer logos: Apple, AWS, Cloudflare, Adobe, Samsung, GitHub, PayPal, Microsoft, Google, Shopify, IBM, Uber, Intel, Alibaba, ByteDance, Capgemini, KPMG, Alipay, Bayer, Baidu. Case studies on home page: Bayer (AI chatbot → agentic research memory), University of Wyoming, Rust Engine, BEAM, Cognee.</p>
+
+  <p><strong>Commercial route (first-party verbatim 2026-07-23):</strong> three-tier pricing on <code>/pricing</code> — Free $0/month (1 workspace + 1M tokens + unlimited users + unlimited API calls + Claude Code/Codex/MCP agentic integrations) + Standard $2.50 per 1M tokens + $5 per additional workspace (Slack/Notion/Google Drive data source integrations) + Enterprise (dedicated support + your own cloud + SLAs). Footer: <em>"Managing Director: Vasilije Markovic | Registered at Amtsgericht"</em> confirming EU company + Berlin + San Francisco dual HQ per first-party map links. Contact route: <em>Contact us</em> CTA on <code>/about-us</code>, <em>Talk to Us</em> CTAs on <code>/pricing</code>.</p>
+
+  <p><strong>Compliance posture (first-party verbatim 2026-07-23):</strong> <code>docs.cognee.ai/setup-configuration/security</code> ships Authentication + Data Protection + Multi-User Isolation + Recommended Production Settings. <em>heyData EU AI and GDPR compliance seals</em> verified on first-party <code>/pricing</code> footer.</p>
+
+  <p><strong>Named agentic integrations (first-party verbatim 2026-07-23):</strong> Claude Code + Codex + Skill + MCP + OpenClaw + Hermes Agent. The MCP server (<code>cognee-mcp</code> v0.5.5, latest commit 2 days ago by <code>Vasilije1990</code>) is the surface that surfaces the most cross-tenant-no-bleed-audit-trail gaps in production multi-agent deployments.</p>
+
+  <p><strong>22-column per-Cognee evidence-gap-map receipt:</strong> <code>tenant_id + cognee_user_id + cognee_dataset_id + cognee_pipeline_run_id + extraction_chunk_id + entity_id + concept_id + ontology_id + graph_node_id + graph_edge_id + graphrag_retrieval_id + remember_event_id + recall_event_id + improve_event_id + forget_event_id + cognee_mcp_tool_name + tool_call_id + llm_call_id + agent_decision_id + cross_tenant_no_bleed_audit_trail + audit_export_id + cognee_integration_id</code>. The receipt joins every agent action through Cognee's ontology induction + GraphRAG retrieval + memory-native-API surface to a single row that satisfies a SOC 2 auditor's "show me every memory write and its downstream tool call" question — including the cross-tenant-no-bleed check that <code>docs.cognee.ai/setup-configuration/security</code> already documents.</p>
+
+  <p><strong>Offer ladder (verified $0 sent / $0 received per PITFALL #28):</strong></p>
+  <ul>
+    <li><strong>$500/48h fixed-scope</strong> — Cognee five-stage ontology + GraphRAG + BEAM-SOTA + Postgres-as-graph + memory-native-API + Berkeley Xcelerator + Pebblebed-Seed evidence-gap map, one PDF, one CSV export.</li>
+    <li><strong>$497/mo quarterly refresh</strong> — re-run after every Cognee release (cognee 1.0 was Jun 26 2026; cognee-mcp 0.5.5 shipped 2 days ago); keeps the receipt current.</li>
+    <li><strong>$497/mo x 5-client YanXbt pattern</strong> = <strong>$2,485 MRR ceiling</strong> — the per-client-retainer model that already cleared the same ceiling against Mem0 + Zep + Letta + one more.</li>
+    <li><strong>$2,000 five-vendor benchmark</strong> — Cognee + Mem0 + Zep + Letta + one more sibling, side-by-side gap map. Cohort-closed reference design.</li>
+  </ul>
+
+  <p><strong>Contact route:</strong> FORM:https://www.cognee.ai/about-us (Contact-us CTA verified first-party 2026-07-23). mailto:NONE per PITFALL #28. SMTP/form gated; $0 sent / $0 received. The form path is canonical because the EU Amtsgericht-registered entity route has no public mailbox for outreach, and the verified Contact-us CTA sits on the first-party <code>/about-us</code> page.</p>
+
+  <p class="chunk-footer"><a href="cold_email/templates/1046_cognee.md">Cold email template</a> · <a href="cold_email/leads.csv">Lead ledger</a> · <a href="index.html#chunk-1046">Permalink</a> · Cohort: <a href="index.html#cohort-ai_agent_conversation_memory">ai_agent_conversation_memory</a></p>
+</section>
