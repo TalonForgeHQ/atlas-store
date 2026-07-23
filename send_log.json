@@ -335,5 +335,19 @@
     "received": 0,
     "deliverable_offer": "500/48h + 497/mo",
     "notes": "cisco.com returned HTTP 200 directly via curl probe; no Wayback needed; sales@cisco.com first-party /contact not a public general-business inbox"
-  }
+  },
+{
+  "lead_id": 992,
+  "name": "C1 (formerly ConductorOne)",
+  "vertical": "ai_agent_identity_governance",
+  "role": "OPENER-1-of-5",
+  "route": "FORM:https://www.c1.ai/book-a-demo",
+  "alt_route": "",
+  "status": "queued-not-sent",
+  "smtp": "gated",
+  "sent": 0,
+  "received": 0,
+  "deliverable_offer": "500/48h + 497/mo",
+  "notes": "first-party Book-a-demo form is sanctioned commercial channel; c1.ai is canonical 301 redirect from conductorone.com verified 2026-07-23; first-party /about-us names Alex Bovee + Paul Querna as Co-Founders from Okta/ScaleFT; mailto:NONE per pitfall #28"
+}
 ]
