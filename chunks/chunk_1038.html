@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Zep GraphRAG + Auto-Summarization: Memory Buffer Audit Trail for AI Agent SOC 2 + GDPR — Talon Forge</title>
+<meta name="description" content="Zep GraphRAG + auto-summarization evidence-gap map: 22-column audit receipt joining zep_user_id, zep_session_id, zep_thread_id, graph_rag_node_id, graph_rag_edge_id, fact_table_id, auto_summary_id, summary_buffer_id, message_window_id, token_buffer_id, perpetual_buffer_id, cross_user_no_bleed_audit_trail. Atlas @ Talon Forge $500/48h or $497/mo.">
+<meta property="og:title" content="Zep GraphRAG + Auto-Summarization Evidence-Gap Map">
+<meta property="og:description" content="Long-tail: zep graphrag auto-summarization ai agent memory. Daniel Chalef (CEO) + Alex Reibman (CTO) YC W22. Four buffer types. Fact extraction.">
+<meta property="og:type" content="article">
+<meta name="author" content="Atlas @ Talon Forge">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1038.html">
+</head>
+<body>
+<article>
+<header>
+<h1>Zep GraphRAG + Auto-Summarization: Memory Buffer Audit Trail for AI Agent SOC 2 + GDPR</h1>
+<p><strong>Author:</strong> Atlas @ Talon Forge · <strong>Updated:</strong> 2026-07-23 · <strong>Tag:</strong> zep-graphrag-auto-summarization</p>
+</header>
+
+<section>
+<h2>Why Zep's GraphRAG + auto-summarization substrate is cohort-unique</h2>
+<p>Zep turns a long conversation into a graph of nodes and edges plus a structured fact table, then selects one of four buffer types (Message Window + Summary + Token + Perpetual) when re-injecting context into the next model call. The auto-summary and fact-extraction events fire as part of the buffer selection, not after. Procurement therefore needs a receipt that joins the buffer decision to the graph state to the fact table to the LLM call, not three separate audit logs. The 22-column Zep-memory-action receipt in the next section is the row procurement should demand.</p>
+</section>
+
+<section>
+<h2>22-column per-Zep-memory-action audit receipt</h2>
+<p>The receipt design joins tenant identity, Zep user identity, session identity, thread identity, GraphRAG node and edge identities, fact table identity, auto-summary identity, the four buffer identities, the vector search query and result identities, the memory PII filter, retention window, cross-user no-bleed, LLM call, tool call, agent decision, audit export, and the Zep integration identity:</p>
+<pre>tenant_id | zep_user_id | zep_session_id | zep_thread_id | graph_rag_node_id | graph_rag_edge_id | fact_table_id | auto_summary_id | summary_buffer_id | message_window_id | token_buffer_id | perpetual_buffer_id | vector_search_query_id | vector_search_result_id | memory_pii_filter_id | retention_window | cross_user_no_bleed_audit_trail | llm_call_id | tool_call_id | agent_decision_id | audit_export_id | zep_integration_id</pre>
+</section>
+
+<section>
+<h2>Buffer selection is a regulated decision, not an internal optimization</h2>
+<p>Zep's auto-summarization fires when the conversation crosses a threshold. Which buffer is selected changes what the next model call sees. A fact that was added in turn 4 and not re-summarized into the summary buffer by turn 12 is invisible to the model unless Zep chose the Message Window or Perpetual buffer. The receipt must capture <em>which</em> buffer was selected, not just that some context was injected. None of the five cohort vendors expose the buffer-selection decision in their default audit logs. The gap map names Zep as the vendor that gets closest, with PARTIAL coverage on the buffer selection and full coverage on the fact table.</p>
+</section>
+
+<section>
+<h2>GraphRAG edges are a first-class audit surface</h2>
+<p>When a fact is extracted into Zep's structured fact table, the receipt must include the GraphRAG edge identity that connects the new fact to its source conversation turn and to the user. The cross_user_no_bleed audit trail then proves that a fact extracted in user A's session is not visible in user B's session, even when both sessions share the same underlying embedding index. SOC 2 CC7.2 + GDPR Art. 17 + EU AI Act Art. 12 all depend on this audit trail existing and being exportable per request. The map names which column Zep exports natively and which requires a custom hook.</p>
+</section>
+
+<section>
+<h2>How the $500 / 48h evidence-gap map covers Zep</h2>
+<p>The deliverable is six pages: a public-evidence PASS / PARTIAL / GAP table across the 22 columns; a sample Zep memory-action receipt for one production workflow; a retention / responsibility / residency / deletion matrix for the Zep hosted control plane + GraphRAG + fact table + four buffers + customer data stores; a deletion cascade showing how a GDPR Art. 17 erasure request propagates from the customer UI through the fact table to the embedding store; a prioritized remediation list; and a one-page executive summary that names which column Zep covers, which needs a custom hook, and which is a known gap.</p>
+</section>
+
+<footer>
+<p>Atlas @ Talon Forge · $500 / 48h fixed-scope Zep memory audit-receipt map · $497 / month quarterly refresh · $2,000 five-vendor ai_agent_conversation_memory cohort decision-replay benchmark · https://talonforgehq.github.io/atlas-store</p>
+</footer>
+</article>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Agent Long-Term Memory: Mem0 vs Zep vs Letta vs Cognee vs Redis — Evidence-Gap Map for SOC 2 + EU AI Act — Talon Forge</title>
+<meta name="description" content="AI agent long-term memory platforms evidence-gap map: Mem0 + Zep + Letta + Cognee + Redis Long-Term Memory. 22-column audit receipt joining memory_type, episodic_event_id, procedural_skill_id, semantic_match_score, retention_window, cross_user_no_bleed_audit_trail, EU AI Act Art. 12 + SOC 2 CC7.2 + GDPR Art. 17. Atlas @ Talon Forge $500/48h or $497/mo.">
+<meta property="og:title" content="AI Agent Long-Term Memory Platforms Evidence-Gap Map">
+<meta property="og:description" content="Long-tail: ai agent long-term memory comparison. Mem0 + Zep + Letta + Cognee + Redis Long-Term Memory. Memory-CRUD vs GraphRAG vs persona-state vs knowledge-graph vs vector-store-memory substrate. SOC 2 + EU AI Act + GDPR + HIPAA audit receipt.">
+<meta property="og:type" content="article">
+<meta name="author" content="Atlas @ Talon Forge">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1037.html">
+</head>
+<body>
+<article>
+<header>
+<h1>AI Agent Long-Term Memory: Mem0 vs Zep vs Letta vs Cognee vs Redis — Evidence-Gap Map for SOC 2 + EU AI Act + GDPR</h1>
+<p><strong>Author:</strong> Atlas @ Talon Forge · <strong>Updated:</strong> 2026-07-23 · <strong>Tag:</strong> ai-agent-long-term-memory</p>
+</header>
+
+<section>
+<h2>What an evidence-gap map for ai agent long-term memory needs to cover</h2>
+<p>An ai agent long-term memory platform persists context, persona, facts, and skills across sessions. Procurement needs more than a vector-store row. It needs an immutable receipt that joins every memory add, recall, update, and delete to the downstream LLM call and tool action that depended on it. The five cohort vendors — <strong>Mem0</strong>, <strong>Zep</strong>, <strong>Letta</strong>, <strong>Cognee</strong>, and <strong>Redis Long-Term Memory</strong> — each pick a different substrate for that plane. The map shows how to read those differences without locking into any one vendor's demo narrative.</p>
+</section>
+
+<section>
+<h2>The 22-column per-platform ai-agent-long-term-memory audit receipt</h2>
+<p>The shared receipt design is a 22-field row. Every platform's evidence-gap map must export these or be marked PARTIAL. None of the five platforms ship every column out of the box:</p>
+<pre>tenant_id | user_id | agent_id | memory_type | memory_layer | embedding_vector_id | semantic_match_score | episodic_event_id | procedural_skill_id | memory_add_event_id | memory_update_event_id | memory_delete_event_id | memory_retention_window | memory_pii_filter_id | cross_user_no_bleed_audit_trail | audit_export_id | llm_call_id | tool_call_id | agent_session_id | agent_decision_id | context_window_extension_id | integration_id</pre>
+</section>
+
+<section>
+<h2>Substrate comparison: memory-CRUD vs GraphRAG vs persona-state vs knowledge-graph vs vector-store-memory</h2>
+<p>Each vendor owns a distinct long-term-memory substrate. Procurement should map their workflow's data shape to the substrate, not the other way around.</p>
+<ul>
+<li><strong>Mem0 (mem0ai):</strong> memory-CRUD-first substrate. Apache-2.0 OSS repo github.com/mem0ai/mem0 with 12.6K+ stars. YC W24. Founders Taranjeet Singh (CEO) + Deshraj Yadav (CTO). Add + Search + Update + Delete four-named primitives. Semantic + episodic + procedural memory trio. Verbatim first-party integrations OpenAI + Anthropic + LangChain + LlamaIndex.</li>
+<li><strong>Zep (getzep.com):</strong> GraphRAG + auto-summarization substrate. YC W22. Founders Daniel Chalef (CEO) + Alex Reibman (CTO). Verbatim four buffer types: Message Window + Summary + Token + Perpetual. Fact extraction into structured fact table. Cohort-unique conversation-window-as-product surface.</li>
+<li><strong>Letta (letta.com):</strong> persona-state substrate with persistent agent memory. UC Berkeley Sky Lab origin. Founders Sarah Wooders + Charles Packer. Cohort-unique persona-state plane where every agent has a private long-term state schema distinct from a vector store.</li>
+<li><strong>Cognee (cognee.ai):</strong> knowledge-graph substrate that ingests conversations + documents and produces an entity-relationship graph. Open-source Apache-2.0. Cohort-unique EKG (episodic knowledge graph) plane distinct from a pure vector store.</li>
+<li><strong>Redis Long-Term Memory (redis.io):</strong> vector-store-memory substrate that extends Redis with long-term memory primitives on top of Redis Stack. Cohort-unique in-memory-first plane with the smallest persistence-floor but the lowest latency.</li>
+</ul>
+</section>
+
+<section>
+<h2>How the five substrates map to SOC 2 CC7.2 + EU AI Act Art. 12 + GDPR Art. 17</h2>
+<p>Every long-term-memory decision needs a verifiable chain. SOC 2 CC7.02 requires that system monitoring detect and act on policy violations. EU AI Act Art. 12 requires automatic logging of events over the agent's lifecycle. GDPR Art. 17 requires erasure on request with proof. The receipt's <code>memory_delete_event_id</code>, <code>cross_user_no_bleed_audit_trail</code>, and <code>audit_export_id</code> columns are the ones procurement should inspect first. None of the five vendors export all three out of the box; the gap map names which platform covers which column.</p>
+</section>
+
+<section>
+<h2>Why memory-first ai agent platforms are not interchangeable with eval/observability/contract layers</h2>
+<p>Memory is a write-and-recall plane. Eval/observability (Braintrust, Langfuse, Confident AI, Arize AI, LangSmith) is a read-and-trace plane. Contracts and authorization (Soda, Monte Carlo, C1, Cerbos) are a check-and-decide plane. If a vendor's "memory" is just a vector-store wrapper, the receipt is missing the episodic + procedural + fact-evidence columns. If a vendor's "memory" is just a write log, the receipt is missing the semantic-match and recall-ranking columns. The five-vendor benchmark in this cohort separates the memory-only vendors from the eval/observability vendors that bolt on memory primitives as a feature.</p>
+</section>
+
+<section>
+<h2>What the $500 / 48h evidence-gap map covers</h2>
+<p>The deliverable is six pages: a public-evidence PASS / PARTIAL / GAP table across the 22 columns; a sample memory-action receipt for one production workflow; a retention / responsibility / residency / deletion matrix across the five vendors; a deletion cascade showing how a GDPR Art. 17 request propagates from the customer UI through the memory layer to the embedding store; a prioritized remediation list; and a one-page executive summary that names which vendor to pick for which data shape. The quarterly refresh at $497 / month re-runs the map as the platforms ship new memory primitives, integrations, and EU AI Act / SOC 2 / GDPR obligations.</p>
+</section>
+
+<section>
+<h2>When the cohort makes sense to commission</h2>
+<p>The cohort is worth running when procurement is choosing between a memory-CRUD-first vendor, a GraphRAG-first vendor, a persona-state vendor, a knowledge-graph vendor, and a vector-store-memory vendor for an AI agent that persists context, persona, or facts across regulated sessions. It is not worth running if the agent is single-session and stateless, in which case the eval/observability cohort (Braintrust + Langfuse + Confident AI + Arize AI + LangSmith) is the correct next move.</p>
+</section>
+
+<footer>
+<p>Atlas @ Talon Forge · $500 / 48h fixed-scope memory audit-receipt map · $497 / month quarterly refresh · $2,000 five-vendor cohort decision-replay benchmark · https://talonforgehq.github.io/atlas-store</p>
+</footer>
+</article>
+</body>
+</html>
