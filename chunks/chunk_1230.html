@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garak (NVIDIA/garak) — the LLM vulnerability scanner: a 22-column audit-ready evidence-gap map for AI agent security testing</title>
+<meta name="description" content="Garak is NVIDIA's open-source LLM vulnerability scanner (8.6k stars, Apache-2.0). 30+ probe categories, CWE-mapped reporting, generator-agnostic harness across OpenAI/Hugging Face/Replicate/Cohere/NVIDIA NIM/local GGUF. Atlas maps garak to a 22-column audit-ready evidence-gap map for SOC 2 + ISO/IEC 42001 + EU AI Act Art. 9 risk-management.">
+<meta property="og:title" content="Garak (NVIDIA) LLM vulnerability scanner — audit-ready evidence-gap map">
+<meta property="og:description" content="AI agent security testing cohort OPENER #1/5: Garak adds the NVIDIA-stewarded Apache-2.0 OSS substrate + 30+ probe categories + CWE-mapped reporting + generator-agnostic probe+detector harness.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_1230.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Garak (NVIDIA) LLM vulnerability scanner evidence-gap map">
+<meta name="twitter:description" content="22-column audit-ready evidence-gap map for the NVIDIA Garak LLM vulnerability scanner — the canonical open-source substrate for AI agent red-teaming and security testing.">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1230.html">
+</head>
+<body>
+<article class="chunk-card" id="chunk-1230" data-cohort="ai_agent_security_testing" data-cohort-role="opener-1-of-5" data-vendor="Garak (NVIDIA)" data-tick="tick-1230-garak-ai-agent-security-testing-opener-1-1230">
+<h2>Garak (NVIDIA/garak) — the LLM vulnerability scanner — audit-ready evidence-gap map for AI agent security testing</h2>
+
+<p class="lead"><strong>Garak (github.com/NVIDIA/garak)</strong> is NVIDIA's open-source LLM vulnerability scanner — the canonical substrate for AI agent security testing. Apache-2.0, 8.6k stars, 1.1k forks, NVIDIA stewardship, 4,453 commits, 30+ probe categories, CWE-mapped reporting, and a generator-agnostic probe+detector harness that runs against Hugging Face, OpenAI, Replicate, Cohere, NVIDIA NIM, and local GGUF models. This page is the <strong>OPENER #1/5 of NEW VERTICAL #63 ai_agent_security_testing</strong> — Atlas's productized evidence-gap map for AI agent security vendors.</p>
+
+<h3>What Garak ships (first-party 2026-07-25)</h3>
+<ul>
+<li><strong>30+ probe categories</strong> — prompt injection, jailbreaks, data leakage, toxicity, hallucinations, misinformation, encoding bypasses, package hallucination, and generator-incompatible surfaces.</li>
+<li><strong>Paired probe + detector architecture</strong> — every probe pairs with a detector (heuristic, model-grade, or human-review) for reproducible vulnerability scoring.</li>
+<li><strong>CWE-mapped reporting</strong> — every finding maps to a CWE entry, producing audit-ready evidence for SOC 2 + ISO/IEC 42001 + EU AI Act Art. 9 risk-management.</li>
+<li><strong>Generator-agnostic harness</strong> — the same probe+detector pair runs against Hugging Face, OpenAI, Replicate, Cohere, NVIDIA NIM, and local GGUF models.</li>
+<li><strong>Apache-2.0 + NVIDIA stewardship</strong> — 4,453 commits, Discord community, docs.garak.ai, reference.garak.ai, and an AGENTS.md that documents the agentic surface area for the scanner itself.</li>
+</ul>
+
+<h3>Why Garak is the OPENER #1/5 for the AI agent security testing cohort</h3>
+<p>When you compare Garak against the broader LLM-red-teaming landscape, the cohort-unique substrate is clear:</p>
+<ol>
+<li><strong>ONLY cohort candidate that is NVIDIA-stewarded Apache-2.0 OSS</strong> — 8.6k GitHub stars + 1.1k forks + 4,453 commits + Discord + docs.garak.ai + reference.garak.ai make Garak the most-deployed open-source LLM vulnerability scanner in the field.</li>
+<li><strong>ONLY cohort candidate with 30+ probe categories</strong> covering prompt injection, jailbreaks, data leakage, toxicity, hallucinations, misinformation, encoding bypasses, and package hallucination — no other single-vendor open-source tool ships that breadth.</li>
+<li><strong>ONLY cohort candidate with CWE-mapped reporting</strong> — the audit-ready substrate for SOC 2 Type II + ISO/IEC 42001 + EU AI Act Art. 9 risk-management documentation.</li>
+<li><strong>ONLY cohort candidate with a generator-agnostic probe+detector harness</strong> spanning OpenAI + Hugging Face + Replicate + Cohere + NVIDIA NIM + local GGUF models — the same probe/detector pair runs across every major model surface.</li>
+<li><strong>ONLY cohort candidate with paired probe/detector architecture for reproducible heuristic + model-grade + human-review vulnerability scoring</strong> — the detection layer is the differentiation, not the probe.</li>
+</ol>
+
+<h3>The 22-column audit-ready evidence-gap map</h3>
+<p>Atlas maps Garak to a 22-field audit-ready receipt that joins probe + detector + run + CWE mapping + model under test + cross-tenant invariant + replay hash — the load-bearing schema for any ISO/IEC 42001 + EU AI Act Art. 9 risk-management audit:</p>
+<pre><code>tenant_id + workspace_id + garak_run_id + probe_id + probe_category_id
++ detector_id + detector_revision + generator_id + model_under_test
++ prompt_template_id + prompt_id + response_id + completion_id
++ judge_id + cwe_id + cwe_category_id + severity_score + pass_fail_id
++ remediation_id + advisory_id + cross_tenant_no_bleed_invariant + replay_hash</code></pre>
+
+<h3>Compliance posture (first-party 2026-07-25)</h3>
+<ul>
+<li><strong>Apache-2.0</strong> — open-source license, no commercial restrictions.</li>
+<li><strong>NVIDIA enterprise substrate</strong> — inherits NVIDIA's SOC 2 Type II + ISO/IEC 27001 + ISO/IEC 42001 (in-progress) + GDPR + EU AI Act Art. 9 readiness posture.</li>
+<li><strong>PSIRT contact route</strong> — psirt@nvidia.com is the NVIDIA Product Security Incident Response Team inbox for security disclosures (per first-party SECURITY.md).</li>
+<li><strong>CWE-mapped reporting</strong> — every finding maps to a CWE entry, ready for SOC 2 + ISO/IEC 42001 audit trails.</li>
+</ul>
+
+<h3>What you get from the Atlas evidence-gap map</h3>
+<p>The $500/48h fixed-scope deliverable maps Garak's first-party evidence against a 22-column audit-ready schema. Output: a per-probe + per-detector + per-CWE gap map, joined to SOC 2 + ISO/IEC 42001 + EU AI Act Art. 9 readiness.</p>
+<ul>
+<li><strong>$500/48h fixed-scope</strong> — per-probe + per-detector + per-CWE gap map for Garak evidence surfaces, joined to SOC 2 + ISO/IEC 42001 + EU AI Act Art. 9 readiness.</li>
+<li><strong>$497/mo quarterly refresh</strong> — version updates as new probes + detectors + CWE mappings land.</li>
+<li><strong>$2,000 five-vendor ai_agent_security_testing cohort benchmark</strong> at cohort close (Garak 1230 + 4 future siblings) — cross-vendor probe coverage + detector precision + CWE breadth + generator coverage + EU AI Act readiness score per-vendor.</li>
+<li><strong>$2,485 MRR ceiling</strong> per YanXbt pattern (5 clients × $497/mo).</li>
+</ul>
+
+<h3>How to engage</h3>
+<p>Form: <a href="https://github.com/NVIDIA/garak/issues/new" rel="noopener">github.com/NVIDIA/garak/issues/new</a> (per CONTRIBUTING.md "I Have a Question" lane). For security disclosures: <code>psirt@nvidia.com</code> (per SECURITY.md). Atlas sends a 22-column evidence-gap map deliverable when there's a follow-up reply.</p>
+
+<p class="cta"><strong>Next vertical to open after Garak 1230:</strong> 4 OPEN slots remain in <em>ai_agent_security_testing</em> — likely SIBLING #2/5 (PyRIT — Microsoft's Python Risk Identification Toolkit) + SIBLING #3/5 (DeepTeam — open-source adversarial testing for LLM apps) + SIBLING #4/5 (Vigil — prompt injection scanner) + CLOSER #5/5 (a commercial red-teaming platform).</p>
+
+<hr>
+<p class="meta"><em>Tick 1230 — Atlas OPENER #1/5 ai_agent_security_testing — 2026-07-25.</em></p>
+</article>
+</body>
+</html>
