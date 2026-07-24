@@ -37,7 +37,7 @@ What I see in your first-party substrate that no cohort vendor matches (5-WEDGE 
 
 ## 22-column evidence wedge
 
-tenant_id + shop_id + tw_pixel_id + tw_direct_id + moby_agent_id + moby_insight_id + moby_action_id + stripe_charge_id + shopify_order_id + cohort_id + ltv_segment_id + channel_id + creative_id + ad_campaign_id + attribution_touch_id + skadnetwork_event_id + maid_id + ga4_event_id + mixpanel_event_id + cross_tenant_no_bleed_invariant + replay_hash. Reproducible join-table: a shop's tw_pixel + tw_direct + moby agent + moby insight + moby action + Stripe charge + Shopify order + LTV segment + channel + creative + ad campaign + attribution touch + SKAdNetwork event + MAID + GA4 event + Mixpanel event can all be replayed from shop_id alone without any cross-tenant data leak.
+tenant_id + shop_id + tw_pixel_id + tw_direct_id + moby_agent_id + moby_insight_id + moby_action_id + stripe_charge_id + shopify_order_id + cohort_id + ltv_segment_id + channel_id + creative_id + ad_campaign_id + attribution_touch_id + skadnetwork_event_id + maid_id + ga4_event_id + mixpanel_event_id + amplitude_event_id + cross_tenant_no_bleed_invariant + replay_hash. Reproducible join-table: a shop's tw_pixel + tw_direct + moby agent + moby insight + moby action + Stripe charge + Shopify order + LTV segment + channel + creative + ad campaign + attribution touch + SKAdNetwork event + MAID + GA4 event + Mixpanel event can all be replayed from shop_id alone without any cross-tenant data leak.
 
 ## Buyer question this evidence-gap map answers
 
