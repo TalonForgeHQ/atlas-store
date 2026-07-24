@@ -180,6 +180,11 @@ KNOWN_LEADS = [
     {"company": "AGNT", "website": "https://github.com/agnt-gg/agnt", "founder": "Nathan Wilbanks", "vertical": "Agent infrastructure"},
     {"company": "RovaSpace", "website": "https://www.rovaspace.com", "founder": "IronSteel", "vertical": "AI virtual office"},
     {"company": "VisaList", "website": "https://visalist.io", "founder": "Hari Krishna Dulipudi", "vertical": "Visa AI ($700/mo)"},
+
+    # New AI infrastructure batch — verified first-party sites/leadership pages
+    {"company": "LangChain", "website": "https://www.langchain.com", "founder": "Harrison Chase", "vertical": "LLM application and agent infrastructure"},
+    {"company": "Pydantic", "website": "https://pydantic.dev", "founder": "Samuel Colvin", "vertical": "Python validation and AI agent infrastructure"},
+    {"company": "Humanloop", "website": "https://humanloop.com", "founder": "Raza Habib", "vertical": "LLM evaluation and prompt management"},
 ]
 
 
