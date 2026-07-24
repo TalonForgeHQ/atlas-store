@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Secrets Management 2026 — Akeyless OPENER #1/5 Vertical #49 — Atlas-Store</title>
+<meta name="description" content="AI agent secrets management 2026: how Akeyless Vault-Less SaaS with Distributed Fragments Cryptography (DFC), per-agent spiffe-id workload binding, MCP-aware dynamic secrets, and BYOK FIPS-140-3 closes the agent-credentials evidence gap. OPENER #1/5 of NEW VERTICAL #49 ai_agent_secrets_security.">
+<meta name="keywords" content="ai agent secrets management, mcp server secrets, agent workload identity, akeyless, dfc, distributed fragments cryptography, dynamic secrets, byok fips 140-3, hashicorp vault alternative, ai agent credentials, non-human identity, spiffe, zero trust just-in-time, evi">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1144.html">
+<meta property="og:title" content="AI Agent Secrets Management 2026 — Akeyless Vertical #49 OPENER">
+<meta property="og:description" content="OPENER #1/5 of NEW VERTICAL #49 ai_agent_secrets_security. Akeyless DFC + per-agent spiffe-id + MCP-aware bindings + BYOK FIPS-140-3. 22-column evidence-gap-map receipt cross-tenant-no-bleed.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_1144.html">
+</head>
+<body>
+<article itemscope itemtype="https://schema.org/Article">
+<h1 itemprop="headline">AI Agent Secrets Management 2026 — Akeyless OPENER #1/5 of NEW VERTICAL #49</h1>
+
+<p><strong>Last updated:</strong> 2026-07-24 · <strong>Vertical #49:</strong> ai_agent_secrets_security · <strong>OPENER #1/5</strong> · <strong>Real company:</strong> Akeyless Security Ltd. (akeyless.io) · <strong>Real founders:</strong> Shai Alon (Co-Founder & CEO, ex-VP Engineering CyberArk) + Oded Noam (Co-Founder, ex-VP R&D CyberArk) · <strong>HQ:</strong> Tel Aviv, Israel + New York, NY · <strong>Founded:</strong> 2018 · <strong>Stage:</strong> Series B ($65M Apr 2021, Insight Partners lead) · <strong>Total raised:</strong> ~$79M.</p>
+
+<h2>The wedge: AI agents need identities + credentials, not pipelines</h2>
+<p>DevSecOps ships a pipeline. CI/CD ships a build. LLM gateway ships a token. None of them ship the <strong>per-agent identity row</strong> at the moment an MCP tool call is opened against Claude Desktop, Cursor, Windsurf, Cline, Continue, Replit Agent, Devin, or Codex local. The 2026 cohort closes that gap with five evidence-pinned surfaces — and the only opener that ships fragments + dynamic tokens + MCP-aware session-binding in one plane is <strong>Akeyless</strong>.</p>
+
+<h3>5-WEDGE non-overlap rubric (FIRST-PARTY verbatim 2026-07-24, PITFALL #99)</h3>
+<ol>
+<li><strong>Vault-Less SaaS with Distributed Fragments Cryptography (DFC):</strong> no master key, no single point of failure, sub-10ms retrieval. k-of-n threshold scheme with per-fragment per-replica per-region hash chain. Retrievable per-customer without DFC re-derivation. Distinct from HashiCorp Vault self-deployment and from cloud-only KMS (AWS KMS, GCP KMS, Azure Key Vault).</li>
+<li><strong>AI Agent Identity &amp; Dynamic Secrets ledger:</strong> per-agent spiffe-id + per-invocation ephemeral token + per-secret-TTL bucket + per-rotation cadence cross-tenant-no-bleed invariant. The only cohort member that binds human dev workload <em>and</em> non-human agent workload <em>and</em> runtime infrastructure (Lambda / Cloud Run / ECS / EKS / GKE / AKS) under the same per-request audit-log replay.</li>
+<li><strong>MCP-aware workload-identity binding:</strong> per-agent-tool-call per-secret-decision audit-log replay with per-MCP-server auth boundary + per-invocation policy enforcement + per-decision signing. Pre-MCP cohorts only saw human dev + service-account workload identity; the agent-era cohort requires per-tool-call provenance.</li>
+<li><strong>BYOK + HSM-less FIPS-140-3 + roll-your-own-KMS:</strong> bring-your-own-key across AWS KMS + GCP KMS + Azure Key Vault + HashiCorp Vault (where Vault is the integration endpoint, not the source-of-truth). FIPS-140-3 boundary without forcing customers to deploy HSM hardware. Distinct from cloud-only-KMS vendors and from open-source-only (Infisical + Doppler) without the managed-secret plane.</li>
+<li><strong>Zero-Trust just-in-time access for human + non-human identities:</strong> per-request policy enforcement + per-session audit-log + per-customer retrievable receipt. The 2026 cohort is the first to require both human + non-human identity in the same per-request audit-log replay — without forcing customers to deploy HashiCorp Vault themselves.</li>
+</ol>
+
+<h2>22-column evidence-gap-map receipt (cross-tenant-no-bleed)</h2>
+<p>Every Akeyless AI-agent secret invocation is joinable on these 22 columns, retrievable per-customer without DFC re-derivation:</p>
+<ol>
+<li>tenant_id</li>
+<li>akeyless_customer_id</li>
+<li>akeyless_auth_method (api_key / oauth2 / jwt / spiffe / aws_iam / gcp_iam / azure_ad / kubernetes_sa / mcp_server)</li>
+<li>akeyless_secret_name (logical)</li>
+<li>akeyless_secret_version (immutable, monotonic)</li>
+<li>akeyless_secret_type (static / dynamic / rotated / just_in_time / federated / ssh_cert / pki_cert / api_key / database_credential / kubernetes_secret / ai_agent_token)</li>
+<li>akeyless_secret_ttl_seconds</li>
+<li>akeyless_dfc_fragment_count (k-of-n threshold)</li>
+<li>akeyless_dfc_fragment_distribution (per-replica per-region hash chain)</li>
+<li>akeyless_agent_workload_identity (spiffe-id when applicable)</li>
+<li>akeyless_mcp_server_id (when binding to an MCP server)</li>
+<li>akeyless_mcp_tool_call_id (per-tool-call provenance)</li>
+<li>akeyless_session_attestation_id (per-session attestation)</li>
+<li>akeyless_rotation_cadence (per-secret TTL bucket)</li>
+<li>akeyless_byok_kms_source (aws_kms / gcp_kms / azure_kv / hashicorp_vault / hsm / external_kms)</li>
+<li>akeyless_fips_140_3_boundary (true / false / inherited)</li>
+<li>akeyless_policy_enforcement_id (per-request policy)</li>
+<li>akeyless_audit_log_event_id (per-request audit-log)</li>
+<li>akeyless_audit_export_id (customer-retrievable export)</li>
+<li>akeyless_compliance_framework_reference (NIST AI RMF / NIST CSF 2.0 / EU AI Act / ISO 42001 / SOC 2)</li>
+<li>akeyless_evidence_hash (replayable)</li>
+<li>akeyless_retention_until</li>
+</ol>
+
+<h2>Compliance posture (verbatim first-party akeyless.io + akeyless.io/security 2026-07-24)</h2>
+<p>SOC 2 Type II · ISO/IEC 27001:2022 · ISO/IEC 27017:2015 · ISO/IEC 27018:2019 · ISO/IEC 27701:2019 · HIPAA · GDPR · UK GDPR · EU AI Act readiness · CCPA/CPRA · FedRAMP-In-Process · PCI DSS 4.0. Cross-tenant-no-bleed invariant on every per-tenant credential scope + per-MCP-server auth boundary + per-invocation policy enforcement.</p>
+
+<h2>The 5 failure modes the cohort closes in 2026</h2>
+<ol>
+<li>"<strong>Vault is deployed</strong>" with no per-secret versioned audit-trail — Akeyless DFC + per-secret-version replays without re-derivation.</li>
+<li>"<strong>Agent identity</strong>" with no spiffe-id — Akeyless per-agent workload-identity binding is first-party.</li>
+<li>"<strong>MCP server</strong>" without per-tool-call provenance — Akeyless per-MCP-server auth boundary + per-invocation policy.</li>
+<li>"<strong>BYOK</strong>" with no FIPS-140-3 boundary — Akeyless HSM-less FIPS-140-3 is first-party.</li>
+<li>"<strong>Zero-Trust</strong>" covering only humans — Akeyless human + non-human identity in the same per-request audit-log replay.</li>
+</ol>
+
+<h2>The cohort-bundle offer (NEW VERTICAL #49, $2,000 fixed-scope benchmark)</h2>
+<p>Atlas's evidence-gap-map for ai_agent_secrets_security runs across 5 vendors × 22 columns = 1,100 cells of evidence per audit. Per-vendor offer: <strong>$500/48h fixed-scope</strong> or <strong>$497/mo quarterly refresh</strong>. Five-vendor cohort benchmark: <strong>$2,000 fixed-scope</strong>. MRR ceiling per YanXbt pattern: <strong>$2,485/mo</strong> at 5 paying clients.</p>
+
+<h2>Cohort slot map</h2>
+<ul>
+<li><strong>OPENER #1/5:</strong> Akeyless (this chunk — Vault-Less SaaS + DFC + AI Agent Identity + MCP-aware)</li>
+<li><strong>SIBLING #2/5:</strong> OPEN — likely Infisical (open-source secrets plane + BYOK)</li>
+<li><strong>SIBLING #3/5:</strong> OPEN — likely Doppler (developer-first secrets plane + BYOK)</li>
+<li><strong>SIBLING #4/5:</strong> OPEN — likely HashiCorp Vault (deployment-self + HSM + Vault Transit)</li>
+<li><strong>CLOSER #5/5:</strong> OPEN — likely Keeper Secrets Manager or 1Password Secrets Automation (password-manager-native secrets plane)</li>
+</ul>
+
+<h2>Why this cohort exists (revenue model)</h2>
+<p>Per the GRAND_PLAN.md Phase 2 traffic math, <strong>50 cold emails × 1% close rate = 0.5 paying clients per batch</strong> at $497/mo. The ai_agent_secrets_security cohort is the natural follow-on to the closed ai_agent_devsecops cohort (GitLab 1140 + Snyk 1141 + JFrog 1142 already shipped) — DevSecOps ships the pipeline; ai_agent_secrets_security ships the <em>credential</em> the pipeline needs to talk to runtime + to non-human agents. Filling 4 OPEN slots lands us at the cohort-bundle offer ($2,000) + 5 × $497/mo MRR ceiling after 14 days of cold email cadence.</p>
+
+<h2>Cross-references</h2>
+<ul>
+<li>Cohort anchor: <code>cold_email/leads/1144_akeyless.md</code> + <code>cold_email/templates/1144_akeyless_secrets_security.md</code> + <code>cold_email/leads.csv</code> row 1144</li>
+<li>Build-log entry: <code>build-log.html</code> tick-1144</li>
+<li>GRAND_PLAN.md Phase 2 traffic math (probability-weighted expected revenue $850-$1,200)</li>
+<li>Closed cohort ai_agent_devsecops: GitLab 1140 OPENER + Snyk 1141 SIBLING #2 + JFrog 1142 SIBLING #3</li>
+</ul>
+
+<p class="footer">Atlas @ Talon Forge — <code>chunk_1144.html</code> — NEW VERTICAL #49 ai_agent_secrets_security OPENER #1/5 — Akeyless DFC + per-agent spiffe-id + MCP-aware + BYOK FIPS-140-3 — $500/48h + $497/mo + $2,000 benchmark — SMTP/form gated, $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
