@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MLflow — Open-source AI platform for agents, LLMs &amp; models (tick 1171)</title>
+<meta name="description" content="MLflow is the largest open-source AI engineering platform for agents, LLMs, and ML models under Linux Foundation AI &amp; Data governance. Apache-2.0, 20K+ GitHub stars, 900+ contributors, 30M+ monthly PyPI downloads. AI Gateway + OpenTelemetry-native Tracing + Prompt Registry + LLM Judges + Guardrails + 100+ framework integrations. SIBLING #3/5 ai_mlops_feature_store. $500/48h evidence-gap map. SMTP/form gated.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1171.html">
+</head>
+<body>
+<article id="chunk-1171" class="seo-chunk" data-cohort="ai_mlops_feature_store" data-cohort-role="sibling-3-of-5" data-tick="1171">
+<h1>MLflow — Open-source AI engineering platform for agents, LLMs &amp; models</h1>
+
+<p><strong>MLflow</strong> (<a href="https://mlflow.org/">mlflow.org</a>) is the largest open-source AI engineering platform for agents, LLMs, and ML models, backed by the <a href="https://www.lfaidata.foundation/projects/mlflow/">Linux Foundation AI &amp; Data</a>. It is licensed under Apache-2.0 (verbatim from the mlflow.org JSON-LD <code>SoftwareApplication.license</code>: <em>https://www.apache.org/licenses/LICENSE-2.0</em>) and has been committed to open source for 5+ years. Stats verbatim from mlflow.org 2026-07-24: <strong>20K+ GitHub stars, 900+ contributors, 30 Million+ package downloads per month</strong>.</p>
+
+<h2>What MLflow gives an AI-agent engineering team</h2>
+<p>MLflow ships thirteen first-party AI-agent-aware subsystems in one substrate:</p>
+<ul>
+  <li><strong>Tracing</strong> — LLM and AI agent tracing and observability, with native OpenTelemetry integration.</li>
+  <li><strong>Evaluation</strong> — Automated LLM evaluation with LLM judges.</li>
+  <li><strong>Prompt Registry</strong> — Prompt registry and version management.</li>
+  <li><strong>AI Gateway</strong> — Unified OpenAI-compatible API gateway for cost control + rate limiting + fallbacks + vendor-agnostic LLM routing.</li>
+  <li><strong>Human Feedback</strong> — Human feedback collection.</li>
+  <li><strong>Agent Serving</strong> — Agent serving as REST APIs.</li>
+  <li><strong>Token Tracking</strong> — Token usage and cost tracking across LLM providers.</li>
+  <li><strong>Production Monitoring</strong> — Production agent monitoring and alerting.</li>
+  <li><strong>Guardrails</strong> — Guardrails and safety policies for AI applications.</li>
+  <li><strong>Framework Integrations</strong> — OpenAI, Claude, Gemini, LangChain, LangGraph, Google ADK, CrewAI, Vercel AI SDK, plus 100+ more.</li>
+  <li><strong>ML Experiment Tracking</strong> — Per-run, per-experiment, per-artifact-URI lineage.</li>
+  <li><strong>ML Hyperparameter Optimization</strong> — Sweep / tuning substrate.</li>
+  <li><strong>ML Model Registry + Deployment</strong> — Version-pinned models with None/Staging/Production/Archived stage promotion.</li>
+</ul>
+
+<h2>Why enterprise buyers care</h2>
+<p>Enterprise buyers evaluating an AI-agent platform ask a narrower evidence question than vendor demos answer: can one exported record explain which <em>Experiment</em> and <em>Run</em> produced which <em>Prompt Registry version</em>, which <em>Tracing span</em> covered which <em>AI Gateway request</em>, which <em>Model Registry version</em> was promoted to which stage, which <em>LLM Judge</em> scored it, and which <em>Guardrail Policy</em> let it through?</p>
+<p>MLflow is uniquely positioned to answer that question because the registry, gateway, tracing, and evaluation subsystems are first-party and version-pinned — not stitched from third-party SaaS. The 22-column evidence wedge below maps the cross-system join table.</p>
+
+<h2>22-column evidence wedge</h2>
+<table>
+<thead>
+<tr><th>Column</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>mlflow_run_id</code></td><td>Unique MLflow Run ID per training / agent invocation</td></tr>
+<tr><td><code>mlflow_experiment_id</code></td><td>MLflow Experiment grouping</td></tr>
+<tr><td><code>mlflow_tracing_span_id</code></td><td>OpenTelemetry-native Tracing span ID</td></tr>
+<tr><td><code>mlflow_ai_gateway_request_id</code></td><td>AI Gateway request ID (vendor-agnostic LLM call)</td></tr>
+<tr><td><code>mlflow_prompt_version_id</code></td><td>Prompt Registry version pin</td></tr>
+<tr><td><code>mlflow_model_version_id</code></td><td>Model Registry version pin</td></tr>
+<tr><td><code>mlflow_model_stage</code></td><td>None / Staging / Production / Archived</td></tr>
+<tr><td><code>mlflow_llm_judge_score</code></td><td>LLM Judge evaluation score</td></tr>
+<tr><td><code>mlflow_human_feedback_id</code></td><td>Human feedback submission ID</td></tr>
+<tr><td><code>mlflow_guardrail_policy_id</code></td><td>Guardrail / safety policy applied</td></tr>
+<tr><td><code>mlflow_artifact_uri</code></td><td>Artifact URI (s3://, gs://, file://, etc.)</td></tr>
+<tr><td><code>mlflow_tag</code></td><td>Per-run tag</td></tr>
+<tr><td><code>mlflow_metric</code></td><td>Per-run metric</td></tr>
+<tr><td><code>mlflow_param</code></td><td>Per-run param</td></tr>
+<tr><td><code>mlflow_dataset_digest</code></td><td>Dataset digest (input data version pin)</td></tr>
+<tr><td><code>mlflow_registry_webhook_id</code></td><td>Model Registry webhook event</td></tr>
+<tr><td><code>mlflow_serving_endpoint_id</code></td><td>Model Serving endpoint ID</td></tr>
+<tr><td><code>mlflow_otel_resource_attribute_set</code></td><td>OpenTelemetry resource attribute set (natively integrated)</td></tr>
+<tr><td><code>mlflow_llm_provider</code></td><td>OpenAI / Anthropic / Google / etc.</td></tr>
+<tr><td><code>mlflow_token_count_input</code></td><td>Input token count per call</td></tr>
+<tr><td><code>mlflow_token_count_output</code></td><td>Output token count per call</td></tr>
+<tr><td><code>cross_tenant_no_bleed_invariant</code></td><td>Tenant-isolation invariant</td></tr>
+</tbody>
+</table>
+
+<h2>How MLflow fits the AI-agent MLOps cohort</h2>
+<p>MLflow is the SIBLING #3/5 of NEW VERTICAL #51 <strong>ai_mlops_feature_store</strong> at the Talon Forge Atlas cohort. Cohort timeline:</p>
+<ul>
+  <li><strong>Weights &amp; Biases</strong> 1154 — OPENER #1/5 (named Weave + Traces + Evaluations + Guardrails)</li>
+  <li><strong>ClearML</strong> 1155 — SIBLING #2/5 (three-layer Infrastructure Control Plane + AI Development Center + GenAI App Engine)</li>
+  <li><strong>MLflow</strong> 1171 — SIBLING #3/5 (AI Gateway + OpenTelemetry-native Tracing + Linux Foundation governance)</li>
+  <li>(OPEN) SIBLING #4/5 — candidate: Comet / Opik, DagsHub, Domino, Valohai, Tecton</li>
+  <li>(OPEN) CLOSER #5/5</li>
+</ul>
+
+<h2>Compliance posture (inferred-not-verbatim)</h2>
+<p>Apache-2.0 OSS infrastructure substrate under Linux Foundation AI &amp; Data PMC governance. As OSS infrastructure (not multi-tenant SaaS), SOC 2 Type II + ISO 27001 + HIPAA posture is the responsibility of the deploying organization. Operational primitives: per-experiment isolation via MLflow Tracking Server RBAC, per-MLflow-Registry access control, and per-MLflow-Deployment model stage promotion (None / Staging / Production / Archived).</p>
+
+<h2>Engagement offer</h2>
+<p><strong>$500 / 48h</strong> fixed-scope MLflow Tracing + AI Gateway + Prompt Registry + Model Registry + LLM Judges evidence-gap map, or <strong>$497 / month</strong> quarterly refresh, or <strong>$2,000</strong> five-vendor ai_mlops_feature_store cohort benchmark at close, or <strong>$2,485 MRR ceiling</strong> per YanXbt pattern. Commercial route <code>FORM:https://github.com/mlflow/mlflow/issues/new/choose</code> (GitHub issue primary OSS contact verbatim first-party) + <code>mailto:mlflow-users@lists.lfaidata.foundation</code> (Linux Foundation AI &amp; Data MLflow users mailing list verbatim first-party) + <code>FORM:https://mlflow.org/community</code> all NOT submitted. SMTP/form gated; $0 sent / $0 received.</p>
+
+<p><a href="chunks/chunk_1171.html">Read full MLflow evidence-gap-map receipt →</a></p>
+
+<p><em>Sources: mlflow.org homepage title (verbatim 2026-07-24 curl HTTP 200) + mlflow.org JSON-LD license Apache-2.0 + mlflow.org JSON-LD featureList 13-item AI-agent-aware substrate list 2026-07-24 + lfaidata.foundation/projects/mlflow. Tick 1171 · sibling-3-of-5 · NEW VERTICAL #51 ai_mlops_feature_store advanced 2/5 → 3/5 · $0 sent / $0 received.</em></p>
+</article>
+</body>
+</html>
