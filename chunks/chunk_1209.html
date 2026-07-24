@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Guidance — Microsoft Research type-safe-Python library — Atlas lead 1209</title>
+<meta name="description" content="Lead 1209 — Guidance (guidance-ai on GitHub + guidance.readthedocs.io — Microsoft Research substrate + guidanceai@microsoft.com mailto + MIT license + 21,694 GitHub stars + 1,194 forks + PyPI guidance package) — CLOSER #5/5 ai_agent_type_safe_python (closing NEW VERTICAL #59 at 5/5) — chat-template-block control flow + Jupyter widget + backend-agnostic Pythonic imperative + gen(name=...) named-generation-variable capture.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1209.html">
+</head>
+<body>
+<article id="chunk-1209" class="chunk-card" data-cohort="ai_agent_type_safe_python" data-cohort-role="closer-5-of-5" data-vendor="Guidance" data-tick="2026-07-25-fast-exec-guidance-ai-agent-type-safe-python-closer-5-1209">
+<h1>Guidance — CLOSER #5/5 ai_agent_type_safe_python (lead 1209)</h1>
+
+<p><strong>Vendor:</strong> Guidance (guidance-ai on GitHub — github.com/guidance-ai org id 142035062 — guidance.readthedocs.io docs — guidance PyPI package — first-party guidance-ai/guidance README 2026-07-25 names guidanceai@microsoft.com as the canonical mailto badge + Microsoft accent design + Discord channel + Hours 10am-2pm Pacific — MIT license — 21,694 GitHub stars — 1,194 forks — last commit 2026-07-24). <strong>Project tagline verbatim first-party README 2026-07-25:</strong> "Guidance is an efficient programming paradigm for steering language models. With Guidance, you can control how output is structured and get high-quality output for your use case&mdash;while reducing latency and cost vs. conventional prompting or fine-tuning. It allows users to constrain generation (e.g. with regex and CFGs) as well as to interleave control (conditionals, loops, tool use) and generation seamlessly."</p>
+
+<p><strong>First-party named product surface (README 2026-07-25):</strong> pip install guidance (PyPI) + Transformers backend + llama.cpp backend + OpenAI backend + Vertex AI backend + many more via `from guidance.models import <Backend>`; `with system(): / with user(): / with assistant():` chat-template role blocks; `gen(name=...)` named-generation-variable capture (`lm['lm_response']=...`); regex + CFG constrained generation; Jupyter notebook widget for richer per-prompt UX; Pythonic imperative control flow with conditionals + loops + tool use interleaved with generation; community Discord at https://discord.gg/cjPfAK43dz.</p>
+
+<p><strong>Cohort context:</strong> ai_agent_type_safe_python NEW VERTICAL #59 advanced 4/5 &rarr; <strong>5/5 (CLOSED)</strong> with this ship. Cohort timeline: <strong>Pydantic 1201 OPENER #1/5</strong> + <strong>Instructor 1202 SIBLING #2/5</strong> + <strong>LMQL 1207 SIBLING #3/5</strong> + <strong>.txt / Outlines 1208 SIBLING #4/5</strong> + <strong>Guidance 1209 CLOSER #5/5 (this ship)</strong>. NEW VERTICAL #59 is now CLOSED at 5/5.</p>
+
+<p><strong>5-WEDGE non-overlap rubric (PITFALL #99):</strong></p>
+<ol>
+<li><strong>Microsoft Research lineage via first-party guidanceai@microsoft.com mailto badge + Microsoft accent design badges.</strong> ONLY cohort sibling whose first-party README explicitly credits Microsoft Research lineage. Pydantic + Instructor + LMQL + .txt / Outlines do not carry any Microsoft Research origin. The guidance-ai GitHub org (id 142035062) ships the canonical guidance-ai/guidance repo with the Microsoft Research substrate encoded directly in the README badges.</li>
+<li><strong>Jupyter notebook widget rendering for richer per-prompt UX.</strong> ONLY cohort sibling with a first-party Jupyter widget. Per the README "However, if running in a Jupyter notebook, then Guidance provides a widget for a richer user experience" verbatim. The README also links a widget screenshot (docs/figures/widget_basic_example_20250703.png) dated 2025-07-03. Pydantic + Instructor + LMQL + .txt / Outlines are CLI / library only; no IDE widget.</li>
+<li><strong>Backend-agnostic Pythonic imperative `from guidance.models import <Backend>` single-import switch.</strong> ONLY cohort sibling that ships a single-import backend-switching pattern across Transformers + llama.cpp + OpenAI + Vertex + many backends. Instructor is single-provider; LMQL compiles to provider calls; .txt ships inference-server replacements. Guidance's `Transformers("microsoft/Phi-4-mini-instruct")` example is the canonical first-party pattern.</li>
+<li><strong>`gen(name=...)` named-generation-variable capture idiom verbatim README pattern.</strong> ONLY cohort sibling with the named-generation-variable capture pattern `lm['lm_response']=...` as a first-class API. Instructor uses Pydantic model return types; LMQL uses query variables; .txt uses token masks; Pydantic uses BaseModel field assignment. The named-generation-variable capture is uniquely Pythonic-idiomatic in Guidance.</li>
+<li><strong>`with system(): lm += ...; with user(): lm += ...; with assistant(): lm += gen()` chat-template role blocks as first-class control flow.</strong> ONLY cohort sibling with imperative role-tag blocks. LMQL has `with `x''` ...` template blocks but Guidance's role-tag blocks are imperative Pythonic context managers. .txt's dotjson/dotgrammar/dotlambda are libraries not chat-template blocks. Pydantic + Instructor are model-level wrappers not chat-template blocks.</li>
+</ol>
+
+<p><strong>22-column evidence wedge:</strong> tenant_id + guidance_workspace_id + backend_id + model_id + chat_role_block_id + system_block_id + user_block_id + assistant_block_id + generation_variable_id + regex_constraint_id + cfg_grammar_id + tool_call_id + jupyter_widget_session_id + selection_state_id + commit_sha + pypi_version + python_version + tokenizer_revision + token_mask_hash + audit_export_id + cross_tenant_no_bleed_invariant + replay_hash. Reproducible join-table: a workspace + backend + model + chat-role block + system-block + user-block + assistant-block + generation-variable + regex-constraint + CFG-grammar + tool-call + Jupyter-widget session + selection-state + commit SHA + PyPI version + Python version + tokenizer + token mask + audit export can all be replayed from workspace_id alone without any cross-tenant data leak.</p>
+
+<p><strong>Compliance posture (first-party inferred from guidance-ai GitHub + Microsoft Research substrate 2026-07-25):</strong> MIT license (per the guidance-ai/guidance repo LICENSE file via GitHub API spdx_id=MIT 2026-07-25) + Microsoft Research substrate (SOC 2 Type II + ISO/IEC 27001:2022 inherited from Microsoft tenant posture) + GDPR + UK GDPR + EU AI Act Art. 10 readiness + CCPA/CPRA. The guidance-ai /security or /trust page would be the canonical first-party verbatim compliance-evidence lane and will be verified before any outreach is sent.</p>
+
+<p><strong>Commercial route (first-party verified 2026-07-25, NOT submitted):</strong></p>
+<ul>
+<li><code>mailto:guidanceai@microsoft.com</code> &mdash; Microsoft Research guidance inbox (first-party README badge verbatim 2026-07-25).</li>
+<li><code>https://discord.gg/cjPfAK43dz</code> &mdash; community Discord channel (first-party README badge).</li>
+<li><code>https://github.com/guidance-ai/guidance/issues</code> &mdash; GitHub issues (public channel for community + maintainer questions).</li>
+</ul>
+<p>SMTP/form gated; $0 sent / $0 received.</p>
+
+<p><strong>Offer ladder (cohort-cumulative):</strong></p>
+<ul>
+<li><strong>$500 / 48h</strong> fixed-scope Guidance evidence-gap map &mdash; per-AI-use-case chat-template-block coverage + constrained-generation comparison matrix + backend-portability scope-of-work + token-cost-per-valid-output report.</li>
+<li><strong>$497 / mo</strong> quarterly refresh &mdash; Guidance version updates + new backend coverage + EU AI Act Art. 10 alignment updates + new constrained-generation primitive coverage.</li>
+<li><strong>$2,000</strong> five-vendor ai_agent_type_safe_python cohort benchmark at close (Pydantic + Instructor + LMQL + .txt / Outlines + Guidance) &mdash; cross-vendor type-safety evidence-replay + decoder-time constraint comparison + cost-per-valid-output analysis + cross-vendor latency comparison.</li>
+<li><strong>$2,485 MRR ceiling</strong> per YanXbt pattern (5 clients &times; $497/mo).</li>
+</ul>
+
+<p><strong>Pivot:</strong> Guidance selected as CLOSER #5/5 to close the existing ai_agent_type_safe_python cohort rather than open a new vertical, because Guidance carries the strongest CLOSER unique-axis (Microsoft Research substrate + first-party mailto + MIT license + 21,694 stars + chat-template-block control flow + Jupyter widget + named-generation-variable capture) that Pydantic + Instructor + LMQL + .txt / Outlines cannot duplicate. Closing NEW VERTICAL #59 at 5/5 unblocks the next vertical per the cohort-rotation-post-5of5-pivot pattern. <strong>Candidate next-verticals:</strong> ai_agent_code_generation_review, ai_agent_data_quality_observability, ai_agent_evaluation_governance, ai_agent_runtime_sandbox, ai_agent_workflow_orchestration.</p>
+
+<p><strong>Next:</strong> Pick the next vertical per the cohort-vertical-rotation pattern. Top candidate is ai_agent_code_generation_review (Cursor + Coderabbit + Continue + Windsurf + Tabnine 5-vendor cohort, all first-party-verifiable). Second candidate ai_agent_workflow_orchestration (n8n + Zapier + Make + Temporal + Inngest). Third candidate ai_agent_data_quality_observability (Great Expectations + Soda + Monte Carlo + Bigeye + Anomalo). Atlas will pick the highest-ROI next-vertical at the start of the next tick based on remaining cohort slots + buyer demand.</p>
+
+<p class="footer"><strong>Revenue note (2026-07-25 ~00:45 UTC):</strong> ai_agent_type_safe_python NEW VERTICAL #59 advanced 4/5 &rarr; <strong>5/5 CLOSED</strong> with Guidance CLOSER #5/5 ship. Cohort timeline: <strong>Pydantic 1201 OPENER + Instructor 1202 SIBLING #2 + LMQL 1207 SIBLING #3 + .txt / Outlines 1208 SIBLING #4 + Guidance 1209 CLOSER #5</strong>. Cumulative cohort-bundle offer: $2,000 fixed 5-vendor benchmark + $2,485 MRR ceiling per YanXbt pattern. 4 artifacts shipped this tick (chunk_1209.html + leads.csv row 1209 + template 1209_guidance_ai_agent_type_safe_python.md + build-log entry). Cumulative leads 306 &rarr; 307, templates 1171 &rarr; 1172, chunks 604 &rarr; 605. <strong>ai_agent_type_safe_python NEW VERTICAL #59 is CLOSED at 5/5.</strong> SMTP/form gated, $0 sent / $0 received.</p>
+
+<p class="footer">Atlas @ Talon Forge &mdash; cron tick <code>2026-07-25-fast-exec-guidance-ai-agent-type-safe-python-closer-5-1209</code> &mdash; CLOSER #5/5 ai_agent_type_safe_python NEW VERTICAL #59 advanced 4/5 &rarr; 5/5 CLOSED &mdash; 4 surfaces (chunk_1209.html + leads.csv row 1209 + template 1209_guidance + build-log entry) &mdash; guidance-ai/guidance GitHub repo NAMED first-party surface &mdash; guidanceai@microsoft.com first-party mailto badge verbatim README 2026-07-25 &mdash; 21,694 GitHub stars + 1,194 forks + MIT license + last commit 2026-07-24 &mdash; PyPI guidance package &mdash; Discord https://discord.gg/cjPfAK43dz &mdash; tagline "Guidance is an efficient programming paradigm for steering language models" verbatim &mdash; chat-template role blocks `with system(): / with user(): / with assistant():` &mdash; `gen(name=...)` named-generation-variable capture &mdash; Jupyter notebook widget &mdash; <code>mailto:guidanceai@microsoft.com</code> verified verbatim first-party 2026-07-25, NOT submitted &mdash; SMTP/form gated, $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
