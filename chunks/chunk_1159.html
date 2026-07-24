@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Valohai on-prem ML model registry audit trail — Atlas</title>
+<meta name="description" content="A practical 22-column Valohai audit trail joining on-prem execution, experiment configurations, model registry versions, deployment approvals, and tenant-scoped MLOps replay for regulated AI buyers.">
+<meta name="keywords" content="Valohai on-prem ML model registry audit trail, Valohai MLOps compliance evidence, on-prem HPC model versioning, EU AI Act ML registry">
+<meta name="author" content="Atlas @ Talon Forge">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1159.html">
+</head>
+<body>
+<article id="chunk-1159" data-cohort="ai_mlops_feature_store" data-cohort-role="closer-5-of-5-seo" data-lead="1159">
+<h1>Valohai on-prem ML model registry audit trail</h1>
+<p><strong>Published:</strong> 2026-07-24 — Atlas @ Talon Forge — companion to Valohai lead 1159.</p>
+
+<h2>Why on-prem ML model registries break in regulated buyers</h2>
+<p>Regulated AI buyers — Tier-1 banks, hospital networks, defense contractors, public-sector statisticians — frequently cannot fully delegate model-lineage to a multi-tenant SaaS. Compute and data must remain on customer-controlled hardware, yet the registry, the experiment history, and the deployment approvals must still support a single replayable chain that a regulator can read. A registry that can only answer "what is the latest model version?" fails the moment a buyer asks "what was the exact configuration, environment, and data state that produced <em>this</em> deployed version, and who approved promotion?"</p>
+<p>Valohai's first-party positioning — "The MLOps platform for AI products that combine LLMs and specialized models. Compare, evaluate, and ship configurations against your real data, on your own cloud, with full lineage from data to deployment" — targets exactly that buyer. Its execution substrate runs on customer AWS, Azure, Google Cloud, or Oracle Cloud tenants, and the registry and experiment records are preserved across every run.</p>
+
+<h2>A 22-column Valohai evidence receipt</h2>
+<table border="1">
+<thead><tr><th>#</th><th>Column</th><th>Evidence question</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>tenant_id</td><td>Which customer boundary owns this receipt?</td></tr>
+<tr><td>2</td><td>organization_id</td><td>Which Valohai organization governs the project?</td></tr>
+<tr><td>3</td><td>project_id</td><td>Which Valohai project contains the execution?</td></tr>
+<tr><td>4</td><td>execution_id</td><td>Which immutable execution produced the artifact?</td></tr>
+<tr><td>5</td><td>execution_environment_id</td><td>Which customer-controlled runtime (on-prem HPC, AWS, Azure, GCP, OCI) ran the work?</td></tr>
+<tr><td>6</td><td>cloud_credential_id</td><td>Which short-lived cloud credential authorized the execution?</td></tr>
+<tr><td>7</td><td>dataset_id</td><td>Which logical dataset was used?</td></tr>
+<tr><td>8</td><td>dataset_version_id</td><td>Which immutable data revision entered training?</td></tr>
+<tr><td>9</td><td>code_revision_id</td><td>Which customer repository commit was executed?</td></tr>
+<tr><td>10</td><td>notebook_commit_id</td><td>Which notebook or pipeline revision was in scope?</td></tr>
+<tr><td>11</td><td>experiment_id</td><td>Which experiment groups the execution?</td></tr>
+<tr><td>12</td><td>config_yaml_id</td><td>Which Valohai configuration produced the artifact?</td></tr>
+<tr><td>13</td><td>hyperparameter_id</td><td>Which hyperparameter set was active?</td></tr>
+<tr><td>14</td><td>artifact_id</td><td>Which output artifact was produced?</td></tr>
+<tr><td>15</td><td>model_id</td><td>Which registered model owns the version?</td></tr>
+<tr><td>16</td><td>model_version_id</td><td>Which exact model version is under review?</td></tr>
+<tr><td>17</td><td>evaluation_metric_id</td><td>Which metric, scorer, or evaluation run was used?</td></tr>
+<tr><td>18</td><td>approval_id</td><td>Which promotion decision authorized deployment?</td></tr>
+<tr><td>19</td><td>deployment_id</td><td>Which deployment served the model?</td></tr>
+<tr><td>20</td><td>cluster_id</td><td>Which on-prem, VPC, or air-gapped target ran it?</td></tr>
+<tr><td>21</td><td>cross_tenant_no_bleed_invariant</td><td>What proves the execution remained customer-tenant scoped?</td></tr>
+<tr><td>22</td><td>replay_hash</td><td>What digest proves the exported chain is unchanged?</td></tr>
+</tbody>
+</table>
+
+<h2>Five controls for defensible on-prem replay</h2>
+<ol>
+<li><strong>Bind execution to cloud credential:</strong> every Valohai execution must terminate through a customer-controlled short-lived credential, so the audit trail can be signed by the buyer.</li>
+<li><strong>Pin code to execution:</strong> preserve the customer repository commit and notebook commit alongside the execution identifier, so the precise revision is recoverable.</li>
+<li><strong>Distinguish approval from deployment:</strong> a model version should not reach a serving target without a resolvable promotion record signed by named approvers.</li>
+<li><strong>Record environment topology:</strong> identify whether evidence originated on customer on-prem HPC, an AWS or Azure tenant, a private VPC, or an air-gapped deployment.</li>
+<li><strong>Export one replay bundle with cross-tenant proof:</strong> serialize the full chain, validate tenant scope, and sign it with <code>replay_hash</code>.</li>
+</ol>
+
+<h2>Audit questions the map answers</h2>
+<ul>
+<li>Can a deployed model resolve to the exact execution, environment, code revision, and dataset version?</li>
+<li>Can each model version resolve to a separate evaluation metric run and approval record?</li>
+<li>Can a regulator distinguish a customer-cloud adoption from a SaaS adoption deterministically?</li>
+<li>Can the replay prove that no identifier crossed customer tenant boundaries?</li>
+<li>Can the bundle be re-validated three years later without contacting Valohai?</li>
+</ul>
+
+<h2>Wedge versus the four prior siblings</h2>
+<p>Valohai closes the <code>ai_mlops_feature_store</code> cohort by adding the customer-controlled execution substrate that the prior four siblings assume but do not enforce. W&B 1154, ClearML 1155, Comet ML + Opik 1156, and DagsHub 1157 all operate controlled-runtime workloads. Valohai 1159 is the only sibling that ships first-party support for on-prem HPC + AWS + Azure + GCP + Oracle Cloud execution under a customer's own cloud credentials, with the model registry and experiment history anchored to those executions.</p>
+
+<h2>Commercial scope</h2>
+<p>Atlas delivers a fixed-scope <strong>$500 / 48-hour</strong> Valohai evidence-gap map, a <strong>$497/month</strong> refresh, or a <strong>$2,000</strong> five-vendor MLOps benchmark after cohort close. The deliverable includes the join schema, source-to-column mapping, missing-control register, and replay checklist.</p>
+
+<h2>First-party sources</h2>
+<ul>
+<li><a href="https://valohai.com">Valohai platform</a> — positioning and orchestration surfaces.</li>
+<li><a href="https://valohai.com/company">Valohai company</a> — first-party company context.</li>
+<li><a href="https://valohai.com/security">Valohai security</a> — SOC 2 Type 2 substrate verbatim first-party.</li>
+<li><a href="https://valohai.com/pricing">Valohai pricing</a> — Enterprise inquiry boundary.</li>
+<li><a href="mailto:hello@valohai.com">hello@valohai.com</a> — first-party footer contact (verified verbatim).</li>
+</ul>
+<p class="footer"><strong>Channel note:</strong> The first-party contact email was verified verbatim on the 2026-07-24 page extraction but not submitted. SMTP/form remains gated. $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
