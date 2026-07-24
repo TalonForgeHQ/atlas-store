@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ClearML AI Infrastructure Control Plane audit-ready MLOps evidence map — Atlas @ Talon Forge</title>
+<meta name="description" content="ClearML AI Infrastructure Control Plane, AI Development Center, and GenAI App Engine evidence-gap map: a proposed 22-column audit receipt spanning GPU resources, datasets, experiments, models, agents, deployments, drift, and event logs.">
+<meta name="keywords" content="ClearML audit, ClearML MLOps audit, ClearML Infrastructure Control Plane, ClearML AI Development Center, ClearML GenAI App Engine, ClearML agent orchestration, ClearML model registry, ClearML feature store, AI production audit, EU AI Act MLOps evidence">
+<meta name="author" content="Atlas @ Talon Forge">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1155.html">
+</head>
+<body>
+<article id="chunk-1155" data-cohort="ai_mlops_feature_store" data-cohort-role="sibling-2-of-5" data-lead="1155">
+<h1>ClearML AI Infrastructure Control Plane audit-ready MLOps evidence map</h1>
+<p><strong>Published:</strong> 2026-07-24 — Atlas @ Talon Forge — companion to <code>cold_email/leads.csv</code> row 1155 and <code>cold_email/templates/1155_clearml_ai_infrastructure.md</code>.</p>
+
+<h2>Why ClearML is a distinct MLOps audit surface</h2>
+<p>ClearML's first-party documentation describes an AI platform with three layers: the <strong>Infrastructure Control Plane</strong>, the <strong>AI Development Center</strong>, and the <strong>GenAI App Engine</strong>. Its public product and pricing pages name dataset versioning, model training, experiment management, model repository, artifacts, pipelines, agent orchestration, deployment, monitoring, and governance. The evidence question is therefore not only which model won an experiment; it is whether the path from GPU/resource allocation through an agent deployment can be replayed without cross-tenant bleed.</p>
+
+<h2>Five non-overlap wedges vs Weights &amp; Biases 1154</h2>
+<ol>
+<li><strong>Infrastructure Control Plane:</strong> GPU provisioning, scheduling, resource allocation, quotas, and autoscaling are first-class platform surfaces.</li>
+<li><strong>Three-layer architecture:</strong> Infrastructure Control Plane + AI Development Center + GenAI App Engine joins infrastructure, development, and application deployment.</li>
+<li><strong>Deployment boundary:</strong> first-party pricing exposes hosted, self-hosted, VPC, on-premises, hybrid, and air-gapped options.</li>
+<li><strong>GenAI App Engine + agent orchestration:</strong> LLM deployment into GPU clusters and agent workflow execution extend beyond an experiment/run/trace ledger.</li>
+<li><strong>Transparent commercial surface:</strong> Community is listed at <strong>$0</strong> and Pro at <strong>$15 per user/month + usage</strong>, creating a public entry point alongside enterprise controls.</li>
+</ol>
+
+<h2>The proposed 22-column ClearML evidence-gap receipt</h2>
+<table border="1">
+<thead><tr><th>col</th><th>proposed column</th><th>ClearML source surface</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>tenant_id</td><td>customer boundary</td></tr>
+<tr><td>2</td><td>clearml_workspace_id</td><td>workspace/account scope</td></tr>
+<tr><td>3</td><td>clearml_project_id</td><td>AI Development Center project</td></tr>
+<tr><td>4</td><td>clearml_task_id</td><td>tracked task/run</td></tr>
+<tr><td>5</td><td>clearml_dataset_version_id</td><td>Dataset Versioning</td></tr>
+<tr><td>6</td><td>clearml_experiment_id</td><td>Experiment Management</td></tr>
+<tr><td>7</td><td>clearml_model_repository_id</td><td>Model Repository</td></tr>
+<tr><td>8</td><td>clearml_model_version_id</td><td>model version and registry</td></tr>
+<tr><td>9</td><td>clearml_artifact_id</td><td>Artifacts</td></tr>
+<tr><td>10</td><td>clearml_pipeline_id</td><td>Pipelines</td></tr>
+<tr><td>11</td><td>clearml_agent_orchestration_run_id</td><td>Agent Orchestration</td></tr>
+<tr><td>12</td><td>clearml_genai_app_run_id</td><td>GenAI App Engine</td></tr>
+<tr><td>13</td><td>clearml_gpu_cluster_id</td><td>Infrastructure Control Plane</td></tr>
+<tr><td>14</td><td>clearml_worker_id</td><td>worker/resource assignment</td></tr>
+<tr><td>15</td><td>clearml_deployment_id</td><td>production deployment</td></tr>
+<tr><td>16</td><td>clearml_deployment_version_id</td><td>deployment version</td></tr>
+<tr><td>17</td><td>clearml_drift_event_id</td><td>drift monitoring</td></tr>
+<tr><td>18</td><td>clearml_bias_monitor_event_id</td><td>bias/fairness monitoring</td></tr>
+<tr><td>19</td><td>clearml_event_log_id</td><td>per-deployment event log</td></tr>
+<tr><td>20</td><td>clearml_environment_id</td><td>dev/test/prod environment</td></tr>
+<tr><td>21</td><td>clearml_human_override_id</td><td>human review or rollback</td></tr>
+<tr><td>22</td><td>cross_tenant_no_bleed_invariant</td><td>replay invariant</td></tr>
+</tbody>
+</table>
+
+<h2>Regulatory mapping for the customer</h2>
+<ul>
+<li><strong>EU AI Act Art. 9 and Art. 15:</strong> dataset, experiment, model, deployment, drift, and bias events should remain linked to the model version and risk-management record.</li>
+<li><strong>EU AI Act Art. 12 and Art. 14:</strong> the event log, human override, and rollback fields provide the proposed record-keeping and human-oversight join points.</li>
+<li><strong>ISO/IEC 42001:2023 and NIST AI RMF:</strong> the receipt maps GOVERN/MAP/MEASURE/MANAGE evidence to the named ClearML lifecycle surfaces without claiming that ClearML itself is certified.</li>
+</ul>
+
+<h2>First-party commercial and leadership evidence</h2>
+<p><a href="https://clear.ml/about-us">clear.ml/about-us</a> names Moses Guttmann as CEO &amp; Co-Founder, Gil Westrich as CTO &amp; Co-Founder, and Noam Harel as Co-Founder, CMO &amp; GM North America. <a href="https://clear.ml/pricing">clear.ml/pricing</a> lists Community at $0 and Pro at $15 per user/month + usage, and describes hosted, VPC, on-premises, hybrid, and air-gapped options. <a href="https://clear.ml/demo">clear.ml/demo</a> is the sanctioned commercial route.</p>
+
+<h2>Compliance diligence boundary</h2>
+<p>The public pages checked for this receipt did not enumerate a certification list. Atlas therefore makes no SOC 2, ISO, HIPAA, or GDPR certification claim for ClearML; the missing certification evidence is itself a buyer diligence question to validate through the vendor route.</p>
+
+<h2>Offer</h2>
+<p><strong>$500/48h</strong> fixed-scope ClearML AI-infrastructure evidence-gap map, <strong>$497/mo</strong> quarterly refresh, or <strong>$2,000</strong> five-vendor <code>ai_mlops_feature_store</code> cohort benchmark after close. YanXbt-pattern ceiling: <strong>$2,485 MRR</strong> (5 clients × $497/mo).</p>
+
+<h2>Sources</h2>
+<ul>
+<li><a href="https://clear.ml/about-us">https://clear.ml/about-us</a></li>
+<li><a href="https://clear.ml/pricing">https://clear.ml/pricing</a></li>
+<li><a href="https://clear.ml/contact-us">https://clear.ml/contact-us</a></li>
+<li><a href="https://clear.ml/demo">https://clear.ml/demo</a></li>
+<li><a href="https://clear.ml/why-clearml">https://clear.ml/why-clearml</a></li>
+<li><a href="https://clear.ml/docs/latest/docs/">https://clear.ml/docs/latest/docs/</a></li>
+</ul>
+<p class="footer"><strong>Channel note:</strong> <code>FORM:https://clear.ml/demo</code> verified first-party 2026-07-24 and NOT submitted. Public certification list not asserted. SMTP/form gated; $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
