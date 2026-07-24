@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Comet ML Opik audit trail for AI agents and model lineage — Atlas</title>
+<meta name="description" content="A practical 22-column Comet ML and Opik audit trail joining datasets, experiments, model registry versions, prompts, agent traces, evaluators, and human annotations.">
+<meta name="keywords" content="Comet ML Opik audit trail, Opik agent evaluation evidence, Comet model lineage audit, AI agent traceability, MLOps compliance evidence">
+<meta name="author" content="Atlas @ Talon Forge">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1156.html">
+</head>
+<body>
+<article id="chunk-1156" data-cohort="ai_mlops_feature_store" data-cohort-role="sibling-3-of-5" data-lead="1156">
+<h1>How to build a Comet ML + Opik audit trail for AI agents</h1>
+<p><strong>Published:</strong> 2026-07-24 — Atlas @ Talon Forge — companion to outreach template <code>1156_comet_ml_opik.md</code>.</p>
+
+<h2>The cross-plane lineage problem</h2>
+<p>Comet spans traditional machine-learning experiment and model lifecycle evidence while Opik covers LLM and AI-agent evaluation, tracing, prompt management, and production monitoring. An audit-ready implementation must join those planes. A production agent trace should resolve to the exact dataset version, training run, artifact, registered model version, prompt version, evaluator version, deployment, and human annotation that explain the behavior.</p>
+<p>Keeping experiment evidence and agent observability in separate exports creates a replay gap. The gap appears when a reviewer asks which model artifact served a trace, which evaluation approved it, whether the prompt changed after approval, or whether two tenants could ever share an identifier.</p>
+
+<h2>A 22-column Comet + Opik evidence receipt</h2>
+<table border="1">
+<thead><tr><th>#</th><th>Column</th><th>Evidence question</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>tenant_id</td><td>Which customer boundary owns the record?</td></tr>
+<tr><td>2</td><td>comet_workspace_id</td><td>Which Comet workspace produced it?</td></tr>
+<tr><td>3</td><td>comet_project_id</td><td>Which project contains the lifecycle?</td></tr>
+<tr><td>4</td><td>experiment_id</td><td>Which experiment is the parent?</td></tr>
+<tr><td>5</td><td>run_id</td><td>Which reproducible run created the result?</td></tr>
+<tr><td>6</td><td>dataset_id</td><td>Which dataset was used?</td></tr>
+<tr><td>7</td><td>dataset_version_id</td><td>Which immutable dataset revision was used?</td></tr>
+<tr><td>8</td><td>artifact_id</td><td>Which versioned artifact was emitted?</td></tr>
+<tr><td>9</td><td>model_registry_id</td><td>Which registry owns the model?</td></tr>
+<tr><td>10</td><td>model_version_id</td><td>Which exact model version served traffic?</td></tr>
+<tr><td>11</td><td>deployment_id</td><td>Which deployment exposed that model?</td></tr>
+<tr><td>12</td><td>opik_project_id</td><td>Which Opik project owns agent evidence?</td></tr>
+<tr><td>13</td><td>trace_id</td><td>Which end-to-end agent invocation is replayed?</td></tr>
+<tr><td>14</td><td>span_id</td><td>Which model, retrieval, or tool operation ran?</td></tr>
+<tr><td>15</td><td>thread_id</td><td>Which multi-turn conversation supplied context?</td></tr>
+<tr><td>16</td><td>prompt_id</td><td>Which prompt asset was invoked?</td></tr>
+<tr><td>17</td><td>prompt_version_id</td><td>Which prompt bytes were active?</td></tr>
+<tr><td>18</td><td>evaluator_id</td><td>Which quality or safety evaluator ran?</td></tr>
+<tr><td>19</td><td>evaluator_version_id</td><td>Which evaluator definition produced the score?</td></tr>
+<tr><td>20</td><td>evaluation_score</td><td>What result controlled promotion or review?</td></tr>
+<tr><td>21</td><td>human_annotation_id</td><td>Which human judgment supplemented automation?</td></tr>
+<tr><td>22</td><td>cross_tenant_no_bleed_invariant</td><td>What proves tenant isolation during replay?</td></tr>
+</tbody>
+</table>
+
+<h2>Five controls that make the receipt defensible</h2>
+<ol>
+<li><strong>Immutable version joins:</strong> store dataset, model, prompt, and evaluator version identifiers rather than mutable names.</li>
+<li><strong>Trace-to-model resolution:</strong> make every production trace resolve to one deployment and one registered model version.</li>
+<li><strong>Promotion evidence:</strong> preserve the evaluation score and human annotation used to approve a deployment.</li>
+<li><strong>Tenant-scoped keys:</strong> prefix and validate every workspace, project, trace, and artifact lookup with <code>tenant_id</code>.</li>
+<li><strong>Replay export:</strong> generate one machine-readable bundle that reconstructs the experiment-to-agent decision chain without dashboard access.</li>
+</ol>
+
+<h2>Where Opik is distinct in the MLOps stack</h2>
+<p>Opik adds an open-source, self-hostable LLM and agent evaluation boundary to Comet's experiment, artifact, and model-registry surface. That makes deployment topology part of the evidence map: the same receipt should work for a managed deployment or a customer-controlled Opik environment. It also makes evaluator lineage and prompt-to-model joins first-class rather than leaving them in an unrelated observability silo.</p>
+
+<h2>Audit questions this map answers</h2>
+<ul>
+<li>Can an Opik trace identify the exact Comet model and dataset versions behind a response?</li>
+<li>Can a reviewer reproduce the evaluator and score used before model promotion?</li>
+<li>Can a prompt change be distinguished from a model change during incident review?</li>
+<li>Can a human annotation be connected to the trace and deployment it approved?</li>
+<li>Can the export prove that no cross-tenant identifier was accepted during replay?</li>
+</ul>
+
+<h2>Commercial scope</h2>
+<p>Atlas delivers a fixed-scope <strong>$500 / 48-hour</strong> Comet + Opik evidence-gap map, a <strong>$497/month</strong> refresh, or a <strong>$2,000</strong> five-vendor MLOps benchmark after cohort close. The deliverable is the join schema, source-to-column map, missing-control register, and replay checklist.</p>
+
+<h2>First-party sources</h2>
+<ul>
+<li><a href="https://www.comet.com/site/about-us/">Comet About</a> — company and leadership.</li>
+<li><a href="https://www.comet.com/products/ml-experiment-tracking/">ML Experiment Tracking</a> — experiment lifecycle.</li>
+<li><a href="https://www.comet.com/products/artifacts-dataset-management/">Artifacts and Dataset Management</a> — versioned data evidence.</li>
+<li><a href="https://www.comet.com/products/opik/">Opik</a> — LLM and agent evaluation and observability.</li>
+<li><a href="https://www.comet.com/security/">Comet Security</a> — security posture.</li>
+<li><a href="https://www.comet.com/about-us/contact-us/">Comet Contact</a> — first-party contact route.</li>
+</ul>
+<p class="footer"><strong>Channel note:</strong> <code>support@comet.com</code> was identified on Comet's first-party contact surface. No email or form was submitted; SMTP/form remains gated. $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
