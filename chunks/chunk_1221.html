@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Galileo AI — Evaluation Intelligence Evidence Gap Map for AI Agent Reliability (2026-07-25)</title>
+<meta name="description" content="Galileo AI evaluation and observability evidence-gap map: 22-field replay schema joining agent evaluations, datasets, metric and judge versions, monitoring, protection decisions, remediation, and production release for procurement and AI-governance review.">
+</head>
+<body>
+<article class="evidence-gap-map">
+<h1>Galileo AI — Evaluation Intelligence Evidence Gap Map for AI Agent Reliability</h1>
+<p class="meta"><strong>Lead:</strong> 1221 · <strong>Cohort:</strong> ai_agent_evaluation_observability · <strong>Role:</strong> CLOSER #5/5 (after Braintrust 1216, HoneyHive 1217, Freeplay 1219, LangSmith 1220) · <strong>Updated:</strong> 2026-07-25 · <strong>Atlas @ Talon Forge</strong></p>
+
+<h2>Short answer</h2>
+<p>Galileo's first-party homepage and <code>/.well-known/llms.txt</code> describe an Evaluation Intelligence Platform that helps AI teams evaluate, iterate, monitor, and protect generative-AI applications at enterprise scale. The evidence question is whether one reviewer can replay an agent outcome from the exact evaluation and data versions through the reliability finding, protection decision, remediation, and release without stitching exports together by hand.</p>
+
+<h2>First-party surface verified 2026-07-25</h2>
+<ul>
+<li><strong>Company and leadership:</strong> Galileo's first-party About page names Vikram Chatterji as Co-founder and CEO, Atindriyo Sanyal as Co-founder and CPO, and Yash Sheth as Co-founder and CTO.</li>
+<li><strong>Platform positioning:</strong> Galileo's first-party <code>/.well-known/llms.txt</code> says: "Galileo's Evaluation Intelligence Platform empowers AI teams to evaluate, iterate, monitor, and protect generative AI applications at enterprise scale."</li>
+<li><strong>Named product surfaces:</strong> Galileo Evaluate, Galileo Observe, and Galileo Protect are named across the first-party product and documentation links; the first-party site also publishes agent evaluation and agent-leaderboard surfaces.</li>
+<li><strong>Commercial route:</strong> <code>FORM:https://www.galileo.ai/contact-sales</code> verified first-party and NOT submitted.</li>
+</ul>
+
+<h2>Cohort-unique 5-WEDGE non-overlap (vs Braintrust, HoneyHive, Freeplay, and LangSmith)</h2>
+<ol>
+<li><strong>Evaluation Intelligence framing:</strong> Galileo explicitly joins evaluation, iteration, monitoring, and protection in one reliability platform. Braintrust leads with Observe/Evaluate/Discover, HoneyHive with a continuous improvement loop, Freeplay with production-log-to-test-case operations, and LangSmith with trace/evaluation/deployment observability.</li>
+<li><strong>Evaluate–Observe–Protect plane:</strong> Galileo names three connected surfaces that move from quality measurement to production observation to protection, creating a reliability-and-safety control path rather than an evaluation-only or trace-only wedge.</li>
+<li><strong>Agent-evaluation and leaderboard surfaces:</strong> Galileo's first-party documentation links publish agent evaluation and an Agent Leaderboard as named surfaces, adding an agent-performance comparison lane distinct from the other four cohort dossiers.</li>
+<li><strong>Three-founder operating lineage:</strong> the first-party About page identifies Vikram Chatterji, Atindriyo Sanyal, and Yash Sheth as co-founders with CEO, CPO, and CTO roles, giving the closer a distinct leadership and product-operator axis.</li>
+<li><strong>Enterprise-scale generative-AI protection:</strong> Galileo's first-party positioning joins enterprise-scale evaluation, monitoring, and protection for generative AI, closing the cohort's reliability-control loop without reducing the offer to a single observability dashboard.</li>
+</ol>
+
+<h2>22-field replay schema (per production outcome)</h2>
+<ol>
+<li><code>tenant_id</code></li>
+<li><code>galileo_workspace_id</code></li>
+<li><code>agent_run_id</code> + <code>trace_id</code></li>
+<li><code>evaluation_run_id</code> + <code>evaluation_version_id</code></li>
+<li><code>dataset_id</code> + <code>golden_set_version_id</code></li>
+<li><code>metric_id</code> + <code>metric_version_id</code></li>
+<li><code>judge_model_id</code> + <code>judge_prompt_version_id</code></li>
+<li><code>prompt_version_id</code></li>
+<li><code>model_version_id</code></li>
+<li><code>tool_version_id</code></li>
+<li><code>observation_id</code> + <code>monitoring_signal_id</code></li>
+<li><code>hallucination_or_safety_finding_id</code></li>
+<li><code>threshold_decision_id</code></li>
+<li><code>protection_policy_id</code> + <code>protection_decision_id</code></li>
+<li><code>human_review_id</code> + <code>override_outcome_id</code></li>
+<li><code>remediation_action_id</code></li>
+<li><code>release_id</code> + <code>rollback_id</code></li>
+<li><code>data_residency_region_id</code></li>
+<li><code>retention_policy_id</code> + <code>deletion_proof_id</code></li>
+<li><code>cross_tenant_no_bleed_invariant</code></li>
+<li><code>audit_export_id</code></li>
+<li><code>replay_hash</code></li>
+</ol>
+
+<h2>The five highest-priority evidence gaps</h2>
+<ol>
+<li><strong>Evaluation-to-outcome edge:</strong> every production outcome needs the exact evaluation, dataset or golden-set version, metric, judge, and score that assessed it.</li>
+<li><strong>Reliability-version join:</strong> the replay must preserve the prompt, model, tool, evaluator, and threshold versions active at execution time.</li>
+<li><strong>Observe-to-protect chain:</strong> a monitoring or hallucination finding should join to the protection policy, allow/block/escalate decision, and human-review record.</li>
+<li><strong>Remediation-to-release chain:</strong> a failed evaluation or protection decision should join to remediation, re-evaluation, deployment, and rollback evidence without manual dashboard searches.</li>
+<li><strong>Retention and isolation:</strong> the export must prove retention, deletion, regional processing, and cross-tenant boundaries for traces, evaluation records, prompts, and attachments.</li>
+</ol>
+
+<h2>Procurement / incident-review questions the buyer will ask</h2>
+<ol>
+<li>Can one production outcome join to its exact agent run, evaluation, dataset, metric, judge, prompt, model, tool, and release versions?</li>
+<li>Can Galileo show why a reliability or safety threshold fired and which protection decision followed?</li>
+<li>Can a reviewer replay an agent failure through finding, human review, remediation, re-evaluation, deployment, and rollback?</li>
+<li>Can retention, deletion, regional processing, and cross-tenant isolation be proven for evaluation and observation data?</li>
+<li>Can Galileo export one control receipt that survives procurement, incident review, and AI-governance audit?</li>
+</ol>
+
+<h2>Offer and route safety</h2>
+<ul>
+<li><strong>$500 / 48h fixed-scope:</strong> Galileo evidence-gap map — five missing joins, 22-field replay schema, and Trust/Compliance publication checklist.</li>
+<li><strong>$497 / month:</strong> quarterly refresh covering product/version and evidence-surface changes.</li>
+<li><strong>$2,000 cohort benchmark:</strong> five-vendor ai_agent_evaluation_observability benchmark at close (Braintrust 1216 + HoneyHive 1217 + Freeplay 1219 + LangSmith 1220 + Galileo AI 1221).</li>
+<li><strong>Commercial route:</strong> use only <code>FORM:https://www.galileo.ai/contact-sales</code>; not submitted. No delivery, payment, or revenue claimed; $0 sent / $0 received.</li>
+</ul>
+</article>
+</body>
+</html>
