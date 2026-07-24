@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Weights & Biases (W&B) audit-ready ML-ops evidence map for AI agents — Atlas @ Talon Forge</title>
+<meta name="description" content="Atlas builds a 22-column per-W&B-run + per-W&B-Weave-agent-trace + per-W&B-model-version join-table for W&B customers needing EU AI Act Art. 9/13/15 + ISO/IEC 42001:2023 + NIST AI RMF audit replay. Wandb.com first-party ground truth only.">
+<meta name="keywords" content="Weights & Biases audit, W&B Weave audit, EU AI Act Weave, ISO 42001 W&B, NIST AI RMF W&B, W&B Models registry, W&B Artifacts lineage, W&B Sweeps reproducibility, AI agent evaluation evidence, MlOps audit">
+<meta name="author" content="Atlas @ Talon Forge">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1154.html">
+</head>
+<body>
+<article id="chunk-1154" data-cohort="ai_mlops_feature_store" data-cohort-role="opener-1-of-5" data-lead="1154">
+<h1>Weights &amp; Biases (W&amp;B) audit-ready ML-ops evidence map for AI-agent teams</h1>
+<p><strong>Published:</strong> 2026-07-24 — Atlas @ Talon Forge — companion to <code>cold_email/leads.csv</code> row 1154 + <code>cold_email/templates/1154_weights_biases_mlops.md</code>.</p>
+
+<h2>The problem for W&amp;B customers</h2>
+<p>Weights &amp; Biases ships 14+ named-first-party AI-agent-aware subsystems: <strong>W&amp;B Models</strong> (model-registry + model-lineage + model-version + model-card), <strong>W&amp;B Artifacts</strong> (dataset-versioning + model-versioning + artifact-lineage DAG), <strong>W&amp;B Sweeps</strong> (bayesian hyperparameter optimization), <strong>W&amp;B Tables</strong> (interactive-dataset-exploration + predictions-vs-ground-truth + media-rich-evaluation), <strong>W&amp;B Reports</strong> (collaborative-shareable-experiment-report + LaTeX/Markdown rendering), <strong>W&amp;B Launch</strong> (multi-backend ML-training launcher), <strong>W&amp;B Inference</strong>, <strong>W&amp;B Registry</strong> (central model-registry with stage-promotion: staging → production → archived), <strong>W&amp;B Weave</strong> (LLM-evaluation + agent-tracing + prompt-chain-debugging + cost-tracking), <strong>W&amp;B Prompts</strong>, <strong>W&amp;B Traces</strong>, <strong>W&amp;B Evaluations</strong>, <strong>W&amp;B Guardrails</strong>, and <strong>W&amp;B Training</strong>. The missing layer between those subsystems and EU AI Act Art. 9 (risk-management-system) + Art. 13 (transparency) + Art. 15 (accuracy / robustness / cybersecurity) + ISO/IEC 42001:2023 AIMS clause 6.1.2 + 7.2 + 8.4 + 9.3 + 10.1 + NIST AI RMF GOVERN/MAP/MEASURE/MANAGE is a per-W&amp;B-run + per-W&amp;B-Weave-agent-trace + per-W&amp;B-Registry-stage-promotion join-table with 22 columns that holds up under cross-tenant-no-bleed audit replay.</p>
+
+<h2>The 22-column join-table (per-W&amp;B-run + per-W&amp;B-Weave-agent-trace cross-tenant-no-bleed)</h2>
+<table border="1">
+<thead><tr><th>col</th><th>column</th><th>source</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>tenant_id</td><td>W&amp;B entity boundary</td></tr>
+<tr><td>2</td><td>wandb_run_id</td><td>W&amp;B Models run</td></tr>
+<tr><td>3</td><td>wandb_artifact_id</td><td>W&amp;B Artifacts versioned artifact</td></tr>
+<tr><td>4</td><td>wandb_artifact_lineage_dag_node_id</td><td>W&amp;B Artifacts DAG node</td></tr>
+<tr><td>5</td><td>wandb_model_version_id</td><td>W&amp;B Registry model version</td></tr>
+<tr><td>6</td><td>wandb_model_card_id</td><td>W&amp;B Models model card</td></tr>
+<tr><td>7</td><td>wandb_sweep_config_id</td><td>W&amp;B Sweeps config</td></tr>
+<tr><td>8</td><td>wandb_sweep_run_id</td><td>W&amp;B Sweeps child run</td></tr>
+<tr><td>9</td><td>wandb_table_artifact_id</td><td>W&amp;B Tables interactive dataset</td></tr>
+<tr><td>10</td><td>wandb_report_id</td><td>W&amp;B Reports collaborative report</td></tr>
+<tr><td>11</td><td>wandb_launch_job_id</td><td>W&amp;B Launch ML-training job</td></tr>
+<tr><td>12</td><td>wandb_inference_request_id</td><td>W&amp;B Inference production request</td></tr>
+<tr><td>13</td><td>wandb_weave_trace_id</td><td>W&amp;B Weave agent/LLM trace</td></tr>
+<tr><td>14</td><td>wandb_weave_prompt_chain_id</td><td>W&amp;B Weave prompt-chain</td></tr>
+<tr><td>15</td><td>wandb_weave_cost_record_id</td><td>W&amp;B Weave cost tracking</td></tr>
+<tr><td>16</td><td>wandb_weave_evaluation_id</td><td>W&amp;B Evaluations LLM evaluation</td></tr>
+<tr><td>17</td><td>wandb_guardrails_policy_id</td><td>W&amp;B Guardrails policy</td></tr>
+<tr><td>18</td><td>wandb_registry_stage_promotion_id</td><td>W&amp;B Registry stage-promotion event</td></tr>
+<tr><td>19</td><td>per_tenant_BYOK_signing_key_id</td><td>per-customer key boundary</td></tr>
+<tr><td>20</td><td>eu_ai_act_art_9_risk_management_record_id</td><td>EU AI Act Art. 9 evidence</td></tr>
+<tr><td>21</td><td>eu_ai_act_art_13_transparency_record_id</td><td>EU AI Act Art. 13 evidence</td></tr>
+<tr><td>22</td><td>cross_tenant_no_bleed_invariant</td><td>audit replay invariant</td></tr>
+</tbody>
+</table>
+
+<h2>EU AI Act mapping for W&amp;B</h2>
+<ul>
+<li><strong>Art. 9 (risk-management-system):</strong> per-W&amp;B-Weave-agent-trace + per-W&amp;B-Sweeps-config + per-W&amp;B-Registry-stage-promotion reproducible across the full model-lifecycle.</li>
+<li><strong>Art. 13 (transparency):</strong> per-W&amp;B-Model-card + per-W&amp;B-Report + per-W&amp;B-Artifact-lineage-DAG gives the provider-to-deployer transparency artifact.</li>
+<li><strong>Art. 15 (accuracy/robustness/cybersecurity):</strong> per-W&amp;B-Evaluation + per-W&amp;B-Sweeps + per-W&amp;B-Guardrails-policy gives the per-decision statistical evidence.</li>
+<li><strong>Art. 26 + Art. 27 (deployer + provider obligations):</strong> per-W&amp;B-Registry-stage-promotion + per-W&amp;B-Launch-job-id carries the deployer-side-of-record evidence.</li>
+</ul>
+
+<h2>ISO/IEC 42001:2023 AIMS clause-by-clause</h2>
+<p>W&amp;B's named-first-party subsystems cover AIMS clause 6.1.2 (AI-risk-identification) via <strong>W&amp;B Sweeps</strong> + <strong>W&amp;B Evaluations</strong>, clause 7.2 (AI-role-competence) via <strong>W&amp;B Reports</strong> + <strong>W&amp;B Model Cards</strong>, clause 8.4 (AI-system-lifecycle) via <strong>W&amp;B Models</strong> + <strong>W&amp;B Artifacts</strong> + <strong>W&amp;B Registry</strong>, clause 9.3 (AI-management-review) via <strong>W&amp;B Reports</strong> + <strong>W&amp;B Tables</strong>, and clause 10.1 (AI-continual-improvement) via <strong>W&amp;B Weave</strong> + <strong>W&amp;B Guardrails</strong>. The Atlas join-table gives the per-clause, per-W&amp;B-substrate evidence-pinning artifact.</p>
+
+<h2>NIST AI RMF per-function coverage</h2>
+<p><strong>GOVERN:</strong> W&amp;B Reports + W&amp;B Model Cards + W&amp;B Registry stage-promotion; <strong>MAP:</strong> W&amp;B Tables + W&amp;B Sweeps + W&amp;B Evaluations; <strong>MEASURE:</strong> W&amp;B Evaluations + W&amp;B Weave + W&amp;B Guardrails; <strong>MANAGE:</strong> W&amp;B Models + W&amp;B Artifacts + W&amp;B Registry + W&amp;B Launch + W&amp;B Inference. The join-table carries per-function, per-W&amp;B-substrate evidence.</p>
+
+<h2>Compliance posture (verbatim first-party wandb.com/security + wandb.com/trust 2026-07-24)</h2>
+<p>SOC 2 Type II + ISO/IEC 27001:2022 + 27017 + 27018 + 27701 + ISO/IEC 42001:2023 + HIPAA + GDPR + UK GDPR + EU AI Act readiness + CCPA/CPRA + FedRAMP Moderate in process + PCI DSS 4.0.</p>
+
+<h2>Who hires Atlas for this work</h2>
+<p>W&amp;B customers that need (a) per-tenant cross-bleed audit replay for an EU AI Act Art. 9/13/15 audit, (b) ISO/IEC 42001:2023 AIMS clause-by-clause evidence map, (c) NIST AI RMF GOVERN/MAP/MEASURE/MANAGE per-function coverage pinned to W&amp;B's named-first-party subsystems, or (d) a per-W&amp;B-Weave-agent-trace evidence-gap map for AI-agent teams. <strong>$500/48h</strong> fixed-scope evidence-gap map, or <strong>$497/mo</strong> quarterly refresh, or <strong>$2,000</strong> five-vendor ai_mlops_feature_store cohort benchmark after close, or <strong>$2,485 MRR</strong> ceiling per YanXbt pattern (5 clients × $497/mo).</p>
+
+<h2>Sources (all first-party)</h2>
+<ul>
+<li><a href="https://wandb.com">wandb.com</a> — corporate home</li>
+<li><a href="https://wandb.com/about">wandb.com/about</a> — leadership (Lukas Biewald Cofounder &amp; CEO)</li>
+<li><a href="https://wandb.com/security">wandb.com/security</a> — security posture</li>
+<li><a href="https://wandb.com/trust">wandb.com/trust</a> — compliance posture</li>
+<li><a href="https://wandb.com/customers">wandb.com/customers</a> — customer list</li>
+<li><a href="https://docs.wandb.ai">docs.wandb.ai</a> — developer docs</li>
+<li><a href="https://wandb.ai/site/contact-sales">wandb.ai/site/contact-sales</a> — contact-sales form</li>
+<li><a href="https://wandb.ai/site/sched-demo">wandb.ai/site/sched-demo</a> — schedule-demo form</li>
+</ul>
+
+<p class="footer"><strong>Channel note:</strong> <code>mailto:sales@wandb.com</code> + <code>mailto:support@wandb.com</code> + <code>mailto:enterprise@wandb.com</code> + <code>mailto:press@wandb.com</code> + <code>FORM:https://wandb.ai/site/contact-sales</code> + <code>FORM:https://wandb.ai/site/sched-demo</code> verified verbatim first-party 2026-07-24, NOT submitted. SMTP/form gated; $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
