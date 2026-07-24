@@ -266,3 +266,9 @@ index,name,handle,email,vertical,tier,template,tier_reason
 **Contact:** first-party demo form /contact + verified LinkedIn Shai Alon + verified LinkedIn Oded Noam.
 
 **Cohort position:** OPENER #1/5 of NEW VERTICAL #49 ai_agent_secrets_security."
+1145,Infisical,@infisical,mailto:contact@infisical.com,ai_agent_secrets_security,1,1145_infisical_secrets_security.md,"# Lead 1145 - Infisical (Open-Source Secrets Management for AI Agents)
+
+**Company:** Infisical, Inc. (infisical.com)
+**Cohort position:** SIBLING #2/5 ai_agent_secrets_security (sibling-2-of-5 canonical slug) after Akeyless 1144 OPENER.
+**Founders:** Ander Bastida (Co-Founder & CTO) + Michi Kono (Co-Founder & CPO).
+**Why:** Infisical is the canonical open-source + GitOps-first + self-hostable alternative to vaultless SaaS (Akeyless). Wedge: end-to-end GitOps sync from GitHub/GitLab + native Kubernetes Operator + ESO External Secrets Operator + agent-aware secret rotation with sub-100ms propagation + per-environment isolation (dev/staging/prod) + per-folder RBAC + per-project dynamic secrets for PostgreSQL/MySQL/MongoDB/Redis + SSH key management + PKI issuance + per-AI-agent workload identity for Claude Desktop + Cursor + Windsurf + Cline + Continue + Devin + Replit Agent + Codex + BYOK + native HSM integration (AWS CloudHSM + GCP Cloud HSM + Azure Dedicated HSM) + HashiCorp Vault bidirectional sync. Compliance: SOC 2 Type II + ISO 27001 + SOC 3 + HIPAA + GDPR + CCPA/CPRA + EU AI Act readiness. Founded 2023 San Francisco CA. Self-host free (Apache-2.0 core) + Cloud Free tier + Cloud Team $15/seat/mo + Cloud Enterprise custom."
