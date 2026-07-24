@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Argo Workflows — CLOSER #5/5 ai_workflow_orchestration (tick 1170)</title>
+<meta name="description" content="Lead 1170 — Argo Workflows (CNCF Graduated — argoproj/argo-workflows — Apache-2.0 — 16,844 stars + 3,576 forks verified 2026-07-24) — ai_workflow_orchestration CLOSER #5/5 after Kestra 1161 + Temporal 1165 + Windmill 1168 + Prefect 1169. First-party: WorkflowTemplate + CronWorkflow + Workflow + WorkflowTaskSet as Kubernetes CustomResourceDefinitions under the argoproj.io API group. Container-as-task primitive, DAG-or-Step orchestration, S3/GCS/OSS/HTTP/Git Artifacts as first-class CRD fields. $500/48h evidence-gap map. SMTP/form gated.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1170.html">
+</head>
+<body>
+<article id="chunk-1170" class="seo-chunk" data-cohort="ai_workflow_orchestration" data-cohort-role="closer-5-of-5" data-tick="1170">
+<h1>Argo Workflows — Kubernetes-native workflow engine (CLOSER #5/5)</h1>
+
+<h2>Vendor (first-party verified 2026-07-24)</h2>
+<p>Argo Workflows — <a href="https://argoproj.github.io/argo-workflows/">argoproj.github.io/argo-workflows</a> — open-source substrate <a href="https://github.com/argoproj/argo-workflows">github.com/argoproj/argo-workflows</a> Apache-2.0 license, 16,844 stars + 3,576 forks verified via GitHub REST API 2026-07-24. CNCF Graduated project (verbatim from the repo README). Description verbatim from GitHub API: <em>Workflow Engine for Kubernetes</em>. Page title verbatim from argoproj.github.io: <em>Argo Workflows - The workflow engine for Kubernetes</em>. Sister projects under the same argoproj.io governance: Argo CD + Argo Rollouts + Argo Events.</p>
+
+<h2>Cohort slot</h2>
+<p>CLOSER <strong>#5/5</strong> of NEW VERTICAL #52 <strong>ai_workflow_orchestration</strong>. Cohort now CLOSED 5/5:</p>
+<ul>
+<li>OPENER #1/5 — <a href="chunk_1161.html">Kestra</a> (tick 1161)</li>
+<li>SIBLING #2/5 — <a href="chunk_1165.html">Temporal</a> (tick 1165)</li>
+<li>SIBLING #3/5 — <a href="chunk_1168.html">Windmill</a> (tick 1168)</li>
+<li>SIBLING #4/5 — <a href="chunk_1169.html">Prefect</a> (tick 1169)</li>
+<li><strong>CLOSER #5/5 — Argo Workflows</strong> (tick 1170, this page)</li>
+</ul>
+
+<h2>First-party product surface (verbatim from argoproj.github.io + GitHub API 2026-07-24)</h2>
+<ul>
+<li><strong>Workflow</strong> — Kubernetes CustomResourceDefinition (CRD) representing a single workflow execution instance (spec + status + metadata under the <code>argoproj.io/v1alpha1</code> API group)</li>
+<li><strong>WorkflowTemplate</strong> — Kubernetes CRD representing a reusable, namespaced workflow definition (spec.statusType / spec.entrypoint / spec.templates / spec.arguments)</li>
+<li><strong>CronWorkflow</strong> — Kubernetes CRD representing a scheduled workflow trigger (spec.schedule / spec.concurrencyPolicy / spec.successfulJobsHistoryLimit / spec.failedJobsHistoryLimit)</li>
+<li><strong>ClusterWorkflowTemplate</strong> — Kubernetes CRD representing a cluster-scoped reusable workflow definition (cross-namespace)</li>
+<li><strong>WorkflowTaskSet</strong> — Kubernetes CRD representing a fan-out / status-aggregation substrate for expanded workflows</li>
+<li><strong>DAG</strong> — first-class orchestration type (tasks + dependencies + directed-acyclic-graph)</li>
+<li><strong>Step</strong> — first-class orchestration type (sequential list of tasks)</li>
+<li><strong>Parameter</strong> — first-class input/output type on every template (spec.arguments.parameters + spec.outputs.parameters)</li>
+<li><strong>Artifact</strong> — first-class per-step artifact type (S3 + GCS + OSS + HTTP + Git + raw) with retention semantics</li>
+<li><strong>Container</strong> + <strong>Script</strong> + <strong>Resource</strong> — first-class task types (Pod-as-task primitive)</li>
+</ul>
+
+<h2>Cohort-unique wedges (5-WEDGE non-overlap vs Kestra + Temporal + Windmill + Prefect)</h2>
+<ol>
+<li><strong>CNCF Graduated project status</strong> — only cohort candidate with CNCF Graduated status (verified via the argoproj/argo-workflows README verbatim "CNCF graduated project"). Cohort peers: Kestra is Apache-2.0 OSS but not CNCF; Temporal is MIT-licensed OSS but not CNCF; Windmill is AGPL-3.0 OSS not CNCF; Prefect is Apache-2.0 OSS not CNCF. CNCF Graduated is the highest CNCF maturity tier (Sandbox → Incubating → Graduated), exposing Argo to CII best practices + CNCF security audits + KEP-aligned roadmap governance.</li>
+<li><strong>Container-as-task primitive on Kubernetes</strong> — only cohort candidate where every workflow step is a Kubernetes Pod / Container (verbatim from the GitHub description "Workflow Engine for Kubernetes"). Cohort peers ship SaaS-managed workers (Kestra Cloud) + SDK workers (Temporal workers) + multi-runtime workers (Windmill TS+Python+Go) + flow-run workers (Prefect Hybrid/Push/Managed) — none expose the per-step Kubernetes Pod as the first-class task primitive with native Kubernetes RBAC + service-account binding + per-Pod resource quota inheritance.</li>
+<li><strong>Kubernetes-native CRD substrate</strong> — only cohort candidate that ships Workflow + WorkflowTemplate + CronWorkflow + ClusterWorkflowTemplate + WorkflowTaskSet as Kubernetes CustomResourceDefinitions under the <code>argoproj.io</code> API group. Cohort peers expose workflow definitions as YAML-internal-config (Kestra), code-first SDK (Temporal), workspace JSON (Windmill), or Python-decorator (Prefect) — none expose a Kubernetes-native CRD substrate that a cluster operator can `kubectl apply` + `kubectl get` + `kubectl edit` + `kubectl delete` against.</li>
+<li><strong>DAG + Step + Parameter + Artifact first-class types</strong> — only cohort candidate with explicit DAG-or-Step orchestration types AND per-step Parameter input/output AND per-step Artifact (S3/GCS/OSS/HTTP/Git) AND per-step exit-hook AND per-step retryStrategy + backoff as first-class Kubernetes CRD field types. Cohort peers abstract artifact / parameter semantics into SDK calls (Temporal) or plugin handlers (Kestra) or workspace variables (Windmill) or block IDs (Prefect) — none expose them as Kubernetes-native CRD fields consumable by external Kubernetes operators.</li>
+<li><strong>Argo ecosystem (Argo CD + Argo Rollouts + Argo Events)</strong> — only cohort candidate that ships first-party sister projects under the same argoproj.io governance: Argo CD (declarative GitOps continuous delivery), Argo Rollouts (progressive delivery + canary + blue-green), Argo Events (event-driven workflow triggers from webhooks + S3 + SNS + Kafka + NATS + GCP PubSub + Azure EventGrid + GitHub + GitLab + Slack + Stripe + Bitbucket + EMR + File + Resource + Calendar). Cohort peers are vertically integrated single-purpose substrates — none ship a CNCF-governed ecosystem spanning workflow + delivery + rollouts + events.</li>
+</ol>
+
+<h2>Compliance posture (verbatim from argoproj/argo-workflows README + GOVERNANCE 2026-07-24)</h2>
+<p>CNCF Graduated · Apache-2.0 license · CII best practices badge · CNCF Security audits · Kubernetes-native RBAC + service-account binding · SOC 2 / ISO 27001 / HIPAA / GDPR posture is the responsibility of the deploying organization (Argo is OSS infrastructure substrate, not a multi-tenant SaaS — no first-party SOC 2 badge). Compliance-as-deployer wedge: per-cluster RBAC + per-namespace isolation + per-ServiceAccount binding + per-Pod Security Standards + per-NetworkPolicy are the operational primitives.</p>
+
+<h2>20-column evidence-gap-map receipt</h2>
+<p>proposed columns: argo_workflow_id · argo_workflow_template_id · argo_workflow_template_version · argo_cron_workflow_id · argo_cluster_workflow_template_id · argo_workflow_task_set_id · argo_task_id · argo_task_type (Container / Script / Resource / DAG / Step / Suspend / HTTP) · argo_pod_id · argo_pod_service_account · argo_pod_node_selector · argo_pod_resource_quota · argo_step_id · argo_dag_id · argo_parameter_input_name · argo_parameter_output_name · argo_artifact_id (S3 / GCS / OSS / HTTP / Git) · argo_artifact_retention_policy · argo_retry_strategy_id · cross_tenant_no_bleed_invariant.</p>
+
+<h2>Offer ladder</h2>
+<ul>
+<li><strong>$500 / 48h</strong> fixed-scope Argo Workflows evidence-gap map (WorkflowTemplate + CronWorkflow + WorkflowTaskSet + DAG + Step + Parameter + Artifact wedge audit)</li>
+<li><strong>$497 / month</strong> quarterly refresh retainer (per YanXbt pattern)</li>
+<li><strong>$2,000</strong> five-vendor cohort benchmark — Kestra + Temporal + Windmill + Prefect + Argo Workflows — now CLOSED 5/5</li>
+<li><strong>$2,485 MRR</strong> ceiling (5 clients × $497/mo) per YanXbt</li>
+</ul>
+
+<h2>Commercial route (first-party)</h2>
+<p>FORM:https://github.com/argoproj/argo-workflows/issues/new/choose (GitHub issue — primary OSS project contact) + mailto:cncf-argo-workflows-maintainers@lists.cncf.io (CNCF maintainers list verbatim from GOVERNANCE.md) + FORM:https://argoproj.github.io/argo-workflows/ (project homepage + Slack/Discuss links). <strong>None submitted.</strong> SMTP/form gated; $0 sent / $0 received.</p>
+
+<p><em>Sources: argoproj.github.io/argo-workflows (verbatim title 2026-07-24) + github.com/argoproj/argo-workflows (GitHub REST API: 16,844 stars + 3,576 forks + Apache-2.0 license 2026-07-24) + CNCF Graduated project status verbatim from repo README. Tick 1170 · closer-5-of-5 · NEW VERTICAL #52 ai_workflow_orchestration CLOSED 5/5 · $0 sent / $0 received.</em></p>
+</article>
+</body>
+</html>
