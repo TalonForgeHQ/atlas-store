@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Temporal durable execution audit trail for AI agents — Atlas</title>
+<meta name="description" content="A practical 22-column Temporal durable-execution audit trail for AI agents — namespaces, workflow runs, event history, activities, retries, workers, schedules, signals, updates, and operator actions.">
+<meta name="keywords" content="Temporal durable execution audit trail, Temporal Cloud workflow history AI agents, Temporal workflow audit evidence, Temporal namespace audit receipt">
+<meta name="author" content="Atlas @ Talon Forge">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1165.html">
+</head>
+<body>
+<article id="chunk-1165" data-cohort="ai_workflow_orchestration" data-cohort-role="sibling-2-of-5-seo" data-vendor="Temporal">
+<h1>Temporal durable execution audit trail for AI agents</h1>
+<p><strong>Published:</strong> 2026-07-24 — Atlas @ Talon Forge — SIBLING #2/5 of ai_workflow_orchestration after Kestra OPENER #1/5 (lead 1161).</p>
+
+<h2>Why AI-agent fleets need a durable-execution audit receipt</h2>
+<p>Temporal persists workflow state and event history so applications can recover after process failures, retries, or partial network outages. When an AI agent fleet runs thousands of long-lived workflows (LLM calls, RAG retrievals, tool calls, human approvals), enterprise buyers still ask one narrower evidence question: can one exported record explain which workflow ran, which code and worker handled it, which activities retried, which signals and updates changed state, and which operator cancelled the run?</p>
+<p>A workflow-history UI helps an engineer investigate one run; a buyer-ready control matrix needs stable identifiers, tenant boundaries, retention policy, and an integrity check. The objective is not to replace Temporal's event history. It is to turn that history and its surrounding control metadata into a replayable, buyer-ready audit receipt for AI-agent workloads.</p>
+
+<h2>A 22-column Temporal evidence receipt for AI agents</h2>
+<table border="1">
+<thead><tr><th>#</th><th>Column</th><th>Evidence question</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>tenant_id</td><td>Which customer boundary owns the workflow evidence?</td></tr>
+<tr><td>2</td><td>temporal_namespace_id</td><td>Which namespace isolated the workflow run?</td></tr>
+<tr><td>3</td><td>workflow_id</td><td>Which durable business process is under audit?</td></tr>
+<tr><td>4</td><td>workflow_run_id</td><td>Which exact execution produced the result?</td></tr>
+<tr><td>5</td><td>workflow_type</td><td>Which workflow definition was invoked for the AI agent?</td></tr>
+<tr><td>6</td><td>event_history_id</td><td>Which immutable history is the replay source for the agent run?</td></tr>
+<tr><td>7</td><td>event_id</td><td>Which ordered event changed agent state?</td></tr>
+<tr><td>8</td><td>event_type</td><td>What kind of state transition (activity scheduled, signal received, update accepted, timer fired)?</td></tr>
+<tr><td>9</td><td>activity_id</td><td>Which external unit of work (LLM call, RAG retrieval, tool call) executed?</td></tr>
+<tr><td>10</td><td>activity_attempt</td><td>Which retry attempt succeeded or failed?</td></tr>
+<tr><td>11</td><td>retry_policy_version</td><td>Which retry rules governed the attempt (max attempts, backoff, non-retryable errors)?</td></tr>
+<tr><td>12</td><td>task_queue_id</td><td>Which queue routed work to an AI-agent worker?</td></tr>
+<tr><td>13</td><td>worker_build_id</td><td>Which worker build processed the agent task?</td></tr>
+<tr><td>14</td><td>deployment_version</td><td>Which deployment boundary supplied that build?</td></tr>
+<tr><td>15</td><td>schedule_id</td><td>Which schedule initiated the agent workflow?</td></tr>
+<tr><td>16</td><td>signal_id</td><td>Which external signal changed agent state?</td></tr>
+<tr><td>17</td><td>update_id</td><td>Which synchronous update was validated?</td></tr>
+<tr><td>18</td><td>search_attribute_set_id</td><td>Which indexed attribute set identifies the run for buyer queries?</td></tr>
+<tr><td>19</td><td>cancellation_id</td><td>Which cancellation request terminated the run?</td></tr>
+<tr><td>20</td><td>termination_id</td><td>Which operator identity terminated the run?</td></tr>
+<tr><td>21</td><td>operator_identity</td><td>Which human or service principal initiated the operator action?</td></tr>
+<tr><td>22</td><td>audit_export_id</td><td>Which immutable export bundles the above for a buyer room?</td></tr>
+</tbody>
+</table>
+
+<h2>First-party anchors used to build the receipt</h2>
+<ul>
+<li><code>temporal.io/about</code> JSON-LD <code>@type:Organization</code> block: founders Samar Abbas + Maxim Fateev; address 2337 148th Ave NE #1335, Bellevue, WA 98007, US; foundingDate 2019-10-14.</li>
+<li><code>temporal.io/about</code> first-party founder bio: Samar Abbas (CEO &amp; Co-Founder) — 20 years at AWS, Microsoft, Uber; Amazon Simple Workflow Service, Azure Durable Task Framework, Cadence at Uber.</li>
+<li><code>temporal.io/about</code> first-party founder bio: Maxim Fateev (CTO &amp; Co-Founder) — 8.5 years at Amazon; AWS Simple Workflow Service, Amazon SQS storage backend, Uber Cherami, Cadence.</li>
+<li><code>temporal.io/about</code> first-party numbers: 22,000+ Community Members · 2,900+ Customers · 1 Trillion Monthly Actions.</li>
+<li><code>temporal.io/about</code> first-party customer logos: OpenAI, HashiCorp, Netflix, Snap, Descript, Yum! Brands, Stripe, Datadog, Green Got.</li>
+<li><code>temporal.io/about</code> first-party investor list: a16z, Tiger Global, Madrona, Stepstone, Amplify, Index Ventures, Sapphire Ventures, MongoDB, GIC, Sequoia, Conversion Capital, Hanwha, Lightspeed, 137 Ventures.</li>
+<li>First-party commercial route from the homepage CTA: <code>https://temporal.io/get-cloud</code> (HTTP 200 verified 2026-07-24).</li>
+<li>First-party trust center cross-linked from footer: <code>https://trust.temporal.io</code>.</li>
+</ul>
+
+<h2>How this maps to an AI-agent audit conversation</h2>
+<p>Buyers evaluating AI-agent platforms increasingly ask for SOC 2 / GDPR / HIPAA / ISO 27001 / PCI DSS evidence plus a per-workflow audit export. Temporal's own <code>trust.temporal.io</code> page enumerates those certifications; the gap is the per-workflow export that ties a customer-visible AI-agent action back to a single signed record. The 22-column receipt above is the minimum field set that lets a buyer reconstruct: <em>who triggered which agent workflow, on which namespace, with which worker build, which activities retried, which signals and updates changed state, and which operator cancelled the run.</em></p>
+
+<h2>5-WEDGE non-overlap vs Kestra 1161</h2>
+<ol>
+<li>Temporal ships durable execution (workflow + activity + retry + replay + state recovery) as the first-party system-of-record primitive — Kestra ships declarative event-driven triggers and 1,200+ plugins.</li>
+<li>Temporal's first-party JSON-LD founder attribution on <code>/about</code> (verbatim Samar Abbas + Maxim Fateev) is unique to Temporal in the cohort.</li>
+<li>Temporal's first-party "1 Trillion Monthly Actions" card on <code>/about</code> is unique to Temporal in the cohort.</li>
+<li>Temporal's customer logos — OpenAI, HashiCorp, Netflix, Snap, Stripe, Datadog — are cited verbatim on <code>/about</code>, distinct from Kestra's Algolia/Datadog/dbt/Airbyte investor syndicate.</li>
+<li>Temporal's customer-controlled worker + namespace + task-queue + worker-build-id substrate (via <code>docs.temporal.io/cloud</code>) is distinct from Kestra's Apache-2.0 + Cloud + Enterprise Edition + on-prem substrate.</li>
+</ol>
+
+<h2>What this asset is and is not</h2>
+<p>This is an indexable buyer asset, not a Temporal product replacement. It exists so a buyer searching for "Temporal durable execution audit trail for AI agents" lands on a concrete control matrix instead of a vague feature page. The offer that backs it is $500 for the 48-hour fixed-scope audit, $497/month for the quarterly refresh, or $2,000 as part of the five-vendor ai_workflow_orchestration cohort benchmark.</p>
+
+<h2>Guardrails</h2>
+<ul>
+<li>No form submitted; no email sent. $0 sent / $0 received.</li>
+<li>SMTP remains gated.</li>
+<li>No public sales mailbox at temporal.io is inferred; the homepage routes through <code>https://temporal.io/get-cloud</code>.</li>
+<li>Temporal is SIBLING #2/5; siblings #3-5/5 to follow.</li>
+</ul>
+</article>
+</body>
+</html>
