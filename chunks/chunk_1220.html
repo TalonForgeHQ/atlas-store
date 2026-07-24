@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LangSmith — AI Agent Evaluation &amp; Observability Evidence Gap Map (2026-07-25)</title>
+<meta name="description" content="Fixed-scope LangSmith evidence-gap map: 22-field replay schema joining production traces, online evaluations, datasets, prompt and tool revisions, deployments, rollbacks, and final outcomes for procurement and AI-governance audit.">
+</head>
+<body>
+<article class="evidence-gap-map">
+<h1>LangSmith — AI Agent Evaluation &amp; Observability Evidence Gap Map</h1>
+<p class="meta"><strong>Lead:</strong> 1220 · <strong>Cohort:</strong> ai_agent_evaluation_observability · <strong>Role:</strong> SIBLING #4/5 (after Braintrust 1216, HoneyHive 1217, Freeplay 1219) · <strong>Updated:</strong> 2026-07-25 · <strong>Atlas @ Talon Forge</strong></p>
+
+<h2>Short answer</h2>
+<p>LangSmith's first-party page describes a complete AI agent and LLM observability platform with tracing and real-time monitoring. LangChain's About page positions LangSmith as the commercial platform for observability, evaluation, deployment, and agent building. The five evidence gaps below test whether one reviewer can replay trace → evaluation → revision → deployment → outcome without stitching exports together by hand.</p>
+
+<h2>First-party surface verified 2026-07-25</h2>
+<ul>
+<li><strong>LangSmith page title:</strong> "LangSmith: Agent &amp; LLM Observability Platform" (www.langchain.com/langsmith).</li>
+<li><strong>First-party description:</strong> complete AI agent and LLM observability platform with tracing and real-time monitoring; debug agents, find failures fast, and track costs and latency.</li>
+<li><strong>Product surface:</strong> LangSmith Observability, tracing, monitoring, online evaluations, and integrations via Python, TypeScript, Go, and Java SDKs.</li>
+<li><strong>Company surface:</strong> LangChain About page names Harrison Chase and describes LangSmith as its commercial platform for AI observability, evaluation, deployment, and agent building; headquartered in San Francisco with offices in New York, Boston, and Amsterdam.</li>
+<li><strong>Commercial route:</strong> <code>FORM:https://www.langchain.com/contact-sales</code> verified first-party and NOT submitted.</li>
+</ul>
+
+<h2>Cohort-unique 5-WEDGE non-overlap (vs Braintrust, HoneyHive, and Freeplay)</h2>
+<ol>
+<li><strong>Trace-first platform breadth:</strong> LangSmith explicitly combines agent tracing, real-time monitoring, online evaluation, deployment, and agent building. Braintrust leads with Observe/Evaluate/Discover, HoneyHive with a continuous improvement loop, and Freeplay with AI engineering ops plus production-log-to-test-case flow.</li>
+<li><strong>Cross-language SDK surface:</strong> LangSmith's first-party page names Python, TypeScript, Go, and Java SDK integration, creating a language-portability evidence dimension that the other three cohort dossiers do not claim as their wedge.</li>
+<li><strong>Deployment and rollback lineage:</strong> the replay must join evaluation and monitoring evidence to deployment, rollback, and release state. That deployment-platform lane is distinct from Braintrust's observe/evaluate/discover framing, HoneyHive's human-feedback loop, and Freeplay's ops workflow.</li>
+<li><strong>Cost and latency as production evidence:</strong> LangSmith's first-party description explicitly calls out tracking costs and latency, so the control receipt must preserve model spend, latency, and quality together rather than treating them as separate dashboards.</li>
+<li><strong>LangChain commercial-platform substrate:</strong> LangSmith is the named independent commercial platform attached to LangChain's open-source agent ecosystem, with Harrison Chase and the multi-office company footprint verified first-party. This is distinct from the independent vendor identities and product wedges of the other three siblings.</li>
+</ol>
+
+<h2>22-field replay schema (per outcome)</h2>
+<ol>
+<li><code>tenant_id</code></li>
+<li><code>langsmith_workspace_id</code></li>
+<li><code>langsmith_project_id</code></li>
+<li><code>run_id</code> + <code>trace_id</code></li>
+<li><code>dataset_id</code> + <code>dataset_version_id</code></li>
+<li><code>evaluator_id</code> + <code>evaluator_version_id</code></li>
+<li><code>online_eval_result_id</code></li>
+<li><code>prompt_version_id</code></li>
+<li><code>model_version_id</code></li>
+<li><code>tool_version_id</code></li>
+<li><code>feedback_id</code> + <code>annotation_id</code></li>
+<li><code>cost_usd</code> + <code>latency_ms</code></li>
+<li><code>deployment_id</code></li>
+<li><code>release_id</code> + <code>rollback_id</code></li>
+<li><code>remediation_action_id</code></li>
+<li><code>production_outcome_id</code></li>
+<li><code>data_residency_region_id</code></li>
+<li><code>retention_policy_id</code> + <code>deletion_proof_id</code></li>
+<li><code>cross_tenant_no_bleed_invariant</code></li>
+<li><code>audit_export_id</code></li>
+<li><code>replay_hash</code></li>
+</ol>
+
+<h2>The five highest-priority evidence gaps</h2>
+<ol>
+<li><strong>Trace-to-evaluation edge:</strong> every production trace needs the exact dataset, evaluator, and online-evaluation result that judged it.</li>
+<li><strong>Production version join:</strong> the trace must point to the prompt, model, tool, and code revisions that were live at execution time.</li>
+<li><strong>Quality–cost–latency triad:</strong> quality decisions must be replayable alongside the cost and latency signals that affected release or rollback decisions.</li>
+<li><strong>Deployment-to-rollback chain:</strong> a failed evaluation should join to remediation, re-evaluation, release, deployment, and rollback evidence without a manual dashboard search.</li>
+<li><strong>Retention and isolation:</strong> the export must prove retention, deletion, regional processing, and cross-tenant boundaries for traces, datasets, feedback, and attachments.</li>
+</ol>
+
+<h2>Procurement / incident-review questions the buyer will ask</h2>
+<ol>
+<li>Can one production outcome join to its exact trace, evaluation, dataset, prompt, model, tool, deployment, and code revisions?</li>
+<li>Can online evaluations, human feedback, cost, latency, and production monitoring be compared without losing tenant or release boundaries?</li>
+<li>Can a reviewer replay an agent failure through diagnosis, remediation, re-evaluation, deployment, and rollback?</li>
+<li>Can retention, deletion, regional processing, and cross-tenant isolation be proven for traces and evaluation data?</li>
+<li>Can LangSmith export one control receipt that survives procurement, incident review, and AI-governance audit?</li>
+</ol>
+
+<h2>Route safety</h2>
+<ul>
+<li>Use only <code>FORM:https://www.langchain.com/contact-sales</code>, verified first-party.</li>
+<li>Do not claim submission, delivery, response, payment, or revenue without a receipt.</li>
+</ul>
+</article>
+</body>
+</html>
