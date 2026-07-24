@@ -1,0 +1,102 @@
+<section class="chunk-card" id="chunk-1147" data-cohort="ai_agent_secrets_security" data-cohort-role="sibling-4-of-5" data-vendor="AWS Secrets Manager" data-tick="1147">
+
+  <header class="chunk-header">
+    <h2>AWS Secrets Manager for AI Agents: IRSA, Bedrock AgentCore Identity, and the Cloud-Native IAM-Bound Secrets Substrate</h2>
+    <p class="chunk-meta">Lead 1147 · SIBLING #4/5 · ai_agent_secrets_security · $500 / 48h evidence-gap-map · Atlas autonomous cohort benchmark</p>
+  </header>
+
+  <div class="chunk-body">
+
+    <p>AWS Secrets Manager is the canonical cloud-native, IAM-bound, KMS-encrypted, automatic-rotation-via-Lambda, CloudTrail-audited secrets substrate that AWS-native AI agents consume by default. After Akeyless 1144 (vaultless SaaS DFC), Infisical 1145 (OSS + GitOps self-host), and Doppler 1146 (developer-first sync-3,000+ services), AWS Secrets Manager lands as SIBLING #4/5 of the <code>ai_agent_secrets_security</code> vertical because it owns the wedge the other three don't: <strong>deep first-party AWS IAM + KMS + CloudTrail + AWS Organizations + Bedrock AgentCore Identity binding</strong>, with regulated-industry compliance posture (FedRAMP High, HIPAA, PCI DSS Level 1, C5:2020 BSI, K-ISMS-P, IRAP, MEPS, FISC) that no SaaS-only secrets vendor can match natively.</p>
+
+    <h3>1. The 5-wedge non-overlap rubric vs Akeyless + Infisical + Doppler</h3>
+
+    <ol>
+      <li><strong>Cloud-native IAM-bound + per-secret KMS-encrypted automatic-rotation-via-Lambda</strong> — only cohort member that ships first-party AWS IAM + AWS KMS encryption + automatic-rotation-via-Lambda with rotation-window TTL + cross-account secret replica via cross-region replication + CloudTrail Lake audit-export + AWS Organizations SCP guardrails. Distinct from Akeyless (vaultless-SaaS DFC fragment-distribution), Infisical (self-host OSS-GitOps-first), and Doppler (developer-first sync-3,000+ services).</li>
+      <li><strong>Amazon RDS + Aurora + Redshift + DocumentDB + Keyspaces native automatic-rotation</strong> — only cohort member that ships first-party native automatic-rotation Lambda functions for Amazon RDS (MySQL + PostgreSQL + MariaDB + Oracle + SQL Server) + Amazon Aurora (MySQL + PostgreSQL) + Amazon Redshift + Amazon DocumentDB + Amazon Keyspaces — zero-secret-touch rotation that calls the database's native ALTER USER / <code>rdsadmin.rotate_password</code> flow. No external Lambda, no External Secrets Operator, no manual config sync.</li>
+      <li><strong>Amazon EKS IRSA + ECS Task Role + Bedrock AgentCore Identity for AI-agent workload binding</strong> — only cohort member that ships first-party AWS IAM Role for Service Accounts (IRSA) for EKS pods + ECS Task Role for ECS tasks + AWS Bedrock AgentCore Identity for AI agents so AI agents (Amazon Bedrock + Amazon Q + SageMaker endpoints + Bedrock AgentCore agents + Amazon Q Developer + AWS App Studio) consume secrets via IAM Role assumption instead of long-lived API tokens.</li>
+      <li><strong>CloudTrail Lake + AWS Organizations SCP + AWS IAM Identity Center permission-set binding</strong> — only cohort member that ships first-party CloudTrail Lake audit-export with per-secret CloudTrail event ingestion + AWS Organizations SCP guardrails for secrets-resource creation denial + AWS IAM Identity Center permission-set binding for cross-account identity propagation + Secrets Manager VPC endpoint via AWS PrivateLink for fully-private-network access.</li>
+      <li><strong>FedRAMP High + HIPAA-eligible + PCI DSS Level 1 + C5:2020 BSI + K-ISMS-P + IRAP + MEPS + FISC regulated-industry coverage</strong> — only cohort member with FedRAMP High (US public-sector), HIPAA-eligible (US healthcare), PCI DSS Level 1 (payment card), C5:2020 BSI (German cloud-security), K-ISMS-P (Korean information-security), IRAP (Australian government), MEPS (Middle East Payment Systems), and FISC (Japanese financial) compliance posture natively. SaaS-only secrets vendors don't carry this stack.</li>
+    </ol>
+
+    <h3>2. Why AWS Secrets Manager is the canonical cloud-native substrate for AI agents</h3>
+
+    <p>The 2026 cohort of AI agents on AWS — Amazon Bedrock agents, Amazon Q Developer, SageMaker inference endpoints, Bedrock AgentCore runtime agents, AWS App Studio apps, and CodeWhisperer Enterprise — all consume secrets via IAM Role assumption against AWS Secrets Manager. No long-lived API tokens, no plaintext <code>.env</code> files, no external vault hops. The agent's MCP server config can assume the IAM role at runtime and pull the secret fresh per-invocation with zero embedded credentials. This is the wedge the SaaS-only vendors cannot replicate: <strong>first-party AWS IAM broker + first-party AWS KMS + first-party AWS CloudTrail + first-party AWS Bedrock AgentCore Identity</strong> all integrated at the platform layer.</p>
+
+    <p>For AI agent operators who already run on AWS — which is most of the Fortune 500 — the <em>only</em> choice that keeps secrets in the same identity plane as the agent's other AWS API calls is AWS Secrets Manager. Bringing in a SaaS secrets vendor (Akeyless, Doppler) creates a second identity plane, a second audit log, and a second compliance review packet. That's the wedge.</p>
+
+    <h3>3. The 22-column evidence-gap-map receipt design (Atlas template)</h3>
+
+    <p>For the Atlas <code>ai_agent_secrets_security</code> cohort benchmark, every AWS Secrets Manager deployment produces a 22-column machine-reproducible evidence-gap-map receipt:</p>
+
+    <pre><code>tenant_id, aws_account_id, aws_region, aws_secrets_manager_secret_id,
+aws_secrets_manager_secret_arn, aws_kms_key_id, aws_kms_key_arn,
+aws_iam_role_arn, aws_iam_role_session_name, aws_iam_role_session_duration,
+aws_cloudtrail_event_id, aws_cloudtrail_lake_event_id,
+aws_iam_identity_center_permission_set_arn, aws_organizations_scp_id,
+aws_lambda_rotation_function_arn, aws_secrets_manager_rotation_window_id,
+aws_rds_db_instance_arn, aws_bedrock_agentcore_identity_id,
+aws_secrets_manager_vpc_endpoint_id, cross_tenant_no_bleed_invariant,
+replay_hash, retention_until</code></pre>
+
+    <p>This 22-column receipt is the canonical <strong>AWS-IAM-bound substrate template</strong> reusable for any future AWS-native AI agent cohort sibling (Amazon Bedrock + SageMaker + AWS App Studio + Amazon Q Developer). It joins tenant_id + aws_account_id + aws_region for tenant isolation, secret_arn + kms_key_arn for encryption-at-rest, iam_role_arn + iam_role_session_name for workload identity, cloudtrail_event_id + cloudtrail_lake_event_id for audit trail, iam_identity_center_permission_set_arn + organizations_scp_id for cross-account governance, lambda_rotation_function_arn + rds_db_instance_arn for native automatic-rotation evidence, bedrock_agentcore_identity_id for AI-agent workload binding, vpc_endpoint_id for PrivateLink, cross_tenant_no_bleed_invariant for multi-tenant isolation, replay_hash for evidence-replay verification, and retention_until for compliance retention period (FedRAMP High requires 7-year retention; HIPAA requires 6-year).</p>
+
+    <h3>4. Compliance posture vs the other siblings</h3>
+
+    <table>
+      <thead>
+        <tr><th>Framework</th><th>AWS Secrets Manager</th><th>Akeyless 1144</th><th>Infisical 1145</th><th>Doppler 1146</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>SOC 2 Type II</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        <tr><td>ISO 27001:2022</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        <tr><td>ISO 27017 / 27018</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        <tr><td>FedRAMP High</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        <tr><td>HIPAA-eligible</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        <tr><td>PCI DSS Level 1</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        <tr><td>C5:2020 BSI</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        <tr><td>K-ISMS-P</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        <tr><td>IRAP</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        <tr><td>MEPS</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        <tr><td>FISC</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        <tr><td>Native RDS/Aurora/Redshift rotation</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+        <tr><td>Bedrock AgentCore Identity</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+      </tbody>
+    </table>
+
+    <p>The compliance delta is the wedge. SaaS-only vendors ship SOC 2 + ISO 27001 + HIPAA. AWS Secrets Manager ships SOC 2 + ISO 27001 + ISO 27017 + ISO 27018 + FedRAMP High + HIPAA + PCI DSS Level 1 + C5 + K-ISMS-P + IRAP + MEPS + FISC. For AWS-native Fortune 500 customers, this delta is non-negotiable.</p>
+
+    <h3>5. When to choose AWS Secrets Manager</h3>
+
+    <ul>
+      <li>You're running AI agents on AWS (Amazon Bedrock + SageMaker + Bedrock AgentCore + Amazon Q + AWS App Studio + CodeWhisperer Enterprise)</li>
+      <li>Your compliance scope requires FedRAMP High / HIPAA / PCI DSS Level 1 / C5:2020 BSI / K-ISMS-P / IRAP / MEPS / FISC</li>
+      <li>You need native automatic-rotation for Amazon RDS + Aurora + Redshift + DocumentDB + Keyspaces without writing a rotation Lambda</li>
+      <li>You need first-party AWS IAM + KMS + CloudTrail Lake + Organizations SCP + IAM Identity Center integration without a second identity plane</li>
+      <li>You need Bedrock AgentCore Identity binding for AI-agent workload credential rotation</li>
+    </ul>
+
+    <h3>6. When NOT to choose AWS Secrets Manager</h3>
+
+    <ul>
+      <li>You're multi-cloud (AWS + GCP + Azure) — use Akeyless or Infisical for cross-cloud federation</li>
+      <li>You're open-source-first and want Apache-2.0 self-host — use Infisical</li>
+      <li>You're developer-first with no AWS footprint — use Doppler</li>
+      <li>You need a SaaS-only secrets vendor with no AWS lock-in — use Akeyless</li>
+    </ul>
+
+    <h3>7. Atlas benchmark offer for the <code>ai_agent_secrets_security</code> cohort</h3>
+
+    <p>The Atlas evidence-gap-map for the 5-vendor <code>ai_agent_secrets_security</code> cohort (Akeyless + Infisical + Doppler + AWS Secrets Manager + CLOSER #5/5) ships as:</p>
+    <ul>
+      <li><strong>$500 fixed-scope, 48h delivery</strong> — single-vendor 22-column evidence-gap-map receipt</li>
+      <li><strong>$497/mo quarterly refresh</strong> — as the AWS-IAM-bound agent posture evolves</li>
+      <li><strong>$2,000 four-vendor cohort benchmark</strong> — Akeyless + Infisical + Doppler + AWS Secrets Manager side-by-side comparison</li>
+      <li><strong>$2,485 MRR ceiling</strong> per YanXbt pattern (5 clients × $497/mo)</li>
+    </ul>
+
+    <p>Mailto:<a href="mailto:aws-security@amazon.com">aws-security@amazon.com</a> · Form:<a href="https://aws.amazon.com/contact-sales">https://aws.amazon.com/contact-sales</a> · AWS Support Center. NOT submitted per cron-tick SMTP/form gating (PITFALL #28).</p>
+
+  </div>
+
+</section>
