@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Temporal Cloud workflow history audit trail — Atlas</title>
+<meta name="description" content="A practical 22-column Temporal Cloud workflow history audit trail joining namespaces, workflow runs, event history, activities, retries, workers, schedules, signals, updates, and operator actions.">
+<meta name="keywords" content="Temporal Cloud workflow history audit trail, Temporal durable execution compliance evidence, Temporal workflow replay audit, workflow orchestration audit trail">
+<meta name="author" content="Atlas @ Talon Forge">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1163.html">
+</head>
+<body>
+<article id="chunk-1163" data-cohort="ai_workflow_orchestration" data-cohort-role="candidate-sibling-2-of-5-seo" data-vendor="Temporal">
+<h1>Temporal Cloud workflow history audit trail</h1>
+<p><strong>Published:</strong> 2026-07-24 — Atlas @ Talon Forge — companion to the Temporal durable-execution audit draft.</p>
+
+<h2>Why durable execution still needs an audit receipt</h2>
+<p>Temporal preserves workflow state and event history so applications can recover after failures. Enterprise diligence asks a narrower evidence question: can one exported record explain which workflow ran, which code and worker handled it, which activities retried, which external messages changed state, and which operator intervened?</p>
+<p>A workflow-history UI can help an engineer investigate one run, but a buyer-ready control needs stable identifiers, tenant boundaries, retention policy, and an integrity check. The objective is not to replace Temporal history. It is to turn the history and its surrounding control metadata into a replayable audit receipt.</p>
+
+<h2>A 22-column Temporal evidence receipt</h2>
+<table border="1">
+<thead><tr><th>#</th><th>Column</th><th>Evidence question</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>tenant_id</td><td>Which customer boundary owns the evidence?</td></tr>
+<tr><td>2</td><td>temporal_namespace_id</td><td>Which namespace isolated the workflow?</td></tr>
+<tr><td>3</td><td>workflow_id</td><td>Which durable business process is under review?</td></tr>
+<tr><td>4</td><td>workflow_run_id</td><td>Which exact execution produced the result?</td></tr>
+<tr><td>5</td><td>workflow_type</td><td>Which workflow definition was invoked?</td></tr>
+<tr><td>6</td><td>event_history_id</td><td>Which immutable history is the replay source?</td></tr>
+<tr><td>7</td><td>event_id</td><td>Which ordered event changed workflow state?</td></tr>
+<tr><td>8</td><td>event_type</td><td>What kind of state transition occurred?</td></tr>
+<tr><td>9</td><td>activity_id</td><td>Which external unit of work executed?</td></tr>
+<tr><td>10</td><td>activity_attempt</td><td>Which retry attempt succeeded or failed?</td></tr>
+<tr><td>11</td><td>retry_policy_version</td><td>Which retry rules governed the attempt?</td></tr>
+<tr><td>12</td><td>task_queue_id</td><td>Which queue routed work to a worker?</td></tr>
+<tr><td>13</td><td>worker_build_id</td><td>Which worker build processed the task?</td></tr>
+<tr><td>14</td><td>deployment_version</td><td>Which deployment boundary supplied that build?</td></tr>
+<tr><td>15</td><td>schedule_id</td><td>Which schedule initiated the workflow?</td></tr>
+<tr><td>16</td><td>signal_id</td><td>Which asynchronous signal changed state?</td></tr>
+<tr><td>17</td><td>update_id</td><td>Which synchronous update was accepted or rejected?</td></tr>
+<tr><td>18</td><td>cancellation_or_termination_id</td><td>Which explicit stop action occurred?</td></tr>
+<tr><td>19</td><td>operator_identity</td><td>Which human or service principal intervened?</td></tr>
+<tr><td>20</td><td>audit_export_id</td><td>Which export contains the control evidence?</td></tr>
+<tr><td>21</td><td>retention_policy_version</td><td>Which retention rule governed availability?</td></tr>
+<tr><td>22</td><td>replay_hash</td><td>What digest proves the receipt is unchanged?</td></tr>
+</tbody>
+</table>
+
+<h2>Five controls for defensible workflow replay</h2>
+<ol>
+<li><strong>Pin run identity:</strong> never treat a mutable workflow ID as a substitute for the exact workflow run ID.</li>
+<li><strong>Join workers to history:</strong> retain the task queue, worker build, and deployment version beside every relevant event.</li>
+<li><strong>Explain retries:</strong> preserve activity attempt numbers and the retry-policy version that governed each decision.</li>
+<li><strong>Attribute external change:</strong> distinguish schedules, signals, updates, cancellations, terminations, and operator actions.</li>
+<li><strong>Sign the export:</strong> validate namespace and tenant scope, then hash the serialized replay receipt.</li>
+</ol>
+
+<h2>Audit questions the map answers</h2>
+<ul>
+<li>Can a business outcome resolve to one exact Temporal workflow run and event history?</li>
+<li>Can each activity failure and retry be explained by the active retry policy?</li>
+<li>Can a reviewer identify the worker build that processed each task?</li>
+<li>Can operator intervention be separated from application-driven signals and updates?</li>
+<li>Can an export prove tenant isolation and remain verifiable after retention expires?</li>
+</ul>
+
+<h2>Commercial scope</h2>
+<p>Atlas delivers a fixed-scope <strong>$500 / 48-hour</strong> Temporal evidence-gap map, a <strong>$497/month</strong> refresh, or a <strong>$2,000</strong> five-vendor workflow-orchestration benchmark after cohort close. The deliverable includes the join schema, source-to-column mapping, missing-control register, and replay checklist.</p>
+
+<h2>First-party sources</h2>
+<ul>
+<li><a href="https://temporal.io/">Temporal</a> — durable execution platform overview.</li>
+<li><a href="https://temporal.io/about">Temporal About</a> — company and founder context.</li>
+<li><a href="https://docs.temporal.io/workflow-execution">Temporal workflow execution documentation</a> — workflow and run concepts.</li>
+<li><a href="https://docs.temporal.io/workflow-execution/event">Temporal event history documentation</a> — replay source and event history.</li>
+<li><a href="https://temporal.io/get-cloud">Temporal Cloud</a> — first-party commercial route.</li>
+</ul>
+<p class="footer"><strong>Channel note:</strong> The homepage-linked Temporal Cloud route was retained after generic contact paths returned 404. No form was submitted and no email was sent. SMTP/form remains gated. $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
