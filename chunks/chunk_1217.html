@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HoneyHive — AI Agent Evaluation & Observability Evidence Gap Map (2026-07-25)</title>
+<meta name="description" content="Fixed-scope HoneyHive evidence-gap map: 22-field replay schema joining session, trace, dataset, evaluator, annotation, prompt/tool revision, production feedback, remediation, and release — for procurement, incident review, and AI-governance audit.">
+</head>
+<body>
+<article class="evidence-gap-map">
+<h1>HoneyHive — AI Agent Evaluation &amp; Observability Evidence Gap Map</h1>
+<p class="meta"><strong>Lead:</strong> 1217 · <strong>Cohort:</strong> ai_agent_evaluation_observability · <strong>Role:</strong> SIBLING #2/5 (after Braintrust 1216 OPENER) · <strong>Updated:</strong> 2026-07-25 · <strong>Atlas @ Talon Forge</strong></p>
+
+<h2>Short answer</h2>
+<p>HoneyHive positions itself as "the observability layer for production agents" and unifies observability and evaluation into a continuous improvement loop. The procurement, incident-review, and AI-governance question is whether one reviewer can replay that loop — session → trace → dataset → evaluator → annotation → prompt/tool revision → production feedback → remediation → release — without stitching exports by hand. The five evidence gaps below are what enterprise buyers, regulators, and incident reviewers will ask first.</p>
+
+<h2>First-party surface verified 2026-07-25</h2>
+<ul>
+<li><strong>Homepage title:</strong> "The Observability Layer for Production Agents" (honeyhive.ai 2026-07-25).</li>
+<li><strong>Homepage description:</strong> HoneyHive unifies observability and evaluation into a continuous improvement loop.</li>
+<li><strong>Launch post:</strong> Studio / Playground, evaluations, monitoring, traces, datasets, human feedback, and production iteration.</li>
+<li><strong>Privacy Policy:</strong> <code>support@honeyhive.ai</code> is the inbox "for all other inquiries"; <code>dhruv@honeyhive.ai</code> is the data-protection-officer route and must NOT be used for commercial outreach.</li>
+<li><strong>Founder:</strong> Mohak Sharma (Co-Founder &amp; CEO). Launch post says "Dhruv and I started HoneyHive."</li>
+</ul>
+
+<h2>Cohort-unique 5-WEDGE non-overlap (vs Braintrust 1216)</h2>
+<ol>
+<li><strong>Continuous-improvement loop framing:</strong> HoneyHive frames the workflow as session → trace → dataset → evaluator → annotation → prompt/tool revision → production feedback → remediation → release. Braintrust leads with evals + observability as two lanes joined by traces; HoneyHive explicitly markets the closed loop. The replay schema must preserve the loop edges, not just the nodes.</li>
+<li><strong>Human-in-the-loop + production feedback as first-class primitives:</strong> the launch post calls out human feedback and production iteration. The 22-field schema needs <code>human_feedback_id</code>, <code>production_feedback_id</code>, and <code>annotation_queue_id</code> as keys, not as free-text blobs.</li>
+<li><strong>Prompt and tool revision history joined to the trace:</strong> every trace must reference the exact <code>prompt_version_id</code>, <code>model_version_id</code>, and <code>tool_version_id</code> that produced it. The replay must show what was live in production, not the latest dev revision.</li>
+<li><strong>Remediation + release evidence:</strong> when a failure triggers a remediation, the schema must join the failure trace → the remediation action → the re-evaluation that approved the fix → the release that shipped it. This is the audit trail an incident reviewer will demand.</li>
+<li><strong>Dataset–evaluator–annotation co-versioning:</strong> datasets, evaluators, and annotation queues must version together. If a dataset is replaced without versioning the evaluator that scored against it, the lineage is broken. The schema must keep <code>dataset_version_id</code>, <code>evaluator_version_id</code>, and <code>annotation_batch_id</code> as a triplet, not as three independent keys.</li>
+</ol>
+
+<h2>22-field replay schema (per outcome)</h2>
+<ol>
+<li><code>tenant_id</code></li>
+<li><code>honeyhive_workspace_id</code></li>
+<li><code>honeyhive_project_id</code></li>
+<li><code>session_id</code></li>
+<li><code>trace_id</code></li>
+<li><code>dataset_id</code> + <code>dataset_version_id</code></li>
+<li><code>evaluator_id</code> + <code>evaluator_version_id</code></li>
+<li><code>scorer_id</code> + <code>scorer_version_id</code></li>
+<li><code>annotation_queue_id</code> + <code>annotation_batch_id</code></li>
+<li><code>prompt_version_id</code></li>
+<li><code>model_version_id</code></li>
+<li><code>tool_version_id</code></li>
+<li><code>production_feedback_id</code></li>
+<li><code>human_feedback_id</code></li>
+<li><code>remediation_action_id</code></li>
+<li><code>remediation_evaluation_id</code></li>
+<li><code>release_id</code> + <code>release_rollback_id</code></li>
+<li><code>data_residency_region_id</code></li>
+<li><code>retention_policy_id</code> + <code>deletion_proof_id</code></li>
+<li><code>cross_tenant_no_bleed_invariant</code></li>
+<li><code>audit_export_id</code></li>
+<li><code>replay_hash</code></li>
+</ol>
+
+<h2>The five highest-priority evidence gaps</h2>
+<ol>
+<li><strong>Loop edge preservation:</strong> most observability stores the nodes (sessions, traces, datasets) but loses the edges (which dataset version produced which evaluator run, which evaluator run produced which prompt revision). The replay must carry edge provenance, not just timestamps.</li>
+<li><strong>Prompt/tool/model version join at production time:</strong> the trace must point at the exact versions that produced it. If the trace stores only the trace ID, an incident reviewer cannot reproduce the production configuration.</li>
+<li><strong>Human feedback + annotation as replayable keys:</strong> free-text feedback is not audit evidence. Each feedback row needs a stable <code>human_feedback_id</code> + <code>annotation_batch_id</code> + reviewer identity + timestamp + decision context.</li>
+<li><strong>Remediation → re-evaluation → release chain:</strong> when a failure triggers a remediation, the chain must close. If the re-evaluation is missing, the remediation was unverified; if the release is missing, the remediation never shipped. Both edges must be exportable.</li>
+<li><strong>Retention, deletion, and cross-tenant isolation:</strong> the export must include <code>retention_policy_id</code>, <code>deletion_proof_id</code>, and <code>cross_tenant_no_bleed_invariant</code> per row. Without these, the export cannot satisfy EU AI Act Art. 13 logging or SOC 2 CC6.1 logical access for the AI agent scope.</li>
+</ol>
+
+<h2>Procurement / incident-review questions the buyer will ask</h2>
+<ol>
+<li>Can one production outcome join to its exact session, trace, dataset, evaluator, prompt, model, tool, and code revisions?</li>
+<li>Can automated scores, annotation queues, human feedback, and production signals be compared without losing tenant or release boundaries?</li>
+<li>Can a reviewer replay the continuous improvement loop from failure detection through diagnosis, remediation, re-evaluation, and deployment?</li>
+<li>Can retention, deletion, regional processing, and cross-tenant isolation be proven for traces, datasets, feedback, and attachments?</li>
+<li>Can HoneyHive export one control receipt that survives procurement, incident review, and AI-governance audit?</li>
+</ol>
+
+<h2>Route safety</h2>
+<ul>
+<li>Use only <code>support@honeyhive.ai</code> (first-party Privacy Policy: "for all other inquiries").</li>
+<li>Do not use <code>dhruv@honeyhive.ai</code>; the same page identifies it as the data-protection-officer route.</li>
+<li>Do not route this to security, privacy, careers, or press channels.</li>
+<li>Do not claim submission, delivery, response, payment, or revenue without a receipt.</li>
+</ul>
+
+<h2>Offer ladder</h2>
+<ul>
+<li><strong>$500 / 48h fixed-scope:</strong> HoneyHive evidence-gap map — the five highest-priority missing joins + the 22-field replay schema + a Trust/Compliance publication checklist.</li>
+<li><strong>$497 / month:</strong> quarterly refresh — HoneyHive version updates, new surface coverage, EU AI Act Art. 26 updates.</li>
+<li><strong>$2,000 cohort benchmark:</strong> five-vendor ai_agent_evaluation_observability benchmark at cohort close (Braintrust 1216 + HoneyHive 1217 + SIBLING #3 TBD + SIBLING #4 TBD + CLOSER #5 TBD).</li>
+<li><strong>$2,485 MRR ceiling:</strong> per YanXbt pattern (5 clients × $497/mo).</li>
+<li><strong>$10,000 cohort-sponsorship tier:</strong> five-vendor cohort benchmark plus a 1-yr subscription to all five vendor update streams.</li>
+</ul>
+
+<p class="footer"><strong>Status:</strong> SIBLING #2/5 · NEW VERTICAL #61 advanced 1/5 → 2/5 · SMTP gated; $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
