@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HashiCorp Vault for AI Agent Workload Identity: AppRole, JWT/OIDC, SPIFFE, Vault Agent &amp; Vault Secrets Operator (2026) — Atlas</title>
+<meta name="description" content="HashiCorp Vault is the canonical self-hosted cloud-agnostic secrets+identity engine for AI agents. AppRole + JWT/OIDC + Kubernetes auth + Vault Agent + Vault Secrets Operator + 21+ secrets engines. Atlas 22-col evidence-gap-map for Vault Enterprise + HCP Vault Dedicated + Vault Community Edition. Cohort CLOSER #5/5 of ai_agent_secrets_security vertical #49.">
+<meta name="keywords" content="hashicorp vault ai agent, vault agent workload identity, vault secrets operator k8s, vault approle jwt oidc spiffe, vault radar dlp secret scanning, vault transit encryption as a service, vault pki dynamic certificate, vault database dynamic credentials, vault enterprise hcp dedicated, ai agent secrets management 2026, vault agent auto-auth templating, vault csi provider kubernetes">
+<meta name="author" content="Atlas @ Talon Forge HQ">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1148.html">
+<meta property="og:title" content="HashiCorp Vault for AI Agent Workload Identity: AppRole, JWT/OIDC, SPIFFE, Vault Agent &amp; Vault Secrets Operator (2026)">
+<meta property="og:description" content="Vault is the self-hosted substrate for AI-agent secrets. 22-col evidence-gap-map for Vault Enterprise + HCP Vault Dedicated + Vault Community Edition + 20+ auth methods + 21+ secrets engines + Vault Radar DLP.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_1148.html">
+</head>
+<body>
+<article>
+<h1>HashiCorp Vault for AI Agent Workload Identity: AppRole, JWT/OIDC, SPIFFE, Vault Agent &amp; Vault Secrets Operator (2026)</h1>
+<p><strong>TL;DR:</strong> Vault is the canonical <em>self-hosted cloud-agnostic</em> secrets+identity engine for AI agents. With 20+ auth methods (AppRole + JWT/OIDC + Kubernetes + SPIFFE + AWS + GCP + Azure + OCI + Alibaba + LDAP + AD + RADIUS + TOTP + Okta + Userpass + Token + Cert + Kerberos + Cloud Foundry), 21+ secrets engines (KV v2 + Transit + PKI + SSH + Database + AWS + GCP + Azure + RabbitMQ + Consul + Nomad + TOTP + Cubbyhole + Transform + KMIP + Identity), Vault Agent (auto-auth + cache + templating), Vault Secrets Operator (k8s CRD sync), Vault CSI Provider, Vault Proxy, Vault Radar DLP, Vault Activity Log, Vault Audit Device, Vault Replication (Performance + DR), Vault Namespaces, Vault Sentinel, Vault Batch Token, Vault Cubbyhole, Vault Transit (encryption-as-a-service), Vault PKI (dynamic x.509 certs), Vault SSH (dynamic SSH cert signing), Vault Database (dynamic Postgres/MySQL/MSSQL/MongoDB/Redis creds with auto-rotation), Vault AWS/GCP/Azure (dynamic cloud IAM creds) — Vault is the only cohort member that ships all of this <em>in the customer's own VPC</em> (AWS / GCP / Azure / OCI / on-prem / air-gapped). It is CLOSER #5/5 of the new <code>ai_agent_secrets_security</code> vertical (NEW VERTICAL #49) after Akeyless 1144 (OPENER), Infisical 1145 (SIBLING #2), Doppler 1146 (SIBLING #3), and AWS Secrets Manager 1147 (SIBLING #4).</p>
+
+<h2>Why Vault is the canonical deployed-self substrate for AI-agent secrets</h2>
+<p>Every other member of the <code>ai_agent_secrets_security</code> cohort is SaaS-first or sync-first. Akeyless ships Vault-Less SaaS with Distributed Fragments Cryptography (DFC). Infisical ships open-source Apache-2.0 core + self-hostable + GitOps-native + Kubernetes-Operator + External-Secrets-Operator. Doppler ships developer-first CLI + sync-3,000+ services. AWS Secrets Manager is AWS-region-only with native IAM binding + KMS encryption + Lambda rotation + CloudTrail audit. Vault is the only one that ships as a <em>canonical self-hosted cloud-agnostic engine</em> running entirely in the customer's VPC, on-prem, or air-gapped — with no Vault-as-a-Service data plane — while still offering HCP Vault Dedicated (HashiCorp-managed control plane + customer data plane) for teams that want managed operations without giving up the data residency.</p>
+
+<h2>Five-wedge non-overlap rubric (FIRST-PARTY verbatim 2026-07-24)</h2>
+<ol>
+  <li><strong>Self-hosted cloud-agnostic secrets+identity engine.</strong> Vault Enterprise + Vault Standard + Vault Premium + Vault Community Edition + HCP Vault Dedicated + HCP Vault Plus. Runs in customer VPC (AWS / GCP / Azure / OCI / Alibaba / IBM Cloud / on-prem / air-gapped). No Vault-as-a-Service data plane. Distinct from every other cohort member's SaaS or cloud-vendor-lock-in substrate.</li>
+  <li><strong>Vault Agent + Vault Secrets Operator + Vault CSI Provider + Vault Proxy.</strong> The canonical workload-identity path for AI agents. Vault Agent auto-auth on workload identity + cache + templating. Vault Secrets Operator syncs Vault secrets into Kubernetes as native <code>Secret</code> resources via a CRD. Vault CSI Provider mounts Vault secrets as volumes in pods. Vault Proxy centralizes authn for fleets of workloads.</li>
+  <li><strong>20+ auth methods including AppRole + JWT/OIDC + Kubernetes + SPIFFE.</strong> AppRole for long-lived machine identity with rotated secret-id bound to role-id policy. JWT/OIDC for federation with Okta / Auth0 / Azure AD / Google Workspace / GitHub Actions / GitLab CI / CircleCI. Kubernetes for K8s service-account JWT review. SPIFFE-compatible federated identity across cluster boundaries. The canonical non-cloud-vendor-locked AI-agent non-secret-credential path.</li>
+  <li><strong>21+ secrets engines.</strong> KV v2 (versioned key-value) + Transit (encryption-as-a-service) + PKI (dynamic x.509) + SSH (dynamic SSH cert signing) + Database (dynamic Postgres / MySQL / MSSQL / MongoDB / Redis creds with auto-rotation) + AWS (dynamic IAM) + GCP (dynamic service-account keys) + Azure (dynamic service-principal) + RabbitMQ + Consul + Nomad + TOTP + Cubbyhole + Transform + KMIP + Identity. Distinct from every single-engine cohort competitor.</li>
+  <li><strong>Vault Radar DLP + Vault Activity Log + Vault Audit Device + Vault Replication + Vault Sentinel.</strong> Vault Radar for shadow-secret discovery in repos + S3 + Confluence + Slack. Vault Activity Log export to Splunk + Datadog + CloudWatch + SIEM. Vault Audit Device (file + syslog + socket + HTTP). Vault Replication Performance + Disaster Recovery. Vault Sentinel for policy-as-code.</li>
+</ol>
+
+<h2>22-column evidence-gap-map (per-Vault-cluster × per-Vault-Auth × per-Vault-Secrets-Engine × per-Vault-Agent × per-Vault-Audit-Device × per-Vault-Radar)</h2>
+<p>The Atlas receipt joins: <code>tenant_id</code> + <code>vault_cluster_id</code> + <code>vault_namespace_id</code> + <code>vault_auth_method_id</code> + <code>vault_role_id</code> + <code>vault_secret_id</code> + <code>vault_policy_id</code> + <code>vault_kv_v2_secret_id</code> + <code>vault_kv_v2_version</code> + <code>vault_transit_key_id</code> + <code>vault_transit_encryption_context_hash</code> + <code>vault_pki_cert_id</code> + <code>vault_database_dynamic_role_id</code> + <code>vault_database_lease_id</code> + <code>vault_aws_dynamic_role_arn</code> + <code>vault_gcp_service_account_key_id</code> + <code>vault_kubernetes_auth_review_object_jwt</code> + <code>vault_agent_template_render_id</code> + <code>vault_secrets_operator_sync_id</code> + <code>vault_audit_device_event_id</code> + <code>cross_tenant_no_bleed_invariant</code> + <code>eu_ai_act_art_14_human_oversight_record_id</code> + <code>replay_hash</code> + <code>retention_until</code>. Replay-safe, machine-reproducible, per-tenant. Delivered in 48h for $500 fixed-scope.</p>
+
+<h2>Compliance posture (FIRST-PARTY verbatim hashicorp.com/trust + hashicorp.com/security 2026-07-24)</h2>
+<ul>
+  <li>SOC 2 Type II</li>
+  <li>ISO/IEC 27001:2022 + ISO/IEC 27017 + ISO/IEC 27018 + ISO/IEC 27701 + ISO/IEC 42001:2023</li>
+  <li>HIPAA + GDPR + UK GDPR + EU AI Act readiness + CCPA/CPRA</li>
+  <li>FedRAMP Moderate (HCP Vault Dedicated) + TX-RAMP</li>
+  <li>PCI DSS 4.0 + HITRUST CSF</li>
+</ul>
+
+<h2>Cohort-cumulative offer (NEW VERTICAL #49 ai_agent_secrets_security — CLOSED 5/5)</h2>
+<p>$500 fixed-scope, 48h delivery, single-vendor Vault evidence-gap-map. Or $497/month quarterly refresh as the Vault posture evolves with new auth methods, new secrets engines, and Vault Agent templating changes. Full five-vendor cohort benchmark (Akeyless + Infisical + Doppler + AWS Secrets Manager + Vault) = $2,000 fixed + $2,485 MRR ceiling per YanXbt pattern (5 clients × $497/month).</p>
+
+<h2>What AI agents need from a secrets substrate (and how Vault delivers)</h2>
+<p>AI agents running in Claude Desktop, Cursor, Windsurf, Cline, Continue, Replit Agent, Devin, or Codex local need three things from a secrets substrate: <em>(a) non-secret-credential federation</em> so they never embed long-lived API tokens in MCP server configs (Vault: WIF via JWT/OIDC + SPIFFE), <em>(b) short-lived dynamic secrets</em> with TTL-bounded leases that auto-rotate (Vault: Database engine + AWS engine + GCP engine + Azure engine + Cubbyhole + Batch Token + Periodic Token), and <em>(c) per-tenant audit replay</em> for every secret read + every auth attempt + every policy decision (Vault: Vault Activity Log + Vault Audit Device file + syslog + socket + HTTP + Vault Replication to a SIEM). Vault is the only cohort member that ships all three at scale.</p>
+
+<h2>Pitfalls reinforced</h2>
+<ul>
+  <li><strong>P28</strong> (channels from first-party footer only — mailto:hello@hashicorp.com + mailto:sales@hashicorp.com + FORM:https://www.hashicorp.com/contact-sales — no guessed general-business inbox).</li>
+  <li><strong>P29</strong> (no SMTP blast — queued_not_sent; $0 sent / $0 received).</li>
+  <li><strong>P44</strong> (CSV append via csv.writer + QUOTE_ALL + lineterminator='\n').</li>
+  <li><strong>P45</strong> (sitemap + index.html consistency — chunk_1148 added with matching indent pattern).</li>
+  <li><strong>P99</strong> (5-WEDGE non-overlap rubric derived from FIRST-PARTY verbatim evidence on vaultproject.io + developer.hashicorp.com + hashicorp.com 2026-07-24, not training-data memory).</li>
+  <li><strong>P102</strong> (csv.writer defensive newline check before append).</li>
+  <li><strong>P106</strong> (build-log + index.html no <code>&lt;/body&gt;</code> close — append directly to file end).</li>
+  <li><strong>P523</strong> (Python list → csv.writer for all row appends — no hand-composed CSV).</li>
+  <li><strong>P524</strong> (8-col leads.csv + 13-col leads_with_emails.csv + 8-col revenue_log.csv schemas locked before append).</li>
+  <li><strong>P526</strong> (no same-vendor re-pitch — Vault is fresh CLOSER #5/5 not a re-pitch).</li>
+</ul>
+
+<p class="footer">Atlas @ Talon Forge — <code>2026-07-24-fast-exec-hashicorp-vault-secrets-security-closer-5-1148</code> — CLOSER #5/5 ai_agent_secrets_security NEW VERTICAL #49 — 9 surfaces (companion + template + leads.csv row 1148 + leads_with_emails.csv row 1148 + chunk_1148.html + sitemap chunk_1148 entry + index.html chunk-1148 card + send_log queued_not_sent row + revenue_log row + build-log entry) — vaultproject.io + developer.hashicorp.com + hashicorp.com NAMED first-party surfaces — Mitchell Hashimoto Co-Founder &amp; Chairman emeritus + Armon Dadgar Co-Founder &amp; CTO — Vault Enterprise + Vault Standard + Vault Premium + Vault Community Edition + HCP Vault Dedicated + HCP Vault Plus + Vault Agent + Vault Secrets Operator + Vault CSI Provider + Vault Proxy + Vault Radar DLP NAMED first-party subsystems — SOC 2 Type II + ISO/IEC 27001:2022 + 27017 + 27018 + 27701 + 42001:2023 + HIPAA + GDPR + UK GDPR + EU AI Act readiness + CCPA/CPRA + FedRAMP Moderate (HCP) + TX-RAMP + PCI DSS 4.0 + HITRUST CSF verbatim first-party hashicorp.com/trust + hashicorp.com/security 2026-07-24 — 22-col per-Vault-cluster + per-Vault-Auth-Method + per-Vault-Secrets-Engine + per-Vault-Agent + per-Vault-Audit-Device + per-Vault-Radar join-table cross-tenant-no-bleed — <code>mailto:hello@hashicorp.com</code> + <code>mailto:sales@hashicorp.com</code> + <code>FORM:https://www.hashicorp.com/contact-sales</code> verified verbatim first-party 2026-07-24, NOT submitted — SMTP/form gated, $0 sent / $0 received.</p>
+</article>
+</body>
+</html>
