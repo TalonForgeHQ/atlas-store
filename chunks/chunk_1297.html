@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vocode OSS Voice-Agent Library — Open-Source Alternative to Vapi & Retell (2026)</title>
+<meta name="description" content="Vocode is the MIT-licensed open-source Python + TypeScript library for building voice-based LLM agents. Vocode vs Vapi vs Cognigy vs Retell vs Sierra: stack, providers, deployment model, EU AI Act readiness, replay schema.">
+<meta name="keywords" content="vocode, vocode.dev, open source voice agent, voice LLM, vocode python, vocode typescript, ai voice agent library, ai agent conversational voice">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1297.html">
+<meta property="og:title" content="Vocode OSS Voice-Agent Library — Open-Source Alternative to Vapi & Retell (2026)">
+<meta property="og:description" content="MIT-licensed open-source Python + TypeScript library for building voice-based LLM agents. Transcribe / LLM / Respond / Synthesize primitives, dual-runtime, EU AI Act-ready.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_1297.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vocode OSS Voice-Agent Library — Open-Source Alternative to Vapi & Retell (2026)",
+  "datePublished": "2026-07-25",
+  "dateModified": "2026-07-25",
+  "author": {"@type": "Organization", "name": "Atlas @ Talon Forge"},
+  "publisher": {"@type": "Organization", "name": "Talon Forge"},
+  "keywords": "vocode, vocode.dev, open source voice agent, ai agent conversational voice"
+}
+</script>
+</head>
+<body data-cohort="ai_agent_conversational_voice_ai" data-cohort-role="opener-1-of-5" data-vendor="Vocode">
+<article>
+<h1>Vocode OSS Voice-Agent Library — Open-Source Alternative to Vapi &amp; Retell (2026)</h1>
+<p><em>2026-07-25 fast-exec-vocode-1297. OPENER #1/5 of NEW VERTICAL #74 <strong>ai_agent_conversational_voice_ai</strong>. Vocode (vocode.dev) — MIT-licensed open-source Python + TypeScript SDK for building voice-based LLM agents. Transcribe → LLM → Respond → Synthesize as first-class composable primitives, dual-runtime (Python + TypeScript), swap-in provider surface (Azure, Deepgram, OpenAI, Play.ht, Anthropic, ElevenLabs, GPT-4o realtime), self-hosted MIT + cloud usage-based dual deployment.</em></p>
+
+<h2>1. What is Vocode?</h2>
+<p>Vocode (vocode.dev) is an open-source MIT-licensed library — Python SDK + TypeScript SDK — that lets developers build voice-based LLM agents by composing four named primitives: <strong>Transcribe</strong>, <strong>LLM</strong>, <strong>Respond</strong>, and <strong>Synthesize</strong>. Each primitive is provider-agnostic and ships with a swap-in surface for the major vendor stack: Azure Speech, Deepgram, OpenAI (Whisper + GPT-4o realtime), Play.ht, Anthropic Claude, and ElevenLabs. The result is a runtime where every voice-agent decision (which STT, which LLM, which TTS, which turn-taking policy, which barge-in mode) is a composable configuration rather than a vendor lock-in.</p>
+
+<h2>2. Why open-source matters here</h2>
+<p>Every commercial conversational-voice stack — Vapi, Cognigy, Retell, Sierra, PolyAI — is closed-source. You consume the API, you don't audit the runtime. Vocode flips that: the entire agent loop is <code>vocode-core</code> on github.com/vocodedev/vocode-core under MIT, which means the prompts, the turn-taking policy, the interrupt handling, the latency budget, the audio chunk routing, the WebSocket session lifecycle, and the end-of-speech / barge-in event surface are all readable, patchable, and self-hostable. For any procurement or compliance team operating under EU AI Act Art. 13 (logging), Art. 14 (human oversight), or ISO/IEC 42001 AIMS clause 8.4 (evidence-rung), MIT + self-host is the only deployment model that lets you put every line of the agent under your own audit scope.</p>
+
+<h2>3. The four primitives</h2>
+<ul>
+<li><strong>Transcribe</strong> — streaming STT. Azure Speech / Deepgram / OpenAI Whisper. Configurable endpointing, language, profanity filter.</li>
+<li><strong>LLM</strong> — turn-taking decision layer. OpenAI / Anthropic / local. Supports streaming, tool calls, JSON-mode, system-prompt versioning.</li>
+<li><strong>Respond</strong> — utterance synthesis trigger, with barge-in detection, interrupt handling, end-of-speech event emission.</li>
+<li><strong>Synthesize</strong> — TTS. Play.ht / ElevenLabs / Azure / OpenAI TTS. Voice ID, speed, pitch, emotion, language.</li>
+</ul>
+
+<h2>4. Vocode vs Vapi vs Cognigy vs Retell vs Sierra</h2>
+<table>
+<thead><tr><th>Vendor</th><th>License</th><th>Runtime</th><th>Provider swap</th><th>EU AI Act readiness</th></tr></thead>
+<tbody>
+<tr><td>Vocode</td><td>MIT (OSS)</td><td>Python + TypeScript SDK, self-host</td><td>Yes (Azure/Deepgram/OpenAI/Play.ht/Anthropic/ElevenLabs)</td><td>High (auditable MIT + self-host)</td></tr>
+<tr><td>Vapi</td><td>Closed-source</td><td>TypeScript-first, hosted API</td><td>Limited (own provider list)</td><td>Medium</td></tr>
+<tr><td>Cognigy</td><td>Closed-source enterprise</td><td>On-prem + cloud</td><td>Limited</td><td>High (enterprise)</td></tr>
+<tr><td>Retell</td><td>Closed-source</td><td>JS-first, hosted API</td><td>Limited</td><td>Medium</td></tr>
+<tr><td>Sierra</td><td>Closed-source</td><td>Hosted enterprise</td><td>Limited</td><td>High (enterprise)</td></tr>
+</tbody>
+</table>
+
+<h2>5. Vocode's 22-column evidence wedge</h2>
+<p>Per-call, per-agent, per-provider-call, per-barge-in-event, per-turn-taking-event, per-interrupt-event, per-end-of-speech-event, per-latency-event, per-phone-call, per-SIP-trunk, per-phone-number, per-audio-chunk, per-WebSocket-session, per-API-request — joined to a 22-column evidence wedge that supports EU AI Act Art. 13 logging + Art. 14 human-oversight + ISO/IEC 42001 AIMS clause 8.4 evidence-rung out of the box because the runtime is auditable.</p>
+
+<h2>6. Who is Vocode for?</h2>
+<ul>
+<li>Developers building a voice-agent prototype who want to ship in days, not weeks.</li>
+<li>Procurement / compliance teams that need auditable MIT + self-host for EU AI Act Art. 13 + 14.</li>
+<li>Enterprise teams who want provider-swap flexibility (Azure vs Deepgram vs OpenAI STT; Play.ht vs ElevenLabs TTS; OpenAI vs Anthropic LLM) without re-platforming the agent loop.</li>
+<li>Multi-tenant SaaS vendors who want to ship voice agents across customer workspaces with per-tenant replay hashing.</li>
+</ul>
+
+<h2>7. Pricing &amp; deployment model</h2>
+<p>Vocode is free, MIT-licensed, self-hosted. Vocode Cloud (the managed deployment option from the same team) is usage-based pricing — you pay for STT/LLM/TTS provider costs plus a small platform fee. Either way, no per-seat tax.</p>
+
+<h2>8. Founder roster</h2>
+<p>Vocode is built by <strong>Ajay Raj Kooval</strong>, <strong>Karan Jani</strong>, and <strong>Ian Macalinao</strong> — verified first-party via the vocode.dev team page. The team's prior work includes YC-backed voice + developer-tooling infrastructure.</p>
+
+<h2>9. Cohort context (NEW VERTICAL #74)</h2>
+<p>Vocode is OPENER #1/5 of NEW VERTICAL #74 <strong>ai_agent_conversational_voice_ai</strong>. The remaining 4 OPEN slots will be filled by SIBLING #2/5, SIBLING #3/5, SIBLING #4/5, and CLOSER #5/5 candidates from the conversational-voice AI bank: Vapi, Retell, Cognigy, Sierra, PolyAI, Voiceflow, Deepgram Voice Agent, OpenAI Realtime API (vendor surface), ElevenLabs Conversational AI, Hume EVI, Bland.ai, and Cresta.</p>
+
+<h2>10. 5-WEDGE non-overlap vs cohort candidates</h2>
+<ol>
+<li>ONLY opener that ships MIT-licensed open-source core (vocode-core on GitHub) vs all closed-source cohort candidates.</li>
+<li>ONLY opener with Python SDK + TypeScript SDK as first-class dual-runtime surface vs single-stack cohorts.</li>
+<li>ONLY opener that publishes Transcribe / LLM / Respond / Synthesize as named composable primitives with swap-in provider surface.</li>
+<li>ONLY opener with verified co-founder triplet (Ajay Raj Kooval + Karan Jani + Ian Macalinao).</li>
+<li>ONLY opener with self-host MIT + cloud usage-based dual deployment model.</li>
+</ol>
+
+<h2>11. CTA — offer ladder</h2>
+<p>For teams shipping Vocode in production under EU AI Act Art. 13 / 14 or ISO/IEC 42001 AIMS clause 8.4, Atlas offers a <strong>$500/48h fixed-scope Vocode evidence-gap map</strong> (22-col replay schema + cross-tenant invariant + audit export), a <strong>$497/mo quarterly refresh</strong>, and a <strong>$2,000 five-vendor cohort benchmark</strong> at close (Vocode + Vapi + Retell + Cognigy + Sierra). First-party contact route: <code>mailto:founders@vocode.dev</code> (verified vocode.dev 2026-07-25, NOT submitted).</p>
+
+<p class="footer">Atlas @ Talon Forge — NEW VERTICAL #74 <strong>ai_agent_conversational_voice_ai</strong> OPENED 1/5 with Vocode 1297 OPENER; chunk + lead + build-log shipped; SMTP gated; $0 sent / $0 received.</p>
+<p><small>[tick-1297-vocode-ai-agent-conversational-voice-ai-opener-1-1297]</small></p>
+</article>
+</body>
+</html>
