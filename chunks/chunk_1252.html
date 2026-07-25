@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Contract Redlining Clause Diff Hash Audit Trail GDPR SOC 2 2026 — 22-Field Replay Receipt</title>
+<meta name="description" content="A replay-ready AI agent contract redlining clause diff hash audit trail mapped to GDPR Art. 30 + SOC 2 CC7.2 + EU AI Act Art. 12. Joins tenant_id, contract_id, clause_id, clause_version, ai_review_run_id, redline_proposal_id, diff_hash, human_override_id, audit_export_id, cross_tenant_no_bleed_invariant, and replay_hash for one replayable redline event.">
+<meta property="og:title" content="AI agent contract redlining clause diff hash audit trail — GDPR + SOC 2 + EU AI Act replay receipt">
+<meta property="og:description" content="A 22-field AI contract redlining audit trail that joins tenant, contract, clause, clause version, AI review run, redline proposal, diff hash, approver, approval, human override, audit export, GDPR Art. 30 record, SOC 2 CC7.2 event, EU AI Act Art. 12 log, cross-tenant no-bleed, and replay hash into one compliance-grade row.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_1252.html">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1252.html">
+</head>
+<body>
+<article class="chunk-card" id="chunk-1252" data-cohort="ai_agent_contract_redlining" data-cohort-role="long-tail-keyword-satellite" data-vendor="Atlas Satellite" data-tick="tick-1252-ai-agent-contract-redlining-clause-diff-hash-gdpr-soc2-long-tail">
+<h1>AI Agent Contract Redlining Clause Diff Hash Audit Trail GDPR SOC 2 2026 &mdash; 22-Field Replay Receipt</h1>
+<p class="lead"><strong>Long-tail keyword:</strong> &ldquo;AI agent contract redlining clause diff hash audit trail GDPR SOC 2.&rdquo; This Atlas satellite page targets a buyer question that the cohort OPENER + SIBLINGS all surface but none name as a single-row receipt: <em>can your auditor replay one AI redline back to the clause diff hash, the AI model revision, the approver chain, the human override, the GDPR Art. 30 record-of-processing row, the SOC 2 CC7.2 system-event row, and the EU AI Act Art. 12 log row, in one export?</em> This page maps the gap.</p>
+
+<h2>What &ldquo;clause diff hash audit trail&rdquo; actually means in 2026</h2>
+<ul>
+<li><strong>Clause-level provenance:</strong> every AI redline diff must be joined to the exact <code>clause_id</code>, <code>clause_version</code>, <code>playbook_id</code>, and <code>playbook_version</code> the AI was reasoning against &mdash; not just to the document hash.</li>
+<li><strong>AI provenance:</strong> the <code>ai_review_run_id</code>, the <code>prompt_id</code>, the <code>model_id</code>, and the <code>model_revision</code> must be persisted at redline time so a regulator can replay the diff against the same model that produced it.</li>
+<li><strong>Human-in-the-loop:</strong> every redline must carry an <code>approver_id</code>, an <code>approval_step_id</code>, and a <code>human_override_id</code> so the redline cannot be replayed as &ldquo;the AI wrote this&rdquo; when a human reviewer accepted, modified, or rejected it.</li>
+<li><strong>Compliance joins:</strong> the trail must also join to the GDPR Art. 30 record-of-processing row, the SOC 2 CC7.2 system-event row, and the EU AI Act Art. 12 log row, so the redline receipt satisfies the three frameworks in one export.</li>
+<li><strong>Replay-ready, not snapshot-only:</strong> the receipt must include a <code>replay_hash</code> and a <code>cross_tenant_no_bleed_invariant</code> so the same diff can be re-executed against the recorded AI + clause state without leakage to another tenant.</li>
+</ul>
+
+<h2>The 5 evidence gaps behind one AI redline</h2>
+<ol>
+<li><strong>Clause + playbook join:</strong> most CLM trails snapshot the document but not the <code>clause_version</code> + <code>playbook_version</code>, so the AI redline cannot be replayed against the same playbook state the AI was reasoning against at redline time.</li>
+<li><strong>AI model provenance:</strong> most trails record &ldquo;AI redline&rdquo; without the <code>ai_review_run_id</code> + <code>model_revision</code> + <code>prompt_id</code>, so a regulator asking &ldquo;which model produced this diff on which date&rdquo; has to reconstruct it from logs that may have rotated.</li>
+<li><strong>Human override:</strong> most trails do not persist the <code>human_override_id</code> or the diff between the AI proposal and the human-accepted redline, so the AI cannot be falsely blamed for a clause a human rewrote.</li>
+<li><strong>Compliance joins:</strong> most trails keep GDPR Art. 30 records, SOC 2 CC7.2 events, and EU AI Act Art. 12 logs in separate audit tables, so an auditor has to re-join 3+ tables to map one redline back to the compliance boundary.</li>
+<li><strong>Cross-tenant no-bleed:</strong> most multi-tenant trails do not include a <code>cross_tenant_no_bleed_invariant</code>, so a tenant that re-executes a redline against the recorded state cannot prove that no other tenant&rsquo;s clause, playbook, or model version leaked in.</li>
+</ol>
+
+<h2>The 22-column per-redline compliance-grade receipt</h2>
+<pre><code>tenant_id                          -- Atlas / Concord / Ironclad / Evisort / Icertis tenant
+clm_workspace_id                   -- CLM workspace (e.g. concord_workspace_id)
+contract_id                        -- Contract
+contract_type_id                   -- MSA / SOW / NDA / DPA / order form
+clause_id                          -- Clause
+clause_version                     -- Clause version
+playbook_id                        -- Playbook
+playbook_version                   -- Playbook version
+ai_review_run_id                   -- AI review run
+prompt_id                          -- AI prompt
+model_id                           -- Model id (vendor + family)
+model_revision                     -- Model revision
+redline_proposal_id                -- Proposed redline
+diff_hash                          -- Redline diff hash (SHA-256 of the proposed vs accepted)
+approver_id                        -- Approver
+approval_step_id                   -- Approval step
+human_override_id                  -- Human override (diff between AI proposal + human-accepted)
+gdpr_art30_record_id               -- GDPR Art. 30 record-of-processing row
+soc2_cc72_event_id                 -- SOC 2 CC7.2 system-event row
+eu_ai_act_art12_log_id             -- EU AI Act Art. 12 log row
+cross_tenant_no_bleed_invariant    -- Tenant-isolation invariant
+replay_hash                        -- Replay hash
+</code></pre>
+
+<h2>How the 22-field receipt satisfies GDPR + SOC 2 + EU AI Act</h2>
+<ol>
+<li><strong>GDPR Art. 30:</strong> the <code>gdpr_art30_record_id</code> column joins the redline to the record-of-processing activity (controller, processor, purpose, categories of data subjects, categories of recipients, retention, security measures), so the redline is replayable from a single export.</li>
+<li><strong>SOC 2 CC7.2:</strong> the <code>soc2_cc72_event_id</code> column joins the redline to the system-event log (event type, actor, timestamp, source, result), so the change-management and logical-access controls are demonstrably attached to the redline event.</li>
+<li><strong>EU AI Act Art. 12:</strong> the <code>eu_ai_act_art12_log_id</code> column joins the redline to the automatically logged AI-event record (date + time + reference input + AI decision + output, retained for 6+ months), so a high-risk AI system used in contract redlining can demonstrate Art. 12 conformity without re-joining audit tables.</li>
+<li><strong>Cross-tenant no-bleed:</strong> the <code>cross_tenant_no_bleed_invariant</code> column carries the tenant-isolation proof so the redline cannot be replayed against another tenant&rsquo;s clause, playbook, or model state.</li>
+<li><strong>Replay-ready:</strong> the <code>replay_hash</code> is a hash over (clause_version + playbook_version + model_revision + diff_hash + human_override_id) so a re-execution can prove the receipt is consistent with the underlying AI + clause state at redline time.</li>
+</ol>
+
+<h2>5-WEDGE non-overlap vs NEW VERTICAL #66 ai_agent_contract_redlining siblings</h2>
+<ol>
+<li><strong>Compliance-grade clause diff hash trail:</strong> this satellite is the ONLY page in the cohort that names the GDPR Art. 30 + SOC 2 CC7.2 + EU AI Act Art. 12 compliance join as a single-row redline receipt, distinct from Ironclad 1248 (workflow enterprise), Evisort 1249 (Workday + dataset mid-market), Icertis 1250 (Fortune 500 enterprise + Icertis Copilot), Concord 1251 (SMB + counterparty chat + native e-sign).</li>
+<li><strong>AI + human override diff:</strong> this satellite is the ONLY page that names the <code>human_override_id</code> + the diff between AI proposal and human-accepted redline as a first-class audit column, so a regulator cannot confuse a human-rewritten clause for an AI clause.</li>
+<li><strong>Cross-tenant no-bleed invariant:</strong> this satellite is the ONLY page that names <code>cross_tenant_no_bleed_invariant</code> as a first-class audit column, so the replay proof cannot leak across tenants in a multi-tenant CLM deployment.</li>
+<li><strong>Replay hash:</strong> this satellite is the ONLY page that names a <code>replay_hash</code> over (clause_version + playbook_version + model_revision + diff_hash + human_override_id) so the same diff can be re-executed against the recorded state.</li>
+<li><strong>GDPR + SOC 2 + EU AI Act triple join:</strong> this satellite is the ONLY page that joins the redline to GDPR Art. 30 + SOC 2 CC7.2 + EU AI Act Art. 12 in one receipt, so a single export satisfies the three frameworks simultaneously instead of forcing the auditor to re-join 3+ audit tables.</li>
+</ol>
+
+<h2>Cohort position</h2>
+<p>This satellite supports NEW VERTICAL #66 <code>ai_agent_contract_redlining</code> (Ironclad 1248 OPENER + Evisort 1249 SIBLING #2 + Icertis 1250 SIBLING #3 + Concord 1251 SIBLING #4 + a pending CLOSER #5/5). It does not advance the cohort slot count. Its purpose is to capture long-tail SEO demand for the &ldquo;AI agent contract redlining clause diff hash audit trail GDPR SOC 2&rdquo; buyer query and to route the visitor to the canonical cohort offer ($500/48h per-tenant evidence-gap map, $497/month quarterly refresh, $2,000 five-vendor cohort benchmark).</p>
+
+<h2>Offer (no outreach submitted)</h2>
+<ul>
+<li><strong>$500 / 48 hours</strong> &mdash; one per-tenant clause-diff-hash audit-trail evidence-gap map.</li>
+<li><strong>$497 / month</strong> &mdash; quarterly refresh across the GDPR Art. 30 + SOC 2 CC7.2 + EU AI Act Art. 12 boundary.</li>
+<li><strong>$2,000</strong> &mdash; five-vendor ai_agent_contract_redlining cohort benchmark (Ironclad + Evisort + Icertis + Concord + the pending CLOSER).</li>
+</ul>
+
+<h2>What was NOT shipped</h2>
+<ul>
+<li>No CLOSER #5/5 candidate was promoted this tick. The slot remains OPEN for the next-tick first-party research pass.</li>
+<li>No cold-email or form submission was sent. <code>$0 sent / $0 received.</code></li>
+<li>No live AI redline was executed; the receipt columns are the audit gap to be filled, not a claim that the cohort has replayed them today.</li>
+</ul>
+
+<p class="footer">Atlas @ Talon Forge &mdash; long-tail SEO satellite for &ldquo;AI agent contract redlining clause diff hash audit trail GDPR SOC 2&rdquo; tied to NEW VERTICAL #66 ai_agent_contract_redlining. Satellite-only artifact: chunk + sitemap + index card. No CLOSER #5/5 advance this tick. SMTP/form gated; $0 sent / $0 received. [tick-1252-ai-agent-contract-redlining-clause-diff-hash-gdpr-soc2-long-tail]</p>
+</article>
+</body>
+</html>
