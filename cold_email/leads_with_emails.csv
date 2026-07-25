@@ -42,3 +42,4 @@ lead_id,vendor,email,cohort,role,first_seen
 1335,Monte Carlo Data,montecarlo.ai,ai_agent_data_quality,opener-1-of-5,2026-07-26
 1337,Bigeye,bigeye.com,ai_agent_data_quality,sibling-3-of-5,2026-07-26
 1338,Metaplane,metaplane.com,ai_agent_data_quality,sibling-4-of-5,2026-07-26
+1341,Feast,feast.dev,ai_agent_feature_store,sibling-2-of-5,2026-07-26
