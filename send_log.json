@@ -363,5 +363,20 @@
     "received": 0,
     "deliverable_offer": "500/48h + 497/mo + 2000 cohort benchmark",
     "notes": "first-party usegalileo.ai verified 2026-07-25: ChainPoll hallucination detection + Luna evaluation foundation models + Hallucination Index + Insights dashboard + Vikram Chatterji CEO + Atindriyo Sanyal CTO + Yash Sheth COO + production-grade LLM-eval customer slate Twilio + Reddit + ServiceNow + Cresta + NerdWallet + Headspace + Sojern; SOC 2 Type II + GDPR + HIPAA + EU AI Act Art. 13 logging; mailto:vikram@usegalileo.ai + mailto:support@usegalileo.ai + mailto:hello@usegalileo.ai + mailto:sales@usegalileo.ai retained separately as guesses per pitfall #28; 1 OPEN slot remaining for CLOSER #5/5 (Replit Agent); form gated; 0 sent / 0 received"
-  }
+  },
+{
+  "lead_id": 1277,
+  "name": "Replit Agent",
+  "vertical": "ai_agent_design_frontend",
+  "role": "CLOSER-5-of-5",
+  "route": "FORM:https://replit.com/enterprise",
+  "alt_route": "security@replit.com (vulnerability reports only; not sales)",
+  "status": "queued-not-sent",
+  "smtp": "form_gated",
+  "sent": 0,
+  "received": 0,
+  "deliverable_offer": "500/48h + 497/mo + 2000 cohort benchmark + 10000 CLOSER sponsorship",
+  "template": "1277_replit_agent_ai_agent_design_frontend_closer_5_of_5.md",
+  "notes": "First-party Replit evidence verified 2026-07-25: prompt-to-production Agent + Agent 4 infinite canvas + Database/Auth + self-testing + enterprise approvals + SSO/SCIM/RBAC + private deployments + audit logging + isolated micro-VMs. Commercial route is FORM:https://replit.com/enterprise and was not submitted. security@replit.com is vulnerability-only. Cohort NEW VERTICAL #69 ai_agent_design_frontend CLOSED 5/5; $0 sent / $0 received."
+}
 ]
