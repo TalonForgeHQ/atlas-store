@@ -34,3 +34,4 @@ lead_id,vendor,email,cohort,role,first_seen
 
 "1321","Kong AI Gateway","konghq.com","kong","ai_agent_llm_gateway","sibling-4-of-5","2026-07-26"
 "1322","Helicone","helicone.ai","ai_agent_llm_gateway","closer-5-of-5","2026-07-26"
+"1323","Browserbase","browserbase.com","browserbase","ai_agent_browser_automation","opener-1-of-5","2026-07-26"
