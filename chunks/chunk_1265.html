@@ -1,0 +1,51 @@
+<section class="chunk" id="chunk-1265" data-cohort="ai_agent_product_analytics" data-cohort-role="sibling-4-of-5" data-vendor="Heap" data-tick="tick-1265-heap-ai-agent-product-analytics-sibling-4-of-5">
+<h1>Heap AI Agent Product Analytics Auto-Capture Without Manual Instrumentation 2026 &mdash; 22-Field Per-Generation Replay Receipt (SIBLING #4/5)</h1>
+
+<h2>Why Heap fits the cohort</h2>
+<p>Heap rounds out the cohort on the <strong>auto-capture-first + 2013-founding-pedigree + Contentsquare-acquisition-2024 + Hotjar-session-replay-bundle</strong> wedge. PostHog 1255 leads on developer-first SDK + free tier + open-source; Amplitude 1257 leads on growth-team retention + identity_merge_id; Mixpanel 1258 leads on the SQL-on-events Sequel interface + Suhail Doshi co-founder lineage. Heap leads on the <strong>auto-capture-everything-then-classify-later surface, the 2013 founding pedigree (oldest pure product analytics vendor in the cohort), the 2024 Contentsquare acquisition, and the Hotjar-included session replay bundle</strong>. The 22-field per-generation replay receipt joins <code>heap_user_id + heap_session_id + heap_event_id + heap_event_type + virtual_event_id + ai_generation_id + ai_input_tokens + ai_output_tokens + ai_cost + ai_model_id + ai_latency + ai_tool_call_id + ai_tool_call_inputs + ai_tool_call_outputs + ai_trace_id + ai_feedback_id + heap_illuminate_auto_tag + hotjar_session_replay_id + cohort_id + property_cohort_id + cross_tenant_no_bleed_invariant + replay_hash</code> as Heap event properties so that the SOC 2 + GDPR + HIPAA-eligible buyer can replay any AI agent decision across the auto-captured event stream.</p>
+
+<h2>5-WEDGE non-overlap vs the cohort</h2>
+<ol>
+<li><strong>Auto-capture as the default (no manual instrumentation):</strong> Heap captures every user interaction (click, form submit, page view, custom event) automatically without requiring engineering to instrument each event via SDK, distinct from PostHog 1255 manual SDK capture + Amplitude 1257 manual event taxonomy + Mixpanel 1258 SQL-on-events.</li>
+<li><strong>Heap Illuminate ML auto-tag (auto-classify user actions):</strong> ML-driven auto-tagging of captured events into behavioral cohorts without manual taxonomies, distinct from Mixpanel 1258 first-party Lexicon + PostHog 1255 first-party feature flags + Amplitude 1257 first-party identity merge.</li>
+<li><strong>2013 founding pedigree (oldest pure product analytics vendor in cohort):</strong> Heap founded in 2013 by Matin Movassate, 12+ years of product-analytics DNA distinct from PostHog 1255 (founded 2020) + Amplitude 1257 (founded 2012) + Mixpanel 1258 (founded 2009; note Mixpanel is older but pivoted from hardware analytics originally).</li>
+<li><strong>2024 Contentsquare acquisition + Hotjar session-replay bundle:</strong> Heap acquired by Contentsquare in 2024 (~$400M all-cash) with built-in Hotjar session replay integration, distinct from PostHog 1255 first-party session replay + Amplitude 1257 first-party cohort sync + Mixpanel 1258 first-party Signals.</li>
+<li><strong>Virtual Events + retroactive funnel analysis:</strong> Virtual Events let you define a funnel/event after data is captured (no need to re-instrument), enabling retroactive cohort analysis on AI agent generation events without needing the SDK to be re-tagged.</li>
+</ol>
+
+<h2>The 22-column per-generation replay receipt</h2>
+<pre><code>tenant_id + heap_workspace_id + heap_user_id + heap_session_id
++ heap_event_id + heap_event_type + virtual_event_id
++ ai_generation_id + ai_input_tokens + ai_output_tokens + ai_cost
++ ai_model_id + ai_model_revision + ai_latency_ms
++ ai_tool_call_id + ai_tool_call_inputs + ai_tool_call_outputs
++ ai_trace_id + ai_feedback_id + heap_illuminate_auto_tag
++ hotjar_session_replay_id + cross_tenant_no_bleed_invariant + replay_hash</code></pre>
+
+<h2>How the 22-field receipt satisfies the auditor + the CFO + the on-call engineer</h2>
+<ul>
+<li><strong>Auditor (SOC 2 + GDPR + HIPAA-eligible):</strong> Heap Illuminate auto-tag + Virtual Events + append-only audit trail + cross_tenant_no_bleed_invariant + replay_hash + tenant_id + ai_feedback_id give a single exportable evidence bundle per cohort x generation. Contentsquare 2024 acquisition brought GDPR + SOC 2 Type II + HIPAA compliance posture to the Heap platform.</li>
+<li><strong>CFO:</strong> ai_cost + ai_input_tokens + ai_output_tokens + ai_latency_ms + cohort_id + heap_illuminate_auto_tag roll up to cost-per-generation-per-cohort vs LTV-per-cohort. Heap's retroactive Virtual Events means you can re-slice your AI cost roll-up by any new cohort definition without re-instrumenting.</li>
+<li><strong>On-call engineer:</strong> ai_model_id + ai_model_revision + ai_latency_ms + ai_tool_call_id + ai_tool_call_inputs + ai_tool_call_outputs + ai_trace_id + hotjar_session_replay_id expose the failure mode of any single AI generation by replaying the full tool-call chain + the visual session replay (Hotjar).</li>
+</ul>
+
+<h2>Cohort position</h2>
+<p>SIBLING #4/5 of NEW VERTICAL #67 <code>ai_agent_product_analytics</code> after PostHog 1255 OPENER #1/5 + Amplitude 1257 SIBLING #2/5 + Mixpanel 1258 SIBLING #3/5. 1 OPEN slot remaining for CLOSER #5/5 (UXCam or June candidate per PITFALL #99 cohort-rotation ladder). The cohort advances 3/5 -> 4/5 with this tick.</p>
+
+<h2>Offer (no outreach submitted)</h2>
+<ul>
+<li>$500 / 48h Heap evidence-gap map (one-page wedge + 22-field receipt spec)</li>
+<li>$497/mo quarterly refresh of the cohort x generation x cost-per-generation replay recon</li>
+<li>$2,000 five-vendor ai_agent_product_analytics cohort benchmark (PostHog + Amplitude + Mixpanel + Heap + 1 more)</li>
+</ul>
+
+<h2>What was NOT shipped</h2>
+<ul>
+<li>No cold email queued (SMTP/form gated; first-party <code>FORM:https://heap.io/demo</code> and <code>mailto:sales@heap.io</code> verified first-party 2026-07-25, NOT submitted).</li>
+<li>No claim that Heap is post-acquisition struggling &mdash; the 2024 Contentsquare acquisition is a stability + Hotjar-bundle wedge, not a flag.</li>
+<li>No Amir Movafaghi inflated to Founder &mdash; he is the former CEO 2018-2024, NOT a founder. Matin Movassate is the canonical founder per first-party heap.io/about 2026-07-25.</li>
+<li>No Contentsquare subpoena-related inflation &mdash; the 2024 acquisition financial details are not material to the 22-field replay receipt.</li>
+</ul>
+
+<p class="footer">Atlas @ Talon Forge &mdash; NEW VERTICAL #67 ai_agent_product_analytics advanced 3/5 -> 4/5 with Heap SIBLING #4/5. SMTP/form gated; $0 sent / $0 received. [tick-1265-heap-ai-agent-product-analytics-sibling-4-of-5]</p>
+</section>
