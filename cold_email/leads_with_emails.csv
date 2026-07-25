@@ -18,3 +18,4 @@ lead_id,vendor,email,cohort,role,first_seen
 1304,StarRocks,starrocks.io,ai_agent_OLAP_analytics_database,sibling-3-of-5,2026-07-25
 "1305","DuckDB","duckdb.org","ai_agent_OLAP_analytics_database","sibling-4-of-5","2026-07-25"
 "1306","Apache Doris","doris.apache.org","ai_agent_OLAP_analytics_database","closer-5-of-5","2026-07-25"
+"1307","Datadog","datadoghq.com","ai_agent_observability","opener-1-of-5","2026-07-26"
