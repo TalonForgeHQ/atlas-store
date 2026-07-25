@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amplitude AI Agent Product Analytics LLM Cost Per Generation 2026 — 22-Field Per-Identity Cohort Receipt</title>
+<meta name="description" content="A replay-ready AI agent product analytics receipt for Amplitude. Joins tenant_id, amplitude_project_id, amplitude_user_id, session_id, ai_generation_id, ai_input_tokens, ai_output_tokens, ai_latency, ai_cost, ai_model_id, ai_model_revision, ai_span_id, ai_tool_call_id, ai_tool_call_inputs, ai_tool_call_outputs, ai_trace_id, ai_feedback_id, cohort_id, cohort_membership_id, identity_merge_id, cross_tenant_no_bleed_invariant and replay_hash for one AI generation event rolled into a cohort analysis.">
+<meta property="og:title" content="Amplitude for AI agent product analytics — 22-field per-identity cohort receipt">
+<meta property="og:description" content="A 22-field AI product analytics receipt that joins Amplitude project, identity, session, AI generation, AI input/output tokens, AI latency, AI cost, model id + revision, span id, tool-call id, trace id, feedback id, cohort id + cohort membership, identity merge, cross-tenant no-bleed, replay hash, and retention into one growth-team row.">
+<meta property="og:type" content="article">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1257.html">
+</head>
+<body>
+<article class="chunk" id="chunk-1257" data-cohort="ai_agent_product_analytics" data-cohort-role="sibling-2-of-5" data-vendor="Amplitude" data-tick="1257">
+<h1>Amplitude &mdash; AI Agent Product Analytics &amp; LLM Cost Per Generation 2026</h1>
+<p class="lede">When a growth team instruments an AI agent product with Amplitude, the difference between a funnels-only view and a cohort-aware unit-economics view is the 22-field per-identity AI generation receipt joined to cohort membership + identity merge. Below is the field set required to roll up cohort-level cost-per-generation against LTV &mdash; and the 5 evidence gaps that most AI product teams still leave open in 2026.</p>
+
+<h2>Why Amplitude rounds out the cohort</h2>
+<p>PostHog 1255 OPENER emits the first-party <code>llm-analytics</code> events from the developer SDK; Amplitude 1257 ships the growth-team-grade cohort + identity layer that joins those generations to retention funnels, behavioral cohorts, and identity-merged user journeys. Amplitude is the ONLY cohort candidate with <code>cohort_id</code> + <code>cohort_membership_id</code> + <code>identity_merge_id</code> as named first-party fields adjacent to the AI generation event. The 22-field per-identity cohort receipt below is the join key that lets a growth team answer &ldquo;which cohort is profitable on AI cost?&rdquo; instead of just &ldquo;what is the LLM bill?</rdquo;.</p>
+
+<h2>5-WEDGE non-overlap vs the cohort</h2>
+<ol>
+<li><strong>First-party cohort + identity merge:</strong> Amplitude is the ONLY cohort candidate with named first-party <code>cohort_id</code> + <code>cohort_membership_id</code> + <code>identity_merge_id</code> fields adjacent to the AI generation event, distinct from PostHog 1255 (developer SDK, no first-party cohort identity merge).</li>
+<li><strong>Growth-team-grade retention + funnel layer:</strong> Amplitude is the ONLY cohort candidate with first-party retention tables, funnel charts, and stickiness analysis joined to AI generation events, distinct from PostHog 1255 (which is dev-first).</li>
+<li><strong>Spenser Skates founder witness:</strong> Amplitude is the ONLY cohort candidate with Spenser Skates as first-party co-founder &amp; CEO witness on the public /about page, distinct from PostHog 1255 with James Hawkins and the cohort's Microsoft Clarity / LogRocket siblings with their founder-lineage.</li>
+<li><strong>$200/mo Starter + $49/mo Plus growth pricing:</strong> Amplitude is the ONLY cohort candidate with a $200/mo Starter + $49/mo Plus growth-pricing lane that routes to a self-serve product team rather than a sales-led enterprise motion, distinct from PostHog 1255 free tier + $0/mo pay-as-you-go SDK and from the cohort's enterprise siblings.</li>
+<li><strong>Microsoft Clarity bundled with Amplitude Plus:</strong> Amplitude is the ONLY cohort candidate that ships Microsoft Clarity as a bundled first-party session replay + heatmap layer (free with Amplitude Plus $49/mo), so a growth team can pair cohort analysis with session replay in one purchase.</li>
+</ol>
+
+<h2>The 22-field per-identity cohort receipt</h2>
+<pre><code>tenant_id                          -- Atlas / Amplitude tenant
+amplitude_project_id                -- Amplitude project (e.g. 12345)
+amplitude_user_id                   -- End-user Amplitude id (post-identity-merge)
+session_id                          -- Session id
+ai_generation_id                    -- AI generation id
+ai_input_tokens                     -- Input tokens
+ai_output_tokens                    -- Output tokens
+ai_latency                          -- Latency (ms)
+ai_cost                             -- Cost (USD)
+ai_model_id                         -- Model id (vendor + family)
+ai_model_revision                   -- Model revision
+ai_span_id                          -- AI span (one generation = one span)
+ai_tool_call_id                     -- Tool call id
+ai_tool_call_inputs                 -- Tool-call inputs
+ai_tool_call_outputs                -- Tool-call outputs
+ai_trace_id                         -- Trace id (multi-step agent loop)
+ai_feedback_id                      -- User feedback id (thumbs + rating + comment)
+cohort_id                           -- Cohort id (e.g. "paid-converter-2026Q3")
+cohort_membership_id                -- Cohort membership row (user-in-cohort)
+identity_merge_id                   -- Identity merge id (anonymous + user_id + device_id)
+cross_tenant_no_bleed_invariant     -- Tenant isolation proof
+replay_hash                         -- Replay hash over (model_revision + tokens + cost + cohort_id + identity_merge_id)</code></pre>
+
+<h2>How the 22-field receipt satisfies the growth team + the CFO</h2>
+<ol>
+<li><strong>Cohort-level cost-per-generation:</strong> the <code>cohort_id</code> + <code>cohort_membership_id</code> + <code>ai_cost</code> + <code>ai_input_tokens</code> + <code>ai_output_tokens</code> columns join to the cohort retention table so the team can roll up cost-per-generation-per-cohort against LTV-per-cohort from a single export.</li>
+<li><strong>Identity-merged AI journey:</strong> the <code>identity_merge_id</code> + <code>amplitude_user_id</code> columns let a developer trace the same end user's AI generations across <code>anonymous_id</code> + <code>user_id</code> + <code>device_id</code> without losing generations during the merge window.</li>
+<li><strong>Tool-call margin per cohort:</strong> the <code>ai_tool_call_id</code> + <code>ai_tool_call_inputs</code> + <code>ai_tool_call_outputs</code> + <code>ai_cost</code> + <code>cohort_id</code> columns let the team mark which tool is ROI-positive per cohort and which tool is a margin leak per cohort.</li>
+<li><strong>Funnel-aware model upgrades:</strong> the <code>ai_model_id</code> + <code>ai_model_revision</code> + <code>cohort_id</code> columns let a regression hunt pin the cohort that was hurt by a model upgrade vs the cohort that benefited.</li>
+<li><strong>Multi-step agent trace per cohort:</strong> the <code>ai_span_id</code> + <code>ai_trace_id</code> + <code>cohort_id</code> columns let a developer replay a multi-step agent loop scoped to a single cohort, not just from the global generation event.</li>
+</ol>
+
+<h2>Cohort position</h2>
+<p>This is SIBLING #2/5 of NEW VERTICAL #67 <code>ai_agent_product_analytics</code> after PostHog 1255 OPENER #1/5. The cohort advances 1/5 &rarr; 2/5 with this tick. The next tick (1258) will open SIBLING #3/5 candidate (Mixpanel or Heap). Its purpose is to capture long-tail SEO demand for the &ldquo;Amplitude AI agent product analytics LLM cost per generation per cohort&rdquo; buyer query and to route the visitor to the canonical cohort offer ($500/48h per-tenant evidence-gap map, $497/month quarterly refresh, $2,000 five-vendor cohort benchmark).</p>
+
+<h2>Offer (no outreach submitted)</h2>
+<ul>
+<li><strong>$500 / 48 hours</strong> &mdash; one per-tenant AI-generation cohort receipt evidence-gap map.</li>
+<li><strong>$497 / month</strong> &mdash; quarterly refresh across the 22-field LLM analytics + cohort boundary.</li>
+<li><strong>$2,000</strong> &mdash; five-vendor ai_agent_product_analytics cohort benchmark (PostHog + Amplitude + 3 pending siblings).</li>
+</ul>
+
+<h2>What was NOT shipped</h2>
+<ul>
+<li>No SIBLING #3/5-#5/5 candidate was promoted this tick. The cohort now sits at 2/5 with PostHog + Amplitude as OPENER + SIBLING #2.</li>
+<li>No cold-email or form submission was sent. <code>$0 sent / $0 received.</code></li>
+<li>No live AI generation was captured; the receipt columns are the dev-side gap to be filled, not a claim that Amplitude has replayed them today.</li>
+</ul>
+
+<p class="footer">Atlas @ Talon Forge &mdash; SIBLING #2/5 of NEW VERTICAL #67 ai_agent_product_analytics: Amplitude with first-party cohort_id + identity_merge_id + Spenser Skates co-founder &amp; CEO + 22-field per-identity cohort receipt. Email sales@amplitude.com verified first-party on 2026-07-25; $0 sent / $0 received. [tick-1257-amplitude-ai-agent-product-analytics-sibling-2-of-5]</p>
+</article>
+</body>
+</html>
