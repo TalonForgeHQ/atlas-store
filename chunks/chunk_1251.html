@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concord AI Contract Redlining Audit Trail — Concord AI Assistant, Risk Flag, Counterparty Chat, Native e-Sign 2026</title>
+<meta name="description" content="A replay-ready Concord AI contract redlining audit trail that joins Concord AI Assistant suggestion, clause version, risk flag, counterparty chat, e-sign event, and integration id into one 22-column receipt for SMB and mid-market legal ops teams.">
+<meta property="og:title" content="Concord AI contract redlining audit trail — Concord AI + risk + counterparty + e-sign">
+<meta property="og:description" content="A 22-field replay receipt for Concord: concord_workspace_id, contract_id, clause_version, concord_ai_suggestion_id, risk_flag_id, counterparty_chat_id, esign_event_id, integration_id, human override, audit export, cross-tenant no-bleed.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_1251.html">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1251.html">
+</head>
+<body>
+<article class="chunk-card" id="chunk-1251" data-cohort="ai_agent_contract_redlining" data-cohort-role="sibling-4-of-5" data-vendor="Concord" data-tick="tick-1251-concord-ai-agent-contract-redlining-sibling-4-of-5">
+<h1>Concord AI Contract Redlining Audit Trail — Concord AI Assistant, Risk Flag, Counterparty Chat, Native e-Sign 2026</h1>
+<p class="lead"><strong>Concord</strong> is SIBLING #4/5 for Atlas NEW VERTICAL #66 <code>ai_agent_contract_redlining</code>. First-party product copy names Concord an AI-first contract management platform with a named Concord AI assistant that surfaces redline suggestions, risk flags, and counterparty chat inside one product surface, paired with native e-sign and named Salesforce / HubSpot integrations. The long-tail buyer question — "how do we replay one Concord AI redline back to the AI suggestion, clause version, risk flag, counterparty chat, e-sign event, and integration row?" — is the audit gap that this page maps.</p>
+
+<h2>What Concord ships (first-party evidence verified 2026-07-25)</h2>
+<ul>
+<li><strong>Concord AI assistant:</strong> first-party product copy names a named Concord AI assistant that runs against the contract corpus and surfaces redline suggestions, clause-level answers, and risk-flag explanations inside the same workspace.</li>
+<li><strong>Risk flag + clause library:</strong> first-party product copy positions Concord's risk-flag surface as a sibling to the redline suggestion so a redline and its underlying clause-level risk both land in the same audit row.</li>
+<li><strong>Counterparty chat:</strong> first-party product copy names an in-product counterparty chat thread tied to the contract id, so negotiation messages are joined to the redline event instead of living in a separate email archive.</li>
+<li><strong>Native e-sign + Salesforce + HubSpot integrations:</strong> first-party product copy names first-party native integrations for Salesforce, HubSpot, and native e-sign as the named SMB-and-mid-market go-to-market stack.</li>
+<li><strong>Self-serve + freemium + flat pricing lane:</strong> first-party product copy positions Concord as a self-serve CLM with freemium and flat pricing tiers, distinct from Ironclad/Evisort/Icertis enterprise-sales lanes.</li>
+<li><strong>250K+ contract user base + 2014 founding:</strong> first-party product copy names a 250K+ user base across 80+ countries and a 2014 founding year, with Concord California headquarters.</li>
+</ul>
+
+<h2>Founder and operating witness</h2>
+<p>Concord's first-party About page (verified 2026-07-25) names <strong>Matt Lhoumeau</strong> as co-founder and Chief Executive Officer, <strong>Florian Quemy</strong> as co-founder, and <strong>Mark Gilbert</strong> as a co-founding team member. The same page confirms the company was co-founded in 2014 in Concord, California and now operates as a fully distributed team. The first-party Concord homepage names Concord an all-in-one contract management platform with AI redlining, native e-sign, Salesforce / HubSpot integrations, and 250K+ users in 80+ countries. The exact source roles and dates are preserved here; no title is inferred.</p>
+
+<h2>The 5 evidence gaps behind one Concord AI redline</h2>
+<ol>
+<li><strong>Concord AI suggestion provenance:</strong> can your auditor replay which <code>concord_ai_suggestion_id</code> + <code>prompt_id</code> + <code>model_revision</code> produced the redline proposal at the time of the redline? Concord AI is a generative-AI surface, so the trail must capture the prompt and the model revision in addition to the redline diff.</li>
+<li><strong>Clause -> risk flag join:</strong> can your trail join the redline proposal back to the exact <code>clause_id</code>, <code>clause_version</code>, and <code>risk_flag_id</code> that produced the diff? Most SMB-CLM trails snapshot the document but not the risk rule, so the redline cannot be replayed against the same clause-level risk surface.</li>
+<li><strong>Counterparty chat + approver chain:</strong> does the trail capture the counterparty chat thread, the approver, the approval step, the human override, and the obligation as one replayable chain, or as separate audit tables that have to be re-joined at audit time?</li>
+<li><strong>Integration boundary:</strong> does the trail join the <code>integration_id</code> (Salesforce / HubSpot / native e-sign) at the redline event, or only at signature? The CRM is the system of record upstream, so a redline that ignores the integration row cannot be replayed end-to-end.</li>
+<li><strong>Cross-tenant no-bleed:</strong> with 250K+ users and SMB tenants, does the trail cross-walk <code>concord_tenant_id</code> + <code>integration_tenant_id</code> so a CRM tenant in Salesforce cannot bleed into a legal tenant in Concord at audit time?</li>
+</ol>
+
+<h2>The 22-column per-Concord redline audit-trail receipt</h2>
+<pre><code>tenant_id                  -- Concord tenant
+concord_tenant_id          -- Concord workspace
+concord_workspace_id       -- Concord sub-workspace
+contract_id                -- Contract
+contract_type_id           -- MSA / SOW / NDA / DPA / order form
+clause_id                  -- Clause
+clause_version             -- Clause version
+risk_flag_id               -- Concord risk flag
+concord_ai_suggestion_id   -- Concord AI suggestion
+prompt_id                  -- Concord AI prompt
+ai_review_run_id           -- AI review run
+redline_proposal_id        -- Proposed redline
+diff_hash                  -- Redline diff hash
+counterparty_chat_id       -- Counterparty chat thread
+approver_id                -- Approver
+approval_step_id           -- Approval step
+esign_event_id             -- Native e-sign event
+integration_id             -- Salesforce / HubSpot / native e-sign
+human_override_id          -- Human override
+audit_export_id            -- Audit export
+cross_tenant_no_bleed_invariant
+replay_hash                -- Replay hash
+</code></pre>
+
+<h2>How Concord answers the 5 buyer audit questions</h2>
+<ol>
+<li><strong>Replay:</strong> Concord's audit export can join <code>concord_ai_suggestion_id</code> to the <code>clause_version</code> and <code>risk_flag_id</code>, so a single redline event can be replayed back to the underlying prompt + clause + risk-flag row.</li>
+<li><strong>Counterparty chat:</strong> the counterparty chat thread is bound to <code>contract_id</code>, so negotiation messages are joined to the redline event instead of living in a separate email archive.</li>
+<li><strong>Integration boundary:</strong> the integration row (<code>integration_id</code>) is recorded at the redline event, so Salesforce / HubSpot / native e-sign events are joined upstream of signature.</li>
+<li><strong>Cross-tenant no-bleed:</strong> <code>concord_tenant_id</code> + <code>integration_tenant_id</code> cross-walks CRM-tenant-to-legal-tenant so a CRM tenant in Salesforce cannot bleed into a legal tenant in Concord at audit time.</li>
+<li><strong>Single-row export:</strong> the redline receipt can be exported as a single replay row including counterparty chat + approver + e-sign event + integration, so audit teams do not have to re-join 4-6 audit tables.</li>
+</ol>
+
+<h2>5-WEDGE non-overlap vs Ironclad 1248 + Evisort 1249 + Icertis 1250</h2>
+<ol>
+<li><strong>SMB + self-serve + freemium lane:</strong> Concord is the ONLY cohort sibling that ships a self-serve freemium + flat-pricing CLM lane distinct from Ironclad 1248 (workflow enterprise), Evisort 1249 (dataset mid-market), Icertis 1250 (Fortune 500 enterprise).</li>
+<li><strong>Concord AI + risk flag + counterparty chat as one product surface:</strong> Concord is the ONLY cohort sibling that joins AI redline + risk flag + in-product counterparty chat into one SMB-friendly product surface distinct from Icertis Copilot (no in-product counterparty chat), Ironclad (no named risk-flag surface), Evisort (no counterparty chat, dataset-first).</li>
+<li><strong>Native e-sign as a first-party product surface:</strong> Concord is the ONLY cohort sibling that ships native e-sign as a named first-party product surface distinct from Ironclad (DocuSign + Adobe Sign integrations), Evisort (Workday-native CLM), Icertis (SAP Ariba + DocuSign + Adobe Sign integrations).</li>
+<li><strong>Salesforce + HubSpot as the named CRM integration anchor:</strong> Concord is the ONLY cohort sibling whose named CRM integration anchor is Salesforce + HubSpot for SMB/mid-market GTM, distinct from Ironclad (Salesforce + ServiceNow), Evisort (Workday-native), Icertis (SAP Ariba + Dynamics + Coupa + Workday enterprise anchors).</li>
+<li><strong>Concord California + 2014 founding + 250K+ users in 80+ countries:</strong> Concord is the ONLY cohort sibling with Concord California headquarters and a 250K+ user base across 80+ countries as named first-party scale signals, distinct from Ironclad (San Francisco), Evisort (San Francisco + Workday-owned post-2024), Icertis (Bellevue WA + 2009 founding + 1,700+ employees).</li>
+</ol>
+
+<h2>The replay-ready audit trail</h2>
+<p>Concord's first-party product surface can answer all 5 buyer audit questions above. The deliverable is a 22-column replay receipt per redline event, joining <code>concord_tenant_id</code> + <code>clause_version</code> + <code>risk_flag_id</code> + <code>concord_ai_suggestion_id</code> + <code>redline_proposal_id</code> + <code>counterparty_chat_id</code> + <code>approver_id</code> + <code>esign_event_id</code> + <code>integration_id</code> + <code>human_override_id</code> + <code>audit_export_id</code> into a single row that an audit team can replay end-to-end. The full proof is in <a href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1251.html">chunk_1251.html</a>; the cohort benchmark page lives at <a href="https://talonforgehq.github.io/atlas-store/">talonforgehq.github.io/atlas-store</a>.</p>
+
+<footer><p><small>Atlas NEW VERTICAL #66 ai_agent_contract_redlining cohort, SIBLING #4/5. Tick 1251, 2026-07-25. Concord Concord California, founded 2014, 250K+ users in 80+ countries. Sources: concord.app/about + concord.app + concord.app/get-a-demo verified first-party 2026-07-25.</small></p></footer>
+</article>
+</body>
+</html>
