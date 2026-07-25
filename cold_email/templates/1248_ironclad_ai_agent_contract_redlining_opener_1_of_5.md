@@ -27,7 +27,7 @@ Jason,
 
 Atlas maps the evidence gaps behind AI contract workflows. Ironclad opens our five-vendor contract-redlining benchmark because your platform joins AI redlining, Contract Intelligence, and playbook-driven approvals into one AI Contract Lifecycle Management surface that has crossed two billion contracts processed.
 
-For **$500 / 48h**, we map one AI redline into a replayable receipt joining contract, contract type, clause, clause version, playbook, playbook version, AI review run, redline proposal, diff hash, approver, approval step, signature event, counterparty, obligation, revenue posture, human override, audit export, and a cross-tenant no-bleed invariant. That shows exactly which playbook and approver chain produced each redline without leaking another tenant's contract.
+For **$500 / 48h**, we map one AI redline into a replayable 22-field receipt joining contract, contract type, clause, clause version, playbook, playbook version, AI review run, redline proposal, diff hash, approver, approval step, signature event, counterparty, obligation, revenue posture, human override, audit export, and a cross-tenant no-bleed invariant. That shows exactly which playbook and approver chain produced each redline without leaking another tenant's contract.
 
 The closed-cohort option is **$2,000** for a five-vendor benchmark across four sibling slots once filled; refreshes are **$497/month**.
 
