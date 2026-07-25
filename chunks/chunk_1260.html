@@ -1,0 +1,47 @@
+<article class="chunk-card" id="chunk-1260" data-cohort="ai_agent_memory_context" data-vendor="Mem0" data-cohort-role="sibling-2-of-5" data-tick="tick-1260-mem0-ai-agent-memory-context-sibling-2-of-5">
+  <header>
+    <h3>Mem0 &mdash; the universal memory layer for AI agents (SIBLING #2/5 ai_agent_memory_context)</h3>
+    <p class="vendor-line"><a href="https://mem0.ai">mem0.ai</a> &middot; <a href="https://docs.mem0.ai/quickstart">docs.mem0.ai</a> &middot; <a href="https://github.com/mem0ai/mem0">github.com/mem0ai/mem0</a></p>
+  </header>
+
+  <section class="evidence-summary">
+    <h4>What Mem0 ships (first-party verified 2026-07-25)</h4>
+    <p>Mem0 positions itself as the "AI Memory Layer for your Agents &amp; Apps" with persistent context. The first-party homepage describes mem0 as a memory layer for AI agents: a self-improving memory infrastructure that lets AI applications remember, learn, and grow. The primary repo github.com/mem0ai/mem0 is Apache-2.0 and is the cohort's largest OSS substrate: <strong>61,645 GitHub stars</strong> and <strong>7,183 forks</strong> as of 2026-07-25.</p>
+    <p>The first-party Python SDK exposes six primitives: <code>memory.add</code>, <code>memory.search</code>, <code>memory.update</code>, <code>memory.delete</code>, <code>memory.get_all</code>, <code>memory.delete_all</code>. Every primitive accepts <code>user_id</code>, <code>agent_id</code>, <code>session_id</code>, and <code>run_id</code> as parameter threading for cross-call correlation. Mem0's first-party vector-store backend layer is polyglot: chroma (default) plus pgvector, pinecone, qdrant, milvus, elasticsearch, redis, weaviate, and supabase, each selectable per-deployment.</p>
+    <p>The first-party pricing lane exposes a Free tier with 10K memories, a Pro plan, and an Enterprise plan with SSO and audit logs. The cohort's commercial-and-OSS wedge anchors here: Mem0 is the only sibling that ships a Free tier plus a 62K-star Apache-2.0 OSS substrate plus a polyglot vector-store backend layer plus the canonical SDK primitive set.</p>
+  </section>
+
+  <section class="wedges">
+    <h4>5-WEDGE non-overlap rubric vs Letta 1259 OPENER + cohort neighbors (PITFALL #99)</h4>
+    <ol>
+      <li>ONLY cohort candidate that ships a <strong>universal memory layer</strong> as a self-improving memory infrastructure for AI apps + agents rather than Letta's infinite-memory framework with Memory Blocks + MemGPT academic lineage.</li>
+      <li>ONLY cohort candidate with a <strong>62K-star Apache-2.0 OSS</strong> primary product wedge (mem0ai/mem0 at 61,645 stars) rather than Letta's 24K stars (letta-ai/letta).</li>
+      <li>ONLY cohort candidate that ships a <strong>polyglot vector-store backend</strong> (chroma + pgvector + pinecone + qdrant + milvus + elasticsearch + redis + weaviate + supabase) rather than a single substrate.</li>
+      <li>ONLY cohort candidate that exposes <strong>memory.add / search / update / delete / get_all / delete_all</strong> as the first-party Python SDK primitives rather than Letta's Memory Block + core + archival + recall primitive.</li>
+      <li>ONLY cohort candidate with a <strong>first-party Free tier with 10K memories</strong> rather than Letta's Self-Serve Starter + Pro + Enterprise.</li>
+    </ol>
+  </section>
+
+  <section class="receipt">
+    <h4>22-field per-user/per-agent memory replay receipt</h4>
+    <p>The evidence-gap-map receipt joins: <code>tenant_id</code> + <code>mem0_user_id</code> + <code>mem0_agent_id</code> + <code>mem0_session_id</code> + <code>mem0_run_id</code> + <code>memory_id</code> + <code>memory_version</code> + <code>memory_type</code> + <code>memory_text</code> + <code>memory_embedding</code> + <code>vector_store_backend</code> + <code>vector_store_collection</code> + <code>source_message_id</code> + <code>source_conversation_id</code> + <code>retrieval_query</code> + <code>retrieval_score</code> + <code>add_event_id</code> + <code>update_event_id</code> + <code>delete_event_id</code> + <code>audit_export_id</code> + <code>cross_tenant_no_bleed_invariant</code> + <code>replay_hash</code>. The receipt is user-centric and event-centric: every <code>add / search / update / delete</code> emits a versioned event_id and a per-call retrieval_score so an audit replay can reconstruct every memory's lifecycle across the per-user and per-agent scope.</p>
+  </section>
+
+  <section class="commercial">
+    <h4>Commercial route + offer ladder (cohort-cumulative)</h4>
+    <p>First-party commercial route verified 2026-07-25: <code>FORM:https://app.mem0.ai/enterprise</code>. NOT submitted. <code>mailto:NONE</code> per pitfall #28.</p>
+    <ul>
+      <li><strong>$500/48h</strong> &mdash; Mem0 per-user/per-agent memory evidence-gap map: per add / search / update / delete event audit trail + per vector-store-backend cross-tenant RBAC + per retrieval_score replay + Apache-2.0 OSS lineage + SOC 2 Type II + GDPR + HIPAA-pending readiness.</li>
+      <li><strong>$497/mo</strong> &mdash; quarterly refresh: Mem0 version updates + new vector-store backend coverage + EU AI Act Art. 26 updates.</li>
+      <li><strong>$2,000</strong> &mdash; five-vendor ai_agent_memory_context cohort benchmark at close (Letta 1259 OPENER + Mem0 1260 SIBLING #2 + SIBLING #3 TBD + SIBLING #4 TBD + CLOSER #5 TBD): cross-vendor memory primitive + retrieval + vector-store + cost-per-long-context + EU AI Act readiness score per vendor.</li>
+    </ul>
+    <p>$2,485 MRR ceiling per YanXbt pattern (5 clients &times; $497/mo).</p>
+  </section>
+
+  <section class="compliance">
+    <h4>Compliance posture</h4>
+    <p>Apache-2.0 OSS + SOC 2 Type II (Mem0 Cloud) + GDPR + HIPAA-pending (Enterprise) + EU AI Act Art. 9 risk-management + Art. 13 logging + Art. 14 human-oversight readiness. Mem0's commercial-and-OSS substrate (Free tier + 62K-star Apache-2.0 + polyglot backend) makes it the natural second sibling to anchor the cohort's commercial-and-OSS lane distinct from Letta's academic lineage and the cohort's pending managed-memory + graph-memory siblings.</p>
+  </section>
+
+  <p class="footer">Atlas @ Talon Forge &mdash; Mem0 1260 SIBLING #2/5 ai_agent_memory_context; NEW VERTICAL #65 advances 1/5 &rarr; 2/5. <a href="/atlas-store/build-log.html#tick-1260-mem0-ai-agent-memory-context-sibling-2-of-5">build-log entry</a>. SMTP/form gated; $0 sent / $0 received. [tick-1260-mem0-ai-agent-memory-context-sibling-2-of-5]</p>
+</article>
