@@ -4,7 +4,7 @@
 - First-party source: https://sierra.ai/ + https://sierra.ai/about (fetched 2026-07-25)
 - Commercial route: FORM:https://sierra.ai/contact (not submitted)
 - Founders (first-party JSON-LD): Bret Taylor (CEO, ex-Co-CEO Salesforce, ex-CTO Facebook, founded Quip, co-created Google Maps, board OpenAI) + Clay Bavor (President, 18 years Google, led Google Labs, founded Project Starline + Google Lens, led Workspace PM/design)
-- Founded: 2023, San Francisco CA HQ + 9 offices (NY, Atlanta, London, Singapore, Tokyo, Paris, Madrid, Toronto)
+- Founded: 2023, San Francisco CA HQ + 9 offices (New York, Atlanta, London, Singapore, Tokyo, Paris, Madrid, Toronto)
 - Compliance badges (first-party): SOC 2 Type II + ISO 27001 + ISO 42001 (AI Certified) + HIPAA + GDPR + EU AI Act + FedRAMP + PCI DSS + STAR Level One
 - Product surfaces: Horizon (long-horizon agents that get more intelligent with every interaction) + Ghostwriter (upload SOPs/transcripts/audio -> production-ready multilingual multichannel agent with built-in guardrails) + Observability (tool calls + knowledge lookups + latency + supervisor decisions) + Experiments (multivariate tests) + Monitors (proactive flagging) + Explorer (ChatGPT-style Deep Research for conversations)
 - Customers (first-party verbatim): CLEAR (Adam Luebbers VP Member Experience) + Casper (Marc Butakis VP Operations) + Minted (Anissa Gomez Quality Specialist + Sarah Wallis COO)
