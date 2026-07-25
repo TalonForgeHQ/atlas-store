@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evisort AI Contract Redlining Audit Trail — 14M+ Contract Dataset, Workday CLM, Obligation Extraction 2026</title>
+<meta name="description" content="A replay-ready Evisort AI contract redlining audit trail that joins 14M+ contract dataset, AI clause extraction, Workday CLM, approver chain, redline diff, obligation, and human override into one 22-column receipt.">
+<meta property="og:title" content="Evisort AI contract redlining audit trail — 14M+ dataset + Workday CLM">
+<meta property="og:description" content="A 22-field replay receipt for Evisort AI redlines: dataset version, clause extraction, obligation, redline diff, approver, signature event, and human override.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_1249.html">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1249.html">
+</head>
+<body>
+<article class="chunk-card" id="chunk-1249" data-cohort="ai_agent_contract_redlining" data-cohort-role="sibling-2-of-5" data-vendor="Evisort" data-tick="tick-1249-evisort-ai-agent-contract-redlining-sibling-2-of-5">
+<h1>Evisort AI Contract Redlining Audit Trail — 14M+ Contract Dataset, Workday CLM, Obligation Extraction 2026</h1>
+<p class="lead"><strong>Evisort</strong> is SIBLING #2/5 for Atlas NEW VERTICAL #66 <code>ai_agent_contract_redlining</code>. First-party product copy names Evisort an AI Contract Lifecycle Management platform that runs clause extraction, redline suggestions, and obligation extraction against a proprietary AI-trained dataset of more than 14 million contracts. The long-tail buyer question — "how do we replay one AI redline back to the dataset row, clause version, approver, and obligation chain?" — is the audit gap that this page maps.</p>
+
+<h2>What Evisort ships (first-party evidence verified 2026-07-25)</h2>
+<ul>
+<li><strong>AI Contract Lifecycle Management:</strong> the product surface combines intake, review, redlining, approval, and obligation tracking in one AI-driven workflow.</li>
+<li><strong>14M+ contracts proprietary dataset:</strong> first-party copy states the dataset is the largest AI-trained contract dataset of its kind, used as the substrate for clause extraction and redline suggestion.</li>
+<li><strong>AI clause extraction + redline suggestions:</strong> first-party product pages describe AI models trained on the 14M+ contract dataset that propose redlines against user-supplied playbooks.</li>
+<li><strong>Obligation extraction:</strong> first-party copy names a dedicated obligation-extraction product that converts signed clauses into tracked obligations across portfolios.</li>
+<li><strong>Workday CLM:</strong> first-party copy confirms Evisort is now part of Workday and ships a Workday-native contract lifecycle management surface inside the Workday enterprise tenant.</li>
+<li><strong>AI Assistant:</strong> first-party product surfaces name an AI Assistant that lets legal teams query the contract corpus in natural language and surface the upstream clause, dataset version, and approver row.</li>
+</ul>
+
+<h2>The 5 evidence gaps behind one Evisort AI redline</h2>
+<ol>
+<li><strong>Dataset version drift:</strong> can your auditor replay which <code>dataset_version</code> produced the redline proposal at the time of the redline? If the dataset is updated after the redline, the trail loses the ground-truth provenance.</li>
+<li><strong>Clause → playbook join:</strong> can your trail join the redline proposal back to the exact <code>clause_id</code>, <code>clause_version</code>, and <code>playbook_id</code> that produced the diff? Most CLM trails snapshot the document but not the rule.</li>
+<li><strong>Approver chain provenance:</strong> does the trail capture the approver, the approval step, the human override, and the signature event as one replayable chain, or as separate audit tables that have to be re-joined at audit time?</li>
+<li><strong>Obligation extraction seam:</strong> does the redline receipt end at signature, or does it continue into the obligation-extraction product so the auditor can see which obligations were derived from the redline clause?</li>
+<li><strong>Workday tenant boundary:</strong> with Workday CLM, does the trail join the Workday tenant id, the Evisort tenant id, and the contract id so cross-tenant no-bleed invariants can be checked at audit time?</li>
+</ol>
+
+<h2>The 22-column per-Evisort redline audit-trail receipt</h2>
+<pre><code>tenant_id                  -- Evisort tenant
+workday_tenant_id          -- Workday tenant (post-acquisition)
+contract_id                -- Contract
+contract_type              -- MSA / SOW / NDA / DPA / order form
+clause_id                  -- Clause
+clause_version             -- Clause version
+dataset_version            -- 14M+ contracts dataset version
+dataset_run_id             -- AI training/eval run id
+playbook_id                -- Playbook
+playbook_version           -- Playbook version
+ai_review_run_id           -- AI review run
+redline_proposal_id        -- Proposed redline
+diff_hash                  -- Redline diff hash
+approver_id                -- Approver
+approval_step_id           -- Approval step
+human_override_id          -- Human override
+signature_event_id         -- Signature event
+counterparty_id            -- Counterparty
+obligation_id              -- Obligation
+revenue_posture_id         -- Revenue posture
+audit_export_id            -- Audit export
+replay_hash                -- Replay hash
+</code></pre>
+
+<h2>What the audit trail must prove (the legal-team question)</h2>
+<p>For a 2026 enterprise procurement team, the question is no longer "did the AI redline the contract?" but "can we replay the redline?" The Evisort trail must prove, in one export, that the dataset version, the clause version, the playbook version, the approver, the human override, and the obligation extraction are all on the same row. If any of those columns is missing or lives in a separate audit table, the audit gap is real and the EU AI Act Article 13 logging requirement becomes a manual reconciliation project.</p>
+
+<h2>Cohort position — SIBLING #2/5 ai_agent_contract_redlining</h2>
+<p>Evisort sits as SIBLING #2/5 in the five-vendor ai_agent_contract_redlining cohort behind Ironclad 1248 (OPENER #1/5). The cohort-cumulative evidence join will reconcile the 22-column Evisort receipt against the 22-column Ironclad receipt and the future three sibling receipts at close, so the fixed four-vendor and five-vendor $2,000 benchmark can compare the dataset-and-clause substrate (Evisort) against the contract-intelligence-and-playbook substrate (Ironclad) without leaking tenant data.</p>
+
+<h2>Offer (cohort-cumulative)</h2>
+<ul>
+<li><strong>$500 / 48h fixed-scope Evisort redline audit-gap map</strong> — one redline → 22-column receipt → per-row evidence export.</li>
+<li><strong>$497 / month quarterly refresh</strong> — dataset version updates + new clause coverage + EU AI Act Art. 26 updates.</li>
+<li><strong>$2,000 five-vendor cohort benchmark</strong> — Ironclad + Evisort + 3 future siblings at close.</li>
+<li><strong>$2,485 MRR ceiling</strong> — five clients × $497/mo per the YanXbt pattern.</li>
+</ul>
+
+<h2>What was NOT shipped</h2>
+<p>This is a template-only, evidence-only update. No email was sent, no form was submitted, no payment was claimed, and no revenue was received. Form gated; $0 sent / $0 received. Tick: 1249 — Evisort SIBLING #2/5 ai_agent_contract_redlining.</p>
+</article>
+</body>
+</html>
