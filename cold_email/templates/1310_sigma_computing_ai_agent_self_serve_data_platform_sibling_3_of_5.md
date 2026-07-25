@@ -1,0 +1,16 @@
+Subject: Sigma Agents + AI Toolkit + Spreadsheet UX evidence-gap map for ai_agent_self_serve_data_platform cohort
+
+Hi Mike,
+
+Real-world Sigma Agents + AI Toolkit + Spreadsheet UX audit pain I'm shipping as a $500/48h fixed-scope evidence-gap map for your warehouse-first AI-application platform: dashboards expose the WHAT but your auditor (SOC 2 Type II + GDPR + HIPAA + FedRAMP-ready) wants the per-Sigma-Agent + per-AI-Toolkit-workflow + per-Input-Table + per-Data-Model + per-writeback + per-approval + per-warehouse-RLS-inheritance + per-tag + per-OIDC-session trail.
+
+For the NEW VERTICAL #77 ai_agent_self_serve_data_platform cohort (Hex 1308 + Domo 1309 + Sigma 1310 + 2 future siblings), the 22-column per-Sigma receipt (tenant_id + sigma_workspace_id + sigma_workbook_id + sigma_input_table_id + sigma_data_model_id + sigma_writeback_id + sigma_approval_id + sigma_workflow_id + sigma_agent_id + sigma_ai_toolkit_run_id + sigma_ai_function_id + sigma_dashboard_id + sigma_embed_id + sigma_warehouse_connection_id + sigma_tag_id + sigma_rls_inheritance_id + sigma_audit_log_id + sigma_export_id + cross_warehouse_no_bleed_invariant + replay_hash) joins Hex's notebook-first substrate + Domo's 1,000+-connector surface into a 5-vendor benchmark.
+
+5-WEDGE non-overlap vs Hex 1308 + Domo 1309 + cohort: (1) ONLY warehouse-first spreadsheet-native live-query BI substrate (writeback + approvals + warehouse-hosted AI + Input Tables) distinct from Hex notebook-first Python-cells + Domo 1,000+-connector app-framework; (2) ONLY Sigma Agents with native warehouse RLS + RBAC inheritance verbatim first-party sigmacomputing.com/product/agents 2026-07-26 ("Sigma Agents inherit your warehouse's row-level security and role-based access") distinct from Hex Magic cell-level substrate + Domo Domo.AI agent layer; (3) ONLY AI Toolkit + AI Functions + AI Workflows + Writeback + Input Tables + Pixel-Perfect Reports + Embedded Analytics + Snowflake/Databricks/ClickHouse AWS/Azure/GCP canonical connection triad distinct from Hex Data Connect + Domo 1,000+ Connectors; (4) ONLY 6,000+ AI apps built by customers + 1,900+ organizations on Sigma verbatim first-party sigmacomputing.com/about 2026-07-26 vs Hex's notebook-first + Domo's $832M+ NASDAQ public-co scale; (5) ONLY Mike Palmer CEO + Rob Woollen CTO/co-founder + Jason Frantz Chief Architect/co-founder + Brad Gerstner + John McMahon + René Bonvanie board verbatim first-party sigmacomputing.com/about 2026-07-26 + San Francisco HQ + NY + London offices distinct from Hex Barry McCardel/Caitlin Garrett/Glen Takahashi + Domo Josh James Omniture-founder.
+
+Offer: $500/48h fixed-scope Sigma Agents + AI Toolkit evidence-gap map + $497/mo quarterly refresh + $2,000 five-vendor ai_agent_self_serve_data_platform cohort benchmark at close + $2,485 MRR ceiling (5×$497/mo YanXbt pattern) + $10,000 cohort-sponsorship tier (CLOSER-only).
+
+Source: sigmacomputing.com/about (Mike Palmer CEO + Rob Woollen CTO + Jason Frantz Chief Architect + 6,000+ AI apps + 1,900+ orgs + Brad Gerstner board verified 2026-07-26) + sigmacomputing.com/product/agents (Sigma Agents warehouse RLS+RBAC inheritance) + sigmacomputing.com/contact (SF + NY + London offices). Happy to send the $500 evidence-gap-map outline first.
+
+Atlas @ Talon Forge
+[tick-1310-sigma-computing-ai-agent-self-serve-data-platform-sibling-3-of-5]
