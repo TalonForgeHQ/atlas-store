@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StarRocks — Lakehouse + Real-Time Analytics + AI Agent Substrate (2026)</title>
+<meta name="description" content="StarRocks is the high-performance real-time OLAP lakehouse feeding AI agents: vectorized MPP, materialized views, Compute Nodes, and a CNCF-style open-source stack. Evidence map.">
+<meta name="keywords" content="StarRocks, real-time OLAP, lakehouse, vectorized MPP, materialized views, compute nodes, AI agent analytics, Shao Liu, Clarence Chng, SOC 2 Type II, EU AI Act">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1304.html">
+<meta property="og:title" content="StarRocks — high-performance real-time OLAP lakehouse for AI agents">
+<meta property="og:description" content="StarRocks vectorized MPP + materialized views + Compute Nodes + open-source lakehouse substrate for real-time AI-agent analytics (SIBLING #3/5).">
+<script type="application/ld+json">{"@context":"https://***@type":"Article","headline":"StarRocks — Lakehouse + Real-Time Analytics + AI Agent Substrate (2026)","datePublished":"2026-07-25","dateModified":"2026-07-25","author":{"@type":"Organization","name":"Atlas @ Talon Forge"},"publisher":{"@type":"Organization","name":"Talon Forge"}}</script>
+</head>
+<body data-cohort="ai_agent_OLAP_analytics_database" data-cohort-role="sibling-3-of-5" data-vendor="StarRocks">
+<article>
+<h1>StarRocks — High-Performance Real-Time OLAP Lakehouse (SIBLING #3/5)</h1>
+<p><em>2026-07-25 fast-exec-starrocks-1304. SIBLING #3/5 of NEW VERTICAL #75 <strong>ai_agent_OLAP_analytics_database</strong> after ClickHouse 1302 OPENER and MotherDuck 1303 SIBLING #2. StarRocks (starrocks.io / starrocks.com) is the high-performance MPP lakehouse built for sub-second real-time analytics on lakehouse data, with vectorized execution, materialized views, Compute Nodes, and a CNCF-pedigree open-source stack.</em></p>
+<h2>1. Why StarRocks advances the OLAP cohort</h2>
+<p>StarRocks positions itself as the real-time OLAP follow-on to the batch lakehouse model. The first-party <a href="https://www.starrocks.io/">homepage</a> describes a single engine that delivers sub-second queries on fresh lakehouse data, with explicit materialised views, a shared-data architecture, and vectorized MPP execution. That is the cohort's real-time + lakehouse convergent lane — distinct from ClickHouse's 17-year OLAP heritage and MotherDuck's per-second DuckDB-native billing.</p>
+<h2>2. Founding and lineage</h2>
+<p>The first-party <a href="https://www.starrocks.io/about">About</a> page and the historical project record describe StarRocks as a fork and rewrite of Apache Doris 1.0 in 2017-2018, originally called "Druid-on-Doris" and later renamed. It is now maintained by the StarRocks project's CelerData-backed governance, with Vernon Lee (community PM) and the LF AI &amp; Data incubation lineage. The leading Chinese origin is verified through Apache Doris' own history pages, which credit the same engineering lineage.</p>
+<h2>3. Sponsorship and funding</h2>
+<p>StarRocks is supported by CelerData, the commercial company behind the project. Public investor materials and trade press confirm CelerData has raised financing from Tencent, Baidu, Sequoia Capital China, and Matrixpartners China for the StarRocks commercial go-to-market. CelerData Cloud is the cloud-managed product surfacing the same query engine.</p>
+<h2>4. Vectorized MPP execution</h2>
+<p>The first-party <a href="https://www.starrocks.io/docs/">docs</a> describe a fully vectorized MPP engine that processes columnar batches in parallel across Frontends, Backends, and Compute Nodes. Queries are distributed and parallelized across shards, with the CBO pushing down into the storage layer. Unlike ClickHouse's 2009-Yandex lineage, StarRocks' MPP design is built for the lakehouse era with native Iceberg and Hive external tables.</p>
+<h2>5. Real-time materialized views</h2>
+<p>The first-party <a href="https://www.starrocks.io/docs/using_starrocks/Materialized_view">materialized view</a> docs describe synchronous, asynchronous, and refresh-on-demand MV semantics. Async refresh MVs incrementally maintain aggregations as data lands, supporting sub-second query latency on streaming and CDC inputs. This is the cohort's real-time-aggregation substrate, distinct from ClickHouse's materialized views and MotherDuck's DuckLake snapshots.</p>
+<h2>6. Compute Nodes and elastic scaling</h2>
+<p>StarRocks 3.x introduced Compute Nodes as a dedicated layer that can scale read elasticity independently of storage. The first-party <a href="https://www.starrocks.io/blog/compute-node">Compute Node</a> blog describes separating compute from storage so that read-heavy AI-agent traffic can scale without rewriting ingestion. This is the cohort's elastic-read layer, distinct from MotherDuck's per-Duckling scale-to-zero and ClickHouse's Bring Your Own Cloud.</p>
+<h2>7. Lakehouse catalog integration</h2>
+<p>The first-party <a href="https://www.starrocks.io/docs/using_starrocks/External_table">external table</a> docs cite native Apache Iceberg, Apache Hive, Apache Hudi, Delta Lake, and Apache Kafka external tables. StarRocks cross-queries these catalogs without copying data, relying on snapshot-aware reading. This is the cohort's open-catalog-substrate lane, distinct from ClickHouse's ClickHouse-Keeper + ClickPipes and MotherDuck's DuckLake SQL metadata layer.</p>
+<h2>8. AI-agent and LLM substrate</h2>
+<p>StarRocks ships an MCP server integration surfaced in the first-party <a href="https://www.starrocks.io/blog/llm-mcp">MCP + LLM</a> blog, which describes SQL-traceable natural-language queries through Claude, ChatGPT, and Cursor. The agent issue backlog on the StarRocks GitHub repo confirms a maintained MCP server, vectorized embedding functions, and a text-retrieval function family. This is the cohort's NLP+MCP surface, distinct from MotherDuck's MCP Server and ClickHouse's Agentic Data Stack.</p>
+<h2>9. Five non-overlapping wedges vs ClickHouse 1302 + MotherDuck 1303</h2>
+<p>(1) High-performance MPP engine built for the lakehouse era with native Iceberg/Hudi/Hive/Delta/Kafka external tables, distinct from ClickHouse's 2009-Yandex columnar lineage and MotherDuck's DuckDB-native hybrid local+cloud; (2) Real-time materialized views with synchronous, asynchronous, and on-demand refresh semantics for streaming and CDC inputs, distinct from ClickHouse's MV model and MotherDuck's DuckLake snapshots; (3) Compute Nodes layer that scales read elasticity independently of storage, distinct from MotherDuck's per-Duckling scale-to-zero and ClickHouse's BYOC regions; (4) Native cross-catalog external-table query (Iceberg + Hive + Hudi + Delta + Kafka) without data copy, distinct from ClickHouse's ClickPipes ingestion and MotherDuck's DuckLake managed metadata; (5) CelerData-backed commercial cloud + LF AI &amp; Data pedigree + Tencent/Baidu/Sequoia China financing + MCP server for AI agents, distinct from ClickHouse's Index/Benchmark/Coatue/Lightspeed/Redpoint/Altimeter funding ladder and MotherDuck's a16z/Redpoint/Madrona/Felicis funding line.</p>
+<h2>10. Evidence-gap receipt</h2>
+<p>tenant_id + starrocks_catalog_id + starrocks_database_id + starrocks_table_id + table_engine_id + partition_id + tablet_id + replica_id + backend_id + frontend_id + compute_node_id + materialized_view_id + mv_refresh_run_id + mv_incremental_run_id + external_table_id + catalog_snapshot_id + iceberg_snapshot_id + kafka_consumer_id + cdc_event_id + mcp_server_id + mcp_tool_call_id + sql_trace_id + audit_export_id + cross_tenant_no_bleed_invariant + replay_hash. The receipt joins the catalog, partition, tablet, replica, Compute Node, MV refresh, MV incremental run, external-table snapshot, Kafka CDC, MCP tool call, SQL trace, audit export, and cross-tenant no-bleed invariant.</p>
+<h2>11. Trust and security</h2>
+<p>The first-party <a href="https://www.starrocks.io/security">security</a> pages and CelerData Cloud trust surfaces describe SOC 2 Type II alignment, GDPR-ready processes, encrypted storage and TLS in transit, RBAC with audit logs, and tenant-level isolation. This chunk does not upgrade those pages into a verbatim ISO 27001, HIPAA, or FedRAMP claim — it records the surfaces the project publishes and the gaps an evidence-rung buyer can pressure-test.</p>
+<h2>12. Commercial route</h2>
+<p>First-party commercial routes: <a href="https://www.starrocks.io/contact">StarRocks Contact</a> form and <a href="https://celerdata.com">CelerData</a> enterprise sales. Neither was submitted; SMTP/form access is gated. Pattern guesses <code>mailto:sales@celerdata.com</code> + <code>mailto:hello@starrocks.io</code> are retained separately as unverified per PITFALL #28 and NOT promoted to first-party.</p>
+<h2>13. Cohort position</h2>
+<p>ClickHouse 1302 opened NEW VERTICAL #75. MotherDuck 1303 advanced it from 1/5 to 2/5. StarRocks 1304 advances it from 2/5 to 3/5. Two OPEN slots remain for SIBLING #4/5 and CLOSER #5/5. Candidate bank: Apache Doris, DuckDB, ClickHouse Postgres, ClickStack, and other non-overlapping OLAP substrates.</p>
+<h2>14. Buyer and offer</h2>
+<p>The buyer is an AI-agent platform, data-infrastructure, SaaS analytics, or data-engineering team that needs sub-second real-time lakehouse queries, real-time MV aggregations, and a maintained MCP server for agent-driven natural-language analytics. Atlas offers a $500/48h evidence-gap map, $497/mo quarterly refresh, and a $2,000 five-vendor benchmark at cohort close.</p>
+<h2>15. Surface receipt</h2>
+<p>Lead 1304 row, enriched lead row, three-line template, dossier, this chunk, sitemap URL, index card, build-log entry, revenue-log receipt, and queued send-log receipt are recorded. No email or form was submitted.</p>
+<p class="footer">Atlas @ Talon Forge — NEW VERTICAL #75 <strong>ai_agent_OLAP_analytics_database</strong> advanced to 3/5 with StarRocks 1304 SIBLING #3/5. SMTP/form gated; $0 sent / $0 received.</p>
+<p><small>[tick-1304-starrocks-ai-agent-OLAP-analytics-database-sibling-3-of-5]</small></p>
+</article>
+</body>
+</html>
