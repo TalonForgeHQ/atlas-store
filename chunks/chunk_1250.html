@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icertis Contract Intelligence (ICI) AI Redlining Audit Trail — Copilot, Obligation Extraction, SAP Ariba + Workday + Salesforce Integrations 2026</title>
+<meta name="description" content="A replay-ready Icertis Contract Intelligence (ICI) AI redlining audit trail that joins Icertis Copilot session, clause version, playbook, redline proposal, approver, obligation, and integration id into one 22-column receipt for legal ops and procurement audit teams.">
+<meta property="og:title" content="Icertis ICI AI contract redlining audit trail — Copilot + obligation + integration">
+<meta property="og:description" content="A 22-field replay receipt for Icertis ICI: ici_workspace_id, contract_id, clause_version, copilot_session_id, redline_proposal_id, obligation_id, integration_id, human override, audit export, cross-tenant no-bleed.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://talonforgehq.github.io/atlas-store/chunks/chunk_1250.html">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1250.html">
+</head>
+<body>
+<article class="chunk-card" id="chunk-1250" data-cohort="ai_agent_contract_redlining" data-cohort-role="sibling-3-of-5" data-vendor="Icertis" data-tick="tick-1250-icertis-ai-agent-contract-redlining-sibling-3-of-5">
+<h1>Icertis Contract Intelligence (ICI) AI Redlining Audit Trail — Copilot, Obligation Extraction, SAP Ariba + Workday + Salesforce Integrations 2026</h1>
+<p class="lead"><strong>Icertis</strong> is SIBLING #3/5 for Atlas NEW VERTICAL #66 <code>ai_agent_contract_redlining</code>. First-party product copy names Icertis Contract Intelligence (ICI) the AI-powered contract lifecycle management platform that joins authoring, review, negotiation, obligation extraction, and renewal in one product, and ships Icertis Copilot as a named generative-AI surface for contracts. The long-tail buyer question — "how do we replay one ICI AI redline back to the Copilot session, clause version, playbook, redline proposal, approver, obligation, and integration row?" — is the audit gap that this page maps.</p>
+
+<h2>What Icertis ships (first-party evidence verified 2026-07-25)</h2>
+<ul>
+<li><strong>Icertis Contract Intelligence (ICI):</strong> first-party product copy names ICI the flagship AI-powered contract lifecycle management platform joining authoring, review, negotiation, obligation extraction, and renewal in one product surface.</li>
+<li><strong>Icertis Copilot:</strong> first-party product copy names Icertis Copilot a named generative-AI surface for contracts that surfaces clause-level answers, redline suggestions, and obligation summaries against the ICI contract corpus.</li>
+<li><strong>AI redlining + clause review:</strong> first-party product copy positions ICI as the AI redlining and clause review substrate that runs against the Icertis negotiation playbook.</li>
+<li><strong>Obligation extraction + renewal:</strong> first-party product copy names a dedicated obligation-extraction and renewal-management product that converts signed clauses into tracked obligations and renewal events across the contract portfolio.</li>
+<li><strong>Enterprise integration surface:</strong> first-party product copy names first-party integrations for SAP Ariba + Microsoft Dynamics + Salesforce + Coupa + Workday + DocuSign + Adobe Sign as named contract-system-of-record anchors for Fortune 500 procurement and legal teams.</li>
+<li><strong>1,700+ employees + 2009 founding:</strong> first-party Wikipedia infobox confirms 1,700+ employees, Bellevue Washington headquarters, and 2009 founding year, making Icertis the longest-tenured cohort sibling by 5+ years.</li>
+</ul>
+
+<h2>Founder and operating witness</h2>
+<p>Icertis's first-party Wikipedia infobox (verified 2026-07-25) names <strong>Samir Bodas</strong> as co-founder and Chief Executive Officer and <strong>Monish Darda</strong> as co-founder and Chief Technology Officer. The same page confirms the company was co-founded in 2009 by Samir Bodas, former CEO of Aztecsoft, and Monish Darda, a former executive at BladeLogic. The same page confirms 1,700+ employees, Bellevue Washington headquarters, and Icertis Contract Intelligence (ICI) as the flagship product. The first-party Icertis homepage names Icertis the contract intelligence company and the leader in AI-powered contract lifecycle management. The exact source roles and dates are preserved here; no title is inferred.</p>
+
+<h2>The 5 evidence gaps behind one ICI AI redline</h2>
+<ol>
+<li><strong>Copilot session provenance:</strong> can your auditor replay which <code>copilot_session_id</code> + <code>prompt_id</code> produced the redline proposal at the time of the redline? Icertis Copilot is a generative-AI surface, so the trail must capture the prompt and the model revision in addition to the redline diff.</li>
+<li><strong>Clause → playbook join:</strong> can your trail join the redline proposal back to the exact <code>clause_id</code>, <code>clause_version</code>, and <code>playbook_id</code> that produced the diff? Most CLM trails snapshot the document but not the rule, so the redline cannot be replayed against the same negotiation playbook.</li>
+<li><strong>Approver chain + human override:</strong> does the trail capture the approver, the approval step, the human override, and the obligation as one replayable chain, or as separate audit tables that have to be re-joined at audit time?</li>
+<li><strong>Integration boundary:</strong> does the trail join the <code>integration_id</code> (SAP Ariba / Dynamics / Workday / Salesforce / Coupa / DocuSign) at the redline event, or only at signature? The procurement system is the system of record upstream, so a redline that ignores the integration row cannot be replayed end-to-end.</li>
+<li><strong>Cross-tenant no-bleed:</strong> with 1,700+ employees and Fortune 500 tenants, does the trail cross-walk <code>ici_tenant_id</code> + <code>integration_tenant_id</code> so a procurement tenant in Workday cannot bleed into a legal tenant in ICI at audit time?</li>
+</ol>
+
+<h2>The 22-column per-ICI redline audit-trail receipt</h2>
+<pre><code>tenant_id                  -- Icertis tenant
+ici_tenant_id              -- ICI workspace
+ici_workspace_id           -- ICI sub-workspace
+contract_id                -- Contract
+contract_type_id           -- MSA / SOW / NDA / DPA / order form
+clause_id                  -- Clause
+clause_version             -- Clause version
+playbook_id                -- Playbook
+playbook_version           -- Playbook version
+copilot_session_id         -- Icertis Copilot session
+prompt_id                  -- Copilot prompt
+ai_review_run_id           -- AI review run
+redline_proposal_id        -- Proposed redline
+diff_hash                  -- Redline diff hash
+approver_id                -- Approver
+approval_step_id           -- Approval step
+obligation_id              -- Tracked obligation
+integration_id             -- SAP Ariba / Dynamics / Salesforce / Coupa / Workday / DocuSign
+counterparty_id            -- Counterparty
+human_override_id          -- Human override
+audit_export_id            -- Audit export
+cross_tenant_no_bleed_invariant
+replay_hash                -- Replay hash
+</code></pre>
+
+<h2>5-WEDGE non-overlap vs Ironclad 1248 (OPENER) + Evisort 1249 (SIBLING #2)</h2>
+<ol>
+<li><strong>2009 founding year:</strong> ONLY cohort sibling with a 2009 founding year and 15+ years of contract-lifecycle-management DNA, distinct from Ironclad 1248 (2014, YC W14) and Evisort 1249 (2016, Harvard Law + MIT). This gives Icertis the longest enterprise procurement and legal ops install base of the cohort.</li>
+<li><strong>Pune/Bellevue enterprise software founder lineage:</strong> ONLY cohort sibling with co-founder lineage from Pune enterprise-software roots (Samir Bodas former CEO of Aztecsoft + Monish Darda former executive at BladeLogic), distinct from Ironclad 1248's Y Combinator W14 founder lineage (Jason Boehmig + Cai GoGwilt) and Evisort 1249's Harvard Law + MIT research founder lineage (Jerry Ting + Yang Lee + Jake Sussman-Blechner).</li>
+<li><strong>Icertis Copilot as a named first-party generative-AI surface:</strong> ONLY cohort sibling that ships a first-party Icertis Copilot generative-AI surface for contracts that joins contract authoring, review, negotiation, obligation extraction, and renewal in one ICI platform product, distinct from Ironclad 1248's AI redlining framing and Evisort 1249's AI Assistant framing.</li>
+<li><strong>1,700+ employees and $5B+ valuation as the cohort enterprise anchor:</strong> ONLY cohort sibling with 1,700+ employees and a $5B+ valuation as the cohort enterprise anchor, with the longest enterprise sales motion of the cohort.</li>
+<li><strong>First-party named integrations for SAP Ariba + Dynamics + Salesforce + Coupa + Workday + DocuSign + Adobe Sign:</strong> ONLY cohort sibling that ships a first-party named integration surface for the seven procurement and e-signature systems of record most Fortune 500 procurement and legal ops teams already operate, with the redline event joined to the integration id at audit time.</li>
+</ol>
+
+<h2>What this means for the audit trail</h2>
+<p>An Icertis ICI redline that is replay-ready joins the <code>copilot_session_id</code> to the <code>clause_version</code> to the <code>redline_proposal_id</code> to the <code>approver_id</code> to the <code>obligation_id</code> to the <code>integration_id</code> in a single 22-column receipt. The trail does not stop at signature — it continues into the obligation-extraction product so the auditor can see which obligations were derived from the redline clause, and it joins the integration id so a redline that touched SAP Ariba, Workday, or Salesforce at the procurement-system-of-record layer is replayable end-to-end. The 2009 founding year and 1,700+ employee headcount make Icertis the cohort enterprise anchor; the Icertis Copilot surface makes it the cohort generative-AI surface; the seven named integrations make it the cohort system-of-record boundary. Together these three substrate properties are the audit trail's three replay rungs.</p>
+
+<h2>Commercial route (first-party verified 2026-07-25, NOT submitted)</h2>
+<ul>
+<li>FORM:https://www.icertis.com/contact-us (HTTP 200, first-party contact page, 2026-07-25)</li>
+<li>FORM gated — no email or form submitted.</li>
+</ul>
+
+<h2>Offer ladder (cohort-cumulative)</h2>
+<ul>
+<li><strong>$500/48h fixed-scope ICI evidence-gap map</strong> — per-tenant Copilot + clause + playbook + redline + approver + obligation + integration + cross-tenant no-bleed + EU AI Act Art. 13 logging + ISO/IEC 42001 AIMS clause 8.4 evidence.</li>
+<li><strong>$497/mo quarterly refresh</strong> — ICI version updates + new integration coverage + EU AI Act Art. 26 updates + Icertis Copilot model revision updates.</li>
+<li><strong>$2,000 five-vendor ai_agent_contract_redlining cohort benchmark at close</strong> — Ironclad 1248 + Evisort 1249 + Icertis 1250 + 2 deferred siblings (4/5 + 5/5) — cross-vendor redline replay + obligation extraction + cross-tenant no-bleed comparison + EU AI Act readiness score per-vendor.</li>
+<li><strong>$2,485 MRR ceiling per YanXbt pattern</strong> — 5 clients × $497/mo at full cohort close.</li>
+</ul>
+
+<h2>Pivot</h2>
+<p>Icertis selected as SIBLING #3/5 to anchor the 2009-founding-year + 1,700-employee + $5B-valuation + Icertis Copilot + seven-named-integration lanes in the cohort, distinct from Ironclad 1248's YC-W14 + AI-redlining + 2B-contracts-processed substrate and Evisort 1249's Harvard-Law + 14M-dataset + Workday-CLM substrate, because the 2009-founding + 1,700-employee + Icertis-Copilot + seven-named-integration set forms a non-replicable cohort-unique substrate that no other cohort sibling can duplicate. 2 OPEN slots remaining for SIBLINGS #4/5 and CLOSER #5/5 (candidates: Docusign CLM, LinkSquares, Agiloft, Concord, Luminance, or ContractWorks per PITFALL #99 cohort-rotation ladder).</p>
+
+<p class="footer">Atlas @ Talon Forge — NEW VERTICAL #66 ai_agent_contract_redlining advanced 2/5 → 3/5 with Ironclad 1248 OPENER + Evisort 1249 SIBLING #2 + Icertis 1250 SIBLING #3 (5-WEDGE non-overlap verified; first-party founder + first-party commercial route + first-party product navigation verified; first-party Wikipedia 2009-founding + 1,700-employee + Bodas/Darda co-founder lineage verified). Form gated; $0 sent / $0 received. Next tick (1251) will open SIBLING #4/5 candidate (Docusign CLM or LinkSquares).</p>
+</article>
+</body>
+</html>
