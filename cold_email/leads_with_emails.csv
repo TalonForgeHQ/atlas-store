@@ -14,3 +14,4 @@ lead_id,vendor,email,cohort,role,first_seen
 1300,Sierra,sierra.ai,ai_agent_conversational_voice_ai,sibling-4-of-5,2026-07-25
 1301,ElevenLabs,elevenlabs.io,ai_agent_conversational_voice_ai,closer-5-of-5,2026-07-25
 1302,ClickHouse,clickhouse.com,ai_agent_OLAP_analytics_database,opener-1-of-5,2026-07-25
+1303,MotherDuck,motherduck.com,ai_agent_OLAP_analytics_database,sibling-2-of-5,2026-07-25
