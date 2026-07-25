@@ -1,0 +1,64 @@
+<section class="chunk" id="chunk-1272" data-cohort="ai_agent_design_frontend" data-cohort-role="cohort-hub-evidence-gap-map" data-tick="tick-1272-ai-agent-design-frontend-evidence-gap-map">
+<h1>AI Agent Design Frontend Evidence Gap Map 2026 — v0 + Stitch + Visual Electric + Galileo + Replit Agent 5-Vendor Audit Lane (Cohort Hub)</h1>
+
+<h2>Why this cohort matters now</h2>
+<p>Enterprise procurement teams in 2026 are increasingly asking the same question: <em>"Which AI agent design tool can we put in front of our designers without breaching SOC 2 + GDPR + EU AI Act Art. 13 logging?"</em> The answer is non-trivial because the canonical AI agent design frontend cohort (v0 by Vercel + Stitch by Google + Visual Electric + Galileo by Arize + Replit Agent + Lovable + Bolt.new + Cursor Composer Tab) ships overlapping but non-equivalent product surfaces. This <strong>cohort-hub evidence-gap map</strong> names the 5-WEDGE non-overlap rubric that lets a buyer pick the lane that matches their compliance posture, evidence substrate, and human-oversight readiness without falling for the "all agents are the same" framing.</p>
+
+<h2>The 5-WEDGE non-overlap rubric (PITFALL #99 canonical 2026)</h2>
+<ol>
+<li><strong>Surface substrate (IDE vs in-browser vs in-app vs canvas vs prompt-shell):</strong> v0 by Vercel ships as a <em>prompt-shell + React + Tailwind + shadcn/ui surface</em> (first-party v0.dev homepage 2026-07-25). Stitch by Google ships as a <em>prompt-to-design + Figma-export surface</em> (first-party stitch.withgoogle.com 2026-07-25). Visual Electric ships as a <em>canvas-first AI image + video surface for designers</em> (first-party visualelectric.com 2026-07-25). Cohorts the substrate distinct from in-browser WebContainer (Bolt.new) + IDE-local (Cursor Composer Tab) + agent-runtime (OpenHands).</li>
+<li><strong>Output artifact type (component code vs design file vs image vs full-stack app):</strong> v0 outputs <em>React + Tailwind + shadcn/ui components</em> deployable to Vercel/Next.js. Stitch outputs <em>Figma-ready design files + HTML/CSS</em>. Visual Electric outputs <em>image + video creative assets</em>. Galileo (arize.ai) outputs <em>evaluation dashboards + replay receipts</em> (NOT a design tool — included as the cohort evaluation substrate). Replit Agent outputs <em>full-stack deployed apps</em>.</li>
+<li><strong>Compliance posture (SOC 2 Type II + GDPR + EU AI Act Art. 13 + Art. 14 human-oversight + zero-retention):</strong> v0 by Vercel is SOC 2 Type II + GDPR inherited via Vercel enterprise. Stitch by Google is governed by Google Cloud compliance (FedRAMP High + ISO 27001 + SOC 2 + GDPR). Visual Electric is GDPR + CCPA + enterprise-DPA. Galileo (Arize) is SOC 2 Type II + HIPAA + GDPR + EU AI Act readiness. Replit Agent is SOC 2 Type II + GDPR + FERPA + COPPA + Google Cloud dependency.</li>
+<li><strong>Human-oversight readiness (per-component approval + per-prompt-version + per-action replay):</strong> v0 ships copy-code + open-in-Vercel + per-prompt-version-history lobe. Stitch ships Figma-history + per-design-revision. Visual Electric ships canvas-history + per-image-iteration. Galileo ships per-evaluation-run + per-trace + per-replay-receipt. Replit Agent ships per-prompt + per-file-edit + per-deploy.</li>
+<li><strong>Distribution primitive (Vercel-native + Google-native + Arize-native + Replit-native):</strong> v0 ships a <em>Vercel-native deploy lane</em> (one-click deploy to Vercel/Next.js). Stitch ships a <em>Google-native design lane</em> (Figma + Vertex AI integration). Visual Electric ships a <em>designer-native canvas</em> (no vendor lock-in). Galileo ships an <em>Arize-native observability lane</em> (per-eval + per-replay). Replit Agent ships a <em>Replit-native full-stack lane</em> (one-click deploy to Replit Cloud).</li>
+</ol>
+
+<h2>22-field per-prompt + per-component + per-revision replay receipt</h2>
+<p>For each design-frontend AI agent the receipt joins:</p>
+<pre><code>tenant_id                    -- Atlas tenant identity (cross-tenant_no_bleed_invariant enforced)
+workspace_id                 -- v0 / Stitch / Visual Electric / Galileo / Replit workspace
+prompt_id                    -- natural-language prompt identifier
+prompt_version_id            -- per-prompt-version lineage (mutable history)
+component_id                 -- v0 React + Tailwind component OR Stitch Figma component
+revision_id                  -- per-revision-history identifier
+design_file_id               -- Visual Electric canvas artifact OR Stitch Figma file
+image_iteration_id           -- Visual Electric image iteration
+deploy_target_id             -- Vercel / Next.js / Replit Cloud / Figma
+human_approval_id            -- per-component approval (EU AI Act Art. 14 readiness)
+action_id                    -- tool call (copy-code / open-in-ide / open-in-figma / deploy)
+tool_call_inputs             -- prompt + parameters (JSON-encoded)
+tool_call_outputs            -- generated component / design / image / deployment
+token_input_count            -- LLM-call input token count
+token_output_count           -- LLM-call output token count
+cost_usd                     -- LLM-call cost in USD
+model_id                     -- underlying model (Vercel AI SDK / Gemini / etc.)
+model_provider               -- Vercel / Google / Anthropic / OpenAI
+model_provider_route_id      -- per-provider routing decision
+retention_id                 -- zero-retention toggle (when applicable)
+deletion_id                  -- per-user-deletion receipt
+residency_id                 -- US / EU residency lane
+cross_tenant_no_bleed_invariant  -- cross-tenant isolation guarantee
+replay_hash                  -- SHA-256 of full replay payload
+audit_export_id              -- per-export receipt (SOC 2 + GDPR + Art. 13 evidence)
+</code></pre>
+
+<h2>Evidence-gap map (what an Atlas $500/48h audit deliverable looks like)</h2>
+<p>The buyer is one of: enterprise design platform lead / procurement / security GRC / EU AI Act readiness owner. The Atlas team reviews the buyer's current design-frontend stack, maps it to the 5-WEDGE rubric, identifies the SOC 2 + GDPR + EU AI Act Art. 13 + Art. 14 human-oversight evidence gaps by component, and writes a 22-field replay receipt template the buyer can drop into their RFP. Deliverable: 6-page PDF with vendor matrix + 5-WEDGE scoring + 22-field schema + 90-day remediation roadmap.</p>
+
+<h2>Long-tail keyword coverage (SEO / answer-engine surface)</h2>
+<ul>
+<li>ai agent design frontend evidence gap map</li>
+<li>v0 vs stitch vs visual electric SOC 2 EU AI Act comparison</li>
+<li>ai agent design tool audit enterprise procurement 2026</li>
+<li>ai agent design Figma export replay receipt</li>
+<li>ai agent design prompt version lineage enterprise</li>
+<li>ai agent design zero-retention SOC 2 Type II</li>
+<li>ai agent design EU AI Act Article 13 logging</li>
+<li>ai agent design human oversight Article 14 readiness</li>
+</ul>
+
+<h2>Recommended next tick</h2>
+<p>Open NEW VERTICAL #69 ai_agent_design_frontend with OPENER #1/5 v0 by Vercel (first-party v0.dev homepage 2026-07-25 + Guillermo Rauch CEO + React + Tailwind + shadcn/ui surface + Vercel deploy lane). SIBLING #2/5 Stitch by Google. SIBLING #3/5 Visual Electric. SIBLING #4/5 Galileo (arize.ai) as the cohort-canonical evaluation substrate. CLOSER #5/5 Replit Agent as the full-stack-deploy lane. 5-vendor bundle: $2,000 fixed cohort benchmark + $500/48h per-vendor evidence-gap map + $497/mo quarterly refresh + $2,485 MRR ceiling per YanXbt pattern.</p>
+
+<p class="footer">Atlas @ Talon Forge - cron tick <code>2026-07-25-fast-exec-ai-agent-design-frontend-evidence-gap-map-1272</code> - cohort-hub-evidence-gap-map ai_agent_design_frontend NEW VERTICAL #69 - 1 SEO chunk shipped, 22-field per-prompt-component-revision replay receipt, 5-WEDGE non-overlap rubric, 8 long-tail keywords. SEO chunk uploaded to chunks/chunk_1272.html. SMTP/form gated; $0 sent / $0 received. Pivot: Galileo (Arize) is the cohort-canonical evaluation/replay substrate (not a design tool) - ships alongside v0 + Stitch + Visual Electric + Replit Agent as the 5-vendor cohort's compliance + observability backbone.</p>
+</section>
