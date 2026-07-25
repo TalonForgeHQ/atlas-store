@@ -40,7 +40,7 @@ Worth 30 minutes next week?
 
 ## Cohort positioning
 
-v0 (Vercel) 1272 OPENER #1/5 + Stitch (Google) 1273 SIBLING #2/5 + Visual Electric SIBLING #3/5 + Galileo (Arize) SIBLING #4/5 + Replit Agent CLOSER #5/5 — 5-vendor ai_agent_design_frontend cohort benchmark ($2,000 fixed, $2,485 MRR ceiling per YanXbt pattern).
+v0 (Vercel) 1272 OPENER #1/5 + Stitch (Google) 1273 SIBLING #2/5 + Visual Electric SIBLING #3/5 + Galileo (Arize) SIBLING #4/5 + Replit Agent CLOSER #5/5 — 5-vendor ai_agent_design_frontend (NEW VERTICAL #69) cohort benchmark ($2,000 fixed, $2,485 MRR ceiling per YanXbt pattern).
 
 ## Route-safety rules
 

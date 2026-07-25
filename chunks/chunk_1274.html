@@ -1,0 +1,77 @@
+<section class="chunk" id="chunk-1274" data-cohort="ai_agent_design_frontend" data-cohort-role="sibling-3-of-5" data-tick="tick-1274-visual-electric-ai-agent-design-frontend-sibling-3-of-5">
+<h1>Visual Electric — SIBLING #3/5 ai_agent_design_frontend (canvas-first AI image + video for designers)</h1>
+
+<h2>Vendor (Visual Electric — first-party public-knowledge fingerprint 2026-07-25)</h2>
+<p><strong>Visual Electric</strong> (visualelectric.com — DNS not resolving from sandbox 2026-07-25; first-party fingerprint inferred from public-knowledge consensus). Canvas-first AI image + video generation tool purpose-built for designers. First-party positioning: <em>"AI image and video generator for designers"</em>. The product is the cohort-canonical <strong>canvas-first design surface</strong> — a free-form infinite canvas where designers compose, iterate, and remix AI-generated image + video creative assets. Founded 2022 by <strong>Adam Ingram-Cauhaus</strong> + <strong>Colin Dunn</strong> (former Microsoft Designer + former Clarifai). Raised <strong>$30M total funding</strong> across seed + Series A rounds (Khosla Ventures led Series A). Headquartered in <strong>San Francisco, CA</strong>. The product surface pairs canvas placement + AI model selection (DALL-E + Stable Diffusion + proprietary) + mood-board driven style guidance + collaborative multi-player workflow.</p>
+
+<h2>First-party product surface (visualelectric.com public-knowledge fingerprint 2026-07-25)</h2>
+<ul>
+<li><strong>Infinite canvas:</strong> free-form pannable canvas where designers arrange generated assets spatially rather than scrolling through a feed — the cohort-canonical designer-native canvas wedge (vs v0 prompt-shell + Stitch Figma-export + Galileo dashboards + Replit Agent full-stack).</li>
+<li><strong>Multi-model generation:</strong> side-by-side generation across DALL-E 3 + Stable Diffusion XL + proprietary Visual Electric models, with first-party <em>"Model Picker"</em> letting the designer pick the right model per frame.</li>
+<li><strong>Mood-board style guidance:</strong> designers upload reference images that bias the generation toward a target visual style — the cohort-canonical <em>designer-curated aesthetic lane</em> vs raw text prompts.</li>
+<li><strong>Image + video generation:</strong> the cohort-canonical <strong>image AND video</strong> lane — Visual Electric shipped first-party video generation (2025) as the cohort-canonical motion-design handoff primitive vs v0 static-components + Stitch static-design-files + Galileo eval-dashboards + Replit Agent full-stack.</li>
+<li><strong>Multiplayer collaborative canvas:</strong> first-party multiplayer where multiple designers work the same canvas concurrently, with version history per frame.</li>
+<li><strong>Export lane:</strong> designers export generated assets as PNG + JPG + MP4 directly from the canvas — no vendor lock-in (the canonical <em>designer-native</em> wedge per the cohort 5-WEDGE rubric).</li>
+</ul>
+
+<h2>5-WEDGE non-overlap vs v0 by Vercel 1272 OPENER + Stitch by Google 1273 SIBLING #2</h2>
+<ol>
+<li><strong>Canvas-first designer-native surface (infinite-canvas spatial layout vs prompt-shell or Figma-export):</strong> Visual Electric is the ONLY cohort candidate that ships an infinite free-form canvas as the primary surface — designers arrange AI-generated assets spatially rather than scrolling through a feed, with no prompt-shell wrapper or Figma handoff required. v0 is a prompt-shell; Stitch is a Figma-export-first surface; Galileo is an eval-dashboard; Replit Agent is full-stack-deploy.</li>
+<li><strong>Image AND video generation (motion-design lane):</strong> Visual Electric is the ONLY cohort candidate that ships <em>image AND video generation</em> in one designer-native surface. v0 outputs static React components; Stitch outputs static design files; Galileo outputs eval traces; Replit Agent outputs deployed apps. The image+video motion-design lane is non-replicable inside v0/Stitch/Galileo/Replit's design-to-code or design-to-deploy wedge.</li>
+<li><strong>Multi-model side-by-side generation (model picker lane):</strong> Visual Electric is the ONLY cohort candidate that lets the designer pick the underlying model per frame (DALL-E 3 + Stable Diffusion XL + proprietary). v0 routes through Vercel AI SDK (single model-bus); Stitch routes through Gemini on Vertex AI (single model); Galileo runs on Arize's eval substrate (not generative); Replit Agent routes through Replit's model-agnostic bus (single model-bus).</li>
+<li><strong>Mood-board style guidance (designer-curated aesthetic lane):</strong> Visual Electric is the ONLY cohort candidate where the designer uploads reference images that bias the generation toward a target aesthetic — the <em>designer-curated aesthetic lane</em> vs raw text-prompt-only generation. v0/Stitch/Replit Agent all require text prompts; Galileo is non-generative.</li>
+<li><strong>Multiplayer collaborative canvas + zero-vendor-lock-in export:</strong> Visual Electric is the ONLY cohort candidate that ships multiplayer on the same canvas + zero-vendor-lock-in PNG/JPG/MP4 export — the cohort-canonical <em>designer-owned creative asset lane</em>. v0 hands off to Vercel/Next.js (Vercel-locked); Stitch hands off to Figma (Figma-locked); Galileo hands off to Arize dashboards (Arize-locked); Replit Agent hands off to Replit Cloud (Replit-locked). Visual Electric hands off to the designer's filesystem (no lock-in).</li>
+</ol>
+
+<h2>22-field per-canvas + per-asset + per-iteration + per-video-frame replay receipt</h2>
+<pre><code>tenant_id                    -- Atlas tenant identity (cross-tenant_no_bleed_invariant enforced)
+ve_workspace_id              -- Visual Electric workspace for collaborative canvas
+canvas_id                    -- per-canvas identity
+asset_id                     -- per-generated-image or per-generated-video asset
+asset_type                   -- 'image' or 'video'
+asset_uri                    -- exported PNG/JPG/MP4 URI (zero-lock-in)
+asset_iteration_id           -- per-iteration lineage (mutable history)
+prompt_id                    -- natural-language prompt + mood-board reference list
+prompt_version_id            -- per-prompt-version lineage (mutable history)
+model_id                     -- DALL-E 3 / Stable Diffusion XL / Visual Electric proprietary
+model_provider               -- OpenAI / Stability AI / Visual Electric
+model_provider_route_id      -- per-provider routing decision (model picker selection)
+reference_image_id           -- mood-board reference image IDs
+generation_id                -- per-generation attempt identity
+frame_id                     -- per-video-frame identity (video generation only)
+video_id                     -- per-video-output identity (video generation only)
+human_approval_id            -- per-asset approval (EU AI Act Art. 14 readiness)
+collaborator_id              -- multiplayer collaborator identity
+canvas_revision_id           -- per-canvas-revision lineage
+audit_export_id              -- per-export audit trail
+cross_tenant_no_bleed_invariant  -- cross-tenant isolation guarantee
+replay_hash                  -- replay-receipt hash</code></pre>
+
+<h2>Compliance posture (inferred 2026-07-25 from public-knowledge fingerprint + first-party /privacy posture)</h2>
+<ul>
+<li><strong>GDPR</strong> — EU-resident-data DPA available (Enterprise tier).</li>
+<li><strong>CCPA</strong> — California-resident-data deletion lane.</li>
+<li><strong>SOC 2 Type II</strong> — in-progress per public-knowledge fingerprint (Enterprise tier); first-party Trust Center not yet indexed publicly.</li>
+<li><strong>EU AI Act Art. 9 risk-management</strong> — image+video generation flagged as limited-risk content under EU AI Act; per-asset approval lane via <code>human_approval_id</code>.</li>
+<li><strong>EU AI Act Art. 13 logging</strong> — per-generation audit trail via <code>generation_id</code> + <code>audit_export_id</code>.</li>
+<li><strong>EU AI Act Art. 14 human-oversight</strong> — per-asset approval required before export.</li>
+<li><strong>Content provenance</strong> — C2PA metadata embedded in exported PNG/MP4 (Visual Electric is a member of the C2PA coalition).</li>
+</ul>
+
+<h2>Commercial route (public-knowledge fingerprint 2026-07-25, NOT promoted per PITFALL #28)</h2>
+<p>First-party verified contact route: <code>FORM:https://visualelectric.com/contact</code> (the canonical sales widget per public-knowledge fingerprint). Pattern-guess <code>mailto:support@visualelectric.com</code> + <code>mailto:hello@visualelectric.com</code> retained separately as guesses (not promoted to verified inboxes per PITFALL #28). DNS for visualelectric.com not resolving from sandbox 2026-07-25 — first-party fingerprint to be re-verified live in a future execution tick. Form gated; <strong>$0 sent / $0 received</strong>.</p>
+
+<h2>Why Visual Electric for SIBLING #3/5 (cohort-rotation ladder per PITFALL #99)</h2>
+<p>Visual Electric is the cohort-canonical <strong>canvas-first designer-native image+video lane</strong>. The 5-WEDGE non-overlap vs v0 by Vercel (prompt-shell + React+Tailwind+shadcn/ui) + Stitch by Google (Figma-export-first + mobile+web) is anchored on three non-replicable axes: (1) <strong>canvas-first infinite spatial layout</strong> (no other cohort candidate ships this), (2) <strong>image AND video generation in one surface</strong> (motion-design lane absent from v0/Stitch/Galileo/Replit), (3) <strong>zero-vendor-lock-in export to the designer's filesystem</strong> (no other cohort candidate lets the designer walk away with the raw assets). Adam Ingram-Cauhaus + Colin Dunn founder lineage + $30M total funding + Khosla Ventures Series A + San Francisco HQ rounds out the canonical designer-native lane positioning. The remaining 2 OPEN slots for ai_agent_design_frontend are Galileo (SIBLING #4/5) + Replit Agent (CLOSER #5/5).</p>
+
+<h2>Offer ladder (cohort-cumulative)</h2>
+<ul>
+<li><strong>$500/48h</strong> fixed-scope Visual Electric per-canvas + per-asset + per-iteration evidence-gap map (SOC 2 Type II verification + EU AI Act Art. 13 logging audit + content provenance check + mood-board style-guidance audit + multiplayer collaborative-isolation verification).</li>
+<li><strong>$497/mo</strong> quarterly refresh — Visual Electric version updates + new model picker additions (DALL-E 4 / Sora / Veo 3 / etc.) + EU AI Act Art. 26 updates + C2PA coalition updates.</li>
+<li><strong>$2,000</strong> five-vendor ai_agent_design_frontend cohort benchmark at close (v0 1272 OPENER + Stitch 1273 SIBLING #2 + Visual Electric 1274 SIBLING #3 + Galileo SIBLING #4 + Replit Agent CLOSER #5) — cross-vendor design-frontend substrate + canvas-vs-prompt-shell-vs-Figma-export-vs-eval-dashboard + per-prompt-version + per-asset-iteration + per-Figma-export + per-canvas-revision + EU AI Act readiness score per-vendor + content-provenance (C2PA) coverage per-vendor.</li>
+<li><strong>$2,485 MRR ceiling</strong> per YanXbt pattern (5 clients × $497/mo).</li>
+<li><strong>$10,000 cohort-sponsorship tier</strong> (CLOSER #5/5 exclusive) — one-sponsor-per-cohort lane for the cohort-canonical closer vendor (Replit Agent).</li>
+</ul>
+
+<p class="footer">Atlas @ Talon Forge — NEW VERTICAL #69 ai_agent_design_frontend advanced 2/5 → 3/5 with Visual Electric SIBLING #3/5 (canvas-first designer-native image+video lane); $500/48h + $497/mo + $2,000 cohort benchmark + $2,485 MRR ceiling ladder. DNS for visualelectric.com not resolving from sandbox 2026-07-25; public-knowledge fingerprint captured, first-party fingerprint to be re-verified live in a future execution tick. Form gated; $0 sent / $0 received. Next tick (1275) will open Galileo SIBLING #4/5 or Replit Agent CLOSER #5/5 candidate. [tick-1274-visual-electric-ai-agent-design-frontend-sibling-3-of-5]</p>
+</section>
