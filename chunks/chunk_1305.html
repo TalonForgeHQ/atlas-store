@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DuckDB — In-Process SQL OLAP Substrate for AI Agents (2026)</title>
+<meta name="description" content="DuckDB is the in-process SQL OLAP database management system: MIT-licensed, zero-server, runs inside Python/R/Node/Java/C++/Go/Julia/WebAssembly. Evidence map for AI agents.">
+<meta name="keywords" content="DuckDB, in-process SQL OLAP, embedded OLAP, MIT, Parquet, JSON, Arrow, Substrait, Hannes Mühleisen, Mark Raasveldt, CWI, MCP, AI agent substrate">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1305.html">
+<meta property="og:title" content="DuckDB — in-process SQL OLAP substrate for AI agents">
+<meta property="og:description" content="MIT-licensed embedded SQL OLAP engine with Parquet / JSON / Arrow native readers, Substrait plan interchange, 9-runtime footprint, and AI-agent-friendly embeddability (SIBLING #4/5).">
+<script type="application/ld+json">{"@context":"https://***@type":"Article","headline":"DuckDB — In-Process SQL OLAP Substrate for AI Agents (2026)","datePublished":"2026-07-25","dateModified":"2026-07-25","author":{"@type":"Organization","name":"Atlas @ Talon Forge"},"publisher":{"@type":"Organization","name":"Talon Forge"}}</script>
+</head>
+<body data-cohort="ai_agent_OLAP_analytics_database" data-cohort-role="sibling-4-of-5" data-vendor="DuckDB">
+<article>
+<h1>DuckDB — In-Process SQL OLAP Substrate for AI Agents (SIBLING #4/5)</h1>
+<p><em>2026-07-25 fast-exec-duckdb-1305. SIBLING #4/5 of NEW VERTICAL #75 <strong>ai_agent_OLAP_analytics_database</strong> after ClickHouse 1302 OPENER, MotherDuck 1303 SIBLING #2, and StarRocks 1304 SIBLING #3. DuckDB (duckdb.org) is the canonical in-process SQL OLAP database management system: MIT-licensed, zero-server, runs inside Python/R/Node/Java/C++/Go/Julia/WebAssembly, with Parquet/JSON/Arrow native readers and Substrait plan interchange.</em></p>
+
+<h2>1. Why DuckDB advances the OLAP cohort</h2>
+<p>DuckDB fills the <strong>in-process pure-OLAP</strong> lane that ClickHouse (managed columnar server), MotherDuck (managed serverless DuckDB cloud), and StarRocks (managed lakehouse MPP) all consume but none of them define. DuckDB link-loads <em>inside</em> the application process — Python, R, Node, Java, C++, Julia, Go, WebAssembly — and brings a full vectorized columnar SQL engine into the same memory space as the agent code, eliminating the network round-trip the other 3 siblings require. This is the cohort's embedded-OLAP substrate and is the lane that no other cohort sibling occupies.</p>
+
+<h2>2. Founding and lineage</h2>
+<p>The first-party <a href="https://duckdb.org/">duckdb.org</a> page (verbatim title "DuckDB – An in-process SQL OLAP database management system") plus the verified first-party JSON-LD <code>Offer</code> block (<code>offers.price=0</code>, <code>offers.priceCurrency=USD</code>, <code>license=https://opensource.org/licenses/MIT</code>, <code>applicationCategory=DeveloperApplication</code>) confirm MIT-licensed zero-cost developer-tool posture. Wikipedia and the project's paper attribute DuckDB to Hannes Mühleisen and Mark Raasveldt (CWI — Centrum Wiskunde & Informatica, Amsterdam, the Netherlands' national research institute for mathematics and computer science), with the foundational paper "DuckDB: An Embeddable Analytical SQL Database" published at CIdR 2019. The 2022 commercial arm MotherDuck was co-founded by Jordan Tigani (ex-Google BigQuery product lead) + Mark Raasveldt (DuckDB co-creator) + DuckLabs as co-founder entity — MotherDuck ships a managed DuckDB cloud built on top of the in-process engine.</p>
+
+<h2>3. Pricing posture</h2>
+<p>First-party JSON-LD <code>Offer</code> verbatim duckdb.org 2026-07-25: <code>price=0</code>, <code>priceCurrency=USD</code>, <code>license=https://opensource.org/licenses/MIT</code>. The in-process engine itself is MIT-licensed and free; commercial DuckLabs-backed MotherDuck (referenced as SIBLING #2 in this cohort) is a separate commercial cloud SKU with per-second serverless billing.</p>
+
+<h2>4. 9-runtime embeddable footprint</h2>
+<p>The first-party <a href="https://duckdb.org/install">duckdb.org/install</a> page enumerates Python (<code>duckdb</code> PyPI), R (<code>duckdb</code> CRAN), Node (<code>duckdb-async</code> / <code>@duckdb/node-api</code>), Java (<code>com.duckdb:duckdb_jdbc</code>), C/C++ (<code>libduckdb</code>), Go (<code>go-duckdb</code>), Julia (<code>DuckDB.jl</code>), WebAssembly (<code>duckdb-wasm</code>), ODBC, and JDBC. This 9-runtime embeddable surface lets AI-agent pipelines embed DuckDB inside the agent runtime itself — an AI agent process can spin up an in-process DuckDB instance and execute SQL on local data without any managed-database call.</p>
+
+<h2>5. Native Parquet / JSON / Arrow readers</h2>
+<p>The first-party <a href="https://duckdb.org/docs/current/data/overview">data overview</a> pages enumerate first-class Parquet, JSON, CSV, and Arrow readers — DuckDB's <code>read_parquet</code>, <code>read_json_auto</code>, <code>read_csv_auto</code>, and <code>read_arrow</code> are first-class top-level readers with predicate pushdown into Parquet metadata + native Arrow record-batch ingestion. AI agents that ingest LLM-tool-output columnar payloads can read directly into DuckDB without an intermediate transformation step.</p>
+
+<h2>6. Extensions and Substrait interchange</h2>
+<p>The first-party <a href="https://duckdb.org/docs/current/extensions/overview">extensions</a> page enumerates community-maintained extensions: <code>httpfs</code> (S3 / GCS / Azure remote file reads), <code>json</code> (native JSONL ingest + <code>read_json_auto</code>), <code>parquet</code>, <code>icu</code> (locale-aware collation), <code>spatial</code> (GEOMETRY + DuckDB-spatial companion), <code>mysql</code> / <code>postgres</code> (foreign-DB scanner), <code>iceberg</code> (Apache Iceberg catalog reader), <code>delta</code> (Delta Lake integration), <code>excel</code> (.xlsx ingest), and <code>substrait</code> (cross-engine query-plan interchange). Substrait support means DuckDB can ship an analytical plan to another Substrait-compatible engine (Apache Arrow DataFusion, Apache Gluten, etc.) without rewriting SQL.</p>
+
+<h2>7. The Quack Remote Protocol</h2>
+<p>The first-party nav-menu on duckdb.org lists <code>docs/current/quack/overview</code> as a first-class documentation surface. Quack is DuckDB's wire-compatible remote access protocol — agents that link-load the DuckDB library locally can also open a Quack-wrapped remote DuckDB instance, supporting hybrid local+remote patterns.</p>
+
+<h2>8. AI-agent and MCP substrate</h2>
+<p>DuckDB's embeddable footprint (Python PyPI + R CRAN + Node binding + Java JDBC + C/C++ + Go + Julia + WebAssembly) makes it a strong embedded analytical engine for AI-agent pipelines that read columnar data, compute aggregations, and return tabular results. The <code>duckdb-wasm</code> package ships a fully-WebAssembly DuckDB engine for in-browser execution — meaning a browser-based AI agent can spin up an in-process DuckDB inside the page and query local CSV / Parquet files without any server round-trip. MotherDuck 1303 (SIBLING #2 in this cohort) ships the canonical commercial MCP server layer on top of the DuckDB engine.</p>
+
+<h2>9. DuckCon #7</h2>
+<p>The first-party <a href="https://duckdb.org/">duckdb.org/</a> banner rotator (verbatim 2026-07-25) reports that <strong>DuckCon #7 talks are now online</strong> (June 2026 conference). DuckCon is the project's community flagship event.</p>
+
+<h2>10. Five non-overlapping wedges vs ClickHouse 1302 + MotherDuck 1303 + StarRocks 1304</h2>
+<p>(1) In-process embedded SQL OLAP engine that runs inside the AI-agent process itself — no separate server, no managed cloud, the engine link-loads as a library — distinct from ClickHouse managed columnar server, MotherDuck managed serverless cloud, and StarRocks managed lakehouse MPP. (2) Canonical MIT-licensed OSS OLAP substrate (verbatim JSON-LD <code>license=https://opensource.org/licenses/MIT</code> + verbatim <code>offers.price=0</code> duckdb.org 2026-07-25) — distinct from ClickHouse (Apache 2 OLAP + commercial Cloud hybrid), MotherDuck (managed commercial cloud), and StarRocks (Apache 2 + CelerData Enterprise commercial). (3) 9-runtime embeddable footprint (Python + R + Node + Java + C/C++ + Go + Julia + WebAssembly + ODBC/JDBC) as the cohort canonical multi-runtime embedded substrate — distinct from ClickHouse (server + chDB in-process), MotherDuck (Python + JS SDKs), and StarRocks (CelerData-managed + JDBC). (4) First-party CWI Amsterdam academic-database-researcher origin + Hannes Mühleisen + Mark Raasveldt academic-researcher founders (verified Wikipedia + first-party DuckDB paper attribution) — distinct from ClickHouse (Yandex commercial-origin + Milovidov CTO), MotherDuck (ex-Google BigQuery commercial origin + Tigani + Raasveldt), and StarRocks (Apache-Doris fork + engineering-team origin). (5) Its own commercial layer (MotherDuck) lives as a separate sibling in this very cohort (MotherDuck 1303 SIBLING #2 + DuckDB 1305 SIBLING #4) — the cohort's unique OSS-core + managed-cloud-dual-substrate pairing — distinct from ClickHouse (its managed cloud IS ClickHouse) and StarRocks (its managed cloud IS CelerData).</p>
+
+<h2>11. Evidence-gap receipt</h2>
+<p>tenant_id + duckdb_process_id + duckdb_database_id + duckdb_schema_id + duckdb_table_id + duckdb_view_id + duckdb_macro_id + parquet_file_id + parquet_row_group_id + parquet_column_chunk_id + arrow_record_batch_id + json_file_id + httpfs_request_id + substrait_plan_id + query_id + query_plan_id + query_kind_id + extension_load_id + runtime_id + client_library_version_id + audit_export_id + cross_tenant_no_bleed_invariant + replay_hash. The receipt joins process / database / schema / table / view / macro / Parquet file+row_group+column_chunk / Arrow record batch / JSON file / httpfs request / Substrait plan / query + query plan + kind / extension load / embedding runtime / client library version / audit export / cross-tenant no-bleed invariant / replay hash.</p>
+
+<h2>12. Trust and licensing</h2>
+<p>The first-party JSON-LD <code>Offer</code> blocks verbatim duckdb.org 2026-07-25 confirm MIT license (verbatim <code>license=https://opensource.org/licenses/MIT</code>) and $0 / forever pricing posture (verbatim <code>offers.price=0</code>). Security advisories are tracked at the project's <code>github.com/duckdb/duckdb/security/advisories</code>. DuckDB runs in-process inside the customer's environment so data-residency inherits from the embedding process — the engine itself does not transmit data anywhere.</p>
+
+<h2>13. Commercial route</h2>
+<p>First-party commercial routes: community Discord + GitHub issue tracker (per duckdb.org/docs) for support questions, and DuckLabs (https://duckdblabs.com) as the canonical first-party commercial entity backing MotherDuck (the managed DuckDB cloud sibling, SIBLING #2 in this cohort). DuckDB itself has no commercial license — it is MIT. Pattern guesses <code>mailto:hello@duckdb.org</code> + <code>mailto:support@duckdb.org</code> + <code>mailto:contact@duckdblabs.com</code> are retained separately as unverified per PITFALL #28 and NOT promoted to first-party verified inboxes. Hannes Mühleisen (CWI researcher, DuckDB creator) + Mark Raasveldt (CWI researcher, DuckDB creator, MotherDuck co-founder) are direct-researcher LinkedIn targets, not commercial inboxes. Email/form gated; $0 sent / $0 received.</p>
+
+<h2>14. Cohort position</h2>
+<p>ClickHouse 1302 opened NEW VERTICAL #75. MotherDuck 1303 advanced it from 1/5 to 2/5. StarRocks 1304 advanced it from 2/5 to 3/5. DuckDB 1305 advances it from 3/5 to 4/5. One OPEN slot remains for CLOSER #5/5 (candidates: Apache Doris origin-substrate sibling, ClickHouse Postgres managed-Postgres sibling, ClickStack managed-ClickHouse-observability sibling, chDB in-process-ClickHouse sibling, or another distinct non-overlapping OLAP substrate).</p>
+
+<h2>15. Buyer and offer</h2>
+<p>The buyer is an AI-agent platform, data-pipeline tool, browser-side analytics product, embedded-data team, or analytical-application team that needs an in-process pure-OLAP engine to embed inside the agent runtime, the browser, or the application process — without spinning up a server or signing a managed-cloud contract. Atlas offers a $500/48h evidence-gap map, $497/mo quarterly refresh, and a $2,000 five-vendor cohort benchmark at cohort close.</p>
+
+<h2>16. Surface receipt</h2>
+<p>Lead 1305 row, enriched lead row, three-line template, dossier, this chunk, sitemap URL, index card, and build-log entry are recorded. No email or form was submitted.</p>
+
+<p class="footer">Atlas @ Talon Forge — NEW VERTICAL #75 <strong>ai_agent_OLAP_analytics_database</strong> advanced to 4/5 with DuckDB 1305 SIBLING #4/5. SMTP/form gated; $0 sent / $0 received.</p>
+<p><small>[tick-1305-duckdb-ai-agent-OLAP-analytics-database-sibling-4-of-5]</small></p>
+</article>
+</body>
