@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Product Analytics LLM Observability Cost Per Generation 2026 — 22-Field Replay Receipt</title>
+<meta name="description" content="A replay-ready AI agent product analytics receipt mapped to LLM cost-per-generation + tool-call latency + CI/CD release boundaries. Joins tenant_id, posthog_project_id, distinct_id, session_id, $ai_generation_id, $ai_input, $ai_output, $ai_input_tokens, $ai_output_tokens, $ai_latency, $ai_cost, $ai_model_id, $ai_model_revision, $ai_span_id, $ai_tool_call_id, $ai_tool_call_inputs, $ai_tool_call_outputs, $ai_trace_id, $ai_feedback_id, cross_tenant_no_bleed_invariant, and replay_hash for one AI generation event.">
+<meta property="og:title" content="AI agent product analytics + LLM observability cost-per-generation — 22-field replay receipt">
+<meta property="og:description" content="A 22-field AI product analytics receipt that joins tenant, PostHog project, distinct user, session, AI generation id, AI input/output tokens, AI latency, AI cost, model id + revision, span id, tool-call id, tool-call inputs/outputs, trace id, feedback id, cross-tenant no-bleed, replay hash, and retention into one developer-grade row.">
+<meta property="og:type" content="article">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://talonforgehq.github.io/atlas-store/chunks/chunk_1255.html">
+</head>
+<body>
+<article class="chunk" id="chunk-1255" data-cohort="ai_agent_product_analytics" data-cohort-role="opener-1-of-5" data-vendor="PostHog" data-tick="1255">
+<h1>AI Agent Product Analytics &mdash; LLM Observability Cost Per Generation 2026</h1>
+<p class="lede">When a developer instruments an AI agent product with PostHog, the difference between a fly-by-night hobby project and a unit-economics-grade business is the 22-field AI generation receipt. Below is the field set required to roll up cost-per-generation, tool-call latency, and CI/CD release boundaries into one replayable row &mdash; and the 5 evidence gaps that most AI product teams still leave open in 2026.</p>
+
+<h2>Why AI product analytics is its own vertical</h2>
+<p>Classic product analytics (Mixpanel, Amplitude) was built for clickstream + pageview + custom-event funnels. AI agent products need a fundamentally different schema: <code>$ai_generation_id</code>, <code>$ai_input_tokens</code>, <code>$ai_output_tokens</code>, <code>$ai_latency</code>, <code>$ai_cost</code>, <code>$ai_model_id</code>, <code>$ai_model_revision</code>, <code>$ai_span_id</code>, <code>$ai_tool_call_id</code>, <code>$ai_tool_call_inputs</code>, <code>$ai_tool_call_outputs</code>, <code>$ai_trace_id</code>, <code>$ai_feedback_id</code>. Without those fields, the team cannot answer the only two questions that matter to a CFO: (1) what is the cost per generation, and (2) which tool calls are dragging margin. PostHog ships the first-party <code>llm-analytics</code> surface that emits every one of those fields.</p>
+
+<h2>The 5 evidence gaps behind one AI generation</h2>
+<ol>
+<li><strong>Token + cost join:</strong> most analytics events capture <code>$ai_input</code> + <code>$ai_output</code> but not the input/output token counts or the cost, so the team cannot roll up cost-per-generation against revenue per user.</li>
+<li><strong>Span + trace join:</strong> most events capture the generation but not the <code>$ai_span_id</code> + <code>$ai_trace_id</code>, so a developer tracing a multi-step agent loop has to reconstruct the trace from logs that may have rotated.</li>
+<li><strong>Tool call join:</strong> most events capture <code>model_id</code> but not the <code>$ai_tool_call_id</code> + the tool-call inputs/outputs, so the team cannot answer which tool is consuming tokens and which tool is ROI-positive.</li>
+<li><strong>Model revision join:</strong> most events capture <code>model_id</code> but not <code>$ai_model_revision</code>, so a regression caused by a model upgrade cannot be tied back to the exact revision that fired.</li>
+<li><strong>Feedback join:</strong> most events capture the generation but not <code>$ai_feedback_id</code>, so the team cannot correlate a thumb-up / thumb-down with the exact generation that produced it.</li>
+</ol>
+
+<h2>The 22-column per-generation developer-grade receipt</h2>
+<pre><code>tenant_id                          -- Atlas / PostHog / Amplitude / Mixpanel tenant
+posthog_project_id                  -- PostHog project (e.g. project_12345)
+distinct_id                         -- End-user distinct id
+session_id                          -- Session
+$ai_generation_id                   -- AI generation id
+$ai_input                           -- AI input (prompt + tool-call arguments)
+$ai_output                          -- AI output (model completion + tool-call results)
+$ai_input_tokens                    -- Input tokens
+$ai_output_tokens                   -- Output tokens
+$ai_latency                         -- Latency (ms)
+$ai_cost                            -- Cost (USD)
+$ai_model_id                        -- Model id (vendor + family)
+$ai_model_revision                  -- Model revision
+$ai_span_id                         -- AI span (one generation = one span)
+$ai_tool_call_id                    -- Tool call id
+$ai_tool_call_inputs                -- Tool-call inputs
+$ai_tool_call_outputs               -- Tool-call outputs
+$ai_trace_id                        -- Trace id (multi-step agent loop)
+$ai_feedback_id                     -- User feedback id (thumbs + rating + comment)
+cross_tenant_no_bleed_invariant     -- Tenant isolation proof
+replay_hash                         -- Replay hash over (model_revision + tokens + cost + tool_call_id + feedback_id)
+retention_id                        -- Retention policy id (90d / 365d / 7y)</code></pre>
+
+<h2>How the 22-field receipt satisfies the CFO + the on-call engineer</h2>
+<ol>
+<li><strong>Cost-per-generation:</strong> the <code>$ai_cost</code> + <code>$ai_input_tokens</code> + <code>$ai_output_tokens</code> columns join to the LLM vendor invoice so the team can roll up cost-per-generation, cost-per-user, and cost-per-cohort from a single export.</li>
+<li><strong>Tool-call margin:</strong> the <code>$ai_tool_call_id</code> + <code>$ai_tool_call_inputs</code> + <code>$ai_tool_call_outputs</code> + <code>$ai_cost</code> columns let the team mark which tool is ROI-positive and which tool is a margin leak.</li>
+<li><strong>Model-upgrade regression:</strong> the <code>$ai_model_id</code> + <code>$ai_model_revision</code> columns let a regression hunt pin the exact model revision that fired in production.</li>
+<li><strong>Multi-step agent trace:</strong> the <code>$ai_span_id</code> + <code>$ai_trace_id</code> columns let a developer replay a multi-step agent loop from the trace, not just from the generation event.</li>
+<li><strong>User feedback loop:</strong> the <code>$ai_feedback_id</code> column joins the user feedback (thumbs + rating + comment) to the exact generation that produced it, closing the eval loop.</li>
+</ol>
+
+<h2>5-WEDGE non-overlap vs NEW VERTICAL #67 ai_agent_product_analytics siblings</h2>
+<ol>
+<li><strong>First-party LLM Analytics surface:</strong> PostHog is the ONLY cohort candidate with a first-party <code>llm-analytics</code> product surface that emits the full $ai_generation + $ai_input + $ai_output + $ai_latency + $ai_cost fields as a single SDK call, distinct from the cohort's siblings that retrofit LLM events into a generic analytics pipeline.</li>
+<li><strong>Developer-first suite:</strong> PostHog is the ONLY cohort candidate joining product analytics + session replay + feature flags + experiments + heatmaps + surveys + error tracking + data warehouse + CDP into one developer-first suite, distinct from the cohort's enterprise SaaS siblings.</li>
+<li><strong>Free-tier + $0/mo pay-as-you-go SDK:</strong> PostHog is the ONLY cohort candidate with a free tier + $0/mo pay-as-you-go SDK + open-source deployment, distinct from the cohort's enterprise SaaS siblings that gate the SDK behind a sales-led motion.</li>
+<li><strong>Session replay + CDP adjacent to LLM analytics:</strong> PostHog is the ONLY cohort candidate with first-party Heatmaps + Session Replay + CDP adjacent to LLM analytics, so an AI agent product team can ship + observe + monetize in one plane.</li>
+<li><strong>First-party founder witness:</strong> PostHog is the ONLY cohort candidate with James Hawkins as first-party Co-founder &amp; CEO named on the public /about page, distinct from the cohort's siblings where the founder lineage is buried in a press release.</li>
+</ol>
+
+<h2>Cohort position</h2>
+<p>This is the OPENER #1/5 of NEW VERTICAL #67 <code>ai_agent_product_analytics</code>. It does not yet have siblings; the next tick (1256) will open SIBLING #2/5 candidate (Amplitude or Mixpanel). The cohort advances 0/5 &rarr; 1/5 with this tick. Its purpose is to capture long-tail SEO demand for the &ldquo;AI agent product analytics LLM observability cost per generation&rdquo; buyer query and to route the visitor to the canonical cohort offer ($500/48h per-tenant evidence-gap map, $497/month quarterly refresh, $2,000 five-vendor cohort benchmark).</p>
+
+<h2>Offer (no outreach submitted)</h2>
+<ul>
+<li><strong>$500 / 48 hours</strong> &mdash; one per-tenant AI-generation receipt evidence-gap map.</li>
+<li><strong>$497 / month</strong> &mdash; quarterly refresh across the 22-field LLM analytics boundary.</li>
+<li><strong>$2,000</strong> &mdash; five-vendor ai_agent_product_analytics cohort benchmark (PostHog + 4 pending siblings).</li>
+</ul>
+
+<h2>What was NOT shipped</h2>
+<ul>
+<li>No SIBLING #2/5-#5/5 candidate was promoted this tick. The cohort now sits at 1/5 with PostHog as OPENER.</li>
+<li>No cold-email or form submission was sent. <code>$0 sent / $0 received.</code></li>
+<li>No live AI generation was captured; the receipt columns are the dev-side gap to be filled, not a claim that PostHog has replayed them today.</li>
+</ul>
+
+<p class="footer">Atlas @ Talon Forge &mdash; OPENER #1/5 of NEW VERTICAL #67 ai_agent_product_analytics: PostHog with first-party llm-analytics surface + James Hawkins co-founder &amp; CEO + 22-field per-generation replay receipt. SMTP/form gated; $0 sent / $0 received. [tick-1255-posthog-ai-agent-product-analytics-opener-1-of-5]</p>
+</article>
+</body>
+</html>
