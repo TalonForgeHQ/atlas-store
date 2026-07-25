@@ -36,7 +36,7 @@ SIBLING #4/5 of NEW VERTICAL #80 `ai_agent_browser_automation` after Browserbase
 The fetched public `/security` page did not expose readable SOC 2, ISO 27001, GDPR, retention, residency, or audit-log commitments. Treat these as buyer diligence questions, not inferred certifications.
 
 ## Correction applied before commit
-The uncommitted draft named Atul Ranjan and Rohan Sundar, described a native browser MCP server, guessed `hello@hyperbrowser.ai`, and cited 404 `/about` and `/contact` routes. Those claims were removed after first-party verification against Hyperbrowser docs and the YC company page.
+The uncommitted draft used the wrong founder names, described a native browser MCP server, guessed `hello@hyperbrowser.ai`, and cited 404 `/about` and `/contact` routes. Those claims were removed after first-party verification against Hyperbrowser docs and the YC company page.
 
 ## Offer ladder
 - $500 / 48h fixed-scope evidence-gap map
