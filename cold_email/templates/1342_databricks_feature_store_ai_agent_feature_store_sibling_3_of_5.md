@@ -1,0 +1,30 @@
+---
+template_id: tick-1342-databricks-feature-store-ai-agent-feature-store-sibling-3-of-5
+vendor: Databricks Feature Store
+cohort: ai_agent_feature_store
+cohort_role: sibling-3-of-5
+target: mailto:hello@databricks.com (canonical first-party from databricks.com/company/founders 2026-07-26)
+subject_line: Databricks Feature Store + 5-vendor ai_agent_feature_store cohort SIBLING #3/5 (Unity Catalog + Databricks Model Serving + Delta Lake + MLflow + 7 Lakehouse-inventor founders)
+preheader: First-party verified 2026-07-26 docs.databricks.com + databricks.com/company/founders — canonical UNITY-CATALOG + LAKEHOUSE + DELTA-LAKE substrate distinct from Hopsworks 1340 Stockholm-Sweden vendor-controlled OPENER and Feast 1341 Linux-Foundation-governed OSS POLYGLOT-SDK SIBLING-2
+---
+
+Hi Databricks team,
+
+First-party verified 2026-07-26 (docs.databricks.com/en/machine-learning/feature-store + databricks.com/company/founders + databricks.com/product/feature-store): Databricks Feature Store is the canonical UNITY-CATALOG-REGISTERED + LAKEHOUSE-BACKED + DELTA-LAKE-ENGINE feature store for AI agents, analytics, and ML — "Databricks Feature Store is a central registry for ML features in Unity Catalog, providing governance, lineage, point-in-time joins, and online serving" + H1 "Databricks Feature Store" + Databricks Model Serving "Model and feature serving endpoints that are available with a single click and that provide milliseconds of latency" + Delta Lake Apache-2.0 + Delta Sharing cross-org protocol + Photon engine + MLflow Apache-2.0 + Databricks Workflows + Databricks SQL + Unity Catalog governance. Databricks was founded by Ali Ghodsi, Ion Stoica, Matei Zaharia, Patrick Wendell, Reynold Xin, Andy Konwinski, and Arsalan Tavakoli-Shiraji — 7 founders including the original creator of Apache Spark (Matei Zaharia), the Apache Spark PMC chair (Reynold Xin), and the UC Berkeley RISELab co-founder (Ion Stoica). Databricks is the unique SIBLING #3/5 of the ai_agent_feature_store cohort I'm building.
+
+Why Databricks Feature Store is the cohort SIBLING #3/5 (not a later sibling): the ai_agent_feature_store vertical needs the canonical UNITY-CATALOG-GOVERNED + LAKEHOUSE-BACKED + LAKEHOUSE-ARCHITECTURE-INVENTOR lane as the third wedge after Hopsworks 1340 Stockholm-Sweden vendor-controlled INTEGRATED-FEATURE-STORE-VECTOR-DB-LLM-GATEWAY OPENER and Feast 1341 Linux-Foundation-governed OSS POLYGLOT-PYTHON-GO-JAVA-SDK SIBLING-2. Databricks's substrate is the canonical Unity-Catalog + Databricks Model Serving (milliseconds-latency feature-and-model serving) + Delta Lake (Apache-2.0 open-table-format) + Delta Sharing (cross-org sharing protocol) + MLflow (Apache-2.0 experiment tracking originated at Databricks) + Databricks Workflows + Databricks SQL + Photon engine + Lakehouse architecture substrate as a single integrated first-party product surface joined in one Databricks account. Databricks is not Hopsworks because Databricks is Unity-Catalog + Delta-Lake + MLflow + Lakehouse, Hopsworks is Stockholm-Sweden-vendor-controlled + HopsFS-storage + Apache-Hopsworks-sub-project + LLM-gateway-integrated. Databricks is not Feast because Databricks is Unity-Catalog-governed + Delta-Lake-engine + Milliseconds-latency-serving, Feast is Linux-Foundation-governed + OSS-feature-store-only + REST/gRPC-feature-server-only.
+
+I'm running a five-vendor benchmark report (Hopsworks 1340 OPENER + Feast 1341 SIBLING-2 + Databricks Feature Store 1342 SIBLING-3 + SageMaker Feature Store 1343 TBD SIBLING-4 + Google Vertex Feature Store 1344 TBD CLOSER-5) that would publish a per-vendor evidence-gap map covering per-feature-table audit trail + per-feature-view + per-materialized-feature + per-online-store + per-offline-store + per-Delta-table + per-MLflow-run + per-MLflow-experiment + per-model-serving-endpoint + per-feature-lookup + per-Unity-Catalog-catalog + per-Unity-Catalog-schema + per-feature-table-tag + cross-tenant no-bleed + EU AI Act Art. 13 logging + Art. 14 human-oversight.
+
+The 22-col evidence wedge for Databricks Feature Store joins tenant_id + databricks_account_id + databricks_workspace_id + unity_catalog_catalog_id + unity_catalog_schema_id + feature_table_id + feature_table_version + feature_id + feature_view_id + feature_view_version + materialized_feature_id + online_store_id + offline_store_id + delta_table_id + delta_table_version + model_serving_endpoint_id + model_serving_endpoint_revision + mlflow_experiment_id + mlflow_run_id + mlflow_model_version_id + feature_lookup_id + audit_export_id + cross_tenant_no_bleed_invariant + replay_hash.
+
+Offer ladder:
+- $500 / 48 hours — fixed-scope Databricks Feature Store per-feature-table + per-feature-view + per-materialized-feature + per-online-store + per-offline-store + per-Delta-table + per-MLflow-run + per-MLflow-experiment + per-model-serving-endpoint + per-feature-lookup + per-Unity-Catalog-catalog + per-Unity-Catalog-schema + per-feature-table-tag + per-audit-trail evidence-gap map
+- $497 / month — quarterly refresh: Databricks version updates + new Unity Catalog coverage + new MLflow capability coverage + new Delta Sharing capability coverage + EU AI Act Art. 26 updates
+- $2,000 — five-vendor ai_agent_feature_store COHORT BENCHMARK at close (Hopsworks 1340 OPENER + Feast 1341 SIBLING-2 + Databricks Feature Store 1342 SIBLING-3 + SageMaker Feature Store 1343 TBD SIBLING-4 + Google Vertex Feature Store 1344 TBD CLOSER-5)
+- $2,485 MRR ceiling per YanXbt pattern (5 clients x $497/mo)
+- $10,000 CLOSER-only cohort sponsorship tier unlocked at vertical #82 closure
+
+I am running the SIBLING #3/5 position with $0 sent / $0 received, mailto/form gated. If the cohort-benchmark shape is interesting for Databricks as the canonical UNITY-CATALOG + LAKEHOUSE + DELTA-LAKE + MLFLOW SIBLING (vs Hopsworks 1340 vendor-controlled-integrated OPENER vs Feast 1341 OSS-polyglot-SDK SIBLING-2 vs SageMaker 1343 TBD vs Vertex 1344 TBD), the right next step would be a 20-minute walk-through of the proposed benchmark rubric before any commercial ask — I'll wait for you to set that up if useful.
+
+Best,
