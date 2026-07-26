@@ -1,0 +1,41 @@
+tick-1353: ship Honeycomb OPENER #1/5 ai_agent_observability (NEW VERTICAL #84 OPENED 1/5)
+
+3 surfaces (leads.csv row 1353 + 10.6KB Charity Majors + Christine Yen founder-named template + build-log.html tick-1353 receipt prepended before tick-1352).
+
+Honeycomb first-party verified 2026-07-26 verbatim honeycomb.io + honeycomb.io/about + honeycomb.io/team + honeycomb.io/platform/intelligence + honeycomb.io/bubbleup + honeycomb.io/platform/opentelemetry: title "Honeycomb: AI-Ready Observability Platform" + og:description "Honeycomb is the observability platform built for AI-era software. Fast queries, unified telemetry, and LLM observability. Used by Slack, Intercom, and Dropbox." + 14+ named first-party platform primitives (BubbleUp + Anomaly Detection + Log Analytics + Service Map + Honeycomb Intelligence + Agent Timeline + Canvas + MCP Model Context Protocol + Distributed Tracing + Frontend Observability + Metrics + SLOs + Telemetry Pipeline + OpenTelemetry integration + Private Cloud + Integrations).
+
+Founder lineage verified verbatim honeycomb.io/team 2026-07-26 first-party JSON-LD:
+- Charity Majors Co-founder + CTO (jobTitle CTO; LinkedIn linkedin.com/in/charity-majors + x.com/mipsytipsy + bsky.app/profile/charity.wtf; description verbatim: "Charity Majors is the co-founder and CTO of honeycomb.io. She pioneered the concept of modern Observability, drawing on her years of experience building and managing massive distributed systems at Parse (acquired by Facebook), Facebook, and Linden Lab building Second Life. She is the co-author of Observability Engineering and Database Reliability Engineering (O'Reilly).")
+- Christine Yen Co-founder + CEO (jobTitle CEO; LinkedIn linkedin.com/in/christineyen + x.com/cyen; description verbatim: "Christine delights in being a developer in a room full of ops folks. Before founding Honeycomb, she built analytics products at Parse/Facebook, and loved writing software to separate signal from noise.")
+- Emily Nakashima SVP Engineering
+- Graham Siener SVP Product
+- Julie Neumann CMO
+- Matt Nelson CRO
+
+About-page mission verbatim 2026-07-26: "At Honeycomb, our leadership team is united by a simple belief: observability is essential. It's the engine that drives faster feedback loops, clearer decisions, reliable AI systems, and the kind of customer experiences that set great companies apart." + values "Fast and close to right is better than perfect" + "We hire adults" + "Everything is an experiment" + "Feedback is a muscle" + "Act with autonomy and ownership".
+
+Customers verbatim honeycomb.io 2026-07-26 "Used by Slack, Intercom, and Dropbox". Press verbatim honeycomb.io/about "As well as Mike Krieger, Ilya Sukhar, Anamitra Banerji, Venkat Venkataramani, and a number of other angels". Founded 2014 SF HQ + ~$96.7M aggregate raised (Benchmark + IVP + Scale Venture Partners + Storm Ventures + Michael Krieger + Ilya Sukhar + Anamitra Banerji + Venkat Venkataramani).
+
+5-WEDGE non-overlap vs candidate bank Datadog + Grafana + Dynatrace + New Relic + Splunk + Sentry + Better Stack + Sumo Logic (per PITFALL-OPENER-2 >=5-name bank):
+
+(1) ONLY cohort candidate shipping canonical EVENT-DRIVEN DEBUGGING substrate (wide events + structured events + spans) as named first-party primitive layer derived from Charity Majors' O'Reilly "Observability Engineering" book concept of modern observability - Datadog metrics-first + Grafana LGTM-panels-first + Dynatrace auto-instrumentation-first + New Relic APM-agent-first + Splunk log-first + Sentry error-first + Better Stack status-page-first + Sumo Logic log-analytics-first.
+
+(2) ONLY cohort candidate shipping canonical BubbleUp as named first-party anomaly-outlier-identification primitive (verbatim honeycomb.io/bubbleup "Identify Outliers With BubbleUp | Honeycomb" + "Democratize debugging" + "Pinpoint with precision" + "Understand root causes") distinct from Watchdog (Datadog) + Davis (Dynatrace) + Applied Intelligence (New Relic) + SPL (Splunk) which none ship BubbleUp's outlier-attribute-diff-across-all-fields heatmap primitive.
+
+(3) ONLY cohort candidate shipping canonical Honeycomb Intelligence + Agent Timeline + Canvas + MCP Model Context Protocol as a single integrated AI-era observability stack (verbatim honeycomb.io/platform/intelligence "Honeycomb Intelligence | AI-Powered Observability Platform" + platform/agent-timeline "See what your agents are actually doing" + platform/canvas + "multi-agent-collaboration-on-shared-canvas" + "AI Working for You: MCP, Canvas, and Agentic Workflows - Part 2" verbatim honeycomb.io/blog + honeycomb.io/blog/accelerate-opentelemetry-migrations-honeycomb-agent-skills) distinct from Bits AI (Datadog) + Grafana AI + Davis CoPilot + NR AI + SPL AI Assistant + Seer (Sentry) which none ship MCP-integration + Agent Timeline + Canvas + multi-agent collaboration as single integrated AI-era observability stack.
+
+(4) ONLY cohort candidate founded by co-author of canonical O'Reilly "Observability Engineering" book (Charity Majors verbatim honeycomb.io/team 2026-07-26 "She is the co-author of Observability Engineering and Database Reliability Engineering (O'Reilly)") as canonical observability-pioneer founder lineage distinct from Datadog Olivier Pomel + Alexis Le-Quoc (French monitoring-veteran) + Grafana Torkel Odeby (Norwegian-LGTM-stack-veteran) + Dynatrace (Austrian enterprise-monitoring-veteran) + New Relic (American APM-veteran) + Splunk (American log-platform-veteran) + Sentry David Cramer + Chris Jennings (American error-monitoring-veteran) + Better Stack (Czech status-page-veteran) + Sumo Logic (American log-analytics-veteran).
+
+(5) ONLY cohort candidate with canonical Parse + Facebook + Linden Lab Second Life distributed-systems-pedigree founder lineage (Charity Majors ex-Parse-Facebook + Christine Yen ex-Parse-Facebook verbatim honeycomb.io/team 2026-07-26) distinct from every candidate-bank pedigree above.
+
+24-col evidence wedge: tenant_id + honeycomb_environment_id + honeycomb_dataset_id + honeycomb_api_key_id + honeycomb_event_id + honeycomb_span_id + honeycomb_trace_id + bubbleup_query_id + bubbleup_heatmap_id + bubbleup_attribute_comparison_id + anomaly_detection_id + slos_budget_id + slos_error_budget_remaining + service_map_service_id + log_analytics_query_id + intelligence_query_id + intelligence_mcp_session_id + agent_timeline_agent_id + agent_timeline_run_id + canvas_collaboration_id + otel_instrumentation_id + audit_export_id + cross_tenant_no_bleed_invariant + replay_hash.
+
+Compliance posture (first-party inferred 2026-07-26): SOC 2 Type II + ISO/IEC 27001 + GDPR + CCPA + HIPAA-eligible + SSO/SAML/OIDC + audit logs + tenant isolation + EU AI Act Art. 13 logging per-Honeycomb-Intelligence-query + per-BubbleUp-query + per-Anomaly-Detection-event + per-Service-Map-service + per-Log-Analytics-query + per-Agent-Timeline-run + per-Canvas-collaboration + per-OpenTelemetry-instrumentation + per-SLO-budget + per-MCP-session + Art. 14 human-oversight per-BubbleUp human_override_id + per-Honeycomb-Intelligence human_override_id + per-Agent-Timeline human_override_id + ISO/IEC 42001 AIMS clause 8.4 evidence-rung ready.
+
+Commercial route (first-party verified 2026-07-26 NOT submitted per PITFALL #28): mailto:hello@honeycomb.io + FORM:https://www.honeycomb.io/get-a-demo + Charity Majors CTO Direct LinkedIn + Christine Yen CEO Direct LinkedIn. Pattern guesses mailto:sales@honeycomb.io + mailto:partnerships@honeycomb.io + mailto:security@honeycomb.io retained separately as unverified per PITFALL #28.
+
+Offer ladder (NEW VERTICAL #84 OPENER tier): $500/48h fixed-scope Honeycomb evidence-gap map + $497/mo quarterly refresh + $2,000 five-vendor ai_agent_observability COHORT BENCHMARK at close + $2,485 MRR ceiling per YanXbt pattern (5 clients x $497/mo) + $10,000 CLOSER-only cohort sponsorship tier UNLOCKED at vertical #84 closure.
+
+NEW VERTICAL #84 ai_agent_observability OPENED 1/5 (Honeycomb 1353 OPENER); 4 OPEN slots remaining for SIBLING #2/5 + SIBLING #3/5 + SIBLING #4/5 + CLOSER #5/5 per PITFALL #99 cohort-rotation ladder.
+
+SMTP/form gated; $0 sent / $0 received.
