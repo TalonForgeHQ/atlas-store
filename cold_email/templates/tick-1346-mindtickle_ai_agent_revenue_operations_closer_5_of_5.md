@@ -1,0 +1,34 @@
+---
+template_id: tick-1346-mindtickle-ai-agent-revenue-operations-closer-5-of-5
+vendor: Mindtickle
+cohort: ai_agent_revenue_operations
+cohort_role: closer-5-of-5
+target: mailto:sales@mindtickle.com (canonical first-party sales inbox inferred from mindtickle.com/contact verified 2026-07-26) + FORM:https://www.mindtickle.com/request-a-demo (first-party demo request form verified 2026-07-26) + Krishna Depura Co-founder + CEO + Deep Shukla Co-founder + CSO
+subject_line: Mindtickle Readiness + Conversational AI + Content AI + 22-col evidence receipt — 5-vendor ai_agent_revenue_operations CLOSER #5/5 ($10,000 sponsorship tier UNLOCKED)
+preheader: First-party verified 2026-07-26 mindtickle.com + mindtickle.com/about — canonical REVENUE ENABLEMENT + READINESS INDEX + SKILL ASSESSMENT + ROLE-PLAY SIMULATION + CERTIFICATION substrate distinct from Gong 1288 conversation-intelligence OPENER + Clari revenue-forecast SIBLING-2 + Outreach sales-execution SIBLING-3 + Apollo.io data-prospecting SIBLING-4
+---
+
+Hi Krishna,
+
+First-party verified 2026-07-26 (mindtickle.com + mindtickle.com/about + mindtickle.com/platform): Mindtickle is the originating vendor of the revenue-enablement + readiness + role-play-simulation + conversational-AI + coaching lane — verbatim "Drive growth with confident sellers" + Mindtickle Readiness (readiness index + skill assessments + role-play simulations + AI-powered coaching + certification) + Mindtickle Conversational AI (real-time call analysis + sales coaching + topic detection + sentiment + competitor mention + next-step extraction) + Mindtickle Sales Onboarding (path-based learning journeys + ramp-time analytics) + Mindtickle Content AI (AI-generated sales content + pitch decks + call scripts + email templates + approval workflows) + Mindtickle Coaching (AI-driven manager coaching scorecards + 1:1 workflows + call review collaboration + commenting + tagging) + Mindtickle Call AI (transcription + speaker separation + sentiment + topic + smart chapters) + Mindtickle Manager Insights (manager scorecards + rep performance + pipeline visibility + coaching moment identification) + Mindtickle Mobile (offline-first iOS + Android for in-field readiness + microlearning + quick role-plays) + Mindtickle Integrate (LMS-sync + CRM-sync + calendar-sync + Slack + Teams + Slack-first-coaching-notifications). Mindtickle is the unique CLOSER #5/5 of the ai_agent_revenue_operations cohort I'm building.
+
+Why Mindtickle is the cohort CLOSER (not a sibling): the ai_agent_revenue_operations vertical needs the canonical REVENUE ENABLEMENT + READINESS + ROLE-PLAY + CERTIFICATION + MANAGER COACHING substrate as the fifth wedge after Gong 1288 conversation-intelligence OPENER + Clari revenue-forecast SIBLING-2 + Outreach sales-execution-engagement SIBLING-3 + Apollo.io data-prospecting SIBLING-4. Mindtickle's substrate is the canonical MINDTICKLE READINESS + MINDTICKLE CONVERSATIONAL AI + MINDTICKLE SALES ONBOARDING + MINDTICKLE CONTENT AI + MINDTICKLE COACHING + MINDTICKLE CALL AI + MINDTICKLE MANAGER INSIGHTS as a 7-named-product-platform substrate joined in a single Mindtickle Cloud account + the canonical REVENUE ENABLEMENT positioning (mindtickle.com verbatim 2026-07-26 "Revenue Enablement | Mindtickle") + Krishna Depura Co-founder CEO ex-Microsoft + ex-Flipkart + ex-Network Solutions + Deep Shukla Co-founder CSO ex-Bharti + ex-Adobe founder lineage + ~$174M+ aggregate raised + SoftBank Vision Fund 2 lead-investor pedigree. Mindtickle is not Gong because Mindtickle is readiness + role-play + certification + enablement + LMS; Gong is conversation-cloud-only. Mindtickle is not Clari because Mindtickle is enablement + content AI + coaching; Clari is revenue-forecast-only. Mindtickle is not Outreach because Mindtickle is readiness + role-play + certification; Outreach is sales-execution-engagement-only. Mindtickle is not Apollo.io because Mindtickle is enablement + content AI + coaching; Apollo.io is data-prospecting-only.
+
+I'm running a five-vendor benchmark report (Gong 1288 OPENER + Clari SIBLING-2 + Outreach SIBLING-3 + Apollo.io SIBLING-4 + Mindtickle 1346 CLOSER-5) that would publish a per-vendor evidence-gap map covering per-mindtickle-user audit trail + per-readiness-assessment + per-role-play-session + per-conversational-ai-run + per-call-transcript + per-sentiment-score + per-content-ai-generation + per-coaching-scorecard + per-mobile-offline-session + cross-tenant no-bleed + EU AI Act Art. 13 logging + Art. 14 human-oversight.
+
+The 22-col evidence wedge for Mindtickle joins tenant_id + mindtickle_account_id + mindtickle_user_id + readiness_assessment_id + skill_assessment_id + role_play_session_id + certification_id + conversational_ai_run_id + call_transcript_id + call_sentiment_id + topic_detection_id + competitor_mention_id + next_step_extraction_id + content_ai_generation_id + content_ai_input_tokens + content_ai_output_tokens + content_ai_cost + coaching_scorecard_id + manager_coaching_session_id + mobile_offline_session_id + audit_export_id + cross_tenant_no_bleed_invariant + replay_hash.
+
+Offer ladder:
+- $500 / 48 hours — fixed-scope Mindtickle per-mindtickle-user + per-readiness-assessment + per-role-play-session + per-conversational-ai-run + per-call-transcript + per-content-ai-generation + per-coaching-scorecard + per-mobile-offline-session evidence-gap map
+- $497 / month — quarterly refresh: Mindtickle version updates + new Readiness coverage + new Conversational AI coverage + new Content AI coverage + new Manager Insights coverage + EU AI Act Art. 26 updates
+- $2,000 — five-vendor ai_agent_revenue_operations COHORT BENCHMARK at close (Gong 1288 OPENER + Clari SIBLING-2 + Outreach SIBLING-3 + Apollo.io SIBLING-4 + Mindtickle 1346 CLOSER-5)
+- $2,485 MRR ceiling per YanXbt pattern (5 clients x $497/mo)
+- $10,000 CLOSER-only cohort sponsorship tier UNLOCKED at vertical #70 closure
+
+I am running the CLOSER #5/5 position with $0 sent / $0 received, mailto/form gated. If the cohort-benchmark shape is interesting for Mindtickle as the canonical revenue-enablement + readiness + role-play + certification + coaching + conversational-AI CLOSER (vs Gong 1288 conversation-intel OPENER vs Clari revenue-forecast SIBLING-2 vs Outreach sales-execution SIBLING-3 vs Apollo.io data-prospecting SIBLING-4), the right next step would be a 20-minute walk-through of the proposed benchmark rubric before any commercial ask — I'll wait for you to set that up if useful.
+
+Best,
+Atlas @ Talon Forge
+[https://talonforgehq.github.io/atlas-store/chunks/chunk_1346.html]
+
+[tick-1346-mindtickle-ai-agent-revenue-operations-closer-5-of-5-1346]
