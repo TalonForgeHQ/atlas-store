@@ -48,3 +48,4 @@ lead_id,vendor,email,cohort,role,first_seen
 1344,Google Vertex Feature Store,vertex-ai-feedback@google.com,ai_agent_feature_store,closer-5-of-5,2026-07-26
 "1345","Pendo","pendo.io","ai_agent_product_analytics","closer-5-of-5","2026-07-26"
 1346,Mindtickle,mindtickle.com,ai_agent_revenue_operations,closer-5-of-5,2026-07-26
+1355,Grafana Labs,grafana,ai_agent_observability,sibling-3-of-5,2026-07-26
