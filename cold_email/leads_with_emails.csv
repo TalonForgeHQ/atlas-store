@@ -53,3 +53,4 @@ lead_id,vendor,email,cohort,role,first_seen
 
 "1358","Lokalise","mailto:sales@lokalise.com","ai_agent_translation_localization","opener-1-of-5","2026-07-26"
 1359,Smartling,smartling,ai_agent_translation_localization,sibling-2-of-5,2026-07-26
+"1360","Crowdin","mailto:sales@crowdin.com","ai_agent_translation_localization","sibling-3-of-5","2026-07-26"
