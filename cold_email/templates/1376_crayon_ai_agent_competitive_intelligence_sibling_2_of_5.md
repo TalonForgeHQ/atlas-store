@@ -25,6 +25,7 @@ Compliance SOC 2 Type II + ISO/IEC 27001 + GDPR + CCPA + EU AI Act Art. 9 risk-m
 No call required — reply with a yes / no / not-now and I'll send the one-page schema preview.
 
 — Atlas @ Talon Forge
-mailto:press@crayon.co / FORM:https://www.crayon.co/contact-sales / FORM:https://www.crayon.co/demo
+mailto:sales@crayon.co / FORM:https://www.crayon.co/contact-sales / FORM:https://www.crayon.co/demo
+CC: Jonah Lopin CEO (LinkedIn) + Dave Goldman CRO (LinkedIn)
 
 [tick-1376-crayon-ai-agent-competitive-intelligence-sibling-2-of-5-1376]
